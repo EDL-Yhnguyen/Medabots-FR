@@ -1,14 +1,36 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Barre, Carte, Etiquette, Titre } from './composants/ui'
 import { DepotRom } from './composants/DepotRom'
 import { Emulateur } from './composants/Emulateur'
+import { appliquePatch } from './lib/patch'
 import { ETAPES, LOTS } from './donnees/avancement'
 
 const DEPOT = 'https://github.com/EDL-Yhnguyen/Medabots-FR'
+const PATCH = '/medabots-fr.bps'
 
 export default function App() {
   const [romLancee, setRomLancee] = useState<ArrayBuffer | null>(null)
+  const [erreurPatch, setErreurPatch] = useState<string | null>(null)
   const total = LOTS.reduce((somme, lot) => somme + lot.part, 0) / LOTS.length
+
+  // Le patch est appliqué ici, dans le navigateur, juste avant de lancer le jeu.
+  // La ROM patchée n'existe qu'en mémoire : rien n'est écrit, rien n'est envoyé.
+  const lancer = useCallback(async (rom: ArrayBuffer) => {
+    setErreurPatch(null)
+    try {
+      const reponse = await fetch(PATCH)
+      if (!reponse.ok) throw new Error('patch introuvable')
+      const patch = new Uint8Array(await reponse.arrayBuffer())
+      const patchee = appliquePatch(new Uint8Array(rom), patch)
+      setRomLancee(
+        patchee.buffer.slice(patchee.byteOffset, patchee.byteOffset + patchee.byteLength) as ArrayBuffer,
+      )
+    } catch (e) {
+      // Mieux vaut jouer en anglais que ne pas jouer : on le dit, et on lance.
+      setErreurPatch(e instanceof Error ? e.message : String(e))
+      setRomLancee(rom)
+    }
+  }, [])
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-10 sm:py-16">
@@ -17,9 +39,24 @@ export default function App() {
       <main className="mt-12 space-y-8">
         <section id="lecteur" className="scroll-mt-8">
           {romLancee ? (
-            <Emulateur rom={romLancee} surQuitter={() => window.location.reload()} />
+            <>
+              {erreurPatch && (
+                <div
+                  role="alert"
+                  className="mb-4 rounded-xl border border-corail/40 bg-corail/10 p-4 text-sm text-texte-doux"
+                >
+                  La traduction n’a pas pu être appliquée ({erreurPatch}). Le jeu se lance en
+                  anglais.
+                </div>
+              )}
+              <Emulateur
+                rom={romLancee}
+                traduit={!erreurPatch}
+                surQuitter={() => window.location.reload()}
+              />
+            </>
           ) : (
-            <DepotRom surRomPrete={setRomLancee} />
+            <DepotRom surRomPrete={(rom) => void lancer(rom)} />
           )}
         </section>
 

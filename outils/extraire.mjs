@@ -6,6 +6,7 @@
 // [cible(i), cible(i+1)).
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
 import { TABLE as table, rendOctet as rendu } from './table-caracteres.mjs'
+import { ciblesDeTable, finEntree } from './entrees.mjs'
 
 const rom = readFileSync(process.argv[2])
 const tables = JSON.parse(readFileSync(process.argv[3], 'utf8'))
@@ -51,8 +52,7 @@ const index = []
 
 for (const t of tables) {
   const debutTable = parseInt(t.adresse, 16)
-  const cibles = []
-  for (let k = 0; k < t.entrees; k++) cibles.push(rom.readUInt32LE(debutTable + k * 4) - BASE)
+  const cibles = ciblesDeTable(rom, debutTable, t.entrees, BASE)
 
   const lignes = [
     '# Table ' + t.adresse + ' — ' + t.entrees + ' entrées',
@@ -63,13 +63,7 @@ for (const t of tables) {
   let octetsTable = 0
   for (let k = 0; k < t.entrees; k++) {
     const deb = cibles[k]
-    // Fin = prochaine cible strictement supérieure (les doublons pointent au même endroit).
-    let fin = rom.length
-    for (let j = k + 1; j < t.entrees; j++) {
-      if (cibles[j] > deb) { fin = cibles[j]; break }
-    }
-    // Garde-fou : une entrée de plus de 2 Kio n'est pas du dialogue, c'est la fin de table.
-    if (fin - deb > 2048) fin = deb + 2048
+    const fin = finEntree(rom, cibles, k)
     const texte = decodeEntree(deb, fin)
     octetsTable += fin - deb
     lignes.push('@' + String(k).padStart(4, '0') + ' [0x' + deb.toString(16).toUpperCase() + ']')

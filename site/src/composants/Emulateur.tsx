@@ -24,7 +24,15 @@ declare global {
 
 const SOURCE_EMULATEUR = 'https://cdn.emulatorjs.org/stable/data/'
 
-export function Emulateur({ rom, surQuitter }: { rom: ArrayBuffer; surQuitter: () => void }) {
+export function Emulateur({
+  rom,
+  traduit,
+  surQuitter,
+}: {
+  rom: ArrayBuffer
+  traduit: boolean
+  surQuitter: () => void
+}) {
   const [erreur, setErreur] = useState<string | null>(null)
   const lance = useRef(false)
 
@@ -63,8 +71,14 @@ export function Emulateur({ rom, surQuitter }: { rom: ArrayBuffer; surQuitter: (
     <div className="monte">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-2">
-          <Etiquette ton="jaune">Version originale</Etiquette>
-          <Etiquette>Aucun patch appliqué</Etiquette>
+          {traduit ? (
+            <>
+              <Etiquette ton="vert">Patch français appliqué</Etiquette>
+              <Etiquette>Objets, médailles, attaques</Etiquette>
+            </>
+          ) : (
+            <Etiquette ton="jaune">Version originale</Etiquette>
+          )}
         </div>
         {/* Recharger la page est le seul arrêt fiable : l'émulateur tient des
             ressources globales (audio, WebGL, boucle de rendu). */}

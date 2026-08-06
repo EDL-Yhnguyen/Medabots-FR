@@ -34,8 +34,7 @@ TABLE[0x48] = '"' // « "Medabots Weekly" » — guillemet, ouvrant et fermant
 TABLE[0x49] = '('
 TABLE[0x4a] = ')'
 
-// PROBABLE, pas établi : « It says: » irait bien, mais deux contextes ne suffisent pas.
-// TABLE[0x45] = ':'
+TABLE[0x45] = ':' // « Key: A Class », « Key: B Class », « It says: » — établi
 
 /**
  * Codes de contrôle repérés. Leurs PARAMÈTRES ne sont pas des caractères :
@@ -60,3 +59,36 @@ export function rendOctet(octet) {
     ? TABLE[octet]
     : '{' + octet.toString(16).toUpperCase().padStart(2, '0') + '}'
 }
+
+/**
+ * Repli d'accents, en attendant que la police porte les glyphes français.
+ *
+ * La traduction s'écrit AVEC ses accents — « Régénération », pas « Regeneration ».
+ * Appauvrir le vocabulaire pour contourner une limite de l'outillage reviendrait
+ * à laisser cette limite décider du texte français, et il faudrait tout relire le
+ * jour où elle tombe.
+ *
+ * Tant que la police ne porte pas ces glyphes, l'insertion les remplace ici et
+ * compte les remplacements. Le jour où ils existent, il suffira de les ajouter à
+ * TABLE : les mêmes fichiers de traduction deviendront corrects sans qu'un seul
+ * mot soit réécrit.
+ */
+export const REPLI_ACCENTS = new Map(
+  Object.entries({
+    à: 'a', â: 'a', ä: 'a',
+    é: 'e', è: 'e', ê: 'e', ë: 'e',
+    î: 'i', ï: 'i',
+    ô: 'o', ö: 'o',
+    ù: 'u', û: 'u', ü: 'u',
+    ç: 'c',
+    À: 'A', Â: 'A', Ä: 'A',
+    É: 'E', È: 'E', Ê: 'E', Ë: 'E',
+    Î: 'I', Ï: 'I',
+    Ô: 'O', Ö: 'O',
+    Ù: 'U', Û: 'U', Ü: 'U',
+    Ç: 'C',
+    œ: 'oe', Œ: 'OE', æ: 'ae', Æ: 'AE',
+    '«': '"', '»': '"',
+    '’': "'", '‘': "'", '–': '-', '—': '-',
+  }),
+)

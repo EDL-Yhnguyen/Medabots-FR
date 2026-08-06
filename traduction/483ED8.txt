@@ -1,0 +1,195 @@
+# Table 0x483ED8 — objets de l'inventaire (64 entrées)
+#
+# NE SE TRADUISENT PAS : les noms propres — Karin, Erika, Rappy, Fiyun, Partsun,
+# Rubberobo, Spedabot, Game Boy, Polaroïd (marque, mais francisée en « Polaroïd »).
+#
+# {45} est le deux-points du jeu ; il est conservé tel quel dans « Clé{45} classe A ».
+
+@0000
+Plan de la ville{FE}
+
+@0001
+Jupe{FE}
+
+@0002
+Panier-repas{FE}
+
+@0003
+Lettre{FE}
+
+@0004
+Pièces cassées{FE}
+
+@0005
+Kimono{FE}
+
+@0006
+Peluche Rappy{FE}
+
+@0007
+Billet de bateau{FE}
+
+@0008
+Médaille de fille{FE}
+
+@0009
+Jus d'orange{FE}
+
+@0010
+Pack de citrons{FE}
+
+@0011
+Huile de luxe{FE}
+
+@0012
+Costume de héros{FE}
+
+@0013
+Robe{FE}
+
+@0014
+Téléobjectif{FE}
+
+@0015
+Hamster{FE}
+
+@0016
+Photo de Karin{FE}
+
+@0017
+Badge nominatif{FE}
+
+@0018
+Mini grande roue{FE}
+
+@0019
+Combi Rubberobo{FE}
+
+@0020
+Clé{45} classe A{FE}
+
+@0021
+Clé{45} classe B{FE}
+
+@0022
+Grande clé{FE}
+
+@0023
+Clé de bouche d'égout{FE}
+
+@0024
+Médaillon d'argent{FE}
+
+@0025
+Ailes du vent{FE}
+
+@0026
+Citron{FE}
+
+@0027
+Pile au citron{FE}
+
+@0028
+Polaroïd{FE}
+
+@0029
+Pierre de Fiyun{FE}
+
+@0030
+Invitation{FE}
+
+@0031
+Talkie-walkie{FE}
+
+@0032
+Mot-clé 1{FE}
+
+@0033
+Mot-clé 2{FE}
+
+@0034
+Mot-clé 3{FE}
+
+@0035
+Mot-clé 4{FE}
+
+@0036
+Pièces rouillées{FE}
+
+@0037
+Interrupteur{FE}
+
+@0038
+Périscope{FE}
+
+@0039
+Tenue de serveuse{FE}
+
+@0040
+Costume de chien{FE}
+
+@0042
+Autographe de K{FE}
+
+@0043
+Médaille de Karin{FE}
+
+@0044
+Badge Partsun{FE}
+
+@0045
+Leurre noir et or{FE}
+
+@0046
+Capsule bleue{FE}
+
+@0047
+Fleur rose{FE}
+
+@0048
+Game Boy rouge{FE}
+
+@0049
+Médamontre rare{FE}
+
+@0050
+Médaille Rubberobo{FE}
+
+@0051
+Lampe stylo{FE}
+
+@0052
+Rien{FE}
+
+@0053
+Rien{FE}
+
+@0054
+Médaille d'Erika{FE}
+
+@0055
+Rien{FE}
+
+@0056
+Rien{FE}
+
+@0057
+Rien{FE}
+
+@0058
+Rien{FE}
+
+@0059
+Rien{FE}
+
+@0060
+Rien{FE}
+
+@0061
+Rien{FE}
+
+@0062
+Rien{FE}
+
+@0063
+Aucun objet{FE}

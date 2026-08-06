@@ -16,17 +16,18 @@ export const LOTS: Lot[] = [
   {
     titre: 'Interface et menus',
     detail: 'Écrans de titre, options, navigation, messages système.',
-    part: 0,
+    part: 0.1,
   },
   {
     titre: 'Objets, pièces et médailles',
-    detail: 'Noms et descriptions de tout l’équipement des Medabots.',
-    part: 0,
+    detail:
+      '64 objets et 34 médailles traduits. Restent les 480 Medaparts. Les noms de Medabots ne se traduisent pas.',
+    part: 0.3,
   },
   {
     titre: 'Textes de combat',
-    detail: 'Attaques, effets, commentaires de Robattle.',
-    part: 0,
+    detail: '60 types d’attaque et 27 familles de compétences traduits.',
+    part: 0.25,
   },
   {
     titre: 'Histoire principale',

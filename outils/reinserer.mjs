@@ -1,52 +1,40 @@
-// Réinsertion du script dans la ROM, et test d'identité.
+// Réinsertion du script dans la ROM, avec repointage.
 //
-// LE TEST QUI COMPTE : extraire puis réinsérer SANS RIEN MODIFIER doit rendre une
-// ROM identique au bit près à l'originale. Tant qu'il échoue, l'encodage perd de
-// l'information quelque part, et insérer une traduction reviendrait à découvrir
-// les dégâts trois cents dialogues plus tard.
+// LE TEST QUI COMPTE : sans aucune traduction, extraire puis réinsérer doit rendre
+// une ROM identique au bit près. Tant qu'il échoue, l'outillage perd de
+// l'information et insérer une traduction reviendrait à découvrir les dégâts trois
+// cents dialogues plus tard.
+//
+// REPOINTAGE : les chaînes d'origine sont collées bout à bout, la place de chacune
+// vaut exactement sa longueur anglaise. Le français étant plus long, une traduction
+// qui ne rentre pas est RELOGÉE dans l'espace libre en fin de ROM, et son pointeur
+// est réécrit. Sans ça, il faudrait abréger — ce qui reviendrait à saboter la
+// traduction pour arranger l'outil.
 //
 // Usage :
-//   node outils/reinserer.mjs <rom> <pointeurs.json> <dossier-script> [sortie] [--identite]
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
-import { TABLE } from './table-caracteres.mjs'
+//   node outils/reinserer.mjs <rom> <pointeurs.json> <script> [traduction] [sortie] [--identite]
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs'
+import { TABLE, REPLI_ACCENTS } from './table-caracteres.mjs'
+import { ciblesDeTable, placeEntree } from './entrees.mjs'
 
-const [, , cheminRom, cheminPointeurs, dossierScript, cheminSortie] = process.argv
+const [, , cheminRom, cheminPointeurs, dossierScript, dossierTraduction, cheminSortie] = process.argv
 const identiteSeule = process.argv.includes('--identite')
 
 const rom = readFileSync(cheminRom)
-const sortie = Buffer.from(rom) // copie : l'original n'est jamais touché
+const sortie = Buffer.from(rom)
 const BASE = 0x08000000
 
-// --- Place disponible par entrée ---
-// Sans repointage, une entrée traduite s'écrit à son adresse d'origine. Si le
-// français est plus long que l'anglais, elle DÉBORDE sur l'entrée suivante et la
-// corrompt — silencieusement, car rien dans la ROM ne signale la faute. On calcule
-// donc la place réellement disponible, et on refuse ce qui ne tient pas.
-const placeDisponible = new Map() // "fichier@numéro" -> octets disponibles
-{
-  const tables = JSON.parse(readFileSync(cheminPointeurs, 'utf8'))
-  for (const t of tables) {
-    const debut = parseInt(t.adresse, 16)
-    const cibles = []
-    for (let k = 0; k < t.entrees; k++) cibles.push(rom.readUInt32LE(debut + k * 4) - BASE)
-    const nomFichier = t.adresse.replace('0x', '') + '.txt'
-    for (let k = 0; k < t.entrees; k++) {
-      let fin = rom.length
-      for (let j = k + 1; j < t.entrees; j++) {
-        if (cibles[j] > cibles[k]) { fin = cibles[j]; break }
-      }
-      placeDisponible.set(nomFichier + '@' + String(k).padStart(4, '0'), Math.min(fin - cibles[k], 2048))
-    }
-  }
-}
+// Espace libre repéré en fin de ROM : bourrage de 0x00 à partir de 0x7F4464.
+// On garde une marge de sécurité avant la toute fin.
+const LIBRE_DEBUT = 0x7f4464
+const LIBRE_FIN = rom.length - 16
+let curseurLibre = LIBRE_DEBUT
 
-// --- Table inverse : caractère -> octet ---
+// --- Table inverse ---
 const INVERSE = new Map()
 for (let o = 0; o < 256; o++) {
   const c = TABLE[o]
   if (c === null) continue
-  // Si deux octets rendaient le même caractère, l'encodage serait ambigu et le
-  // test d'identité échouerait sans qu'on sache pourquoi. Autant le dire ici.
   if (INVERSE.has(c)) {
     throw new Error(
       `Table ambiguë : « ${c} » est rendu par 0x${INVERSE.get(c).toString(16).toUpperCase()} ` +
@@ -56,40 +44,41 @@ for (let o = 0; o < 256; o++) {
   INVERSE.set(c, o)
 }
 
-class ErreurEncodage extends Error {}
+let accentsReplies = 0
+const accentsVus = new Set()
 
-/** Encode une ligne de texte extraite en octets. */
 function encode(texte, contexte) {
   const octets = []
   for (let i = 0; i < texte.length; i++) {
     const c = texte[i]
-
-    // {XX} — octet brut, non identifié ou code de contrôle.
     if (c === '{') {
       const fin = texte.indexOf('}', i)
-      if (fin < 0 || fin - i !== 3) {
-        throw new ErreurEncodage(`${contexte} : accolade mal formée à la position ${i}.`)
-      }
+      if (fin < 0 || fin - i !== 3) throw new Error(`${contexte} : accolade mal formée.`)
       const hex = texte.slice(i + 1, fin)
-      if (!/^[0-9A-F]{2}$/.test(hex)) {
-        throw new ErreurEncodage(`${contexte} : « {${hex}} » n’est pas un octet hexadécimal.`)
-      }
+      if (!/^[0-9A-F]{2}$/.test(hex)) throw new Error(`${contexte} : « {${hex}} » n’est pas hexadécimal.`)
       octets.push(parseInt(hex, 16))
       i = fin
       continue
     }
+    if (c === '…') { octets.push(0x3f, 0x3f, 0x3f); continue }
 
-    // Raccourci de confort pour la traduction : « … » vaut trois points d'ellipse.
-    if (c === '…') {
-      octets.push(0x3f, 0x3f, 0x3f)
-      continue
-    }
-
-    const octet = INVERSE.get(c)
+    let octet = INVERSE.get(c)
     if (octet === undefined) {
-      throw new ErreurEncodage(
-        `${contexte} : le caractère « ${c} » (U+${c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')}) ` +
-          `n’existe pas dans la police du jeu.`,
+      // Le caractère n'existe pas dans la police : repli d'accent, s'il y en a un.
+      const repli = REPLI_ACCENTS.get(c)
+      if (repli !== undefined) {
+        for (const r of repli) {
+          const o = INVERSE.get(r)
+          if (o === undefined) throw new Error(`${contexte} : repli « ${r} » introuvable.`)
+          octets.push(o)
+        }
+        accentsReplies++
+        accentsVus.add(c)
+        continue
+      }
+      throw new Error(
+        `${contexte} : « ${c} » (U+${c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')}) ` +
+          `n’est ni dans la police, ni dans la table de repli.`,
       )
     }
     octets.push(octet)
@@ -97,21 +86,50 @@ function encode(texte, contexte) {
   return Buffer.from(octets)
 }
 
-// --- Lecture des fichiers extraits ---
-const fichiers = readdirSync(dossierScript).filter((f) => f.endsWith('.txt')).sort()
-let entrees = 0
-let octetsEcrits = 0
-const soucis = []
-const debordements = []
+/** Lit un dossier de fichiers @NNNN → texte. */
+function litEntrees(dossier) {
+  const parTable = new Map()
+  if (!dossier || !existsSync(dossier)) return parTable
+  for (const fichier of readdirSync(dossier).filter((f) => f.endsWith('.txt')).sort()) {
+    const lignes = readFileSync(dossier + '/' + fichier, 'utf8').split('\n')
+    const entrees = new Map()
+    for (let i = 0; i < lignes.length; i++) {
+      const m = lignes[i].match(/^@(\d{4})(?: \[0x[0-9A-F]+\])?$/)
+      if (m) entrees.set(m[1], lignes[i + 1] ?? '')
+    }
+    parTable.set(fichier, entrees)
+  }
+  return parTable
+}
 
-for (const fichier of fichiers) {
-  const lignes = readFileSync(dossierScript + '/' + fichier, 'utf8').split('\n')
-  for (let i = 0; i < lignes.length; i++) {
-    const marque = lignes[i].match(/^@(\d{4}) \[0x([0-9A-F]+)\]$/)
-    if (!marque) continue
-    const numero = marque[1]
-    const adresse = parseInt(marque[2], 16)
-    const texte = lignes[i + 1] ?? ''
+const anglais = litEntrees(dossierScript)
+const francais = litEntrees(dossierTraduction)
+
+// --- Place disponible et adresse de chaque entrée ---
+const tables = JSON.parse(readFileSync(cheminPointeurs, 'utf8'))
+const infos = new Map() // fichier -> { debutTable, cibles[] }
+for (const t of tables) {
+  const debut = parseInt(t.adresse, 16)
+  const cibles = ciblesDeTable(rom, debut, t.entrees, BASE)
+  infos.set(t.adresse.replace('0x', '') + '.txt', { debut, cibles, entrees: t.entrees })
+}
+
+const dejaRelogé = new Map() // texte encodé (hex) -> adresse, pour ne pas dupliquer
+let ecrites = 0
+let traduites = 0
+let relogees = 0
+let octetsRelogés = 0
+const soucis = []
+
+for (const [fichier, entrees] of anglais) {
+  const info = infos.get(fichier)
+  if (!info) continue
+
+  for (const [numero, texteAnglais] of entrees) {
+    const k = parseInt(numero, 10)
+    const adresse = info.cibles[k]
+    const traduction = francais.get(fichier)?.get(numero)
+    const texte = traduction ?? texteAnglais
     const contexte = `${fichier} @${numero}`
 
     let octets
@@ -122,57 +140,77 @@ for (const fichier of fichiers) {
       continue
     }
 
-    // Garde-fou : refuser ce qui déborde, plutôt que corrompre l'entrée suivante.
-    const place = placeDisponible.get(fichier + '@' + numero)
-    if (place !== undefined && octets.length > place) {
-      debordements.push(
-        `${contexte} : ${octets.length} octets pour ${place} disponibles ` +
-          `(${octets.length - place} de trop). Raccourcir, ou attendre le repointage.`,
-      )
+    const place = placeEntree(rom, info.cibles, k)
+
+    if (traduction !== undefined) traduites++
+
+    if (octets.length <= place) {
+      octets.copy(sortie, adresse)
+      ecrites++
       continue
     }
 
-    octets.copy(sortie, adresse)
-    entrees++
-    octetsEcrits += octets.length
+    // Ça ne rentre pas : reloger en fin de ROM et réécrire le pointeur.
+    if (traduction === undefined) {
+      // Du texte NON traduit qui ne rentre pas dans sa propre place est un bug
+      // d'extraction, pas un problème de longueur. On refuse d'y toucher.
+      soucis.push(`${contexte} : l’anglais lui-même déborde (${octets.length} > ${place}).`)
+      continue
+    }
+
+    const cle = octets.toString('hex')
+    let nouvelleAdresse = dejaRelogé.get(cle)
+    if (nouvelleAdresse === undefined) {
+      if (curseurLibre + octets.length > LIBRE_FIN) {
+        soucis.push(`${contexte} : plus d’espace libre en fin de ROM pour reloger.`)
+        continue
+      }
+      nouvelleAdresse = curseurLibre
+      octets.copy(sortie, nouvelleAdresse)
+      curseurLibre += octets.length
+      octetsRelogés += octets.length
+      dejaRelogé.set(cle, nouvelleAdresse)
+    }
+    sortie.writeUInt32LE(nouvelleAdresse + BASE, info.debut + k * 4)
+    ecrites++
+    relogees++
   }
 }
 
 console.log('=== RÉINSERTION ===')
-console.log('Fichiers : ' + fichiers.length)
-console.log('Entrées  : ' + entrees.toLocaleString('fr-FR'))
-console.log('Octets   : ' + octetsEcrits.toLocaleString('fr-FR'))
+console.log('Entrées écrites : ' + ecrites.toLocaleString('fr-FR'))
+console.log('Dont traduites  : ' + traduites.toLocaleString('fr-FR'))
+console.log('Dont relogées   : ' + relogees.toLocaleString('fr-FR') +
+  ' (' + octetsRelogés.toLocaleString('fr-FR') + ' octets)')
+console.log('Espace libre    : ' + (LIBRE_FIN - curseurLibre).toLocaleString('fr-FR') +
+  ' octets restants sur ' + (LIBRE_FIN - LIBRE_DEBUT).toLocaleString('fr-FR'))
+if (accentsReplies) {
+  console.log('\n⚠️  ' + accentsReplies + ' accent(s) remplacé(s) faute de glyphe : ' +
+    [...accentsVus].sort().join(' '))
+  console.log('   La traduction les garde ; ils s’afficheront dès que la police les portera.')
+}
 if (soucis.length) {
-  console.log('\n❌ ' + soucis.length + ' entrée(s) non encodée(s) :')
+  console.log('\n❌ ' + soucis.length + ' problème(s) :')
   for (const s of soucis.slice(0, 12)) console.log('   ' + s)
   process.exitCode = 1
 }
-if (debordements.length) {
-  console.log('\n❌ ' + debordements.length + ' entrée(s) trop longue(s), NON écrite(s) :')
-  for (const d of debordements.slice(0, 12)) console.log('   ' + d)
-  process.exitCode = 1
-}
 
-// --- Test d'identité ---
-console.log('\n=== TEST D’IDENTITÉ ===')
-if (sortie.equals(rom)) {
-  console.log('✅ La ROM réinsérée est IDENTIQUE à l’originale, au bit près.')
-  console.log('   L’encodage ne perd rien. La réinsertion est fiable.')
-} else {
-  let premier = -1
-  let differents = 0
-  for (let i = 0; i < rom.length; i++) {
-    if (rom[i] !== sortie[i]) {
-      if (premier < 0) premier = i
-      differents++
+// --- Test d'identité (seulement s'il n'y a aucune traduction) ---
+if (traduites === 0) {
+  console.log('\n=== TEST D’IDENTITÉ ===')
+  if (sortie.equals(rom)) {
+    console.log('✅ ROM réinsérée IDENTIQUE à l’originale, au bit près.')
+  } else {
+    let premier = -1, differents = 0
+    for (let i = 0; i < rom.length; i++) {
+      if (rom[i] !== sortie[i]) { if (premier < 0) premier = i; differents++ }
     }
+    console.log('❌ ' + differents.toLocaleString('fr-FR') + ' octet(s) diffèrent, ' +
+      'première à 0x' + premier.toString(16).toUpperCase())
+    process.exitCode = 1
   }
-  console.log('❌ ' + differents.toLocaleString('fr-FR') + ' octet(s) diffèrent.')
-  console.log('   Première différence à 0x' + premier.toString(16).toUpperCase())
-  const deb = Math.max(0, premier - 12)
-  console.log('   originale : ' + rom.subarray(deb, premier + 16).toString('hex').toUpperCase())
-  console.log('   réinsérée : ' + sortie.subarray(deb, premier + 16).toString('hex').toUpperCase())
-  process.exitCode = 1
+} else {
+  console.log('\n(test d’identité sauté : ' + traduites + ' entrée(s) traduite(s))')
 }
 
 if (!identiteSeule && cheminSortie) {

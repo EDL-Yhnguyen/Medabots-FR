@@ -39,8 +39,12 @@ const etapes = [
   ['Recherche des tables de pointeurs', ['outils/pointeurs.mjs', rom, 'travail/pointeurs.json']],
   ['Extraction du script', ['outils/extraire.mjs', rom, 'travail/pointeurs.json', 'travail/script']],
   [
-    'Réinsertion et test d’identité',
-    ['outils/reinserer.mjs', rom, 'travail/pointeurs.json', 'travail/script', '', '--identite'],
+    'Test d’identité (sans traduction)',
+    ['outils/reinserer.mjs', rom, 'travail/pointeurs.json', 'travail/script', '', '', '--identite'],
+  ],
+  [
+    'Construction de la ROM traduite',
+    ['outils/reinserer.mjs', rom, 'travail/pointeurs.json', 'travail/script', 'traduction', 'travail/medabots-fr.gba'],
   ],
 ]
 

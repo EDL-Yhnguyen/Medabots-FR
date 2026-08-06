@@ -1,0 +1,185 @@
+# Table 0x3BE868 — types d'attaque (60 entrées)
+#
+# Ces libellés s'affichent en combat, dans une zone étroite. On garde donc des
+# formes courtes, quitte à abréger avec un point — « Annul. opt. » plutôt que
+# « Annulation optique » — comme le fait déjà l'anglais (« CancelOptic »).
+
+@0000
+Épée{FE}
+
+@0001
+Marteau{FE}
+
+@0002
+Fusil{FE}
+
+@0003
+Mitrailleuse{FE}
+
+@0004
+Laser{FE}
+
+@0005
+Rayon{FE}
+
+@0006
+Missile{FE}
+
+@0007
+Napalm{FE}
+
+@0008
+Brise{FE}
+
+@0009
+Presse{FE}
+
+@0010
+Piège prise{FE}
+
+@0011
+Piège tir{FE}
+
+@0012
+Annul. att.{FE}
+
+@0013
+Bogue{FE}
+
+@0014
+Virus{FE}
+
+@0015
+Foudre{FE}
+
+@0016
+Gel{FE}
+
+@0017
+Onde{FE}
+
+@0018
+Immobilise{FE}
+
+@0019
+Feu{FE}
+
+@0020
+Fonte{FE}
+
+@0021
+Brise form.{FE}
+
+@0022
+Stabilité{FE}
+
+@0023
+Entrave{FE}
+
+@0024
+Annul. opt.{FE}
+
+@0025
+Annul. bombe{FE}
+
+@0026
+Annul. grav.{FE}
+
+@0027
+Défense{FE}
+
+@0028
+Blocage total{FE}
+
+@0029
+Demi-blocage{FE}
+
+@0030
+Récupération{FE}
+
+@0031
+Auto-récup.{FE}
+
+@0032
+Réparation{FE}
+
+@0033
+Réactivation{FE}
+
+@0034
+Anti-air{FE}
+
+@0035
+Anti-mer{FE}
+
+@0036
+Repérage{FE}
+
+@0037
+Camouflage{FE}
+
+@0038
+Charge boost{FE}
+
+@0039
+Charge rapide{FE}
+
+@0040
+Charge accél.{FE}
+
+@0041
+Vol de charge{FE}
+
+@0042
+Renverse{FE}
+
+@0043
+Handicap{FE}
+
+@0044
+Confusion{FE}
+
+@0045
+Vol d'usage{FE}
+
+@0046
+Sans fuite{FE}
+
+@0047
+Sans défense{FE}
+
+@0048
+Destruction{FE}
+
+@0049
+Sacrifice{FE}
+
+@0050
+Vol de force{FE}
+
+@0051
+Form. équipe{FE}
+
+@0052
+Att. équipe{FE}
+
+@0053
+Renforcement{FE}
+
+@0054
+Riposte{FE}
+
+@0055
+Échange{FE}
+
+@0056
+Éch. interr.{FE}
+
+@0057
+Éch. attaque{FE}
+
+@0058
+Éch. défense{FE}
+
+@0059
+Éch. soin{FE}

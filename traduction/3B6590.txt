@@ -1,0 +1,82 @@
+# Table 0x3B6590 — types de médailles (34 entrées)
+#
+# Ce sont des noms d'animaux, donc descriptifs : ils se traduisent.
+#
+# NE SE TRADUISENT PAS, et n'apparaissent donc pas ici :
+#   @0000 KUWAGATA, @0001 KABUTO — noms japonais de scarabées, employés comme
+#         noms propres dans toute la franchise, y compris en VF ;
+#   @0016 KAPPA — créature du folklore japonais, nom propre ;
+#   @0028 BOTRO, @0032 Rokusho, @0033 Metabee — noms de Medabots ;
+#   @0027 @0029 @0030 @0031 — entrées d'un seul signe, sans texte à traduire.
+
+@0002
+TORTUE{FE}
+
+@0003
+MÉDUSE{FE}
+
+@0004
+OURS{FE}
+
+@0005
+ARAIGNÉE{FE}
+
+@0006
+SERPENT{FE}
+
+@0007
+REINE{FE}
+
+@0008
+CALMAR{FE}
+
+@0009
+PHÉNIX{FE}
+
+@0010
+LICORNE{FE}
+
+@0011
+FANTÔME{FE}
+
+@0012
+CHEVALIER{FE}
+
+@0013
+SIRÈNE{FE}
+
+@0014
+MANCHOT{FE}
+
+@0015
+CHAUVE-SOURIS{FE}
+
+@0017
+SOURIS{FE}
+
+@0018
+CAMÉLÉON{FE}
+
+@0019
+LAPIN{FE}
+
+@0020
+SINGE{FE}
+
+@0021
+DÉMON{FE}
+
+@0022
+ANGE{FE}
+
+@0023
+DRAGON{FE}
+
+@0024
+NINJA{FE}
+
+@0025
+ALIEN{FE}
+
+@0026
+CHAT{FE}
