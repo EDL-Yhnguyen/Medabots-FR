@@ -296,7 +296,7 @@ MEDABOTS_ROM="C:/chemin/vers/rom.gba" npm run verifier
 ```
 
 **L'aller-retour identité passe** : extraire puis réinsérer 5 933 entrées
-(679 381 octets) sans rien modifier rend une ROM **identique à l'originale au bit
+(402 705 octets) sans rien modifier rend une ROM **identique à l'originale au bit
 près**. L'outillage ne perd rien — c'est ce qui autorise à traduire.
 
 ### Deux pièges levés en chemin
