@@ -1,0 +1,48 @@
+# Table 0x48698C — scènes cinématiques (12 entrées)
+#
+# Les grands moments du jeu, dont sa fin. Ton conservé : c'est du dessin animé
+# pour enfants, vif et bavard, pas un récit solennel.
+#
+# NOMS CONSERVÉS, par cohérence avec la décision du 06/08 : Phantom Renegade,
+# Phantom Lady, Robo-Emperor, Cafe Ole, Dr Armond, Koji, Karin, Sloan.
+# {F8} encadre les onomatopées, {FC} enchaîne les répliques, {F9} insère le nom
+# du joueur.
+#
+# @0004 corrige une faute de l'anglais d'origine : « you can't even seen the
+# truth » — on traduit l'intention.
+
+@0000
+{F8}BA DA DA DA BOOOM !!{F8}{FC}Nos Medabots !!{FC}C'est quoi ce truc ?!{FC}Un Medabot Kabuto n'a même pas les données pour FAIRE une technique pareille !{FC}Je vais faire dans mon pantalon !{FF}{00}
+
+@0001
+{F8}SLASH !! KABOOOM !!{F8}{FC}Mais quoi ?! C'est vraiment possible ?!{FC}Attends un peu ! Qu'est-ce que tu as fait à mon Medabot ?!{FC}Un Medabot Kuwagata n'a même pas les données pour FAIRE une technique pareille !{FC}Je vais faire dans mon pantalon !{FF}{00}
+
+@0002
+Koji···{FC}Karin !{FC}Ah, tu es Karin.{FC}Eh bien, on se revoit, {F9} .{FC}C'est qui, {F9} ?{FD}Depuis quand connais-tu une fille aussi jolie ?{FF}{00}
+
+@0003
+Dressons la table avec faste.{FC}Cessons de chipoter dans nos assiettes !{FC}Brûlant comme le plus fort des piments !{FC}Des ténèbres surgit le Medafighter mystère, le Phantom Renegade !{FC}Partout où sévit le mal,{FD}le Phantom Renegade sera là !{FC}Il est···trop···classe !{FC}Es-espèce de cinglé···  {F8}Robo{F8}{FF}{00}
+
+@0004
+Que la fleur de riz éclose !{FC}Que la mauvaise herbe du mal se fane !{FC}La belle Medafighter venue du ciel···{FC}Phantom Lady est arrivée !{FC}Elle est TROP classe.{FC}Tu es si pressé que tu ne vois même plus la vérité.{FC}Quel idiot tu fais.{FF}{00}
+
+@0005
+Bon retour, Cafe Ole !!{FC}Tu m'as tellement manqué···{FC}On rentre ensemble ?{FC}Je peux vraiment revenir ?{FC}Bien sûr que oui ! Je m'occupe du Chambellan.{FC}Tu as causé bien des ennuis.{FC}Mais la Princesse est si heureuse···{FD}Oh, que dois-je faire···{FF}{00}
+
+@0006
+{F8}RRRRRUBMLE···{F8}{FC}L'onde de choc est terrible ! C'est parti···!{FD}Tout le monde, donnez tout !{FC}Je ne veux pas que tous ces efforts soient vains !{FC}Esprits de tous les Medabots ! Aidez-nous !{FF}{00}
+
+@0007
+{F8}GROAAAARRR !{F8}{FC}{F8}GRAAAAAAAH !{F8}{FC}Est-ce···le Robo-Emperor ?!{FD}Non, cette sensation···{FC}Cette puissance··· est-ce vraiment un Medabot ?!{FF}{00}
+
+@0008
+{F8}Bisou{4B}{F8}{FC}Oh là là ! Ils l'ont vraiment fait !{FC}Quel frimeur ! J'en veux aussi !{FC}Qu'est-ce que tu as à être jaloux !{FC}{F8}PAF !{F8}{FC}Aïe !{FC}Alors, ce premier baiser ?{FC}Sloan ! En voilà un pour toi aussi !{FC}{F8}PAF !{F8}{FC}Aïe, aïe aïe···{FF}{00}
+
+@0009
+Puis-je···rester à tes côtés pour toujours ?{FC}Koji m'a demandé de veiller sur toi.{FC}Tu as dit···Koji ?{FC}Mais ce n'est pas parce qu'il me l'a demandé···{FD}Moi aussi je veux rester à tes côtés.{FC}{F9} ···{FF}{00}
+
+@0010
+On en a vraiment vu de toutes les couleurs.{FC}Ça n'a pas toujours été facile···{FC}Mais je n'y serais jamais arrivé seul.{FC}Vous êtes des amis si précieux !{FC}J'aurai toujours mes amis et mes{FD}Medabots avec moi ! Pour toujours !{FF}{00}
+
+@0011
+Gya ha ha ha ha ha ha ha ha ha ha !{FC}Écoutez tous !{FC}Cette ville est désormais sous mon contrôle !{FD}Vous vous inclinerez tous devant moi !{FC}Cette voix ! C'est le Dr Armond !{FD}Mais qu'est-ce qui se passe ?!{FC}Tu m'écoutes, {F9} ??{FC}Quoi ? Moi ?!{FC}Je t'ai pris ta précieuse petite amie !{FC}Si tu veux la récupérer···{FC}Viens la chercher !{FD}Gya ha ha ha ha ha !{FF}

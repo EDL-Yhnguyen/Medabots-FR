@@ -1,0 +1,64 @@
+# Table 0x48521C — boutique, sauvegarde et effacement (19 entrées)
+#
+# Messages vus en permanence : achat de Medaparts, sauvegarde, effacement de la
+# partie. Ce sont les plus rentables du jeu à traduire.
+#
+# {4C} est le symbole monétaire du jeu — conservé tel quel, il n'est pas du texte.
+# ··· est le point de suspension (0x3F ×3), pas trois points ordinaires.
+
+@0000
+{FB} {57} Que puis-je pour vous aujourd'hui ?{FF}D
+
+@0001
+{FB} {57} Choisissez le type de Medapart voulu.{FF}D
+
+@0002
+{FB} {57} Choisissez le type de Medapart voulu.{FF}D
+
+@0003
+Effacer toutes les données sauvegardées ? Confirmez-vous ?{FF}D
+
+@0004
+Effacement des données en cours !{FF}D
+
+@0005
+Veuillez recommencer depuis le début !{FF}D
+
+@0006
+Échec de l'effacement !{FF}D
+
+@0007
+Tout est prêt ?{FF}D
+
+@0008
+Impossible d'utiliser ceci maintenant !{FF}D
+
+@0009
+Voulez-vous sauvegarder votre partie ?{FF}D
+
+@0010
+Sauvegarde en cours !{FF}D
+
+@0011
+Partie sauvegardée !{FF}D
+
+@0012
+Échec de la sauvegarde !{FF}D
+
+@0013
+{FB} {57} Voulez-vous renommer une médaille ?{FF}D
+
+@0014
+{FB}A{57} Cela coûtera {4C}1.00. Confirmez-vous ?{FF}D
+
+@0015
+Désolé, vous n'avez pas assez d'argent.{FF}D
+
+@0016
+Attention à ne pas effacer par mégarde.{FF}D
+
+@0017
+Ouah··· ! La médaille « {F9}A »···{FF}B
+
+@0018
+Elle a pris une nouvelle forme !{FF}D

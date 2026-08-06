@@ -16,8 +16,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Interface et menus',
     detail:
-      '33 messages d’objet et d’équipement traduits, avec leurs variables, plus les états d’une pièce.',
-    part: 0.25,
+      'Boutique, sauvegarde et effacement traduits, ainsi que les 33 messages d’objet et d’équipement avec leurs variables.',
+    part: 0.5,
   },
   {
     titre: 'Objets, pièces et médailles',
