@@ -61,6 +61,20 @@ export function rendOctet(octet) {
 }
 
 /**
+ * CARACTÈRES ABSENTS DE LA POLICE, constatés à l'insertion :
+ *
+ *   +  &  %  ;  *  =  #  @  [  ]  <  >
+ *
+ * Le jeu n'en a pas le glyphe. Écrire « Puissance + » fait échouer l'insertion —
+ * ce qui est le bon comportement : mieux vaut un refus net qu'un carré vide à
+ * l'écran. Pour les suffixes d'amélioration, la traduction emploie « Gain »
+ * (« Gain puissance ») plutôt qu'un signe que la police ne sait pas dessiner.
+ *
+ * Cette liste s'allonge à mesure des découvertes ; la chaîne de vérification la
+ * fait respecter toute seule.
+ */
+
+/**
  * Repli d'accents, en attendant que la police porte les glyphes français.
  *
  * La traduction s'écrit AVEC ses accents — « Régénération », pas « Regeneration ».

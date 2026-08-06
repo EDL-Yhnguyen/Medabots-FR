@@ -1,0 +1,163 @@
+# Table 0x3B74B8 — techniques de combat (52 entrées)
+#
+# Ces libellés s'affichent pendant les Robattles. « Up » devient « + » : c'est
+# court, lisible, et le jeu l'emploie déjà comme suffixe systématique.
+#
+# @0023 « Full Body RAD » garde RAD : le sens de cet acronyme n'est pas établi,
+# et inventer une traduction serait pire que de ne pas traduire.
+
+@0000
+Éclair spiral{FE}
+
+@0001
+Éclair latéral{FE}
+
+@0002
+Ultra-tir{FE}
+
+@0003
+Boule de dégâts{FE}
+
+@0004
+Forme optique{FE}
+
+@0005
+Absorption optique{FE}
+
+@0006
+Forme bombe{FE}
+
+@0007
+Absorption bombe{FE}
+
+@0008
+Forme gravité{FE}
+
+@0009
+Absorption gravité{FE}
+
+@0010
+Piège anti-attaque{FE}
+
+@0011
+Annuler formation{FE}
+
+@0012
+Mouvement{FE}
+
+@0013
+Annuler mouvement{FE}
+
+@0014
+Arrêt{FE}
+
+@0015
+Annuler arrêt{FE}
+
+@0016
+Entrave {FE}
+
+@0017
+Annuler entrave{FE}
+
+@0018
+Flux {FE}
+
+@0019
+Annuler flux{FE}
+
+@0020
+Vol de vie{FE}
+
+@0021
+Restauration{FE}
+
+@0022
+Corps renforcé{FE}
+
+@0023
+Corps RAD{FE}
+
+@0024
+Mur de fer{FE}
+
+@0025
+Gain puissance{FE}
+
+@0026
+Récupération totale{FE}
+
+@0027
+Attaque shrapnel{FE}
+
+@0028
+Réparation totale{FE}
+
+@0029
+Volonté de fer{FE}
+
+@0030
+Anti-air{FE}
+
+@0031
+Gain propulsion{FE}
+
+@0032
+Anti-mer{FE}
+
+@0033
+Gain mobilité{FE}
+
+@0034
+Espionnage{FE}
+
+@0035
+Gain PROX{FE}
+
+@0036
+Cache-cache{FE}
+
+@0037
+Gain portée{FE}
+
+@0038
+Charge{FE}
+
+@0039
+Attaque renverse{FE}
+
+@0040
+Chaos{FE}
+
+@0041
+Inutile{FE}
+
+@0042
+Destructeur{FE}
+
+@0043
+Sans structure{FE}
+
+@0044
+Médaforce folle{FE}
+
+@0045
+Gain Médaforce{FE}
+
+@0046
+Ordres de formation{FE}
+
+@0047
+Écrase-jambes{FE}
+
+@0048
+Protecteur{FE}
+
+@0049
+Anti-protection{FE}
+
+@0050
+Attaque dés{FE}
+
+@0051
+Écrase-type{FE}

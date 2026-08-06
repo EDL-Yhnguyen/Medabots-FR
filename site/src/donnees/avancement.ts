@@ -15,8 +15,8 @@ export type Lot = {
 export const LOTS: Lot[] = [
   {
     titre: 'Interface et menus',
-    detail: 'Écrans de titre, options, navigation, messages système.',
-    part: 0.1,
+    detail: '33 messages d’objet et d’équipement traduits, avec leurs variables.',
+    part: 0.2,
   },
   {
     titre: 'Objets, pièces et médailles',
@@ -26,8 +26,9 @@ export const LOTS: Lot[] = [
   },
   {
     titre: 'Textes de combat',
-    detail: '60 types d’attaque et 27 familles de compétences traduits.',
-    part: 0.25,
+    detail:
+      '60 types d’attaque, 52 techniques, 27 familles de compétences et leurs 27 conseils de combinaison.',
+    part: 0.55,
   },
   {
     titre: 'Histoire principale',

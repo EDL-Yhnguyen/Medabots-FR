@@ -1,0 +1,88 @@
+# Table 0x3B6B48 — conseils de combinaison, pièces (27 entrées)
+#
+# Même ordre que les familles de compétences de 0x3B66EC : les mêmes mots
+# français sont donc repris, à la lettre. Deux traductions divergentes du même
+# terme dans deux écrans, et le joueur ne fait plus le lien.
+#
+# {FF}B termine le message et porte son paramètre : il est conservé tel quel.
+
+@0000
+À combiner avec des pièces Prise.{FF}B
+
+@0001
+À combiner avec des pièces Tir.{FF}B
+
+@0002
+À combiner avec des pièces Optique.{FF}B
+
+@0003
+À combiner avec des pièces Bombe.{FF}B
+
+@0004
+À combiner avec des pièces Gravité.{FF}B
+
+@0005
+À combiner avec des pièces Formation.{FF}B
+
+@0006
+À combiner avec des pièces Mouvement.{FF}B
+
+@0007
+À combiner avec des pièces Blocage.{FF}B
+
+@0008
+À combiner avec des pièces Entrave.{FF}B
+
+@0009
+À combiner avec des pièces Flux.{FF}B
+
+@0010
+À combiner avec des pièces Libération.{FF}B
+
+@0011
+À combiner avec des pièces Annulation.{FF}B
+
+@0012
+À combiner avec des pièces Défense.{FF}B
+
+@0013
+À combiner avec des pièces Soin.{FF}B
+
+@0014
+À combiner avec des pièces Réanimation.{FF}B
+
+@0015
+À combiner avec des pièces Anti-air.{FF}B
+
+@0016
+À combiner avec des pièces Anti-mer.{FF}B
+
+@0017
+À combiner avec des pièces Repérage.{FF}B
+
+@0018
+À combiner avec des pièces Camouflage.{FF}B
+
+@0019
+À combiner avec des pièces Temps.{FF}B
+
+@0020
+À combiner avec des pièces Interruption.{FF}B
+
+@0021
+À combiner avec des pièces Destruction.{FF}B
+
+@0022
+À combiner avec des pièces Régénération.{FF}B
+
+@0023
+À combiner avec des pièces Équipe.{FF}B
+
+@0024
+À combiner avec des pièces Riposte.{FF}B
+
+@0025
+À combiner avec des pièces Transformation.{FF}B
+
+@0026
+Aucune pièce ne se combine bien.{FF}B

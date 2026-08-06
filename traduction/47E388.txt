@@ -1,0 +1,112 @@
+# Table 0x47E388 — messages d'objet et d'équipement (33 entrées)
+#
+# {F9}A, {F9}B, {F9} sont des INSERTIONS DE VARIABLES faites par le jeu (nom de
+# la pièce, article, nom du personnage). Elles sont conservées à l'identique et à
+# leur place : les déplacer ou les perdre casse le message à l'exécution.
+#
+# {FF} suivi d'un espace = fin de message et son octet de paramètre. Conservé.
+#
+# « Medapart » et « Tinpet » ne se traduisent pas : ce sont des termes de la
+# franchise, employés tels quels en français.
+#
+# Espace avant « ! » et « ? », comme le veut la typographie française. Le
+# repointage absorbe la longueur.
+
+@0000
+Vous ne pouvez plus rien porter !{FF}{00}
+
+@0001
+Vous obtenez {F9}B « {F9}A ».{FF}{00}
+
+@0002
+{F9}  n'a pas « {F9}A ». {FF}{00}
+
+@0003
+Vous perdez {F9}B « {F9}A ».{FF}{00}
+
+@0004
+Vous perdez « {F9}A ».{FF}{00}
+
+@0005
+Vous ne pouvez plus porter{FD}de ces Medaparts.{FF}{00}
+
+@0006
+Vous obtenez la Medapart tête{FD}« {F9}A ».{FF}{00}
+
+@0007
+Vous obtenez la Medapart bras droit{FD}« {F9}A ».{FF}{00}
+
+@0008
+Vous obtenez la Medapart bras gauche{FD}« {F9}A ».{FF}{00}
+
+@0009
+Vous obtenez la Medapart jambes{FD}« {F9}A ».{FF}{00}
+
+@0010
+Vous obtenez {F9}B Medapart tête{FD}« {F9}A ».{FF}{00}
+
+@0011
+Vous obtenez {F9}B Medapart bras droit{FD}« {F9}A ».{FF}{00}
+
+@0012
+Vous obtenez {F9}B Medapart bras gauche{FD}« {F9}A ».{FF}{00}
+
+@0013
+Vous obtenez {F9}B Medapart jambes{FD}« {F9}A ».{FF}{00}
+
+@0014
+{F9}  n'a pas la {FD}Medapart tête « {F9}A ».{FF}{00}
+
+@0015
+{F9}  n'a pas la {FD}Medapart bras droit « {F9}A ».{FF}{00}
+
+@0016
+{F9}  n'a pas la {FD}Medapart bras gauche « {F9}A ».{FF}{00}
+
+@0017
+{F9}  n'a pas la {FD}Medapart jambes « {F9}A ».{FF}{00}
+
+@0018
+Vous perdez la{FD}Medapart tête « {F9}A ».{FF}{00}
+
+@0019
+Vous perdez la{FD}Medapart bras droit « {F9}A ».{FF}{00}
+
+@0020
+Vous perdez la{FD}Medapart bras gauche « {F9}A ».{FF}{00}
+
+@0021
+Vous perdez la{FD}Medapart jambes « {F9}A ».{FF}{00}
+
+@0022
+Vous perdez {F9}B Medapart tête{FD}« {F9}A ».{FF}{00}
+
+@0023
+Vous perdez {F9}B Medapart bras droit{FD}« {F9}A ».{FF}{00}
+
+@0024
+Vous perdez {F9}B Medapart bras gauche{FD}« {F9}A ».{FF}{00}
+
+@0025
+Vous perdez {F9}B Medapart jambes{FD}« {F9}A ».{FF}{00}
+
+@0026
+Vous obtenez {4C}{F9}A.{FF}{00}
+
+@0027
+Vous utilisez {4C}{F9}A.{FF}{00}
+
+@0028
+Vous avez déjà cette médaille.{FF}{00}
+
+@0029
+Vous obtenez la médaille « {F9}A ».{FF}{00}
+
+@0030
+Vous ne pouvez plus rien porter !{FD}Tinpet abandonné !{FF}{00}
+
+@0031
+Vous obtenez un Tinpet mâle !{FF}{00}
+
+@0032
+Vous obtenez un Tinpet femelle !{FF}{00}
