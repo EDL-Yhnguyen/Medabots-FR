@@ -6,6 +6,19 @@
  * tout est à zéro et le site le dit.
  */
 
+/**
+ * Le compte réel, seule mesure honnête de l'avancement.
+ *
+ * L'en-tête affichait auparavant la MOYENNE des cinq lots — ce qui donnait
+ * 40 % alors que « Histoire principale », à zéro, pèse à lui seul l'essentiel
+ * des 67 000 mots. Une moyenne non pondérée flatte le chantier ; le nombre
+ * d'entrées ne ment pas.
+ */
+export const ENTREES = {
+  traduites: 692,
+  total: 5933,
+} as const
+
 export type Lot = {
   titre: string
   detail: string

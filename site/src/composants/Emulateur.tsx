@@ -88,17 +88,25 @@ export function Emulateur({
       </div>
 
       {erreur ? (
-        <div role="alert" className="rounded-carte border border-corail/40 bg-corail/10 p-6">
-          <p className="text-sm text-texte-doux">{erreur}</p>
+        <div role="alert" className="rounded-carte border-2 border-corail bg-corail-fond p-6">
+          <p className="text-sm text-texte">{erreur}</p>
         </div>
       ) : (
+        /* Au téléphone, l'écran du jeu prend toute la largeur : sur 390 px, les
+           40 px de marge du contenu coûtent 10 % de la surface de jeu. Les
+           commandes tactiles d'EmulatorJS ont besoin que le navigateur leur
+           laisse les gestes — d'où touch-action: none et le rebond contenu,
+           sans quoi glisser sur la croix fait défiler la page. */
         <div
           id="jeu"
-          className="aspect-[3/2] w-full overflow-hidden rounded-carte border border-trait bg-black"
+          role="application"
+          aria-label="Émulateur Game Boy Advance — Medabots"
+          className="-mx-5 aspect-[3/2] w-[calc(100%+2.5rem)] touch-none overscroll-contain
+            border-y border-trait bg-black sm:mx-0 sm:w-full sm:rounded-carte sm:border"
         />
       )}
 
-      <p className="mt-4 text-xs text-texte-doux">
+      <p className="mt-4 text-sm text-texte-doux">
         Vos sauvegardes restent dans ce navigateur. Sur mobile, ajoutez le site à l’écran
         d’accueil pour le retrouver comme une application.
       </p>

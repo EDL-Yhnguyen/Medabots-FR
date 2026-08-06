@@ -3,15 +3,36 @@ import { Barre, Carte, Etiquette, Titre } from './composants/ui'
 import { DepotRom } from './composants/DepotRom'
 import { Emulateur } from './composants/Emulateur'
 import { appliquePatch } from './lib/patch'
-import { ETAPES, LOTS } from './donnees/avancement'
+import { ENTREES, ETAPES, LOTS } from './donnees/avancement'
 
 const DEPOT = 'https://github.com/EDL-Yhnguyen/Medabots-FR'
 const PATCH = '/medabots-fr.bps'
 
+/** Un lien qui sort du site s'ouvre à côté : installé sur l'écran d'accueil,
+    le site n'a pas de bouton « retour », et partir vers GitHub dans le même
+    onglet ferme le jeu en cours. */
+function LienExterne({
+  href,
+  children,
+  className = '',
+}: {
+  href: string
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+      <span className="sr-only"> (nouvel onglet)</span>
+    </a>
+  )
+}
+
 export default function App() {
   const [romLancee, setRomLancee] = useState<ArrayBuffer | null>(null)
   const [erreurPatch, setErreurPatch] = useState<string | null>(null)
-  const total = LOTS.reduce((somme, lot) => somme + lot.part, 0) / LOTS.length
+  // Le compte d'entrées, pas la moyenne des lots : voir ENTREES.
+  const total = ENTREES.traduites / ENTREES.total
 
   // Le patch est appliqué ici, dans le navigateur, juste avant de lancer le jeu.
   // La ROM patchée n'existe qu'en mémoire : rien n'est écrit, rien n'est envoyé.
@@ -33,22 +54,25 @@ export default function App() {
   }, [])
 
   return (
-    <div className="mx-auto max-w-3xl px-5 py-10 sm:py-16">
+    <div className="zone-sure mx-auto max-w-3xl pt-10 sm:pt-16">
       <Entete total={total} />
 
       <main className="mt-12 space-y-8">
-        <section id="lecteur" className="scroll-mt-8">
+        <section id="lecteur" aria-labelledby="titre-lecteur" className="scroll-mt-8">
           {romLancee ? (
             <>
               {erreurPatch && (
                 <div
                   role="alert"
-                  className="mb-4 rounded-xl border border-corail/40 bg-corail/10 p-4 text-sm text-texte-doux"
+                  className="mb-4 rounded-xl border-2 border-corail bg-corail-fond p-4 text-sm text-texte"
                 >
                   La traduction n’a pas pu être appliquée ({erreurPatch}). Le jeu se lance en
                   anglais.
                 </div>
               )}
+              <h2 id="titre-lecteur" className="sr-only">
+                Lecteur
+              </h2>
               <Emulateur
                 rom={romLancee}
                 traduit={!erreurPatch}
@@ -66,14 +90,15 @@ export default function App() {
             {LOTS.map((lot) => (
               <div key={lot.titre}>
                 <Barre part={lot.part} libelle={lot.titre} />
-                <p className="mt-1.5 text-xs text-texte-doux">{lot.detail}</p>
+                <p className="mt-1.5 text-sm text-texte-doux">{lot.detail}</p>
               </div>
             ))}
           </div>
           <p className="mt-6 border-t border-trait pt-5 text-sm text-texte-doux">
-            Le script du jeu pèse <strong className="text-texte">393 Kio</strong>, soit de l’ordre
-            de <strong className="text-texte">67 000 mots</strong>. Chaque lot est livré comme un
-            patch utilisable, plutôt que d’attendre des mois un ensemble complet.
+            Le script du jeu pèse{' '}
+            <strong className="tabular-nums text-texte">393&nbsp;Kio</strong>, soit de l’ordre de{' '}
+            <strong className="tabular-nums text-texte">67&nbsp;000 mots</strong>. Chaque lot est
+            livré comme un patch utilisable, plutôt que d’attendre des mois un ensemble complet.
           </p>
         </Carte>
 
@@ -81,15 +106,20 @@ export default function App() {
           <Titre sur="Technique">Ce qu’on sait du jeu</Titre>
           <ul className="space-y-4">
             {ETAPES.map((etape) => (
-              <li key={etape.titre} className="flex gap-4">
-                <span className="mt-0.5 shrink-0">
+              /* Au téléphone l'état passe au-dessus : une colonne d'étiquettes
+                 mangeait 80 px sur 295, et leurs largeurs inégales décalaient
+                 le début de chaque titre. À partir de sm, colonne à largeur
+                 fixe — les titres s'alignent enfin. */
+              <li key={etape.titre} className="flex flex-col gap-2 sm:flex-row sm:gap-4">
+                <span className="w-[5rem] shrink-0 sm:mt-0.5">
                   <Etiquette
+                    bloc
                     ton={etape.etat === 'fait' ? 'vert' : etape.etat === 'bloque' ? 'corail' : 'neutre'}
                   >
                     {etape.etat === 'fait' ? 'résolu' : etape.etat === 'bloque' ? 'bloqué' : 'à venir'}
                   </Etiquette>
                 </span>
-                <div>
+                <div className="min-w-0">
                   <h3 className="font-bold">{etape.titre}</h3>
                   <p className="mt-0.5 text-sm text-texte-doux">{etape.detail}</p>
                 </div>
@@ -98,12 +128,12 @@ export default function App() {
           </ul>
           <p className="mt-6 border-t border-trait pt-5 text-sm text-texte-doux">
             Le détail complet, avec ce qui établit chaque affirmation, est dans{' '}
-            <a
+            <LienExterne
               href={`${DEPOT}/blob/main/docs/format.md`}
               className="font-semibold text-jaune underline underline-offset-4 hover:text-jaune-vif"
             >
               docs/format.md
-            </a>
+            </LienExterne>
             .
           </p>
         </Carte>
@@ -112,9 +142,12 @@ export default function App() {
           <Titre sur="Le projet">Pourquoi ce chantier</Titre>
           <div className="space-y-4 text-texte-doux">
             <p>
-              <strong className="text-texte">Medabots: Metabee Version</strong> est sorti en Europe
-              en anglais seulement. C’est un portage de <em>Medarot 2 Core</em>, jamais traduit en
-              français — la demande a été faite en 2013 sur un forum, personne ne l’a reprise.
+              <strong className="text-texte" translate="no">
+                Medabots: Metabee Version
+              </strong>{' '}
+              est sorti en Europe en anglais seulement. C’est un portage de{' '}
+              <em translate="no">Medarot 2 Core</em>, jamais traduit en français — la demande a été
+              faite en 2013 sur un forum, personne ne l’a reprise.
             </p>
             <p>
               Le dépôt contient les outils d’analyse, la documentation du format et, à terme, le
@@ -122,18 +155,19 @@ export default function App() {
               contiendra jamais.
             </p>
           </div>
-          <a
+          <LienExterne
             href={DEPOT}
-            className="mt-6 inline-flex items-center gap-2 rounded-xl border border-trait
-              bg-surface-haute px-5 py-3 text-sm font-bold transition-colors
-              hover:border-jaune hover:text-jaune"
+            className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl border-2
+              border-trait-fort px-5 py-3 text-sm font-bold
+              transition-[background-color,border-color,color] duration-150
+              hover:bg-surface-haute hover:border-jaune hover:text-jaune"
           >
-            Voir le dépôt sur GitHub →
-          </a>
+            Voir le dépôt sur GitHub <span aria-hidden="true">→</span>
+          </LienExterne>
         </Carte>
       </main>
 
-      <footer className="mt-12 border-t border-trait pt-6 text-xs leading-relaxed text-texte-doux">
+      <footer className="mt-12 border-t border-trait pt-6 text-sm leading-relaxed text-texte-doux">
         <p>
           Projet de traduction amateur, sans lien avec Imagineer, Natsume ou Ubisoft.{' '}
           <strong className="text-texte">Aucun jeu n’est distribué ici.</strong> Le lecteur
@@ -141,12 +175,12 @@ export default function App() {
         </p>
         <p className="mt-2">
           Émulation assurée par{' '}
-          <a
+          <LienExterne
             href="https://emulatorjs.org"
-            className="underline underline-offset-2 hover:text-jaune"
+            className="font-semibold text-jaune underline underline-offset-4 hover:text-jaune-vif"
           >
             EmulatorJS
-          </a>{' '}
+          </LienExterne>{' '}
           (cœur mGBA).
         </p>
       </footer>
@@ -161,29 +195,30 @@ function Entete({ total }: { total: number }) {
         <Etiquette ton="jaune">Game Boy Advance</Etiquette>
         <Etiquette>Traduction française</Etiquette>
         <Etiquette ton={total > 0 ? 'vert' : 'corail'}>
-          {total > 0 ? `${Math.round(total * 100)} % traduit` : 'Chantier ouvert'}
+          {total > 0 ? `${Math.round(total * 100)} % traduit` : 'Chantier ouvert'}
         </Etiquette>
       </div>
 
-      <h1 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl">
+      <h1 className="text-[2.75rem] font-black leading-[1.02] tracking-tight sm:text-6xl">
         Medabots
         <span className="block text-jaune">en français</span>
       </h1>
 
       <p className="mt-5 max-w-xl text-lg text-texte-doux">
-        La première traduction française de <em>Medabots: Metabee Version</em>. Suivez
-        l’avancement, lisez comment le jeu est démonté — et jouez-y ici même, avec votre propre
-        copie.
+        La première traduction française de{' '}
+        <em translate="no">Medabots: Metabee Version</em>. Suivez l’avancement, lisez comment le
+        jeu est démonté — et jouez-y ici même, avec votre propre copie.
       </p>
 
       <a
         href="#lecteur"
-        className="mt-7 inline-flex items-center gap-2 rounded-xl bg-jaune px-6 py-3.5
-          text-sm font-black tracking-wide text-fond shadow-[0_6px_0_0_#B87F00]
-          transition-all duration-150 hover:bg-jaune-vif
-          active:translate-y-[3px] active:shadow-[0_3px_0_0_#B87F00]"
+        className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-xl bg-jaune px-6 py-3.5
+          text-sm font-black tracking-wide text-fond
+          shadow-[0_6px_0_0_var(--color-jaune-ombre)]
+          transition-[background-color,box-shadow,transform] duration-150 hover:bg-jaune-vif
+          active:translate-y-[3px] active:shadow-[0_3px_0_0_var(--color-jaune-ombre)]"
       >
-        ▶ Ouvrir le lecteur
+        <span aria-hidden="true">▶</span> Ouvrir le lecteur
       </a>
     </header>
   )

@@ -1,30 +1,57 @@
 @import 'tailwindcss';
 
-/* Palette : bleu de nuit profond + jaune Metabee. Des aplats saturés, pas des gris.
-   Contrastes vérifiés sur fond #0B1020 :
-   texte 16:1 · texte-doux 7,5:1 · jaune 11:1 · vert 8:1 · corail 6,5:1 */
+/* ---------------------------------------------------------------------------
+   Palette : bleu de nuit profond + jaune Metabee. Des aplats saturés opaques,
+   jamais des teintes alpha : une couleur posée à 15 % sur un dégradé change de
+   contraste selon l'endroit de la page, donc ne se vérifie pas.
+
+   Tous les couples ci-dessous sont CALCULÉS (WCAG 2.1), pas jugés à l'œil.
+   Le script est dans travail/ ; les valeurs tenues sont :
+
+     texte / carte ................ 15,21:1   (min 4,5)
+     texte-doux / carte ............ 7,26:1   (min 4,5)
+     texte-doux / surface-haute .... 5,97:1   (min 4,5)
+     jaune / carte ................ 10,78:1   (min 4,5)
+     fond / jaune plein ........... 11,89:1   (min 4,5)
+     fond / vert plein ............. 9,42:1   (min 4,5)
+     fond / corail plein ........... 7,44:1   (min 4,5)
+     corail / corail-fond .......... 6,36:1   (min 4,5)
+     vert / vert-fond .............. 6,97:1   (min 4,5)
+     trait-fort / carte ............ 3,47:1   (min 3 — limite de contrôle)
+     trait-fort / fond ............. 3,83:1   (min 3)
+     jaune / surface-haute ......... 8,86:1   (min 3 — barre sur son rail)
+
+   Deux niveaux de trait, et la distinction compte :
+     --trait      décor pur (séparateurs, bord de carte). Aucune exigence.
+     --trait-fort limite d'un CONTRÔLE (bouton, zone de dépôt, rail de barre).
+                  Soumis à WCAG 1.4.11 : jamais sous 3:1.
+   --------------------------------------------------------------------------- */
 @theme {
   --color-fond: #0b1020;
   --color-surface: #151d38;
   --color-surface-haute: #1e2950;
   --color-trait: #2e3b6b;
+  --color-trait-fort: #556bc0;
   --color-texte: #eef1fb;
   --color-texte-doux: #9ba8ce;
 
   --color-jaune: #ffc42e;
   --color-jaune-vif: #ffd75e;
+  --color-jaune-ombre: #b87f00;
   --color-corail: #ff7a6b;
-  --color-corail-vif: #ff4e3a;
+  --color-corail-fond: #3a1512;
   --color-vert: #2fd16b;
-  --color-bleu: #4ea6ff;
+  --color-vert-fond: #08331b;
 
-  --font-titre: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --radius-carte: 1rem;
 }
 
 html {
   background: var(--color-fond);
   color-scheme: dark;
+  scroll-behavior: smooth;
+  /* Empêche iOS de regrossir le texte en paysage sans bloquer le zoom manuel. */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -39,15 +66,54 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Le focus doit rester visible partout : c'est la seule façon de naviguer au clavier. */
+/* L'index.html déclare viewport-fit=cover : sans ces marges, le pied de page
+   passe sous la barre d'accueil de l'iPhone. Le site s'utilise au téléphone,
+   installé sur l'écran d'accueil — c'est exactement le cas qui casse. */
+.zone-sure {
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+  padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+}
+
+/* Le focus doit rester visible partout : c'est la seule façon de naviguer au
+   clavier. Deux anneaux — un sombre, un jaune — pour qu'il se voie aussi bien
+   sur un aplat jaune que sur le bleu de nuit. */
 :focus-visible {
   outline: 3px solid var(--color-jaune);
   outline-offset: 2px;
   border-radius: 4px;
+  box-shadow: 0 0 0 2px var(--color-fond);
+}
+
+/* Pas de délai de 300 ms au tapotement, et pas de flash bleu système : le site
+   doit répondre comme une application, pas comme une page. */
+a,
+button,
+label,
+summary,
+input,
+[role='button'] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Les titres se coupent au bon endroit plutôt qu'en laissant un mot seul. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* Respecter le réglage système : aucune animation imposée à qui n'en veut pas. */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
