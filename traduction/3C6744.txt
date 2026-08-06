@@ -1,4 +1,4 @@
-# Table 0x3C6744 — messages de combat (176 entrées, 56 traduites)
+# Table 0x3C6744 — messages de combat (176 entrées, 116 traduites)
 #
 # Ce sont les messages vus à chaque Robattle. Traduction partielle assumée : les
 # entrées non listées ici restent en anglais et le jeu continue de fonctionner.
@@ -178,3 +178,188 @@ Vous volez {F9}A usages de{FD}Medapart tête !{FA}{50}{FF}D
 
 @0055
 Échec de la Médaforce !{FD}Pas assez de Médaforce !{FA}{50}{FF}D
+
+# ─── Effets de Médaforce et fins de Robattle ───
+#
+# @0115 corrige une faute de l'anglais d'origine : « Enable to use Medaforce! »
+# veut dire « Able to use ». On traduit l'intention, pas la coquille.
+
+@0056
+Médaforce activée !{FD}{F9}A !{FA}{50}{FF}D
+
+@0057
+Bloqué par des Medaparts anti-états !{FA}{50}{FF}D
+
+@0058
+Tous les Medabots sont endommagés !{FA}{50}{FF}D
+
+@0059
+Tous les Medabots sont soignés !{FA}{50}{FF}D
+
+@0060
+Les Medaparts de tous les Medabots sont réparées !{FA}{50}{FF}D
+
+@0061
+Propulsion de tous les Medabots accrue !{FA}{50}{FF}D
+
+@0062
+Mobilité de tous les Medabots accrue !{FA}{50}{FF}D
+
+@0063
+Défense de tous les Medabots accrue !{FA}{50}{FF}D
+
+@0064
+Proximité de tous les Medabots accrue !{FA}{50}{FF}D
+
+@0065
+Portée de tous les Medabots accrue !{FA}{50}{FF}D
+
+@0066
+Tous les Medabots sont tombés !{FA}{50}{FF}D
+
+@0067
+Détruit tous les Medabots qui tournent le dos !{FA}{50}{FF}D
+
+@0068
+Puissance d'attaque accrue !{FA}{50}{FF}D
+
+@0069
+Défense accrue !{FA}{50}{FF}D
+
+@0070
+Tous les Medabots subissent {FD}l'état Mouvement !{FA}{50}{FF}D
+
+@0071
+Tous les Medabots subissent {FD}l'état Entrave !{FA}{50}{FF}D
+
+@0072
+Tous les Medabots subissent {FD}l'état Flux !{FA}{50}{FF}D
+
+@0073
+Tous les Medabots subissent {FD}l'état Blocage !{FA}{50}{FF}D
+
+@0074
+Toutes les Medaparts passent en Optique !{FD}Puissance d'attaque doublée !{FA}{50}{FF}D
+
+@0075
+Toutes les Medaparts passent en Bombe !{FD}Touche à coup sûr, dégâts perforants !{FA}{50}{FF}D
+
+@0076
+Toutes les Medaparts passent en Gravité !{FD}Taux de réussite doublé !{FA}{50}{FF}D
+
+@0077
+Effet négatif{FD}infligé aux Medabots aériens !{FA}{50}{FF}D
+
+@0078
+Effet négatif{FD}infligé aux Medabots marins !{FA}{50}{FF}D
+
+@0079
+Cette unité riposte parfois{FD}pendant un soutien !{FA}{50}{FF}D
+
+@0080
+Piège d'attaque posé !{FD}Prise et Tir subissent des dégâts !{FA}{50}{FF}D
+
+@0081
+Puissance de base accrue !{FD}Les actions de base sont renforcées !{FA}{50}{FF}D
+
+@0082
+Réparation continue pour tous les Medabots !{FA}{50}{FF}D
+
+@0083
+Les effets négatifs de tous les Medabots{FD}sont dissipés !{FA}{50}{FF}D
+
+@0084
+Les usages des Medaparts tête{FD}de tous les Medabots augmentent !{FA}{50}{FF}D
+
+@0085
+Tous les Medabots sont immunisés{FD}contre l'état Mouvement !{FA}{50}{FF}D
+
+@0086
+Tous les Medabots sont immunisés{FD}contre l'état Entrave !{FA}{50}{FF}D
+
+@0087
+Tous les Medabots sont immunisés{FD}contre l'état Flux !{FA}{50}{FF}D
+
+@0088
+Tous les Medabots sont immunisés{FD}contre l'état Blocage !{FA}{50}{FF}D
+
+@0089
+Vitesse de tous les Medabots accrue !{FA}{50}{FF}D
+
+@0090
+Tous les Medabots sont prêts à l'instant !{FA}{50}{FF}D
+
+@0091
+Visée des cibles réduite,{FD}visée des alliés accrue !{FA}{50}{FF}D
+
+@0092
+Camouflage des cibles réduit,{FD}camouflage des alliés accru !{FA}{50}{FF}D
+
+@0093
+Tous les Medabots subissent{FD}l'état Chaos !{FA}{50}{FF}D
+
+@0094
+Tous les Medabots subissent{FD}l'état Inutilisable !{FA}{50}{FF}D
+
+@0095
+Tous les Medabots subissent{FD}l'état Sans esquive !{FA}{50}{FF}D
+
+@0096
+Tous les Medabots subissent{FD}l'état Sans défense !{FA}{50}{FF}D
+
+@0097
+Absorbe les attaques optiques !{FA}{50}{FF}D
+
+@0098
+Absorbe les attaques bombe !{FA}{50}{FF}D
+
+@0099
+Absorbe les attaques gravité !{FA}{50}{FF}D
+
+@0100
+Insensible aux pièges !{FA}{50}{FF}D
+
+@0101
+Tous les Medabots passent en mode radiation !{FA}{50}{FF}D
+
+@0102
+Medaparts de riposte{FD}et de défense détruites !{FA}{50}{FF}D
+
+@0103
+Dégâts par Médaforce volée !{FA}{50}{FF}D
+
+@0104
+Absorption de Médaforce accrue !{FA}{50}{FF}D
+
+@0105
+Medaparts jambes détruites !{FA}{50}{FF}D
+
+@0106
+Le soutien et la riposte {FD}n'ont rien donné !{FA}{50}{FF}D
+
+@0107
+Medapart {F9}A{FD}« {F9}B » obtenue !{FF}D
+
+@0108
+Medapart {F9}A{FD}« {F9}B » dérobée !{FF}D
+
+@0109
+Vous gagnez {F9}A points d'expérience.{FF}B
+
+@0110
+{FB}  CVous avez perdu le Robattle !{FF}C
+
+@0111
+{FB}  HVous n'avez aucun Medabot assemblé !{FF}B
+
+@0112
+Aucun effet d'état à dissiper.{FA}{50}{FF}D
+
+@0113
+Piège renforcé !{FA}{50}{FF}D
+
+@0114
+Entrave forcée ! Médaforce inutilisable !{FA}{50}{FF}D
+
+@0115
+Entrave forcée levée ! Médaforce à nouveau utilisable !{FA}{50}{FF}D
