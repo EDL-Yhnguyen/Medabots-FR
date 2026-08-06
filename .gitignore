@@ -1,0 +1,14 @@
+# La ROM n'entre JAMAIS dans le dépôt : c'est une œuvre sous droits.
+# On ne versionne que nos outils, nos textes et le patch.
+*.gba
+*.gb
+*.sav
+*.srm
+*.ss[0-9]
+*.state
+
+# Sorties de travail reproductibles depuis la ROM + les outils.
+travail/
+sortie/
+
+node_modules/
