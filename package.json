@@ -1,0 +1,10 @@
+{
+  "name": "medabots-fr",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Traduction française de Medabots: Metabee Version (GBA) — outils et documentation. Ne contient aucune ROM.",
+  "scripts": {
+    "verifier": "node outils/verifier.mjs"
+  }
+}

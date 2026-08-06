@@ -214,13 +214,41 @@ critère unique en manque forcément une.
 
 | | |
 |---|---|
-| Tables de texte | **21** |
-| Entrées | **3 944** |
-| Volume | **489 250 octets** (478 Kio) |
-| Estimation | ~82 000 mots |
+| Tables de texte | **33** |
+| Entrées | **5 933** |
+| Volume | **679 381 octets** (663 Kio) |
+| Estimation | ~113 000 mots |
 
-Les plus grosses : `0x47A784` (323 entrées), `0x47A2C4` (303), `0x47B110` (295),
-`0x47D124` (293), `0x47BDE0` (281), `0x3BBB4C` (480 noms de Medaparts).
+Dialogues : `0x47A784` (323 entrées), `0x47A2C4` (303), `0x47B110` (295),
+`0x47D124` (293), `0x47BDE0` (281).
+
+Listes, qui forment le contenu des premiers lots de traduction :
+
+| Adresse | Entrées | Contenu |
+|---|---|---|
+| `0x3BBB4C` | 480 | Medaparts |
+| `0x3BA658` | 120 | noms de Medabots |
+| `0x3C40B8` | 97 | personnages (Ikki, Erika, Karin, Koji…) |
+| `0x483ED8` | 64 | objets |
+| `0x3BE868` | 60 | types d'attaque |
+| `0x3B74B8` | 52 | techniques |
+| `0x3B6590` | 34 | médailles |
+| `0x3B66EC` | 27 | compétences |
+
+### Une régression rattrapée par la chaîne de vérification
+
+En rendant `0x3F` par `·` au lieu de `.`, une table de script entière est passée
+sous le seuil et a disparu **sans le moindre signal** : la fonction de lisibilité
+listait les caractères acceptés **en dur**, au lieu de les déduire de la table.
+Pire, elle utilisait déjà `·` pour marquer les codes de contrôle — collision
+directe.
+
+Corrigé : la liste se déduit de `TABLE`, et le marqueur de contrôle est passé à
+`¤`. Le compte est remonté de 21 à 33 tables — dont les huit listes ci-dessus, qui
+n'avaient jamais été vues.
+
+**Leçon :** un seuil qui dépend d'une constante recopiée casse en silence dès que
+la source bouge.
 
 Le récapitulatif machine est régénéré dans `travail/pointeurs.json`.
 
@@ -251,14 +279,52 @@ inconnus ». Ce ne sont pas des lettres manquantes — ce sont pour l'essentiel 
 **paramètres des codes de contrôle** (l'octet qui suit `0xFB` porte le portrait ou
 le locuteur). Les élucider demande la sémantique des codes, pas la table.
 
-### Ce qui reste avant de pouvoir réinsérer
+---
+
+## 5 ter. Réinsertion ✅ EN PLACE, test d'identité au vert
+
+Outil : [`outils/reinserer.mjs`](../outils/reinserer.mjs). Chaîne complète :
+
+```
+MEDABOTS_ROM="C:/chemin/vers/rom.gba" npm run verifier
+```
+
+**L'aller-retour identité passe** : extraire puis réinsérer 5 933 entrées
+(679 381 octets) sans rien modifier rend une ROM **identique à l'originale au bit
+près**. L'outillage ne perd rien — c'est ce qui autorise à traduire.
+
+### Deux pièges levés en chemin
+
+**La table doit être sans ambiguïté.** `0x3F` et `0x40` se rendaient tous deux par
+`.`. À la réinsertion, rien n'aurait pu dire lequel réécrire. `0x3F` prend donc le
+point médian `·` ; `…` est accepté comme raccourci pour trois `0x3F`. Le
+réinsérateur **refuse de démarrer** si deux octets rendent le même caractère.
+
+**L'extraction doit purger sa sortie.** Le premier test d'identité a échoué sur
+1 910 octets : `travail/script/` contenait encore 49 fichiers d'une extraction
+antérieure, produits avec l'ancienne table. `extraire.mjs` purge désormais ses
+`.txt` avant d'écrire.
+
+### Garde-fou de débordement
+
+Sans repointage, une entrée traduite s'écrit à son adresse d'origine. Si le
+français est plus long que l'anglais, elle **écrase l'entrée suivante** — et rien
+dans la ROM ne le signale. Le réinsérateur calcule donc la place réelle de chaque
+entrée et refuse ce qui déborde :
+
+```
+❌ 1 entrée(s) trop longue(s), NON écrite(s) :
+   3B6590.txt @0001 : 46 octets pour 7 disponibles (39 de trop).
+```
+
+Vérifié en rallongeant volontairement une entrée : refus, sortie en erreur, ROM
+intacte. Un garde-fou qui n'a jamais déclenché ne prouve rien.
+
+### Ce qui reste
 
 - La sémantique des codes `0xF8`–`0xFF` et de leurs paramètres.
-- Le **repointage** : le français étant plus long que l'anglais, les textes devront
-  être relogés et chaque pointeur recalculé.
-- Un **aller-retour identité** : extraire puis réinsérer sans modifier doit rendre
-  une ROM identique au bit près. Tant que ce test ne passe pas, aucune traduction
-  ne peut être insérée en confiance.
+- Le **repointage**, qui lèvera la contrainte de longueur.
+- La **police** et les glyphes accentués.
 
 ---
 

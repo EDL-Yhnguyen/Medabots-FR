@@ -16,7 +16,13 @@ for (let i = 0; i < 26; i++) {
 for (let i = 0; i < 10; i++) TABLE[0x35 + i] = String.fromCharCode(48 + i) // 0..9
 
 TABLE[0x00] = ' '
-TABLE[0x3f] = '.' // « every now and th...Zzz...Zzz. » — par trois, c'est l'ellipse
+
+// ATTENTION — deux points différents, et il faut les distinguer.
+// 0x3F et 0x40 sont deux glyphes distincts du jeu. Les rendre tous les deux « . »
+// rendrait la réinsertion IMPOSSIBLE : rien ne dirait lequel réécrire. 0x3F,
+// qui s'emploie par trois pour l'ellipse, prend donc le point médian « · ».
+// À la réinsertion, « … » est accepté comme raccourci pour trois 0x3F.
+TABLE[0x3f] = '·' // « every now and th···Zzz···Zzz. » — le point d'ellipse
 TABLE[0x40] = '.' // « Select Corps. garbage » — le point de fin de phrase
 TABLE[0x41] = ','
 TABLE[0x42] = "'" // « Let's continue »

@@ -103,7 +103,19 @@ Détail complet et preuves : `docs/format.md`.
 
 ## Vérification
 
-Aucune chaîne de vérification automatisée à ce stade. À mettre en place dès que
-l'extraction/réinsertion existera : un aller-retour extraction → réinsertion sans
-modification doit rendre une ROM **identique au bit près** à l'originale. Tant que
-ce test ne passe pas, aucune traduction ne peut être insérée en confiance.
+```
+MEDABOTS_ROM="C:/chemin/vers/Medabots - Metabee (Europe).gba" npm run verifier
+```
+
+Enchaîne recherche de pointeurs → extraction → réinsertion → **test d'identité**.
+
+**Le test d'identité est le seul qui compte vraiment** : extraire puis réinsérer
+sans rien modifier doit rendre une ROM identique au bit près. S'il échoue,
+l'outillage perd de l'information quelque part, et insérer une traduction
+reviendrait à découvrir les dégâts trois cents dialogues plus tard.
+
+Il est au vert sur 5 933 entrées / 679 381 octets.
+
+**Le lancer après toute modification d'un outil.** Il a déjà rattrapé une
+régression invisible : changer le rendu de `0x3F` faisait disparaître une table de
+script entière, sans aucun message.

@@ -63,13 +63,19 @@ export const ETAPES = [
     titre: 'Tables de pointeurs',
     etat: 'fait',
     detail:
-      '21 tables, 3 944 entrées, 478 Kio de script — vérifiées en décodant leurs cibles. 159 fausses pistes (code ARM) écartées.',
+      '33 tables, 5 933 entrées, 663 Kio de script — vérifiées en décodant leurs cibles. 147 fausses pistes (code ARM) écartées.',
   },
   {
     titre: 'Extraction du script',
     etat: 'fait',
     detail:
-      'Le script sort en fichiers texte éditables, chaque entrée délimitée par le pointeur suivant. Volume mesuré : ~82 000 mots.',
+      'Le script sort en fichiers texte éditables, chaque entrée délimitée par le pointeur suivant. Volume mesuré : ~113 000 mots.',
+  },
+  {
+    titre: 'Réinsertion',
+    etat: 'fait',
+    detail:
+      'L’aller-retour identité passe : extraire puis réinsérer sans rien changer rend une ROM identique au bit près. Un garde-fou refuse toute entrée trop longue plutôt que d’écraser la suivante.',
   },
   {
     titre: 'Codes de contrôle',

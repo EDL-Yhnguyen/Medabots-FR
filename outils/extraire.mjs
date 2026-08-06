@@ -4,7 +4,7 @@
 // c'est sans perte, et ça n'exige pas de connaître tous les codes de contrôle.
 // Les tables étant triées par adresse croissante, l'entrée i occupe
 // [cible(i), cible(i+1)).
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
 import { TABLE as table, rendOctet as rendu } from './table-caracteres.mjs'
 
 const rom = readFileSync(process.argv[2])
@@ -36,6 +36,15 @@ function decodeEntree(deb, fin) {
 }
 
 mkdirSync(dossier, { recursive: true })
+
+// Purger les .txt d'une extraction précédente. Sans ça, une table écartée depuis
+// ou un fichier produit avec une ancienne table de caractères survit et se fait
+// relire à la réinsertion. C'est exactement ce qui a fait échouer le premier test
+// d'identité : 49 fichiers relus pour 21 tables extraites.
+const restes = readdirSync(dossier).filter((f) => f.endsWith('.txt'))
+for (const f of restes) rmSync(dossier + '/' + f)
+if (restes.length) console.log('Purge   : ' + restes.length + ' fichier(s) d’une extraction précédente')
+if (!existsSync(dossier)) mkdirSync(dossier, { recursive: true })
 let totalEntrees = 0
 let totalOctets = 0
 const index = []

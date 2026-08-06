@@ -7,11 +7,22 @@ Dernière séance : 2026-08-06 · dépôt et site en ligne
 
 ## Où on en est
 
-**Les tables de pointeurs sont résolues et le script est extrait** : 21 tables,
-3 944 entrées, **478 Kio, ~82 000 mots** — le volume est désormais mesuré, plus
-estimé. `outils/extraire.mjs` sort le tout en fichiers texte éditables dans
-`travail/script/`. 159 fausses pistes (pools de littéraux ARM) écartées par trois
-filtres empilés.
+**L'aller-retour identité PASSE.** Extraire puis réinsérer sans rien modifier rend
+une ROM identique à l'originale au bit près. C'est le jalon qui autorise à traduire :
+l'outillage ne perd rien. Chaîne exécutable :
+
+```
+MEDABOTS_ROM="C:/chemin/vers/rom.gba" npm run verifier
+```
+
+**Tables de pointeurs résolues et script extrait** : **33 tables, 5 933 entrées,
+663 Kio, ~113 000 mots**. `outils/extraire.mjs` sort le tout en fichiers texte
+éditables dans `travail/script/`, chaque entrée délimitée par le pointeur suivant.
+147 fausses pistes (pools de littéraux ARM) écartées.
+
+Le contenu des premiers lots est déjà identifié : 120 noms de Medabots
+(`0x3BA658`), 97 personnages (`0x3C40B8`), 64 objets (`0x483ED8`), 60 types
+d'attaque (`0x3BE868`), 34 médailles (`0x3B6590`), 480 Medaparts (`0x3BBB4C`).
 
 **La table de caractères a été corrigée** : `0x3F` n'est pas `?` mais le point de
 suspension, et `0x46` est le point d'interrogation. `0x43` = `-`, `0x48` = `"`.
@@ -39,12 +50,17 @@ et le site l'affiche.
 
 ## La prochaine action
 
-Écrire `outils/reinserer.mjs` et faire passer **l'aller-retour identité** :
-extraire puis réinsérer sans rien modifier doit rendre une ROM identique au bit
-près à l'originale. Tant que ce test échoue, aucune traduction ne peut être insérée
-en confiance.
+**Traduire le lot 1** en commençant par les listes courtes et sans risque de
+longueur : `0x3B6590` (34 médailles), `0x3B66EC` (27 compétences), `0x3BE868`
+(60 types d'attaque). Ces entrées tiennent dans la place existante ou presque, ce
+qui permet de livrer un premier patch **sans avoir à repointer**.
 
-Ensuite seulement : installer mGBA (`winget install mGBA.mGBA`), lancer le jeu
+Attention : tant que le repointage n'existe pas, `reinserer.mjs` écrit à l'adresse
+d'origine et **écraserait l'entrée suivante** si le français était plus long. Il
+faut lui ajouter un garde-fou qui refuse une entrée trop longue, avant toute
+traduction — sinon la corruption sera silencieuse.
+
+Ensuite : installer mGBA (`winget install mGBA.mGBA`), lancer le jeu
 jusqu'à une boîte de dialogue, vider la VRAM `0x06000000`–`0x06017FFF` pour y
 retrouver le glyphe, puis poser un point d'arrêt en lecture afin de remonter à
 l'adresse ROM de la police et de sa table de largeurs.

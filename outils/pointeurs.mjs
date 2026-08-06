@@ -13,6 +13,9 @@ import { TABLE as table } from './table-caracteres.mjs'
 const rom = readFileSync(process.argv[2])
 const BASE = 0x08000000
 
+const MARQUE_CONTROLE = '¤' // surtout PAS « · » : c'est le point d'ellipse (0x3F)
+const MARQUE_INCONNU = '×'
+
 /** Décode un message jusqu'à 0xFF (fin) ou jusqu'à `max` octets. */
 function decode(depart, max = 90) {
   let s = ''
@@ -21,17 +24,25 @@ function decode(depart, max = 90) {
     if (c === 0xff) break
     if (c === 0xfd) { s += ' ⏎ '; continue }
     if (c === 0xfe) { s += ' | '; continue }
-    if (c >= 0xf8) { s += '·'; continue }
-    s += table[c] !== null ? table[c] : '×'
+    if (c >= 0xf8) { s += MARQUE_CONTROLE; continue }
+    s += table[c] !== null ? table[c] : MARQUE_INCONNU
   }
   return s
 }
+
+// La liste des caractères « lisibles » se DÉDUIT de la table, elle ne se recopie
+// pas. Elle était écrite en dur, et le jour où 0x3F est passé de « . » à « · »
+// une table de script entière a été rejetée sans que rien ne le signale — c'est
+// la chaîne de vérification qui l'a rattrapé.
+const CARACTERES_CONNUS = new Set(table.filter((c) => c !== null))
 
 /** Part de texte réellement lisible dans une chaîne décodée. */
 function lisibilite(s) {
   if (s.length < 6) return 0
   let bons = 0
-  for (const c of s) if (/[A-Za-z0-9 .,'/!()?]/.test(c)) bons++
+  for (const c of s) {
+    if (CARACTERES_CONNUS.has(c) || c === MARQUE_CONTROLE || c === '⏎' || c === '|') bons++
+  }
   return bons / s.length
 }
 
