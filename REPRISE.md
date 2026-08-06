@@ -8,9 +8,9 @@ Dernière séance : 2026-08-06
 ## Où on en est
 
 **Le patch français existe et fonctionne.** `patch/medabots-fr.bps` traduit
-**471 entrées** : 64 objets, 34 médailles, 60 types d'attaque, 52 techniques,
+**500 entrées** : 64 objets, 34 médailles, 60 types d'attaque, 52 techniques,
 27 familles de compétences et leurs 53 conseils, 33 messages d'objet, 6 états de
-pièce, les 122 messages de Robattle, la boutique et les sauvegardes, et les 12 scènes cinématiques. Vérifié de bout en bout dans un
+pièce, les 122 messages de Robattle, la boutique et les sauvegardes, les 12 scènes cinématiques et la Medaroad Race. Vérifié de bout en bout dans un
 navigateur — ROM déposée, SHA-1 contrôlé, patch appliqué en mémoire, jeu qui
 démarre.
 
@@ -29,7 +29,7 @@ identique au bit près.
 
 **Chiffres mesurés** : 33 tables de texte, 5 933 entrées, **393 Kio, ~67 000 mots**.
 Le repointage reloge dans les 48 Kio libres de fin de ROM ce qui ne tient pas dans
-la place d'origine — 296 entrées à ce jour, il reste 37,6 Kio.
+la place d'origine — 316 entrées à ce jour, il reste 37,1 Kio.
 
 **Deux limites connues, ni l'une ni l'autre bloquante :**
 

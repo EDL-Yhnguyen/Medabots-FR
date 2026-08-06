@@ -38,8 +38,9 @@ export const LOTS: Lot[] = [
   },
   {
     titre: 'PNJ et contenu secondaire',
-    detail: 'Dialogues de ville, quêtes annexes, textes optionnels.',
-    part: 0,
+    detail:
+      'La Medaroad Race et les provocations d’avant-combat sont traduites. Restent les dialogues de ville et les quêtes annexes.',
+    part: 0.05,
   },
 ]
 

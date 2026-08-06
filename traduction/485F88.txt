@@ -1,0 +1,98 @@
+# Table 0x485F88 — Medaroad Race et provocations d'avant-combat (31 entrées)
+#
+# @0008 et @0030 sont des messages vides ({FF}D seul) : rien à traduire, donc
+# absents d'ici. Plusieurs répliques se répètent à l'identique dans l'original
+# (@0010, @0012, @0014, @0022, @0024) — on garde la même traduction, sinon le
+# même personnage dirait deux choses différentes selon le moment.
+#
+# @0025 « Me gonna beat you! » est un anglais volontairement fautif, propre à ce
+# personnage. On garde le registre cassé : le corriger effacerait sa voix.
+#
+# « Medaroad Race » et « Beauty Kiss » sont des noms propres : conservés.
+
+@0000
+Notre parcours est « {F9}A » cette fois.{FF}B
+
+@0001
+Préparez-vous pour la Medaroad Race !{FF}B
+
+@0002
+Au couloir 1, {F9} !{FF}B
+
+@0003
+Au couloir 2, {F9}A !{FF}B
+
+@0004
+Et au couloir 3, {F9}A !{FF}B
+
+@0005
+Advienne que pourra !{FF}B
+
+@0006
+Ces trois-là vont s'affronter dans la Medaroad Race !{FC}Que la Medaroad Race···commence !{FC}Encouragez-les en martelant le bouton A !{FF}B
+
+@0007
+Félicitations à {F9}A,{FD}vainqueur de la Medaroad Race !!{FF}B
+
+@0009
+Dommage ! Retentez votre chance !{FF}B
+
+@0010
+Je fais du Robattle depuis plus longtemps que toi !{FF}B
+
+@0011
+Je suis un Medabot volant.{FF}B
+
+@0012
+Je fais du Robattle depuis plus longtemps que toi !{FF}B
+
+@0013
+Je suis un Medabot volant.{FF}B
+
+@0014
+Je fais du Robattle depuis plus longtemps que toi !{FF}B
+
+@0015
+RoboRobo RoboRobo{FF}B
+
+@0016
+Je vais te démolir !{FF}B
+
+@0017
+Je vais te salir tes habits !{FF}B
+
+@0018
+Tu veux que je joue avec toi ?{FF}B
+
+@0019
+Je vais te démolir !{FF}B
+
+@0020
+Je suis bien trop raffiné pour perdre contre toi.{FF}B
+
+@0021
+Loin de l'eau, je ne donne pas mon maximum.{FF}B
+
+@0022
+Je fais du Robattle depuis plus longtemps que toi !{FF}B
+
+@0023
+Goûte à la puissance de mon Beauty Kiss !{FF}B
+
+@0024
+Je fais du Robattle depuis plus longtemps que toi !{FF}B
+
+@0025
+Moi vais te battre !{FF}B
+
+@0026
+Cette fois, tu vas tomber !{FF}B
+
+@0027
+Moi, M. l'Arbitre, je te défie en Robattle !{FF}B
+
+@0028
+Je suis un Medabot volant.{FF}B
+
+@0029
+Nous combattons pour le bien !{FF}B
