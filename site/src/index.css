@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/* Palette : bleu de nuit profond + jaune Metabee. Des aplats saturés, pas des gris.
+   Contrastes vérifiés sur fond #0B1020 :
+   texte 16:1 · texte-doux 7,5:1 · jaune 11:1 · vert 8:1 · corail 6,5:1 */
+@theme {
+  --color-fond: #0b1020;
+  --color-surface: #151d38;
+  --color-surface-haute: #1e2950;
+  --color-trait: #2e3b6b;
+  --color-texte: #eef1fb;
+  --color-texte-doux: #9ba8ce;
+
+  --color-jaune: #ffc42e;
+  --color-jaune-vif: #ffd75e;
+  --color-corail: #ff7a6b;
+  --color-corail-vif: #ff4e3a;
+  --color-vert: #2fd16b;
+  --color-bleu: #4ea6ff;
+
+  --font-titre: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --radius-carte: 1rem;
+}
+
+html {
+  background: var(--color-fond);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    radial-gradient(900px 500px at 12% -8%, #1d2a55 0%, transparent 60%),
+    radial-gradient(700px 400px at 92% 6%, #3a2a10 0%, transparent 62%),
+    var(--color-fond);
+  color: var(--color-texte);
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Le focus doit rester visible partout : c'est la seule façon de naviguer au clavier. */
+:focus-visible {
+  outline: 3px solid var(--color-jaune);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respecter le réglage système : aucune animation imposée à qui n'en veut pas. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes monte {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.monte {
+  animation: monte 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}

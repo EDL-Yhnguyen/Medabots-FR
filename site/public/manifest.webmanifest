@@ -1,0 +1,20 @@
+{
+  "name": "Medabots FR — traduction française",
+  "short_name": "Medabots FR",
+  "description": "Traduction française de Medabots: Metabee Version (Game Boy Advance). Avancement, documentation et lecteur intégré.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B1020",
+  "theme_color": "#0B1020",
+  "icons": [
+    {
+      "src": "/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

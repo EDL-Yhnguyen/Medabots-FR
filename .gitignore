@@ -12,3 +12,5 @@ travail/
 sortie/
 
 node_modules/
+dist/
+.vercel/
