@@ -43,15 +43,25 @@ TABLE[0x45] = ':' // « Key: A Class », « Key: B Class », « It says: » — 
  * brute — ce ne sont pas des lettres manquantes, ce sont des arguments.
  */
 export const CONTROLES = {
-  0xf8: 'contrôle (rôle à établir)',
-  0xf9: 'contrôle (rôle à établir)',
+  0xf7: 'vitesse d’affichage — suivi d’un paramètre',
+  0xf8: 'italique (propre à la version anglaise)',
+  0xf9: 'insertion d’une variable depuis la RAM — suivi d’un paramètre',
   0xfa: 'contrôle (rôle à établir)',
-  0xfb: 'début de réplique — suivi de paramètres',
-  0xfc: 'attente / page suivante',
+  0xfb: 'portrait / locuteur — suivi de trois octets',
+  0xfc: 'nouvelle boîte de dialogue',
   0xfd: 'saut de ligne',
   0xfe: 'fin d’entrée (listes)',
   0xff: 'fin de message — suivi d’un paramètre',
 }
+
+// Source : les notes de hacking de Kimbles sur Medarot 2 Core (Medapedia), dont
+// ce jeu est le portage. Elles confirment 0xFC, 0xFD, 0xFE, 0xFF tels qu'ils
+// avaient été déduits du script, et établissent 0xF7, 0xF8 et 0xF9 qui restaient
+// marqués « rôle à établir ».
+//
+// 0xF8 = italique explique enfin ce qui encadre les onomatopées des scènes
+// cinématiques : {F8}BA DA DA DA BOOOM!!{F8} s'affiche en italique.
+// https://medarot.meowcorp.us/wiki/User:Kimbles/Medarot_2_Core_Hacking_Notes
 
 /** Rend un octet : le caractère s'il est connu, sinon {XX} — visible et réversible. */
 export function rendOctet(octet) {

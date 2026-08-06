@@ -160,6 +160,21 @@ Cinq méthodes tentées, toutes en échec :
    Dix candidats, tous périodiques (`1 1 3 3 2 2 2 2`) : de la donnée structurée,
    pas des largeurs.
 
+6. **Sondes avec des glyphes de 9 à 12 octets**
+   ([`outils/trouve-police-10.mjs`](../outils/trouve-police-10.mjs)) — motivées par
+   le désassemblage de *Medarot Navi* (Normmatt), qui montre une police **1 bpp de
+   8×10 pixels, soit 10 octets par glyphe**, avec table de largeurs séparée. Les
+   cinq essais précédents testaient 8, 16, 32 et 64 octets : **jamais 10**. Une
+   seule correspondance (`0x3FFFA4`, 9 octets), invalidée au rendu — des bandes
+   verticales, donc de la donnée structurée.
+   La **table d'expansion 1bpp→4bpp** de 32 octets décrite par le même
+   désassemblage est **absente de cette ROM**, dans les deux ordres de bits.
+7. **Diff du patch brésilien.** Le `.ips` v0.9 publié ne contient **aucune donnée
+   de police** : 43 enregistrements, dont ~22 Kio de texte traduit et seulement
+   **quatre corrections de 2 octets** ailleurs. Le README du projet annonce avoir
+   « modifié la police pour les accents portugais » — à cette version, ce n'est
+   pas fait. Piste close.
+
 ### Ce que ces échecs prouvent
 
 Le point (`0x40`) ne se trouve jamais 64 glyphes après un glyphe vide, nulle part,
