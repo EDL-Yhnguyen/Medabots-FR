@@ -72,9 +72,20 @@ valeur y est justifiée par un contexte réel du script extrait.
 0x4A        )
 ```
 
-`0x45` = `:` — établi depuis, sur trois contextes (« Key: A Class », « Key: B
-Class », « It says: »). La plage `0x4B`–`0xF7` reste à identifier ; c'est là que se
-logeront les caractères accentués français.
+```
+0x45        :
+0x4B        ♥
+0x4C        £
+0x4D        &
+0x4E        %
+```
+
+`0x45` = `:` a été établi sur trois contextes (« Key: A Class », « Key: B Class »,
+« It says: »). `0x4B` à `0x4E` ont été **lus directement dans la police** une fois
+celle-ci trouvée (§ 4).
+
+**Le jeu de caractères s'arrête à `0x4E` : 79 signes.** Les codes `0x4F` à `0xF7`
+sont libres — c'est là que se logeront les accents français.
 
 ### Correction du 06/08/2026
 
@@ -93,12 +104,22 @@ choisis, elle se valide sur le script entier.**
 
 ### Codes de contrôle
 
-| Octet | Rôle observé |
+| Octet | Rôle |
 |---|---|
-| `0xFD` | saut de ligne dans une boîte de dialogue |
-| `0xFE` | fin d'entrée dans une liste (objets, menus) |
-| `0xFF` | fin de message ; souvent suivi d'un octet de paramètre |
-| `0xF8`–`0xFC` | codes de contrôle divers — pause, portrait, insertion du nom du joueur (rôles exacts non encore établis) |
+| `0xF7` | vitesse d'affichage — suivi d'un paramètre |
+| `0xF8` | **italique** — le jeu embarque deux polices (§ 4) |
+| `0xF9` | insertion d'une variable depuis la RAM |
+| `0xFA` | à établir |
+| `0xFB` | portrait / locuteur — suivi de trois octets |
+| `0xFC` | nouvelle boîte de dialogue |
+| `0xFD` | saut de ligne |
+| `0xFE` | fin d'entrée dans une liste |
+| `0xFF` | fin de message — suivi d'un paramètre |
+
+`0xFC`, `0xFD`, `0xFE` et `0xFF` avaient été déduits du script ; `0xF7`, `0xF8` et
+`0xF9` viennent des [notes de Kimbles sur Medarot 2 Core](https://medarot.meowcorp.us/wiki/User:Kimbles/Medarot_2_Core_Hacking_Notes),
+dont ce jeu est le portage. `0xF8` = italique explique ce qui encadre les
+onomatopées des scènes cinématiques.
 
 ### Vérification
 
@@ -140,69 +161,83 @@ Noyau à haute confiance :
 
 ---
 
-## 4. Police de caractères ❌ NON RÉSOLUE
+## 4. Police de caractères ✅ RÉSOLUE
 
-Cinq méthodes tentées, toutes en échec :
+Trouvée le 06/08/2026 **en remontant par le code**, après sept tentatives ratées
+sur les données. Vérifiée visuellement : les 79 glyphes se lisent.
 
-1. **Recherche 1bpp non compressée** par heuristique d'encre → uniquement du bruit.
-   L'heuristique était trop permissive : sur 8 Mio, elle produit des faux positifs
-   garantis.
-2. **Décompression LZ77** (2136 blocs valides) + score de ressemblance → 554
-   candidats, tous des graphismes 4bpp au rendu visuel.
-3. **Sondes de table sur ROM en clair** — glyphe 0 vide, glyphes 1–26 encrés,
-   glyphe `0x40` = point de 1 à 8 pixels en bas, `I` plus fin que `M` et `W`.
-   Une seule correspondance sur 8 Mio (`0x08A1C0`), invalidée au rendu.
-4. **Sondes de table sur les 1880 blocs décompressés**, à tous les offsets
-   internes alignés → **zéro correspondance**.
-5. **Recherche de la table de largeurs** ([`outils/trouve-largeurs.mjs`](../outils/trouve-largeurs.mjs))
-   — une chasse variable a forcément un octet de largeur par caractère, indexé par
-   la valeur de table puisque c'est ce que le moteur lit pour avancer le curseur.
-   Dix candidats, tous périodiques (`1 1 3 3 2 2 2 2`) : de la donnée structurée,
-   pas des largeurs.
+| | Adresse | Taille |
+|---|---|---|
+| Police romaine | `0x4BFC64` → `0x4C1024` | 79 glyphes × 64 o |
+| Police italique | `0x4C59A4` → `0x4C6D64` | idem |
+| Table de chasse romaine | `0x3B4E08` → `0x3B5008` | 256 × 2 o |
+| Table de chasse italique | `0x3B5008` → `0x3B5208` | 256 × 2 o |
 
-6. **Sondes avec des glyphes de 9 à 12 octets**
-   ([`outils/trouve-police-10.mjs`](../outils/trouve-police-10.mjs)) — motivées par
-   le désassemblage de *Medarot Navi* (Normmatt), qui montre une police **1 bpp de
-   8×10 pixels, soit 10 octets par glyphe**, avec table de largeurs séparée. Les
-   cinq essais précédents testaient 8, 16, 32 et 64 octets : **jamais 10**. Une
-   seule correspondance (`0x3FFFA4`, 9 octets), invalidée au rendu — des bandes
-   verticales, donc de la donnée structurée.
-   La **table d'expansion 1bpp→4bpp** de 32 octets décrite par le même
-   désassemblage est **absente de cette ROM**, dans les deux ordres de bits.
-7. **Diff du patch brésilien.** Le `.ips` v0.9 publié ne contient **aucune donnée
-   de police** : 43 enregistrements, dont ~22 Kio de texte traduit et seulement
-   **quatre corrections de 2 octets** ailleurs. Le README du projet annonce avoir
-   « modifié la police pour les accents portugais » — à cette version, ce n'est
-   pas fait. Piste close.
+Deux polices, romaine et italique — ce qui explique le code de contrôle `0xF8`.
 
-### Ce que ces échecs prouvent
+### Format
 
-Le point (`0x40`) ne se trouve jamais 64 glyphes après un glyphe vide, nulle part,
-ni en clair ni décompressé. Donc :
+**4 bpp, 8×16 pixels, 64 octets par glyphe**, 4 octets par ligne, quartet bas =
+pixel de gauche. Deux tuiles GBA empilées. Ligne de base en 11.
 
-> **L'indice du glyphe n'est pas la valeur de la table.** Il existe une
-> indirection entre l'encodage du texte et la position du dessin.
+### Table de chasse : deux octets par caractère
 
-C'est la signature d'une **police à chasse variable** : glyphes empaquetés sans
-alignement fixe, accompagnés d'une table de largeurs. Conséquences pour le projet :
+```
+0x040106  LSL r1,r2,#1      ; caractère × 2
+0x040108  ADD r0,r1,r0      ; + 0x3B4E08
+0x04010A  LDRB r4,[r0,#0]   ; octet 0 = largeur
+```
 
-- ✅ **Favorable** : le texte français, plus long que l'anglais, sera bien moins
-  contraint qu'avec une chasse fixe.
-- ⚠️ **Coûteux** : ajouter `é è ê à â ç ù û î ï ô ö œ « »` demande de toucher à la
-  fois aux dessins et à la table de largeurs.
+Octet 0 = largeur : `M`=7, `W`=8, `I`=4, `i` et `l` et l'apostrophe=2,
+la virgule=3, l'espace=4.
 
-### La méthode qui aboutira
+Octet 1 = classe verticale, vérifiée sur les 78 glyphes sans exception :
+`0` = hampes, `1` = normal, `2` = virgule, `3` = jambages.
 
-La recherche statique est le mauvais outil. La bonne méthode :
+### Routines du moteur de texte
 
-1. Lancer le jeu dans **mGBA** avec une boîte de dialogue affichée.
-2. Vider la VRAM (`0x06000000`–`0x06017FFF`) : le glyphe y est forcément.
-3. Poser un **point d'arrêt en lecture** sur la source pour remonter à la routine
-   d'affichage, et de là à l'adresse ROM de la police et de la table de largeurs.
+| Adresse | Rôle |
+|---|---|
+| `0x040040` | mesure de ligne (retour à la ligne automatique) |
+| `0x0400EA`–`0x0401CE` | cœur : `LSL #6` puis `CpuSet` vers `0x02020000`, décalage de largeur×4 bits — c'est la chasse variable |
+| `0x040B60` | efface la zone de texte, 52 tuiles en `0x06000280` |
+| `0x040DB8` | mesure + alignement, émet un objet OAM par caractère |
 
-Preuve indirecte que c'est faisable : une **version espagnole** existe
-(`Medabots - Metabee (Spain)`, CRC `7E907EC8`) et un projet portugais brésilien y
-a déjà ajouté des accents. Le moteur sait afficher des glyphes accentués.
+Le moteur occupe `0x040000`–`0x041200`. Le code de la ROM tient dans
+`0x000000`–`0x07F000` ; au-delà, tout est donnée.
+
+### Pourquoi sept tentatives ont échoué
+
+Trois erreurs, chacune suffisante à elle seule :
+
+1. **Le fond n'est pas la couleur 0 mais la couleur 1.** Un glyphe vide est
+   rempli de `0x11`, pas de `0x00`. La sonde « glyphe 0 entièrement vide » ne
+   pouvait jamais se déclencher.
+2. **La police est anticrénelée**, avec une rampe d'encre jusqu'à l'index 15.
+   Aucune heuristique 1 bpp ne pouvait la reconnaître.
+3. **La table de chasse fait deux octets par caractère**, pas un. La recherche de
+   largeurs cherchait un pas de 1 et ne pouvait rien trouver.
+
+Et l'hypothèse tirée de ces échecs — « l'indice du glyphe n'est pas la valeur de
+table, donc il y a indirection » — **était fausse**. L'indice EST la valeur de
+table.
+
+C'est la leçon la plus chère du projet : un raisonnement juste appliqué à des
+mesures fausses produit une conclusion fausse, et la conclusion avait l'air
+solide parce qu'elle expliquait tous les échecs. Seul le désassemblage du code a
+tranché.
+
+### Ce que ça ouvre pour les accents
+
+- Les codes `0x4F`–`0xF7` sont **libres dans les deux tables de chasse** :
+  177 emplacements.
+- Le dessin doit être relogé, l'espace voisin portant des graphismes. L'adresse
+  de base ne vit que dans des mots de pool, faciles à réécrire : `0x084BFC64` en
+  9 mots, `0x084C59A4` en 6. Les 47 100 o libres en `0x7F4464` valent
+  735 glyphes.
+- Place verticale disponible : lignes 0–2 au-dessus des capitales, 3–5 au-dessus
+  des bas-de-casse. `é ê è à â î ô û` tiennent sans toucher au moteur ;
+  `Ç` et `ç` prennent la classe verticale 3.
 
 ---
 

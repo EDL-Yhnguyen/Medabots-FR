@@ -33,6 +33,14 @@ TABLE[0x47] = '!' // « Mom, Dad, I'm home! »
 TABLE[0x48] = '"' // « "Medabots Weekly" » — guillemet, ouvrant et fermant
 TABLE[0x49] = '('
 TABLE[0x4a] = ')'
+TABLE[0x4b] = '♥' // lus directement dans la police, à 0x4BFC64
+TABLE[0x4c] = '£'
+TABLE[0x4d] = '&'
+TABLE[0x4e] = '%'
+
+// Le jeu de caractères s'arrête à 0x4E : 79 signes, 0x00 à 0x4E.
+// Les codes 0x4F à 0xF7 sont LIBRES dans les deux tables de chasse (177 entrées
+// à zéro) — c'est là que se logeront les accents français.
 
 TABLE[0x45] = ':' // « Key: A Class », « Key: B Class », « It says: » — établi
 
@@ -71,17 +79,16 @@ export function rendOctet(octet) {
 }
 
 /**
- * CARACTÈRES ABSENTS DE LA POLICE, constatés à l'insertion :
+ * CARACTÈRES ABSENTS DE LA POLICE : + ; * = # @ [ ] < > et tout le reste
+ * au-delà de 0x4E.
  *
- *   +  &  %  ;  *  =  #  @  [  ]  <  >
+ * Établi en lisant la police elle-même (0x4BFC64), plus par constat à
+ * l'insertion. Écrire « Puissance + » fait échouer l'insertion — ce qui est le
+ * bon comportement : mieux vaut un refus net qu'un carré vide à l'écran. D'où
+ * « Gain puissance ».
  *
- * Le jeu n'en a pas le glyphe. Écrire « Puissance + » fait échouer l'insertion —
- * ce qui est le bon comportement : mieux vaut un refus net qu'un carré vide à
- * l'écran. Pour les suffixes d'amélioration, la traduction emploie « Gain »
- * (« Gain puissance ») plutôt qu'un signe que la police ne sait pas dessiner.
- *
- * Cette liste s'allonge à mesure des découvertes ; la chaîne de vérification la
- * fait respecter toute seule.
+ * Corrigé le 06/08 : `&` et `%` avaient été listés absents à tort, faute d'avoir
+ * vu la police. Ils existent, en 0x4D et 0x4E.
  */
 
 /**
