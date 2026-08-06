@@ -1,0 +1,180 @@
+# Table 0x3C6744 — messages de combat (176 entrées, 56 traduites)
+#
+# Ce sont les messages vus à chaque Robattle. Traduction partielle assumée : les
+# entrées non listées ici restent en anglais et le jeu continue de fonctionner.
+# Une table à moitié traduite vaut mieux qu'une table pas traduite du tout.
+#
+# {FA}{50}{FF}D termine ces messages, {FD} saute une ligne, {F9}A et {F9}B sont
+# des insertions faites par le jeu. Tout est conservé à l'identique et à sa place.
+#
+# Le vocabulaire reprend celui des tables déjà traduites — Prise, Tir, Riposte,
+# Repérage, Camouflage — parce que deux mots différents pour la même chose dans
+# deux écrans, et le joueur ne fait plus le lien.
+
+@0000
+Vous ne pouvez plus accumuler de Médaforce !{FA}{50}{FF}D
+
+@0001
+Médaforce accumulée !{FA}{50}{FF}D
+
+@0002
+Le chef est hors service ! {FD}Le vainqueur est {F9}A !{FF}{00}
+
+@0003
+Temps écoulé !{FD}Le vainqueur est {F9}A !{FF}{00}
+
+@0004
+Vous avez oublié votre action {FD}à cause de Renverse !{FA}{50}{FF}D
+
+@0005
+La Medapart de cette action est cassée.{FA}{50}{FF}D
+
+@0006
+Vous n'avez pas pu utiliser votre Medapart{FD}à cause de l'état Inutilisable !{FA}{50}{FF}D
+
+@0007
+Ces Medaparts ne sont pas faites pour le combat !{FD}Impossible de les utiliser !{FA}{50}{FF}D
+
+@0008
+Plus d'usages pour les Medaparts tête !{FA}{50}{FF}D
+
+@0009
+Aucun Medabot à réactiver !{FA}{50}{FF}D
+
+@0010
+Le Medabot visé est hors service !{FA}{50}{FF}D
+
+@0011
+La Medapart visée ne peut pas être réparée !{FA}{50}{FF}D
+
+@0012
+La Medapart visée est cassée !{FA}{50}{FF}D
+
+@0013
+Vous avez désamorcé le piège.{FA}{50}{FF}D
+
+@0014
+Pris dans un piège Prise !{FA}{50}{FF}D
+
+@0015
+Pris dans un piège Tir !{FA}{50}{FF}D
+
+@0016
+Pris dans un piège Annule-attaque !{FA}{50}{FF}D
+
+@0017
+Pris dans un piège d'attaque !{FA}{50}{FF}D
+
+@0018
+La Medapart {F9}A {FD}subit {F9}B dégâts !{FA}{50}{FF}D
+
+@0019
+La Medapart {F9}A est cassée !{FA}{50}{FF}D
+
+@0020
+{F9}A est hors service !{FA}{50}{FF}D
+
+@0021
+Votre attaque a été stoppée{FD}par le piège Efface-attaque !{FA}{50}{FF}D
+
+@0022
+{F9}A est protégé !!{FA}{50}{FF}D
+
+@0023
+{F9}A action {F9}B !{FA}{50}{FF}D
+
+@0024
+La Medapart {F9}A est cassée{FD}par la technique Sacrifice !{FA}{50}{FF}D
+
+@0025
+Destruction n'agit que sur les Medabots {FD}qui tournent le dos.{FA}{50}{FF}D
+
+@0026
+Action échouée !{FA}{50}{FF}D
+
+@0027
+Un allié protège des attaques ennemies.{FA}{50}{FF}D
+
+@0028
+Repérage de toute l'équipe accru !{FD}Taux de réussite amélioré !{FA}{50}{FF}D
+
+@0029
+Camouflage accru !{FD}Les attaques sont plus faciles à esquiver !{FA}{50}{FF}D
+
+@0030
+Piège Prise posé ! {FD}Blesse qui utilise une attaque Prise !{FA}{50}{FF}D
+
+@0031
+Piège Tir posé !{FD}Blesse qui utilise une attaque Tir !{FA}{50}{FF}D
+
+@0032
+Piège Annule-attaque posé !{FD}L'attaque visée devient inefficace.{FA}{50}{FF}D
+
+@0033
+Attaque d'équipe prête !{FD}Toute l'équipe attaque !{FA}{50}{FF}D
+
+@0034
+Impossible de préparer l'attaque d'équipe !{FA}{50}{FF}D
+
+@0035
+Effet négatif dissipé !{FA}{50}{FF}D
+
+@0036
+Aucun piège à désamorcer !{FA}{50}{FF}D
+
+@0037
+Piège désamorcé !{FA}{50}{FF}D
+
+@0038
+La Medapart visée n'a pas été endommagée !{FA}{50}{FF}D
+
+@0039
+La Medapart visée n'a pas été cassée !{FA}{50}{FF}D
+
+@0040
+{F9}A a été réactivé !{FA}{50}{FF}D
+
+@0041
+Réparation continue !{FD}Les dégâts se soignent à chaque tour.{FA}{50}{FF}D
+
+@0042
+Riposte activée !{FD}Préparation d'une contre-attaque violente !{FA}{50}{FF}D
+
+@0043
+Charge ultra-rapide !{FD}Prêt en un instant !{FA}{50}{FF}D
+
+@0044
+Gain de vitesse ! {FD}Temps de préparation réduit !{FA}{50}{FF}D
+
+@0045
+Temps de préparation ennemi absorbé !{FD}Votre propre préparation accélère !{FA}{50}{FF}D
+
+@0046
+Vous êtes tombé !{FD}Action suivante oubliée !{FA}{50}{FF}D
+
+@0047
+« {F9}A » s'est transformé{FD}en « {F9}B » !{FA}{50}{FF}D
+
+@0048
+État Inutilisable !{FD}Medapart {F9}A inutilisable !{FA}{50}{FF}D
+
+@0049
+État Sans esquive !{FD}Impossible d'esquiver !{FA}{50}{FF}D
+
+@0050
+État Sans défense !{FD}Impossible de se défendre !{FA}{50}{FF}D
+
+@0051
+État Chaos !{FA}{50}{FF}D
+
+@0052
+Aucun usage de Medapart tête{FD}à voler !{FA}{50}{FF}D
+
+@0053
+Vous volez {F9}A usages de{FD}Medapart tête !{FA}{50}{FF}D
+
+@0054
+Échec de la Médaforce !{FD}Vous ne la maîtrisez pas encore !{FA}{50}{FF}D
+
+@0055
+Échec de la Médaforce !{FD}Pas assez de Médaforce !{FA}{50}{FF}D

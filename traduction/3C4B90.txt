@@ -1,0 +1,26 @@
+# Table 0x3C4B90 — états d'une pièce (128 entrées, dont 6 réelles)
+#
+# Les entrées @0006 à @0127 valent « Data06 » … « Data7F » : des emplacements de
+# débogage laissés par les développeurs, jamais affichés en jeu. Les traduire
+# n'aurait aucun sens — et leur donner un texte français ferait croire à tort
+# qu'ils comptent.
+#
+# MF = Medaforce. L'abréviation reste, elle est employée partout dans le jeu.
+
+@0000
+Endommagé{FE}
+
+@0001
+Inutilisable{FE}
+
+@0002
+Épuisé{FE}
+
+@0003
+Charge MF{FE}
+
+@0004
+MF faible{FE}
+
+@0005
+Non maîtrisé{FE}
