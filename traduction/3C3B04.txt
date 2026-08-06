@@ -1,0 +1,303 @@
+# Table 0x3C3B04 — répliques de fin de Robattle (96 entrées)
+#
+# Table jumelle de 0x3C2D3C : même liste d'adversaires, dans le même ordre, avec
+# les mêmes octets d'identité de locuteur après {FB}. Recopiés à l'identique.
+#
+# COQUILLES DE L'ANGLAIS CORRIGÉES :
+#   @0025 « Borottling » → Robattling (la même qu'en 0x3C2D3C) ;
+#   @0043 « more then floating » → than ;
+#   @0081 « What' s bad is I'm to slow » → What's / too slow.
+#
+# REGISTRES CASSÉS CONSERVÉS, ce sont des voix :
+#   @0028–@0031, @0039 — le ninja ;
+#   @0058 « You'll regwet » — l'enfant qui zozote ;
+#   @0073 « I didn'ta losa yet » — l'accent italien ;
+#   @0074 « Me lost to you! » — le même personnage qu'en 0x3C2D3C @0074.
+
+@0000
+{FB}A CFin du Robattle.0{FD}Fin du Robattle.0{FF}D
+
+@0001
+{FB} A C'était un super Robattle !{FF}D
+
+@0002
+{FB} BFBleuh ! Je ne perdrai pas la prochaine fois !{FF}D
+
+@0003
+{FB} CGC'était amusant, refaisons ça un jour.{FF}D
+
+@0004
+{FB} DBCe combat n'est pas terminé !{FF}D
+
+@0005
+{FB} E Couiiine.{FF}D
+
+@0006
+{FB} FEComment ai-je pu perdre ?{FF}D
+
+@0007
+{FB} GDIl t'en a fallu du cran pour me faire perdre !{FF}D
+
+@0008
+{FB} HDMes habits sont tout sales···{FF}D
+
+@0009
+{FB} IATu as du talent.{FF}D
+
+@0010
+{FB} J Le Robattle, c'est difficile.{FF}D
+
+@0011
+{FB} KAJe···bleuargh···{FF}D
+
+@0012
+{FB} LDTu es trop vieux pour que mon sort fonctionne.{FF}D
+
+@0013
+{FB} MCLes garçons doivent être ambitieux ! {FF}D
+
+@0014
+{FB} NBJ'ai dû y aller trop doucement.{FF}D
+
+@0015
+{FB} O Ce n'est pas possible···{FF}D
+
+@0016
+{FB} P Metabee n'est pas encore battu !{FF}D
+
+@0017
+{FB} QBBien joué ! Continue comme ça !{FF}D
+
+@0018
+{FB} R C'est tout pour aujourd'hui.{FF}D
+
+@0019
+{FB} SATu aimes vraiment les Medabots.{FF}D
+
+@0020
+{FB} TAJ'ai beaucoup appris. Merci beaucoup.{FF}D
+
+@0021
+{FB} U J'ai perdu !{FF}D
+
+@0022
+{FB} V Tout mon argent de poche passe dans mon Medabot···{FF}D
+
+@0023
+{FB} W L'économie va toujours mal.{FF}D
+
+@0024
+{FB} X Mon Medabot se tient mieux que mon enfant.{FF}D
+
+@0025
+{FB} Y Le Robattle, c'est encore très dur.{FF}D
+
+@0026
+{FB} Z C'est bien d'être jeune.{FF}D
+
+@0027
+{FB} a Hé hé, j'en ai tiré beaucoup de données.{FF}D
+
+@0028
+{FB} b Alors, ninja perdre comme le vent !{FF}D
+
+@0029
+{FB} c Pourquoi toi pas devenir ninja ?{FF}D
+
+@0030
+{FB} d Ninja···perdu.{FF}D
+
+@0031
+{FB} e Incroyable ! Toi battre ninja !{FF}D
+
+@0032
+{FB} f Arrr, mon pauvre Medabot !{FF}D
+
+@0033
+{FB} g Tu dois suivre ta propre voie de vérité.{FF}D
+
+@0034
+{FB} h Et moi qui étais confiante···{FF}D
+
+@0035
+{FB} i Les garçons s'excitent pour un rien !{FF}D
+
+@0036
+{FB} j Savoir jouer aux Medabots ne donne pas un bon travail.{FF}D
+
+@0037
+{FB} k C'est terminé !{FF}D
+
+@0038
+{FB} l À la prochaine{4B}{FF}D
+
+@0039
+{FB} m Toi fort !{FF}D
+
+@0040
+{FB} n Le raffinement ne suffit pas, on dirait.{FF}D
+
+@0041
+{FB} o Il me faudrait peut-être un blindage plus solide ?{FF}D
+
+@0042
+{FB} p C'est si agréable de flotter···{FF}D
+
+@0043
+{FB} q Flotter ne suffit pas, on dirait···{FF}D
+
+@0044
+{FB} r Mes jambes sont tout emmêlées !{FF}D
+
+@0045
+{FB} s J'ai oublié quelle jambe bouge en premier.{FF}D
+
+@0046
+{FB} t Quelque chose me bouche la vue.{FF}D
+
+@0047
+{FB} u Nooon, ne visez pas mes jambes !{FF}D
+
+@0048
+{FB} v Rouler vite ne fait pas tout, on dirait.{FF}D
+
+@0049
+{FB} w J'aimerais rouler sur une plus jolie route.{FF}D
+
+@0050
+{FB} x Je suis trop lent pour poursuivre···{FF}D
+
+@0051
+{FB} y Si seulement je pouvais aller plus vite !{FF}D
+
+@0052
+{FB} z Je vais dormir après mon bain.{FF}D
+
+@0053
+{FB} 0 L'eau est vraiment dégoûtante ici !{FF}D
+
+@0054
+{FB} 1DRoboo hou-!!{FF}D
+
+@0055
+{FB} 2CTu me le paieraaaas !!{FF}D
+
+@0056
+{FB} 3DIl te faudra encore 10 000 ans pour me battre !{FF}D
+
+@0057
+{FB} 4BJe déteste les gamins !{FF}D
+
+@0058
+{FB} 5BTu vas wegretter d'avoir été méchant !{FF}D
+
+@0059
+{FB} 6CCe n'est pas drôle de se faire attraper.{FF}D
+
+@0060
+{FB} 7DTu es plutôt bon ! Gya ha ha !{FF}D
+
+@0061
+{FB} t À la semaine prochaine, les enfants !!{FF}D
+
+@0062
+{FB} 9BLa voie du bien est rude !{FF}D
+
+@0063
+{FB} ·BJ'ai perdu exprès ! Ne fais pas le fier !{FF}D
+
+@0064
+{FB} .AJe savais que tu étais fort···{FF}D
+
+@0065
+{FB} ,AReviens jouer avec moi, Grand Héros.{FF}D
+
+@0066
+{FB} ' Ahhh, le rêve est fini···{FF}D
+
+@0067
+{FB} - Je veux ces Medaparts aussi.{FF}D
+
+@0068
+{FB} / Tu sais donc communiquer avec eux.{FF}D
+
+@0069
+{FB} : Tu as bien travaillé.{FF}D
+
+@0070
+{FB} ? !!?!?!?!? Gé ?{FF}D
+
+@0071
+{FB} ! Vous les Américains, vous êtes de sacrés combattants !{FF}D
+
+@0072
+{FB} " Un souvenir de plus dans mon cœur.{FF}D
+
+@0073
+{FB} ( J'ai pas-a encore perdu-u.{FF}D
+
+@0074
+{FB} ) Moi perdu contre toi !{FF}D
+
+@0075
+{FB} {4B} Grrr ! Mon attaque perceuse n'a pas marché !{FF}D
+
+@0076
+{FB} {4C} Je refuse d'être battu par des humains !{FF}D
+
+@0077
+{FB} {4D} J-Je···ai perdu···{FF}D
+
+@0078
+{FB} {4E} Je savais que je ne gagnerais pas.{FF}D
+
+@0079
+{FB} {4F} Ça faisait longtemps que je n'avais pas perdu.{FF}D
+
+@0080
+{FB} {50} Oh, j'ai perdu !{FF}D
+
+@0081
+{FB} {51} Mon problème, c'est que je suis trop lent.{FF}D
+
+@0082
+{FB} {52} Je n'arrive pas à croire que j'ai perdu contre des modèles plus anciens.{FF}D
+
+@0083
+{FB} {53} Pourquoi es-tu si fort ?{FF}D
+
+@0084
+{FB} {54} Je n'ai pas le temps pour un Robattle !{FF}D
+
+@0085
+{FB} {55} On dirait bien que tu es plus fort,{FF}D
+
+@0086
+{FB} {56} Je n'ai pas encore de lien avec mon Medabot.{FF}D
+
+@0087
+{FB} {57} Le Robattle, ce n'est pas mon truc.{FF}D
+
+@0088
+{FB} {58} Je me suis fait griller en un rien de temps.{FF}D
+
+@0089
+{FB} W Pitié, laissez-moi vivre···!!{FF}D
+
+@0090
+{FB} a Comment un dieu peut-il perdre dans son propre monde ?!{FF}D
+
+@0091
+{FB} {5B} Qui suis-je···?Où vais-je··?{FF}D
+
+@0092
+{FB} n Ghaa ?{FF}D
+
+@0093
+{FB} r J'ai encore du travail.{FF}D
+
+@0094
+{FB} x Pi······Za··········{FF}D
+
+@0095
+{FB} p Ho ho ho ho····ho.{FF}D
