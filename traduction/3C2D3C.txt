@@ -1,0 +1,305 @@
+# Table 0x3C2D3C — répliques d'ouverture de Robattle (96 entrées)
+#
+# Chaque entrée commence par {FB} suivi d'un ou deux octets d'identité du
+# locuteur — parfois rendus comme des lettres (`A`, ` B`), parfois comme `{4B}`.
+# Ces préfixes sont recopiés À L'IDENTIQUE : ils désignent qui parle et quel
+# portrait s'affiche. Les changer ferait parler le mauvais personnage.
+#
+# COQUILLES CORRIGÉES : @0025 dit « Borottling » pour « Robattling ».
+#
+# REGISTRES CASSÉS CONSERVÉS, parce que ce sont des voix, pas des fautes :
+#   @0028–@0031, @0039 — le ninja parle petit-nègre dans l'original ;
+#   @0058 « I'm stwong! » — un enfant qui zozote ;
+#   @0071 — accent italien ;
+#   @0074 « Me gonna beat you! » — même personnage qu'en 0x485F88, même
+#          traduction, sinon il changerait de voix d'un écran à l'autre.
+#
+# @0095 étale les lettres pour l'effet de frayeur : l'espacement est conservé.
+
+@0000
+{FB}A BDébut du Robattle !0{FD}Début du Robattle !0{FF}D
+
+@0001
+{FB} A Allez, au Robattle !{FA}{50}{FF}D
+
+@0002
+{FB} BAJe fais du Robattle depuis plus longtemps que toi !{FF}D
+
+@0003
+{FB} CASois gentil avec moi.{FF}D
+
+@0004
+{FB} DCCette fois, tu vas tomber !{FF}D
+
+@0005
+{FB} E Ouafbattle !{FF}D
+
+@0006
+{FB} FATu veux que je joue avec toi ?{FF}D
+
+@0007
+{FB} GBJe vais te démolir !{FF}D
+
+@0008
+{FB} HAJe vais te salir tes habits !{FF}D
+
+@0009
+{FB} IEPuis-je être ton adversaire ?{FF}D
+
+@0010
+{FB} J Le Robattle m'intéresse aussi.{FF}D
+
+@0011
+{FB} K Hmpf···moi aussi je suis un Medafighter connu.{FF}D
+
+@0012
+{FB} LAD'accooord ! Je vais te jeter un sort{4B}{FF}D
+
+@0013
+{FB} M Hmpf, tu crois pouvoir me vaincre ?{FF}D
+
+@0014
+{FB} NACette fois, c'est moi qui gagne.{FF}D
+
+@0015
+{FB} O Très bien, montre-moi comment tu comptes me battre !{FF}D
+
+@0016
+{FB} P Dis adieu à ton robot !{FF}D
+
+@0017
+{FB} QATu penses pouvoir me suivre ?{FF}D
+
+@0018
+{FB} RAPetite leçon de Robattle.{FF}D
+
+@0019
+{FB} SBQuel genre de Medabot aimes-tu ?{FF}D
+
+@0020
+{FB} TBTu ferais un Robattle avec moi ?{FF}D
+
+@0021
+{FB} U C'est l'heure du Robattle !{FF}D
+
+@0022
+{FB} V Je te donne mes Medaparts si tu gagnes.{FF}D
+
+@0023
+{FB} W Un homme d'affaires ! Je me bats pour un avenir radieux !{FF}D
+
+@0024
+{FB} X Le travail d'une femme au foyer n'est jamais fini !{FF}D
+
+@0025
+{FB} Y J'adore le Robattle, ho ho ho.{FF}D
+
+@0026
+{FB} Z Je peux encore vous apprendre deux ou trois choses, les jeunes !{FF}D
+
+@0027
+{FB} a Montre-moi ton Medabot.{FF}D
+
+@0028
+{FB} b Ninja trancher comme vent fort !{FF}D
+
+@0029
+{FB} c Ninja cacher dans ombres noires !{FF}D
+
+@0030
+{FB} d Ninja va te combattre !{FF}D
+
+@0031
+{FB} e Talent de ninja être incroyable !{FF}D
+
+@0032
+{FB} f Arrrr, matez un peu mon Medabot !{FF}D
+
+@0033
+{FB} g Pourquoi choisis-tu la voie de la violence ?{FF}D
+
+@0034
+{FB} h Les Medabots ne sont pas réservés aux garçons.{FF}D
+
+@0035
+{FB} i Les Medafighters faibles, c'est tellement nul !{FF}D
+
+@0036
+{FB} j Je ne néglige ni le travail ni le Robattle !{FF}D
+
+@0037
+{FB} k Bien, faisons un Robattle.{FF}D
+
+@0038
+{FB} l Je vais jouer avec toi, petit{4B}{FF}D
+
+@0039
+{FB} m Toi pas rattraper vitesse du ninja !{FF}D
+
+@0040
+{FB} n Je suis bien trop raffiné pour perdre contre toi.{FF}D
+
+@0041
+{FB} o Mon blindage est léger, mais je suis fort.{FF}D
+
+@0042
+{FB} p Peu importe le terrain où je me trouve.{FF}D
+
+@0043
+{FB} q Vole comme une Medamouche, pique comme une abeille.{FF}D
+
+@0044
+{FB} r Les sentiers de montagne n'arrêtent pas mes jambes !{FF}D
+
+@0045
+{FB} s Laisse-moi les terrains accidentés.{FF}D
+
+@0046
+{FB} t Les forêts ne gênent pas ma mobilité !{FF}D
+
+@0047
+{FB} u Mes jambes fines ne sont-elles pas merveilleuses ?{FF}D
+
+@0048
+{FB} v Je continue de rouler, encore et encore !{FF}D
+
+@0049
+{FB} w Quelle que soit la route, je peux avancer !{FF}D
+
+@0050
+{FB} x Je te mets K.O. en un coup !{FF}D
+
+@0051
+{FB} y Rien ne perce mon blindage !{FF}D
+
+@0052
+{FB} z Loin de l'eau, je ne donne pas mon maximum.{FF}D
+
+@0053
+{FB} 0 Le Robattle dans l'eau est ma spécialité.{FF}D
+
+@0054
+{FB} 1BRoboRobo RoboRobo{FF}D
+
+@0055
+{FB} 2AJe ne suis pas un Rubberobo ordinaire.{FF}D
+
+@0056
+{FB} 3AAh ah ah ! Prosterne-toi devant ma beauté !{FF}D
+
+@0057
+{FB} 4AHo ho ho. Je vais t'apprendre la vie, gamin.{FF}D
+
+@0058
+{FB} 5AMême si je suis petit, je suis fôrt !{FF}D
+
+@0059
+{FB} 6AC'est amusant de semer la pagaille !{FF}D
+
+@0060
+{FB} 7BVoyons qui élève le mieux ses médailles.{FF}D
+
+@0061
+{FB} t Les héros des gentils enfants ! Choisis-en 3 !{FF}D
+
+@0062
+{FB} 9 Nous combattons pour le bien !{FF}D
+
+@0063
+{FB} ·ATu devrais me remercier quand je gagne !{FF}D
+
+@0064
+{FB} . Battons-nous à la loyale.{FF}D
+
+@0065
+{FB} ,CJ'adore les Medabots et le Robattle{4B}{FF}D
+
+@0066
+{FB} ' Je vais te faire souffrir dans tes rêves.{FF}D
+
+@0067
+{FB} - Je n'avais jamais vu ces Medaparts !{FF}D
+
+@0068
+{FB} / Savais-tu que les Medabots ont des sentiments ?{FF}D
+
+@0069
+{FB} : Laisse ce vieil homme être ton adversaire.{FF}D
+
+@0070
+{FB} ? Ta··garu !?Non···kuri ?{FF}D
+
+@0071
+{FB} ! Alors, le p'tit gars, on y va-a !{FF}D
+
+@0072
+{FB} " Cet endroit me tient à cœur.{FF}D
+
+@0073
+{FB} ( La chaleur donne des Robattles en sueur !{FF}D
+
+@0074
+{FB} ) Moi vais te battre !{FF}D
+
+@0075
+{FB} {4B} Goûte à la puissance de mon Beauty Kiss !{FF}D
+
+@0076
+{FB} {4C} Des humains osent me défier ?!{FF}D
+
+@0077
+{FB} {4D} Le monde du mystère m'appelle.{FF}D
+
+@0078
+{FB} {4E} Moi, M. l'Arbitre, je te défie en Robattle !{FF}D
+
+@0079
+{FB} {4F}AÇa faisait longtemps que je n'avais pas fait ça !{FF}D
+
+@0080
+{FB} {50} Je n'ai jamais fait ça avant.{FF}D
+
+@0081
+{FB} {51} Je suis un Medabot volant.{FF}D
+
+@0082
+{FB} {52} Il est stupide de barrer ma route···{FF}D
+
+@0083
+{FB} {53} Je vais t'entraîner au Robattle.{FF}D
+
+@0084
+{FB} {54} Je suis occupé, mais j'ai le temps pour un Robattle !{FF}D
+
+@0085
+{FB} {55} Mon Medabot est super balèze !{FF}D
+
+@0086
+{FB} {56} Les Medabots, ce n'est pas trop mon truc.{FF}D
+
+@0087
+{FB} {57} Je réponds à tous vos besoins en Medaparts{4B}{FF}D
+
+@0088
+{FB} {58} Je fais du Robattle aussi bien que je cuisine !{FF}D
+
+@0089
+{FB} W Tu devrais être reconnaissant que je t'affronte !{FF}D
+
+@0090
+{FB} aAHé hé hé. Je suis un dieu, ici !!{FF}D
+
+@0091
+{FB} {5B} Qui es-tu ? Où vas-tu ?{FF}D
+
+@0092
+{FB} n Rends-toi sans faire d'histoires !{FF}D
+
+@0093
+{FB} r Et un, deux ! Et un, deux ! Au travail !{FF}D
+
+@0094
+{FB} x Gahh ! Grrrrrr !!{FF}D
+
+@0095
+{FB} p U n  f a n t ô m e  e s t  l à.{FF}D
