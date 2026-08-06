@@ -1,0 +1,85 @@
+# Table 0x3B6FA4 — conseils de combinaison, médailles (26 entrées)
+#
+# Miroir exact de 0x3B6B48, avec « médailles » au lieu de « pièces ». Le même
+# vocabulaire de familles est repris à la lettre : deux traductions divergentes
+# du même terme dans deux écrans, et le joueur ne fait plus le lien.
+#
+# {FF}B termine le message et porte son paramètre : conservé tel quel.
+
+@0000
+À combiner avec des médailles Prise.{FF}B
+
+@0001
+À combiner avec des médailles Tir.{FF}B
+
+@0002
+À combiner avec des médailles Optique.{FF}B
+
+@0003
+À combiner avec des médailles Bombe.{FF}B
+
+@0004
+À combiner avec des médailles Gravité.{FF}B
+
+@0005
+À combiner avec des médailles Formation.{FF}B
+
+@0006
+À combiner avec des médailles Mouvement.{FF}B
+
+@0007
+À combiner avec des médailles Blocage.{FF}B
+
+@0008
+À combiner avec des médailles Entrave.{FF}B
+
+@0009
+À combiner avec des médailles Flux.{FF}B
+
+@0010
+À combiner avec des médailles Libération.{FF}B
+
+@0011
+À combiner avec des médailles Annulation.{FF}B
+
+@0012
+À combiner avec des médailles Défense.{FF}B
+
+@0013
+À combiner avec des médailles Soin.{FF}B
+
+@0014
+À combiner avec des médailles Réanimation.{FF}B
+
+@0015
+À combiner avec des médailles Anti-air.{FF}B
+
+@0016
+À combiner avec des médailles Anti-mer.{FF}B
+
+@0017
+À combiner avec des médailles Repérage.{FF}B
+
+@0018
+À combiner avec des médailles Camouflage.{FF}B
+
+@0019
+À combiner avec des médailles Temps.{FF}B
+
+@0020
+À combiner avec des médailles Interruption.{FF}B
+
+@0021
+À combiner avec des médailles Destruction.{FF}B
+
+@0022
+À combiner avec des médailles Régénération.{FF}B
+
+@0023
+À combiner avec des médailles Équipe.{FF}B
+
+@0024
+À combiner avec des médailles Riposte.{FF}B
+
+@0025
+À combiner avec des médailles Transformation.{FF}B

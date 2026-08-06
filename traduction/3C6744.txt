@@ -1,4 +1,4 @@
-# Table 0x3C6744 — messages de combat (176 entrées, 116 traduites)
+# Table 0x3C6744 — messages de combat (176 entrées, 122 traduites — TOUTES les réelles)
 #
 # Ce sont les messages vus à chaque Robattle. Traduction partielle assumée : les
 # entrées non listées ici restent en anglais et le jeu continue de fonctionner.
@@ -363,3 +363,28 @@ Entrave forcée ! Médaforce inutilisable !{FA}{50}{FF}D
 
 @0115
 Entrave forcée levée ! Médaforce à nouveau utilisable !{FA}{50}{FF}D
+
+# ─── Médaforce et médailles : les six derniers messages réels ───
+#
+# @0122 à @0175 valent « Mess-0-122 / Mess-1-122 »… : des emplacements de
+# débogage jamais affichés, comme les « Data06 » de 0x3C4B90. Sur 176 entrées
+# annoncées, 122 seulement existent vraiment — et elles sont maintenant toutes
+# traduites.
+
+@0116
+Aucune Médaforce à absorber !{FA}{50}{FF}D
+
+@0117
+Médaforce absorbée !{FA}{50}{FF}D
+
+@0118
+Médaille Rubberobo obtenue !{FF}C
+
+@0119
+La médaille « {F9}A » monte d'un niveau !{FF}C
+
+@0120
+La médaille « {F9}A » maîtrise{FD}la Médaforce « {F9}B » !{FF}C
+
+@0121
+Échec de la Médaforce{FD}à cause de l'Entrave forcée !{FA}{50}{FF}D

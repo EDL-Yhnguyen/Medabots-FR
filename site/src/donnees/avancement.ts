@@ -28,8 +28,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Textes de combat',
     detail:
-      '60 types d’attaque, 52 techniques, 27 familles de compétences, 27 conseils de combinaison et 116 des 176 messages de Robattle.',
-    part: 0.85,
+      'Terminé : 60 types d’attaque, 52 techniques, 27 familles de compétences, leurs 53 conseils de combinaison et les 122 messages de Robattle. Les 54 entrées restantes sont des emplacements de débogage, jamais affichés.',
+    part: 1,
   },
   {
     titre: 'Histoire principale',

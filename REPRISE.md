@@ -7,12 +7,15 @@ Dernière séance : 2026-08-06
 
 ## Où on en est
 
-**Le patch français existe et fonctionne.** `patch/medabots-fr.bps` (12 234 octets)
-traduit **408 entrées** : 64 objets, 34 médailles, 60 types d'attaque, 52
-techniques, 27 familles de compétences et leurs 27 conseils, 33 messages d'objet,
-116 messages de Robattle et 6 états de pièce.
-Vérifié de bout en bout dans un navigateur — ROM déposée, SHA-1 contrôlé, patch
-appliqué en mémoire, jeu qui démarre.
+**Le patch français existe et fonctionne.** `patch/medabots-fr.bps` traduit
+**440 entrées** : 64 objets, 34 médailles, 60 types d'attaque, 52 techniques,
+27 familles de compétences et leurs 53 conseils, 33 messages d'objet, 6 états de
+pièce, et **les 122 messages de Robattle**. Vérifié de bout en bout dans un
+navigateur — ROM déposée, SHA-1 contrôlé, patch appliqué en mémoire, jeu qui
+démarre.
+
+**Le lot « textes de combat » est terminé.** Tout ce qui s'affiche pendant un
+Robattle est en français.
 
 **Toute la chaîne est outillée et vérifiable d'une commande :**
 
@@ -26,14 +29,14 @@ identique au bit près.
 
 **Chiffres mesurés** : 33 tables de texte, 5 933 entrées, **393 Kio, ~67 000 mots**.
 Le repointage reloge dans les 48 Kio libres de fin de ROM ce qui ne tient pas dans
-la place d'origine — 247 entrées à ce jour, il reste 41,3 Kio.
+la place d'origine — 274 entrées à ce jour, il reste 40,2 Kio.
 
 **Deux limites connues, ni l'une ni l'autre bloquante :**
 
 - **La police reste introuvable** après cinq méthodes statiques. L'indice du glyphe
   n'est pas la valeur de table : chasse variable, à localiser par dump VRAM sous
   mGBA (installé).
-- **Les accents ne s'affichent donc pas encore** : 421 remplacements signalés à
+- **Les accents ne s'affichent donc pas encore** : 501 remplacements signalés à
   l'insertion. Les fichiers de `traduction/` gardent le français correct et
   deviendront justes sans réécriture le jour où la police portera les glyphes.
 
@@ -43,11 +46,24 @@ la place d'origine — 247 entrées à ce jour, il reste 41,3 Kio.
 personne n'a encore ouvert l'inventaire pour voir « Plan de la ville » à l'écran.
 C'est la seule vérification qui manque.
 
-Ensuite, par ordre de valeur : les **60 messages de combat restants**
-(`0x3C6744`, entrées @0116 à @0175), puis les 480 Medaparts (`0x3BBB4C`).
+Ensuite : les **480 Medaparts** (`0x3BBB4C`) — noms d'équipement composés, seul
+gros morceau restant hors dialogues. Puis les **dialogues** (`0x47xxxx`, ~2 800
+entrées), qui sont l'essentiel du volume.
 
-Ne pas toucher : `0x3C4B90` @0006–@0127 (`Data06`…`Data7F`, emplacements de
-débogage jamais affichés) ni `0x3BCFEC` (codes de pièces `BAT-11`, `ANG-11`).
+**Ne pas toucher — vérifié, ce sont des emplacements de débogage ou des
+identifiants :**
+
+| Table | Entrées | Pourquoi |
+|---|---|---|
+| `0x3C4B90` | @0006–@0127 | `Data06`…`Data7F`, jamais affichés |
+| `0x3C6744` | @0122–@0175 | `Mess-0-122`…, jamais affichés |
+| `0x3BCFEC` | les 480 | codes de pièces `BAT-11`, `ANG-11` |
+| `0x3C40B8` | les 97 | noms de personnages, décision du 06/08 |
+| `0x3BA658` | les 120 | noms de Medabots, décision du 06/08 |
+
+**Compter les entrées d'une table ne dit pas combien il y a à traduire.**
+`0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
+128 et n'en a que 6. Toujours lire avant d'estimer.
 
 ## Décidé
 
