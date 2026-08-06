@@ -61,9 +61,21 @@ export const ETAPES = [
   },
   {
     titre: 'Tables de pointeurs',
+    etat: 'fait',
+    detail:
+      '21 tables, 3 944 entrées, 478 Kio de script — vérifiées en décodant leurs cibles. 159 fausses pistes (code ARM) écartées.',
+  },
+  {
+    titre: 'Extraction du script',
+    etat: 'fait',
+    detail:
+      'Le script sort en fichiers texte éditables, chaque entrée délimitée par le pointeur suivant. Volume mesuré : ~82 000 mots.',
+  },
+  {
+    titre: 'Codes de contrôle',
     etat: 'attente',
     detail:
-      'Indispensables avant toute réinsertion : le français n’a pas la longueur de l’anglais, les textes devront être relogés.',
+      'Repérés (0xF8–0xFF : saut de ligne, page suivante, fin de message) mais leurs paramètres — portrait, locuteur — restent à élucider.',
   },
   {
     titre: 'Accents français',

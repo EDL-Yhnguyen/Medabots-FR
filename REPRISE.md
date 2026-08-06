@@ -7,6 +7,18 @@ Dernière séance : 2026-08-06 · dépôt et site en ligne
 
 ## Où on en est
 
+**Les tables de pointeurs sont résolues et le script est extrait** : 21 tables,
+3 944 entrées, **478 Kio, ~82 000 mots** — le volume est désormais mesuré, plus
+estimé. `outils/extraire.mjs` sort le tout en fichiers texte éditables dans
+`travail/script/`. 159 fausses pistes (pools de littéraux ARM) écartées par trois
+filtres empilés.
+
+**La table de caractères a été corrigée** : `0x3F` n'est pas `?` mais le point de
+suspension, et `0x46` est le point d'interrogation. `0x43` = `-`, `0x48` = `"`.
+Elle vit maintenant dans `outils/table-caracteres.mjs`, importée par tous les
+outils — elle était recopiée dans trois scripts.
+
+
 **Analyse.** La ROM est identifiée et saine (`Medabots - Metabee (Europe)`, SHA1
 `CD3D674E...`). **La table de caractères est résolue et vérifiée** par décodage de
 vrai texte, et **le texte des dialogues n'est pas compressé** — le plus gros risque
@@ -27,14 +39,15 @@ et le site l'affiche.
 
 ## La prochaine action
 
-Installer mGBA (`winget install mGBA.mGBA`), lancer le jeu jusqu'à une boîte de
-dialogue, vider la VRAM `0x06000000`–`0x06017FFF` et y retrouver le glyphe, puis
-poser un point d'arrêt en lecture pour remonter à l'adresse ROM de la police et de
-sa table de largeurs.
+Écrire `outils/reinserer.mjs` et faire passer **l'aller-retour identité** :
+extraire puis réinsérer sans rien modifier doit rendre une ROM identique au bit
+près à l'originale. Tant que ce test échoue, aucune traduction ne peut être insérée
+en confiance.
 
-En parallèle, sans émulateur : chercher les **tables de pointeurs** (suites
-d'entiers 32 bits croissants dont l'octet fort vaut `0x08`) autour des banques de
-texte identifiées.
+Ensuite seulement : installer mGBA (`winget install mGBA.mGBA`), lancer le jeu
+jusqu'à une boîte de dialogue, vider la VRAM `0x06000000`–`0x06017FFF` pour y
+retrouver le glyphe, puis poser un point d'arrêt en lecture afin de remonter à
+l'adresse ROM de la police et de sa table de largeurs.
 
 ## Décidé cette séance
 

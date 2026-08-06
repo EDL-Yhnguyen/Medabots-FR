@@ -51,23 +51,45 @@ Bourrage de `0x00` à partir de `0x7F4464` jusqu'à la fin : **47 100 octets**
 Trouvée par recherche relative (décalage `-70`, 1425 correspondances), puis
 **confirmée par décodage de vrai texte**.
 
+Source unique : [`outils/table-caracteres.mjs`](../outils/table-caracteres.mjs). Chaque
+valeur y est justifiée par un contexte réel du script extrait.
+
 ```
 0x00        espace
 0x01–0x1A   A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 0x1B–0x34   a b c d e f g h i j k l m n o p q r s t u v w x y z
 0x35–0x3E   0 1 2 3 4 5 6 7 8 9
-0x3F        ?
-0x40        .
+0x3F        .   point de suspension (s'emploie par trois)
+0x40        .   point de fin de phrase
 0x41        ,
-0x42        '  (apostrophe)
+0x42        '   apostrophe
+0x43        -   trait d'union
 0x44        /
+0x46        ?
 0x47        !
+0x48        "   guillemet, ouvrant et fermant
 0x49        (
 0x4A        )
 ```
 
-`0x43`, `0x45`, `0x46`, `0x48`, et la plage `0x4B`–`0xF7` restent à identifier.
-C'est probablement là que se logeront les caractères accentués français.
+`0x45` est **probablement** `:` — deux contextes seulement, ce n'est pas établi.
+La plage `0x4B`–`0xF7` reste à identifier ; c'est là que se logeront les caractères
+accentués français.
+
+### Correction du 06/08/2026
+
+La première lecture annonçait `0x3F` = `?`. **C'était faux.** Le script extrait le
+montre sans ambiguïté :
+
+```
+Is everyone alright{46}          →  Is everyone alright ?
+Shouldn't you be studying{46}    →  Shouldn't you be studying ?
+every now and th{3F}{3F}{3F}Zzz  →  every now and th...Zzz
+```
+
+`0x3F` est le point de suspension, employé par trois ; le point d'interrogation est
+`0x46`. La leçon vaut pour la suite : **une table ne se valide pas sur des extraits
+choisis, elle se valide sur le script entier.**
 
 ### Codes de contrôle
 
@@ -163,15 +185,80 @@ a déjà ajouté des accents. Le moteur sait afficher des glyphes accentués.
 
 ---
 
-## 5. Tables de pointeurs ❌ NON RÉSOLUES
+## 5. Tables de pointeurs ✅ RÉSOLUES
 
-Non recherchées à ce stade. Nécessaires avant toute réinsertion : le texte français
-n'ayant pas la même longueur que l'anglais, les dialogues devront être relogés et
-tous les pointeurs recalculés.
+Outil : [`outils/pointeurs.mjs`](../outils/pointeurs.mjs).
 
-Les pointeurs GBA sont des adresses absolues de 32 bits commençant par `0x08` ou
-`0x09` (la ROM est mappée en `0x08000000`). Une table de pointeurs se repère comme
-une suite d'entiers 32 bits croissants dont l'octet de poids fort vaut `0x08`.
+Un pointeur GBA est une adresse absolue de 32 bits, la ROM étant mappée en
+`0x08000000`. Une suite de tels entiers, alignée sur 4 octets, est une table
+candidate. **Mais ce critère seul ne suffit pas** : les pools de littéraux du code
+ARM produisent exactement la même signature — 180 suites détectées, dont 159 ne
+sont pas du texte.
+
+### Ce qui tranche vraiment
+
+Trois filtres empilés, chacun ayant écarté ce que le précédent laissait passer :
+
+1. **La cible se décode-t-elle en texte lisible ?** Élimine la majorité du code.
+   Insuffisant seul : des données binaires structurées atteignent 86-87 %.
+2. **Le texte contient-il des mots anglais courants ?** Élimine les faux positifs
+   restants (`0x412E60`, `0x3D1D94`).
+3. **…sauf pour les listes.** Le filtre 2 rejetait à tort la table des 480
+   Medaparts : « PSYCHO MISSILE | ELECTO MISSILE » ne contient aucun mot courant.
+   Une seconde voie accepte les entrées séparées par `0xFE`.
+
+Il y a **deux natures de texte** dans ce jeu — des phrases et des listes — et un
+critère unique en manque forcément une.
+
+### Résultat
+
+| | |
+|---|---|
+| Tables de texte | **21** |
+| Entrées | **3 944** |
+| Volume | **489 250 octets** (478 Kio) |
+| Estimation | ~82 000 mots |
+
+Les plus grosses : `0x47A784` (323 entrées), `0x47A2C4` (303), `0x47B110` (295),
+`0x47D124` (293), `0x47BDE0` (281), `0x3BBB4C` (480 noms de Medaparts).
+
+Le récapitulatif machine est régénéré dans `travail/pointeurs.json`.
+
+---
+
+## 5 bis. Extraction ✅ EN PLACE
+
+Outil : [`outils/extraire.mjs`](../outils/extraire.mjs) → `travail/script/*.txt`.
+
+**Chaque entrée est délimitée par le pointeur suivant, pas par un octet de fin.**
+C'est sans perte et ça n'exige pas de connaître tous les codes de contrôle — ce
+qui compte, puisqu'ils ne sont pas tous élucidés. Les tables étant triées, l'entrée
+*i* occupe `[cible(i), cible(i+1))`.
+
+Les octets non identifiés sortent en `{XX}` : visibles, et réversibles à la
+réinsertion.
+
+Exemple de sortie :
+
+```
+@0000 [0x449CFB]
+{FB}A AMom, Dad, I'm home!{FD}Is everyone alright?{FC}{FB} {50}AWhat kind of
+nonsense are you{FD}talking about now!?{FC}Shouldn't you be studying?{FF}
+```
+
+**Attention à une fausse alerte** : une extraction brute signale ~185 « octets
+inconnus ». Ce ne sont pas des lettres manquantes — ce sont pour l'essentiel les
+**paramètres des codes de contrôle** (l'octet qui suit `0xFB` porte le portrait ou
+le locuteur). Les élucider demande la sémantique des codes, pas la table.
+
+### Ce qui reste avant de pouvoir réinsérer
+
+- La sémantique des codes `0xF8`–`0xFF` et de leurs paramètres.
+- Le **repointage** : le français étant plus long que l'anglais, les textes devront
+  être relogés et chaque pointeur recalculé.
+- Un **aller-retour identité** : extraire puis réinsérer sans modifier doit rendre
+  une ROM identique au bit près. Tant que ce test ne passe pas, aucune traduction
+  ne peut être insérée en confiance.
 
 ---
 
