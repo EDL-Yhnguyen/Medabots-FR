@@ -72,9 +72,9 @@ valeur y est justifiée par un contexte réel du script extrait.
 0x4A        )
 ```
 
-`0x45` est **probablement** `:` — deux contextes seulement, ce n'est pas établi.
-La plage `0x4B`–`0xF7` reste à identifier ; c'est là que se logeront les caractères
-accentués français.
+`0x45` = `:` — établi depuis, sur trois contextes (« Key: A Class », « Key: B
+Class », « It says: »). La plage `0x4B`–`0xF7` reste à identifier ; c'est là que se
+logeront les caractères accentués français.
 
 ### Correction du 06/08/2026
 
@@ -134,14 +134,15 @@ Noyau à haute confiance :
 | `0x3B5000`–`0x3BC000` | 28 Kio | 67 % | aide / tutoriels |
 | `0x3AC000`–`0x3B0000` | 16 Kio | 56 % | listes, noms de pièces |
 
-**Estimation du script réel : 500 à 700 Kio**, soit de l'ordre de 100 000 mots.
-À confirmer par extraction via tables de pointeurs — non encore localisées.
+> **Chiffre périmé, conservé pour mémoire.** Cette cartographie estimait 500 à
+> 700 Kio. L'extraction par tables de pointeurs a tranché : **393 Kio, ~67 000
+> mots** (§ 5). L'écart venait de blocs de code ARM qui franchissaient le filtre.
 
 ---
 
 ## 4. Police de caractères ❌ NON RÉSOLUE
 
-Quatre méthodes tentées, toutes en échec :
+Cinq méthodes tentées, toutes en échec :
 
 1. **Recherche 1bpp non compressée** par heuristique d'encre → uniquement du bruit.
    L'heuristique était trop permissive : sur 8 Mio, elle produit des faux positifs
@@ -153,6 +154,11 @@ Quatre méthodes tentées, toutes en échec :
    Une seule correspondance sur 8 Mio (`0x08A1C0`), invalidée au rendu.
 4. **Sondes de table sur les 1880 blocs décompressés**, à tous les offsets
    internes alignés → **zéro correspondance**.
+5. **Recherche de la table de largeurs** ([`outils/trouve-largeurs.mjs`](../outils/trouve-largeurs.mjs))
+   — une chasse variable a forcément un octet de largeur par caractère, indexé par
+   la valeur de table puisque c'est ce que le moteur lit pour avancer le curseur.
+   Dix candidats, tous périodiques (`1 1 3 3 2 2 2 2`) : de la donnée structurée,
+   pas des largeurs.
 
 ### Ce que ces échecs prouvent
 
