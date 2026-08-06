@@ -54,7 +54,34 @@ traduction : ils touchent les mêmes zones et les faire d'abord créerait du tra
 outils/     scripts Node d'analyse, extraction, réinsertion — versionnés
 docs/       format.md = tout ce qu'on sait du binaire, avec les preuves
 travail/    sorties régénérables (dumps, PNG, textes extraits) — ignoré par git
+site/       le site public (Vite + React + Tailwind 4)
 ```
+
+---
+
+## Le site — https://medabots-fr.vercel.app
+
+**Le site ne sert jamais la ROM, et ce point n'est pas négociable.** Posséder le
+jeu autorise à en avoir une copie, pas à la publier. L'utilisateur dépose son
+propre fichier ; il est vérifié par SHA-1, rangé en IndexedDB **sur son appareil**,
+et jamais envoyé. Le patch lui sera appliqué en mémoire avant de passer la ROM à
+l'émulateur par une URL `blob:`.
+
+**Vite, pas Next.js.** Tout est côté client : il n'y a rien à rendre sur un
+serveur, et un serveur qui ne sert rien est un serveur de trop. Déploiement
+statique sur Vercel, projet `medabots-fr`.
+
+**IndexedDB, pas localStorage** : une ROM GBA fait 8 Mio de binaire, localStorage
+ne stocke que du texte et plafonne à quelques mégaoctets.
+
+**L'avancement affiché doit rester honnête.** Un pourcentage inventé ne trompe que
+celui qui le lit. Les chiffres vivent dans `site/src/donnees/avancement.ts`.
+
+Vérification : `cd site && npm run verifier` (typecheck + build).
+
+Limite connue : le moteur d'émulation vient d'un CDN externe, donc le lecteur ne
+fonctionne pas hors connexion. Pour un vrai hors-ligne, il faudra héberger le
+dossier `data/` d'EmulatorJS et le mettre en cache.
 
 Les outils sont en **Node pur**, sans dépendance : lisibles, reproductibles,
 scriptables. Pas d'éditeur hexadécimal manuel — un clic non reproductible n'est

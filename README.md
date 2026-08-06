@@ -4,6 +4,8 @@ Traduction française de **Medabots: Metabee Version** (Game Boy Advance, Europe
 portage de *Medarot 2 Core* d'Imagineer. Aucune traduction française n'a jamais
 existé pour ce jeu.
 
+**Site : https://medabots-fr.vercel.app** — avancement, documentation et lecteur intégré.
+
 **État : cadrage terminé, rien de traduit.** Voir [`REPRISE.md`](REPRISE.md).
 
 ## Ce que ce dépôt contient — et ne contient pas
