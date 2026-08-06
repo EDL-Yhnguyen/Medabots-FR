@@ -7,6 +7,24 @@ Dernière séance : 2026-08-06 · dépôt et site en ligne
 
 ## Où on en est
 
+**Le premier patch français existe et fonctionne.** `patch/medabots-fr.bps`
+(2 232 octets) traduit **174 entrées** : 64 objets, 34 médailles, 60 types
+d'attaque, 27 familles de compétences. Vérifié de bout en bout dans un navigateur
+sur https://medabots-fr.vercel.app — ROM déposée, SHA-1 contrôlé, patch appliqué
+en mémoire, jeu qui démarre.
+
+**Le repointage marche** : 91 entrées trop longues pour leur place d'origine sont
+relogées dans les 48 Kio libres en fin de ROM, pointeur réécrit. Il reste 46,9 Kio.
+
+**Les accents sont écrits mais pas encore affichables** : 63 remplacements
+signalés à l'insertion (`È É Ô è é ï`). Les fichiers de `traduction/` gardent le
+français correct ; ils deviendront justes sans réécriture le jour où la police
+portera les glyphes.
+
+**Volume réel du script : 393 Kio, ~67 000 mots** — les 663 Kio annoncés avant
+comptaient de la sur-lecture.
+
+
 **L'aller-retour identité PASSE.** Extraire puis réinsérer sans rien modifier rend
 une ROM identique à l'originale au bit près. C'est le jalon qui autorise à traduire :
 l'outillage ne perd rien. Chaîne exécutable :
@@ -50,17 +68,15 @@ et le site l'affiche.
 
 ## La prochaine action
 
-**Traduire le lot 1** en commençant par les listes courtes et sans risque de
-longueur : `0x3B6590` (34 médailles), `0x3B66EC` (27 compétences), `0x3BE868`
-(60 types d'attaque). Ces entrées tiennent dans la place existante ou presque, ce
-qui permet de livrer un premier patch **sans avoir à repointer**.
+**Traduire les 480 Medaparts** (`0x3BBB4C`) — c'est le plus gros morceau restant
+hors dialogues, et il complète le lot « objets ». Puis les 97 noms de personnages
+(`0x3C40B8`) restent en l'état, par décision.
 
-Attention : tant que le repointage n'existe pas, `reinserer.mjs` écrit à l'adresse
-d'origine et **écraserait l'entrée suivante** si le français était plus long. Il
-faut lui ajouter un garde-fou qui refuse une entrée trop longue, avant toute
-traduction — sinon la corruption sera silencieuse.
+**Vérifier le patch en jeu, pour de vrai.** Le jeu démarre, mais personne n'a
+encore ouvert l'inventaire pour voir « Plan de la ville » à l'écran. mGBA est
+installé (`JeffreyPfau.mGBA` — l'identifiant `mGBA.mGBA` n'existe pas dans winget).
 
-Ensuite : installer mGBA (`winget install mGBA.mGBA`), lancer le jeu
+Ensuite : mGBA (`winget install mGBA.mGBA`), lancer le jeu
 jusqu'à une boîte de dialogue, vider la VRAM `0x06000000`–`0x06017FFF` pour y
 retrouver le glyphe, puis poser un point d'arrêt en lecture afin de remonter à
 l'adresse ROM de la police et de sa table de largeurs.
@@ -80,6 +96,22 @@ l'adresse ROM de la police et de sa table de largeurs.
   rendre sur un serveur.
 
 ## À ne pas refaire
+
+- **Écrire `curseur.pos += litVarint(...)`.** En JavaScript, `a += f()` lit `a`
+  AVANT d'évaluer `f()`. Comme `litVarint` avance le curseur, l'affectation écrase
+  cet avancement : le curseur recule d'un octet et le décodeur lit une action
+  fantôme. A fait croire une heure que le patch BPS était corrompu alors qu'il
+  était juste.
+- **Borner une entrée de texte par un plafond arbitraire.** La dernière entrée
+  d'une table n'a pas de suivante ; lire 2048 octets « au cas où » traverse la
+  table de pointeurs voisine, et la réécrire restaure les pointeurs d'origine —
+  ce qui défait le repointage **sans que le test d'identité voie quoi que ce
+  soit**, puisque ces octets sont justement identiques.
+- **Chercher la table de largeurs de la police** par plages de valeurs
+  plausibles : les dix candidats sont périodiques (`1 1 3 3 2 2 2 2`), donc de la
+  donnée structurée. Cinquième échec sur la police.
+- **`winget install mGBA.mGBA`** : ce paquet n'existe pas. C'est
+  `JeffreyPfau.mGBA`.
 
 - **Chercher la police par heuristique d'encre** sur la ROM en clair. Sur 8 Mio,
   toute heuristique permissive produit des faux positifs ; deux essais, du bruit.

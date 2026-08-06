@@ -216,8 +216,8 @@ critère unique en manque forcément une.
 |---|---|
 | Tables de texte | **33** |
 | Entrées | **5 933** |
-| Volume | **679 381 octets** (663 Kio) |
-| Estimation | ~113 000 mots |
+| Volume | **402 705 octets** (393 Kio) |
+| Estimation | ~67 000 mots |
 
 Dialogues : `0x47A784` (323 entrées), `0x47A2C4` (303), `0x47B110` (295),
 `0x47D124` (293), `0x47BDE0` (281).

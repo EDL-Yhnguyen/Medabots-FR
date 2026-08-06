@@ -71,8 +71,8 @@ export default function App() {
             ))}
           </div>
           <p className="mt-6 border-t border-trait pt-5 text-sm text-texte-doux">
-            Le script du jeu représente de l’ordre de{' '}
-            <strong className="text-texte">100 000 mots</strong>. Chaque lot sera livré comme un
+            Le script du jeu pèse <strong className="text-texte">393 Kio</strong>, soit de l’ordre
+            de <strong className="text-texte">67 000 mots</strong>. Chaque lot est livré comme un
             patch utilisable, plutôt que d’attendre des mois un ensemble complet.
           </p>
         </Carte>

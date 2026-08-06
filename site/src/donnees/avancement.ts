@@ -58,19 +58,19 @@ export const ETAPES = [
     titre: 'Police de caractères',
     etat: 'bloque',
     detail:
-      'Introuvable après quatre méthodes statiques. L’échec prouve que l’indice du glyphe n’est pas la valeur de table : police à chasse variable, à localiser sous émulateur.',
+      'Introuvable après cinq méthodes statiques, dessins et table de largeurs comprises. L’échec prouve que l’indice du glyphe n’est pas la valeur de table : police à chasse variable, à localiser sous émulateur.',
   },
   {
     titre: 'Tables de pointeurs',
     etat: 'fait',
     detail:
-      '33 tables, 5 933 entrées, 663 Kio de script — vérifiées en décodant leurs cibles. 147 fausses pistes (code ARM) écartées.',
+      '33 tables, 5 933 entrées — vérifiées en décodant leurs cibles. 147 fausses pistes (code ARM) écartées.',
   },
   {
     titre: 'Extraction du script',
     etat: 'fait',
     detail:
-      'Le script sort en fichiers texte éditables, chaque entrée délimitée par le pointeur suivant. Volume mesuré : ~113 000 mots.',
+      'Le script sort en fichiers texte éditables, chaque entrée bornée par son terminateur. Volume mesuré : 393 Kio, ~67 000 mots.',
   },
   {
     titre: 'Réinsertion',
