@@ -22,6 +22,13 @@ const ZONES = {
   io: [0x04000000, 0x60], // registres d'affichage
 };
 
+// La police peut avoir été décompressée en RAM au démarrage : on la ramasse
+// aussi, sinon on chercherait dans la ROM une donnée qui n'y est qu'empaquetée.
+if (process.argv.includes('--ram')) {
+  ZONES.ewram = [0x02000000, 0x40000]; // 256 Kio
+  ZONES.iwram = [0x03000000, 0x8000]; // 32 Kio
+}
+
 const nom = process.argv[2] || 'ecran';
 const secondes = Number(process.argv[3] ?? 0);
 
