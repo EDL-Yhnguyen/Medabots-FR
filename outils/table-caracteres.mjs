@@ -38,9 +38,46 @@ TABLE[0x4c] = '£'
 TABLE[0x4d] = '&'
 TABLE[0x4e] = '%'
 
-// Le jeu de caractères s'arrête à 0x4E : 79 signes, 0x00 à 0x4E.
-// Les codes 0x4F à 0xF7 sont LIBRES dans les deux tables de chasse (177 entrées
-// à zéro) — c'est là que se logeront les accents français.
+// LE JEU EUROPÉEN, 0x50 à 0x7C.
+//
+// La ROM est une version Europe : les glyphes accentués des quatre langues du
+// continent DORMAIENT DÉJÀ dans la police, aux emplacements suivant le 79e.
+// Rien n'a eu à être dessiné ni relogé. Ce qui les rendait inatteignables, ce
+// sont les tables de chasse, à zéro sur ces codes : le jeu ignorait leur
+// largeur, donc ne les employait jamais.
+//
+// Le catalogue et les largeurs vivent dans outils/accents.mjs, qui les écrit
+// dans la ROM livrée. Ce fichier-ci ne dit que la correspondance texte↔octet.
+
+const EUROPEEN = {
+  0x50: 'Ä', 0x51: 'ä', 0x52: 'Á', 0x53: 'á', 0x54: 'Â', 0x55: 'â',
+  0x56: 'È', 0x57: 'è', 0x58: 'É', 0x59: 'é', 0x5a: 'Ê', 0x5b: 'ê',
+  0x5c: 'Ë', 0x5d: 'ë', 0x5e: 'Î', 0x5f: 'î', 0x60: 'Ï', 0x61: 'ï',
+  0x62: 'Í', 0x63: 'í', 0x64: 'Ö', 0x65: 'ö', 0x66: 'Ô', 0x67: 'ô',
+  0x68: 'Ó', 0x69: 'ó', 0x6a: 'Ü', 0x6b: 'ü', 0x6c: 'Û', 0x6d: 'û',
+  0x6e: 'Ù', 0x6f: 'ù', 0x70: 'Ú', 0x71: 'ú', 0x72: 'ß', 0x73: 'Ç',
+  0x74: 'ç', 0x75: 'Ñ', 0x76: 'ñ', 0x77: '¡', 0x78: '¿', 0x79: 'À',
+  0x7a: 'à', 0x7b: 'Œ', 0x7c: 'œ',
+}
+/**
+ * LA TABLE DE LECTURE, arrêtée à 0x4E.
+ *
+ * Le texte ANGLAIS de la ROM n'emploie aucun code européen : ces glyphes n'ont
+ * jamais été atteignables. Décoder avec la table étendue rendrait donc lisibles
+ * des octets qui ne sont pas du texte — et c'est exactement ce qui s'est produit
+ * la première fois : le détecteur de tables est passé de 33 à 35 tables et de
+ * 5 933 à 6 047 entrées, deux zones de données ayant franchi le seuil de
+ * lisibilité par les seuls codes 0x50-0x7C.
+ *
+ * D'où la règle : ON LIT L'ANGLAIS AVEC LA TABLE D'ORIGINE, ON N'ÉCRIT LE
+ * FRANÇAIS QU'AVEC LA TABLE ÉTENDUE.
+ */
+export const TABLE_LECTURE = TABLE.slice()
+
+for (const [code, car] of Object.entries(EUROPEEN)) TABLE[Number(code)] = car
+
+// 0x4F, puis 0x7D à 0x86 : onze emplacements de glyphe VIDES, encore libres.
+// C'est là que se dessineraient « et » si on les voulait un jour.
 
 TABLE[0x45] = ':' // « Key: A Class », « Key: B Class », « It says: » — établi
 
@@ -78,6 +115,13 @@ export function rendOctet(octet) {
     : '{' + octet.toString(16).toUpperCase().padStart(2, '0') + '}'
 }
 
+/** Idem, mais avec la table de LECTURE : pour tout ce qui décode la ROM anglaise. */
+export function rendOctetLecture(octet) {
+  return TABLE_LECTURE[octet] !== null
+    ? TABLE_LECTURE[octet]
+    : '{' + octet.toString(16).toUpperCase().padStart(2, '0') + '}'
+}
+
 /**
  * CARACTÈRES ABSENTS DE LA POLICE : + ; * = # @ [ ] < > et tout le reste
  * au-delà de 0x4E.
@@ -92,34 +136,26 @@ export function rendOctet(octet) {
  */
 
 /**
- * Repli d'accents, en attendant que la police porte les glyphes français.
+ * Repli, pour le peu qui manque encore.
  *
  * La traduction s'écrit AVEC ses accents — « Régénération », pas « Regeneration ».
  * Appauvrir le vocabulaire pour contourner une limite de l'outillage reviendrait
  * à laisser cette limite décider du texte français, et il faudrait tout relire le
  * jour où elle tombe.
  *
- * Tant que la police ne porte pas ces glyphes, l'insertion les remplace ici et
- * compte les remplacements. Le jour où ils existent, il suffira de les ajouter à
- * TABLE : les mêmes fichiers de traduction deviendront corrects sans qu'un seul
- * mot soit réécrit.
+ * C'est exactement ce qui s'est passé le 25/08/2026 : les glyphes ont été
+ * ajoutés à TABLE et les quelque 700 replis ont disparu SANS QU'UN SEUL MOT
+ * SOIT RÉÉCRIT. Écrire les accents dès le premier jour aura donc bien été le
+ * bon choix.
  */
 export const REPLI_ACCENTS = new Map(
   Object.entries({
-    à: 'a', â: 'a', ä: 'a',
-    é: 'e', è: 'e', ê: 'e', ë: 'e',
-    î: 'i', ï: 'i',
-    ô: 'o', ö: 'o',
-    ù: 'u', û: 'u', ü: 'u',
-    ç: 'c',
-    À: 'A', Â: 'A', Ä: 'A',
-    É: 'E', È: 'E', Ê: 'E', Ë: 'E',
-    Î: 'I', Ï: 'I',
-    Ô: 'O', Ö: 'O',
-    Ù: 'U', Û: 'U', Ü: 'U',
-    Ç: 'C',
-    œ: 'oe', Œ: 'OE', æ: 'ae', Æ: 'AE',
+    // Tout ce que la police PORTE a quitté cette table. Ne reste que ce qu'elle
+    // n'a pas : la ligature æ, les guillemets français, les tirets longs et le
+    // y tréma.
+    æ: 'ae', Æ: 'AE',
     '«': '"', '»': '"',
     '’': "'", '‘': "'", '–': '-', '—': '-',
+    ÿ: 'y', Ÿ: 'Y',
   }),
 )

@@ -5,7 +5,7 @@
 // Les tables étant triées par adresse croissante, l'entrée i occupe
 // [cible(i), cible(i+1)).
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs'
-import { TABLE as table, rendOctet as rendu } from './table-caracteres.mjs'
+import { TABLE_LECTURE as table, rendOctetLecture as rendu } from './table-caracteres.mjs'
 import { ciblesDeTable, finEntree } from './entrees.mjs'
 
 const rom = readFileSync(process.argv[2])

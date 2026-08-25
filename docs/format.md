@@ -84,8 +84,25 @@ valeur y est justifiée par un contexte réel du script extrait.
 « It says: »). `0x4B` à `0x4E` ont été **lus directement dans la police** une fois
 celle-ci trouvée (§ 4).
 
-**Le jeu de caractères s'arrête à `0x4E` : 79 signes.** Les codes `0x4F` à `0xF7`
-sont libres — c'est là que se logeront les accents français.
+```
+0x50–0x7C   Ä ä Á á Â â À à È è É é Ê ê Ë ë Î î Ï ï Í í Ö ö Ô ô Ó ó
+            Ü ü Û û Ù ù Ú ú ß Ç ç Ñ ñ ¡ ¿ Œ œ
+```
+
+**Le jeu de caractères ne s'arrête pas à `0x4E`.** Il continue de `0x50` à
+`0x7C` avec les 45 signes des quatre langues européennes — voir § 4 bis. Ce qui
+avait fait croire le contraire, c'est que ces 45 codes ont une largeur de zéro
+dans les deux tables de chasse : le jeu ne les emploie jamais, donc aucun texte
+de la ROM n'en contient un seul.
+
+**D'où une règle qui n'est pas une précaution de style.** Le texte ANGLAIS se
+décode avec la table arrêtée à `0x4E` (`TABLE_LECTURE`), le français s'encode
+avec la table complète (`TABLE`). Décoder avec la table complète rend lisibles
+des octets qui ne sont pas du texte : au premier essai, le détecteur de tables
+est passé de 33 à 35 tables et de 5 933 à 6 047 entrées, deux zones de données
+ayant franchi le seuil de lisibilité par les seuls codes `0x50`–`0x7C`.
+
+`0x4F`, puis `0x7D` à `0x86` : onze emplacements de glyphe vides, encore libres.
 
 ### Correction du 06/08/2026
 
@@ -227,17 +244,64 @@ mesures fausses produit une conclusion fausse, et la conclusion avait l'air
 solide parce qu'elle expliquait tous les échecs. Seul le désassemblage du code a
 tranché.
 
-### Ce que ça ouvre pour les accents
+---
 
-- Les codes `0x4F`–`0xF7` sont **libres dans les deux tables de chasse** :
-  177 emplacements.
-- Le dessin doit être relogé, l'espace voisin portant des graphismes. L'adresse
-  de base ne vit que dans des mots de pool, faciles à réécrire : `0x084BFC64` en
-  9 mots, `0x084C59A4` en 6. Les 47 100 o libres en `0x7F4464` valent
-  735 glyphes.
-- Place verticale disponible : lignes 0–2 au-dessus des capitales, 3–5 au-dessus
-  des bas-de-casse. `é ê è à â î ô û` tiennent sans toucher au moteur ;
-  `Ç` et `ç` prennent la classe verticale 3.
+## 4 bis. Le jeu européen ✅ OUVERT, sans rien dessiner
+
+Le 25/08/2026, un coup d'œil aux emplacements suivant le 79e glyphe a montré ce
+que huit recherches n'avaient pas soupçonné : **la cartouche est européenne, et
+les accents y étaient déjà dessinés.**
+
+| Codes | Contenu |
+|---|---|
+| `0x4F` | glyphe vide |
+| `0x50`–`0x7C` | 45 signes : allemand (ä ö ü ß), espagnol (á í ó ú ñ ¡ ¿), français (à â ç è é ê ë î ï ô û ù œ) et leurs capitales |
+| `0x7D`–`0x86` | dix glyphes vides |
+
+**Rien n'a eu à être dessiné ni relogé.** Le plan écrit la veille — reloger la
+police dans les 47 Kio libres, réécrire quinze mots de pool, dessiner trente
+glyphes — était du travail pour rien.
+
+### Ce qui les rendait inatteignables
+
+Les entrées `0x50`–`0x7C` des **deux** tables de chasse sont à zéro. Une largeur
+de zéro n'avance pas le curseur : le glyphe suivant se dessinerait par-dessus.
+Le jeu ne pouvait donc pas les employer, et rien dans la ROM ne les employait.
+
+**Écrire ces largeurs a suffi**, et c'est tout ce que fait
+[`outils/accents.mjs`](../outils/accents.mjs) — 90 octets modifiés.
+
+### Comment la largeur de chacun a été établie
+
+Deux mesures indépendantes, dont on garde la plus grande :
+
+1. **la largeur de la lettre de base.** Le corps d'un `É` est identique AU BIT
+   PRÈS à celui d'un `E` : distance 0 sur les lignes 4 à 15, sur les 20
+   capitales accentuées. Pour les bas-de-casse la distance est de 22 à 42,
+   l'écart venant du diacritique qui mord la ligne 5 — aucune autre lettre
+   n'approche ;
+2. **la place réellement occupée**, dernière colonne encrée plus le jeu de la
+   police (2 en romaine, 1 en italique, relevés sur les 78 lettres nues).
+
+Les deux concordent sur tout le catalogue **sauf `î`, `ï` et `í`**, dont le fût
+est décalé d'un pixel à droite pour dégager le diacritique : la lettre de base
+dirait 2, le dessin dit 4. Prendre la plus grande est la seule réponse sûre —
+une largeur trop courte ferait mordre l'accent sur la lettre suivante, et rien
+dans la ROM ne le signalerait.
+
+### L'octet 1 de la table de chasse ne sert à rien
+
+Le § 4 le décrivait comme une « classe verticale ». C'est une observation juste
+et une fonction inexistante : **les 21 instructions qui chargent une table de
+chasse font toutes un `LDRB` d'offset 0, aucune d'offset 1.** L'octet est écrit
+quand même, cohérent avec le reste de la table, pour ne pas laisser une table à
+moitié renseignée derrière soi.
+
+### Ce qui manque encore
+
+Les **guillemets français « »**, que la police n'a réellement pas — 68
+occurrences, repliées sur `"`. Ils se dessineraient dans deux des onze
+emplacements vides.
 
 ---
 

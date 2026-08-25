@@ -8,7 +8,7 @@
 // des adresses et produisent les mêmes suites. Le seul critère qui tranche, c'est
 // que la cible doit se décoder en texte lisible avec notre table.
 import { readFileSync, writeFileSync } from 'node:fs'
-import { TABLE as table } from './table-caracteres.mjs'
+import { TABLE_LECTURE as table } from './table-caracteres.mjs'
 
 const rom = readFileSync(process.argv[2])
 const BASE = 0x08000000

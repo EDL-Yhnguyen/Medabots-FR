@@ -5,7 +5,7 @@
 //
 // Usage : node outils/lister.mjs <rom> <pointeurs.json> <adresse-table>
 import { readFileSync } from 'node:fs'
-import { TABLE, rendOctet } from './table-caracteres.mjs'
+import { TABLE_LECTURE as TABLE, rendOctetLecture as rendOctet } from './table-caracteres.mjs'
 import { ciblesDeTable, placeEntree } from './entrees.mjs'
 
 const rom = readFileSync(process.argv[2])

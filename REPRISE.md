@@ -1,61 +1,58 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-08-06
+Dernière séance : 2026-08-25
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Le patch français existe et fonctionne.** `patch/medabots-fr.bps` traduit
-**692 entrées** : 64 objets, 34 médailles, 60 types d'attaque, 52 techniques,
-27 familles de compétences et leurs 53 conseils, 33 messages d'objet, 6 états de
-pièce, les 122 messages de Robattle, la boutique et les sauvegardes, les 12 scènes cinématiques la Medaroad Race et les 192 répliques d’ouverture et de fin de Robattle. Vérifié de bout en bout dans un
-navigateur — ROM déposée, SHA-1 contrôlé, patch appliqué en mémoire, jeu qui
-démarre.
+**Le français s'écrit avec ses accents, et ils s'affichent.** C'était la dernière
+limite connue du projet ; elle est tombée le 25/08 sans qu'un seul glyphe soit
+dessiné. La cartouche est **européenne** : les 45 signes des quatre langues du
+continent dormaient dans la police, juste après le 79e glyphe. Ce qui les rendait
+inatteignables, ce sont les deux tables de chasse, à **zéro** sur ces codes — une
+largeur nulle n'avance pas le curseur, donc le jeu ne pouvait pas les employer.
 
-**Le lot « textes de combat » est terminé.** Tout ce qui s'affiche pendant un
-Robattle est en français.
+Écrire ces largeurs a suffi. **90 octets.** Les ~700 replis d'accents sont tombés
+à **68**, et ces 68 ne sont que les guillemets « », que la police n'a réellement
+pas. Pas un mot de la traduction n'a eu à être réécrit : écrire les accents dès
+le premier jour, en acceptant qu'ils ne s'affichent pas encore, aura été le bon
+choix.
 
-**Toute la chaîne est outillée et vérifiable d'une commande :**
+**Le patch est régénéré** : `patch/medabots-fr.bps`, 692 entrées traduites,
+20 996 octets modifiés, vérifié par réapplication.
 
-```
-MEDABOTS_ROM="C:/chemin/vers/rom.gba" npm run verifier
-```
-
-Elle enchaîne pointeurs → extraction → **test d'identité** → ROM traduite. Le test
-d'identité est celui qui compte : réinsérer sans rien changer rend une ROM
-identique au bit près.
-
-**Chiffres mesurés** : 33 tables de texte, 5 933 entrées, **393 Kio, ~67 000 mots**.
-Le repointage reloge dans les 48 Kio libres de fin de ROM ce qui ne tient pas dans
-la place d'origine — 461 entrées à ce jour, il reste 31,0 Kio.
-
-**Deux limites connues, ni l'une ni l'autre bloquante :**
-
-- **La police reste introuvable** après cinq méthodes statiques. L'indice du glyphe
-  n'est pas la valeur de table : chasse variable, à localiser par dump VRAM sous
-  mGBA (installé).
-- **Les accents ne s'affichent donc pas encore** : environ 700 remplacements signalés à
-  l'insertion. Les fichiers de `traduction/` gardent le français correct et
-  deviendront justes sans réécriture le jour où la police portera les glyphes.
+**La chaîne est au vert** : 33 tables, 5 933 entrées, test d'identité identique
+au bit près.
 
 ## La prochaine action
 
-**Vérifier le patch en jeu, à l'œil.** Le jeu démarre et les octets sont bons, mais
-personne n'a encore ouvert l'inventaire pour voir « Plan de la ville » à l'écran.
-C'est la seule vérification qui manque.
+**Lancer le jeu et regarder.** C'est la même action qu'à la séance précédente, et
+elle n'a toujours pas été faite. Les octets sont bons, le rendu simulé par
+`outils/apercu-texte.mjs` est net, mais **personne n'a encore vu un accent à
+l'écran d'un vrai émulateur**. Tout le reste attend cette vérification.
 
-Ensuite, les **dialogues** (`0x47xxxx`, ~2 800 entrées) : c'est l'essentiel du
-volume et tout ce qui reste de vraiment visible. Les attaquer par petites tables
-complètes, comme `0x48521C` et `0x48698C` — une table entière livrée d'un bloc vaut
-mieux qu'un chapitre à moitié français.
+Les outils sont là : `outils/chasse-dialogue.mjs` amène le jeu à un écran de
+texte, `outils/ecran.mjs` capture, `outils/gdb.mjs` parle à mGBA.
+
+Ensuite, les **dialogues** (`0x47xxxx`, ~2 800 entrées) : l'essentiel du volume et
+tout ce qui reste de vraiment visible. Les prendre par petites tables complètes,
+comme `0x48521C` et `0x48698C` — une table entière livrée d'un bloc vaut mieux
+qu'un chapitre à moitié français.
+
+### Deux chantiers courts, si l'envie prend
+
+- **Les guillemets « ».** Onze emplacements de glyphe sont vides (`0x4F`, puis
+  `0x7D`–`0x86`). Deux chevrons à dessiner, deux largeurs à écrire, et le repli
+  disparaît. Tout l'outillage est en place.
+- **Les 480 Medaparts**, toujours à trancher — voir ci-dessous.
 
 ### Les 480 Medaparts : à trancher avant de s'y mettre
 
 Analyse faite : **480 entrées réelles, aucun emplacement de débogage, mais 347 mots
-finaux distincts** — les 22 plus fréquents ne couvrent que 25 % du total. Il n'y a
-donc **aucune régularité exploitable** : c'est 480 décisions individuelles.
+finaux distincts** — les 22 plus fréquents ne couvrent que 25 % du total. Aucune
+régularité exploitable : c'est 480 décisions individuelles.
 
 Et ces noms sont adossés aux modèles de Medabots, dont les noms restent en anglais
 par décision. Traduire « CHERUB BODY » en « CORPS CHÉRUBIN » pendant que le Medabot
@@ -79,22 +76,39 @@ identifiants :**
 `0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
 128 et n'en a que 6. Toujours lire avant d'estimer.
 
-## Décidé
+## Décidé cette séance
 
-- **Traduction par lots**, chacun livré comme patch utilisable.
-- **Noms de personnages et de Medabots conservés** (06/08) — comme la VF de l'anime.
-  Les codes de pièces (`0x3BCFEC` : `BAT-11`, `ANG-11`) non plus, ce sont des
-  identifiants.
-- **Projet hors du workspace `Documents\Git`**, réservé aux applications EDL.
-- **On part de la ROM anglaise européenne**, pas de l'espagnole du projet brésilien :
-  ce serait une traduction de traduction.
-- **Le site ne sert jamais la ROM.** L'utilisateur apporte son fichier ; tout se
-  passe dans son navigateur. Vite plutôt que Next.js : rien à rendre sur un serveur.
-- **Les accents s'écrivent quand même.** Appauvrir le vocabulaire pour contourner
-  une limite de l'outillage laisserait cette limite décider du texte français.
+- **On lit l'anglais avec la table d'origine, on n'écrit le français qu'avec la
+  table étendue.** Ce n'est pas une précaution de style : décoder avec la table
+  complète rend lisibles des octets qui ne sont pas du texte. Au premier essai, le
+  détecteur de tables est passé de 33 à 35 tables et de 5 933 à 6 047 entrées —
+  deux zones de données avaient franchi le seuil par les seuls codes
+  `0x50`–`0x7C`. D'où `TABLE_LECTURE`, employée par `pointeurs.mjs`,
+  `extraire.mjs` et `lister.mjs`.
+- **Les largeurs des accents s'écrivent APRÈS le test d'identité**, jamais avant.
+  Ouvrir les accents est une modification volontaire de la ROM, pas une
+  réinsertion de texte ; les mêler ferait échouer le seul contrôle qui prouve que
+  l'outillage ne perd rien.
+- **La largeur d'un accentué est la plus grande de deux mesures** : celle de sa
+  lettre de base, et la place réellement occupée. Elles concordent partout sauf
+  pour `î`, `ï` et `í`, dont le fût est décalé pour dégager le diacritique.
+- **Le site garde son état « bloqué »** dans le type `Etape`, même sans étape qui
+  l'emploie : un site qui ne sait plus dire « bloqué » ne peut plus être honnête.
 
 ## À ne pas refaire
 
+- **Chercher la police, puis planifier de dessiner des accents.** Neuf tentatives
+  au total, dont la neuvième — un plan complet de relogement, de réécriture de
+  quinze mots de pool et de dessin de trente glyphes — pour du travail entièrement
+  inutile. **REGARDER CE QU'IL Y A JUSTE APRÈS LA DONNÉE QU'ON VIENT DE TROUVER.**
+  Les 45 glyphes étaient à 64 octets de là.
+- **Croire une table sur sa largeur déclarée.** « Dernière colonne encrée + 2 »
+  tient à 74/78 en romaine et à 25/78 en italique. Ce n'est pas une loi, c'est une
+  tendance ; les typographes ont serré la ponctuation à la main.
+- **Un garde d'exécution qui teste `process.argv[2]`.** `reinserer.mjs` importe
+  `accents.mjs` ET reçoit un chemin de ROM en argv[2] : le tableau de contrôle
+  sortait au milieu de la réinsertion. Comparer `import.meta.url` à
+  `pathToFileURL(process.argv[1])`.
 - **`curseur.pos += litVarint(...)`.** En JavaScript, `a += f()` lit `a` AVANT
   d'évaluer `f()`. Le curseur recule d'un octet et le décodeur lit une action
   fantôme. A fait croire une heure que le patch BPS était corrompu — il était juste.
@@ -103,12 +117,9 @@ identifiants :**
   pointeurs voisine, et la réécrire restaure les pointeurs d'origine. Ça défait le
   repointage **sans que le test d'identité voie quoi que ce soit**, puisque ces
   octets sont justement identiques.
-- **Chercher la police**, cinq fois pour rien : heuristique d'encre (×2), sondes de
-  table en clair puis sur 1880 blocs LZ77 décompressés, table de largeurs. Les dix
-  candidats de largeurs sont périodiques (`1 1 3 3 2 2 2 2`) — de la donnée
-  structurée. Passer par l'émulateur.
-- **Employer `+` dans une traduction** : la police n'en a pas le glyphe (ni `&`, `%`,
-  `;`, `*`, `=`). « Gain puissance », pas « Puissance + ».
+- **Employer `+` dans une traduction** : la police n'en a pas le glyphe (ni `;`,
+  `*`, `=`). « Gain puissance », pas « Puissance + ». En revanche `&` et `%`
+  existent bien, en `0x4D` et `0x4E`.
 - **Oublier l'octet de paramètre après `0xFF`.** L'écrire `{FF}{00}` et non `{FF} ` :
   une espace en fin de ligne se fait supprimer par n'importe quel éditeur.
 - **`winget install mGBA.mGBA`** : ce paquet n'existe pas, c'est `JeffreyPfau.mGBA`.

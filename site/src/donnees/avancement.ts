@@ -57,7 +57,20 @@ export const LOTS: Lot[] = [
   },
 ]
 
-export const ETAPES = [
+export type Etape = {
+  titre: string
+  /**
+   * 'bloque' reste dans le type même quand aucune étape ne l'emploie.
+   *
+   * Le laisser tomber ferait disparaître l'étiquette « bloqué » de
+   * l'affichage, et il faudrait la réécrire au prochain point d'arrêt — or un
+   * site qui ne sait plus dire « bloqué » ne peut plus être honnête.
+   */
+  etat: 'fait' | 'attente' | 'bloque'
+  detail: string
+}
+
+export const ETAPES: Etape[] = [
   {
     titre: 'Table de caractères',
     etat: 'fait',
@@ -72,9 +85,9 @@ export const ETAPES = [
   },
   {
     titre: 'Police de caractères',
-    etat: 'bloque',
+    etat: 'fait',
     detail:
-      'Introuvable après cinq méthodes statiques, dessins et table de largeurs comprises. L’échec prouve que l’indice du glyphe n’est pas la valeur de table : police à chasse variable, à localiser sous émulateur.',
+      'Trouvée en remontant par le code, après sept recherches infructueuses dans les données. Deux polices, romaine et italique, de 8×16 pixels en 4 bpp anticrénelé, et leurs tables de largeurs. Les sept échecs venaient tous de la même chose : des mesures fausses, sur lesquelles un raisonnement juste ne pouvait que conclure faux.',
   },
   {
     titre: 'Tables de pointeurs',
@@ -102,8 +115,8 @@ export const ETAPES = [
   },
   {
     titre: 'Accents français',
-    etat: 'attente',
+    etat: 'fait',
     detail:
-      'é è ê à â ç ù û î ï ô ö œ « ». Une version espagnole du jeu existe, donc le moteur sait afficher des glyphes accentués.',
+      'Ils dormaient dans la ROM. C’est une cartouche européenne : les 45 glyphes des quatre langues du continent — é è ê à â ç î ï ô û ù œ Œ et leurs capitales — étaient dessinés juste après le 79e, mais leurs largeurs valaient zéro, si bien que le jeu ne pouvait jamais les employer. Écrire ces largeurs a suffi. Rien n’a été dessiné, rien n’a été relogé, et pas un mot de la traduction n’a eu à être réécrit. Ne manquent que les guillemets « », que la police n’a réellement pas.',
   },
-] as const
+]
