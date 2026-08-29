@@ -77,6 +77,36 @@ ne stocke que du texte et plafonne à quelques mégaoctets.
 **L'avancement affiché doit rester honnête.** Un pourcentage inventé ne trompe que
 celui qui le lit. Les chiffres vivent dans `site/src/donnees/avancement.ts`.
 
+### Le compte et la partie — en service depuis le 29/08/2026
+
+La sauvegarde de cartouche suit le compte ; **la ROM ne quitte jamais
+l'appareil**. Schéma `medabots` du projet Supabase personnel
+`exovzmoygupllcdjbwtf`, partagé avec Mamakilo (`public`) et MamaLingo
+(`mamalingo`) : `auth.users` est commun, donc **le compte est le même** dans
+toute la suite.
+
+Trois choses qu'on ne redécouvre pas :
+
+- **Créer le schéma ne suffit pas : il faut l'EXPOSER à PostgREST.** Sans ça,
+  toute requête répond `PGRST106 · Invalid schema`, et le message ne dit pas
+  qu'il s'agit d'un réglage de projet. La liste est dans les réglages d'API, ou
+  par l'API Management : `PATCH /v1/projects/<ref>/postgrest`, champ `db_schema`.
+  **La renvoyer entière** — elle vaut remplacement, pas ajout.
+- **`grant usage on schema` est indispensable en plus de RLS.** RLS filtre les
+  lignes, elle n'ouvre pas le schéma. Sans le `grant`, tout répond
+  `permission denied for schema medabots` — et un rôle `anon` qui reçoit cette
+  erreur est le comportement voulu : seuls les comptes connectés écrivent.
+- **Le projet Vercel n'est pas relié à GitHub.** Pousser sur `main` ne déploie
+  rien ; le site est resté sur la version du 06/08 pendant que trois semaines de
+  travail s'accumulaient dans le dépôt, sans qu'un seul message le signale. Le
+  déploiement se fait à la main, depuis `site/` : `vercel deploy --prod`.
+
+Éprouvé le 29/08 par deux bancs sur de vrais comptes — écriture, relecture,
+cloisonnement entre deux comptes, refus d'écrire pour autrui, déclencheur
+d'horodatage, bornes de taille, `oublie_ma_sauvegarde`, et l'upsert
+`ON CONFLICT` que le code emploie réellement. Puis dans le navigateur, sur le
+site en production : compte créé, session établie, lecture du schéma en `200`.
+
 Vérification : `cd site && npm run verifier` (typecheck + build).
 
 Limite connue : le moteur d'émulation vient d'un CDN externe, donc le lecteur ne

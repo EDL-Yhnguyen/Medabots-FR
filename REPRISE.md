@@ -7,55 +7,52 @@ Dernière séance : 2026-08-29
 
 ## Où on en est
 
-**Les accents ont été vus à l'écran.** C'était la prochaine action depuis deux
-séances, et elle est faite : mGBA 0.10.5, ROM de démonstration, premier écran de
-dialogue du jeu. `Éçàèêîôûùïë ÀÇÎ` s'affiche, les quinze glyphes sont nets et
-corrects.
+**La synchronisation est en service, et elle est éprouvée.** C'était la prochaine
+action de la séance précédente, où elle n'était que du code non vérifié. Les
+trois points sont faits : schéma `medabots` créé dans le projet Supabase
+personnel, variables posées sur les trois environnements Vercel, et la chaîne
+parcourue pour de bon.
 
-**Les largeurs sont justes, et c'est mesuré, pas estimé.** Un second banc écrit
-`aeiouAE` sur une ligne et `àéîôûÀÉ` sur la suivante : mêmes lettres, accentuées
-ou non, l'une sous l'autre. Les deux lignes finissent au même pixel — sauf le
-`î`, plus large de deux pixels que le `i`, ce qui est exactement l'exception
-documentée à la séance du 25/08 (son fût est décalé pour dégager le circonflexe).
+**Deux bancs sur de vrais comptes**, pas des simulations. Le premier :
+écriture, relecture, cloisonnement entre deux comptes, refus d'écrire pour
+autrui (403), déclencheur d'horodatage, bornes de taille, `oublie_ma_sauvegarde`.
+Le second, ajouté parce que le premier ne le couvrait pas : **l'upsert
+`ON CONFLICT` que `envoyerAuCompte` emploie réellement** — c'est ce cas précis
+qui avait piégé EDL Admin sous RLS. Les deux au vert, les comptes de banc
+supprimés, la table à zéro ligne.
 
-**La chaîne reste au vert** : 33 tables, 5 933 entrées, test d'identité identique
-au bit près. Le patch n'a pas bougé.
+**Puis dans le navigateur, sur le site en production** : compte créé, « Partie
+synchronisée » affiché, lecture du schéma `medabots` en `200` avec le rôle
+`authenticated`. Le bundle en ligne porte l'URL et la clé, **sans BOM** — le
+piège de Mamakilo était le seul risque muet de la manœuvre, il est écarté.
 
-**Le compte et la sauvegarde synchronisée sont écrits, mais PAS ÉPROUVÉS.** Le
-typage passe et le site se construit ; rien n'a encore tourné contre une vraie
-base, parce que deux choses manquent et qu'elles n'appartiennent qu'à Yann.
+**Le site était resté sur sa version du 06/08.** Le projet Vercel n'est pas
+relié à GitHub : trois semaines de travail — les accents, le compte, la
+synchro — étaient dans le dépôt sans avoir jamais été déployées. C'est corrigé,
+et la règle est passée dans le `CLAUDE.md` : le déploiement se fait à la main.
+
+**La chaîne de traduction n'a pas bougé** : 33 tables, 5 933 entrées, test
+d'identité au bit près.
 
 ## La prochaine action
 
-**Mettre la synchronisation en service, dans cet ordre :**
+**Ouvrir la première table de dialogues de `0x47xxxx` et la traduire entière.**
+C'est l'essentiel du volume restant et tout ce qui se voit vraiment en jeu :
+~2 800 entrées réparties en 14 tables de 233 à 323 entrées.
 
-1. **Exécuter `supabase/schema.sql`** dans le projet Supabase personnel
-   (`exovzmoygupllcdjbwtf`, celui de Mamakilo et MamaLingo). Il crée le schéma
-   `medabots`, la table `sauvegardes`, ses politiques RLS et les droits du rôle
-   `authenticated`. Il est idempotent.
-2. **Poser `VITE_SUPABASE_URL` et `VITE_SUPABASE_ANON_KEY`** dans le projet
-   Vercel `medabots-fr`. ⚠ **Coller les valeurs sans BOM** — voir
-   `site/src/lib/variablesEnv.ts` : le piège est muet et a coûté vingt jours à
-   Mamakilo. `nettoieVariable` en protège, mais autant ne pas l'éprouver.
-3. **Parcourir la chaîne connecté** : créer un compte, jouer, sauvegarder dans
-   le jeu, recharger la page, vérifier que la partie revient. Puis recommencer
-   depuis un autre navigateur, ROM redéposée — c'est le vrai cas d'usage.
+Prendre **une table complète d'un bloc** — un chapitre à moitié français est
+pire que rien. Commencer par lister les tables et leur volume réel :
 
-Tant que le point 3 n'est pas fait, **la synchronisation est du code non
-vérifié**, exactement comme les accents l'étaient avant le 29/08.
-
-## Ensuite
-
-**Les dialogues, `0x47xxxx`, ~2 800 entrées** réparties en 14 tables de 233 à 323
-entrées. C'est l'essentiel du volume restant et tout ce qui est vraiment visible
-en jeu. Les prendre par tables complètes : une table entière livrée d'un bloc
-vaut mieux qu'un chapitre à moitié français.
+```
+MEDABOTS_ROM="…/Medabots - Metabee (Europe).gba" node outils/lister.mjs
+```
 
 Pour situer une phrase vue à l'écran, `node outils/trouver.mjs <rom> "la phrase"`
 donne son adresse et qui la pointe.
 
-**Décision de produit en attente** : les 480 noms de Medaparts, anglais ou
-français (voir plus bas). Elle bloque un lot entier.
+**Compter les entrées d'une table ne dit pas combien il y a à traduire.**
+`0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
+128 et n'en a que 6. Toujours lire avant d'estimer.
 
 ### Deux chantiers courts, si l'envie prend
 
@@ -88,44 +85,37 @@ identifiants :**
 | `0x3C40B8` | les 97 | noms de personnages, décision du 06/08 |
 | `0x3BA658` | les 120 | noms de Medabots, décision du 06/08 |
 
-**Compter les entrées d'une table ne dit pas combien il y a à traduire.**
-`0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
-128 et n'en a que 6. Toujours lire avant d'estimer.
-
 ## Décidé cette séance
 
-- **La sauvegarde suit le compte, la ROM jamais.** C'est la même règle que pour
-  le site, appliquée à la base : une ROM déposée sur un serveur, fût-il le sien,
-  est une redistribution. Sur un appareil neuf, on redépose son fichier une fois
-  et on retrouve sa partie. La limite est énoncée à l'écran plutôt que subie.
-- **Medabots rejoint la suite d'applications**, il ne s'embarque pas dedans.
-  Même projet Supabase, donc même `auth.users`, donc **le même compte** que
-  Mamakilo et MamaLingo — cloisonné dans le schéma `medabots`. Un émulateur de
-  jeu commercial monté dans une application de nutrition ou de science pour
-  enfants aurait été un contresens de produit autant qu'un risque.
-- **On n'écrase jamais une partie sans demander.** Deux appareils, deux parties :
-  rien dans les octets ne dit laquelle compte. On montre la date et on laisse
-  choisir. L'envoi, lui, est automatique — il ne détruit rien, l'ancienne valeur
-  restant dans `precedente`.
-- **Les liens vers des épisodes d'animés sont refusés.** Demandé le 29/08 pour
-  Medabots et Digimon en VF. Un annuaire d'épisodes sous droits est exactement
-  ce que le projet refuse pour la ROM. Reste possible : renvoyer vers les
-  diffuseurs légaux.
-- **On cherche une phrase, on ne devine pas son adresse.** `demo-accents.mjs`
-  écrivait son banc d'essai en dur à `0x4148BE`, et l'écran restait anglais :
-  la ROM contient DEUX copies de « Good afternoon! », et celle qui s'affiche est
-  la seconde, `0x474C87`. D'où `outils/trouver.mjs`, qui encode un texte avec la
-  table et le retrouve dans les 8 Mio, avec la liste de ses pointeurs.
-- **Le banc d'essai est paramétrable.** Une fois l'affichage acquis, la question
-  devient la chasse, et la mesurer demande un autre motif. Cinquième argument de
-  `demo-accents.mjs`, en octets hex. La contrainte : exactement quinze octets,
-  la longueur de la phrase remplacée, pour qu'aucun pointeur ne bouge.
-- **Mesurer une chasse, c'est comparer deux bords**, pas juger « ça a l'air
-  serré ». Deux lignes séparées par `{FD}`, mêmes lettres avec et sans accent :
-  l'œil compare deux extrémités au lieu d'estimer des espacements.
+- **La règle des 40 % de contexte ne s'applique pas à ce projet.** Demandé par
+  Yann le 29/08. Elle vaut pour le workspace `Documents\Git` ; ici les séances
+  sont faites de longues passes d'analyse binaire qu'un arrêt à mi-chemin oblige
+  à refaire. Ce qui reste dû : `REPRISE.md` à jour dans le dernier commit, et
+  rien de non commité en fin de séance.
+- **Le streaming d'épisodes et de films est refusé, une seconde fois.** Redemandé
+  le 29/08, cette fois avec des films « comme sur tosnov.com ». La réponse ne
+  change pas : un annuaire d'œuvres sous droits est exactement ce que le projet
+  refuse pour la ROM elle-même, et le site dit noir sur blanc qu'aucun jeu n'y est
+  distribué. **Alternative proposée, en attente de réponse :** une page « Où voir
+  Medabots légalement » renvoyant vers les diffuseurs qui en ont les droits.
+- **Le déploiement du site est manuel.** Constaté en voyant que le site servait
+  la version du 06/08. Passé dans le `CLAUDE.md`, avec les deux autres pièges
+  Supabase (schéma à exposer, `grant usage`).
+- **Un banc doit exercer le verbe exact du code, pas un verbe voisin.** Le premier
+  banc couvrait `insert` et `update` séparément et disait « RLS vérifiée » ; le
+  code, lui, fait un `upsert`. Deux chemins différents dans PostgreSQL, deux jeux
+  de politiques évalués.
 
 ## À ne pas refaire
 
+- **Croire un schéma Postgres joignable parce qu'il existe.** Créer `medabots`,
+  ses politiques et ses `grant` ne suffit pas : PostgREST ne sert que les schémas
+  de sa liste `db_schema`, et répond `PGRST106` aux autres. Le détail est dans le
+  `CLAUDE.md`.
+- **Attendre 201 d'un upsert qui met à jour.** PostgREST rend `201` à la création
+  et `200` sur un `merge-duplicates` qui écrase. Le banc a annoncé un échec sur un
+  code parfaitement correct — une assertion fausse coûte le même temps qu'un vrai
+  défaut.
 - **Injecter ALT pour voler le focus.** Il donne bien le premier plan, mais il
   ouvre la barre de menu de Qt : toutes les touches envoyées ensuite vont au
   menu, `fenetre.ps1` annonce « touches envoyees », et l'écran-titre ne bouge
@@ -168,3 +158,7 @@ identifiants :**
 - **Lire la version GBA en `0xBD`** : elle est en `0xBC`, le checksum est en `0xBD`.
 - **Typer `Uint8Array` sans son paramètre de tampon** dans le site : depuis
   TypeScript 5.7 il est générique, et le build casse.
+- **On cherche une phrase, on ne devine pas son adresse.** `demo-accents.mjs`
+  écrivait son banc d'essai en dur à `0x4148BE`, et l'écran restait anglais : la
+  ROM contient DEUX copies de « Good afternoon! », et celle qui s'affiche est la
+  seconde, `0x474C87`. D'où `outils/trouver.mjs`.
