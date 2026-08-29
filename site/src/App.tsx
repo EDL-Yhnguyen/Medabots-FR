@@ -2,6 +2,8 @@ import { useCallback, useState } from 'react'
 import { Barre, Carte, Etiquette, Titre } from './composants/ui'
 import { DepotRom } from './composants/DepotRom'
 import { Emulateur } from './composants/Emulateur'
+import { Compte, useSession } from './composants/Compte'
+import { Synchro } from './composants/Synchro'
 import { appliquePatch } from './lib/patch'
 import { ENTREES, ETAPES, LOTS } from './donnees/avancement'
 
@@ -31,6 +33,10 @@ function LienExterne({
 export default function App() {
   const [romLancee, setRomLancee] = useState<ArrayBuffer | null>(null)
   const [erreurPatch, setErreurPatch] = useState<string | null>(null)
+  // Le compte est facultatif : sans lui, tout fonctionne comme avant, la
+  // sauvegarde restant sur l'appareil. Il n'ajoute qu'une chose — retrouver sa
+  // partie ailleurs — et ne conditionne jamais le lancement du jeu.
+  const { session, pret: comptePret } = useSession()
   // Le compte d'entrées, pas la moyenne des lots : voir ENTREES.
   const total = ENTREES.traduites / ENTREES.total
 
@@ -78,11 +84,30 @@ export default function App() {
                 traduit={!erreurPatch}
                 surQuitter={() => window.location.reload()}
               />
+              {session && (
+                <div className="mt-4">
+                  <Synchro session={session} />
+                </div>
+              )}
             </>
           ) : (
             <DepotRom surRomPrete={(rom) => void lancer(rom)} />
           )}
         </section>
+
+        {/* Le compte vient APRÈS le lecteur : ce qu'on vient chercher ici, c'est
+            jouer. Une barrière de connexion en tête de page ferait croire qu'il
+            faut un compte pour lancer le jeu, alors qu'il n'en faut pas. */}
+        <Carte>
+          <Titre sur="Votre partie">La retrouver sur tous vos appareils</Titre>
+          <Compte session={session} pret={comptePret} />
+          <p className="mt-5 border-t border-trait pt-5 text-sm text-texte-doux">
+            Seule la <strong className="text-texte">sauvegarde</strong> voyage — quelques
+            kilo-octets qui décrivent votre partie. Votre copie du jeu, elle, reste sur votre
+            appareil et n’est jamais envoyée. Sur un appareil neuf, vous la redéposez une fois et
+            vous reprenez où vous en étiez.
+          </p>
+        </Carte>
 
         <Carte>
           <Titre sur="Avancement">Où en est la traduction</Titre>

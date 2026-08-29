@@ -21,15 +21,41 @@ documentée à la séance du 25/08 (son fût est décalé pour dégager le circo
 **La chaîne reste au vert** : 33 tables, 5 933 entrées, test d'identité identique
 au bit près. Le patch n'a pas bougé.
 
+**Le compte et la sauvegarde synchronisée sont écrits, mais PAS ÉPROUVÉS.** Le
+typage passe et le site se construit ; rien n'a encore tourné contre une vraie
+base, parce que deux choses manquent et qu'elles n'appartiennent qu'à Yann.
+
 ## La prochaine action
 
-**Les dialogues, `0x47xxxx`, ~2 800 entrées.** C'est l'essentiel du volume restant
-et tout ce qui est vraiment visible en jeu. Les prendre par petites tables
-complètes, comme `0x48521C` et `0x48698C` : une table entière livrée d'un bloc
+**Mettre la synchronisation en service, dans cet ordre :**
+
+1. **Exécuter `supabase/schema.sql`** dans le projet Supabase personnel
+   (`exovzmoygupllcdjbwtf`, celui de Mamakilo et MamaLingo). Il crée le schéma
+   `medabots`, la table `sauvegardes`, ses politiques RLS et les droits du rôle
+   `authenticated`. Il est idempotent.
+2. **Poser `VITE_SUPABASE_URL` et `VITE_SUPABASE_ANON_KEY`** dans le projet
+   Vercel `medabots-fr`. ⚠ **Coller les valeurs sans BOM** — voir
+   `site/src/lib/variablesEnv.ts` : le piège est muet et a coûté vingt jours à
+   Mamakilo. `nettoieVariable` en protège, mais autant ne pas l'éprouver.
+3. **Parcourir la chaîne connecté** : créer un compte, jouer, sauvegarder dans
+   le jeu, recharger la page, vérifier que la partie revient. Puis recommencer
+   depuis un autre navigateur, ROM redéposée — c'est le vrai cas d'usage.
+
+Tant que le point 3 n'est pas fait, **la synchronisation est du code non
+vérifié**, exactement comme les accents l'étaient avant le 29/08.
+
+## Ensuite
+
+**Les dialogues, `0x47xxxx`, ~2 800 entrées** réparties en 14 tables de 233 à 323
+entrées. C'est l'essentiel du volume restant et tout ce qui est vraiment visible
+en jeu. Les prendre par tables complètes : une table entière livrée d'un bloc
 vaut mieux qu'un chapitre à moitié français.
 
 Pour situer une phrase vue à l'écran, `node outils/trouver.mjs <rom> "la phrase"`
 donne son adresse et qui la pointe.
+
+**Décision de produit en attente** : les 480 noms de Medaparts, anglais ou
+français (voir plus bas). Elle bloque un lot entier.
 
 ### Deux chantiers courts, si l'envie prend
 
@@ -68,6 +94,23 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **La sauvegarde suit le compte, la ROM jamais.** C'est la même règle que pour
+  le site, appliquée à la base : une ROM déposée sur un serveur, fût-il le sien,
+  est une redistribution. Sur un appareil neuf, on redépose son fichier une fois
+  et on retrouve sa partie. La limite est énoncée à l'écran plutôt que subie.
+- **Medabots rejoint la suite d'applications**, il ne s'embarque pas dedans.
+  Même projet Supabase, donc même `auth.users`, donc **le même compte** que
+  Mamakilo et MamaLingo — cloisonné dans le schéma `medabots`. Un émulateur de
+  jeu commercial monté dans une application de nutrition ou de science pour
+  enfants aurait été un contresens de produit autant qu'un risque.
+- **On n'écrase jamais une partie sans demander.** Deux appareils, deux parties :
+  rien dans les octets ne dit laquelle compte. On montre la date et on laisse
+  choisir. L'envoi, lui, est automatique — il ne détruit rien, l'ancienne valeur
+  restant dans `precedente`.
+- **Les liens vers des épisodes d'animés sont refusés.** Demandé le 29/08 pour
+  Medabots et Digimon en VF. Un annuaire d'épisodes sous droits est exactement
+  ce que le projet refuse pour la ROM. Reste possible : renvoyer vers les
+  diffuseurs légaux.
 - **On cherche une phrase, on ne devine pas son adresse.** `demo-accents.mjs`
   écrivait son banc d'essai en dur à `0x4148BE`, et l'écran restait anglais :
   la ROM contient DEUX copies de « Good afternoon! », et celle qui s'affiche est

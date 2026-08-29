@@ -106,9 +106,10 @@ export function Emulateur({
         />
       )}
 
+      {/* Ce qu'il advient de la sauvegarde dépend du compte, et c'est `Synchro`
+          qui le dit — juste en dessous, et sans se contredire avec ce texte. */}
       <p className="mt-4 text-sm text-texte-doux">
-        Vos sauvegardes restent dans ce navigateur. Sur mobile, ajoutez le site à l’écran
-        d’accueil pour le retrouver comme une application.
+        Sur mobile, ajoutez le site à l’écran d’accueil pour le retrouver comme une application.
       </p>
     </div>
   )
