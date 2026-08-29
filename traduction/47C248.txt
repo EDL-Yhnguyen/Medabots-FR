@@ -1,0 +1,799 @@
+# Table 0x47C248 — dialogues du huitième chapitre (256 entrées)
+#
+# L'après-Fiyun : Salty le chien, le Rallye Partsun organisé par Medashop pour
+# fêter la défaite du Dr Meta-Evil (douze Medaparts cachées, dont celles du
+# Mega-Emperor), le téléachat et le grand magasin, les indices en très mauvaise
+# écriture (Spyke), Dr Aki et le badge Partsun, la cérémonie et Shiratama, le
+# professeur de musique, le fantôme Rubberobo des toilettes, Kannie, Yanagi
+# et Natsuko, les Medaroad Race contre les Screws, l'étranger et Ryo, le
+# vantard Kawamura et son autographe, la marchande de bonbons, le fan-club
+# de Karin (membre numéro 128).
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {50} est la mère du joueur, {4F} son père, {45} le deux-points du jeu.
+# {FF}B (dix entrées) est une question oui/non : conservé tel quel.
+# @0046, @0139 et @0144 n'ont pas de {FB} (chuchotements) : conservés ainsi.
+# @0066–@0072 « error!! » sont des emplacements de débogage : laissés tels quels.
+#
+# Vocabulaire fixé : le Rallye Partsun, le badge Partsun, le grand magasin,
+# Medashop et Medamall, "Téléachat", la Medaroad Race, le musée Medabot, la
+# salle du tournoi, la salle de musique, l'école privée Rosewood, l'école
+# publique Riverview, le site Surprise, le lieu de réunion des Rubberobos,
+# le royaume de Kodine, le parc Ninja, la maison Ninja, le mont Odoro, le
+# fan-club de Karin, Monsieur l'Arbitre, le capitaine Awamori. Les Medabots
+# (Mega-Emperor) et Medaparts (Deathlazer) restent en anglais. Sloan dit
+# « Medaslips » pour « Medaparts » (Medapants dans l'original). Salty aboie
+# « Ouaf ouaf ! » et halète en italique ; « Rig rere » devient « Reuse ici ».
+# L'étranger ( ) ) parle un français cassé comme au chapitre 3. La livre £
+# (glyphe 0x4C) est conservée : 5 £, 50 £, 5000 £.
+#
+
+@0000
+{FB}A DJe suis rentré, mon petit chien Salty.{FF}{00}
+
+@0001
+{FB} E Ouaf ouaf !{FF}{00}
+
+@0002
+{FB}A GSalty ! Descends de là !{FD}Ça chatouille !{FC}{FB} E {F8}Hhh hhh hhh{F8} Ouaf ouaf !{FC}{FB}A CPardon de ne pas avoir joué{FD}plus avec toi, mon grand.{FC}{FB}A DDemain, promis, on passera{FD}un bon moment ensemble.{FC}{FB} E {F8}Hhh hhh hhh{F8}{FF}{00}
+
+@0003
+{FB} E {F8}Hhh hhh hhh{F8} Ouaf ouaf !{FC}{FB}A ANe t'excite pas comme ça !{FD}Bon, à demain···{FC}{FB} E Ouaf !{FF}{00}
+
+@0004
+{FB}A DBonne nuit, mes Medabots.{FF}{00}
+
+@0005
+{FB} {FF}{00}
+
+@0006
+{FB}A ABonjour, Salty.{FF}{00}
+
+@0007
+{FB} E Wouf, wouf !{FF}{00}
+
+@0008
+{FB}A  Rien d'intéressant{FD}aux infos aujourd'hui ?{FF}{00}
+
+@0009
+{FB}A  C'est quoi, ça !?{FC}"Un rallye célébrant la défaite du{FD}Dr Meta-Evil est organisé par le{FC}célèbre grand magasin Medashop.{FD}Le Rallye Partsun consiste à{FC}parcourir une foule d'endroits{FD}pour y récupérer des Medaparts."{FC}{FB}A AÇa a l'air super amusant !{FF}{00}
+
+@0010
+{FB} {4F} Bon retour, {F9} .{FC}Comment ça se passe{FD}avec tes Medabots ?{FC}{FB}A ASuper !{FF}{00}
+
+@0011
+{FB}A ABonjour, Papa !{FC}{FB} {4F} Bonjour, {F9} .{FD}Quelqu'un est de bonne humeur.{FC}{FB}A AOui oui !{FC}{FB} {4F} Oh, j'ai vu à la télé qu'ils{FD}organisent un Rallye Partsun.{FC}Laisse-moi deviner : tu vas{FD}y participer aussi ?{FC}{FB}A ABien sûr !{FD}Et je vais gagner, c'est certain !{FC}{FB} {4F}AVoilà l'esprit !{FD}Rends-moi fier, fiston !!{FF}{00}
+
+@0012
+{FB} {4F}ARends-moi fier !{FF}{00}
+
+@0013
+{FB} {50} Génial, il ne travaillera plus jamais···{FF}{00}
+
+@0014
+{FB} {50} Tu sais, tu devrais réviser{FD}de temps en temps aussi.{FF}{00}
+
+@0015
+{FB} {50} Erika est passée te voir.{FF}{00}
+
+@0016
+{FB} {50} Oh non !{FD}"Téléachat" va commencer !{FC}{F9} ,{FD}je t'emprunte ta télé un instant ?{FF}{00}
+
+@0017
+{FB} {4F}ATa mère adore vraiment{FD}cette émission, alors···{FC}{FB}A  "Téléachat" ?{FD}Je crois que j'en ai entendu parler···{FF}{00}
+
+@0018
+{FB} {50} Ouf !{FD}Ça commence tout juste !{FF}{00}
+
+@0019
+{FB} k Achetez cette planche à découper{FD}maintenant, et on vous offre{FC}une boîte vide en prime !!{FC}{FB} {FF}{00}
+
+@0020
+{FB} k Et maintenant, des Medaparts.{FC}{FB}A EHein ?{FF}{00}
+
+@0021
+{FB} k Ces Medaparts ont été fabriquées par{FD}le tristement célèbre Dr Armond,{FC}alias Dr Meta-Evil, aujourd'hui{FD}aux mains des Select Corps.{FC}Les incroyables, les fabuleuses{FD}"Jambes" du "Mega-Emperor" !{FC}{FB}A HPar tous les Medabots !{FC}{FB} k Ces Medaparts sont presque{FD}introuvables de nos jours,{FC}une seule personne pourra les avoir.{FD}Alors, si ça vous intéresse,{FC}courez vite au grand magasin !{FC}{FB}A FCes Medaparts sont vendues{FD}dans un grand magasin···{FC}{FB}A CQuel choc.{FC}{FB} {50} Bon, {F9} . C'est fini.{FD}Merci de m'avoir prêté la télé.{FF}{00}
+
+@0022
+{FB} k Je réexplique une dernière fois{FD}pour ceux qui viennent d'arriver···{FC}Le numéro 12, c'est la Medapart de jambes{FD}du Mega-Emperor. Il n'y en a qu'UNE.{FC}Alors, si ça vous intéresse,{FD}courez vite à Medamall !{FC}{FB}A EJe n'arrive pas à croire{FD}qu'ils vendent ça à la télé !{FF}{00}
+
+@0023
+{FB} i J'ai eu des Medaparts ultra-rares !{FF}{00}
+
+@0024
+{FB} i {F8}Couine{F8} Je suis trooop contente !{FF}{00}
+
+@0025
+{FB} h Toi aussi, tu es venu acheter{FD}ces Medaparts, hein !?{FF}{00}
+
+@0026
+{FB} h Radin !{FD}Sois gentil avec les filles !{FF}{00}
+
+@0027
+{FB} V J'ai eu le Mega-Emperor !{FF}{00}
+
+@0028
+{FB} V J'ai encore perdu···{FF}{00}
+
+@0029
+{FB} W Mon gamin m'a demandé d'acheter ces{FD}Medaparts, je ne peux pas te les donner.{FF}{00}
+
+@0030
+{FB} W Je devrais peut-être renoncer···{FF}{00}
+
+@0031
+{FB} k Bienvenue.{FD}Nous avons les Medaparts que vous{FC}avez sans doute vues à la télé.{FF}{00}
+
+@0032
+{FB} k Revenez nous voir.{FF}{00}
+
+@0033
+{FB}A ASalut, Salty !{FD}Tu es de bonne humeur aujourd'hui !{FC}{FB} E Ouaf ouaf !{FF}{00}
+
+@0034
+{FB}A  Sois un bon chien, Salty.{FC}{FB} E Ouaf ouaf !{FF}{00}
+
+@0035
+{FB}A  Je t'emmènerai faire une longue{FD}promenade plus tard.{FC}{FB} E Ouaf ouaf !{FF}{00}
+
+@0036
+{FB}A DQui est un bon chien, Salty ?{FD}C'est toi ! C'est l'heure de la promenade.{FC}{FB} E Ouaf ouaf !{FF}{00}
+
+@0037
+{FB}A HHé, Salty ! Attends !{FF}{00}
+
+@0038
+{FB} E Ouaf ouaf !{FC}{FB}A EIl me demande de le suivre ?{FF}{00}
+
+@0039
+{FB} E Ouaf ouaf !{FC}{FB}A  On dirait qu'il est parti{FD}vers le musée Medabot.{FC}Je vais lui courir après !{FF}{00}
+
+@0040
+{FB} E Ouaf ouaf !{FD}Reuse ici ! Ouaf ouaf !{FC}{FB}A HReuse ici, ouaf ouaf !?{FD}Salty ? Tu veux que je creuse ici ?{FC}C'est ça que tu dis, mon grand ?{FF}{00}
+
+@0041
+{FB} E Ouaf ouaf !{FF}{00}
+
+@0042
+{FB}A  Impossible de creuser, mais···{FD}je vais jeter un coup d'œil.{FC}Ah···{FD}J'ai déjà vu ces Medaparts.{FC}Serait-ce !? La Medapart de tête{FD}du Mega-Emperor !?{FC}Elles sont pour le Rallye Partsun !?{FF}{00}
+
+@0043
+{FB}A DOuah ! Bien joué, Salty ! Personne{FD}ne les aurait jamais trouvées ici.{FC}Mais c'est bizarre. Ça ne colle pas{FD}avec l'indice qu'il y avait à Medashop.{FF}{00}
+
+@0044
+{FB}A DBon chien, Salty. Bon chiiien.{FF}{00}
+
+@0045
+{FB} E Ouaf ouaf !{FF}{00}
+
+@0046
+Chef···{FD}{F9}  est là···{FC}Il cherche la Medapart, lui aussi···{FD}Bien joué, Spyke···{FC}C'était un très bon plan···{FD}Allons chercher les autres Medaparts···{FC}Pendant que tout le monde est occupé···{FD}Oui, pourquoi pas.{FC}Allons-y, les gars···{FD}Faut trouver les Medaslips···{FC}Tu veux dire MedaPARTS···{FF}{00}
+
+@0047
+{FB}A EJ'ai entendu chuchoter, à l'instant.{FD}Un truc du genre "pas de Medaparts" ?{FF}{00}
+
+@0048
+{FB} FBEt maintenant, on fait quoi ?{FD}Adieu, notre plan parfait.{FF}{00}
+
+@0049
+{FB} GDC'est vraiment bizarre.{FD}Je suis sûr d'avoir caché la Medapart ici.{FC}Personne n'aurait jamais pensé{FD}qu'elle était cachée là.{FC}{FB} FBAlors pourquoi elle n'y est pas !?{FF}{00}
+
+@0050
+{FB} H {F8}Frr··· frr···{F8}{FD}Hmmmmmm.{FF}{00}
+
+@0051
+{FB}A  C'est là que Salty a trouvé{FD}la Medapart cachée.{FF}{00}
+
+@0052
+{FB} FBHmm ?{FD}Qu'est-ce que tu regardes ?{FC}Si tu n'as rien à faire avec nous,{FD}alors dégage !{FC}On est occupés, tu vois !{FF}{00}
+
+@0053
+{FB} F Tu es sûr que c'était ici, Spyke ?{FC}{FB} GDJe te dis que c'est ici, Chef.{FC}{FB} HAC'était quelle Medapart ?{FC}{FB} GBLa Medapart de tête du Mega-Emperor !!{FC}{FB} GEOups !{FC}{FB} FBTu es vraiment désespérant, parfois.{FD}Ne le dis pas tout haut !{FC}{FB} GCDisons que j'ai un peu "amélioré"{FD}l'indice !{FF}{00}
+
+@0054
+{FB} FBOK, tu as "amélioré" l'indice.{FD}MAIS IL N'Y A RIEN ICI !!!{FC}{FB}A EVous parlez de···{FC}{FB}A Gcette Medapart ?{FC}{FB} GEAaah !{FD}Comment tu as eu ça !?{FC}{FB}A GJe l'ai trouvée par hasard{FD}en promenant Salty···{FF}{00}
+
+@0055
+{FB} FBSois gentil et donne-la-moi !{FC}{FB}A GNon, elle est à moi···{FF}{00}
+
+@0056
+{FB}A DBonjour, Dr Aki.{FC}{FB} SBOh, {F9}  !{FD}Merci pour ton aide, l'autre fois.{FC}Qu'est-ce qui t'amène ?{FC}Laisse-moi deviner : c'est pour{FD}le Rallye Partsun, non ?{FC}{FB}A  Vous savez quelque chose ?{FC}{FB} SAPour qui me prends-tu !{FD}L'autorité en toute chose Meda···{FC}{FB}A  Vous êtes le Dr Aki, bien sûr !{FF}{00}
+
+@0057
+{FB} SCHum !{FD}Bon, passons, veux-tu ?{FC}D'abord, il te faudra mettre la main{FD}sur le badge Partsun.{FC}{FB}A  Le badge Partsun ?{FC}{FB} S Tu en auras besoin pour participer{FD}au Rallye Partsun.{FC}Tu peux en avoir un à Medashop.{FF}{00}
+
+@0058
+{FB} SBTa chasse aux Medaparts du{FD}Rallye Partsun se passe bien ?{FC}Bien sûr, c'est bien de courir partout{FD}pour les ramasser vite, mais c'est{FC}bien aussi de revoir les endroits{FD}où tu es déjà passé.{FF}{00}
+
+@0059
+{FB} SBOh, c'est toi, {F9} . Il paraît que{FD}tu es le champion du Rallye Partsun.{FC}Mais le monde des Medabots est bien,{FD}bien plus grand que tu ne le crois.{FF}{00}
+
+@0060
+{FB} SBTu ne peux pas te dire un vrai{FD}Medafighter avant d'avoir affronté{FC}des Medafighters du monde entier !{FF}{00}
+
+@0061
+{FB} k Quelle sensation !{FD}La télévision, c'est vraiment génial !{FF}{00}
+
+@0062
+{FB} TBBonne chance pour le Rallye Partsun !{FF}{00}
+
+@0063
+{FB} TDOn dirait que notre Shiratama{FD}a causé bien des ennuis.{FC}Désolée pour ça, {F9} .{FF}{00}
+
+@0064
+{FB} u Ici, on change le nom d'une médaille.{FD}Veux-tu changer un nom ?{FF}B
+
+@0065
+{FB} u Si tu veux changer le nom d'un{FD}de tes Medabots, viens me voir.{FF}{00}
+
+@0066
+{FB} a error!!{FF}{00}
+
+@0067
+{FB} a error!!{FF}{00}
+
+@0068
+{FB} a error!!{FF}{00}
+
+@0069
+{FB} a error!!{FF}{00}
+
+@0070
+{FB} a error!!{FF}{00}
+
+@0071
+{FB} aAerror!!{FF}{00}
+
+@0072
+{FB} a error!!{FF}{00}
+
+@0073
+{FB} j Erika ? Elle doit courir après un scoop !{FD}Elle a sûrement filé à Medashop.{FF}{00}
+
+@0074
+{FB} j Dis bonjour à Erika de ma part.{FF}{00}
+
+@0075
+{FB} k La cérémonie d'ouverture va commencer.{FD}Tous les Medafighters inscrits{FC}au Rallye Partsun sont priés{FD}de se rendre à la cérémonie.{FF}{00}
+
+@0076
+{FB} k Si une Medapart vous plaît,{FD}n'hésitez pas, achetez-la♥{FF}{00}
+
+@0077
+{FB} TBFais de ton mieux !{FF}{00}
+
+@0078
+{FB} TBFélicitations, {F9} .{FD}Tu t'en es très bien sorti.{FC}Je n'en attendais pas moins.{FC}{FB}A GEh bien, je, euh···{FD}Vous le pensez vraiment ?{FC}{FB} TAHi hi.{FC}{FB} TBLa remise des prix commence.{FC}D'abord, va t'asseoir,{FD}s'il te plaît.{FC}{FB}A AD'accord !{FC}{FB} TBJe dois vérifier toutes les Medaparts,{FD}je te les garde en attendant.{FF}{00}
+
+@0079
+{FB} TDDésolée de te demander ça,{FD}{F9} , mais peux-tu retirer{FC}les Medaparts du Rallye Partsun{FD}de tes Medabots, et revenir ?{FC}{FB}A  Hein ? Oh, je dois faire ça ?{FD}Bon, d'accord.{FC}{FB} TBJe t'attends.{FF}{00}
+
+@0080
+{FB} % Celui qui a réussi à réunir{FD}toutes les pièces est····{FF}{00}
+
+@0081
+{FB} % {F9}  Tenryou !{FC}{FB} {FF}{00}
+
+@0082
+{FB} aAHa ha ha ha ha ha !{FF}{00}
+
+@0083
+{FB} a Merci. Merci.{FD}Vous vous êtes tous donné tant de mal pour moi.{FC}{FB} DHQui es-tu !?{FC}{FB} aAMwa ha ha ha ha !{FD}Je m'appelle Shiratama.{FC}Je suis le vrai patron de ce jeu.{FC}Je suis au niveau d'un roi,{FD}puisque c'est moi qui ai créé ce jeu.{FC}On n'a plus besoin de toi !{FD}Viens recevoir ton châtiment !{FF}{00}
+
+@0084
+{FB} DEQu'est-ce qu'il raconte ?{FC}{FB} B Il a dû se cogner la tête.{FD}{F9} , remets-lui les idées en place !{FC}{FB} a Oh ?{FD}Tu oses te dresser contre un roi !?{FF}{00}
+
+@0085
+{FB} a Aïe aïe aïe aïe.{FC}{FB} D Un peu faible, pour un "roi".{FF}{00}
+
+@0086
+{FB} TBPardon, tout le monde.{FF}{00}
+
+@0087
+{FB} TBAllez, on rentre, Shiratama.{FF}{00}
+
+@0088
+{FB} a Ouiiin !{FD}Je voulais juste passer à l'écran···{FC}{FB}A  Pfff.{FF}{00}
+
+@0089
+{FB} % Reprenons.{FD}Continuons la remise des prix.{FC}Hum !{FD}{F9} , je salue ton exploit{FC}stupéfiant.{FF}{00}
+
+@0090
+{FB} % En plus de cela, nous te remettons{FD}une médaille "!" en récompense{FC}de ton titre de champion !{FF}{00}
+
+@0091
+{FB} % En plus de cela, nous te remettons{FD}une médaille "PHÉNIX" en récompense{FC}de ton titre de champion !{FF}{00}
+
+@0092
+{FB} % Nous espérons que tu continueras{FD}à aimer le monde des Medabots.{FC}Merci beaucoup.{FC}Nous tenons aussi à nous excuser{FD}pour les désagréments{FC}que tu as subis.{FC}Reprends ces Medaparts{FD}qu'il t'avait prises.{FF}{00}
+
+@0093
+{FB} {FF}{00}
+
+@0094
+{FB} V On dirait qu'il n'y a pas d'indice{FD}écrit sur le bureau.{FF}{00}
+
+@0095
+{FB} h Pas question !{FD}Je ne te montrerai pas cet indice !{FF}{00}
+
+@0096
+{FB}A DOh, Mademoiselle Nae !{FD}Bonjour !{FC}{FB} TBBonjour, {F9} .{FC}Tu participes aussi{FD}au Rallye Partsun ?{FC}{FB}A DOui !{FC}{FB} TBLa cérémonie d'ouverture va commencer.{FC}Va chercher ton badge Partsun et{FD}attends à ta place. Donne tout !{FC}{FB}A AOui !{FC}{FB} TAHi hi.{FF}{00}
+
+@0097
+{FB}A  Koji et Erika sont là.{FD}Et même les trois fauteurs de troubles !{FC}Ils font tous le rallye ?{FF}{00}
+
+@0098
+{FB} DDHé, {F9} .{FD}Je me doutais que tu viendrais.{FC}{FB} BDÉvidemment que tu viendrais, {F9} .{FC}Comment rater un événement{FD}aussi amusant ?{FC}{FB} F Attends, {F9}  !{FC}Nous trois, on s'appelle les "Screws",{FD}alors appelle-nous comme ça !{FC}{FB} G Ouais, c'est ça !{FF}{00}
+
+@0099
+{FB} BDOh ! Ça commence !{FD}Vite, assieds-toi, {F9} .{FF}{00}
+
+@0100
+{FB} % Nous allons commencer la cérémonie{FD}d'ouverture du Rallye Partsun !{FC}{FB} {FF}{00}
+
+@0101
+{FB} % Hum.{FC}Le Rallye Partsun est un concours :{FD}qui rassemblera le plus vite les{FC}12 Medaparts nécessaires{FD}pour monter 3 Medabots.{FC}Si vous perdez ne serait-ce qu'une{FD}Medapart à récupérer, vous devrez{FC}risquer vos propres Medaparts{FD}pour reprendre les autres.{FC}Le premier de retour dans cette salle{FD}avec toutes les Medaparts gagne !{FC}{FB} {FF}{00}
+
+@0102
+{FB} % Ah oui. J'oubliais une chose.{FD}Les indices sur les cachettes{FC}de ces Medaparts seront laissés{FD}dans Medashop ! Servez-vous-en !{FF}{00}
+
+@0103
+{FB} F Autant y aller.{FC}{FB} GAJ'ai une super idée, Chef···{FD}{F8}Chuchote··· chuchote···{F8}{FC}{FB} F OK, OK···{FC}{FB} FCÇa devrait être intéressant.{FD}J'y vais.{FC}{FB} GCSalut, les nuls !{FD}Je me tire !{FF}{00}
+
+@0104
+{FB} DCJe ne perdrai pas contre toi !{FF}{00}
+
+@0105
+{FB} BAUn scoop ! Un scoop !{FF}{00}
+
+@0106
+{FB} GEHé !{FD}C'est mon indice !{FC}Ne le regarde pas !{FD}Tu ne le verras jamais !{FF}{00}
+
+@0107
+{FB}A  Un indice est écrit dans une{FD}écriture incroyablement mauvaise.{FC}"Une pièce est cachée au milieu{FD}d'une usine désaffectée."{FC}{FB}A HÇa parlerait du tout premier{FD}endroit où j'ai croisé{FC}le gang Rubberobo ?{FC}{FB}A EMais quelle écriture, vraiment.{FF}{00}
+
+@0108
+{FB}A  Un indice est écrit.{FD}"Une salle de l'école."{FC}{FB}A EUne salle de l'école{FD}publique Riverview, peut-être.{FF}{00}
+
+@0109
+{FB}A  Un indice est écrit.{FD}"Les Medafighters se rassemblent."{FC}{FB}A EÇa ne peut vouloir dire que{FD}le "site Surprise".{FF}{00}
+
+@0110
+{FB}A  Un indice est écrit.{FD}"Où la rivière tombe de la montagne."{FC}{FB}A ELà où je suis tombé de la cascade{FD}et où j'ai rencontré Kannie ?{FF}{00}
+
+@0111
+{FB}A  Un indice est écrit.{FD}"La beauté de l'école privée Rosewood."{FC}{FB}A ECe serait··· Karin ??{FF}{00}
+
+@0112
+{FB}A  Un indice est écrit.{FD}"Où se réunissent les Rubberobos."{FC}{FB}A EÇa doit être le lieu de réunion{FD}des Rubberobos.{FF}{00}
+
+@0113
+{FB}A  Un indice est écrit.{FD}"L'antique capitale."{FC}{FB}A ECe serait··· le royaume de Kodine ?{FD}Comment ont-ils caché···{FF}{00}
+
+@0114
+{FB}A  Un indice est écrit.{FD}"La capitale qui fend les airs."{FC}{FB}A  Ça doit être Fiyun.{FF}{00}
+
+@0115
+{FB}A  Un indice est écrit.{FD}"La maison Ninja."{FC}{FB}A DÇa doit être le parc Ninja···{FF}{00}
+
+@0116
+{FB}A  Un indice est écrit.{FD}"Fondant dans un océan acide."{FC}{FB}A ECe serait l'océan d'"eau gazeuse"···{FD}Je m'y suis déjà fait avoir une fois.{FF}{00}
+
+@0117
+{FB}A  Un indice est écrit.{FD}"L'arbre qui cache la forêt."{FC}{FB}A EDonc ce serait quelque part{FD}juste sous mon nez···{FF}{00}
+
+@0118
+{FB}A  Qui aurait cru qu'il y aurait{FD}des Medaparts ici···{FC}Et en plus, elles sont pour{FD}le Rallye Partsun !{FF}{00}
+
+@0119
+{FB}A  Un indice est écrit.{FD}"Téléachat ?"{FC}{FB}A EJe crois que j'en ai entendu···{FD}non, jamais entendu parler···{FF}{00}
+
+@0120
+{FB}A DUne mignonne peluche.{FF}{00}
+
+@0121
+{FB}A DUne mignonne peluche,{FD}mais un peu grande.{FF}{00}
+
+@0122
+{FB}A DUne peluche d'ours.{FF}{00}
+
+@0123
+{FB} j Qu'est-ce qui t'amène ?{FC}Bon, puisque tu as fait le déplacement,{FD}pourquoi ne pas m'écouter jouer ?{FF}{00}
+
+@0124
+{FB} j Tout le monde garde le silence{FD}là-dessus.{FF}{00}
+
+@0125
+{FB} h Le prof de musique a fermé{FD}la salle de musique à clé et fait{FC}quelque chose de louche dedans.{FC}Parfois, on entend une voix{FD}bizarre qui en sort.{FF}{00}
+
+@0126
+{FB} h C'est FORCÉMENT un Medabot.{FD}Aucune peluche n'est aussi grande.{FF}{00}
+
+@0127
+{FB} h Le prof pense sûrement que{FD}personne ne s'en est encore aperçu.{FF}{00}
+
+@0128
+{FB}A  Hmm ?{FD}J'entends un piano jouer un air.{FF}{00}
+
+@0129
+{FB} j Q-Qu'y a-t-il··· ?{FF}{00}
+
+@0130
+{FB}A  Monsieur, c'est···{FF}{00}
+
+@0131
+{FB} j Tu as vu ! Robattle !{FC}{FB}A HHein !?{FF}{00}
+
+@0132
+{FB} j J'ai tellement honte.{FD}Dire que quelqu'un m'a vu.{FC}{FB} j Ha !{FF}{00}
+
+@0133
+{FB} j Tu portes le badge Partsun !{FF}{00}
+
+@0134
+{FB} j Aaah···{FC}J'ai autre chose de gênant{FD}à t'avouer···{FC}On m'a confié des Medaparts{FD}pour le Rallye Partsun, mais···{FC}Elles ont été volées par un drôle{FD}de type qui disait "RoboRobo".{FC}Ohhhh, que faire ??{FC}{FB}A  Euh, Monsieur···{FC}{FB} j Hein ? Hein ? Quoi ? Quoi ?{FC}{FB}A DSi je récupère les Medaparts,{FD}je peux les garder ?{FF}{00}
+
+@0135
+{FB} j C'est exactement ce que{FD}j'espérais de toi !{FC}Ces Medaparts te reviennent{FD}de plein droit !{FC}Va venger l'affront{FD}qu'ils m'ont fait !{FC}{FB}A  D'accord···{FF}{00}
+
+@0136
+{FB} j Q-Qu'y a-t-il··· ?{FF}{00}
+
+@0137
+{FB} {FF}{00}
+
+@0138
+{FB} W Tu travailles bien ? RoboRobo.{FC}{FB}A GEh bien··· euh···{FC}{FB}A  ···Vous avez dit "RoboRobo" ?{FF}{00}
+
+@0139
+{F8}Frr··· Fss···{F8}{FF}{00}
+
+@0140
+{FB} V Le fantôme Rubberobo{FD}apparaît encore ?{FF}{00}
+
+@0141
+{FB}A  Toc toc···{FD}Il n'y a personne dedans.{FF}{00}
+
+@0142
+{FB} V Il y a un fantôme Rubberobo dans{FD}les toilettes des garçons.{FC}Si tu frappes à la porte des toilettes,{FD}une voix répond "Robo"···{FF}{00}
+
+@0143
+{FB}A  Toc toc···{FC}Pas de réponse, mais c'est{FD}BIEN fermé à clé.{FF}{00}
+
+@0144
+Toc toc···{FC}{F8}(·····){F8}{FF}{00}
+
+@0145
+{FB}A DPersonne n'a le droit d'entrer,{FD}donc il ne devrait y avoir personne.{FC}Je n'attends pas de réponse.{FC}{FB} 1 I···{FD}Il n'y a personne ici.{FC}{FB}A DAlors je peux fermer{FD}les toilettes à clé ?{FC}{FB} 1CNe fais pas ça !{FF}{00}
+
+@0146
+{FB} 1COn va devoir Robattler !{FF}{00}
+
+@0147
+{FB} {45} Dois-je te renvoyer{FD}dans ton monde ?{FF}B
+
+@0148
+{FB}A DCe sont des Medaparts du Rallye Partsun.{FF}{00}
+
+@0149
+{FB} h Ooooh !{FD}Les garçons n'ont pas le droit d'entrer !{FF}{00}
+
+@0150
+{FB}A HAllez, Samantha.{FD}Arrête de te mettre en travers des gens.{FC}Va les chercher toi-même !{FC}{FB} FCMise ces Medaparts et{FD}Robattle contre nous.{FC}{FB}A BVous jouez toujours à 3 contre 1 !{FD}Mais je crois pouvoir vous battre.{FC}{FB} FBEh bien, tu es devenu un{FD}vilain petit garçon.{FC}Mais on n'est plus comme la dernière fois.{FC}{FB} GAOn va se battre en Medaroad Race !{FD}Tout le monde en fait !!{FF}{00}
+
+@0151
+{FB} FCAlors, tu es prêt ?{FF}{00}
+
+@0152
+{FB} FCTu es toujours plutôt bon.{FD}Je serai ta prochaine adversaire.{FF}{00}
+
+@0153
+{FB} FCHmmm.{FD}Pas mal.{FC}Mais on va quand même te battre,{FD}toi et tous les autres du rallye !{FC}{FB} HBLavez vos Medaslips et tenez-vous prêts !{FC}{FB} GDJe te l'ai dit,{FD}c'est MedaPARTS !{FC}{FB} F Ouais, bref, comme on a dit.{FD}À la prochaine.{FF}{00}
+
+@0154
+{FB} FCOh là là, tu n'es qu'un beau parleur.{FD}Bien sûr, je le savais déjà.{FC}Si tu comptes vraiment gagner la{FD}prochaine fois, je te réaffronterai.{FF}{00}
+
+@0155
+{FB} FDTu te moques de nous ?{FC}À partir de maintenant, on fait{FD}des Medaroad Race.{FC}Que vas-tu faire si tu n'as pas{FD}3 Medabots ?{FC}Si tu n'es pas prêt, va refaire{FD}ta formation de Medabots.{FF}{00}
+
+@0156
+{FB} GCTu as de super Medaparts, là.{FC}Si tu veux nous passer,{FD}va parler à la Chef.{FF}{00}
+
+@0157
+{FB} HCTu as de super Medaslips, là.{FC}Si tu veux nous passer,{FD}va parler à la Chef.{FF}{00}
+
+@0158
+{FB}A AYanagi !{FD}Tu es guéri !{FC}{FB} p Kannie est fâchée contre moi.{FD}J'attends le retour de Natsuko.{FC}{FB}A AJe vois.{FD}Ce serait bien qu'elle revienne vite !{FF}{00}
+
+@0159
+{FB} p Fais de ton mieux, {F9}  !{FC}{FB}A AOui, promis.{FF}{00}
+
+@0160
+{FB} Z Mais c'est {F9}  ?{FD}Hi hi hi.{FC}{FB}A DB-Bonjour, Kannie.{FC}Je suis venu vous demander{FD}pour le Rallye Partsun···{FC}{FB} Z Je me demande ce que fait Natsuko{FD}à Medaropolis, en ce moment.{FC}Elle doit travailler dur.{FC}{FB}A  Euh···{FC}{FB} Z C'est ça !{FC}Tu veux bien aller voir comment{FD}va Natsuko pour moi ?{FC}Je veux savoir comment elle va.{FF}{00}
+
+@0161
+{FB} Z Mais c'est {F9}  ?{FD}Hi hi hi.{FF}{00}
+
+@0162
+{FB} Z Dis à Natsuko, à Medaropolis,{FD}que je pense à elle.{FF}{00}
+
+@0163
+{FB}A DKannie !{FC}J'ai vu Natsuko et elle{FD}m'a donné une lettre pour vous !{FC}{FB} Z Oh, merci.{FD}Natsuko allait bien ?{FF}{00}
+
+@0164
+{FB}A DOui, elle vous passe le bonjour.{FC}{FB} Z Je vois. Je vois.{FC}{FB}A  Euh, à propos du Rallye Partsun···{FC}{FB} Z Oh oui, je suis au courant.{FD}J'ai des Medaparts, d'ailleurs.{FC}{FB}A  Eh bien, alors···{FC}{FB} Z Mon petit a pris ces Medaparts{FD}et doit jouer dehors.{FC}Si tu arrives à les lui reprendre,{FD}elles sont à toi.{FC}{FB}A AVraiment ?{FC}D'accord !{FF}{00}
+
+@0165
+{FB} Z Tu arriveras à attraper{FD}mon petit ? Hi hi hi.{FF}{00}
+
+@0166
+{FB} Z Hi hi hi.{FD}Rien d'important.{FF}{00}
+
+@0167
+{FB} j Oh, {F9} .{FD}Ton sac est resté ouvert.{FC}Et voilà, c'est réparé.{FD}Oh ? C'est quoi, ce kimono ?{FC}{FB}A  Je l'ai eu de Kannie, mais{FD}je me suis dit que Natsuko···{FC}{FB} j Tu veux dire ma grand-mère ?{FC}{FB}A DOui, je l'ai rencontrée chez elle,{FD}au mont Odoro.{FF}{00}
+
+@0168
+{FB} j Oh, c'était toi.{FD}Elle en parlait dans sa lettre.{FC}Le Dr Aki m'a aussi{FD}parlé de toi.{FC}Le brave garçon qui a{FD}aidé Yanagi, c'est ça♥{FC}Merci, {F9} .{FC}{FB}A GJe ne dirais pas brave···{FC}{FB} j Je n'ai pas souvent l'occasion{FD}de rentrer à la maison.{FC}Si tu passes chez ma grand-mère,{FD}pourrais-tu lui donner ceci ?{FC}Ça me ferait plaisir.{FF}{00}
+
+@0169
+{FB} j Bonjour, petit.{FD}Tu viens voir la Medabot Corporation ?{FC}Prends ton temps.{FF}{00}
+
+@0170
+{FB} j Passe le bonjour à Mamie, d'accord ?{FF}{00}
+
+@0171
+{FB}A DJ'ai remis la lettre{FD}à Kannie.{FC}{FB} j Merci, {F9} .{FF}{00}
+
+@0172
+{FB}A AMerci beaucoup !{FF}{00}
+
+@0173
+{FB} j Reviens me voir.{FF}{00}
+
+@0174
+{FB}A DBonjour, Mademoiselle Natsuko.{FC}{FB} j Bonjour, {F9} .{FF}{00}
+
+@0175
+{FB} j Alors, tu t'amuses bien avec tes Medabots ?{FC}{FB}A DOui, beaucoup !{FC}{FB} j Tant mieux.{FD}On essaie toujours de créer des{FC}choses nouvelles et intéressantes,{FD}alors remplis le sondage, d'accord ?{FF}{00}
+
+@0176
+{FB} n Hé hé. J'ai reçu des Medaparts{FD}super classes de Kannie.{FF}{00}
+
+@0177
+{FB} n Tu as préparé 3 Medabots ?{FF}{00}
+
+@0178
+{FB} n Hé hé. J'ai reçu des Medaparts{FD}super classes de Kannie.{FC}{FB}A  Ce sont des Medaparts du{FD}Rallye Partsun, non ?{FC}{FB} n Ah bon ?{FC}{FB}A  Kannie avait dit qu'elle{FD}me les donnerait, mais···{FC}{FB} n Elles sont à moi !{FF}{00}
+
+@0179
+{FB}A ETu ne veux pas me les échanger{FD}contre autre chose ?{FC}{FB} n OK, si tu gagnes la Medaroad Race,{FD}j'y réfléchirai.{FF}{00}
+
+@0180
+{FB} n Il y a quelqu'un d'autre ?{FF}{00}
+
+@0181
+{FB} z Hein ? Quoi ? Moi aussi !{FF}{00}
+
+@0182
+{FB}A BBien !{FD}J'ai gagné !{FC}{FB} n Ouiiin. J'ai perdu. Si tu y tiens{FD}tant que ça, je te les donne.{FF}{00}
+
+@0183
+{FB} z Reviens jouer avec nous.{FF}{00}
+
+@0184
+{FB} z Sans 3 Medabots préparés, tu ne{FD}peux pas faire de Medaroad Race.{FC}On t'attend, alors dépêche-toi{FD}de préparer tes Medabots.{FF}{00}
+
+@0185
+{FB} n Quelqu'un aurait perdu des jouets··· ?{FF}{00}
+
+@0186
+{FB} U Je suis perdu !{FD}Où est-ce que je suis ?{FF}{00}
+
+@0187
+{FB} V L'île Medabot était vraiment{FD}la base des Rubberobos ?{FF}{00}
+
+@0188
+{FB} V On dirait qu'il se passe encore{FD}quelque chose à la salle du tournoi.{FF}{00}
+
+@0189
+{FB} ) Hé, garçon !{FC}{FB}A  Je me disais bien qu'il y avait{FD}quelqu'un de bizarre. Pas encore···{FC}{FB} ) Moi toi Medaroad Race !{FD}Ça correct !{FC}{FB}A  Je te l'ai dit ! Apprends à parler !{FC}{FB} ) Moi attendre toi sur scène !{FD}Toi moi défier !{FF}{00}
+
+@0190
+{FB}A EOh non, je dois recommencer.{FF}{00}
+
+@0191
+{FB} ♥ C'est toi !{FC}{FB}A  Euh···{FC}{FB} ♥ Je suis Ryo !{FC}Comment peux-tu m'oublier !{FD}Je vais enfin prendre ma revanche !{FC}{FB}A  Hein ? Ici ?{FC}{FB} ♥ Fwa ha ha ha !{FD}Où crois-tu être !?{FC}Le combat final t'attend{FD}sur la scène !{FC}Cette fois, on s'affronte{FD}en Medaroad Race.{FC}Prépare 3 de tes Medabots !{FF}{00}
+
+@0192
+{FB}A EOh non, je dois recommencer.{FF}{00}
+
+@0193
+{FB}A  Je tente la Medaroad Race ?{FF}B
+
+@0194
+{FB}A  OK ! Allons-y !{FF}{00}
+
+@0195
+{FB}A  Je ne suis pas encore prêt.{FD}Je ferais mieux de revérifier.{FF}{00}
+
+@0196
+{FB}A  Je n'ai pas 3 Medabots préparés.{FC}Je devrais en préparer 3{FD}pour la Medaroad Race.{FF}{00}
+
+@0197
+{FB} % Mesdaaaaaames !{FD}Et messieuuuuurs !!{FC}Un combat brûlant va commencer !{FC}{FB}A  Je suis un peu timide devant un public,{FD}mais sans personne, je me sentirais seul.{FC}{FB} % Mais cette fois, le combat est différent !{FC}L'issue se décidera{FD}en Medaroad Race !{FC}Et le prix est le Deathlazer, Medapart{FD}de bras gauche du Mega-Emperor !{FC}{FB}A HHein !?{FD}C'est une pièce du Rallye Partsun !{FC}{FB} % Que la Medaroad Race··· commence !{FC}{FB} B Attendez !{FF}{00}
+
+@0198
+{FB}A HErika !{FC}{FB} BBJ'ai autant le droit que toi{FD}d'y participer !{FC}{FB} % Oh, une nouvelle concurrente !{FD}Peut-être notre outsider !{FC}Que la Medaroad Race commence !!{FF}{00}
+
+@0199
+{FB} BEJ'étais tellement sûre de{FD}gagner, cette fois···{FC}Personne ne peut te battre{FD}quand il s'agit de Medabots, hein ?{FC}Oh, au fait.{FD}Tu passes du temps avec Salty ?{FC}Je l'ai vu jouer tout seul{FD}devant chez toi.{FC}Tu passes trop de temps avec tes{FD}Medabots et tu délaisses ton chien !{FC}{FB}A DOuais, tu as sans doute raison.{FF}{00}
+
+@0200
+{FB} ) Toi abandonner ?{FC}{FB}A EHé, hé.{FF}{00}
+
+@0201
+{FB} ♥ Je t'épargne, pour cette fois.{FC}{FB}A EHé, hé.{FF}{00}
+
+@0202
+{FB} % OK ! Le champion est une fois de plus···{FD}{F9}  !{FC}Et voici ton prix···{FC}{FB} D Attendez !{FC}{FB}A EEncore ?{FF}{00}
+
+@0203
+{FB} DDHé, comment peux-tu m'oublier !?{FC}{FB} % Ça chauffe, maintenant !{FD}Un nouveau concurrent est apparu !{FC}Mais une Medaroad Race{FD}se joue à 3 !{FC}Il nous en manque un···{FF}{00}
+
+@0204
+{FB} % Personne d'autre dans le coin.{FD}Il n'y a pas d'autre solution.{FC}Moi, Monsieur l'Arbitre,{FD}je vais me dévouer !{FC}Je serai le 3e !{FC}{FB}A HHein !?{FC}{FB} % Que la Medaroad Race commence !!{FF}{00}
+
+@0205
+{FB} DCTu ne me battras pas !{FF}{00}
+
+@0206
+{FB} % Le vainqueur est {F9}  !{FD}Applaudissons-le bien fort !{FC}{FB}A EÇa sonne un peu creux···{FC}{FB} % Et maintenant, sans autre interruption,{FD}voici ton prix bien mérité !{FF}{00}
+
+@0207
+{FB} % Bonne journée à tous !{FF}{00}
+
+@0208
+{FB}A  Bon sang de bonsoir.{FF}{00}
+
+@0209
+{FB} W Je suis Kawamura !{FC}J'ai tellement réussi que je me{FD}suis acheté une voiture neuve.{FC}Jaloux, hein !?{FC}{FB}A  {F8}(·····){F8}{FC}{FB} W C'est quoi, cette attitude ?{FD}Serait-ce···{FC}Tu ne m'as jamais vu à la télé ??{FF}B
+
+@0210
+{FB} W Quelqu'un comme ça doit être puni !!{FF}{00}
+
+@0211
+{FB} W Eeeeh···{FD}Fiche-moi la paix···{FF}{00}
+
+@0212
+{FB} {FF}{00}
+
+@0213
+{FB} W Ho ho ho. Exactement.{FC}De toute façon, tu n'avais{FD}aucune chance contre moi.{FC}Je te donne mon autographe. Tiens.{FF}{00}
+
+@0214
+{FB} W Pas vrai, hein ?{FC}Impossible de ne pas{FD}connaître MON nom.{FC}Je te donne mon autographe.{FD}Tiens.{FF}{00}
+
+@0215
+{FB} W Adieu, garçon !{FF}{00}
+
+@0216
+{FB} {FF}{00}
+
+@0217
+{FB} W Hé, tu as l'autographe du{FD}célébrissime Kawamura ?{FF}B
+
+@0218
+{FB} W Vraiment, tu me le donnes ?{FC}Il est presque introuvable, de nos jours.{FD}Tellement populaire et tellement rare !{FC}{FB}A  Monsieur···{FD}Vous êtes Kawamura ??{FC}{FB} W Urk !!{FC}{FB}A GNon, bien sûr que non !{FD}Mais votre voix ressemble à la sienne···{FC}{FB} W T-Tiens, petit.{FF}{00}
+
+@0219
+{FB} W B-Bon, je m'en vais.{FD}Sortie côté jardin !{FF}{00}
+
+@0220
+{FB} W Tu ne l'as pas, hein ?{FC}Dommage.{FD}J'y tenais vraiment !{FC}Si tu l'avais eu, j'aurais volontiers{FD}payé 50 £ pour l'avoir !{FF}{00}
+
+@0221
+{FB} .AJ'ai remplacé le capitaine Awamori.{FC}Même si nous avons arrêté les chefs{FD}du gang Rubberobo, il reste{FC}beaucoup de membres qui courent{FD}partout en semant la pagaille.{FC}Ça nous occupe bien.{FF}{00}
+
+@0222
+{FB} .AJe vais travailler aussi dur que toi !{FF}{00}
+
+@0223
+{FB} l Ces types, là-bas,{FD}ont l'air très bizarres.{FC}Je ne veux pas m'en approcher.{FF}{00}
+
+@0224
+{FB} ·CBon sang de bonsoir !{FC}Comment ont-ils pu tous se retourner{FD}contre moi ! J'étais le chef !{FF}{00}
+
+@0225
+{FB} l Oh, un mignon petit garçon.{FC}Bonjour♥{FC}Tu vas attraper des caries{FD}si tu viens ici, tu sais.{FC}Mais si tu es venu Robattler{FD}avec moi, je suis prête♥{FF}{00}
+
+@0226
+{FB} l Ouah ! Je suis impressionnée.{FD}Je vais te faire un joli cadeau♥{FF}{00}
+
+@0227
+{FB} l Je te le mets.{FF}{00}
+
+@0228
+{FB} l Oooh♥ Ça te va si bien !{FD}Alors, prêt pour Pâques ? Hi hi♥{FF}{00}
+
+@0229
+{FB} l J'y suis peut-être allée un peu fort···{FD}Hi hi. Mais c'était amusant♥{FF}{00}
+
+@0230
+{FB} l Fini le Robattle♥{FD}Il est temps de rentrer.{FF}{00}
+
+@0231
+{FB} W C'est agréable d'être entouré{FD}de tant de friandises···{FC}Pas comme à la maison.{FF}{00}
+
+@0232
+{FB} W Hé, {F9} .{FC}Si tu cherches Karin, il faudra{FD}aller à l'école privée Rosewood.{FF}{00}
+
+@0233
+{FB} W Hé, {F9} .{FD}Sois gentil avec Karin.{FF}{00}
+
+@0234
+{FB} V Nous, les membres du "fan-club de Karin",{FD}sommes en pleine grande campagne{FC}"Trouvez Karin" !{FF}{00}
+
+@0235
+{FB} V Oh ! Ce badge étincelant !{FD}Tu fais partie de la campagne aussi ?{FF}B
+
+@0236
+{FB} V Les règles sont simples.{FC}Tu dois trouver Karin quelque part{FD}dans l'école privée Rosewood.{FC}C'est parti !{FF}{00}
+
+@0237
+{FB} V Si tu veux participer à notre{FD}campagne, demande-nous.{FF}{00}
+
+@0238
+{FB} V Non non.{FC}Sans badge, tu ne peux pas{FD}participer à la campagne.{FF}{00}
+
+@0239
+{FB} V Fais de ton mieux pour trouver{FD}notre déesse Karin !{FF}{00}
+
+@0240
+{FB} V Oh ! C'est toi le gagnant !{FC}OK, tu es désormais le membre{FD}numéro 128 du "fan-club de Karin" !{FC}Rappelle-toi, Karin est l'amie de tous,{FD}n'essaie pas de la garder pour toi !{FF}{00}
+
+@0241
+{FB} V Mais j'ai l'impression d'avoir{FD}déjà vu ton visage···{FC}{FB}A FJe ne crois pas.{FD}Il y a plein de gens comme moi···{FC}{FB} V Si tu découvres qui est le petit ami{FD}de Karin, tabasse-le pour moi !{FC}{FB}A FB-Bien sûr !{FF}{00}
+
+@0242
+{FB} V Hé ! Comment ça va, numéro 128 ?{FF}{00}
+
+@0243
+{FB} V Si tu as une photo de Karin,{FD}tu peux la vendre aux gars{FC}du "fan-club de Karin"{FD}pour un bon prix !{FF}{00}
+
+@0244
+{FB} V Je ne raterai pas une occasion de photo !{FF}{00}
+
+@0245
+{FB} V Ouah, elle est superbe, cette Medawatch !{FD}Où l'as-tu eue ?{FF}{00}
+
+@0246
+{FB} V Karin est vraiment mignonne♥{FF}{00}
+
+@0247
+{FB} V Ah ! C'est une photo de K-K-Karin !{FD}Vends-la-moi, s'il te plaît !{FC}Je t'en supplie, vends-la-moi !{FD}J'irai même jusqu'à 5 £ !{FF}B
+
+@0248
+{FB} V Merci.{FD}Je te suis redevable à vie···{FF}{00}
+
+@0249
+{FB} V Et 50 £ !{FF}B
+
+@0250
+{FB} V Merci !{FD}Je suis heureux de t'avoir pour ami···{FF}{00}
+
+@0251
+{FB} V Alors··· 5000 £ !{FF}B
+
+@0252
+{FB} V Je plaisantais.{FD}Qui paierait autant !{FF}{00}
+
+@0253
+{FB} V Bon, je n'en ai pas besoin.{FF}{00}
+
+@0254
+{FB} V Tu regardes "Medabots Hebdo" ?{FF}{00}
+
+@0255
+{FB} V Dès que je trouve Karin,{FD}je prends ces Medaparts !{FF}{00}
