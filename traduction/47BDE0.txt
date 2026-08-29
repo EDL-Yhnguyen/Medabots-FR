@@ -1,0 +1,873 @@
+# Table 0x47BDE0 — dialogues du septième chapitre (281 entrées)
+#
+# Le retour à la maison après Fiyun, la lettre de Shrimplips qui invite tous
+# les enfants sur l'île Medabot, le Dr Aki, le Phantom Renegade et la Phantom
+# Lady, le "Periscope" du chercheur, le château de Milky la sorcière, le
+# Capitaine des Select Corps et le lieutenant Tokkuri, la cantine des
+# Rubberobos et son Spice-A-Roni "Bouche en enfer", la réunion de Gillgirl,
+# les Screws (Samantha, Spyke, Sloan) et les quatre mots-clés, Squidguts,
+# les verrous électriques ("SLIPPER", "PLATE BEAM").
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {50} est la mère du joueur, {4F} son père, {51} le gamin qui fait la course.
+# {FF}B (trois entrées) est une question oui/non : conservé tel quel.
+# @0217 n'a pas de {FB} : c'est l'invite du clavier, conservée telle quelle.
+# {45} est le deux-points du jeu, conservé dans "Opération{45} Effacer le Mal".
+#
+# Vocabulaire fixé : l'île Medabot, le Centre de recherche, le repaire secret,
+# les Select Corps, les Select 3, le Capitaine, le lieutenant Tokkuri, le
+# Phantom Renegade, la Phantom Lady, les Screws (Samantha la Vis cruciforme,
+# Spyke la Vis plate, Sloan le Boulon), la cantine des Rubberobos, le
+# Spice-A-Roni (Doux, Épicé, Bouche en enfer), le mot-clé, la gaine
+# d'aération, la lampe-stylo, le château de Milky, la série Élémentaire,
+# « Medabots Hebdo », le Hopmart, les "Ailes du vent". Monsieur Jyunmai,
+# Madame Amazake, Monsieur le chercheur, Maîtresse Gillgirl, « la Chef » pour
+# Samantha vue par Spyke et Sloan. Les Medaparts (Periscope, SLIPPER, PLATE
+# BEAM) restent en anglais. Le cri de ralliement « Deux, quatre, six, huit.
+# Qui est-ce qu'on félicite ? » donne le mot-clé 2468. RoboRobo est conservé.
+#
+
+@0000
+{FB}A AMaman, Papa, je suis rentré !{FD}Tout le monde va bien ?{FC}{FB} {50}AQu'est-ce que tu racontes{FD}encore comme bêtises !?{FC}Tu ne devrais pas réviser ?{FC}{FB}A EMais j'ai sauvé tout le monde !{FF}{00}
+
+@0001
+{FB}A AMaman, Papa, je suis rentré !{FD}Tout le monde va bien ?{FC}{FB} {50}AQu'est-ce que tu racontes{FD}encore comme bêtises !?{FC}Tu ne devrais pas réviser ?{FC}{FB}A EMais j'ai sauvé tout le monde !{FF}{00}
+
+@0002
+{FB} {50}AFile faire tes devoirs{FD}dans ta chambre !{FF}{00}
+
+@0003
+{FB}A  Ouais, je devrais réviser{FD}de temps en te··· Zzz··· Zzz.{FF}{00}
+
+@0004
+{FB}A  Je devrais regarder{FD}les infos à la télé.{FF}{00}
+
+@0005
+{FB}A  Les infos, c'est que des bêtises{FD}sur les Select Corps.{FC}Je préférerais regarder une cassette{FD}de "Medabots Hebdo".{FC}J'en regarde une ?{FF}B
+
+@0006
+{FB}A DAah, c'était bien !{FF}{00}
+
+@0007
+{FB}A  Je suis vraiment crevé.{FD}Je ne tiens plus debout.{FF}{00}
+
+@0008
+{FB}A  Et si je regardais la télé···{FF}{00}
+
+@0009
+{FB}A  Je vais me détendre.{FD}Zzz·Zzz·Zzz···{FF}{00}
+
+@0010
+{FB} {FF}{00}
+
+@0011
+{FB}A  Aaah, j'ai super bien dormi.{FD}Je devais être vraiment épuisé.{FF}{00}
+
+@0012
+{FB}A  Qu'est-ce qu'il y a aux infos ?{FD}"Flash spécial île Medabot" ?{FC}Ça défile trop vite pour moi, mais{FD}ça dit qu'elle est fermée. Et puis···{FF}{00}
+
+@0013
+{FB} {50} {F9}  !{FD}Une lettre pour toi !{FF}{00}
+
+@0014
+{FB}A HUne invitation pour l'île Medabot !{FC}{FB}A  C'est de qui ? Ouah, quelle écriture,{FD}on dirait un élève de primaire.{FC}"Tu es invité sur l'île Medabot.{FD}Tes autres amis du quartier{FC}sont déjà invités.{FD}Les Medabots de Papi sont très forts.{FC}Je parie que tu vas pleurer{FD}en les voyant. Signé Shrimplips".{FF}{00}
+
+@0015
+{FB} {50}AOù est-ce qu'il est encore passé !{FC}{FB} {4F}AHé hé hé.{FF}{00}
+
+@0016
+{FB} j {F9} .{FF}{00}
+
+@0017
+{FB}A  Qu'y a-t-il, Madame Amazake ?{FC}{FB} j Tu étais chez toi ?{FD}Je pensais que tu serais···{FC}{FB}A  Il s'est passé quelque chose ?{FC}{FB} j Cette lettre est arrivée à la maison.{FF}{00}
+
+@0018
+{FB}A FC'est terrible ! Ça veut dire que{FD}des invitations ont dû être envoyées{FC}chez tous les autres aussi !{FD}Le Dr Armond doit vraiment nous en{FC}vouloir pour ce qui s'est passé.{FD}Je ferais mieux d'y aller !{FF}{00}
+
+@0019
+{FB}A  Qu'y a-t-il, Monsieur Jyunmai ?{FC}{FB} W {F9} , tu es resté chez toi{FD}tout ce temps ?{FC}{FB}A  Je dormais, pourquoi ?{FD}Il s'est passé quelque chose ?{FC}Comment savez-vous où j'habite ?{FC}{FB} W J'ai demandé à une connaissance.{FD}Plus important : veux-tu bien{FC}jeter un œil à cette lettre ?{FF}{00}
+
+@0020
+{FB}A  Je m'en doutais.{FD}Koji aussi a reçu l'invitation···{FF}{00}
+
+@0021
+{FB}A  Monsieur Jyunmai !{FD}Je ramènerai Karin, c'est promis !{FC}Alors···{FC}{FB} W Très bien, je te fais confiance.{FD}Veille à ce qu'elle soit en sécurité.{FF}{00}
+
+@0022
+{FB} NABonne chance !{FF}{00}
+
+@0023
+{FB} {50}AJe voulais t'envoyer chercher{FD}quelque chose au Hopmart,{FC}mais tu es tellement occupé !{FD}Tant pis ! Laisse tomber !{FF}{00}
+
+@0024
+{FB}A  Il n'y a personne.{FD}Aucun doute possible !{FC}Samantha aussi a reçu l'invitation !{FF}{00}
+
+@0025
+{FB}A  Il n'y a personne.{FD}Aucun doute possible !{FC}Spyke aussi a reçu l'invitation !{FF}{00}
+
+@0026
+{FB}A  Il n'y a personne.{FD}Aucun doute possible !{FC}Sloan aussi a reçu l'invitation !{FF}{00}
+
+@0027
+{FB} j Je t'en prie, {F9} ,{FD}ramène Erika.{FF}{00}
+
+@0028
+{FB} DENous, on est l'exception.{FC}On ne sert que d'appât{FD}pour t'attirer ici.{FC}Karin a été emmenée par Seaslug.{FD}Si seulement j'avais pu l'arrêter···{FC}{FB} BE{F9}  !{FD}Sors-nous de là !{FC}Ils ont même pris nos Medawatch !{FC}{FB}A DOK, une seconde !{FF}{00}
+
+@0029
+{FB} NASalut, {F9} .{FD}Tu cherches encore{FC}des Medaparts ?{FC}{FB}A EEuh, Henry···{FD}Est-ce que tu as···{FC}{FB} N Gloups !··· Q-Quoi ?{FC}{FB}A EEncore acheté des Medaparts hors{FD}de prix sans le dire à ton patron ?{FC}{FB} NB{F8}(Soupir de soulagement){F8}{FD}Euh, non, pas cette fois.{FC}{FB} NATu te donnes tellement de mal,{FD}je me suis dit que je t'offrirais ça.{FF}{00}
+
+@0030
+{FB}A HTu es sûr ? C'est tellement cher.{FC}{FB} NATe voir me rappelle ma jeunesse.{FC}{FB}A  Hmm ?{FC}{FB} NABonne chance !{FF}{00}
+
+@0031
+{FB} NABonne chance !{FF}{00}
+
+@0032
+{FB} V J'ai reçu une invitation pour l'île{FD}Medabot aussi, mais ma mère{FC}n'a pas voulu me laisser y aller.{FF}{00}
+
+@0033
+{FB} a {F9}  !{FD}C'est bien {F9} , non ?{FF}{00}
+
+@0034
+{FB} a Dieu merci, j'arrive à temps.{FD}Le Dr Aki voudrait te voir.{FC}Peux-tu venir au{FD}Centre de recherche ?{FF}{00}
+
+@0035
+{FB} S Ta Medaforce fonctionne bien ?{FC}{FB}A DOui ! Aucun souci.{FC}{FB} SCJe vois. Bon, c'est rassurant.{FD}Ça pourrait être très dangereux si···{FC}{FB}A  Docteur ?{FF}{00}
+
+@0036
+{FB}A  Le gros titre dit{FD}"Le Dr Meta-Evil arrêté{FC}par les Select Corps".{FF}{00}
+
+@0037
+{FB}A  Hmm ? J'entends à peine{FD}quelqu'un parler. Il y a quelqu'un ?{FF}{00}
+
+@0038
+{FB} M Le Dr Armond s'est évadé avec{FD}les chefs du gang Rubberobo ?{FC}Et l'île Medabot ferme d'un coup.{FD}J'ai un mauvais pressentiment.{FC}{FB} S Mmm··· Je suis d'accord.{FD}Tu te souviens du Phantom Renegade ?{FC}Celui que tu as affronté autrefois ?{FF}{00}
+
+@0039
+{FB} S Voilà où nous en sommes.{FD}Phantom Lady, veux-tu nous aider ?{FF}{00}
+
+@0040
+{FB} QBAlors, vous saviez pour moi{FD}depuis le début ? Je m'en doutais.{FC}Enfin, on ne peut pas le laisser{FD}tout gérer tout seul !{FC}J'accepte avec plaisir !{FF}{00}
+
+@0041
+{FB}A  Quoi ? Le Phantom Renegade{FD}est sorti de la pièce ?{FF}{00}
+
+@0042
+{FB}A  Hein ? Phantom Lady !{FC}{FB} QBBonjouuur, ça va ?{FD}Bye bye !{FF}{00}
+
+@0043
+{FB}A  Bye bye···!?{FD}C'est quoi, ce délire ?{FF}{00}
+
+@0044
+{FB} S Oh, {F9} .{FD}J'ai quelque chose à te demander.{FC}{FB}A  Docteur ! Je dois vite aller{FD}à l'île Medabot !{FC}Et je viens de voir le Phantom{FD}Renegade et la Phantom Lady···{FC}{FB} S Oublie ces deux-là pour l'instant.{FD}Écoute : un e-mail du Dr Armond.{FC}"Je vais en finir avec ces sales{FD}mioches une bonne fois pour toutes."{FC}En plus, beaucoup d'enfants ont{FD}disparu dans toute la ville.{FF}{00}
+
+@0045
+{FB} S Je compte sur toi, {F9} .{FF}{00}
+
+@0046
+{FB}A DVous avez contacté la Medabot{FD}Corporation pour moi ! Merci !{FC}{FB} S Hmm ? Je n'ai contacté personne.{FC}{FB}A  Alors qui ???{FF}{00}
+
+@0047
+{FB} TDLes choses tournent plutôt mal,{FD}n'est-ce pas ?{FC}{FB}A  Mademoiselle Nae···{FC}{FB} TBÇa me touche que tu viennes me voir{FD}avant ton grand départ.{FC}Choisis un Medabot de ma série{FD}Élémentaire pour t'accompagner.{FF}{00}
+
+@0048
+{FB} TBNe force pas trop.{FD}Je prierai pour toi.{FF}{00}
+
+@0049
+{FB} a Oh, mais c'est {F9}  !{FC}{FB}A FBonjour, Monsieur le chercheur !{FD}J'ai besoin d'un···{FC}{FB} a Tu veux le "Periscope", c'est ça ?{FD}Eh bien, on en a un ici.{FC}Mets-le sur ton Medabot et{FD}tu pourras naviguer sur les mers !{FC}{FB}A HHein ? Comment le savez-vous ?{FC}{FB} aAHé hé.{FD}Le Dr Aki m'avait prévenu.{FC}{FB} a Allez, prends-le !{FF}{00}
+
+@0050
+{FB}A AMerci beaucoup, Monsieur !{FC}{FB} a Si tu veux remercier quelqu'un,{FD}remercie le Docteur.{FC}Il ne reste plus beaucoup de temps !{FD}File ! Va l'attraper !{FF}{00}
+
+@0051
+{FB}A  Samantha, veille à ce que{FD}personne ne vienne ici.{FC}Je vais chercher.{FC}{FB} F C'est toi qui ME donnes des ordres ?{FC}C'est ce que j'aimerais dire,{FD}mais aujourd'hui, je serai gentille.{FF}{00}
+
+@0052
+{FB}A  Ils sont tous partis.{FD}Ils ont tous eu le bateau, on dirait.{FC}À moi d'utiliser le "Periscope" !{FF}{00}
+
+@0053
+{FB} · Et où crois-tu aller comme ça ?{FF}{00}
+
+@0054
+{FB} 9 Allons-y !{FF}{00}
+
+@0055
+{FB} ·AAdieu ! Gwa ha ha ha !{FF}{00}
+
+@0056
+{FB}A HQu'est-ce que ça fait là !{FF}{00}
+
+@0057
+{FB}A BC'est tellement minable !{FF}{00}
+
+@0058
+{FB}A  Qui est cette personne{FD}dans la cuisine ?{FF}{00}
+
+@0059
+{FB}A  Je m'inquiète un peu pour Samantha,{FD}mais je dois continuer !{FF}{00}
+
+@0060
+{FB}A FIls n'en finissent pas !{FC}{FB} . Laissez passer le garçon.{FD}Tout de suite.{FF}{00}
+
+@0061
+{FB} 9 Lieutenant !{FC}{FB}A HVous êtes··· Tokkuri !{FC}{FB} .BPasse ton chemin.{FD}Je m'occupe de tout ici.{FC}{FB}A  Mais···{FC}{FB} .BJe crois en toi, petit !{FD}Allez, file !{FC}{FB}A DAh oui ! Monsieur Tokkuri,{FD}prenez ça avec vous.{FF}{00}
+
+@0062
+{FB} .BC'est···{FC}{FB}A DÇa pourrait vous être utile.{FF}{00}
+
+@0063
+{FB} .ASi je montre ça à tout le monde,{FD}ils comprendront.{FC}Très bien, repliez-vous tous.{FC}{FB} 9 Mais Lieutenant···{FD}Les ordres du Capitaine étaient de···{FC}{FB} .BJ'ai dit : repli !{FF}{00}
+
+@0064
+{FB} 9BUn intrus a été repéré !{FD}Nous allons le repousser !{FC}{FB}A EOh non, encore.{FC}{FB} MABwa ha ha ha ! Bwa ha ha ha !{FF}{00}
+
+@0065
+{FB} 9BEn voilà un autre !{FF}{00}
+
+@0066
+{FB}A  Je jurerais avoir déjà entendu{FD}cette voix quelque part···{FF}{00}
+
+@0067
+{FB} 9 Donnez-moi 5 jus d'orange !{FF}{00}
+
+@0068
+{FB} 9 Nos ordres : ne pas laisser passer{FD}le moindre grain de poussière !{FF}{00}
+
+@0069
+{FB} · Je savais que tu serais là, petit.{FC}Toi aussi, tu trouvais ce château{FD}suspect, pas vrai ?{FC}J'ai envoyé mes hommes enquêter,{FD}mais toujours aucune nouvelle.{FC}Hmmm, c'est une belle Medawatch{FD}que tu as là.{FC}Donne-la-moi ! Elle me servira{FD}à écraser les malfaiteurs.{FC}Select 3 ! Prenez la Medawatch{FD}de ce garçon !{FF}{00}
+
+@0070
+{FB} t On nous appelle, nous répondons !{FD}Les Select 3 sont là !{FF}{00}
+
+@0071
+{FB} t Parfois, on aimerait gagner !{FD}Les Select 3 !{FF}{00}
+
+@0072
+{FB} ·CBons à rien !{FD}Tout le monde ! Saisissez-les !{FF}{00}
+
+@0073
+{FB}A BVous êtes aussi minables que{FD}les Rubberobos ! Qu'y a-t-il ?{FC}Vous avez peur d'un combat loyal ?{FC}{FB} MABwa ha ha ha ! Bwa ha ha ha !{FF}{00}
+
+@0074
+{FB} ·CQui es-tu, guignol !{FC}{FB}A DPhantom Renegade !{FC}{FB} M La table est dressée avec élégance.{FC}Cessons de chipoter ! Brûlant comme{FD}le Spice-A-Roni le plus épicé !{FC}Des ténèbres surgit{FD}le mystérieux Medafighter !{FC}Le Phantom Renegade !{FF}{00}
+
+@0075
+{FB} MASi tu ne suis pas le droit chemin,{FD}je ne te le pardonnerai pas !{FC}{FB}A GIl est TROP classe !{FF}{00}
+
+@0076
+{FB}A  L'ascenseur est à l'arrêt.{FF}{00}
+
+@0077
+{FB} 9 Il doit y avoir un passage secret{FD}quelque part par ici.{FF}{00}
+
+@0078
+{FB} 9 On ne repart pas tant qu'on n'a{FD}rien trouvé sur ces types !{FF}{00}
+
+@0079
+{FB} £ Zzz···Zzz···Zzz···{FF}{00}
+
+@0080
+{FB} 9 Impossible de gagner contre{FD}cette peluche.{FC}Et donc, impossible d'avancer{FD}sans gagner.{FF}{00}
+
+@0081
+{FB} {51} Hi hi hi. On fait la course ?{FF}B
+
+@0082
+{FB} {51} C'est parti !{FF}{00}
+
+@0083
+{FB} {51} Tu as gagné !{FD}OK, tu peux passer !{FF}{00}
+
+@0084
+{FB} {51} J'ai gagné !{FD}Réessaie une autre fois.{FF}{00}
+
+@0085
+{FB} {51} À plus tard.{FF}{00}
+
+@0086
+{FB}A  Hein ? Je ne t'ai pas déjà vu ?{FC}{FB} h L'invitation pour l'île Medabot{FD}était réservée aux enfants, alors{FC}je me suis faufilé sur le bateau.{FD}Mais je me suis encore fait prendre.{FC}Désolé, tu peux encore m'aider ?{FF}{00}
+
+@0087
+{FB}A HHein ? Je ne t'ai pas déjà vu ?{FC}{FB} V L'invitation disait que le parc{FD}était gratuit si on venait seul.{FC}Alors je suis venu, bien sûr,{FD}et je me suis encore fait prendre.{FC}Je suis vraiment nul.{FF}{00}
+
+@0088
+{FB}A HHachiro !? C'est toi ?{FD}Qu'est-ce que tu fais ici ?{FC}{FB} IEC'est évident, non ?{FD}Je suis le gamin riche, alors{FC}forcément, on m'enlève. Voyons.{FF}{00}
+
+@0089
+{FB}A HC'est toi !{FC}{FB} LCBonjouuur ! Comment allez-vous ?{FD}C'est moi, Milky, la sorcière{FC}la plus mignonne ! Youpiii !{FC}{FB}A BC'est toi qui m'as poussé{FD}dans le vide, l'autre fois !{FC}Et pire, tu enlèves encore{FD}des enfants !{FC}Tu sais comme c'est dur{FD}de sauver tout le monde !{FF}{00}
+
+@0090
+{FB} LBQui t'a demandé de sauver quelqu'un ?{FD}C'est toi qui es venu libérer{FC}ma précieuse collection{FD}sans me demander !{FC}{FB}A BPourquoi tu collectionnes{FD}des enfants, d'abord !{FC}{FB} LCPour qu'on vive tous ensemble{FD}dans mon château !{FC}Seuls les enfants les plus purs et{FD}les plus doux peuvent y vivre.{FC}C'est la seule raison pour laquelle{FD}j'aide le gang Rubberobo !{FC}{FB}A ETrouve-toi un autre passe-temps···{FC}{FB} LBAu moins, mes seuls amis ne sont{FD}pas des Medabots ! Tu vas être puni !{FF}{00}
+
+@0091
+{FB} LDLes rêves restent des rêves···{FD}Est-ce pour ça qu'ils sont beaux ?{FC}{FB}A  Arrête ces bêtises et va{FD}gagner ta vie honnêtement.{FC}Quelle vie tu vas avoir si tu restes{FD}mêlée aux Rubberobos ?{FC}{FB} LDTu as raison.{FD}Ce ne sont pas les meilleures{FC}fréquentations.{FD}Bon, je retourne rêver.{FF}{00}
+
+@0092
+{FB} h Youpiii ! On rentre à la maison !{FC}{FB} V Fini, l'île Medabot !{FF}{00}
+
+@0093
+{FB} IFOn dirait que Milky était fascinée{FD}par ma beauté, pas par mon argent.{FC}{F8}(Rougit){F8}{FC}{FB}A EJe crois que tu te trompes un peu.{FC}{FB} IEBon, {F9} .{FD}À la prochaine.{FF}{00}
+
+@0094
+{FB} £ Zzz···Zzz···Zzz···{FC}{FB}A  Hé, toi !{FC}{FB} £ Zzz···Zzz···Zzz···{FC}{FB}A  J'ai quelque chose à te demander.{FC}{FB} £ Qu'est-ce que tu veux ? Tu vois pas{FD}que je fais une bonne sieste !{FF}{00}
+
+@0095
+{FB} £ J'étais en plein{FD}rêve d'huile délicieuse !{FF}{00}
+
+@0096
+{FB} 9COn a découvert un escalier secret !{FD}Il faut le signaler au Capitaine !{FF}{00}
+
+@0097
+{FB}A  Leur base est juste après.{FD}Je devrais me déguiser.{FF}{00}
+
+@0098
+{FB} 1 Zzz···Zzz···{FF}{00}
+
+@0099
+{FB} 1 On est en pleine grande réunion.{FD}Alors entre sans bruit.{FF}{00}
+
+@0100
+{FB} 1 Chut. Entre sans bruit.{FF}{00}
+
+@0101
+{FB} 3 Toi ! Le nouveau !{FD}Va t'asseoir devant,{FC}en punition pour ton retard !{FF}{00}
+
+@0102
+{FB} 3BQu'est-ce que tu fais !?{FD}Assieds-toi tout de suite !{FF}{00}
+
+@0103
+{FB} 1CMaîtresse Gillgirl fait peur{FD}quand elle se fâche.{FC}À ta place, je m'assiérais.{FF}{00}
+
+@0104
+{FB} 1CQu'est-ce qu'on va devenir, après{FD}tous ces échecs à répétition ?{FF}{00}
+
+@0105
+{FB} FCTu veux bien te débarrasser de ce{FD}Medabot qui nous barre la route ?{FC}{FB} GCSi tu coopères avec nous, on te{FD}mettra dans le coup pour notre plan{FC}"Opération{45} Effacer le Mal".{FD}Pas vrai, Chef ?{FF}{00}
+
+@0106
+{FB} FCPeut-être oui. Peut-être non.{FC}D'abord, débarrasse-nous de{FD}ce truc qui nous bloque !{FC}{FB}A  De toute façon, on ne peut pas{FD}avancer sans le battre, alors{FC}je n'ai pas le choix !{FF}{00}
+
+@0107
+{FB} 3 Hum hum.{FD}La réunion continue.{FC}Nous devons trouver un moyen{FD}d'en finir avec{FC}ce sale gosse de {F9} {FD}une bonne fois pour toutes.{FC}{FB} 1CMais c'est trop dur.{FD}On ne peut pas le battre.{FC}{FB} 3 Vous êtes faibles à ce point ??{FC}Sans ça, le Docteur ne nous{FD}récompensera jamais.{FC}Tous nos rêves de dominer le monde{FD}tomberont à l'eau !{FC}{FB}A EOn dirait qu'ils parlent{FD}de me tabasser.{FC}{FB} 3 Toi, le retardataire !{FF}{00}
+
+@0108
+{FB}A HHein ? Moi ?{FC}{FB} 3 Oui, toi. Viens ici.{FF}{00}
+
+@0109
+{FB} 3AAh ha ha ha. Je vais tous vous{FD}montrer comment on Robattle.{FC}Non, je ne m'en prends pas à lui{FD}parce qu'il est nouveau.{FC}Allez, regardez bien, tous !{FC}{FB} 1 Le pauvre. Maîtresse Gillgirl{FD}s'en prend toujours au nouveau.{FC}{FB} 1 Mais c'est vraiment un nouveau ?{FF}{00}
+
+@0110
+{FB} 3BPas mal, pour une nouvelle recrue.{FC}Je suis sûre que tu iras loin{FD}dans les rangs du gang Rubberobo.{FC}{FB} 1CMaîtresse Gillgirl va exploser.{FC}{FB} {FF}{00}
+
+@0111
+{FB} 3DC'est toi, ce gamin !{FD}Je t'aurai la prochaine fois !{FF}{00}
+
+@0112
+{FB} 1CMaîtresse Gillgirl ! Attendez !{FF}{00}
+
+@0113
+{FB}A  C'était quoi, tout ça ?{FF}{00}
+
+@0114
+{FB}A  C'est un distributeur de repas.{FD}Le menu dit···{FC}Doux, Épicé, Bouche en enfer.{FD}Que du Spice-A-Roni ?{FC}C'est tout ce qu'ils ont à manger !?{FF}{00}
+
+@0115
+{FB} 1 C'est la cantine des Rubberobos.{FD}Qui es-tu ?{FF}{00}
+
+@0116
+{FB} 1 Avant, le menu était plus varié.{FD}Maintenant, y a que du Spice-A-Roni.{FC}Il paraît que le cuisinier a changé.{FF}{00}
+
+@0117
+{FB} 1 À l'instant, une bande de gamins{FD}comme toi est passée par ici.{FC}J'étais encore en pause déjeuner,{FD}alors je m'en fichais.{FF}{00}
+
+@0118
+{FB} 1 Aujourd'hui, je me lance dans le{FD}Spice-A-Roni "Bouche en enfer".{FC}Tu veux essayer ?{FF}{00}
+
+@0119
+{FB} 1DRobo ça pique ça pique ÇA PIQUE !{FD}Le nom dit vraiment tout.{FF}{00}
+
+@0120
+{FB} 1CD-D-D-D-De l'eau !{FD}Quoi !? Pas d'eau !?{FF}{00}
+
+@0121
+{FB}A  Qu'est-ce qui s'est passé ?{FF}{00}
+
+@0122
+{FB}A HQuoi !? Je suis sûr d'avoir cassé{FD}cette porte. Elle est encore là !?{FC}{FB} D On dirait une double porte.{FC}Je m'occupe de celle-ci,{FD}toi, continue !{FC}{FB}A  OK, allons-y !{FF}{00}
+
+@0123
+{FB}A FJe dois rendre cette médaille{FD}à Karin !{FF}{00}
+
+@0124
+{FB}A FJe dois rendre cette médaille{FD}à Erika !{FF}{00}
+
+@0125
+{FB}A  Tout le monde s'en est sorti ?{FD}Je l'espère vraiment.{FC}{FB}A DQu'est-ce que je raconte !?{FD}Koji est avec eux, tout va bien !{FC}{FB}A  Il faut continuer !{FF}{00}
+
+@0126
+{FB}A DJ'ai envie de voir Salty.{FF}{00}
+
+@0127
+{FB} Q Asseyez-vous et attendez sagement.{FD}Ces Rubberobos ne tiennent jamais{FC}en place plus de 5 secondes.{FF}{00}
+
+@0128
+{FB} QBBonjour, {F9}  !{FC}{FB}A  Le Spice-A-Roni ultra-fort,{FD}c'est vous ?{FC}{FB} QBOui, j'ai décidé de donner à ces{FD}Rubberobos une leçon inoubliable.{FC}Personne ne supporte le piquant{FD}de "Bouche en enfer" sans eau.{FC}Alors, ça a marché ?{FC}{FB}A EEh bien··· plus ou moins···{FC}{FB} QBAlors c'est l'heure du plan B.{FD}On se reverra, j'en suis sûre.{FF}{00}
+
+@0129
+{FB}A  Attendez, Phantom Lady.{FD}Juste une question ?{FC}{FB} QBQuoooi ?{FC}{FB}A  Comment connaissez-vous mon nom ?{FC}{FB} QBBwo ho ho ho ho !{FD}Je sais tout !{FF}{00}
+
+@0130
+{FB}A GOuais, je m'en doutais.{FF}{00}
+
+@0131
+{FB}A  Il y a un sachet de "Spice-A-Roni"{FD}par terre.{FF}{00}
+
+@0132
+{FB}A  C'est pas le trio, là ?{FD}Qu'est-ce qu'ils font ici ?{FF}{00}
+
+@0133
+{FB} GBC'est les Screws !!{FC}{FB}A  Je me doutais que l'invitation{FD}arriverait chez vous aussi.{FC}Et les autres ?{FC}{FB} GCL'invitation ?{FD}On est venus en passagers clandestins.{FC}{FB}A  Clandestins ?{FC}{FB} FCAutrement dit, on s'est cachés sous{FD}une bâche, ou dans une caisse.{FC}C'est bien plus excitant !{FC}{FB}A CDonc vous ne savez rien{FD}des autres···{FC}{FB} FCPeu importe. J'ai un truc{FD}à te demander.{FC}{FB}A  Q-Quoi encore !{FF}{00}
+
+@0134
+{FB} x {F8}Graaah !!{F8}{FF}{00}
+
+@0135
+{FB} F Je passe devant.{FF}{00}
+
+@0136
+{FB} GCDésolé !{FF}{00}
+
+@0137
+{FB} H Je vais faire dans mon pantalon !{FF}{00}
+
+@0138
+{FB} H Tu ne te sens pas en paix quand tu{FD}regardes tourner une machine à laver ?{FF}{00}
+
+@0139
+{FB} GDZut ! Sans le mot-clé, impossible{FD}d'utiliser l'ordinateur !{FC}Si seulement je l'avais,{FD}je piraterais tout le système.{FF}{00}
+
+@0140
+{FB} F Hé, arrête de rester planté là{FD}et va chercher le mot-clé.{FC}{FB}A EPourquoi moi ? Tu te sers{FD}toujours des gens.{FC}{FB} F Tu crois pouvoir ouvrir{FD}la porte, toi ??{FC}{FB}A  OK. J'y vais, c'est ça ?{FF}{00}
+
+@0141
+{FB} G Le mot-clé est peut-être caché{FD}dans la pièce d'à côté. Avec ça,{FC}préviens-moi quand tu l'as trouvé.{FF}{00}
+
+@0142
+{FB} F Spyke, tu n'as rien{FD}d'intéressant à me dire ?{FF}{00}
+
+@0143
+{FB}A  C'est fermé à clé.{FF}{00}
+
+@0144
+{FB} {FF}{00}
+
+@0145
+{FB} 1 La réponse est "20". RoboRobo.{FF}{00}
+
+@0146
+{FB} GDOooh, vous me laissez derrière.{FD}Bon, on n'a pas le choix.{FC}OK, d'accord. J'attendrai{FD}le rapport de tout le monde.{FF}{00}
+
+@0147
+{FB}A  On dirait une sorte de machine,{FD}mais je la vois mal d'ici.{FF}{00}
+
+@0148
+{FB} {FF}{00}
+
+@0149
+{FB} 1 La réponse est "10". RoboRobo.{FF}{00}
+
+@0150
+{FB} F Ça ne sert à rien d'essayer de{FD}parler à ce truc, {F9} .{FC}Je m'occupe des déchets ici,{FD}va battre le chef.{FF}{00}
+
+@0151
+{FB} {FF}{00}
+
+@0152
+{FB} 1 La réponse est "8"··· non !{FD}"12" ! RoboRobo.{FF}{00}
+
+@0153
+{FB} FCTu ne comptes pas repartir, si ?{FC}{FB}A  {F8}(·····){F8}{FF}{00}
+
+@0154
+{FB} {FF}{00}
+
+@0155
+{FB} 1 La réponse est "5". RoboRobo.{FF}{00}
+
+@0156
+{FB} 1CRobooo hou- !{FF}{00}
+
+@0157
+{FB} {FF}{00}
+
+@0158
+{FB} 1 La réponse est "0". RoboRobo.{FF}{00}
+
+@0159
+{FB} H Mon Medabot est bien plus classe et{FD}brillant que celui-là. Tout brillant !{FF}{00}
+
+@0160
+{FB} {FF}{00}
+
+@0161
+{FB} 1 La réponse est··· "1" ! RoboRobo.{FF}{00}
+
+@0162
+{FB} G Dépêche-toi !{FD}La Chef attend !{FF}{00}
+
+@0163
+{FB} {FF}{00}
+
+@0164
+{FB} {FF}{00}
+
+@0165
+{FB} {FF}{00}
+
+@0166
+{FB} {FF}{00}
+
+@0167
+{FB} {FF}{00}
+
+@0168
+{FB} F Hé hé.{FD}Dépêche-toi de le faire !{FF}{00}
+
+@0169
+{FB} {FF}{00}
+
+@0170
+{FB}A EC'est vraiment du Spice-A-Roni !?{FD}C'est tout rouge d'épices.{FF}{00}
+
+@0171
+{FB} {FF}{00}
+
+@0172
+{FB}A BPlus de retour en arrière possible !{FD}Je dois continuer d'avancer !{FF}{00}
+
+@0173
+{FB} {FF}{00}
+
+@0174
+{FB}A  Un escalier caché.{FD}Enfin, pas si caché que ça.{FC}Alors le repaire des Rubberobos···{FD}enfin, du Dr Meta-Evil, est en bas ?{FC}Tout le monde est là-dessous ?{FC}{FB}A BLe Phantom Renegade se bat{FD}dehors pour nous !{FC}Je dois continuer !{FF}{00}
+
+@0175
+{FB} {FF}{00}
+
+@0176
+{FB} {51} Zzz Zzz···{FD}Me chatouille pas···{FF}{00}
+
+@0177
+{FB} {FF}{00}
+
+@0178
+{FB} 9CC-C'est pas juste !{FF}{00}
+
+@0179
+{FB} {FF}{00}
+
+@0180
+{FB} {FF}{00}
+
+@0181
+{FB} {FF}{00}
+
+@0182
+{FB} G Hé, {F9} .{FD}Toujours pas fini ?{FC}{FB}A  Deux, quatre, six, huit.{FD}Qui est-ce qu'on félicite ?{FC}{FB} G Ce vieux slogan, hein···{FD}2 4 6 8, hein ?{FC}{FB}A EOh, attends···{FD}Ça pourrait être le mot-clé !{FC}Les Rubberobos aiment ces bêtises.{FC}{FB} GBOK. Essayons.{FF}{00}
+
+@0183
+{FB} {FF}{00}
+
+@0184
+{FB} G Le plan de cet étage est{FD}dans cet ordinateur, Chef.{FC}On peut aussi commander{FD}les verrous des portes avec.{FC}{FB} F Toi, tu attends ici. On sera{FD}les seuls à continuer.{FF}{00}
+
+@0185
+{FB} F C'est décidé.{FD}Pas de temps à perdre.{FF}{00}
+
+@0186
+{FB} GBTu vas te dépêcher, oui !{FD}Ne retarde pas ma Chef.{FF}{00}
+
+@0187
+{FB} 4 Encore du baby-sitting.{FD}Je déteste les gamins bruyants.{FC}{FB}A  Vous êtes le vieux chef, Squidguts !{FC}{FB} 4AHo ho ho.{FD}C'est toi, le petit {F9}  ?{FC}Je vais te faire ma "thérapie"{FD}spéciale à coups de poing !{FC}{FB}A BOù avez-vous emmené tout le monde !?{FC}{FB} 4AJe ne te le dirai pas !{FF}{00}
+
+@0188
+{FB} 1CRobo aïe aïe{FC}{FB} 1CPourquoi on n'arrive même pas{FD}à battre un petit morveux ?{FC}{FB} 4BMmm, repli !{FF}{00}
+
+@0189
+{FB} FCTu oses te moquer de{FD}Samantha, la Vis cruciforme.{FF}{00}
+
+@0190
+{FB} HDLa Chef, c'est la Vis cruciforme,{FD}Spyke, la Vis plate, alors{FC}moi, je dois être un Boulon ?{FF}{00}
+
+@0191
+{FB} a L'objet marche bien, non ?{FD}Génial, hein ?{FF}{00}
+
+@0192
+{FB}A  Héééé, Spyke.{FD}Tu ne peux pas ouvrir cette porte ?{FC}{FB} GDElle a un vrai verrou, celle-là.{FF}{00}
+
+@0193
+{FB} F Alors qu'est-ce qu'on fait,{FD}Spyke ?{FC}{FB} G Il doit y avoir une gaine{FD}d'aération quelque part, Chef.{FC}{FB} F Je vois.{FD}Trouve-la, {F9} .{FF}{00}
+
+@0194
+{FB}A EOuais, ouais.{FF}{00}
+
+@0195
+{FB}A  Hmm ? On dirait qu'il y a une entrée{FD}vers les gaines d'aération, là-haut.{FF}{00}
+
+@0196
+{FB} F Sloan, passe en premier.{FF}{00}
+
+@0197
+{FB} HDOuf ouf.{FC}{FB} FDTu devrais faire un régime, Sloan.{FC}Puisqu'on n'a pas le choix,{FD}tu restes ici avec Spyke.{FC}{FB} HDUn régime, euh···{FF}{00}
+
+@0198
+{FB} F {F9} , passe en premier.{FC}{FB}A  OK, OK.{FF}{00}
+
+@0199
+{FB}A  La lampe-stylo n'éclaire pas assez.{FF}{00}
+
+@0200
+{FB}A  Impossible de descendre d'ici.{FD}Mais je vois en dessous. Oh !{FC}Squidguts vient de cogner{FD}un Rubberobo !{FF}{00}
+
+@0201
+{FB}A  Un Rubberobo égaré !{FC}{FB} 1BJe pensais faire une sieste{FD}sans que personne m'embête !{FF}{00}
+
+@0202
+{FB} 1BJe te donne ça si{FD}tu t'en vas !{FF}{00}
+
+@0203
+{FB} 1AZzzRobo ZzzRobo{FF}{00}
+
+@0204
+{FB} 1 Zzz Zzz{FD}Hmm ? Quoi ?{FF}{00}
+
+@0205
+{FB} {51} Sérieux ?{FD}Tu vas me courir après ?{FF}{00}
+
+@0206
+{FB} 9BC-Cette fois, on ne perdra pas !{FF}{00}
+
+@0207
+{FB} {51} Hi hi ! Les Select Corps.{FD}Ils ne me battront jamais.{FF}{00}
+
+@0208
+{FB}A BLe Phantom Renegade se bat{FD}dehors pour nous !{FC}Pas question de reculer !{FF}{00}
+
+@0209
+{FB} G Attends.{FD}J'essaie de l'ouvrir.{FF}{00}
+
+@0210
+{FB}A BCette fois, vous ne m'échapperez{FD}pas, Squidguts !{FC}{FB} 4 Tu es tenace, petit morveux.{FD}Attrapez-les, mes sbires !{FC}{FB} 1 RoboRobo RoboRobo{FF}{00}
+
+@0211
+{FB} F Laisse-moi les déchets, {F9} .{FD}Toi, occupe-toi du chef.{FF}{00}
+
+@0212
+{FB}A  Samantha, même si tu les traites{FD}de déchets, ils sont deux !{FC}{FB} FBSilence ! Ne me force pas{FD}à le répéter !{FC}Tais-toi et fais ce que je dis !{FC}{FB}A FD-D'accord !{FF}{00}
+
+@0213
+{FB} 4AHo ho ho ho.{FD}Battu par un gamin.{FC}Je me fais vieux. C'était amusant,{FD}cela dit. Et maintenant, adieu !{FF}{00}
+
+@0214
+{FB}A BEncore !{FF}{00}
+
+@0215
+{FB} G Attends, ce n'est pas encore ouvert.{FF}{00}
+
+@0216
+{FB}A  Il y a un petit écran avec un{FD}clavier fixé à la porte.{FC}J'essaie ?{FF}B
+
+@0217
+Entrez le mot-clé suivant.{FF}{00}
+
+@0218
+{FB}A  Le mot-clé, c'est··· ça ?{FF}{00}
+
+@0219
+{FB}A EHein ?{FD}Il y a combien de mots-clés ?{FF}{00}
+
+@0220
+{FB} G Il y a 4 mots-clés.{FD}Il doit en rester 2 quelque part.{FC}{FB}A  OK, compris.{FF}{00}
+
+@0221
+{FB} F Tu ne devrais pas me faire attendre.{FF}{00}
+
+@0222
+{FB} G On dirait que la porte peut s'ouvrir.{FF}{00}
+
+@0223
+{FB} G Hééé, c'est ouvert ! Ça doit mener{FD}à la salle de Gillgirl, la cheffe{FC}du gang Rubberobo. Fais gaffe, mec.{FC}{FB}A  Merci, Spyke.{FF}{00}
+
+@0224
+{FB}A  Hein ? Oh, pardon.{FD}Je me suis trompé de pièce.{FF}{00}
+
+@0225
+{FB} 3AAh ha ha ha ! Alors, ça t'a plu ?{FC}{FB}A HAlors c'est comme ça.{FD}Mais pourquoi vous faites ça ?{FC}{FB} 3AAh ha ha ha ! Je ne gagne pas assez{FD}pour vivre dans le luxe avec{FC}mon misérable salaire de Rubberobo.{FC}{FB}A EC'est très terre à terre.{FD}Pourquoi si soudainement ?{FC}{FB} 3 Tu as dit quelque chose ?{FC}{FB}A  Laissez tomber.{FC}{FB} 3 Peu importe. Après avoir vu ça,{FD}tu ne pourras plus partir ! Robattle !{FF}{00}
+
+@0226
+{FB} 3BQuelle insolence !{FD}Je ne peux plus me retenir !{FC}Admire les merveilles{FD}du monde numérique !{FF}{00}
+
+@0227
+{FB}A HElle a disparu !{FF}{00}
+
+@0228
+{FB}A  Rien d'intéressant ici.{FD}Je m'inquiète un peu pour Samantha.{FC}Je retourne voir comment elle va ?{FF}{00}
+
+@0229
+{FB} 1CElle fait plus peur que{FD}Maîtresse Gillgirl !{FF}{00}
+
+@0230
+{FB} FBNe te moque pas de moi !{FC}{FB}A  Pas la peine de m'inquiéter{FD}pour elle, finalement.{FF}{00}
+
+@0231
+{FB} {50} Ne joue pas qu'avec tes Medabots.{FD}Joue aussi avec Salty, parfois.{FF}{00}
+
+@0232
+{FB}A  Je dois trouver le mot-clé.{FF}{00}
+
+@0233
+{FB} DENous, on est l'exception.{FD}On ne sert que d'appât{FC}pour t'attirer ici.{FD}Erika a été emmenée par Seaslug.{FC}Ce type est fou !{FD}Qui sait ce qu'il va faire !{FC}{FB} CF{F9}  !{FD}Sors-nous de là, je t'en prie !{FC}Ils ont pris nos Medawatch,{FD}on ne peut rien faire.{FC}{FB}A DD'accord ! Attendez un peu !{FF}{00}
+
+@0234
+{FB}A HQ-Quoi ?{FF}{00}
+
+@0235
+{FB} CDVa sauver Erika, d'accord ?{FD}Tu vas y arriver, {F9} .{FF}{00}
+
+@0236
+{FB}A  J'ai eu peur.{FF}{00}
+
+@0237
+{FB}A BOK ! Allez !{FF}{00}
+
+@0238
+{FB} DEIls m'ont utilisé comme appât{FD}pour t'attirer ici. Pas cool du tout.{FF}{00}
+
+@0239
+{FB} BDVa aider Karin, d'accord ?{FD}Tu es le seul à pouvoir le faire.{FF}{00}
+
+@0240
+{FB}A HIl en sort encore !{FF}{00}
+
+@0241
+{FB}A DOK, celui-là fera l'affaire !{FF}{00}
+
+@0242
+{FB}A  Bon sang de bonsoir.{FF}{00}
+
+@0243
+{FB} GEOuah ! Vous êtes qui, vous !?{FD}Qu'est-ce que vous me voulez !{FC}{FB}A HC'est la voix de Spyke !{FF}{00}
+
+@0244
+{FB} F Qu'est-ce qui se passe, Spyke ?{FC}{FB} GDChef ! Le gang Rubberobo{FD}nous a coincés !{FC}{FB} 1 RoboRobo RoboRobo{FC}{FB} F Là, là. J'arrive dans une minute.{FC}{FB} F Tu vois, mes gars ont besoin de moi.{FD}On va devoir se séparer ici.{FC}{FB}A HJe viens avec toi !{FD}Tu ne peux pas y arriver seule···{FC}{FB} FBNe me sous-estime pas ! Tu me prends{FD}pour qui ? Allez, fiche le camp !{FC}{FB}A FD-D'accord !{FF}{00}
+
+@0245
+{FB}A  Je suis un peu inquiet, mais je dois{FD}y aller. Samantha va vraiment{FC}se fâcher si je ne pars pas.{FF}{00}
+
+@0246
+{FB}A AKarin ! Koji !{FD}Vous allez bien !{FC}{FB} CD{F9}  !{FD}Tu es venu nous chercher !{FC}{FB} DEPresque tout le monde sur le bateau{FD}a été capturé, et d'autres{FC}par cette Milky.{FC}{FB}A EPourquoi vous êtes les seuls ici ?{FD}Et Erika ?{FF}{00}
+
+@0247
+{FB}A DOK, celui-là fera l'affaire !{FC}{FB}A  Reculez, vous deux.{FD}Je vais casser le verrou.{FF}{00}
+
+@0248
+{FB} CALa porte s'est ouverte !{FC}{FB} D Désolé, {F9} .{FD}Tu t'occupes de l'autre côté aussi ?{FC}{FB}A  Bien sûr.{FF}{00}
+
+@0249
+{FB}A  Aucun de mes Medabots n'est{FD}équipé de "SLIPPER".{FC}Une seconde, j'en prépare un.{FC}{FB} DEHé, tu es sûr de t'en sortir ?{FF}{00}
+
+@0250
+{FB}A DIci aussi. C'est parti !{FC}{FB}A  Ce verrou électrique est différent.{FD}Cette fois, il me faut la{FC}Medapart de tête "PLATE BEAM"{FD}pour faire surchauffer le verrou.{FC}Ai-je un Medabot équipé{FD}de "PLATE BEAM" ?{FF}{00}
+
+@0251
+{FB}A  OK, attendez ici, vous deux !{FD}Je ne reviendrai pas sans{FC}la Medawatch et Erika !{FC}{FB} C Reviens vite, s'il te plaît.{FD}Je suis un peu inquiète, ici.{FC}{FB} DEÇa m'énerve de ne pas pouvoir venir{FD}parce que je n'ai pas mes Medabots.{FC}Je compte sur toi, {F9} .{FC}{FB}A DT'en fais pas, je gère !{FF}{00}
+
+@0252
+{FB}A  Aucun de mes Medabots n'est{FD}équipé de "PLATE BEAM".{FC}Je ferais mieux de vite l'équiper !{FF}{00}
+
+@0253
+{FB}A HErika, Koji !{FD}Qu'est-ce que vous faites ici !?{FC}{FB} BAOh, {F9}  !{FD}Tu es venu nous chercher !{FC}{FB} DEPresque tout le monde sur le bateau{FD}a été capturé, et d'autres{FC}par cette Milky.{FC}{FB}A EPourquoi vous êtes les seuls ici ?{FD}Et Karin ?{FF}{00}
+
+@0254
+{FB}A BOK ! Allez !{FF}{00}
+
+@0255
+{FB} BAOuais !{FC}{FB} D Désolé, {F9} .{FD}Tu t'occupes de l'autre côté aussi ?{FC}{FB}A  Bien sûr.{FF}{00}
+
+@0256
+{FB}A HQuoi !?{FC}"Le Dr Meta-Evil et les Rubberobos{FD}s'évadent de prison" !?{FC}Déjà ? Juste quand on croyait{FD}que les choses s'étaient calmées···{FC}Je ne peux pas rester sans rien faire !{FF}{00}
+
+@0257
+{FB} V Tu n'y es pas du tout !{FC}Il nous a juste suivis en disant{FD}"Et moi, pourquoi pas enlevé !?"{FC}{FB} IEDis ce que tu veux, mais dans{FD}les films, le fils de riches{FC}se fait toujours enlever.{FC}{FB}A  Peu importe, sortons d'ici.{FD}Le garde est parti pour l'instant.{FF}{00}
+
+@0258
+{FB}A  Que faites-vous là, Phantom Lady ?{FC}{FB} Q Ce que je fais ? Je prépare une{FD}fournée de "Bouche en enfer"{FC}pour les Rubberobos.{FF}{00}
+
+@0259
+{FB} {50} Tu devrais lâcher ton journal{FD}et t'occuper un peu de ton fils.{FC}{FB} {4F} On dirait que les Select Corps{FD}ont encore frappé.{FC}"Le Dr Meta-Evil arrêté{FD}par les Select Corps".{FF}{00}
+
+@0260
+{FB}A HHein !?{FD}C'est déjà dans le journal ?{FC}{FB} {4F} Oh ? Comment le sais-tu ?{FC}{FB}A FEuh, non, je···{FC}{FB} {50}AOh, laisse-le ! Bref, {F9} ,{FD}tu dois passer du temps à la maison.{FC}Dans ta chambre !{FD}Allez !{FC}{FB}A  D'aaaccooord.{FF}{00}
+
+@0261
+{FB}A HShrimplips, c'était pas le nom{FD}du petit chef du gang Rubberobo ?{FC}Alors "Papi" veut forcément dire···{FD}C'est une lettre de défi !{FC}Qu'est-ce qui va arriver aux autres ?{FC}{FB} {50} Au fait, {F9} , on n'a plus{FD}de Spice-A-Roni et···{FF}{00}
+
+@0262
+{FB} {50}AIl n'y a pas de quoi rire !{FF}{00}
+
+@0263
+{FB}A HÇa dit{45}{FC}"Tu es invité sur l'île Medabot.{FD}Signé Shrimplips" !{FF}{00}
+
+@0264
+{FB} j Erika a cru que des malfaiteurs{FD}t'avaient attrapé. Elle en fait{FC}toujours trop dans ces cas-là : elle{FD}est partie en courant en criant{FC}"Je dois sauver {F9}  !"{FC}{FB}A  Pas d'inquiétude, Madame Amazake.{FD}Attendez ici.{FC}Je ramènerai Erika saine et sauve.{FC}{FB} j D'accord, {F9} .{FD}Puisque tu le dis···{FF}{00}
+
+@0265
+{FB} W {F9}  !{FF}{00}
+
+@0266
+{FB}A  Il me faut la Medapart de tête{FD}"SLIPPER" pour pirater le verrou.{FC}Ai-je un Medabot équipé{FD}de "SLIPPER" ?{FF}{00}
+
+@0267
+{FB} W Karin a cru que des malfaiteurs{FD}t'avaient attrapé.{FC}Elle a dit qu'elle voulait t'aider{FD}et elle est partie en courant.{FC}{FB}A HÇa veut dire que !{FC}{FB}A FAh oui ! Koji···{FD}Monsieur Jyunmai, où est Koji !?{FC}{FB} W Je suis allé parler à Koji{FD}après le départ de Karin,{FC}mais Koji était déjà parti.{FF}{00}
+
+@0268
+{FB} MEÇa pourrait être lui !?{FD}Mais il est censé être···{FC}{FB} S Exact. Mais si les données tombaient{FD}entre les mains du Dr Armond···{FC}Tu imagines ce qui arriverait ?{FF}{00}
+
+@0269
+{FB} MEIl n'oserait··· il ne pourrait pas···{FC}{FB} S Ce n'est pas impossible. Le Dr Armond{FD}se sert des Rubberobos depuis le début.{FC}Renegade, veux-tu bien le guider ?{FD}Montre-lui le chemin.{FF}{00}
+
+@0270
+{FB} M Compris. J'irai ! Après avoir entendu{FD}ça, je ne peux pas rester{FC}les bras croisés !{FF}{00}
+
+@0271
+{FB}A HJe le savais !{FD}Je dois y aller, Docteur !{FF}{00}
+
+@0272
+{FB} S {F9} , attends.{FD}Le dernier bateau pour l'île Medabot{FC}est déjà parti. Et les "Ailes du vent"{FD}ne sont pas assez puissantes{FC}pour t'y emmener.{FD}Comment comptes-tu y aller ?{FF}{00}
+
+@0273
+{FB} M Petit, tu dois y aller !{FD}Laisse-les-moi !{FC}{FB} ·CQuel type bizarre !{FD}Je suis bien plus classe que toi !{FC}Plus beau, plus gentil, et···{FF}{00}
+
+@0274
+{FB} 9 Capitaine ! N'est-ce pas un peu{FD}exagéré ?{FC}{FB} ·CSilence ! Attrapez-les !{FF}{00}
+
+@0275
+{FB} M Vite, maintenant !{FC}{FB}A DÀ vos ordres, Monsieur Phantom !{FF}{00}
+
+@0276
+{FB} F Attends, {F9} .{FD}Tu vas les poursuivre éternellement ?{FF}{00}
+
+@0277
+{FB}A FMais···!{FC}{FB} F Pourquoi es-tu venu jusqu'ici ?{FD}Tu poursuis quelqu'un ?{FC}Si oui, poursuis-le tout seul.{FD}Pas le temps pour des jeux d'enfants.{FC}Moi, je continue.{FC}{FB} FCEt je battrai le cerveau{FD}derrière tout ce mal.{FC}Donc tu n'as aucune raison de venir.{FC}{FB}A  Samantha···{FF}{00}
+
+@0278
+{FB}A DAh, c'est vrai.{FD}Moi aussi, je dois avancer !{FC}Tout le monde compte sur moi !{FC}{FB} FCTu es tellement simple d'esprit.{FD}C'est ce qu'il y a de bien chez toi.{FC}La SEULE chose bien.{FC}{FB} F Bon, allons-y.{FC}{FB}A DOK !{FF}{00}
+
+@0279
+{FB}A  Ça dit "Entrez le mot-clé 1".{FF}{00}
+
+@0280
+{FB} j Ah ha ha ha ha ! Attends !{FC}Ce déguisement de belle serveuse{FD}cache plus beau encore.{FC}Je suis la splendide cheffe{FD}du gang Rubberobo, Gillgirl !{FF}{00}
