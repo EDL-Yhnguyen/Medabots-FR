@@ -43,28 +43,71 @@ ecritVarint(origine.length, octets)
 ecritVarint(cible.length, octets)
 ecritVarint(0, octets) // pas de métadonnées
 
-// Deux actions suffisent ici : les deux ROM ont la même taille et ne diffèrent
-// que par îlots. On alterne « recopier l'original » et « écrire du neuf ».
+// Trois actions. « Recopier l'original » et « écrire du neuf » suffisaient
+// tant que les deux ROM faisaient la même taille. La traduite fait 16 Mio
+// contre 8 : les 8 Mio ajoutés sont du bourrage, et les écrire en clair
+// ferait un patch de 8 Mio pour rien. Le format a l'action qu'il faut :
+// TargetCopy, « recopie ce que tu viens d'écrire », lue un octet en arrière —
+// c'est le codage par plages du BPS, et l'applicateur du site le connaît.
 const ACTION_SOURCE = 0 // SourceRead
 const ACTION_CIBLE = 1 // TargetRead
+const ACTION_COPIE_CIBLE = 3 // TargetCopy
+
+// En dessous, une plage d'octets identiques coûte moins en clair qu'en
+// deux actions.
+const SEUIL_PLAGE = 8
+
+/** Variante signée : le bit 0 porte le signe. */
+function ecritVarintSigne(n, out) {
+  ecritVarint(Math.abs(n) * 2 + (n < 0 ? 1 : 0), out)
+}
+
+const memeQueSource = (k) => k < origine.length && origine[k] === cible[k]
+/** Longueur de la plage d'octets identiques qui commence en k, plafonnée. */
+function plage(k, max = Infinity) {
+  let j = k
+  while (j < cible.length && j - k < max && cible[j] === cible[k] && !memeQueSource(j)) j++
+  return j - k
+}
 
 let i = 0
 let identiques = 0
 let differents = 0
-while (i < cible.length) {
-  const memeOctet = i < origine.length && origine[i] === cible[i]
-  let j = i
-  while (j < cible.length && (j < origine.length && origine[j] === cible[j]) === memeOctet) j++
-  const longueur = j - i
+let plages = 0
+// Position de lecture courante de TargetCopy — l'applicateur tient la même,
+// et chaque décalage s'écrit relativement à elle.
+let relatifCible = 0
 
-  if (memeOctet) {
-    ecritVarint(((longueur - 1) * 4) + ACTION_SOURCE, octets)
-    identiques += longueur
-  } else {
-    ecritVarint(((longueur - 1) * 4) + ACTION_CIBLE, octets)
-    for (let k = i; k < j; k++) octets.push(cible[k])
-    differents += longueur
+while (i < cible.length) {
+  if (memeQueSource(i)) {
+    let j = i
+    while (memeQueSource(j)) j++
+    ecritVarint(((j - i - 1) * 4) + ACTION_SOURCE, octets)
+    identiques += j - i
+    i = j
+    continue
   }
+
+  const n = plage(i)
+  if (n >= SEUIL_PLAGE) {
+    // Un octet en clair, puis (n - 1) recopies de l'octet précédent.
+    ecritVarint(ACTION_CIBLE, octets)
+    octets.push(cible[i])
+    ecritVarint(((n - 2) * 4) + ACTION_COPIE_CIBLE, octets)
+    ecritVarintSigne(i - relatifCible, octets)
+    relatifCible = i + (n - 1)
+    plages += n
+    i += n
+    continue
+  }
+
+  // Octets neufs en clair, jusqu'au prochain octet identique à la source ou
+  // à la prochaine plage qui vaut le coup.
+  let j = i + 1
+  while (j < cible.length && !memeQueSource(j) && plage(j, SEUIL_PLAGE) < SEUIL_PLAGE) j++
+  ecritVarint(((j - i - 1) * 4) + ACTION_CIBLE, octets)
+  for (let k = i; k < j; k++) octets.push(cible[k])
+  differents += j - i
   i = j
 }
 
@@ -84,6 +127,7 @@ console.log('Origine   : ' + origine.length.toLocaleString('fr-FR') + ' octets, 
 console.log('Traduite  : ' + cible.length.toLocaleString('fr-FR') + ' octets, CRC32 ' + crc32(cible).toString(16).toUpperCase())
 console.log('Identique : ' + identiques.toLocaleString('fr-FR') + ' octets')
 console.log('Modifié   : ' + differents.toLocaleString('fr-FR') + ' octets')
+console.log('Plages    : ' + plages.toLocaleString('fr-FR') + ' octets (bourrage et séries, codés par recopie)')
 console.log('Patch     : ' + patch.length.toLocaleString('fr-FR') + ' octets → ' + sortie)
 
 // --- Vérification : on RÉAPPLIQUE le patch et on compare ---
@@ -115,8 +159,18 @@ const tailleMeta = litVarint(patch, curseur)
 curseur.pos += tailleMeta
 if (tailleSource !== origine.length) throw new Error('Taille source incohérente.')
 
+function litVarintSigne(d, curseur) {
+  const brut = litVarint(d, curseur)
+  return (brut % 2 === 1 ? -1 : 1) * Math.floor(brut / 2)
+}
+
+// Même logique, mêmes noms que `site/src/lib/patch.ts` : c'est lui qui
+// appliquera le patch chez l'utilisateur, et un décodeur qui divergerait ici
+// validerait un patch que le site ne saurait pas lire.
 const refait = Buffer.alloc(tailleCible)
 let pos = 0
+let lectureSource = 0
+let lectureCible = 0
 const fin = patch.length - 12
 while (curseur.pos < fin) {
   const donnee = litVarint(patch, curseur)
@@ -126,8 +180,12 @@ while (curseur.pos < fin) {
     for (let k = 0; k < longueur; k++, pos++) refait[pos] = origine[pos]
   } else if (action === ACTION_CIBLE) {
     for (let k = 0; k < longueur; k++, pos++) refait[pos] = patch[curseur.pos++]
+  } else if (action === 2) {
+    lectureSource += litVarintSigne(patch, curseur)
+    for (let k = 0; k < longueur; k++, pos++) refait[pos] = origine[lectureSource++]
   } else {
-    throw new Error('Action inattendue : ' + action)
+    lectureCible += litVarintSigne(patch, curseur)
+    for (let k = 0; k < longueur; k++, pos++) refait[pos] = refait[lectureCible++]
   }
 }
 

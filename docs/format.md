@@ -448,6 +448,35 @@ intacte. Un garde-fou qui n'a jamais déclenché ne prouve rien.
 
 ---
 
+## 5 quater. Extension de la ROM à 16 Mio ✅ ÉPROUVÉE
+
+La ROM traduite fait 16 Mio (`0x1000000`), l'originale 8. Le bourrage ajouté
+est en `0x00`, comme celui d'origine à partir de `0x7F4464`. Le relogement
+commence dans ce bourrage d'origine et continue au-delà de `0x800000` sans
+rupture ; les pointeurs restent des adresses absolues `0x08xxxxxx`.
+
+**Ce qui l'établit** (29/08/2026, mGBA 0.10.5) :
+
+- Aucune référence à la fin de la ROM dans le binaire : `0x08800000` et
+  `0x087FFFFF` ont zéro occurrence en mots de 32 bits alignés. `0x00800000`
+  apparaît sept fois, `0x09000000` une fois — des constantes qui n'ont pas été
+  rattachées à une lecture de taille, et le jeu n'a de toute façon aucun moyen
+  de connaître la taille de sa cartouche.
+- Le jeu démarre sur la ROM étendue : logo Natsume rendu depuis la VRAM.
+- Un marqueur ASCII écrit à `0x800100` et à `0xFFFF00` d'une ROM d'essai se
+  relit à l'identique par le stub GDB à `0x08800100` et `0x08FFFF00`. Au-delà
+  de 16 Mio, `0x09000100` rend `80 00 81 00 82 00 …`, soit
+  `(adresse >> 1) & 0xFFFF` : le motif de bus ouvert du GBA. Le stub lit donc
+  à travers le bus émulé, pas dans le fichier, et la zone étendue est mappée.
+- Le patch BPS encode les 8 Mio ajoutés par une action `TargetCopy` lue un
+  octet en arrière — 10 octets — et `site/src/lib/patch.ts` reconstruit la ROM
+  de 16 Mio au bit près (277 ms sous Node 24, en important le fichier même).
+
+**Non établi** : l'affichage d'un texte relogé au-delà de 8 Mio n'a pas encore
+été vu à l'écran, aucun texte traduit n'y étant encore logé. Le mécanisme est
+le même que pour les 565 entrées relogées à partir de `0x7F4464`, qui
+s'affichent.
+
 ## 6. Compression
 
 2136 blocs LZ77 (format BIOS Nintendo : `0x10` + taille sur 3 octets) décompressés

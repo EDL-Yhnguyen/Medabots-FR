@@ -1,0 +1,924 @@
+# Table 0x47A2C4 — dialogues du deuxième chapitre (303 entrées)
+#
+# Le mont Odoro : le fantôme qui vole les Medaparts, Kannie et son Medabot,
+# la chute dans la cascade et le kimono, le Phantom Renegade, Yanagi et
+# Natsuko, les Screws (Samantha, Spyke, Sloan), le passeur à 1 £.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+#
+# Vocabulaire fixé : mont Odoro, marais d'Odoro, étang d'Odoro, la sorcière
+# de la montagne, le Centre de recherche, le Dr Aki, « Medabots Hebdo ».
+# Les noms de Medaparts en capitales restent en anglais, comme les 480 de la
+# liste. Types d'attaque selon 3B66EC : anti-air, anti-mer, gravité.
+#
+
+@0000
+{FB} BBJ'essaie d'écrire un article,{FD}alors ne me gêne pas !{FC}{FB} B ··· c'est ce que je voudrais dire.{FC}Mais il y a une bien plus grosse{FD}nouvelle à l'horizon.{FC}Il paraît qu'un fantôme apparaît au{FD}mont Odoro, au nord de la ville.{FC}Avec de la chance,{FD}je le prends en photo !{FF}{00}
+
+@0001
+{FB} G Écoutez-moi tous !{FC}{FB}A  C'est la voix de Spyke, non !?{FC}Qu'est-ce qu'ils mijotent encore ?{FF}{00}
+
+@0002
+{FB} G Dans cette école, plein d'enfants ont{FD}perdu leurs Medabots et Medaparts{FD}face au fantôme du mont Odoro.{FC}Les Select Corps nous ignorent :{FD}des gamins, ça ne les intéresse pas.{FC}Alors on doit prendre les choses{FD}en main nous-mêmes !{FC}L'heure est venue de reprendre{FD}nos affaires au fantôme !{FC}{FB} {FF}{00}
+
+@0003
+{FB} G Quoi ?{FC}Vous ne voulez pas{FD}récupérer vos affaires !?{FF}{00}
+
+@0004
+{FB} V Tu vas te battre contre un fantôme ?{FC}Et comment tu comptes t'y prendre ?{FF}{00}
+
+@0005
+{FB} V Perdre nos Medaparts, c'est grave,{FD}mais aller à la montagne, c'est pire.{FC}{FB} G Vous êtes pitoyables, les gars.{FF}{00}
+
+@0006
+{FB} F Oh, laisse tomber, Spyke.{FC}Quoi que tu dises,{FD}ils ne comprendront pas.{FC}{FB} G Ohh, d'accord, chef.{FF}{00}
+
+@0007
+{FB} F Vous écoutez ?{FC}On sera les seuls à aller{FD}au mont Odoro.{FC}Mais sachez qu'on gardera TOUTES{FD}les Medaparts qu'on y trouvera.{FC}Y compris les vôtres ! Compris ?{FF}{00}
+
+@0008
+{FB} GCOuah chef, bien envoyé.{FF}{00}
+
+@0009
+{FB} FAMaintenant, on peut prendre autant{FD}de Medaparts qu'on veut !{FF}{00}
+
+@0010
+{FB} B {F9}  !{FD}On y va aussi !{FC}{FB}A  Je me doutais que j'aurais à y aller.{FC}{FB} BBOn ne perdra pas contre les Screws !{FC}Ce fantôme va finir{FD}sur la pellicule !!{FC}{FB}A ED-d'accord···{FC}{FB} B Bon, c'est réglé.{FC}Rendez-vous à l'entrée du mont Odoro.{FD}Essaie de ne pas te perdre, ok ?{FF}{00}
+
+@0011
+{FB}A  Erika est toujours aussi autoritaire.{FC}Pour l'instant, je rentre à la maison{FD}préparer un "pique-nique".{FC}Si je dis à maman que je vais au mont{FD}Odoro, elle va dire quoi··· {F8}Hmmm···{F8}{FF}{00}
+
+@0012
+{FB} {50} Bonne journée à l'école, {F9}  ?{FC}Tu veux manger quelque chose ?{FF}{00}
+
+@0013
+{FB}A  Euh··· je sors.{FD}Tu peux me préparer un repas ?{FC}{FB} {50} Où vas-tu ?{FC}{FB}A  Euh···un pique-nique avec Erika.{FC}{FB} {50} Vraiment ?{FD}Toi et Erika, en pique-nique !?{FC}{FB}A  N-non.{FD}Oublie ce que j'ai dit !{FC}{FB} {50} {F9}  ?{FF}{00}
+
+@0014
+{FB}A  Tant pis pour le repas.{FC}Mais je devrais quand même{FD}emporter autre chose.{FF}{00}
+
+@0015
+{FB} E Ouaf ouaf !{FC}{FB}A DSalty, tu as été un bon chien ?{FF}{00}
+
+@0016
+{FB}A  Je prends ma lampe de poche.{FF}{00}
+
+@0017
+{FB}A AHa ha ha···!{FD}Pas le temps pour la télé.{FC}Je ferais mieux d'y aller.{FF}{00}
+
+@0018
+{FB}A  Ouah ! Un gilet de sauvetage{FD}sous la plante !{FC}Mais c'est peut-être trop.{FF}{00}
+
+@0019
+{FB} {4F}AHé, {F9}  !{FD}Tiens, maman t'a préparé ton repas.{FC}{FB}A DMerci de me l'apporter, papa !{FF}{00}
+
+@0020
+{FB} {4F}AJ'ai un cadeau pour toi,{FD}de la part de papa !{FC}{FB}A ANom d'un Medabot !{FD}Un Tinpet tout neuf !{FF}{00}
+
+@0021
+{FB} {4F}APrends soin de toi, fiston.{FD}Ne fais pas trop de souci à ta mère.{FC}{FB}A AD'accord !{FD}Merci beaucoup papa !{FF}{00}
+
+@0022
+{FB}A DOk !{FC}Direction le mont Odoro !{FF}{00}
+
+@0023
+{FB} B {F9} , tu es prêt à partir ?{FC}{FB}A  Oui. Et toi, Erika ?{FC}{FB} BDPrête à en découdre !{FC}{FB}A  Allons-y, alors.{FC}{FB} BDAvant de partir, un petit{FD}"échauffement" s'impose !{FF}{00}
+
+@0024
+{FB}A  Oui. Et toi, Erika ?{FC}{FB} BDPrête à en découdre !{FC}{FB}A  Allons-y, alors.{FC}{FB} BDAvant de partir, un petit{FD}"échauffement" s'impose !{FF}{00}
+
+@0025
+{FB}A EPitié···{FC}{FB} D Ah ! C'est vous !{FF}{00}
+
+@0026
+{FB}A  Oh ! C'est Karin.{FC}{FB} CDBonjour, {F9}  et Erika.{FC}{FB} D Alors on m'ignore, maintenant ?{FD}Sympa, {F9} .{FC}{FB}A  Comme si tu ne le faisais pas !{FC}{FB} B Qu'est-ce que vous faites ici ?{FC}{FB} D Karin aime sortir de temps en temps,{FD}alors je viens veiller sur elle.{FC}Mais je n'ai RIEN{FD}à vous dire.{FC}Bref, VOUS, qu'est-ce que{FD}vous faites ici ?{FC}{FB}A  On est venus···{FF}{00}
+
+@0027
+{FB} B On est venus vaincre le fantôme !{FF}{00}
+
+@0028
+{FB} D Hein ? Tu dis quoi ?{FC}{FB} B J'ai dit qu'on est venus vaincre{FD}le fantôme en Robattle et reprendre{FD}les Medaparts de tout le monde !{FC}Je vais capturer la vraie identité{FD}de ce fantôme sur pellicule.{FF}{00}
+
+@0029
+{FB} BDPas vrai, {F9}  ?{FC}{FB}A EC'est pas un peu trop···?{FC}{FB} DDAutrement dit, vous{FD}me lancez un défi ?{FF}{00}
+
+@0030
+{FB} DCTu veux te frotter à moi !?{FD}Amène-toi, {F9}  !{FC}{FB}A EOh non, et maintenant···{FC}{FB} BDÀ qui trouvera et battra{FD}le fantôme en premier !{FC}{FB} DCKarin ! On y va !{FF}{00}
+
+@0031
+{FB} CDDésolée, Koji s'emballe{FD}très facilement.{FC}{FB}A GCe n'est pas ta faute, Karin.{FC}{FB} DCKarin, on Y VA !{FC}{FB} CDÀ bientôt, alors.{FF}{00}
+
+@0032
+{FB}A  Karin···{FD}Elle ne ressemble à aucune autre fille.{FF}{00}
+
+@0033
+{FB} BFHmmm···{FF}{00}
+
+@0034
+{FB}A  Hein ?{FF}{00}
+
+@0035
+{FB} BFT'as pas intérêt à rentrer en courant !{FD}Allons-y.{FF}{00}
+
+@0036
+{FB} {FF}{00}
+
+@0037
+{FB} V C'est quoi, ce truc qui fait{FD}la sieste dans l'arbre ?{FF}{00}
+
+@0038
+{FB} V Si tu fais la sieste dans l'arbre,{FD}une chenille va te marcher dessus.{FF}{00}
+
+@0039
+{FB}A  Il y a quelque chose dans l'arbre.{FC}Si je donne un coup de pied,{FD}ça tombera ?{FF}{00}
+
+@0040
+{FB} 1 Qu'est-ce qui se passe !?{FD}Le sol et le ciel ont été échangés !{FF}{00}
+
+@0041
+{FB} 1 Je dors mal ici.{FF}{00}
+
+@0042
+{FB}A  Ces Rubberobos sont partout.{FF}{00}
+
+@0043
+{FB} BHAaah ! Une chenille !{FF}{00}
+
+@0044
+{FB} BHQu'est-ce que tu fais !{FD}Enlève-la-moi, vite !{FC}{FB}A  Je l'ai déjà enlevée.{FC}{FB} BFGrrrr !{FD}Tu es bête, {F9}  !{FF}{00}
+
+@0045
+{FB}A  La mienne est spéciale···?{FC}{FB} SAEh bien, je ne dirais pas ça.{FC}Tu ne le sais peut-être pas parce que{FD}tu étais dans les montagnes, mais{FC}la même Medawatch que la tienne{FD}est en vente partout maintenant.{FC}Désormais, tout le monde va{FD}se mettre à utiliser la Medaforce !{FF}{00}
+
+@0046
+{FB} V Rends-moi mon Medabot !{FF}{00}
+
+@0047
+{FB} V J'ai perdu mes Medaparts{FD}contre les Rubberobos.{FC}{FB}A  Les Rubberobos ?{FD}Ils ont un lien avec le fantôme ?{FC}{FB} V Ces types, c'est comme les cafards.{FD}Ils sont partout !{FF}{00}
+
+@0048
+{FB} V Je devrais peut-être rentrer···{FF}{00}
+
+@0049
+{FB} {FF}{00}
+
+@0050
+{FB}A HNom d'un Medabot !{FC}{FB} z Une traversée pour 1 £. {F8}RoboRobo.{F8}{FF}{00}
+
+@0051
+{FB} {FF}{00}
+
+@0052
+{FB} z Tu as fini ?{FF}B
+
+@0053
+{FB} z Je te ramène.{FF}{00}
+
+@0054
+{FB} z Fais vite.{FF}{00}
+
+@0055
+{FB}A  La boîte est vide.{FF}{00}
+
+@0056
+{FB} b Oups !{FD}Quelqu'un a trouvé cet endroit !{FC}Prends, et garde l'endroit secret.{FC}Ninja s'évapore !{FF}{00}
+
+@0057
+{FB}A  Il y a quelque chose plus loin ?{FF}{00}
+
+@0058
+{FB} b Sasuke, des 3 frères ninjas !{FD}Arrive comme le vent !{FF}{00}
+
+@0059
+{FB} b Oups ! Ninja s'est trompé de sortie !{FC}Ninja s'évapore !{FF}{00}
+
+@0060
+{FB} b Il n'y a rien plus loin.{FC}Ninja ne cache rien.{FD}Mieux vaut vite quitter zone ninja.{FF}{00}
+
+@0061
+{FB} B Alors, {F9}  ?{FF}{00}
+
+@0062
+{FB}A  Rien qui vaille la peine.{FC}{FB} BEJe suis déçue.{FC}{FB} z Pousse-toi.{FF}{00}
+
+@0063
+{FB} z Avant de partir pour la zone suivante,{FD}{F8}Marmonne··· marmonne···{F8}{FC}Et voilà ! Tadaaa !{FF}{00}
+
+@0064
+{FB}A  La zone suivante ?{FF}{00}
+
+@0065
+{FB} z Bon, je vais travailler{FD}dans la zone suivante.{FF}{00}
+
+@0066
+{FB} B Ok, {F9} .{FD}On va passer devant.{FF}{00}
+
+@0067
+{FB} {FF}{00}
+
+@0068
+{FB} V Je suis venu voir le fameux fantôme.{FD}Celui qui effraie tout le monde.{FF}{00}
+
+@0069
+{FB} V Hein ? Le fantôme ne viendra plus ?{FF}{00}
+
+@0070
+{FB} V Il paraît qu'une sorcière vit dans{FD}la montagne, mais je n'y crois pas.{FF}{00}
+
+@0071
+{FB} {FF}{00}
+
+@0072
+{FB} D Ce lac est louche···{FC}Je ne t'avais pas dit d'aller{FD}voir ailleurs qu'ici !{FF}{00}
+
+@0073
+{FB} D Laisse Karin tranquille,{FD}elle se repose.{FF}{00}
+
+@0074
+{FB} C J'ai un peu honte de le dire,{FD}mais j'ai des vertiges au soleil.{FC}La tête me tourne, je crois défaillir.{FD}Alors je dois me reposer ici.{FF}{00}
+
+@0075
+{FB} C Ne t'en fais pas pour moi. Ça ira.{FD}J'ai juste besoin de repos.{FF}{00}
+
+@0076
+{FB} CGJ'ai quelque chose sur le visage,{FD}ou···?{FF}{00}
+
+@0077
+{FB} C On aurait dit qu'Erika voulait{FD}dire quelque chose, tout à l'heure.{FC}{FB} BB{F9}  !{FC}Tu vas traîner avec les filles toute{FD}la journée, ou tu vas vraiment aider ?{FC}Au boulot !{FF}{00}
+
+@0078
+{FB} V Les sentiers de montagne sont durs.{FC}Si je chevauchais un Medabot···{FF}{00}
+
+@0079
+{FB} h Hé, tu connais la sorcière{FD}de la montagne ?{FF}{00}
+
+@0080
+{FB} h On dit qu'elle cherche les petits{FD}enfants pour les manger !{FC}Mon Medabot peut la battre ?{FF}{00}
+
+@0081
+{FB} h Si le fantôme et la sorcière se{FD}rencontraient, qui gagnerait ?{FF}{00}
+
+@0082
+{FB} g C'est notre terrain d'entraînement.{FC}Tu ferais mieux d'être prêt.{FF}{00}
+
+@0083
+{FB} g Yaaaaah !{FC}La vie engendre la douleur !{FF}{00}
+
+@0084
+{FB} g La douleur engendre la vie !{FF}{00}
+
+@0085
+{FB} g Ne néglige pas ton entraînement !{FF}{00}
+
+@0086
+{FB} g Si tu tombes, tu dois te relever !{FF}{00}
+
+@0087
+{FB} g Échouer, c'est s'entraîner encore !{FF}{00}
+
+@0088
+{FB} g Autant de fois que tu échoues,{FD}continue. Voilà un vrai homme.{FF}{00}
+
+@0089
+{FB} g Chance & malchance{FD}viennent sans prévenir.{FF}{00}
+
+@0090
+{FB} g Bonheur et malheur vont{FD}main dans la main.{FC}Une vie toute bonne ou toute mauvaise{FD}ne serait pas intéressante.{FF}{00}
+
+@0091
+{FB} g Quelque part au fond de ces montagnes,{FD}on dit qu'il y a un village ninja···{FF}{00}
+
+@0092
+{FB}A EC'est ridiculement louche.{FF}{00}
+
+@0093
+{FB} {FF}{00}
+
+@0094
+{FB} {FF}{00}
+
+@0095
+{FB} z Bouh !{FF}{00}
+
+@0096
+{FB} z Je t'ai surpris ? Robo Robo.{FC}{FB}A  Tu ne me surprendras pas{FD}deux fois de la même façon.{FC}{FB} z Quel ennui.{FC}Bref, je ne peux pas te{FD}faire traverser maintenant.{FC}Quelqu'un a réservé mes services{FD}à l'avance.{FC}Va tuer le temps et reviens.{FF}{00}
+
+@0097
+{FB} 9 Antenne du mont Odoro, Select Corps.{FD}Autrement dit, notre campement.{FF}{00}
+
+@0098
+{FB} 9 La randonnée a toujours ses dangers.{FC}On veille sur la sécurité de tous{FD}depuis ici !{FF}{00}
+
+@0099
+{FB} 9 On s'entraîne ainsi chaque jour.{FD}Un et deux et trois et quatre !{FC}Tu veux te joindre à nous ?{FF}B
+
+@0100
+{FB} 9 Pour tuer le temps libre,{FD}rien de tel que l'entraînement !{FC}{FB}A  Le temps libre ?{FC}{FB} 9 C'est la preuve de la paix !{FF}{00}
+
+@0101
+{FB} 9 Sans entraînement,{FD}je ne peux pas tuer le temps.{FF}{00}
+
+@0102
+{FB} 9 J'ai tué le temps !{FF}{00}
+
+@0103
+{FB} ·A{F8}Ronfle···ronfle···{F8}{FF}{00}
+
+@0104
+{FB} .CTu ne veux pas savoir ce qui arrive{FD}si on réveille le capitaine !{FC}{FB} . Silence, s'il te plaît.{FF}{00}
+
+@0105
+{FB} 9BZone fermée pour cause{FD}de danger extrême !{FF}{00}
+
+@0106
+{FB} 9BC'est trop dangereux{FD}d'aller plus loin.{FC}Zone fermée pour cause{FD}de danger extrême !{FF}{00}
+
+@0107
+{FB} 9BGarde tes distances !{FF}{00}
+
+@0108
+{FB} {FF}{00}
+
+@0109
+{FB}A  Aha ! Le gang Rubberobo !{FF}{00}
+
+@0110
+{FB} 1 Qui diable es-tu !?{FF}{00}
+
+@0111
+{FB} 1CJe suis battu.{FF}{00}
+
+@0112
+{FB} B Attrape-le, {F9}  !{FC}{FB}A  Je te tiens !{FF}{00}
+
+@0113
+{FB} 1CRoboo hou-{FF}{00}
+
+@0114
+{FB}A  Ne bouge pas !{FF}{00}
+
+@0115
+{FB}A HOuaaaah !{FF}{00}
+
+@0116
+{FB} BH{F9}  !{FC}{FB} 1CC-c'est pas moi !{FF}{00}
+
+@0117
+{FB} BHOh non ! Je dois chercher de l'aide !{FF}{00}
+
+@0118
+{FB}A HÀ-à l'aide···{FC}{FB} 9ATu es en plein entraînement, hein ?{FD}Fais de ton mieux !{FF}{00}
+
+@0119
+{FB} z Hé, toi là !{FD}Une traversée pour 1 £ ? RoboRobo.{FC}{FB}A H{F8}Glou glou{F8}{FC}{FB} z Je vais économiser tout mon argent{FD}et m'acheter de nouvelles Medaparts.{FC}Mais avec de nouvelles Medaparts,{FD}je ne pourrai plus me transformer.{FC}C'est un peu dur. RoboRobo.{FC}{FB}A H{F8}Glou glou{F8}{FC}{FB} z Quoi ? Tu suis le courant ?{FD}Ok. Je ne m'en mêle pas. RoboRobo.{FF}{00}
+
+@0120
+{FB}A HOuaaaaaaaah{FF}{00}
+
+@0121
+{FB}A  Où suis-je ?{FF}{00}
+
+@0122
+{FB}A HHein ! Pourquoi cette tenue ?{FD}C'est un kimono de fille !{FC}{FB} Z Oh, tu es réveillé, on dirait ?{FF}{00}
+
+@0123
+{FB} Z Tu m'as fait une de ces peurs.{FD}Un enfant qui tombe de la cascade !{FC}{FB}A  Euh, c'est vous qui{FD}m'avez sauvé, madame ?{FC}{FB} Z Mes petits t'ont sauvé, mon petit.{FD}Je t'ai changé de tenue.{FC}Oh, et mon petit,{FD}appelle-moi Kannie, veux-tu ?{FC}{FB}A  K···Kannie ???{FC}{FB} Z Oui. Et toi, tu es ?{FC}{FB}A  Je suis {F9} .{FC}{FB} Z Quel joli nom tu as.{FD}Hi hi hi hi···{FC}{FB}A  Flippant···{FC}Bon, où est celui qui{FD}m'a sauvé ?{FF}{00}
+
+@0124
+{FB} Z C'est lui.{FF}{00}
+
+@0125
+{FB}A  Un Medabot de type Air ?{FC}{FB} Z Un cadeau de ma petite-fille.{FC}{FB}A  Je vois···{FD}Merci de m'avoir sauvé.{FC}{FB} n Je me disais juste que{FD}tu serais délicieux.{FC}{FB}A HHein !?{FC}{FB} Z Il aime dire des bêtises.{FD}Ne fais pas attention. Hi hi hi.{FC}{FB}A FE-e-e-e-euh, je vais bien maintenant !{FD}Tu vois ! Tout va bien ! Je file !{FC}{FB} Z Où vas-tu, mon petit ? Hi hi.{FF}{00}
+
+@0126
+{FB}A  Flippaaant.{FC}Cette vieille femme DOIT être{FD}la sorcière de la montagne dont{FC}tout le monde parle. Elle trouve des{FD}enfants et les engraisse pour dîner.{FF}{00}
+
+@0127
+{FB}A EAlors, je suis tombé de la cascade···{FC}J'ai eu de la chance d'être sauvé.{FD}Mais maintenant, comment rentrer ?{FF}{00}
+
+@0128
+{FB} n J'ai perdu la lettre de Kannie.{FF}{00}
+
+@0129
+{FB} z Du courrier est arrivé pour Kannie ?{FC}{FB}A  Kannie, c'est la vieille femme ?{FD}Pourquoi recevrait-elle une lettre ?{FC}{FB} z Aaah ! J'ai trop parlé devant{FD}un inconnu ! Quelle honte···{FF}{00}
+
+@0130
+{FB} z Je me demande comment va Yanagi.{FC}{FB}A  Tu as dit Yanagi ?{FC}{FB} z Je n'aime même pas prononcer{FD}le nom de ce fantôme···{FC}{FB}A HHein ? Un fantôme !?{FC}{FB} z Aaah ! J'ai trop parlé devant{FD}un inconnu ! Quelle honte···{FF}{00}
+
+@0131
+{FB}A  Euh, désolé de vous déranger, mais{FD}comment je rentre chez moi ?{FC}{FB} Z On ne peut pas te laisser partir{FD}comme ça. Hi hi hi.{FC}{FB}A EJe suis tout gras et pas bon du tout !{FC}{FB} Z Que racontes-tu, mon petit ?{FD}Je parle de travail !{FC}Chasse-moi les Medabots sauvages{FD}qui blessent mes bébés.{FC}Ils ont peut-être un chef{FD}quelque part dans le coin.{FF}{00}
+
+@0132
+{FB} Z Allez, file ! Hi hi hi.{FF}{00}
+
+@0133
+{FB} n Tu as toujours l'air APPÉTISSANT.{FF}{00}
+
+@0134
+{FB}A  On parle d'un chef quelque part{FD}que je devrais chasser.{FF}{00}
+
+@0135
+{FB}A  Qu'est-ce que tu fais ?{FC}{FB} n Il fait très beau aujourd'hui.{FD}Je déjeune.{FC}{FB}A  Tu as dit déjeuner ?{FC}{FB} n Un peu d'huile ?{FC}{FB}A ENon merci, ça ira.{FF}{00}
+
+@0136
+{FB}A  Ah oui, ça me rappelle.{FC}Mon sac est trempé, mais{FD}mon repas est intact.{FC}{FB} n On mange ensemble ?{FF}B
+
+@0137
+{FB}A  {F8}Miam miam{F8}{FC}{FB} n {F8}Glou glou{F8}{FD}C'était super.{FC}{FB}A DC'est toujours meilleur à deux.{FC}{FB} n Cet endroit est assez dangereux.{FD}Tu ferais mieux de rentrer vite.{FC}Les zigotos vont bientôt sortir.{FC}{FB}A  Les zigotos ?{FC}{FB} n Des types vraiment bizarres.{FD}Ils portent des costumes étranges.{FC}{FB}A HLes Rubberobos !?{FC}{FB} n Tiens, ça devrait t'aider.{FF}{00}
+
+@0138
+{FB}A DMerci.{FF}{00}
+
+@0139
+{FB} n Rentre sain et sauf !{FF}{00}
+
+@0140
+{FB} n Tu n'es pas drôle.{FF}{00}
+
+@0141
+{FB} z Parfois, on essaie de m'enlever.{FC}La beauté est un tel péché···{FD}Hi hi♥{FF}{00}
+
+@0142
+{FB} z Ouah ! Quelles belles Medaparts !{FC}Tu veux Robattler avec moi ?{FF}{00}
+
+@0143
+{FB} z Les Robattles m'épuisent.{FF}{00}
+
+@0144
+{FB} z Les Robattles m'épuisent.{FF}{00}
+
+@0145
+{FB}A  Il y a quelque chose dans l'arbre.{FD}Un coup de pied, et ça tombe ?{FC}Je veux vraiment savoir ce que c'est !{FD}On essaie !{FF}B
+
+@0146
+{FB} 1 Je ne dormais pas !{FC}Je faisais juste mon travail :{FD}garder la zone !{FF}{00}
+
+@0147
+{FB} 1 Quiii es-tu !?{FF}{00}
+
+@0148
+{FB}A  Les Rubberobos sont même ICI !{FF}{00}
+
+@0149
+{FB}A  Non, laisse tomber.{FF}{00}
+
+@0150
+{FB}A  Autrement dit, aucun sens{FD}de l'orientation ?{FC}{FB} CGOui.{FC}{FB}A  Je devrais aller te chercher ?{FC}{FB} CDNon, ça va.{FC}{FB} CGEn fait, plus que ça, je···{FC}{F9} , me ferais-tu l'honneur{FD}d'un Robattle avec moi ?{FC}{FB}A AAh, c'est vrai !{FD}J'oubliais que tu aimes ça aussi !{FC}{FB} CGOui. Mais j'ai peu d'occasions{FD}de Robattler, alors···{FC}Tu veux bien Robattler avec moi ?{FF}B
+
+@0151
+{FB}A DHé ! Tu es ce Medabot qui fait{FD}traverser les gens pour 1 £ !{FC}Quelle chance de te croiser ici.{FC}{FB} z Désolé ! Je viens juste{FD}déposer un client. D'ailleurs,{FC}il a payé un aller-retour,{FD}alors je dois l'attendre.{FC}{FB}A  Un client ?{FD}Tu as amené quelqu'un ici ?{FC}{FB} z Un type en combinaison de caoutchouc.{FD}Il répétait "RoboRobo" tout le temps.{FC}{FB}A HC'est le gang Rubberobo !{FC}Qu'est-ce qu'ils font dans{FD}un endroit pareil···{FF}{00}
+
+@0152
+{FB} z Je dois attendre le retour{FD}de mon client.{FF}{00}
+
+@0153
+{FB} Z Ça aura peut-être un sens pour toi.{FC}Bon, je peux te raconter l'histoire{FD}si tu veux l'entendre.{FC}Avant, je vivais avec{FD}ma petite-fille, Natsuko.{FC}Natsuko et Yanagi se sont rencontrés{FD}quand elle s'est perdue, autrefois.{FC}Mais quand elle a quitté cette maison,{FD}Yanagi est parti aussi, quelque part.{FC}Je me demande comment va Yanagi···{FC}{FB}A  Qui est Yanagi ?{FC}{FB} Z Le Medabot fantôme.{FC}{FB}A HLe fantôme !{FC}{FB} Z Je m'inquiète pour Yanagi.{FC}Je n'ai pas du tout pris soin de lui,{FD}il a sûrement rouillé.{FF}{00}
+
+@0154
+{FB} {FF}{00}
+
+@0155
+{FB}A  {F8}Miam miam miam{F8}{FC}{FB}A DC'était délicieux !{FF}{00}
+
+@0156
+{FB}A  Mais j'aurais vraiment voulu{FD}déjeuner avec quelqu'un d'autre···{FF}{00}
+
+@0157
+{FB} 1 Plus d'issue maintenant.{FD}Prépare-toi !{FC}{FB} 1 Désormais, tu travailles pour{FD}le gang Rubberobo !{FC}{FB} z Beeerk.{FD}Plutôt rouiller que bosser avec vous !{FC}{FB} 1AHé hé hé hé !{FD}On sait que tu bluffes···{FF}{00}
+
+@0158
+{FB}A  Qu'est-ce que vous faites !{FF}{00}
+
+@0159
+{FB} 1DHé, en voilà un qui a l'air louche !{FC}{FB}A BC'est VOUS qui avez l'air louche !{FC}{FB} 1 Bon, on est repérés, attrapons-le !{FF}{00}
+
+@0160
+{FB} 1CTu es plutôt doué···{FC}{FB}A  Quand vont-ils arrêter ça !{FF}{00}
+
+@0161
+{FB} 1AHé hé hé.{FD}Aujourd'hui, on a l'avantage !{FF}{00}
+
+@0162
+{FB} 1AAttaque en tenaille !{FC}{FB}A FBande de lâches !{FC}{FB} 1AOn est les méchants. On a le droit !{FC}{FB} MABwa ha ha ha ha ha !{FF}{00}
+
+@0163
+{FB} 1DQui c'est, lui !{FF}{00}
+
+@0164
+{FB} M Dressez la table, sortez l'argenterie.{FD}Finies les chipoteries !{FC}Brûlant comme le piment le plus fort !{FC}Des ténèbres surgit{FD}le mystérieux Medafighter !{FC}Le Phantom Renegade !{FF}{00}
+
+@0165
+{FB} 1CCe type est complètement cinglé.{FC}{FB} MCVous êtes les derniers à pouvoir{FD}dire ça !{FC}{FB} MBJe vais vous punir !{FF}{00}
+
+@0166
+{FB} 1COuah ! Il vient par ici !{FF}{00}
+
+@0167
+{FB} 1CRoboooo-{FF}{00}
+
+@0168
+{FB} 1CRobo repli !{FF}{00}
+
+@0169
+{FB} M Hmph.{FC}{FB}A ANom d'un Medabot !{FC}Vous avez fait fuir le gang Rubberobo{FD}comme si de rien n'était !{FC}{FB} M Hmph, ils ne valent pas mon temps.{FD}Plus important : tu vas bien ?{FC}{FB}A AOui, monsieur !{FC}{FB} M Bien. Écoute, mon garçon.{FC}Le mal n'est pas toujours{FD}ce qu'on voit et ce qu'on sent.{FC}Parfois il se cache{FD}derrière d'autres illusions.{FC}{FB}A  Hein ? Quoi ? Euh ???{FC}{FB} M Je suis certain qu'on se reverra{FD}très bientôt.{FC}Adios !{FF}{00}
+
+@0170
+{FB}A GOuah, le Phantom Renegade{FD}est TROP cool !{FC}{FB}A HOh, mince !{FD}J'ai oublié l'autographe !{FC}{FB}A EEnfin···{FC}J'aurais dû lui demander de me ramener{FD}en haut de la cascade !{FF}{00}
+
+@0171
+{FB}A  Je ne devrais pas faire ça mais···{FD}je dois la lire !{FC}{FB} {FF}{00}
+
+@0172
+{FB}A  Ça va ?{FC}{FB} z Merci, tu m'as sauvé.{FC}Ces types vivent ici, capturent{FD}des Medabots et les font travailler.{FC}{FB}A  Je vois, c'est ça leur combine···{FC}{FB} z Hé, je t'emmène si{FD}tu veux rentrer.{FC}Je peux porter quelqu'un,{FD}mais pas longtemps.{FF}{00}
+
+@0173
+{FB} z Allez ! Monte ! Monte !{FF}{00}
+
+@0174
+{FB} z Tu veux traverser ?{FF}B
+
+@0175
+{FB} z En avant toute !!{FF}{00}
+
+@0176
+{FB} z Si tu veux traverser, reviens.{FF}{00}
+
+@0177
+{FB} z Tu veux traverser ?{FF}B
+
+@0178
+{FB} z En avant toute !!{FF}{00}
+
+@0179
+{FB} z Si tu veux traverser, reviens.{FF}{00}
+
+@0180
+{FB}A  Yanagi ! Tu vas bien ?{FD}Qu'est-ce que···?{FF}{00}
+
+@0181
+{FB}A  C'est la lettre que tu voulais ?{FC}{FB} n Oh ! Tu l'as trouvée !{FD}Je vais la livrer.{FF}{00}
+
+@0182
+{FB}A  Quelque chose cloche.{FC}Cette vieille femme fait peur,{FD}mais je devrais lui demander···{FF}{00}
+
+@0183
+{FB} Z Œil de triton, écailles de serpent.{FC}Bouillonne, chaudron, double peine.{FF}{00}
+
+@0184
+{FB}A  E-e-e-excusez-moi.{FF}{00}
+
+@0185
+{FB} Z Oh, te revoilà, mon petit ?{FD}Le dîner est presque prêt. Hi hi.{FC}{FB}A HJe n'en veux pas !{FC}{FB}A  Euh, j'ai lu votre lettre et{FD}il y est question de Yanagi.{FC}Je me demandais···{FF}{00}
+
+@0186
+{FB}A  C'est pour quoi faire ?{FC}{FB} Z Une grande boîte et une petite.{FD}Laquelle choisiras-tu ? Hi hi hi{FC}{FB}A  Hmmm···{FD}On se croirait dans un conte···{FF}{00}
+
+@0187
+{FB} Z J'aime vivre ici.{FC}Je vis en paix et au calme{FD}avec mes Medabots.{FC}Mais tu viendras me rendre visite{FD}de temps en temps ?{FF}{00}
+
+@0188
+{FB}A  Je prends la grande boîte ?{FF}B
+
+@0189
+{FB}A  Non, laisse tomber.{FF}{00}
+
+@0190
+{FB}A  Qu'y a-t-il dans la grande boîte ?{FF}{00}
+
+@0191
+{FB}A  Je prends la petite boîte ?{FF}B
+
+@0192
+{FB}A  Non, laisse tomber.{FF}{00}
+
+@0193
+{FB}A  Qu'y a-t-il dans la petite boîte ?{FF}{00}
+
+@0194
+{FB} n Kannie adore cette montagne.{FF}{00}
+
+@0195
+{FB} n Kannie a dit que tu pouvais monter ?{FC}Bon, si elle l'a dit, c'est d'accord.{FD}Tu veux traverser ?{FF}B
+
+@0196
+{FB}A  Donne-moi juste une minute.{FC}{FB} n D'accord.{FF}{00}
+
+@0197
+{FB}A  Oh, Karin.{FD}Qu'est-ce que tu fais ici ?{FC}{FB} CDJe me sentais mieux, alors j'ai{FD}pensé faire un tour.{FF}{00}
+
+@0198
+{FB}A  Oh, au fait Karin,{FD}tu as vu Erika ?{FC}{FB} C Erika ? Je ne l'ai pas vue.{FD}Il y a un problème ?{FC}{FB}A EOn s'est juste séparés.{FC}{FB}A  En parlant de ça, où est Koji ?{FC}{FB} C On était ensemble tout à l'heure,{FD}mais on a dû se séparer.{FC}{FB}A  Ouah, il doit vraiment vouloir trouver{FD}le fantôme, pour te laisser, non ?{FC}{FB} C Ce n'est pas seulement ça.{FC}Euh···, dès que je sors,{FD}je me perds tout de suite.{FF}{00}
+
+@0199
+{FB}A DTu es sûre que je peux{FD}le garder ? Merci.{FC}{FB} CAFais de ton mieux.{FC}{FB}A AOui !{FF}{00}
+
+@0200
+{FB} CD{F9} ,{FD}ce kimono te va bien aussi.{FC}{FB}A EOups, j'avais oublié.{FD}Mais mes habits sont encore mouillés···{FC}Attends···comment ça, "aussi" ?{FC}{FB} CDHi hi.{FD}C'est un secret.{FF}{00}
+
+@0201
+{FB} z Je t'emmène en aval ou au marais{FD}d'Odoro pour seulement 1 £.{FC}Tu veux aller au marais d'Odoro ?{FC}{FB}A  Erika est sûrement allée au marais.{FD}Je vais au marais d'Odoro ?{FF}B
+
+@0202
+{FB} z Monte.{FF}{00}
+
+@0203
+{FB} z Tu n'as pas assez d'argent ?{FC}Reviens quand tu en auras plus !{FF}{00}
+
+@0204
+{FB} z Ou tu veux aller en aval ?{FF}B
+
+@0205
+{FB} .CCapitaine !{FD}Il paraît qu'un garçon s'est noyé !{FC}Réveillez-vooous !!{FC}{FB} ·ARonfle···ronfle···{FC}{FB} .CCA-PI-TAINE !{FC}{FB} . Comment le réveiller···{FF}{00}
+
+@0206
+{FB} . Mais capitaine, on n'a attrapé{FD}personne de bien impressionnant.{FC}{FB} · Où est le problème ?{FD}Le travail des autres profite à moi !{FC}Envoyez les hommes ramasser{FD}ces Medaparts. Allons-y, Tokkuri !{FF}{00}
+
+@0207
+{FB} z Si tu changes d'avis, reviens.{FF}{00}
+
+@0208
+{FB} z Bon, bonne chance.{FC}{FB}A  Ouais, merci. À plus.{FF}{00}
+
+@0209
+{FB}A  Hmmm···{FC}Comment je vais rentrer{FD}d'ici, cette fois ?{FC}Bon, tant pis.{FF}{00}
+
+@0210
+{FB}A  Erika serait-elle dans le coin ?{FC}Ça ressemble à un endroit où un{FD}fantôme apparaîtrait, mais···{FC}En parlant de fantôme, je dois{FD}trouver Yanagi avant Koji.{FC}J'ai vraiment plein de choses à faire.{FF}{00}
+
+@0211
+{FB}A  La boîte est vide.{FF}{00}
+
+@0212
+{FB}A  Oh. Mais c'est Sloan.{FD}Les autres sont avec toi ?{FC}{FB} H Nul ne passera.{FF}{00}
+
+@0213
+{FB} HBJe vais bloquer le chemin{FD}avec un rocher.{FF}{00}
+
+@0214
+{FB}A  Le chemin est bloqué !{FC}C'est sûrement un coup de Sloan.{FD}Je suis trop faible pour le bouger.{FC}Mais avec mon Medabot···{FC}Il me faut un bon tir avec la Medapart{FD}bras gauche "BATTLE RIFLE".{FC}Ai-je un Medabot équipé{FD}du "BATTLE RIFLE" ?{FF}{00}
+
+@0215
+{FB}A DOk, celui-là fera l'affaire !{FF}{00}
+
+@0216
+{FB}A ABien !{FD}Beau travail. Reviens !{FF}{00}
+
+@0217
+{FB}A  Ce rocher a l'air prêt à me{FD}tomber sur la tête.{FC}Je devrais le briser{FD}avec des armes anti-air.{FC}Ai-je un Medabot équipé de la Medapart{FD}tête "PSYCHO MISSILE" ?{FF}{00}
+
+@0218
+{FB} Z Tu es venu me voir ?{FD}Je suis si contente. Hi hi hi hi.{FC}Tiens, une petite chose pour toi.{FF}{00}
+
+@0219
+{FB}A  Erika me cherche peut-être ?{FD}Je dois la trouver et lui{FC}dire que je vais bien !{FF}{00}
+
+@0220
+{FB}A  Si je détruis ce rocher, les débris{FD}pourraient bloquer le chemin.{FC}Je devrais compresser le rocher{FD}avec l'attaque de gravité de la{FD}Medapart bras droit "HEAVYWEIGHTER".{FC}Ai-je un Medabot équipé{FD}du "HEAVYWEIGHTER" ?{FF}{00}
+
+@0221
+{FB} 9 Une fille a demandé notre aide.{FD}Elle a dit qu'un garçon s'était noyé.{FC}{FB}A  Et où est cette fille maintenant ?{FC}{FB} 9 Elle est partie chercher le garçon{FD}avec un de nos hommes.{FF}{00}
+
+@0222
+{FB}A  J'ai compris.{FD}Le fantôme est un Medabot : Yanagi.{FC}{FB} Z Tu dis quelque chose ?{FC}{FB}A  Non, rien.{FC}{FB}A DNe vous en faites pas.{FD}Yanagi reviendra sain et sauf.{FC}{FB} Z Tu dis de drôles de choses.{FC}Au fait, si tu rentres,{FD}mon petit t'attendra dehors.{FC}Il peut transporter les lettres,{FD}mais aussi les gens.{FC}{FB}A  Madame···{FC}{FB} Z J'ai dit de m'appeler Kannie !{FC}{FB}A AD'accord. Merci Kannie !{FC}{FB} Z Attends un peu !{FD}Avant de partir, prends ceci.{FF}{00}
+
+@0223
+{FB} H Il n'y a pas de trésor là-haut,{FD}mais je ne te laisserai pas passer.{FF}{00}
+
+@0224
+{FB} HDJe dois rentrer faire la lessive.{FF}{00}
+
+@0225
+{FB}A  Des Medaparts cassées.{FF}{00}
+
+@0226
+{FB} ·APoussez-vous !{FD}Je vous attraperai tous plus tard.{FF}{00}
+
+@0227
+{FB} W On dirait que les Select Corps ont{FD}attrapé le gang Rubberobo.{FC}Grâce à eux, je peux rouvrir{FD}ma boutique.{FF}{00}
+
+@0228
+{FB}A  Ces Medaparts sont cassées, mais si{FD}je les répare, elles sont utilisables.{FC}Apportons-les au{FD}Centre de recherche Medabot.{FF}{00}
+
+@0229
+{FB} {FF}{00}
+
+@0230
+{FB}A  Tiens, mais c'est Spyke.{FD}Qu'est-ce que tu fais ici ?{FF}{00}
+
+@0231
+{FB} G Je règle mon Medabot pour empêcher{FD}les intrus comme toi de venir ici···{FC}{FB} GAMais qu'est-ce qui t'arrive ?{FD}Tu es habillé comme une FILLE.{FC}Je ne savais pas que tu aimais ça.{FC}{FB}A HTu te trompes ! C'est···{FC}{FB} GAHa ha ha ! Erika adorerait{FD}mettre la main sur ce scoop.{FC}{FB}A BJ'ai dit que tu te trompais !{FC}{FB} GAOh, tu veux te battre ?{FF}{00}
+
+@0232
+{FB} GDHmph. Il va y avoir des ennuis{FD}si le chef l'apprend.{FC}{FB} GBPour l'instant···repli !{FD}Je reviens après un nouveau réglage !{FF}{00}
+
+@0233
+{FB}A  Samantha doit être par là-haut.{FD}Pas question de flancher maintenant !{FF}{00}
+
+@0234
+{FB}A HOuah !{FF}{00}
+
+@0235
+{FB}A HOuah !{FF}{00}
+
+@0236
+{FB}A HOuah !{FF}{00}
+
+@0237
+{FB}A HOuah !{FF}{00}
+
+@0238
+{FB}A HOuah !{FF}{00}
+
+@0239
+{FB}A BSamantha !{FD}J'ai déjà battu tous tes larbins !{FC}Seule, tu veux encore te battre ?{FC}{FB} F Oh, ah bon.{FC}{FB}A EComment ça, "ah bon" ?{FC}{FB} F Je m'en fiche, maintenant.{FD}J'en ai assez de tout ça.{FC}J'ai dû marcher dans la montagne{FD}et j'ai attrapé un coup de soleil.{FC}Rester dans un endroit pareil{FD}n'a aucun intérêt.{FC}{FB}A  Euh···d'accord.{FF}{00}
+
+@0240
+{FB}A  Pourquoi sont-ils venus ici ?{FC}Peu importe, continuons.{FF}{00}
+
+@0241
+{FB}A  Des Medaparts cassées.{FF}{00}
+
+@0242
+{FB}A  Des Medaparts cassées.{FF}{00}
+
+@0243
+{FB}A  Des Medaparts cassées.{FF}{00}
+
+@0244
+{FB} z Quand je Robattle contre des gens{FD}qui utilisent des Medaparts anti-mer,{FC}je me fais beaucoup toucher et ça fait{FD}très mal ! Je n'aime pas ça du tout.{FF}{00}
+
+@0245
+{FB} p Tam tam tadam !{FF}{00}
+
+@0246
+{FB} p Félicitations !{FD}Tu es la 100e personne !{FF}{00}
+
+@0247
+{FB} p Regarde comme le fantôme fait peur.{FD}Laaaissez vooos Medapaaarts.{FC}{FB}A BC'est toi le Medabot derrière toute{FD}cette panique du fantôme !{FC}{FB} p {F8}(·····){F8}{FC}{FB}A  C'est grave.{FD}Ce Medabot a l'air vraiment usé.{FC}{FB} p Commeeent oooses-tu paaarler{FD}aiiinsi de mooon styyyle !{FC}{FB}A  Tu sais, à ce rythme, ton corps{FD}ne pourra bientôt plus bouger.{FC}Reviens avec moi chez Kannie.{FC}{FB} p Je ne rentreraaai paaas.{FC}Ils ooont diiit que si j'aaavais 100{FD}Medapaaarts, Natsukooo reviendraaait !{FC}{FB}A  Ils···?{FF}{00}
+
+@0248
+{FB} D Je comprends maintenant.{FC}Le fantôme a toujours été un Medabot.{FD}C'est ce que je pensais.{FC}{FB} DCRends tous les Medabots{FD}que tu as pris à tout le monde !{FC}Allons-y ! Robattle ti···{FF}{00}
+
+@0249
+{FB} DCTu n'es pas mauvais !{FC}{FB}A BToi non plus !{FC}{FB} 4 Vous allez la fermer, tous les deux.{FF}{00}
+
+@0250
+{FB} 1 RoboRobo RoboRobo{FF}{00}
+
+@0251
+{FB}A BLes Rubberobos !{FD}Vous avez manipulé Yanagi !{FC}{FB} DEHein ? Quoi ??{FF}{00}
+
+@0252
+{FB} 4 Quel mal à rendre utile{FD}une quasi-épave ?{FC}Je déteste absolument les enfants.{FD}Chassez-les !{FC}{FB} 1 RoboRobo RoboRoobo{FF}{00}
+
+@0253
+{FB} DCJe ne sais pas ce qui se passe,{FD}mais je vous affronte tous !{FF}{00}
+
+@0254
+{FB}A BAutrement dit,{FD}c'est l'heure du Robattle !{FF}{00}
+
+@0255
+{FB} 4BSale gamin insolent···{FC}Robo repli !{FF}{00}
+
+@0256
+{FB}A HVous êtes le Phantom Renegade !?{FC}{FB} MABwa ha ha ha ha !{FC}Le Phantom Renegade surgit{FD}de nulle part !{FC}{FB} MAJe vais prendre ce Medabot.{FC}{FB}A EHein ? Mais ce Medabot est···!{FC}{FB} M Il n'y a pas lieu de s'inquiéter.{FC}J'apporterai Yanagi à celui qui{FD}connaît le mieux les Medabots.{FC}Il sera comme neuf···{FD}Mon garçon, crois ce que je te dis.{FC}{FB} DCQui pourrait croire{FD}une chose pareille !{FF}{00}
+
+@0257
+{FB} D Ah, attendez !{FC}Ça n'avait absolument aucun sens.{FF}{00}
+
+@0258
+{FB}A  Ça mène dehors ?{FC}Je sortirai après avoir vérifié{FD}l'autre pièce au fond.{FF}{00}
+
+@0259
+{FB}A  On dirait l'endroit où toutes les{FD}Medaparts volées étaient entassées.{FC}Il fait si noir, je ne vois rien.{FD}Bon, sortons la lampe de poche.{FF}{00}
+
+@0260
+{FB}A DMaintenant, je vois{FD}très bien à l'intérieur.{FF}{00}
+
+@0261
+{FB}A  Aussi sombre qu'avant !{FD}Mais je n'ai plus rien à faire ici.{FF}{00}
+
+@0262
+{FB}A  Les Medaparts volées.{FD}Tout le monde doit s'en inquiéter.{FF}{00}
+
+@0263
+{FB} B Attends, {F9}  !{FD}Où vas-tu ?{FF}{00}
+
+@0264
+{FB}A  C'est fermé à clé.{FD}Essayons l'interphone !{FF}{00}
+
+@0265
+{FB} {FF}{00}
+
+@0266
+{FB}A HQuelqu'un arrive !{FF}{00}
+
+@0267
+{FB} · Je suis venu dès que j'ai{FD}reçu le rapport.{FC}Alors, c'est ici que toutes les{FD}Medaparts volées ont atterri ?{FC}{FB} . Au fait capitaine, on ne devrait pas{FD}chercher qui a battu les Rubberobos ?{FC}{FB} · La seule chose qui importe aux{FD}citoyens : arrêter les Rubberobos{FD}et récupérer leurs Medaparts.{FC}{FB} ·AOn fera encore la une !{FD}Gwa ha ha ha !{FF}{00}
+
+@0268
+{FB} . C'est plutôt étrange.{FF}{00}
+
+@0269
+{FB}A  Ouf. Ils sont partis. Je serais mort{FD}si quelqu'un m'avait vu comme ça.{FC}Plus besoin de m'inquiéter{FD}pour les Medaparts. Rentrons.{FF}{00}
+
+@0270
+{FB}A  Je crois que ça mène dehors.{FC}Mes habits sont secs, je vais{FD}me rechanger avant de sortir.{FF}{00}
+
+@0271
+{FB}A  Erika.{FC}{FB} BHOù étais-tu ? Tu faisais quoi !?{FD}Je te croyais noyé !{FC}{FB}A DDésolé. Tu t'es inquiétée ?{FC}{FB} BBÉvidemment !!{FC}{FB} B Les Select Corps t'ont cherché.{FC}Ils ont dit que la rivière où tu es{FD}tombé rejoint ce marais, alors j'ai{FD}pensé que tu étais peut-être ici.{FC}{FB}A DMerci.{FF}{00}
+
+@0272
+{FB} 9 Le mystère est résolu !{FF}{00}
+
+@0273
+{FB} 9 Nous rendrons les Medaparts{FD}à tous les gentils enfants !{FF}{00}
+
+@0274
+{FB} 9 Tout le monde est passé par ici,{FD}et j'ai perdu mes lentilles neuves···{FC}Encore écrasées···{FD}{F8}Snif··· snif···{F8}{FF}{00}
+
+@0275
+{FB} D Yo, {F9}  !{FC}{FB}A  C'est Koji et Karin.{FC}{FB} DDFini de jouer les poupées ?{FC}{FB} B Hmm ?{FC}{FB}A HLaisse tomber !{FC}{FB} D On dirait que le mystère est résolu.{FD}Mais je ne comprends pas tout.{FC}Pour couronner le tout, le type{FD}à la tenue bizarre s'est enfui.{FC}{FB}A  Tu veux dire le Phantom Renegade ?{FD}Il est TROP génial, non ?{FC}{FB} DEC'est un cinglé.{FC}{FB} DCBref, on a encore un compte à régler,{FD}mais ce sera pour la prochaine fois !{FC}Allons-y, Karin !{FF}{00}
+
+@0276
+{FB} C Koji, attends !{FF}{00}
+
+@0277
+{FB} CDÀ bientôt, alors.{FF}{00}
+
+@0278
+{FB}A  Ouah, Karin a du pain sur la planche.{FC}{FB} B Hé, hé, de quoi il parlait ?{FD}C'est quoi, cette histoire de poupées ?{FF}{00}
+
+@0279
+{FB} BHHein !? Tu oublies quel jour on est ?{FD}Tu ne rates jamais "Medabots Hebdo" !{FC}Je dois y aller !{FD}À plus tard !{FF}{00}
+
+@0280
+{FB}A  Il doit y avoir quelque chose{FD}d'utile par ici.{FF}{00}
+
+@0281
+{FB} {50} Hm, {F9}  et Erika en rendez-vous···{FD}Hi hi♥{FF}{00}
+
+@0282
+{FB} {4F}AFais attention dehors.{FF}{00}
+
+@0283
+{FB} {FF}{00}
+
+@0284
+{FB}A BTu es du gang Rubberobo !?{FC}{FB} z Qu'est-ce que tu racontes ?{FD}Tu te trompes, mon vieux.{FC}J'ai juste repris l'expression.{FC}{FB}A HLe gang Rubberobo ? Ici ?{FC}{FB} B Mon flair sent un scoop.{FC}{FB} z Tu montes ou pas ?{FD}Dépêche-toi de décider.{FC}Mais je ne peux prendre{FD}qu'une personne, mon pote.{FC}{FB} B On n'a pas le choix, j'imagine.{FC}{F9} , je paie pour toi,{FD}alors va faire un tour là-bas.{FC}S'il y a quelque chose d'intéressant,{FD}je viendrai après.{FF}{00}
+
+@0285
+{FB} V Ma mère m'a toujours dit de{FD}ne pas m'approcher du mont Odoro···{FF}{00}
+
+@0286
+{FB}A BVas-y !{FF}{00}
+
+@0287
+{FB}A  Équipons un Medabot{FD}du "BATTLE RIFLE".{FF}{00}
+
+@0288
+{FB}A  Je dois chercher Erika !{FF}{00}
+
+@0289
+{FB}A  Équipons un Medabot{FD}du "PSYCHO MISSILE".{FF}{00}
+
+@0290
+{FB}A  Celui qui connaît le mieux{FD}les Medabots···?{FC}{FB}A DCompris, Phantom Renegade.{FD}Je crois ce que vous dites !{FC}{FB} DHTu vas croire ce type !?{FC}{FB} M Alors, adieu !{FF}{00}
+
+@0291
+{FB}A  Équipons un Medabot{FD}du "HEAVYWEIGHTER".{FF}{00}
+
+@0292
+{FB} {FF}{00}
+
+@0293
+{FB}A FR-rien du tout !{FD}C'est une discussion entre hommes !{FC}{FB} B Hein, c'est censé vouloir dire quoi ?{FC}{FB}A FB-b-b-bref, rentrons !{FC}{FB} B Louche. Bon, tant pis.{FD}Ok, on s'arrête là.{FC}Je dois vite rentrer !{FC}{FB}A  Un problème ?{FF}{00}
+
+@0294
+{FB} BEArrête ! Et si une chenille{FD}ou autre chose en tombait ?{FC}{FB}A  Je veux vraiment savoir ce qu'il y a.{FD}Je donne un coup de pied ?{FF}B
+
+@0295
+{FB} BFPas besoin de me remercier.{FD}Évite juste les ennuis, ok ?{FC}Bon, grâce aux Select Corps,{FD}le mystère est résolu.{FC}Ils t'ont même retrouvé,{FD}donc tout va bien.{FC}Je n'ai jamais trouvé le fantôme, moi.{FC}{FB}A DAh oui, c'est vraaai·····on y va ?{FC}{FB} BDD'accord.{FF}{00}
+
+@0296
+{FB} B Ce n'est pas le chemin{FD}de l'étang d'Odoro !{FF}{00}
+
+@0297
+{FB}A  Bon, allons-y.{FF}{00}
+
+@0298
+{FB}A  Attends, Koji.{FF}{00}
+
+@0299
+{FB} DCNe me gêne pas, {F9}  !{FD}Bien, tu seras mon adver···{FC}{FB} DAHé.{FD}Qu'est-ce que tu portes ?{FC}{FB}A BArrête de rire !{FD}Il y a une raison pour···{FC}{FB} DAHa ha ha ha ha ha !{FD}Ça te va SUPER bien !{FC}{FB}A BJ'ai dit de ne pas rire !{FF}{00}
+
+@0300
+{FB}A HAh, c'est vrai !{FC}Aujourd'hui, la nouvelle version{FD}de la Medawatch sort en vente !{FC}{FB}A DMais j'en ai déjà eu une de papa.{FC}{FB}A  En parlant de ma Medawatch···{FF}{00}
+
+@0301
+{FB}A HElle est différente{FD}de celle des autres !?{FC}Pas possible !{FD}Qu'est-ce qui se passe !?{FC}{FB}A  De toute façon, je dois faire réparer{FD}ces Medaparts cassées.{FC}J'irai au Centre de recherche{FD}demander au Dr Aki.{FF}{00}
+
+@0302
+{FB} n Kannie a dit de prendre{FD}l'autre boîte !{FF}{00}

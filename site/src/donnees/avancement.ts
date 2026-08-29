@@ -15,7 +15,7 @@
  * d'entrées ne ment pas.
  */
 export const ENTREES = {
-  traduites: 929,
+  traduites: 1232,
   total: 5933,
 } as const
 
@@ -47,8 +47,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Histoire principale',
     detail:
-      'Le premier chapitre est traduit — le vol d’Eggy, l’école privée Rosewood et la prise d’otages du gang Rubberobo : 237 dialogues. Restent treize tables, soit environ 3 400 entrées.',
-    part: 0.07,
+      'Deux chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, puis le fantôme du mont Odoro, Kannie et le Phantom Renegade — 540 dialogues. Restent douze tables, soit environ 3 100 entrées.',
+    part: 0.14,
   },
   {
     titre: 'PNJ et contenu secondaire',

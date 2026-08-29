@@ -175,7 +175,22 @@ node outils/largeur.mjs <rom> traduction/<table>.txt 212 --contre travail/script
   on sait que 3 981 boîtes anglaises ont deux lignes. Ce qui ne rentre pas
   prend une boîte de plus (`{FC}`), sans risque.
 
-**L'espace libre s'épuise.** Les 48 Kio en fin de ROM (`0x7F4464`) sont le seul
-endroit où le relogement écrit. Après 929 entrées traduites, il en reste 19 Kio ;
-les 3 400 dialogues restants demanderont de l'ordre de 100 Kio. Étendre la ROM
-à 16 Mio est la voie classique — décision à prendre avant la prochaine table.
+**La ROM traduite fait 16 Mio, l'originale 8** — décidé et éprouvé le
+29/08/2026. Les 48 Kio de bourrage en fin de ROM (`0x7F4464`) étaient le seul
+endroit où le relogement écrivait, et 929 entrées en avaient pris 29 ; les
+3 400 dialogues restants en demandent de l'ordre de 100. `reinserer.mjs` étend
+en `0x00` à chaque construction traduite, jamais en mode identité. Le
+relogement continue sans rupture au-delà de 8 Mio.
+
+Ce qui l'établit : rien dans le binaire ne référence sa propre fin
+(`0x08800000`, `0x087FFFFF` : zéro occurrence) ; le jeu démarre dans mGBA sur la
+ROM étendue ; un marqueur écrit à `0x800100` et à `0xFFFF00` se relit à travers
+le bus par le stub GDB, alors qu'au-delà de 16 Mio le même stub rend le motif de
+bus ouvert `(adresse >> 1) & 0xFFFF` — il émule fidèlement, donc la zone est
+mappée. Le patch BPS encode les 8 Mio ajoutés par `TargetCopy` en 10 octets, et
+l'applicateur du site (`site/src/lib/patch.ts`) reconstruit la ROM de 16 Mio à
+l'identique — vérifié en important le vrai fichier sous Node 24.
+
+⚠ **Le stub GDB ne s'ouvre qu'avec `mGBA.exe -g` (Qt).** `mgba-sdl.exe -g`
+reste vivant, titre « mGBA », et n'écoute sur aucun port. Une heure à ne pas
+reperdre.

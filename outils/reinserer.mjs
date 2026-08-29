@@ -22,13 +22,32 @@ const [, , cheminRom, cheminPointeurs, dossierScript, dossierTraduction, cheminS
 const identiteSeule = process.argv.includes('--identite')
 
 const rom = readFileSync(cheminRom)
-const sortie = Buffer.from(rom)
 const BASE = 0x08000000
 
-// Espace libre repéré en fin de ROM : bourrage de 0x00 à partir de 0x7F4464.
-// On garde une marge de sécurité avant la toute fin.
+// LA ROM TRADUITE FAIT 16 Mio, L'ORIGINALE 8.
+//
+// L'espace libre d'origine — 48 Kio de bourrage 0x00 à partir de 0x7F4464 —
+// est le seul endroit où le relogement écrit, et 929 entrées en ont pris 29.
+// Les 3 400 dialogues restants en demandent de l'ordre de 100. Étendre la ROM
+// est la voie classique : le GBA adresse 32 Mio de cartouche, les pointeurs
+// restent des adresses absolues en 0x08xxxxxx, et rien dans le binaire ne
+// référence sa propre fin (cherché : 0x08800000 et 0x087FFFFF, zéro occurrence).
+//
+// On étend en 0x00, comme le bourrage d'origine, et TOUJOURS en mode
+// traduction — une taille qui changerait à la première table trop grosse
+// serait une surprise de plus. En mode identité, on ne touche à rien : le test
+// compare au bit près avec l'originale, et il doit rester possible.
+const TAILLE_ETENDUE = 0x1000000
+const etendre = !identiteSeule && Boolean(dossierTraduction)
+const sortie = etendre
+  ? Buffer.concat([rom, Buffer.alloc(TAILLE_ETENDUE - rom.length, 0)])
+  : Buffer.from(rom)
+
+// Le relogement commence dans l'espace libre d'origine et continue au-delà de
+// 8 Mio sans rupture : une entrée peut chevaucher la frontière, l'espace
+// d'adressage est continu. Marge de 16 octets avant la toute fin.
 const LIBRE_DEBUT = 0x7f4464
-const LIBRE_FIN = rom.length - 16
+const LIBRE_FIN = sortie.length - 16
 let curseurLibre = LIBRE_DEBUT
 
 // --- Table inverse ---
