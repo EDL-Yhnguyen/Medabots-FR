@@ -94,8 +94,15 @@ pas un livrable.
 - **Table de caractères résolue** : `0x01–0x1A` = A–Z, `0x1B–0x34` = a–z,
   `0x35–0x3E` = chiffres, ponctuation en `0x3F+`. Vérifiée par décodage réel.
 - **Le texte n'est pas compressé.** Aucune couche à casser pour les dialogues.
-- **La police est à chasse variable** et n'est pas indexée par la valeur de table.
-  Elle se localisera par dump VRAM sous mGBA, pas par recherche statique.
+- **La police est à chasse variable**, trouvée à `0x4BFC64` par désassemblage
+  après sept échecs de recherche statique.
+- **Les accents français s'affichent, et c'est vérifié à l'écran** (29/08/2026,
+  mGBA 0.10.5). La cartouche est européenne : les 45 glyphes accentués dormaient
+  dans la police, juste après le 79e. Seules leurs largeurs manquaient, à zéro
+  dans les deux tables de chasse — 90 octets écrits ont suffi.
+  Les largeurs sont justes au pixel : sur un banc à deux lignes, `aeiouAE` et
+  `àéîôûÀÉ` finissent au même endroit, à l'exception attendue du `î`, dont le
+  glyphe occupe réellement deux pixels de plus que le `i`.
 
 Détail complet et preuves : `docs/format.md`.
 

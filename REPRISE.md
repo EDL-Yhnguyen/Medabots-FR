@@ -1,51 +1,41 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-08-25
+Dernière séance : 2026-08-29
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Le français s'écrit avec ses accents, et ils s'affichent.** C'était la dernière
-limite connue du projet ; elle est tombée le 25/08 sans qu'un seul glyphe soit
-dessiné. La cartouche est **européenne** : les 45 signes des quatre langues du
-continent dormaient dans la police, juste après le 79e glyphe. Ce qui les rendait
-inatteignables, ce sont les deux tables de chasse, à **zéro** sur ces codes — une
-largeur nulle n'avance pas le curseur, donc le jeu ne pouvait pas les employer.
+**Les accents ont été vus à l'écran.** C'était la prochaine action depuis deux
+séances, et elle est faite : mGBA 0.10.5, ROM de démonstration, premier écran de
+dialogue du jeu. `Éçàèêîôûùïë ÀÇÎ` s'affiche, les quinze glyphes sont nets et
+corrects.
 
-Écrire ces largeurs a suffi. **90 octets.** Les ~700 replis d'accents sont tombés
-à **68**, et ces 68 ne sont que les guillemets « », que la police n'a réellement
-pas. Pas un mot de la traduction n'a eu à être réécrit : écrire les accents dès
-le premier jour, en acceptant qu'ils ne s'affichent pas encore, aura été le bon
-choix.
+**Les largeurs sont justes, et c'est mesuré, pas estimé.** Un second banc écrit
+`aeiouAE` sur une ligne et `àéîôûÀÉ` sur la suivante : mêmes lettres, accentuées
+ou non, l'une sous l'autre. Les deux lignes finissent au même pixel — sauf le
+`î`, plus large de deux pixels que le `i`, ce qui est exactement l'exception
+documentée à la séance du 25/08 (son fût est décalé pour dégager le circonflexe).
 
-**Le patch est régénéré** : `patch/medabots-fr.bps`, 692 entrées traduites,
-20 996 octets modifiés, vérifié par réapplication.
-
-**La chaîne est au vert** : 33 tables, 5 933 entrées, test d'identité identique
-au bit près.
+**La chaîne reste au vert** : 33 tables, 5 933 entrées, test d'identité identique
+au bit près. Le patch n'a pas bougé.
 
 ## La prochaine action
 
-**Lancer le jeu et regarder.** C'est la même action qu'à la séance précédente, et
-elle n'a toujours pas été faite. Les octets sont bons, le rendu simulé par
-`outils/apercu-texte.mjs` est net, mais **personne n'a encore vu un accent à
-l'écran d'un vrai émulateur**. Tout le reste attend cette vérification.
+**Les dialogues, `0x47xxxx`, ~2 800 entrées.** C'est l'essentiel du volume restant
+et tout ce qui est vraiment visible en jeu. Les prendre par petites tables
+complètes, comme `0x48521C` et `0x48698C` : une table entière livrée d'un bloc
+vaut mieux qu'un chapitre à moitié français.
 
-Les outils sont là : `outils/chasse-dialogue.mjs` amène le jeu à un écran de
-texte, `outils/ecran.mjs` capture, `outils/gdb.mjs` parle à mGBA.
-
-Ensuite, les **dialogues** (`0x47xxxx`, ~2 800 entrées) : l'essentiel du volume et
-tout ce qui reste de vraiment visible. Les prendre par petites tables complètes,
-comme `0x48521C` et `0x48698C` — une table entière livrée d'un bloc vaut mieux
-qu'un chapitre à moitié français.
+Pour situer une phrase vue à l'écran, `node outils/trouver.mjs <rom> "la phrase"`
+donne son adresse et qui la pointe.
 
 ### Deux chantiers courts, si l'envie prend
 
 - **Les guillemets « ».** Onze emplacements de glyphe sont vides (`0x4F`, puis
-  `0x7D`–`0x86`). Deux chevrons à dessiner, deux largeurs à écrire, et le repli
-  disparaît. Tout l'outillage est en place.
+  `0x7D`–`0x86`). Deux chevrons à dessiner, deux largeurs à écrire, et les 68
+  derniers replis disparaissent. Tout l'outillage est en place.
 - **Les 480 Medaparts**, toujours à trancher — voir ci-dessous.
 
 ### Les 480 Medaparts : à trancher avant de s'y mettre
@@ -78,25 +68,34 @@ identifiants :**
 
 ## Décidé cette séance
 
-- **On lit l'anglais avec la table d'origine, on n'écrit le français qu'avec la
-  table étendue.** Ce n'est pas une précaution de style : décoder avec la table
-  complète rend lisibles des octets qui ne sont pas du texte. Au premier essai, le
-  détecteur de tables est passé de 33 à 35 tables et de 5 933 à 6 047 entrées —
-  deux zones de données avaient franchi le seuil par les seuls codes
-  `0x50`–`0x7C`. D'où `TABLE_LECTURE`, employée par `pointeurs.mjs`,
-  `extraire.mjs` et `lister.mjs`.
-- **Les largeurs des accents s'écrivent APRÈS le test d'identité**, jamais avant.
-  Ouvrir les accents est une modification volontaire de la ROM, pas une
-  réinsertion de texte ; les mêler ferait échouer le seul contrôle qui prouve que
-  l'outillage ne perd rien.
-- **La largeur d'un accentué est la plus grande de deux mesures** : celle de sa
-  lettre de base, et la place réellement occupée. Elles concordent partout sauf
-  pour `î`, `ï` et `í`, dont le fût est décalé pour dégager le diacritique.
-- **Le site garde son état « bloqué »** dans le type `Etape`, même sans étape qui
-  l'emploie : un site qui ne sait plus dire « bloqué » ne peut plus être honnête.
+- **On cherche une phrase, on ne devine pas son adresse.** `demo-accents.mjs`
+  écrivait son banc d'essai en dur à `0x4148BE`, et l'écran restait anglais :
+  la ROM contient DEUX copies de « Good afternoon! », et celle qui s'affiche est
+  la seconde, `0x474C87`. D'où `outils/trouver.mjs`, qui encode un texte avec la
+  table et le retrouve dans les 8 Mio, avec la liste de ses pointeurs.
+- **Le banc d'essai est paramétrable.** Une fois l'affichage acquis, la question
+  devient la chasse, et la mesurer demande un autre motif. Cinquième argument de
+  `demo-accents.mjs`, en octets hex. La contrainte : exactement quinze octets,
+  la longueur de la phrase remplacée, pour qu'aucun pointeur ne bouge.
+- **Mesurer une chasse, c'est comparer deux bords**, pas juger « ça a l'air
+  serré ». Deux lignes séparées par `{FD}`, mêmes lettres avec et sans accent :
+  l'œil compare deux extrémités au lieu d'estimer des espacements.
 
 ## À ne pas refaire
 
+- **Injecter ALT pour voler le focus.** Il donne bien le premier plan, mais il
+  ouvre la barre de menu de Qt : toutes les touches envoyées ensuite vont au
+  menu, `fenetre.ps1` annonce « touches envoyees », et l'écran-titre ne bouge
+  pas. Le seul indice était le « F » de Fichier souligné sur la capture. **F24**
+  fait le même office et n'existe sur aucun clavier.
+- **Croire `SetForegroundWindow` et `AttachThreadInput` suffisants.** Avec deux
+  terminaux ouverts, la fenêtre restait derrière. Il faut les trois gestes :
+  `SPI_SETFOREGROUNDLOCKTIMEOUT` à 0, une frappe à vide, puis l'attachement.
+- **Prendre le titre de fenêtre de mGBA pour un diagnostic.** Il affiche « Une
+  erreur est survenue » pendant les premières secondes du chargement, alors que
+  le jeu démarre normalement. Capturer avant de conclure.
+- **Redimensionner la fenêtre mGBA trop tôt.** `SetWindowPos` appelé pendant le
+  chargement est ignoré sans un mot.
 - **Chercher la police, puis planifier de dessiner des accents.** Neuf tentatives
   au total, dont la neuvième — un plan complet de relogement, de réécriture de
   quinze mots de pool et de dessin de trente glyphes — pour du travail entièrement
