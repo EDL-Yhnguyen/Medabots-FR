@@ -1,85 +1,57 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-08-29
+Dernière séance : 2026-08-29 · dernier commit : `440a555` Sixieme chapitre en
+francais, et la ROM traduite s'emporte depuis le site
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Cinq chapitres sont en français : 2 109 entrées sur 5 933.** Table
-`0x479F0C` (237 dialogues, le vol d'Eggy et la prise d'otages de Rosewood),
-`0x47A2C4` (303, le mont Odoro, Kannie, Yanagi, le Phantom Renegade),
-`0x47A784` (323, l'île Medabot, le tournoi du bloc B, le Dr Armond, la maison
-hantée), `0x47B110` (295, les enfants disparus, le repaire des égouts, le
-mot de passe chanté, l'Académie Woodrose, l'élection du sous-chef), puis
-`0x47B5B0` (259, les Ruines antiques, le téléporteur, le royaume sous-marin de
-Kodine, la reine Margarita, Blue Hawaii). Chaîne au vert, patch reconstruit et
-vérifié par application, recopié sur le site.
+**Six chapitres sont en français : 2 372 entrées sur 5 933.** Tables
+`0x479F0C` (237, le vol d'Eggy et Rosewood), `0x47A2C4` (303, le mont Odoro),
+`0x47A784` (323, l'île Medabot), `0x47B110` (295, les enfants disparus et les
+égouts), `0x47B5B0` (259, les Ruines antiques et le royaume de Kodine), puis
+`0x47B9C0` (263, le faux rendez-vous et la forteresse volante Fiyun — Harvey,
+l'huile « Spéciale Dr Meta-Evil », le Limiteur). Chaîne au vert, patch
+reconstruit (198 611 octets) et vérifié par application, **déployé** : le
+patch servi en ligne a le même SHA-1 que `patch/medabots-fr.bps`.
 
-**Le narratif est mesuré, pas estimé : 1 429 entrées sur 3 887, soit 36,8 %.**
-Le compte se refait à tout moment en croisant `travail/pointeurs.json` avec les
-fichiers de `traduction/` — c'est ce chiffre qui alimente le lot « Histoire
-principale » du site, et non une impression. Le `part` affiché, 0,37, en vient
-directement.
+**Le site remet la ROM traduite en fichier depuis le 29/08.** Bouton
+« Télécharger la ROM traduite » dans la carte « Prête à lancer » : le patch est
+appliqué à la copie déposée, dans le navigateur, et le fichier
+`Medabots - Metabee (Europe) [FR].gba` (16 Mio) sort par une URL `blob:`.
+Éprouvé dans Playwright : le fichier téléchargé est identique au bit près à
+une application du même patch sous Node. **Le site ne sert toujours aucune
+ROM** — la demande initiale était de la mettre en téléchargement, refusée,
+et c'est cette forme-là qui a été livrée. Règle inscrite dans `CLAUDE.md`.
 
-**La ROM traduite fait 16 Mio, et c'est éprouvé.** Les 48 Kio d'espace libre
-d'origine ne suffisaient plus ; `reinserer.mjs` étend en `0x00` à chaque
-construction traduite, jamais en mode identité. Ce qui l'établit : rien dans
-le binaire ne référence sa propre fin ; le jeu démarre dans mGBA sur la ROM
-étendue ; un marqueur écrit à `0x800100` et `0xFFFF00` se relit à travers le
-bus par le stub GDB, alors qu'au-delà de 16 Mio le stub rend le motif de bus
-ouvert. Le patch BPS encode les 8 Mio ajoutés en 10 octets (`TargetCopy`), et
-l'applicateur du site reconstruit la ROM de 16 Mio à l'identique — vérifié en
-important le vrai `patch.ts` sous Node 24. Détail : `docs/format.md` § 5 quater.
-
-**Le relogement a franchi les 8 Mio.** 1 209 entrées relogées, 88 993 octets,
-et il reste 8 347 627 octets libres sur 8 436 620. **Aucune entrée relogée
-au-delà de `0x800000` n'a encore été vue à l'écran** — c'est le seul point du
-§ 5 quater de `docs/format.md` marqué « non établi ».
-
-**`outils/largeur.mjs`** mesure chaque ligne en pixels (plafond 212 px,
-mesuré) et la structure des boîtes contre l'original. Le cinquième chapitre
-culmine à 187 px sur 933 lignes (`0x47B5B0 @0035`), aucune boîte n'a gagné de
-ligne. Les chapitres précédents culminaient à 180 et 185 px.
+**Le relogement au-delà de 8 Mio n'a toujours pas été vu à l'écran.** C'est le
+seul point du § 5 quater de `docs/format.md` marqué « non établi ». Deux
+témoins sans progression : la scène d'ouverture (`0x48698C @0000`) et
+l'inventaire (`0x483ED8 @0000`). Le pilotage automatique de mGBA a échoué le
+29/08 (démo de 55 s, Start injecté sans effet) — **c'est à Yann, à la
+manette** : lancer `mGBA.exe travail/medabots-fr.gba`, nouvelle partie, lire.
 
 ## La prochaine action
 
-**Voir à l'écran un texte relogé au-delà de 8 Mio — à la manette.** Deux
-témoins ne demandent aucune progression : **la scène d'ouverture**
-(`0x48698C @0000`, « BA DA DA DA BOOOM !! », juste après « nouvelle partie »)
-et **l'inventaire** (`0x483ED8 @0000`, « Plan de la ville »). Lancer
-`mGBA.exe travail/medabots-fr.gba`, Start, nouvelle partie, lire. Une fois vu,
-passer le § 5 quater de `docs/format.md` en « établi ».
-
-Ce qui a échoué le 29/08 : le pilotage automatique. Le jeu joue une démo
-(DISPCNT `0x1E60`) et n'affiche l'écran-titre (`0x1761`) qu'à ~55 s ; en
-l'attendant par GDB puis en envoyant Start par `outils/fenetre.ps1`, le script
-annonce « touches envoyees » mais la capture de fenêtre montre toujours
-« PRESS START ». Le premier dialogue n'est pointé par aucun pointeur, même non
-aligné, donc pas de témoin possible par redirection. Une manette bat une heure
-de plus là-dessus.
-
-**Puis la table suivante par ordre d'adresse : `0x47B9C0`, 263 entrées.**
-Même méthode — lire toute la table, traduire d'un bloc, puis :
+**Traduire la table `0x47BDE0` (281 entrées), par ordre d'adresse.** Lire
+toute la table, traduire d'un bloc, puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47B9C0.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47BDE0.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
-cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod
+cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
 ```
 
-Puis mettre `site/src/donnees/avancement.ts` à jour — `ENTREES.traduites` **et**
-le lot « Histoire principale », dont le `detail` et le `part` se recalculent sur
-le narratif réel.
+Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
+« Histoire principale » : compte de dialogues, tables restantes, `part` =
+dialogues traduits / total des dialogues). Vérifier le déploiement par le
+SHA-1 du patch en ligne, pas en supposant.
 
-**Avant de commencer, faire `git log -1` et `git status`.** Le 29/08, deux
-sessions ont traduit `0x47B5B0` en même temps sans le savoir : la seconde a lu
-un arbre de travail à moitié écrit, en a conclu qu'un lot avait été oublié, et
-a failli inscrire ce reproche dans l'historique. Les deux commits se sont
-révélés complémentaires, mais c'était de la chance. Un dépôt qui bouge sous les
-pieds ne se devine pas — il se regarde.
+Restent après elle, dans l'ordre : `0x47C248`, `0x47C64C`, `0x47CD7C`,
+`0x47D124` (293), `0x47D5C0`, `0x47DAD0`, puis `0x4144B4`.
 
 **Compter les entrées d'une table ne dit pas combien il y a à traduire.**
 `0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
@@ -94,18 +66,18 @@ pieds ne se devine pas — il se regarde.
 
 ### Les 480 Medaparts : à trancher avant de s'y mettre
 
-Analyse faite : **480 entrées réelles, aucun emplacement de débogage, mais 347 mots
-finaux distincts** — les 22 plus fréquents ne couvrent que 25 % du total. Aucune
-régularité exploitable : c'est 480 décisions individuelles.
+Analyse faite : **480 entrées réelles, aucun emplacement de débogage, mais 347
+mots finaux distincts** — les 22 plus fréquents ne couvrent que 25 % du total.
+Aucune régularité exploitable : c'est 480 décisions individuelles.
 
-Et ces noms sont adossés aux modèles de Medabots, dont les noms restent en anglais
-par décision. Traduire « CHERUB BODY » en « CORPS CHÉRUBIN » pendant que le Medabot
-s'appelle toujours « CHERUB » crée une incohérence à l'écran.
+Et ces noms sont adossés aux modèles de Medabots, dont les noms restent en
+anglais par décision. Traduire « CHERUB BODY » en « CORPS CHÉRUBIN » pendant
+que le Medabot s'appelle toujours « CHERUB » crée une incohérence à l'écran.
 
 **Recommandation : les laisser en anglais**, comme les noms de Medabots — mais
 c'est un choix de produit qui appartient à Yann, pas une évidence technique.
-Les dialogues du chapitre 2 les citent tels quels (« BATTLE RIFLE »,
-« PSYCHO MISSILE », « HEAVYWEIGHTER »), ce qui va dans ce sens.
+Le chapitre 6 les cite tels quels (COCKPIT, STABILIZER, WING, JET ENGINE pour
+assembler le Femjet), ce qui va dans ce sens.
 
 **Ne pas toucher — vérifié, ce sont des emplacements de débogage ou des
 identifiants :**
@@ -120,37 +92,24 @@ identifiants :**
 
 ## Décidé cette séance
 
-- **La ROM traduite fait 16 Mio, toujours en mode traduction.** Une taille qui
-  changerait à la première table trop grosse serait une surprise de plus. Le
-  bourrage ajouté est en `0x00`, comme celui d'origine.
-- **Vocabulaire du chapitre 2.** Mont Odoro, marais d'Odoro, étang d'Odoro, la
-  sorcière de la montagne, le Centre de recherche, le Dr Aki, « Medabots
-  Hebdo », le passeur à 1 £ (le glyphe `£` existe, `0x4C`). Kannie dit « mon
-  petit » et « Hi hi hi » ; les Rubberobos crient « Robo repli ! ». Types
-  d'attaque selon la table `3B66EC` : anti-air, anti-mer, gravité.
-- **Vocabulaire du chapitre 5.** Les Ruines antiques, le téléporteur, le
-  royaume de Kodine, le temple de Kodine, la salle d'invocation, le champ de
-  fleurs, le Grand Héros, le Chambellan, l'Oracle Jyozo, le Chancelier Ginjyo,
-  la pierre Fiyun, la Pierre sacrée, les Medabots Cauchemar, Magie
-  Arc-en-ciel. La reine Margarita, cinq ans, parle d'elle à la troisième
-  personne comme dans l'original. Blue Hawaii, Cafe Ole et Gillgirl restent
-  tels quels. `{45}` est le locuteur du Chambellan, conservé.
-- **Vocabulaire du chapitre 4.** Le sous-chef, « Chef Médaille », la salle de
-  recherche du Mal, l'expérience du soda, la Medabot Corporation, la série
-  Élémentaire, la plateforme de combat, le snack, la Reine des fourmis,
-  Sidecar, la statue du noble chien Bonaparte, l'Académie Woodrose. Le gag du
-  mot de passe est adapté sur des chansons françaises : « Montagne ! / Elle
-  descend de la montagne à cheval ! » et « Rivière ! / Bateau sur l'eau, la
-  rivière au bord de l'eau », refrain « Ohé ohé ».
-- **Vocabulaire du chapitre 3.** L'île Medabot, le site Surprise, la salle du
-  tournoi, l'infirmerie, la salle d'arcade, la Fédération Medabot,
-  Mademoiselle Sammy, Mademoiselle Nae, le Hopmart, Rappy. Shrimplips remplace
-  ses « r » par des « w » (« wecwuter », « Gwand-pèwe ») ; les étrangers du
-  tournoi parlent un français cassé (« Moi pas perdre ! »). Les noms
-  d'attaques étrangères restent en anglais (Rolling Needle Bomber).
-- **Vocabulaire du chapitre 1**, rappel : le directeur, le jeune maître,
-  l'école privée Rosewood, le soutien / le rattrapage, détraqué. Espace avant
-  `!` `?` `:`, et le nom du joueur `{F9} ` suivi de ` !` — deux espaces.
+- **La ROM traduite se télécharge fabriquée sur l'appareil, jamais servie.**
+  Yann a demandé « mets la ROM disponible en téléchargement » ; héberger le
+  fichier est une redistribution d'œuvre sous droits, et c'est la règle
+  fondatrice du projet. Le bouton donne le même résultat à qui possède le
+  jeu, sans que le serveur envoie autre chose que le patch. Un seul module
+  construit la ROM patchée, pour le lecteur comme pour le fichier :
+  `site/src/lib/romTraduite.ts`.
+- **Vocabulaire du chapitre 6.** La forteresse volante Fiyun, la pierre
+  Fiyun, le Limiteur, le Centre de recherche, la Medabot Corporation, le
+  repaire secret, la statue de Bonaparte, la place de la gare, la serre,
+  l'usine d'huile, la capsule de secours, l'huile « Spéciale Dr Meta-Evil ».
+  Les objets prennent le nom de `483ED8.txt` : « Ailes du vent », « Pile au
+  citron », « Huile de luxe ». Madame Amazake, Grand-père (Nae parlant du
+  Dr Aki), la résidence Jyunmai. Les Medabots de Fiyun crient
+  `{F8}Graaah !!{F8}` ; Armond rit « Gya ha ha ! » comme au chapitre 1 ;
+  « Meda-mush » devient « de la bouillie de Medabot ».
+- **Vocabulaire des chapitres 1 à 5** : voir l'en-tête de chaque fichier
+  `traduction/47xxxx.txt`, qui le fixe au moment où il est traduit.
 - **La règle des 40 % de contexte ne s'applique pas à ce projet.** Demandé par
   Yann le 29/08. Ce qui reste dû : `REPRISE.md` à jour dans le dernier commit,
   rien de non commité en fin de séance.
@@ -159,10 +118,16 @@ identifiants :**
 
 ## À ne pas refaire
 
+- **`vite preview` n'écoute qu'en IPv6 sur ce poste** : `http://localhost:4173`
+  répond `ERR_CONNECTION_REFUSED` depuis Playwright alors que le serveur
+  tourne. Ouvrir `http://[::1]:4173/`.
+- **Laisser le fichier téléchargé par un test Playwright.** Il atterrit dans
+  `Documents\Git\.playwright-mcp\`, c'est une ROM : la supprimer après la
+  mesure. Les captures d'écran, elles, tombent à la racine de `Documents\Git`.
+- **Supposer qu'un `vercel deploy` a livré.** Vérifier par le SHA-1 du patch
+  en ligne (`curl … | sha1sum`) et par `vercel ls medabots-fr`.
 - **`mgba-sdl.exe -g` pour le stub GDB.** Le processus reste vivant, titre
   « mGBA », et n'écoute sur aucun port. Seul `mGBA.exe -g` (Qt) ouvre le 2345.
-  Le titre « Une erreur est survenue » pendant le chargement est la fausse
-  alerte déjà connue.
 - **Prouver un mappage avec des zéros.** La zone étendue est à zéro, et le bus
   ouvert vaut aussi zéro à `0x08800000` exactement. Écrire un marqueur non nul
   et le relire ; lire au-delà de la taille pour voir le motif de bus ouvert.
@@ -178,8 +143,6 @@ identifiants :**
   aussi `SPI_SETFOREGROUNDLOCKTIMEOUT` à 0 et une frappe à vide.
 - **Redimensionner la fenêtre mGBA trop tôt.** `SetWindowPos` pendant le
   chargement est ignoré sans un mot.
-- **Chercher la police, puis planifier de dessiner des accents.** REGARDER CE
-  QU'IL Y A JUSTE APRÈS LA DONNÉE QU'ON VIENT DE TROUVER.
 - **Croire une table sur sa largeur déclarée.** Les typographes ont serré la
   ponctuation à la main.
 - **Un garde d'exécution qui teste `process.argv[2]`.** Comparer

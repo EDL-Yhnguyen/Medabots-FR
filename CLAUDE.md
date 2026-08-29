@@ -71,6 +71,15 @@ l'émulateur par une URL `blob:`.
 serveur, et un serveur qui ne sert rien est un serveur de trop. Déploiement
 statique sur Vercel, projet `medabots-fr`.
 
+**La ROM traduite se télécharge depuis le site — fabriquée sur l'appareil, jamais
+servie.** Demandé le 29/08/2026 (« mets la ROM disponible en téléchargement »),
+refusé sous cette forme, livré sous celle-ci : le bouton « Télécharger la ROM
+traduite » applique le patch à la copie déposée, dans le navigateur, et remet le
+fichier par une URL `blob:`. Sans ROM déposée, il n'existe pas. C'est la même
+règle que le lecteur, pas une exception : le serveur n'envoie que le patch. Un
+seul module construit la ROM patchée pour les deux usages,
+`site/src/lib/romTraduite.ts`.
+
 **IndexedDB, pas localStorage** : une ROM GBA fait 8 Mio de binaire, localStorage
 ne stocke que du texte et plafonne à quelques mégaoctets.
 
