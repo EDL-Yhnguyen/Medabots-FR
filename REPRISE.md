@@ -7,13 +7,21 @@ Dernière séance : 2026-08-29
 
 ## Où on en est
 
-**Quatre chapitres sont en français : 1 850 entrées sur 5 933.** Table
+**Cinq chapitres sont en français : 2 109 entrées sur 5 933.** Table
 `0x479F0C` (237 dialogues, le vol d'Eggy et la prise d'otages de Rosewood),
 `0x47A2C4` (303, le mont Odoro, Kannie, Yanagi, le Phantom Renegade),
 `0x47A784` (323, l'île Medabot, le tournoi du bloc B, le Dr Armond, la maison
-hantée), puis `0x47B110` (295, les enfants disparus, le repaire des égouts, le
-mot de passe chanté, l'Académie Woodrose, l'élection du sous-chef). Chaîne au
-vert, patch reconstruit et vérifié par application, recopié sur le site.
+hantée), `0x47B110` (295, les enfants disparus, le repaire des égouts, le
+mot de passe chanté, l'Académie Woodrose, l'élection du sous-chef), puis
+`0x47B5B0` (259, les Ruines antiques, le téléporteur, le royaume sous-marin de
+Kodine, la reine Margarita, Blue Hawaii). Chaîne au vert, patch reconstruit et
+vérifié par application, recopié sur le site.
+
+**Le narratif est mesuré, pas estimé : 1 429 entrées sur 3 887, soit 36,8 %.**
+Le compte se refait à tout moment en croisant `travail/pointeurs.json` avec les
+fichiers de `traduction/` — c'est ce chiffre qui alimente le lot « Histoire
+principale » du site, et non une impression. Le `part` affiché, 0,37, en vient
+directement.
 
 **La ROM traduite fait 16 Mio, et c'est éprouvé.** Les 48 Kio d'espace libre
 d'origine ne suffisaient plus ; `reinserer.mjs` étend en `0x00` à chaque
@@ -25,15 +33,15 @@ ouvert. Le patch BPS encode les 8 Mio ajoutés en 10 octets (`TargetCopy`), et
 l'applicateur du site reconstruit la ROM de 16 Mio à l'identique — vérifié en
 important le vrai `patch.ts` sous Node 24. Détail : `docs/format.md` § 5 quater.
 
-**Le relogement a franchi les 8 Mio.** 893 entrées relogées, 57 332 octets,
-dont 7 709 au-delà de `0x800000` (jusqu'à `0x802457`). Six tables y ont des
-entrées : `0x47A784` (61), `0x483ED8` (32), `0x47E388` (28), `0x485F88` (20),
-`0x48521C` (12), `0x48698C` (10). **Aucune n'a encore été vue à l'écran** —
-c'est le seul point du § 5 quater de `docs/format.md` marqué « non établi ».
+**Le relogement a franchi les 8 Mio.** 1 209 entrées relogées, 88 993 octets,
+et il reste 8 347 627 octets libres sur 8 436 620. **Aucune entrée relogée
+au-delà de `0x800000` n'a encore été vue à l'écran** — c'est le seul point du
+§ 5 quater de `docs/format.md` marqué « non établi ».
 
 **`outils/largeur.mjs`** mesure chaque ligne en pixels (plafond 212 px,
-mesuré) et la structure des boîtes contre l'original. Les deux chapitres
-culminent à 180 et 185 px, aucune boîte n'a gagné de ligne.
+mesuré) et la structure des boîtes contre l'original. Le cinquième chapitre
+culmine à 187 px sur 933 lignes (`0x47B5B0 @0035`), aucune boîte n'a gagné de
+ligne. Les chapitres précédents culminaient à 180 et 185 px.
 
 ## La prochaine action
 
@@ -52,18 +60,26 @@ annonce « touches envoyees » mais la capture de fenêtre montre toujours
 aligné, donc pas de témoin possible par redirection. Une manette bat une heure
 de plus là-dessus.
 
-**Puis la table suivante par ordre d'adresse : `0x47B5B0`, 259 entrées.**
+**Puis la table suivante par ordre d'adresse : `0x47B9C0`, 263 entrées.**
 Même méthode — lire toute la table, traduire d'un bloc, puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47B5B0.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47B9C0.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod
 ```
 
-Puis mettre `site/src/donnees/avancement.ts` à jour (`ENTREES.traduites` et le
-lot « Histoire principale »).
+Puis mettre `site/src/donnees/avancement.ts` à jour — `ENTREES.traduites` **et**
+le lot « Histoire principale », dont le `detail` et le `part` se recalculent sur
+le narratif réel.
+
+**Avant de commencer, faire `git log -1` et `git status`.** Le 29/08, deux
+sessions ont traduit `0x47B5B0` en même temps sans le savoir : la seconde a lu
+un arbre de travail à moitié écrit, en a conclu qu'un lot avait été oublié, et
+a failli inscrire ce reproche dans l'historique. Les deux commits se sont
+révélés complémentaires, mais c'était de la chance. Un dépôt qui bouge sous les
+pieds ne se devine pas — il se regarde.
 
 **Compter les entrées d'une table ne dit pas combien il y a à traduire.**
 `0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
@@ -112,6 +128,13 @@ identifiants :**
   Hebdo », le passeur à 1 £ (le glyphe `£` existe, `0x4C`). Kannie dit « mon
   petit » et « Hi hi hi » ; les Rubberobos crient « Robo repli ! ». Types
   d'attaque selon la table `3B66EC` : anti-air, anti-mer, gravité.
+- **Vocabulaire du chapitre 5.** Les Ruines antiques, le téléporteur, le
+  royaume de Kodine, le temple de Kodine, la salle d'invocation, le champ de
+  fleurs, le Grand Héros, le Chambellan, l'Oracle Jyozo, le Chancelier Ginjyo,
+  la pierre Fiyun, la Pierre sacrée, les Medabots Cauchemar, Magie
+  Arc-en-ciel. La reine Margarita, cinq ans, parle d'elle à la troisième
+  personne comme dans l'original. Blue Hawaii, Cafe Ole et Gillgirl restent
+  tels quels. `{45}` est le locuteur du Chambellan, conservé.
 - **Vocabulaire du chapitre 4.** Le sous-chef, « Chef Médaille », la salle de
   recherche du Mal, l'expérience du soda, la Medabot Corporation, la série
   Élémentaire, la plateforme de combat, le snack, la Reine des fourmis,
