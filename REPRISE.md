@@ -17,6 +17,24 @@ l'huile « Spéciale Dr Meta-Evil », le Limiteur). Chaîne au vert, patch
 reconstruit (198 611 octets) et vérifié par application, **déployé** : le
 patch servi en ligne a le même SHA-1 que `patch/medabots-fr.bps`.
 
+**Le narratif est mesuré, pas estimé : 1 680 dialogues sur 3 875, soit
+43,4 %.** Le compte se refait à tout moment : nombre de lignes `@` dans
+`travail/script/<table>.txt` contre `traduction/<table>.txt`, sur les
+quatorze tables de dialogue (`0x479F0C` à `0x47DAD0`, plus `0x4144B4`).
+C'est ce chiffre qui donne le `part` du lot « Histoire principale » (0,43),
+pas une impression.
+
+**Relogement après le chapitre 6** : 1 352 entrées relogées, 100 948 octets ;
+il reste 8 335 672 octets libres sur 8 436 620.
+
+**Deux sessions ont travaillé en même temps dans ce dépôt le 29/08**, sans
+aucun moyen de se voir : toutes deux ont traduit `0x47B5B0`, et leurs
+résultats se sont trouvés identiques (même patch, mêmes chiffres) — de la
+chance, pas de la méthode. La seconde a ensuite écrit un `REPRISE.md`
+(`7de578c`) que la première a écrasé sans le lire (`0609ada`) ; ses apports
+sont réintégrés ici. **Les deux sessions écrivent aussi dans la même mémoire
+de Claude** (`~/.claude/projects/…/memory/`).
+
 **Le site remet la ROM traduite en fichier depuis le 29/08.** Bouton
 « Télécharger la ROM traduite » dans la carte « Prête à lancer » : le patch est
 appliqué à la copie déposée, dans le navigateur, et le fichier
@@ -34,6 +52,14 @@ l'inventaire (`0x483ED8 @0000`). Le pilotage automatique de mGBA a échoué le
 manette** : lancer `mGBA.exe travail/medabots-fr.gba`, nouvelle partie, lire.
 
 ## La prochaine action
+
+**Avant de commencer, faire `git log -1` et `git status` — et les relire
+avant chaque commit.** Le 29/08, deux sessions ont traduit `0x47B5B0` en même
+temps sans le savoir : la seconde a lu un arbre de travail à moitié écrit,
+en a conclu qu'un lot avait été oublié, et a failli inscrire ce reproche
+dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
+se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
+**cette table est prise** : passer à la suivante.
 
 **Traduire la table `0x47BDE0` (281 entrées), par ordre d'adresse.** Lire
 toute la table, traduire d'un bloc, puis :
@@ -108,7 +134,14 @@ identifiants :**
   Dr Aki), la résidence Jyunmai. Les Medabots de Fiyun crient
   `{F8}Graaah !!{F8}` ; Armond rit « Gya ha ha ! » comme au chapitre 1 ;
   « Meda-mush » devient « de la bouillie de Medabot ».
-- **Vocabulaire des chapitres 1 à 5** : voir l'en-tête de chaque fichier
+- **Vocabulaire du chapitre 5.** Les Ruines antiques, le téléporteur, le
+  royaume de Kodine, le temple de Kodine, la salle d'invocation, le champ de
+  fleurs, le Grand Héros, le Chambellan, l'Oracle Jyozo, le Chancelier Ginjyo,
+  la pierre Fiyun, la Pierre sacrée, les Medabots Cauchemar, Magie
+  Arc-en-ciel. La reine Margarita, cinq ans, parle d'elle à la troisième
+  personne comme dans l'original. Blue Hawaii, Cafe Ole et Gillgirl restent
+  tels quels. `{45}` est le locuteur du Chambellan, conservé.
+- **Vocabulaire des chapitres 1 à 4** : voir l'en-tête de chaque fichier
   `traduction/47xxxx.txt`, qui le fixe au moment où il est traduit.
 - **La règle des 40 % de contexte ne s'applique pas à ce projet.** Demandé par
   Yann le 29/08. Ce qui reste dû : `REPRISE.md` à jour dans le dernier commit,
