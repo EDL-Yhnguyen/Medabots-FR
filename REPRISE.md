@@ -1,34 +1,37 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-08-29 · dernier commit : `5552df1` Chapitre 7: patch
-reconstruit, site a 2 653 entrees, narratif 1 961/3 875
+Dernière séance : 2026-08-29 · dernier commit : `1a25e49` Chapitre 8: patch
+reconstruit, site a 2 909 entrees, narratif 2 217/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Sept chapitres sont en français : 2 653 entrées sur 5 933.** Tables
+**Huit chapitres sont en français : 2 909 entrées sur 5 933.** Tables
 `0x479F0C` (237, le vol d'Eggy et Rosewood), `0x47A2C4` (303, le mont Odoro),
 `0x47A784` (323, l'île Medabot), `0x47B110` (295, les enfants disparus et les
 égouts), `0x47B5B0` (259, les Ruines antiques et le royaume de Kodine),
 `0x47B9C0` (263, le faux rendez-vous et la forteresse volante Fiyun — Harvey,
-l'huile « Spéciale Dr Meta-Evil », le Limiteur), puis `0x47BDE0` (281, la
-lettre de Shrimplips, le retour sur l'île Medabot, le château de Milky, le
-Capitaine et le lieutenant Tokkuri, la cantine des Rubberobos, les Screws et
-les quatre mots-clés, Squidguts). Chaîne au vert, patch reconstruit (225 540
-octets) et vérifié par application, **déployé** : le patch servi en ligne a
-le même SHA-1 que `patch/medabots-fr.bps`.
+l'huile « Spéciale Dr Meta-Evil », le Limiteur), `0x47BDE0` (281, la lettre
+de Shrimplips, le retour sur l'île Medabot, le château de Milky, le Capitaine
+et le lieutenant Tokkuri, la cantine des Rubberobos, les Screws et les quatre
+mots-clés, Squidguts), puis `0x47C248` (256, l'après-Fiyun : Salty, le Rallye
+Partsun et les Medaparts du Mega-Emperor, le téléachat, les indices de
+Medashop, Shiratama, le professeur de musique, Kannie et Natsuko, les
+Medaroad Race, Kawamura, le fan-club de Karin). Chaîne au vert, patch
+reconstruit (250 065 octets) et vérifié par application, **déployé** : le
+patch servi en ligne a le même SHA-1 que `patch/medabots-fr.bps`.
 
-**Le narratif est mesuré, pas estimé : 1 961 dialogues sur 3 875, soit
-50,6 %.** Le compte se refait à tout moment : nombre de lignes `@` dans
+**Le narratif est mesuré, pas estimé : 2 217 dialogues sur 3 875, soit
+57,2 %.** Le compte se refait à tout moment : nombre de lignes `@` dans
 `travail/script/<table>.txt` contre `traduction/<table>.txt`, sur les
 quatorze tables de dialogue (`0x479F0C` à `0x47DAD0`, plus `0x4144B4`).
-C'est ce chiffre qui donne le `part` du lot « Histoire principale » (0,51),
+C'est ce chiffre qui donne le `part` du lot « Histoire principale » (0,57),
 pas une impression.
 
-**Relogement après le chapitre 7** : 1 490 entrées relogées, 115 717 octets ;
-il reste 8 320 903 octets libres sur 8 436 620.
+**Relogement après le chapitre 8** : 1 605 entrées relogées, 127 134 octets ;
+il reste 8 309 486 octets libres sur 8 436 620.
 
 **Deux sessions ont travaillé en même temps dans ce dépôt le 29/08**, sans
 aucun moyen de se voir : toutes deux ont traduit `0x47B5B0`, et leurs
@@ -64,12 +67,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47C248` (256 entrées), par ordre d'adresse.** Lire
+**Traduire la table `0x47C64C` (277 entrées), par ordre d'adresse.** Lire
 toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
 (pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47C248.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47C64C.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -80,8 +83,14 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Restent après elle, dans l'ordre : `0x47C64C` (277), `0x47CD7C` (233),
-`0x47D124` (293), `0x47D5C0` (323), `0x47DAD0` (276), puis `0x4144B4` (256).
+Restent après elle, dans l'ordre : `0x47CD7C` (233), `0x47D124` (293),
+`0x47D5C0` (323), `0x47DAD0` (276), puis `0x4144B4` (256).
+
+**Avant d'employer un signe, vérifier qu'il a un glyphe.** Le chapitre 8 a
+failli partir avec des `°` (« n° 128 ») : jamais employé, absent de
+`docs/format.md`, remplacé par « numéro ». Les noms de médailles et d'objets
+se prennent dans `traduction/3B6590.txt` et `483ED8.txt` — « PHÉNIX », pas
+« PHOENIX ».
 
 **Compter les entrées d'une table ne dit pas combien il y a à traduire.**
 `0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
@@ -129,6 +138,15 @@ identifiants :**
   jeu, sans que le serveur envoie autre chose que le patch. Un seul module
   construit la ROM patchée, pour le lecteur comme pour le fichier :
   `site/src/lib/romTraduite.ts`.
+- **Vocabulaire du chapitre 8.** Le Rallye Partsun et le badge Partsun, le
+  grand magasin (Medashop, Medamall), "Téléachat", le musée Medabot, la salle
+  de musique, l'école publique Riverview, le lieu de réunion des Rubberobos,
+  le parc Ninja et la maison Ninja, le fan-club de Karin (membre numéro 128),
+  Monsieur l'Arbitre, le capitaine Awamori, Mademoiselle Natsuko. Sloan dit
+  « Medaslips » pour « Medaparts » (Medapants). Salty : « Ouaf ouaf ! »,
+  halètement en italique, « Reuse ici » pour « Rig rere ». La médaille
+  « PHÉNIX » suit la liste des médailles. La livre £ (glyphe `0x4C`) est
+  gardée : 5 £, 50 £, 5000 £.
 - **Vocabulaire du chapitre 7.** Le Capitaine (des Select Corps) et le
   lieutenant Tokkuri, les Select 3, la Phantom Lady, les Screws — Samantha la
   Vis cruciforme, Spyke la Vis plate, Sloan le Boulon, « la Chef » quand ils
