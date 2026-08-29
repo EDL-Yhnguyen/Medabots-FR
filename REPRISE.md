@@ -7,10 +7,11 @@ Dernière séance : 2026-08-29
 
 ## Où on en est
 
-**Deux chapitres sont en français : 1 232 entrées sur 5 933.** Table
-`0x479F0C` (237 dialogues, le vol d'Eggy et la prise d'otages de Rosewood) puis
-`0x47A2C4` (303 dialogues, le mont Odoro, Kannie, Yanagi, le Phantom Renegade).
-Chaîne au vert, patch reconstruit, vérifié par application et déployé.
+**Trois chapitres sont en français : 1 555 entrées sur 5 933.** Table
+`0x479F0C` (237 dialogues, le vol d'Eggy et la prise d'otages de Rosewood),
+`0x47A2C4` (303, le mont Odoro, Kannie, Yanagi, le Phantom Renegade), puis
+`0x47A784` (323, l'île Medabot, le tournoi du bloc B, le Dr Armond, la maison
+hantée). Chaîne au vert, patch reconstruit, vérifié par application et déployé.
 
 **La ROM traduite fait 16 Mio, et c'est éprouvé.** Les 48 Kio d'espace libre
 d'origine ne suffisaient plus ; `reinserer.mjs` étend en `0x00` à chaque
@@ -22,10 +23,11 @@ ouvert. Le patch BPS encode les 8 Mio ajoutés en 10 octets (`TargetCopy`), et
 l'applicateur du site reconstruit la ROM de 16 Mio à l'identique — vérifié en
 important le vrai `patch.ts` sous Node 24. Détail : `docs/format.md` § 5 quater.
 
-**Les 725 entrées relogées tiennent encore dans les 48 Kio d'origine**
-(43 544 octets). La table suivante fera franchir la frontière des 8 Mio à du
-texte traduit — ce sera la première fois qu'un dialogue s'affiche depuis la
-zone étendue.
+**Le relogement a franchi les 8 Mio.** 893 entrées relogées, 57 332 octets,
+dont 7 709 au-delà de `0x800000` (jusqu'à `0x802457`). Six tables y ont des
+entrées : `0x47A784` (61), `0x483ED8` (32), `0x47E388` (28), `0x485F88` (20),
+`0x48521C` (12), `0x48698C` (10). **Aucune n'a encore été vue à l'écran** —
+c'est le seul point du § 5 quater de `docs/format.md` marqué « non établi ».
 
 **`outils/largeur.mjs`** mesure chaque ligne en pixels (plafond 212 px,
 mesuré) et la structure des boîtes contre l'original. Les deux chapitres
@@ -33,11 +35,20 @@ culminent à 180 et 185 px, aucune boîte n'a gagné de ligne.
 
 ## La prochaine action
 
-**Traduire la table suivante par ordre d'adresse : `0x47A784`, 323 entrées.**
+**Voir à l'écran un texte relogé au-delà de 8 Mio.** Le témoin le plus
+accessible : `0x47E388 @0000`, « Vous ne pouvez plus rien porter ! », le
+message d'équipement — il s'affiche dès qu'on surcharge un Medabot dans le
+menu, sans avancer dans l'histoire. Il faut une sauvegarde ou une partie menée
+jusqu'au premier menu d'équipement, `mGBA.exe -g travail/medabots-fr.gba`, puis
+`outils/ecran.mjs` sur un dump VRAM pris par le stub GDB (`outils/gdb.mjs`,
+`lire(0x06000000, 0x18000)` + IO + palette, comme dans `banc-16mio`). Une fois
+vu, passer le § 5 quater de `docs/format.md` en « établi ».
+
+**Puis la table suivante par ordre d'adresse : `0x47B110`, 295 entrées.**
 Même méthode — lire toute la table, traduire d'un bloc, puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47A784.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47B110.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod
@@ -45,12 +56,6 @@ cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel
 
 Puis mettre `site/src/donnees/avancement.ts` à jour (`ENTREES.traduites` et le
 lot « Histoire principale »).
-
-**Cette table fera franchir les 8 Mio au relogement.** Après l'avoir insérée,
-vérifier à l'écran qu'un de ses dialogues relogés au-delà de `0x800000`
-s'affiche — c'est le seul point du § 5 quater encore marqué « non établi ».
-`mGBA.exe -g` + `outils/chasse-dialogue.mjs` ou une capture VRAM par
-`outils/ecran.mjs`.
 
 **Compter les entrées d'une table ne dit pas combien il y a à traduire.**
 `0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
@@ -99,6 +104,12 @@ identifiants :**
   Hebdo », le passeur à 1 £ (le glyphe `£` existe, `0x4C`). Kannie dit « mon
   petit » et « Hi hi hi » ; les Rubberobos crient « Robo repli ! ». Types
   d'attaque selon la table `3B66EC` : anti-air, anti-mer, gravité.
+- **Vocabulaire du chapitre 3.** L'île Medabot, le site Surprise, la salle du
+  tournoi, l'infirmerie, la salle d'arcade, la Fédération Medabot,
+  Mademoiselle Sammy, Mademoiselle Nae, le Hopmart, Rappy. Shrimplips remplace
+  ses « r » par des « w » (« wecwuter », « Gwand-pèwe ») ; les étrangers du
+  tournoi parlent un français cassé (« Moi pas perdre ! »). Les noms
+  d'attaques étrangères restent en anglais (Rolling Needle Bomber).
 - **Vocabulaire du chapitre 1**, rappel : le directeur, le jeune maître,
   l'école privée Rosewood, le soutien / le rattrapage, détraqué. Espace avant
   `!` `?` `:`, et le nom du joueur `{F9} ` suivi de ` !` — deux espaces.
