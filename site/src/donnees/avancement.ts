@@ -15,7 +15,7 @@
  * d'entrées ne ment pas.
  */
 export const ENTREES = {
-  traduites: 692,
+  traduites: 929,
   total: 5933,
 } as const
 
@@ -46,8 +46,9 @@ export const LOTS: Lot[] = [
   },
   {
     titre: 'Histoire principale',
-    detail: 'Le scénario, de la première scène à la fin.',
-    part: 0,
+    detail:
+      'Le premier chapitre est traduit — le vol d’Eggy, l’école privée Rosewood et la prise d’otages du gang Rubberobo : 237 dialogues. Restent treize tables, soit environ 3 400 entrées.',
+    part: 0.07,
   },
   {
     titre: 'PNJ et contenu secondaire',

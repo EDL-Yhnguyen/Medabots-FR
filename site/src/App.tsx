@@ -1,34 +1,15 @@
 import { useCallback, useState } from 'react'
-import { Barre, Carte, Etiquette, Titre } from './composants/ui'
+import { Barre, Carte, Etiquette, LienExterne, Titre } from './composants/ui'
 import { DepotRom } from './composants/DepotRom'
 import { Emulateur } from './composants/Emulateur'
 import { Compte, useSession } from './composants/Compte'
+import { OuVoirLaSerie } from './composants/OuVoirLaSerie'
 import { Synchro } from './composants/Synchro'
 import { appliquePatch } from './lib/patch'
 import { ENTREES, ETAPES, LOTS } from './donnees/avancement'
 
 const DEPOT = 'https://github.com/EDL-Yhnguyen/Medabots-FR'
 const PATCH = '/medabots-fr.bps'
-
-/** Un lien qui sort du site s'ouvre à côté : installé sur l'écran d'accueil,
-    le site n'a pas de bouton « retour », et partir vers GitHub dans le même
-    onglet ferme le jeu en cours. */
-function LienExterne({
-  href,
-  children,
-  className = '',
-}: {
-  href: string
-  children: React.ReactNode
-  className?: string
-}) {
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-      {children}
-      <span className="sr-only"> (nouvel onglet)</span>
-    </a>
-  )
-}
 
 export default function App() {
   const [romLancee, setRomLancee] = useState<ArrayBuffer | null>(null)
@@ -190,6 +171,8 @@ export default function App() {
             Voir le dépôt sur GitHub <span aria-hidden="true">→</span>
           </LienExterne>
         </Carte>
+
+        <OuVoirLaSerie />
       </main>
 
       <footer className="mt-12 border-t border-trait pt-6 text-sm leading-relaxed text-texte-doux">

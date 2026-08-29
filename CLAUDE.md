@@ -156,3 +156,26 @@ Il est au vert sur 5 933 entrées / 679 381 octets.
 **Le lancer après toute modification d'un outil.** Il a déjà rattrapé une
 régression invisible : changer le rendu de `0x3F` faisait disparaître une table de
 script entière, sans aucun message.
+
+### Traduire des dialogues : deux contraintes que la chaîne ne voit pas
+
+Le repointage règle la longueur en octets. Il ne dit rien de ce qui s'affiche.
+
+```
+node outils/largeur.mjs <rom> traduction/<table>.txt 212 --contre travail/script
+```
+
+- **212 px de large, mesuré.** C'est la ligne anglaise la plus large des treize
+  tables de dialogue, et le jeu l'affiche. Une ligne française plus large
+  déborde de la boîte sans qu'aucun outil ne le signale — l'encodage passe, la
+  réinsertion passe, le test d'identité passe. Ne pas calibrer sur `travail/script`
+  entier : les tables de listes n'ont pas de sauts de ligne et donnent 4 393 px.
+- **Deux lignes par boîte, jamais plus** — sauf là où l'original en avait
+  davantage au même endroit. On ne sait pas mesurer la hauteur de la boîte ;
+  on sait que 3 981 boîtes anglaises ont deux lignes. Ce qui ne rentre pas
+  prend une boîte de plus (`{FC}`), sans risque.
+
+**L'espace libre s'épuise.** Les 48 Kio en fin de ROM (`0x7F4464`) sont le seul
+endroit où le relogement écrit. Après 929 entrées traduites, il en reste 19 Kio ;
+les 3 400 dialogues restants demanderont de l'ordre de 100 Kio. Étendre la ROM
+à 16 Mio est la voie classique — décision à prendre avant la prochaine table.

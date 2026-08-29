@@ -1,0 +1,730 @@
+# Table 0x479F0C — dialogues du premier chapitre (237 entrées)
+#
+# Le vol d'« Eggy » au Medashop, l'école privée Rosewood, Hachiro, la prise
+# d'otages du gang Rubberobo, Seaslug, Squidguts et Gillgirl.
+#
+# {FB} est suivi de TROIS octets — portrait et locuteur. Ils sont recopiés à
+# l'identique depuis l'original : les changer change qui parle à l'écran.
+# {F9} suivi d'un espace est le NOM DU JOUEUR, inséré par le jeu. Conservé.
+# {FF} suivi d'un octet = fin de message. L'espace final s'écrit {00}, sinon
+# n'importe quel éditeur le supprime en silence.
+#
+# Largeur : aucune ligne ne dépasse 212 px, mesuré avec outils/largeur.mjs
+# contre la ligne anglaise la plus large des tables de dialogue. Une boîte n'a
+# jamais plus de deux lignes, sauf là où l'original en avait davantage.
+#
+# Les termes de la franchise restent en anglais : Medabot, Medapart, Robattle,
+# Medafighter, Medawatch, Medashop, Medalink, Rubberobo, Select Corps, ainsi
+# que tous les noms propres.
+#
+
+@0000
+{FB} 7 "Eggy" a été volé.{FC}Qui aurait cru qu'on puisse voler{FD}une chose aussi précieuse ?{FC}On ne va quand même pas{FD}les laisser filer, si ?{FC}{FB}A BLes Medabots ne serviront{FD}jamais le mal !{FF}{00}
+
+@0001
+{FB} 7 Petit, montre-moi un peu{FD}ce que tu sais faire, hein ?{FC}{FB}A AMerci beaucoup, Docteur !{FD}Je ferai de mon mieux !{FC}{FB} 7AJ'ai hâte de voir ça ! Gya ha ha !{FF}{00}
+
+@0002
+{FB} W Quelqu'un a volé un Medabot{FD}extrêmement rare dans cette ville.{FC}Personne d'autre n'avait ce modèle,{FD}on pensait qu'il ferait{FC}une belle publicité pour la boutique.{FD}Et puis on nous l'a volé···{FC}On aurait dû le garder en réserve{FD}au lieu de l'exposer.{FC}{FB}A  À quoi ressemblait le voleur ?{FC}{FB} W C'était une bande de Medabots, mais{FD}un seul membre du gang Rubberobo.{FF}{00}
+
+@0003
+{FB} V Ce voleur de tout à l'heure doit{FD}être un Medafighter très fort.{FC}C'est bien trop malin pour{FD}venir d'un Rubberobo.{FC}Il est bien trop doué pour{FD}un groupe aussi ridicule !{FC}Il y avait quelqu'un comme ça{FD}à l'école privée Rosewood,{FC}mais je ne l'ai pas vu récemment.{FC}{FB}A  L'école privée Rosewood, hein···{FF}{00}
+
+@0004
+{FB} i Depuis quand les Rubberobos{FD}sont-ils aussi malins ?{FC}Ils ne sont plus mignons du tout.{FF}{00}
+
+@0005
+{FB} k Je refuse de croire qu'un voleur{FD}ait pu entrer au Medashop.{FF}{00}
+
+@0006
+{FB}A  Je devrais pouvoir en apprendre{FD}plus sur le gang Rubberobo.{FF}{00}
+
+@0007
+{FB}A  Je vais faire un tour à l'école{FD}privée Rosewood pour l'instant.{FC}J'y trouverai peut-être un indice.{FD}Erika y est peut-être déjà ?{FF}{00}
+
+@0008
+{FB} K {F8}Kof kof{F8}{FD}Je dois attendre ici qu'on m'appelle.{FF}{00}
+
+@0009
+{FB}A HC'est vous !{FC}{FB}A EIl ne manquait plus que ça···{FC}{FB} F C'est comme ça que tu dis bonjour ?{FC}On a entendu parler du gang Rubberobo{FD}et on est venus voir ce qui se passe.{FC}{FB} GCOn va les attraper, et tout le monde{FD}connaîtra les héros de la justice :{FC}les Screws !{FF}{00}
+
+@0010
+{FB}A  En parlant du gang Rubberobo,{FD}ils se sont enfuis par ici ?{FC}{FB} G Hé, ne nous prends pas de haut !{FC}{FB} F Qu'est-ce que tu racontes ?{FC}Si on avait vu les Rubberobos,{FD}on les aurait déjà attrapés.{FC}{FB}A  Je vois.{FD}Bon, je vais y aller alors.{FC}{FB} F N'essaie pas de jouer avec nous.{FC}Tu crois qu'on va te laisser{FD}récolter toute la gloire ?{FC}Spyke, Sloan, on l'attrape.{FF}{00}
+
+@0011
+{FB} GCC'est au tour du Baron !{FC}{FB} K Grrr. Tour.{FF}{00}
+
+@0012
+{FB} D {F8}Chuchote··· chuchote···{F8}{FC}{FB}A HQuoi !?{FC}Même le gang Rubberobo ne{FD}tomberait pas dans un piège si simple.{FC}{FB} DDOn verra bien, non ?{FF}{00}
+
+@0013
+{FB} HBJe vais te transformer en chiffon !{FF}{00}
+
+@0014
+{FB} G Allons-y !{FF}{00}
+
+@0015
+{FB}A  Vous n'êtes que des beaux parleurs.{FC}{FB} FCCe n'est qu'un échauffement pour nous.{FF}{00}
+
+@0016
+{FB}A  Qui ?{FC}{FB} G Tu vas dans notre école et tu ne{FD}sais pas qui est le Baron ?{FC}Bon, écoute bien !{FD}Le Baron est···{FC}{FB}A  Oui oui, on Robattle et c'est tout.{FC}{FB} GDComment oses-tu m'interrompre{FD}quand je parle du grand Baron !{FF}{00}
+
+@0017
+{FB} K Pas mal pour un gamin.{FC}{FB} KABleuaaargh.{FC}{FB} GEBaron, ça va ?{FF}{00}
+
+@0018
+{FB} K D-donne-moi ça···{FC}{FB} G Voilà ton jus de tomate.{FC}{FB} K Du jus··· {F8}Glou glou glou glou···{F8}{FD}J'ai vomi tellement j'étais excité.{FC}{FB} G Baron, on retourne{FD}à l'hôpital ?{FC}{FB} K Pardon. J'ai été inutile.{FC}{FB} F Tu devrais avoir honte,{FD}{F9}  !{FC}T'en prendre à notre pauvre{FD}petit Baron si fragile.{FF}{00}
+
+@0019
+{FB}A EJ'ai perdu un temps fou. Je ferais{FD}mieux de filer à l'école Rosewood.{FF}{00}
+
+@0020
+{FB} B {F9} , par ici !{FF}{00}
+
+@0021
+{FB}A  Qu'est-ce qu'il y a, Erika ?{FC}{FB} B Je viens de voir quelqu'un en tenue{FD}de Rubberobo entrer dans l'école.{FC}Comme je le pensais !{FC}Je savais que le coupable{FD}se cachait dans cette école !{FC}Si je reste encore un peu,{FD}le coupable finira par sortir !{FF}{00}
+
+@0022
+{FB}A  Mais c'est quand même l'œuvre{FD}du gang Rubberobo ?{FC}{FB} B Tout le monde s'est fait avoir{FD}par ce costume de Rubberobo.{FC}Si tu le portais, on appellerait{FD}sûrement les Select Corps{FD}pour t'arrêter.{FC}{FB}A ETu as sans doute raison.{FC}{FB} B Évidemment !{FD}L'apparence ne dit pas grand-chose.{FC}{FB}A  Mais si j'étais le coupable, jamais{FD}je ne porterais une tenue si nulle.{FC}{FB} h Aaah ! Un détraqué !{FF}{00}
+
+@0023
+{FB}A  Même les filles me traitent{FD}de détraqué.{FF}{00}
+
+@0024
+{FB} BBQu'est-ce que tu fais ! Suis-le !{FD}Moi, je vais voir dans l'école.{FF}{00}
+
+@0025
+{FB}A  Erika s'occupe de l'école Rosewood,{FD}et moi je poursuis les Rubberobos.{FF}{00}
+
+@0026
+{FB}A  C'est une impasse.{FC}Il n'y a qu'une maison ici.{FD}Le suspect serait-il à l'intérieur ?{FC}En tout cas, quelle maison !{FC}La plaque indique "Awano".{FC}Il y a un interphone, j'appuie ?{FF}B
+
+@0027
+{FB} J Oui, qui est-ce ?{FC}{FB}A  Excusez-moi···{FC}{FB} J Tiens tiens, seriez-vous un ami{FD}du jeune maître ?{FC}Il vient tout juste de rentrer.{FD}Entrez, entrez donc !{FF}{00}
+
+@0028
+{FB}A  Je voulais juste demander si on{FD}avait vu le gang Rubberobo par ici,{FC}mais autant aller voir{FD}ce qui se passe à l'intérieur.{FF}{00}
+
+@0029
+{FB}A  Laisse tomber.{FF}{00}
+
+@0030
+{FB}A  Allons voir.{FF}{00}
+
+@0031
+{FB} J Par ici, je vous prie.{FF}{00}
+
+@0032
+{FB}A  Euh, la raison de ma venue···{FC}{FB} J Bouh hou hou···{FC}{FB}A HQ-qu'est-ce qui vous arrive ?{FD}Pourquoi pleurez-vous ?{FF}{00}
+
+@0033
+{FB} J Je suis si heureux que le jeune{FD}maître se soit enfin fait un ami !{FC}Ses parents sont toujours occupés{FD}et le jeune maître se sent si seul···{FC}Moi, le majordome, je le sais trop bien.{FC}{FB} J Je vous en prie !{FF}{00}
+
+@0034
+{FB} J À partir d'aujourd'hui !{FF}{00}
+
+@0035
+{FB} J Soyez gentil avec le jeune maître !{FC}{FB}A EQ···quoi ?{FC}{FB} J Bien, je vais chercher{FD}le jeune maître !{FF}{00}
+
+@0036
+{FB}A  Je vais visiter la maison{FD}pendant que le vieux est parti.{FF}{00}
+
+@0037
+{FB}A  Je vais visiter la maison{FD}pendant que le vieux est parti.{FF}{00}
+
+@0038
+{FB} X C'est la chambre des maîtres.{FF}{00}
+
+@0039
+{FB} X Interdit d'entrer sans la permission{FD}du majordome ou du jeune maître.{FF}{00}
+
+@0040
+{FB} X Jeune maître !{FC}Je ne dors pas !{FD}Je ne dors p···zzz.{FF}{00}
+
+@0041
+{FB} X {F8}Frotte frotte !{F8}{FC}La maison, le sol, les murs.{FD}Si tout ne brille pas,{FC}le maître va me gronder.{FF}{00}
+
+@0042
+{FB}A  Une photo de famille.{FD}Au dos : "Hachiro, 6 ans".{FF}{00}
+
+@0043
+{FB}A HAu milieu, c'est···!{FC}C'est ce gamin de l'école Rosewood !{FD}Alors c'est SA maison !{FC}{FB}A BJamais de la vie{FD}je ne serai son ami !{FC}Ce n'est même pas drôle !{FF}{00}
+
+@0044
+{FB}A  Une photo de famille.{FD}Au dos : "Hachiro, 6 ans".{FF}{00}
+
+@0045
+{FB}A  Un Medabot qui a l'air hors de prix.{FC}Il a même reçu une peinture{FD}spéciale.{FF}{00}
+
+@0046
+{FB}A  Des Medaparts qui ont l'air{FD}hors de prix.{FC}Combien ça me coûterait{FD}si je devais les acheter ?{FF}{00}
+
+@0047
+{FB}A  Ce n'est pas ce Medabot si rare{FD}dont le Medashop n'avait qu'un seul ?{FC}Il n'a aucune raison{FD}d'être ici, si ?{FF}{00}
+
+@0048
+{FB}A  C'est "Eggy".{FD}Un Medabot incroyablement rare.{FC}Pourquoi est-il ici···?{FF}{00}
+
+@0049
+{FB} J Le jeune maître ne se sent{FD}pas très bien aujourd'hui.{FC}J'en suis navré, mais auriez-vous{FD}l'obligeance de repasser plus tard ?{FC}{FB}A  Excusez-moi, mais ce Medabot,{FD}là-bas, n'est-il pas très rare ?{FC}Il paraît qu'il n'en existe{FD}qu'un seul dans toute la ville.{FC}{FB} J Désolé, je ne connais rien{FD}aux Medabots···{FC}Veuillez m'excuser, je dois{FD}m'occuper du jeune maître.{FF}{00}
+
+@0050
+{FB}A  Ils cachent quelque chose, on dirait.{FC}Bon, tant pis, je vais voir{FD}ce qu'Erika fabrique{FC}à l'école privée Rosewood.{FF}{00}
+
+@0051
+{FB}A  Hein ? Erika ?{FD}Tu n'étais pas partie devant ?{FF}{00}
+
+@0052
+{FB} B J'enquête sur ces salles{FD}de classe depuis peu.{FC}Il y a un prof vraiment effrayant{FD}qui monte la garde, non ?{FC}Je me suis dit qu'on ferait{FD}mieux d'y aller ensemble.{FC}Au cas où l'un de nous se fait prendre.{FC}{FB}A DJe vois.{FF}{00}
+
+@0053
+{FB} B Au fait, ça a donné quoi ?{FC}Tu as trouvé quelqu'un qui{FD}ressemblait à un Rubberobo ?{FC}{FB}A  Désolé, je l'ai perdu.{FC}{FB} BBTu es vraiment inutile.{FC}{FB}A  J'ai pensé à un truc···{FC}{FB} B Quoi donc ?{FC}{FB}A  Non, rien.{FC}{FB} B Bon, d'accord.{FC}Séparons-nous. Je prends à gauche,{FD}toi à droite, ça marche ?{FF}{00}
+
+@0054
+{FB}A  Je vais en apprendre plus{FD}sur ce Hachiro.{FF}{00}
+
+@0055
+{FB} BBHé ! Attends ! J'ai dit à droite !{FC}À droite ! À droite ! Allez !{FF}{00}
+
+@0056
+{FB} BBHé ! Attends ! J'ai dit à droite !{FC}À droite ! À droite ! Allez !{FF}{00}
+
+@0057
+{FB} V Hein ? Tu as dit Hachiro ?{FC}C'est le gamin le plus riche{FD}de toute l'école Rosewood.{FC}Mais c'est un beau parleur.{FF}{00}
+
+@0058
+{FB} W Qui es-tu ?{FC}Tu dois rester après les cours{FD}pour le soutien ?{FF}{00}
+
+@0059
+{FB} V Cette cour est réservée aux riches.{FC}Les gens du commun n'ont pas{FD}le droit d'y entrer.{FF}{00}
+
+@0060
+{FB} V Cette cour est réservée aux riches.{FC}Les gens du commun n'ont pas{FD}le droit d'y entrer.{FF}{00}
+
+@0061
+{FB} h Tu as dit Hachiro ?{FC}Hachiro, le gamin riche ?{FF}{00}
+
+@0062
+{FB} h Hachiro ?{FD}Il ne m'intéresse pas du tout.{FF}{00}
+
+@0063
+{FB} h Tu enquêtes sur Hachiro ?{FC}Et toi, qui es-tu ?{FF}{00}
+
+@0064
+{FB} V Hachiro ?{FC}C'est le gamin le plus égoïste{FD}et gâté que je connaisse.{FC}Personne ne l'aime !{FC}S'il n'était pas si riche, je doute{FD}que quiconque Robattle avec lui.{FC}Je dois reconnaître, ceci dit,{FD}que c'est un bon Medafighter.{FF}{00}
+
+@0065
+{FB} h Hachiro ?{FC}Pas question ! C'est le pire !{FD}Koji est le meilleur !{FF}{00}
+
+@0066
+{FB} W Hachiro ?{FC}Tu veux dire le fils{FD}du groupe Awano ?{FF}{00}
+
+@0067
+{FB} V Le directeur fouille les affaires{FD}des élèves et confisque toutes{FD}les Medawatch qu'il trouve.{FD}C'est pas sérieux !{FF}{00}
+
+@0068
+{FB} W Les élèves des autres écoles{FD}n'ont rien à faire ici !{FC}Sortez immédiatement !{FF}{00}
+
+@0069
+{FB}A EBon, on ne peut pas aller plus loin.{FC}{FB} BHAaah !{FF}{00}
+
+@0070
+{FB} BBBas les pattes !{FC}{FB} W Encore toi !{FD}Cette fois, dehors pour de bon !{FC}{FB} BFLaissez-moi tranquille !!{FC}{F9} , à toi de jouer !{FC}{FB} W Arrête de me faire perdre mon temps !{FF}{00}
+
+@0071
+{FB}A DGénial ! Je peux monter à l'étage !{FF}{00}
+
+@0072
+{FB} GCAujourd'hui, on ne peut pas perdre !{FD}Pas vrai, chef ?{FC}{FB}A  Vous dites ça à chaque fois.{FF}{00}
+
+@0073
+{FB}A HLe directeur !?{FD}Qu'est-ce que c'est que···{FC}{FB} W Il semble que quelqu'un déguisé{FD}en moi parcourt l'école{FD}en faisant toutes sortes de bêtises.{FC}{FB}A  Je vois, ce faux directeur doit{FD}utiliser Hachiro pour ses sales coups.{FC}{FB} W Que dis-tu d'Awano ?{FC}Et puis, tu n'es pas élève{FD}ici, n'est-ce pas ?{FF}{00}
+
+@0074
+{FB} V Je dois rester après les cours,{FD}et voilà que ça arrive.{FF}{00}
+
+@0075
+{FB} V On ne sait plus ce qui va{FD}se passer dans ce monde.{FF}{00}
+
+@0076
+{FB}A EZut, le prof monte la garde.{FC}Je ne pourrai pas revenir de sitôt.{FF}{00}
+
+@0077
+{FB}A EZut, le prof monte la garde.{FC}Je ne pourrai pas revenir de sitôt.{FF}{00}
+
+@0078
+{FB}A EZut, le prof monte la garde.{FC}Je ne pourrai pas revenir de sitôt.{FF}{00}
+
+@0079
+{FB}A EZut, le prof monte la garde.{FC}Je ne pourrai pas revenir de sitôt.{FF}{00}
+
+@0080
+{FB} V Hé, tu viens d'une autre école ?{FD}C'est plutôt rare.{FC}{FB}A  S-salut.{FC}{FB} V Qu'est-ce qui t'amène ?{FC}{FB}A  Les gens de cette école sont{FD}un peu effrayants···{FC}{FB} V C'est une école privée, mais on{FD}n'est pas tous des snobs.{FC}{FB}A DO-oui, tu as raison.{FF}{00}
+
+@0081
+{FB}A  C'est fermé à clé.{FF}{00}
+
+@0082
+{FB}A  C'est fermé à clé.{FF}{00}
+
+@0083
+{FB} V C'est le club de Robattle.{FC}On y Robattle et on échange des infos{FD}entre Medafighters.{FF}{00}
+
+@0084
+{FB} V Hé, tu aimes les Medabots ?{FC}Hein ? Tu veux en savoir{FD}plus sur Hachiro ?{FC}C'est sans doute la pire{FD}créature de la planète, mais il a{FC}une vraie passion pour les Medabots.{FF}{00}
+
+@0085
+{FB} V Première loi des Medabots.{FC}"Un Medabot ne doit jamais nuire{FD}volontairement à un humain."{FC}Ça veut dire que si ce n'est pas{FD}volontaire, ça passe ?{FF}{00}
+
+@0086
+{FB} h Les Medaparts cassées en Robattle{FD}se réparent toutes seules.{FC}C'est grâce à leur système{FD}SLAF, paraît-il.{FF}{00}
+
+@0087
+{FB} h Si tu es un vrai Medafighter,{FD}tu vas Robattler avec moi.{FF}B
+
+@0088
+{FB} h Le Robattle, c'est tout un art.{FF}{00}
+
+@0089
+{FB} h Ah bon ?{FC}C'est dommage···{FF}{00}
+
+@0090
+{FB} h Hein ? Tu parles d'Awano ?{FC}J'adorerais l'affronter{FD}un de ces jours.{FF}{00}
+
+@0091
+{FB} W Le SLAF utilise les nanomachines{FD}intégrées aux Medaparts pour les{FD}réparer automatiquement.{FC}Et les nanomachines sont, euh···{FF}{00}
+
+@0092
+{FB} W C'est l'heure du soutien.{FD}Tu vas bien à tous tes cours, hein ?{FF}{00}
+
+@0093
+{FB} V J'ai raté mon dernier contrôle,{FD}alors je dois suivre le soutien.{FC}Hachiro ? Il est dans{FD}la classe de gauche.{FF}{00}
+
+@0094
+{FB}A DKarin !{FC}{FB} CDOh, {F9} .{FD}Bonjour.{FC}{FB}A DKarin, tu as cours en ce moment ?{FC}{FB} CDJ'ai été trop souvent absente,{FD}je dois suivre du rattrapage.{FC}Que fais-tu ici, {F9}  ?{FC}{FB}A DMoi ? Eh bien, quelque chose{FD}m'intriguait, alors je suis venu{FC}chercher des informations{FD}sur Hachiro.{FC}{FB} CETu parles d'Awano ?{FC}Pour être franche, je n'entends pas{FD}que du bien sur lui, mais···{FF}{00}
+
+@0095
+{FB}A  Hmm ?{FC}{FB} CCJ'ai l'impression qu'il se{FD}comporte ainsi exprès.{FC}Quand on était petits, lui, Koji{FD}et moi jouions ensemble,{FD}mais je ne sais pas ce qu'il···{FC}{FB}A HHmm, ça me surprend un peu.{FC}{FB} CCEst-il arrivé quelque{FD}chose à Awano···?{FC}{FB}A FCe n'est pas si important.{FC}{FB}A DMerci, Karin.{FF}{00}
+
+@0096
+{FB} CDNe pense pas trop de mal d'Awano.{FF}{00}
+
+@0097
+{FB} h Il n'est toujours pas revenu.{FC}{FB}A  Qu'est-ce qui ne va pas ?{FC}{FB} h Le directeur m'a confisqué{FD}ma Medawatch.{FC}Alors j'ai demandé à un autre prof{FD}d'aller me la récupérer.{FC}Mais il n'est toujours pas revenu.{FC}{FB}A  Quel prof ?{FC}{FB} h Le professeur Siraf !{FF}{00}
+
+@0098
+{FB} W Je trouve bien d'initier les enfants{FD}aux Medabots par l'éducation.{FC}Mais le directeur semble{FD}penser autrement.{FF}{00}
+
+@0099
+{FB} W Ces derniers temps, le directeur{FD}reste enfermé dans son bureau.{FC}Je ne l'ai pas vu du tout.{FD}Y aurait-il un problème ?{FF}{00}
+
+@0100
+{FB} j Le directeur a fouillé les affaires{FD}des enfants et a confisqué{FD}toutes les Medawatch qu'il a trouvées.{FC}Qu'est-ce qu'il cherche à faire ?{FF}{00}
+
+@0101
+{FB} X Le directeur a changé.{FD}Il n'était pas si froid avant···{FF}{00}
+
+@0102
+{FB} X Si tu cherches le professeur{FD}Siraf, il a dit qu'il allait{FC}au bureau du directeur.{FF}{00}
+
+@0103
+{FB} W Je voulais récupérer les Medawatch{FD}que le directeur avait confisquées{FC}aux enfants, mais il m'a{FD}jeté hors de son bureau.{FC}{FB}A  Vous êtes le professeur Siraf ?{FC}Une fille vous attendait.{FC}{FB} W Oh···je vais devoir lui{FD}annoncer la mauvaise nouvelle.{FF}{00}
+
+@0104
+{FB}A  Euh···{FC}{FB} V Oh ! Un élève d'une autre école !{FF}{00}
+
+@0105
+{FB} V Ouaaais ! Robattle avec moi !{FC}{FB}A FHein ? Attends ! Je veux···{FF}{00}
+
+@0106
+{FB} V C'était intense.{FD}Alors, tu voulais quoi ?{FC}{FB}A  Que sais-tu sur Hachiro···?{FF}{00}
+
+@0107
+{FB} V Hé, tout le monde !{FD}Il veut des infos sur Hachiro !{FF}{00}
+
+@0108
+{FB} V Tu veux dire Awano ?{FC}Ce type n'a pas une seule{FD}personne qu'il peut appeler ami.{FC}Même quand on l'invitait avec nous,{FD}il ne nous adressait pas la parole.{FF}{00}
+
+@0109
+{FB} V Il ne sait pas jouer avec les autres.{FF}{00}
+
+@0110
+{FB} V Mais il est vraiment, vraiment{FD}doué en Robattle.{FC}Il est très haut placé{FD}au classement Medalink.{FF}{00}
+
+@0111
+{FB} h Hé, écoute ! J'ai vu Awano entrer{FD}ici avec une tenue bizarre !{FC}Sans même m'en rendre compte,{FD}j'ai crié "Détraqué" !{FC}{FB}A HVraiment ! Alors c'est toi{FD}qui as crié tout à l'heure.{FC}{FB} h Oui ! C'était Awano, aucun doute !{FD}J'ai des yeux de lynx !{FC}Il a dû se changer{FD}en tenue normale ici.{FC}{FB}A  Alors ce Rubberobo était···{FD}Ça commence à s'éclaircir.{FC}{FB}A DMerci beaucoup !{FF}{00}
+
+@0112
+{FB} V Hachiro est assez bizarre,{FD}mais depuis peu le directeur{FD}est encore plus bizarre que lui.{FC}Avant, il ne nous confisquait{FD}jamais nos Medawatch quand on{FC}les apportait à l'école.{FF}{00}
+
+@0113
+{FB} V Il paraît qu'on a vu Hachiro{FD}et le directeur ensemble.{FF}{00}
+
+@0114
+{FB} V On dirait qu'il y a quelque chose{FD}entre le bureau du directeur et{FC}la salle des profs.{FF}{00}
+
+@0115
+{FB} h Quel que soit le problème,{FD}on peut toujours compter sur{FC}les Select Corps pour être inutiles.{FF}{00}
+
+@0116
+{FB}A  Erika ! Tu vas bien ?{FC}{FB} BEJ'ai eu quelques ennuis.{FD}Et toi ?{FC}{FB}A  Couci-couça, je dirais.{FC}{FB} B Pas grand-chose à dire, hein ?{FC}Bref, j'ai découvert qu'il y a{FD}dans cette école un Medafighter{FD}qui utilise le même Medabot que{FD}le fameux "Rubberobo malin".{FC}Comme je m'y attendais, non ?{FC}Il n'y a plus qu'à livrer{FD}ce Medafighter aux Select Corps{FD}et tout sera terminé !{FF}{00}
+
+@0117
+{FB}A EMais, Erika···{FC}{FB} BFMon plan te pose un problème ?{FD}Si oui, crache le morceau !{FC}{FB} B Bref, je retourne{FD}à l'école privée Rosewood.{FC}Je dois voir ce que je peux trouver.{FD}Toi, va appeler les Select Corps.{FC}{FB}A EMais les Select Corps ne{FD}pourront sans doute pas aider.{FC}{FB} B Alors va chercher Koji aussi.{FF}{00}
+
+@0118
+{FB}A  Pourquoi je dois aller{FD}chercher Koji !?{FC}{FB} B Au cas où.{FC}Il a ce petit côté{FD}"héros de la justice".{FC}{FB}A HTu es sérieuse !?{FC}{FB} B Les filles de l'école Rosewood{FD}ont l'air de le penser.{FC}Les Select Corps sont d'habitude{FD}d'une inutilité incroyable.{FC}S'il arrivait quelque chose, ce serait{FD}les derniers à appeler à l'aide.{FC}{FB}A EPauvres Select Corps.{FC}{FB} B Maintenant dépêche-toi !!{FC}{FB}A EOui, oui.{FF}{00}
+
+@0119
+{FB}A  Euh, on dirait que le gang{FD}Rubberobo est à Rose···{FC}{FB} 9 Maintenant que tu le dis, je n'ai pas{FD}vu beaucoup de roses cette saison.{FC}{FB}A  Non, je veux dire, les Rubberobo···{FC}{FB} 9 C'est si triste qu'elles{FD}doivent faner.{FC}{FB}A EPfff···{FF}{00}
+
+@0120
+{FB} 9 Bienvenue au QG des Select Corps !{FC}Si vous avez le moindre problème,{FD}n'hésitez pas à nous le dire !{FC}{FB}A  Ça concerne l'école privée Rosewood.{FC}{FB} 9 Pour l'école privée Rosewood,{FD}notre homme à l'entrée{FD}en sait beaucoup.{FC}{FB}A  Je vois. Merci.{FF}{00}
+
+@0121
+{FB}A  Le gang Rubberobo prépare quelque{FD}chose à l'école privée Rosewood···{FC}{FB} 9 Sans blague ! Tu es élève{FD}à l'école privée Rosewood ??{FC}J'y ai été élève moi aussi !{FC}Je devrais t'apprendre{FD}à y survivre.{FC}Et si j'entraînais{FD}ton Medabot avec toi !{FC}{FB}A ECe n'est pas ce que{FD}je voulais dire···{FF}{00}
+
+@0122
+{FB} 9 Fais toujours de ton mieux !{FC}{FB}A EJe ferai de mon···bah, tant pis.{FF}{00}
+
+@0123
+{FB}A HQ-quoi !?{FC}{FB} {FF}{00}
+
+@0124
+{FB} 9CGros problème !{FD}Poussez-vous !{FF}{00}
+
+@0125
+{FB} n On m'appelle !{FF}{00}
+
+@0126
+{FB} x Les jolies filles{FD}m'appellent à l'aide !{FF}{00}
+
+@0127
+{FB} t On m'appelle pour{FD}vaincre les Rubberobos !{FF}{00}
+
+@0128
+{FB} ·AAllez les vaincre !{FF}{00}
+
+@0129
+{FB}A  Euh, que s'est-il passé ?{FF}{00}
+
+@0130
+{FB} . Le gang Rubberobo s'est barricadé{FD}dans l'école privée Rosewood···{FC}Ils ont même pris des otages !{FC}{FB}A HQuoiii !!{FC}{FB} . J'espère qu'on réglera ça{FD}sans que personne soit blessé.{FF}{00}
+
+@0131
+{FB}A FNom d'un Medabot ! Je dois retourner{FD}à l'école privée Rosewood !{FF}{00}
+
+@0132
+{FB} 9 Ils ont pris en otage un nombre{FD}inconnu d'élèves.{FF}{00}
+
+@0133
+{FB} 9 Le capitaine Awamori et le lieutenant{FD}Tokkuri sont déjà entrés dans l'école.{FF}{00}
+
+@0134
+{FB} D {F9}  !{FF}{00}
+
+@0135
+{FB}A  Koji.{FC}{FB} D Tu as vu Karin !?{FC}Je suis sûr qu'elle est venue{FD}au rattrapage aujourd'hui.{FC}{FB}A  Erika est là-dedans aussi.{FC}{FB} DEAlors elle fouine même{FD}dans l'école, maintenant ?{FC}{FB}A EPendant que j'étais au QG des{FD}Select Corps, ça a dégénéré···{FC}{FB} DEPourquoi sont-elles là-dedans···{FD}ELLES ne peuvent rien faire.{FF}{00}
+
+@0136
+{FB} h Je veux ma maman !{FC}{FB} V Je veux rentrer chez moi !{FC}{FB} D Tout le monde panique à l'intérieur.{FC}{FB}A EJe m'inquiète pour la santé de Karin.{FC}{FB} D Hé, j'ai une super idée,{FD}on tente le coup ?{FF}{00}
+
+@0137
+{FB} DCHé, le gang Rubberobo !{FC}{FB} 1 Qu'est-ce que tu veux.{FC}{FB} D J'ai oublié mes devoirs en classe.{FD}Sois sympa, va me les chercher ?{FC}Salle 402, 2e rang depuis le devant,{FD}2e pupitre depuis la droite.{FC}Ce sont mes devoirs de maths !{FC}{FB} 1CJe ne retiens pas tous ces chiffres.{FD}J'aime même pas les maths.{FC}Va les chercher toi-même.{FF}{00}
+
+@0138
+{FB} DDTu vois ?{FD}Les Rubberobos sont nuls en chiffres !{FC}Allons-y, {F9}  !{FF}{00}
+
+@0139
+{FB}A EIncroyable···{FF}{00}
+
+@0140
+{FB} 9 Il faut l'accord du capitaine{FD}Awamori pour aller plus loin !{FF}{00}
+
+@0141
+{FB} CDMerci du fond du cœur, {F9} .{FD}Mais ne te surmène pas.{FC}S'il t'arrivait quelque chose,{FD}je ne pourrais rien faire.{FC}{FB} CCS'il devait t'arriver{FD}quelque chose···je···{FC}{FB}A DTu t'inquiètes pour moi,{FD}même dans un moment pareil ?{FC}Merci, Karin.{FD}Mais je dois continuer !{FC}Si des gamins font des bêtises,{FD}je les arrêterai.{FF}{00}
+
+@0142
+{FB} D Te voilà, {F9} .{FC}Allons-y !{FF}{00}
+
+@0143
+{FB} · Accès interdit !{FC}{FB} DCLa ferme !{FC}Des enfants pleurent là-dedans !{FD}Comment rester sans rien faire ?{FC}{FB} ·CJe ne supporte pas les insolents !{FD}Select 3 ! Apprenez-lui la politesse !{FC}Je n'ai pas le temps de jouer{FD}avec des gamins comme lui !{FF}{00}
+
+@0144
+{FB} n On nous appelle !{FF}{00}
+
+@0145
+{FB} x Les jolies filles{FD}m'appellent à l'aide !{FC}{FB} DBQuelle perte de temps !{FD}Occupe-toi d'eux !{FF}{00}
+
+@0146
+{FB} t Pour vaincre le gang Rubberobo···{FC}{FB}A EHein ? Pourquoi moi ?{FC}{FB} t Hééééé ! Vous ne nous avez pas{FD}laissés finir notre entrée !{FF}{00}
+
+@0147
+{FB} t La justice gagne toujours !{FC}Donc, puisque tu as gagné,{FD}tu es toi aussi un homme de justice !{FC}Tu peux passer !{FF}{00}
+
+@0148
+{FB}A  Ils sont vraiment bizarres, ceux-là.{FF}{00}
+
+@0149
+{FB} 1 Toi aussi tu as oublié tes devoirs ?{FC}Pas de chance.{FD}Toutes les classes sont fermées à clé.{FF}{00}
+
+@0150
+{FB} 1 Je te laisse passer uniquement{FD}pour que tu récupères tes devoirs.{FC}Pas parce que tu pourrais me battre.{FD}Sans devoirs, pas d'étude possible.{FF}{00}
+
+@0151
+{FB} DDYo, {F9}  !{FD}Tu es en retard.{FC}Pendant que tu prenais ton temps,{FD}je nettoyais les{FC}Rubberobos devant{FD}la salle des profs.{FC}Et j'ai récupéré les clés des{FD}classes auprès d'un prof.{FC}Ces crétins ont fermé toutes{FD}les classes de l'intérieur.{FC}Je sentais qu'elles seraient utiles.{FC}{FB}A DBon, on peut donc entrer{FD}dans les classes.{FC}{FB} DDOuais, mais seulement deux.{FF}{00}
+
+@0152
+{FB}A  Comment ça ?{FC}{FB} DDLes Rubberobos ont pris toutes{FD}les autres clés des autres classes.{FC}Là, on a les clés de deux{FD}classes du 2e étage.{FC}L'une est celle de ma classe{FD}et de celle de Karin.{FC}L'autre est celle d'à côté.{FC}Mais c'est toi qui choisis.{FD}Quelle main ? Gauche ou droite ?{FC}{FB}A  C'est comme ça que je choisis ?{FD}Euh, disons la droite ?{FF}B
+
+@0153
+{FB}A  Ok ! Va pour la droite !{FF}{00}
+
+@0154
+{FB}A  Ok ! Va pour la gauche !{FF}{00}
+
+@0155
+{FB} DDJe passe devant !{FF}{00}
+
+@0156
+{FB} W Qu'est-ce qu'on est censés faire{FD}dans un moment pareil !?{FC}Que fait le directeur ?{FF}{00}
+
+@0157
+{FB} W Pourquoi est-ce arrivé ?{FC}Quelqu'un en voudrait-il{FD}à l'école privée Rosewood ?{FF}{00}
+
+@0158
+{FB} j Que penser quand le directeur{FD}ne se montre toujours pas !?{FC}Même dans un moment pareil !{FF}{00}
+
+@0159
+{FB} X Je prie seulement pour{FD}la sécurité de tous.{FF}{00}
+
+@0160
+{FB}A  Cette clé a l'air de marcher···{FC}Ok ! C'est ouvert !{FF}{00}
+
+@0161
+{FB}A  C'est fermé à clé.{FF}{00}
+
+@0162
+{FB}A  On dirait que Koji a déjà{FD}ouvert cette classe.{FC}Laissons ça à Koji.{FF}{00}
+
+@0163
+{FB} X De quel trou sortent ces types{FD}bizarres qui disent "RoboRobo" !?{FC}Oups, j'en ai un peu trop dit···{FF}{00}
+
+@0164
+{FB}A  C'est fermé à clé.{FF}{00}
+
+@0165
+{FB}A  On dirait que Koji a déjà{FD}ouvert cette classe.{FC}Laissons ça à Koji.{FF}{00}
+
+@0166
+{FB} V Oh ! L'élève d'une autre école !{FC}Et···{FD}Je n'ai jamais demandé ton nom, si ?{FC}Tu es revenu pour nous !{FF}{00}
+
+@0167
+{FB} V C'est génial que tu sois entré ici{FD}tout seul, mais c'était imprudent.{FF}{00}
+
+@0168
+{FB} V Je n'ai vu Hachiro nulle part.{FC}Attends···! Tu ne crois pas que ce{FD}petit boudin est mêlé à tout ça !?{FF}{00}
+
+@0169
+{FB} h Les Select Corps ne pourront{FD}jamais gérer ça !{FF}{00}
+
+@0170
+{FB}A HErika ! Tu vas bien ?{FC}{FB} BB{F9}  !{FD}Pourquoi es-tu venu ici !{FC}{FB}A  C'est comme ça que tu remercies{FD}quelqu'un qui vient t'aider ?{FC}{FB} 4AHo ho ho.{FD}Quelle petite fille pleine d'entrain.{FF}{00}
+
+@0171
+{FB} 1 RoboRobo RoboRobo{FF}{00}
+
+@0172
+{FB}A HV-vous êtes !{FC}{FB} 4 Hmm ? Je suis l'un des chefs{FD}du gang Rubberobo, Squidguts.{FC}Je t'ai déjà vu quelque part ?{FC}{FB}A EAh oui. J'étais déguisé{FD}en fille, ce jour-là···{FC}{FB} B Quoi ? Tu connais ce type ?{FC}{FB}A FP-p-p-pas du tout !{FC}{FB} 4 Maintenant que j'y pense···{FC}{FB}A FR-Robattle avec moi !{FF}{00}
+
+@0173
+{FB} {FF}{00}
+
+@0174
+{FB} 4CTu m'as eu, gamin.{FC}Mais tu regretteras le jour où tu as{FD}défié le grand gang Rubberobo.{FC}Ho ho ho.{FF}{00}
+
+@0175
+{FB}A HAttendez !{FC}Ces types···{FD}Ils ne sont bons qu'à fuir.{FF}{00}
+
+@0176
+{FB} BE{F9} ···{FF}{00}
+
+@0177
+{FB} BESi tu t'étais blessé en me sauvant,{FD}je serais morte de rire.{FC}{FB}A EC'est ça, ta façon de dire merci ?{FF}{00}
+
+@0178
+{FB} BCC'était vraiment imprudent···{FC}S'il t'arrivait quelque chose{FD}à cause de moi, je···{FC}{FB}A  Erika ?{FF}{00}
+
+@0179
+{FB} B Bref, celui qui m'a fait{FD}subir ça va payer !{FC}{FB}A  Erika, il y a mieux à faire.{FC}Si celui qui est derrière tout ça{FD}est un Medafighter, on se comprendra.{FC}Il comprendra que les Medabots{FD}ne sont pas faits pour le mal.{FF}{00}
+
+@0180
+{FB} B {F8}(·····){F8}{FD}Ouah, tu as changé.{FC}{FB}A  Hmm ?{FC}{FB} B Il y a encore peu, c'est moi{FD}qui commandais.{FC}{FB}A  Ah bon··?{FC}{FB} B Mais, arrivée jusqu'ici,{FD}pas question de reculer !{FC}J'y vais !{FF}{00}
+
+@0181
+{FB} BDJ-je n'en reviens pas !{FD}Incroyable ! Tu es si fort que ça ?{FC}Mais je ne perdrai pas pour autant !{FC}Je vais trouver plus d'infos{FD}et débusquer le vrai coupable !{FF}{00}
+
+@0182
+{FB}A  J'y vais aussi, alors.{FF}{00}
+
+@0183
+{FB}A  Tu vas bien, Karin ?{FC}{FB} CH{F9}  ?{FD}Pourquoi es-tu ici ?{FC}C'est dangereux ici, vite···{FC}{FB} 3AOh là là, ton prince est venu{FD}te sauver sur son cheval blanc ?{FF}{00}
+
+@0184
+{FB} 1 RoboRobo RoboRobo{FF}{00}
+
+@0185
+{FB} 3AAh ha ha. Tu as puni mes{FD}mignons petits sbires pour moi !{FC}{FB}A HEt c'est qui, celle-là !?{FC}{FB} 3AAh ha ha ha. Je suis la belle{FD}fleur du gang Rubberobo.{FC}Je suis Gillgirl !{FC}{FB}A ESuper, encore un cas bizarre.{FC}{FB} 3BSilence, enfant !{FC}Tu vas voler en éclats devant{FD}mon superbe talent de Robattle !{FF}{00}
+
+@0186
+{FB} 1CRoboo hou-!{FF}{00}
+
+@0187
+{FB} 3AAh ha ha ha.{FD}Tu ne peux pas encore me battre.{FC}{FB} 3BUn jour, je te ferai pleurer !{FD}Souviens-t'en !{FF}{00}
+
+@0188
+{FB}A  Ces types.{FD}Ils ne sont bons qu'à fuir.{FF}{00}
+
+@0189
+{FB} CDMerci de m'avoir sauvée.{FD}Mais {F9} , pourquoi es-tu ici ?{FC}{FB}A  Je suis entré avec Koji.{FC}{FB} C Je vois, avec Koji···{FC}{FB}A DBon, j'y vais !{FC}Si un gamin fait des bêtises,{FD}je dois l'arrêter.{FF}{00}
+
+@0190
+{FB} 1CR-Robo !?{FF}{00}
+
+@0191
+{FB} CCEuh, Awano était···{FC}{FB}A DNe t'en fais pas, Karin.{FC}Je vais retrouver les enfants{FD}encore dans l'école.{FC}{FB} CDBien sûr. Bonne chance !{FF}{00}
+
+@0192
+{FB} Z Hé ! Prends la boîte !{FF}{00}
+
+@0193
+{FB} · Alors petit, te revoilà, je vois.{FD}Tu n'abandonnes jamais.{FC}{FB}A FEt les enfants pris{FD}en otage ? Et···!{FC}{FB} · Désolé, la porte devant est fermée.{FC}Et je n'ai aucune raison{FD}d'entrer là-dedans.{FC}Je n'ai qu'à attendre dehors,{FD}et ils viendront à moi !{FF}{00}
+
+@0194
+{FB}A  C'est fermé à clé.{FF}{00}
+
+@0195
+{FB}A HTu es Hachiro !{FC}{FB} IGN-n'approche pas !{FF}{00}
+
+@0196
+{FB} IB{F8}Snif··· snif···{F8}{FC}{FB}A EQu'est-ce que tu cherchais{FD}à faire, avec tout ça ?{FC}Si tu pleures, je ne{FD}peux pas comprendre.{FC}{FB} IBOuiiin. Je ne savais pas.{FD}Je ne savais pas que ça arriverait.{FC}J'ai juste fait ce qu'ils m'ont dit.{FC}Le directeur a dit que si je faisais{FD}ça, j'aurais plein d'amis···{FC}{FB}A HLe directeur !?{FC}{FB} IBOuiiin, je ne savais paaas !{FF}{00}
+
+@0197
+{FB}A HAttends ! Hachiro !{FC}{FB}A  Ahhh, il s'est enfui.{FC}Mais je veux en savoir plus sur ce{FD}qu'Hachiro a dit sur le directeur.{FF}{00}
+
+@0198
+{FB}A HAttends ! Hachiro !{FC}{FB}A  Ahhh, il s'est enfui.{FC}Mais je veux en savoir plus sur ce{FD}qu'Hachiro a dit sur le directeur.{FF}{00}
+
+@0199
+{FB} & {F8}Mmmph···  Mmmmph···{F8}{FF}{00}
+
+@0200
+{FB}A  Qui est là ?{FF}{00}
+
+@0201
+{FB} & {F8}Mmmmph···{F8}{FF}{00}
+
+@0202
+{FB}A HJ'entends une voix d'ici !{FC}Déplaçons les livres.{FF}{00}
+
+@0203
+{FB} W Ouf ! Je suis sauvé.{FC}{FB}A  Ça va ?{FD}Euh, vous êtes···{FC}{FB} W Merci de m'avoir sauvé.{FC}Je suis le directeur de cette école,{FD}Hanamura.{FF}{00}
+
+@0204
+{FB}A  Pour faire court, Hachiro a été{FD}manipulé par un bandit.{FC}Je vais trouver qui est derrière{FD}tout ça et le forcer à s'excuser !{FC}Donc, Hachiro···{FC}{FB} W Tu me raconteras{FD}les détails plus tard.{FC}Pour l'instant, dépêche-toi.{FC}Cette salle a un passage secret.{FD}Le bandit que tu cherches est là.{FC}Examine ce mur.{FF}{00}
+
+@0205
+{FB}A  Ok ! Mais pourquoi une porte{FD}cachée dans l'école ?{FC}{FB} W C'est la pièce secrète où je garde{FD}ma collection de médailles.{FC}Comment osent-ils ! Ma collection !{FC}{FB}A AOuah, vous aimez aussi les Medabots,{FD}monsieur le directeur !{FC}{FB}A DN'oubliez pas notre conversation !{FF}{00}
+
+@0206
+{FB} W Je compte sur toi.{FD}Donne-leur une leçon pour moi !{FF}{00}
+
+@0207
+{FB}A  On dirait que je peux{FD}passer à travers le mur.{FF}{00}
+
+@0208
+{FB} W Ouahhh, cet éclat···{FD}C'est merveilleux !{FF}{00}
+
+@0209
+{FB} W Qui es-tu !{FC}{FB}A BNon ! Qui êtes-VOUS !{FD}Montrez votre vrai visage !{FF}{00}
+
+@0210
+{FB}A BVous êtes du gang Rubberobo !{FC}{FB} 2AJe suis le chef du gang Rubberobo.{FD}Le grand Seaslug ! Retiens-le !{FC}{FB}A BLâche !{FD}Tromper un gamin pour{FC}lui faire voler des Medabots !{FC}Et pire encore, prendre{FD}des enfants en otage !{FC}{FB} 2ALes enfants sont l'avenir{FD}du gang Rubberobo.{FC}Quant au Medabot que ce morveux{FD}d'Hachiro a volé pour nous···,{FC}mes sbires sont en route{FD}pour le récupérer.{FC}Trop tard. Mwa ha ha ha !{FC}{FB}A BMaintenant, Robattle···!{FC}{FB} BHAaah ! Lâchez-moi !{FF}{00}
+
+@0211
+{FB}A HQuoi !?{FC}{FB} 2AHmph. Si tu hésites,{FD}elle aura des ennuis.{FC}{FB}A BGrrr···{FF}{00}
+
+@0212
+{FB}A HErika !{FF}{00}
+
+@0213
+{FB} BBLâchez-moi !{FD}J'ai des infos sur vous !{FC}Le directeur de cette école est···{FF}{00}
+
+@0214
+{FB} BH{F9}  !{FD}Derrière toi !{FF}{00}
+
+@0215
+{FB} 2BComment oses-tu me faire ça !{FC}Je ne te pardonnerai jamaaais !{FF}{00}
+
+@0216
+{FB} 1CMaître Seaslug !{FC}Attendez-nous !{FF}{00}
+
+@0217
+{FB} BBÇa m'énerve !{FC}Je ne lui pardonnerai pas !{FF}{00}
+
+@0218
+{FB} & {F8}Mmph. Mmph.{F8}{FF}{00}
+
+@0219
+{FB}A  J'ai entendu quelque chose.{FF}{00}
+
+@0220
+{FB} & {F8}Mmph. Mmph.{F8}{FF}{00}
+
+@0221
+{FB}A  J'ai entendu quelque chose.{FF}{00}
+
+@0222
+{FB} & Ouf !{FF}{00}
+
+@0223
+{FB} W Je me suis encore fait prendre.{FD}Merci de m'avoir sauvé.{FC}{FB}A  D-de rien···{FC}{FB} W Prends ceci en gage{FD}de ma gratitude.{FF}{00}
+
+@0224
+{FB} W L'école a été sauvée{FD}grâce à toi.{FC}Ça m'a servi de leçon.{FC}Je veux faire de cette école un lieu{FD}où Medabots et enfants vivent{FD}une expérience joyeuse.{FC}Pour que plus personne n'utilise{FD}les Medabots à de mauvaises fins.{FF}{00}
+
+@0225
+{FB} W J'espère que cette école verra{FD}d'autres Medafighters comme toi.{FF}{00}
+
+@0226
+{FB} D {F9}  !{FC}{FB} C {F9}  !{FF}{00}
+
+@0227
+{FB}A DKoji et Karin !{FD}Dieu merci, vous allez bien.{FC}{FB} D À l'instant, Erika poursuivait{FD}le gang Rubberobo à toute vitesse.{FC}{FB}A DHa ha. C'est bien Erika, ça.{FC}{FB} D Tout le monde est sain et sauf.{FC}Mais la santé de Karin{FD}n'est de nouveau pas très bonne···{FF}{00}
+
+@0228
+{FB}A DKarin, ça va ?{FC}{FB} C Je vais bien.{FD}Plus important, si Awano···{FC}{FB}A DNe t'en fais pas, Karin.{FC}{FB} D Quoi ?{FC}{FB} W Karin !{FF}{00}
+
+@0229
+{FB} W Karin ! Dieu merci.{FD}Je me suis tellement inquiété.{FC}Rentrons à la maison.{FC}{FB} C Père···{FC}{FB} W Oui, Karin ?{FC}{FB} CDCe n'est rien. On en{FD}parlera plus tard.{FF}{00}
+
+@0230
+{FB} DCJe ne pardonnerai jamais à celui{FD}qui a fait ça à Karin !{FC}Je vais l'attraper{FD}et le punir !{FF}{00}
+
+@0231
+{FB}A  Bref, on dirait que tout le monde{FD}est sain et sauf.{FC}Je dois aller chez Hachiro{FD}tout de suite !{FF}{00}
+
+@0232
+{FB} D Hé.{FF}{00}
+
+@0233
+{FB}A HK-Koji ! Qu'est-ce que tu veux !{FC}{FB} D Tu vas résoudre{FD}cette affaire, non ?{FC}Et tu sais tout à ce sujet,{FD}pas vrai ?{FC}{FB} DCDis-moi la vérité !{FC}Hachiro était le "Rubberobo malin",{FD}n'est-ce pas !?{FC}{FB}A HToi, comment tu···!{FC}{FB} DBCette rumeur courait déjà{FD}dans toute l'école.{FC}Je n'y croyais pas, ceci dit···{FC}Quelle que soit la raison,{FD}je ne pardonnerai jamais à qui{FD}essaierait de faire du mal à Karin !{FC}J'y vais !{FF}{00}
+
+@0234
+{FB} X Hé, vous là !{FD}De quel trou vous sortez !?{FF}{00}
+
+@0235
+{FB}A DLes maisons de Koji et Karin{FD}sont ici, à Medaropolis.{FC}Cette affaire m'inquiète, mais{FD}allons d'abord leur rendre visite.{FC}Ils savent peut-être quelque chose.{FF}{00}
+
+@0236
+{FB} BBLâche-moi !{FD}J'ai dit lâche-moi !!{FC}{FB} 1CSois sage et reste tranquille.{FD}Arrête de gigoter.{FF}{00}

@@ -92,6 +92,26 @@ export function Etiquette({
   )
 }
 
+/** Un lien qui sort du site s'ouvre à côté : installé sur l'écran d'accueil,
+    le site n'a pas de bouton « retour », et partir vers GitHub dans le même
+    onglet ferme le jeu en cours. */
+export function LienExterne({
+  href,
+  children,
+  className = '',
+}: {
+  href: string
+  children: ReactNode
+  className?: string
+}) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+      <span className="sr-only"> (nouvel onglet)</span>
+    </a>
+  )
+}
+
 export function Titre({ children, sur, id }: { children: ReactNode; sur?: string; id?: string }) {
   return (
     <header className="mb-6">
