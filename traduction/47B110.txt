@@ -1,0 +1,906 @@
+# Table 0x47B110 — dialogues du quatrième chapitre (295 entrées)
+#
+# Les enfants disparus, la place des amoureux devant la gare, la statue du
+# chien Bonaparte, le repaire des Rubberobos dans les égouts, le mot de passe,
+# l'expérience du soda, Kahlua, le Phantom Renegade et l'Académie Woodrose,
+# l'élection du sous-chef, la fosse aux fourmis. Le snack et sa gérante.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+#
+# Le gag du mot de passe repose sur une chanson : « Mountain / She'll be
+# coming round it » devient « Montagne ! / Elle descend de la montagne à
+# cheval ! », et « Stream / Row your boat » devient « Rivière ! / Bateau sur
+# l'eau, la rivière au bord de l'eau ». Le refrain « When she comes » devient
+# « Ohé ohé ». Shrimplips garde ses « w ».
+#
+# Vocabulaire fixé : le sous-chef, Chef Médaille, la salle de recherche du
+# Mal, l'expérience du soda, la Medabot Corporation, la série Élémentaire,
+# la plateforme de combat, le snack, la Reine (des fourmis), Sidecar.
+#
+
+@0000
+{FB} M Grâce à Lady et aux enfants,{FD}tout est rentré dans l'ordre.{FC}{FB} SCJe vois, bon travail, Phantom.{FC}Au fait, et les ennuis de{FD}Medaropolis, ça va··oh ?{FF}{00}
+
+@0001
+{FB} M Grâce à Lady et aux enfants,{FD}tout est rentré dans l'ordre.{FC}{FB} SCJe vois, bon travail, Phantom.{FC}Au fait, et les ennuis de{FD}Medaropolis, ça va··oh ?{FF}{00}
+
+@0002
+{FB} SBTiens, mais c'est {F9} .{FD}Tu reviens me voir ?{FC}{FB} MESapristi !{FC}{FB} M Je vais y aller, alors !{FF}{00}
+
+@0003
+{FB}A HOh ! Monsieur Phantom !{FF}{00}
+
+@0004
+{FB}A  Dr Aki, c'était le{FD}Phantom Renegade, non ?{FC}{FB} SBMmm ? Oh, oui.{FD}Ouah, quel beau temps aujourd'hui.{FC}{FB}A  Dr Aki, pourquoi cachez-vous ça ?{FC}Vous vous connaissez, non ?{FD}Le Phantom Renegade, je veux dire.{FC}{FB} S Tu n'as rien de plus important à faire{FD}que de m'interroger sur le Phantom ?{FC}Tu as sûrement quelque chose{FD}à faire, non ?{FC}{FB}A  Dr Aki !···Hmm, je n'insiste pas.{FF}{00}
+
+@0005
+{FB}A DBonjour, mademoiselle Nae !{FC}{FB} TBBonjour, {F9} .{FC}{FB} TBOn a fait un beau match{FD}sur le Medalink, non ?{FC}Je me suis bien amusée.{FC}{FB}A AMoi aussi, mademoiselle Nae !{FC}{FB} TBComme je te l'ai dit, j'avais{FD}quelque chose à te donner.{FC}C'est une autre médaille.{FC}Tu peux aller en prendre une{FD}dans la pièce d'à côté.{FF}{00}
+
+@0006
+{FB} TBDésolée de te demander ça d'un coup,{FD}{F9} , mais{FC}tu veux bien Robattler avec moi ?{FC}Je veux envoyer d'autres données{FD}à la Medabot Corporation.{FC}Tu veux bien m'aider ?{FF}B
+
+@0007
+{FB} TBBien, allons à la plateforme de combat.{FF}{00}
+
+@0008
+{FB}A  Bonjour, c'est {F9} .{FC}{FB} j Oh, oui, bien sûr.{FD}Montez donc.{FF}{00}
+
+@0009
+{FB} TBJ'aimerais te donner l'un{FD}de la série Élémentaire.{FC}Veux-tu bien l'accepter ?{FC}{FB}A DVous êtes sûre ??{FC}{FB}A  Mais···{FC}{FB} TBNe t'en fais pas. C'est bon.{FC}Celui que je vais te donner est{FD}l'un des premiers Medabots d'essai.{FC}Il en existe d'autres comme le tien,{FD}mais pas en si grand nombre.{FC}{FB}A AOui ! J'imagine !{FD}Alors, je le prends avec plaisir !{FF}{00}
+
+@0010
+{FB} DCOuvrez !{FF}{00}
+
+@0011
+{FB}A  Mademoiselle Nae.{FD}Pourquoi tant de gentillesse ?{FC}{FB} TBHmm···bonne question.{FD}Il me faut une raison ?{FC}{FB}A EEh bien, non, pas vraiment···{FC}{FB} TBBon, reviens me voir.{FF}{00}
+
+@0012
+{FB} j Oh, {F9} .{FD}Comment vas-tu ?{FF}{00}
+
+@0013
+{FB} B Hé {F9} .{FD}Qu'est-ce qui se passe ?{FC}{FB}A  Hé, c'est ma réplique.{FC}Je t'ai vue chez Hachiro, et comme{FD}d'habitude tu es partie toute seule.{FC}Puis le gang Rubberobo apparaît, et je{FD}me dis que la reporter vedette serait{FC}là, mais tu n'es pas venue···{FF}{00}
+
+@0014
+{FB}A HOù vas-tu ?{FC}{FB} BBNulle part !{FD}Maman, ne dis rien non plus !{FF}{00}
+
+@0015
+{FB}A HAha ! Je te tiens, Erika !{FF}{00}
+
+@0016
+{FB} j Désolée pour Erika.{FD}Elle retourne à Medaropolis.{FC}Elle ne s'arrêtera pas avant{FD}d'avoir son scoop, j'imagine.{FF}{00}
+
+@0017
+{FB}A  Un scoop, hein ?{FC}Tu devrais en parler à Koji, alors.{FF}{00}
+
+@0018
+{FB} D Tu voulais me parler ?{FC}{FB}A  Ce n'est pas si important, mais···{FC}{FB} DDErika et toi, encore fâchés ?{FC}{FB}A EEuh···on n'est pas vraiment fâchés.{FC}{FB} DDEt ? Tu voulais me demander un truc ?{FC}{FB}A  Tu as entendu parler d'un scoop ?{FC}{FB} DDDonc tu cherches un endroit{FD}où Erika pourrait aller.{FF}{00}
+
+@0019
+{FB} DDBon, bonne chance, les gars.{FF}{00}
+
+@0020
+{FB} W Bienvenue.{FD}Karin est dans sa chambre.{FF}{00}
+
+@0021
+{FB} CDBonjour, {F9} .{FC}{FB}A DSalut Karin.{FD}Comment vas-tu ?{FC}{FB} CDJe me sens bien mieux maintenant.{FD}Désolée d'avoir été un fardeau.{FC}{FB}A DNe t'en fais pas pour ça.{FF}{00}
+
+@0022
+{FB} CGAu fait···{FC}Merci beaucoup pour ce{FD}merveilleux cadeau.{FC}Je vais l'appeler Ham-Ham.{FD}Je promets d'en prendre bien soin{FC}{FB}A DJe suis content qu'il te plaise.{FF}{00}
+
+@0023
+{FB}A  Je suis venu jusqu'ici.{FD}Autant glaner d'autres infos.{FF}{00}
+
+@0024
+{FB} CDOn reparlera, d'accord ?{FF}{00}
+
+@0025
+{FB} CGJ'aimerais qu'on dîne un jour{FD}avec mon père.{FF}{00}
+
+@0026
+{FB}A  Il est écrit :{FD}"Le snack est ouvert !"{FF}{00}
+
+@0027
+{FB}A GLe snack est ouvert··{FC}Mais si quelqu'un me voit entrer{FD}dans un endroit pareil, ma réputation{FD}de mangeur sain tombera à l'eau.{FC}J'entre quand même ?{FF}B
+
+@0028
+{FB}A FBon, n'entrons pas.{FC}Si j'entre, je risque de grossir,{FD}et les filles me détesteront.{FF}{00}
+
+@0029
+{FB} l Bienvenue à notre snack♥{FD}Prenez votre temps.{FF}{00}
+
+@0030
+{FB} W Cet endroit est un paradis de{FD}chocolats, chips et gâteaux♥{FC}C'est si différent de chez moi.{FD}Je suis si heureux···{FF}{00}
+
+@0031
+{FB} W Ces cookies sont super aussi.{FF}{00}
+
+@0032
+{FB} 9CV-vous vous trompez !{FC}Jamais je ne viendrais manger{FD}des sucreries tout seul.{FC}Jamais ! Jamais ! Jamais !{FF}{00}
+
+@0033
+{FB} 9CMais rends-moi service, et{FD}n'en parle pas au capitaine, ok ?{FF}{00}
+
+@0034
+{FB} 9 Quand tu seras grand et que tu sauras{FD}maîtriser ta gourmandise, viens aussi !{FF}{00}
+
+@0035
+{FB} l Bonjour♥{FD}Quel mignon petit garçon.{FC}Tu sais qu'il nous faut la permission{FD}de tes parents pour savoir combien{FD}de sucreries te vendre.{FC}{FB}A GEuh···hum···{FC}{FB} l Pas de sucreries cette fois, mais{FD}on a du jus si tu veux.{FC}Un bon jus de légumes ?{FD}Ou plutôt un Robattle ?{FF}{00}
+
+@0036
+{FB} l Oups, j'ai Robattlé avant que{FD}tu aies pu me répondre.{FC}Bref, c'était amusant, mon chou♥{FF}{00}
+
+@0037
+{FB} l Tu sais qu'en venant ici,{FD}tu risques de perdre la forme♥{FF}{00}
+
+@0038
+{FB} X Mon enfant a fugué.{FC}Je m'inquiète, il n'est{FD}toujours pas rentré.{FF}{00}
+
+@0039
+{FB} 9 Ces jours-ci, beaucoup d'enfants{FD}ont disparu sans laisser de trace !{FF}{00}
+
+@0040
+{FB} 9 Le gang Rubberobo sort la tête{FD}et se cache aussitôt.{FC}C'est comme jouer{FD}au tape-taupe.{FF}{00}
+
+@0041
+{FB} 9 Je pars en patrouille !{FF}{00}
+
+@0042
+{FB}A  Un avis de disparition.{FD}Ouah, beaucoup de gens ont disparu.{FF}{00}
+
+@0043
+{FB} 9 On a signalé une personne âgée{FD}à l'air plutôt louche{FC}devant la gare.{FF}{00}
+
+@0044
+{FB} 9 Devant la gare, d'habitude, il n'y a{FD}que deux sortes de groupes :{FC}les Rubberobos ou les couples.{FF}{00}
+
+@0045
+{FB} 9 Ces jours-ci, beaucoup d'enfants{FD}ont disparu sans laisser de trace.{FC}On a reçu un tuyau : ils{FD}disparaissent devant{FD}la gare de la ville.{FC}{FB}A HDes enfants disparaissent !?{FC}{FB}A  Une fille n'est pas venue poser{FD}des questions là-dessus, par hasard ?{FC}{FB} 9 Si, en effet !{FC}Cette fille est partie{FD}vers la gare !{FC}{FB}A  Ça doit être Erika.{FF}{00}
+
+@0046
+{FB}A  On dirait qu'il y a une sorte{FD}de secret devant la gare.{FC}Erika y est allée, autant{FD}y aller aussi !{FF}{00}
+
+@0047
+{FB} W J'attends toujours ma copine.{FD}Elle n'a pas été enlevée, quand même ?{FF}{00}
+
+@0048
+{FB} j Je devais retrouver mon copain il y a{FD}2 heures, et il n'est toujours pas là.{FC}Les garçons me font toujours ça !{FF}{00}
+
+@0049
+{FB} 7 Oh, c'est toi.{FD}Tu veux savoir ce que je fais ici ?{FC}{FB} 7ALa réponse est évidente.{FD}Je suis venu retrouver ma copine !{FC}{FB}A  Euh, Docteur.{FD}Vous avez vu une fille passer ?{FC}{FB} 7BAlors toi aussi tu retrouves ta copine{FD}ici !? Hmmm, les jeunes d'aujourd'hui !{FF}{00}
+
+@0050
+{FB} j Ce vieux type flippant est là{FD}depuis presque tout ce temps.{FC}Tu disais que tu cherchais une fille ?{FC}Je crois l'avoir vue par ici,{FD}mais···{FC}{FB}A EJe l'ai ratée de peu···{FF}{00}
+
+@0051
+{FB} W C'est ici que s'écrivent les histoires{FD}d'amour. Trop jeune pour comprendre.{FF}{00}
+
+@0052
+{FB}A  "Statue du noble chien Bonaparte".{FC}Cette statue a l'air un peu{FD}déplacée ici.{FC}Je me demande pourquoi.{FD}Je ne la vois pas très bien d'ici.{FF}{00}
+
+@0053
+{FB}A HAïe aïe aïe !{FC}{FB} 6BRegarde où tu vas !{FF}{00}
+
+@0054
+{FB} 6CJe ne veux plus être{FD}un Rubberoboooo !{FF}{00}
+
+@0055
+{FB}A HEncore un enfant.{FF}{00}
+
+@0056
+{FB} 9CTu n'es pas un des enfants disparus ?{FF}{00}
+
+@0057
+{FB}A  Hmm, c'est donc ça.{FD}Ce gamin était un des disparus.{FC}Erika est peut-être retournée{FD}au QG des Select Corps ?{FC}Autant y refaire un tour.{FC}{FB}A EMais surtout, pourquoi les Select{FD}Corps n'arrivent-ils qu'APRÈS{FC}que j'ai fait tout le travail ?{FF}{00}
+
+@0058
+{FB} V Maman, j'ai eu si peur···{FC}{FB} X Maman n'est pas fâchée du tout.{FD}Rentrons à la maison.{FF}{00}
+
+@0059
+{FB} V Je déteste les Rubberobos !{FC}{FB} X C'est bien.{FC}Personne n'a de raison de{FD}vouloir être un Rubberobo.{FC}{FB} V Oui ! Je ne veux plus jamais{FD}retourner devant la gare !{FF}{00}
+
+@0060
+{FB} V Allez, pousse-toi.{FC}J'ai dit que je n'ai plus rien{FD}à voir avec les Rubberobos !{FC}{FB}A  Excuse-moi···{FC}{FB} V Tu es curieux, c'est clair, alors si{FD}tu veux en savoir plus, va examiner{FC}la statue de Bonaparte. Les Select{FD}Corps ne le feront pas, c'est sûr.{FF}{00}
+
+@0061
+{FB}A  Qui aurait cru que la statue{FD}cachait un tel piège !{FF}{00}
+
+@0062
+{FB} W Hé, Momoko, je t'attendais.{FC}{FB} j Allons quelque part, Bona.{FC}{FB} W Oui♥{FF}{00}
+
+@0063
+{FB}A ELes rendez-vous, ça a l'air compliqué.{FF}{00}
+
+@0064
+{FB} 7CMa copine ne viendra pas, on dirait.{FD}Je sais ! Tuons le temps ensemble.{FF}{00}
+
+@0065
+{FB} 7 Je n'en attendais pas moins de toi.{FC}Tu es différent des autres.{FD}Tu feras un excellent membre{FD}du gang Rubberobo.{FC}{FB}A HHein !? Docteur, qu'est-ce que{FD}vous venez de dire···!{FC}{FB} 7 Montre-moi jusqu'où tu peux aller.{FC}Si tu as un vrai talent, viens{FD}là où je t'attendrai !{FF}{00}
+
+@0066
+{FB} W Le sous-sol, ça me fait penser aux{FD}égouts. Je ne veux pas y aller. Beurk.{FF}{00}
+
+@0067
+{FB} j J'ai déjà entendu ça.{FC}Le gang Rubberobo se tapit dans{FD}les égouts et s'en sert pour{FD}circuler dans toute la ville.{FC}Personne ne s'en douterait.{FF}{00}
+
+@0068
+{FB}A ELes égouts, hein ?{FC}Dire que les Rubberobos se cachent{FD}quelque part là-dessous.{FC}Beurk, ce sont VRAIMENT des cafards.{FC}Je dois trouver le Dr Armond{FD}et lui demander quel est son{FD}lien avec le gang Rubberobo.{FC}Ah oui. C'est leur territoire, je{FD}devrais me changer pour me fondre.{FF}{00}
+
+@0069
+{FB}A BOk, tout est prêt. Allons-y !{FF}{00}
+
+@0070
+{FB}A EJ'ai l'air tellement ridicule.{FF}{00}
+
+@0071
+{FB}A  Je remonte à la surface ?{FC}Si je fais ça, je dois{FD}me changer, ok ?{FF}B
+
+@0072
+{FB}A  Je devrais rester encore un peu.{FF}{00}
+
+@0073
+{FB}A  C'est l'heure de se changer.{FF}{00}
+
+@0074
+{FB} 6ABouh !{FC}{FB}A HAaargh !{FF}{00}
+
+@0075
+{FB} 6AHa ha ha ha !{FF}{00}
+
+@0076
+{FB}A ETu m'as fait peur.{FF}{00}
+
+@0077
+{FB}A  Cette plaque d'égout n'a pas{FD}l'air de s'ouvrir.{FF}{00}
+
+@0078
+{FB}A ESi je détruis ce rocher·· les égouts{FD}pourraient avoir de gros ennuis.{FF}{00}
+
+@0079
+{FB}A  Bonjour, c'est {F9} .{FC}{FB} J Tiens tiens. Qu'avons-nous là ?{FC}Oh ! C'est {F9} .{FD}Entrez, je vous en prie.{FF}{00}
+
+@0080
+{FB}A  Les enfants Rubberobos bloquent{FD}la sortie, je ne peux pas sortir.{FF}{00}
+
+@0081
+{FB} 1 Pas encore. On fait toujours{FD}notre expérience du soda.{FF}{00}
+
+@0082
+{FB} ICHé ! {F9}  !{FD}Bienvenue !{FF}{00}
+
+@0083
+{FB} J Bienvenue, monsieur {F9} .{FD}Le jeune maître est dans sa chambre.{FF}{00}
+
+@0084
+{FB} 1 Le mot de passe ?{FD}Montagne !{FC}{FB}A EHein ? Mot de passe ? Euh···zut,{FD}je crois que je l'ai oublié···{FC}{FB} 1 Alors pas question{FD}que tu entres ici !{FF}{00}
+
+@0085
+{FB}A EJe ne savais pas qu'il y avait un{FD}mot de passe. Et maintenant ?{FF}{00}
+
+@0086
+{FB} 1 Monter la garde, c'est si ennuyeux.{FC}Tu n'as pas vu d'inconnus dans le coin,{FD}par hasard ?{FC}Genre des ninjas{FD}déguisés en Rubberobos ?{FC}{FB}A F{F8}Glurp !{F8}{FD}J-je ne connais personne comme ça.{FC}{FB} 1AQuelles chances que quelqu'un{FD}fasse ça, de toute façon !{FC}{FB}A E{F8}(·····){F8}{FF}{00}
+
+@0087
+{FB} 1 Je m'ennuie tellement···{FD}Faisons un Robattle !{FF}{00}
+
+@0088
+{FB} 1 Ne reste pas planté là.{FD}C'est ton tour de garde ensuite.{FF}{00}
+
+@0089
+{FB} 1 Monte bien la garde.{FC}{FB}A FD'accord.{FC}{FB} 1 Vite, demande le mot de passe.{FD}On en a un vraiment bon.{FC}{FB}A FJe l'ai oublié.{FC}{FB}A  Montagne !{FC}{FB} 1 Elle descend de la montagne à cheval !{FC}{FB}A  {F8}(·····){F8}{FC}{FB} 1AQui c'est le patron ?{FC}{FB}A EEuh, c'est toi le patron.{FC}{FB} 1AJe vais le dire à toute l'équipe !{FF}{00}
+
+@0090
+{FB}A  C'est quoi, ce mot de passe ?{FD}Bon, je n'ai qu'à tenter le coup.{FF}{00}
+
+@0091
+{FB} 1 Le mot de passe !{FD}Montagne !{FC}{FB}A  Elle descend de la montagne à cheval !{FC}{FB} 1AHi hi hi hi.{FC}{FB}A  Qu'est-ce qu'il y a ?{FC}{FB} 1AOhé ohé ?{FC}{FB}A FOhé ohé.{FC}{FB} 1AC'est une très bonne chanson.{FC}{FB}A FTu ne trouves pas ?{FC}{FB} 1AOk, tu peux passer.{FF}{00}
+
+@0092
+{FB} 1AElle descend de la montagne à cheval !{FD}Hé hé hé hé.{FF}{00}
+
+@0093
+{FB} 6AL'autre soir, je suis sorti de la{FD}statue de Bonaparte et j'ai fichu{FD}une de ces trouilles à un couple.{FC}Qui c'est le patron ? Qui c'est !{FF}{00}
+
+@0094
+{FB} V J'ai l'impression que quelqu'un{FD}se cache derrière la bibliothèque···{FC}Et m'observe···{FF}{00}
+
+@0095
+{FB} 6 Je veux sortir faire des bêtises !{FF}{00}
+
+@0096
+{FB} 6 On n'a pas encore la permission{FD}de remonter.{FF}{00}
+
+@0097
+{FB} MABwa ha ha ha ha !{FF}{00}
+
+@0098
+{FB} M La dernière fois, mes examens de fin{FD}d'année m'occupaient, mais là, ça va.{FC}{FB} MAMon garçon, fais de ton mieux !{FD}Adieu !{FF}{00}
+
+@0099
+{FB}A  Monsieur Phantom Renegade !{FC}{FB} MABwa ha ha ha ha !{FF}{00}
+
+@0100
+{FB} h Maman, je ne veux plus aller au{FD}cours après l'école···zzz···zzz{FF}{00}
+
+@0101
+{FB} V Réveille-moi quand Medabots passe{FC}à la télé, ok ? Je ne le rate jamais.{FF}{00}
+
+@0102
+{FB} 1 Le mot de passe ?{FD}Rivière !{FC}{FB}A FBateau sur l'eau,{FD}la rivière au bord de l'eau.{FC}{FB} 1 Ok, tu peux passer.{FC}{FB}A EPfff, ça n'a vraiment{FD}aucune importance···{FF}{00}
+
+@0103
+{FB} 1A"Bateau sur l'eau", qu'il a dit !{FD}Pas mal du tout. Hé hé hé.{FF}{00}
+
+@0104
+{FB} 1 Ici la salle de recherche du Mal.{FC}On y cherche de nouvelles façons{FD}de faire le maaal.{FF}{00}
+
+@0105
+{FB} 1 Les actes maléfiques évoluent{FD}avec leur temps.{FF}{00}
+
+@0106
+{FB} 1 Tu tombes bien.{FC}L'expérience du siècle{FD}va commencer.{FC}Il y a un cylindre qui ressemble à{FD}de la dynamite au centre de{FD}la salle d'expérience.{FC}Prêt ? Ça va se mettre à péter{FD}et surprendre tout le monde !{FC}Appuie sur l'interrupteur !{FF}{00}
+
+@0107
+{FB} 1 Bizarre, rien ne s'est passé.{FD}Je ferais mieux d'aller voir.{FF}{00}
+
+@0108
+{FB} 1 Vraiment bizarre.{FF}{00}
+
+@0109
+{FB} 1CJe savais que c'était bizarre.{FF}{00}
+
+@0110
+{FB} 1 Prêts ? On va mener{FD}l'expérience du soda maintenant.{FC}Les bulles du soda, c'est du{FD}dioxyde de carbone, qu'on ne{FD}peut pas respirer.{FC}Si on ouvre ce soda dans une petite{FD}pièce, elle se remplira de{FC}dioxyde de carbone et plus personne{FD}ne pourra respirer.{FC}{FB}A  Et enfin, ils s'évanouiront tous !{FC}{FB} 1 Et pendant qu'ils sont inconscients,{FD}on leur prend Medaparts et médailles !{FC}Qu'en dis-tu ? C'est maléfique, non ?{FF}{00}
+
+@0111
+{FB} 1 Qu'est-ce que tu en penses ?{FF}{00}
+
+@0112
+{FB} t Penser de quoi ?{FC}{FB} 1CC'est vraiment bizarre.{FC}{FB} 1DOups. Ça ne marche pas sur un Medabot.{FD}Il faut mettre un humain à la place.{FF}{00}
+
+@0113
+{FB} 1 Il n'y a pas de cobayes humains{FD}pour l'expérience ?{FF}{00}
+
+@0114
+{FB} 1DOh non ! Se pourrait-il que{FD}je sois devenu le cobaye ?{FC}{FB}A DOn dirait bien.{FF}{00}
+
+@0115
+{FB} 1CJe ne peux plus respirer.{FF}{00}
+
+@0116
+{FB} 1 Ici la réserve des Rubberobos.{FC}Si tu trouves de l'argent ou autre,{FD}tu ne peux pas le garder.{FF}{00}
+
+@0117
+{FB} V Ma maman va être fâchée{FD}contre moi, alors je ne rentre pas.{FF}{00}
+
+@0118
+{FB} 4 C'est l'heure de la remise{FD}des diplômes, les enfants !{FC}{FB}A HC'est le numéro 2, Squidguts !{FD}Qu'est-ce qu'il va faire ?{FF}{00}
+
+@0119
+{FB} 4 L'heure est venue de vous venger{FD}des adultes qui vous ont fait du tort !{FC}Nous allons remonter à la surface{FD}et semer le chaos dans la ville !{FC}Suivez-moi !{FC}{FB} 6AOuais !{FF}{00}
+
+@0120
+{FB}A HJe dois arrêter ces enfants.{FF}{00}
+
+@0121
+{FB}A FSi je ne me dépêche pas de les{FD}arrêter, il va y avoir des ennuis !{FF}{00}
+
+@0122
+{FB}A  Qu'est-ce que··· C'est···{FC}{FB} 4APlus besoin de formalités.{FD}Que le chaos commence !{FC}{FB} 6AOuais !{FF}{00}
+
+@0123
+{FB} 4AMwa ha ha ha.{FD}Les enfants sont si faciles à berner.{FC}Il suffit de les exciter,{FD}puis de m'asseoir et de{FD}récolter les fruits de mon travail.{FC}Ce qui leur arrive{FD}m'est bien égal.{FF}{00}
+
+@0124
+{FB}A BQuel sale coup tordu···!{FC}{FB}A  À ce rythme, ces enfants innocents{FD}vont être pris par les Select Corps.{FC}Je dois faire quelque chose !{FD}D'abord, je remets mes habits normaux.{FF}{00}
+
+@0125
+{FB}A  Je dois vite retrouver ces enfants !{FF}{00}
+
+@0126
+{FB} 9 On est occupés à se regarder.{FD}Ne nous dérange pas !{FF}{00}
+
+@0127
+{FB} 6 Pousse-toi.{FD}Je suis vraiment en colère !!{FC}C'est l'heure de la vengeance{FD}contre les adultes !{FF}{00}
+
+@0128
+{FB}A  Ne dis pas des choses pareilles.{FC}Retourne chez tes parents.{FD}Ils doivent s'inquiéter pour toi.{FC}{FB} 6BTu es de quel côté ?!{FC}Si un enfant est du côté des adultes,{FD}il doit être puni avec eux !{FF}{00}
+
+@0129
+{FB} 6BJe n'ai pas fini de semer la pagaille.{FD}Tu ne m'attraperas pas !{FF}{00}
+
+@0130
+{FB}A FAttends !{FC}{FB} 9BTu ne t'échapperas pas !{FF}{00}
+
+@0131
+{FB} B Pourquoi tu paniques comme ça ?{FC}{FB}A  Erika ! Tu es là !{FC}Je t'ai cherchée partout.{FD}On n'arrêtait pas de se rater···{FC}{FB} B Peu importe, écoute ça.{FC}Par ici se trouve l'entrée{FD}du repaire secret des Rubberobos.{FC}Ils utilisent des enfants pour semer{FD}la pagaille dans toute la ville !{FF}{00}
+
+@0132
+{FB} 9BHalte, maléfique gang Rubberobo !{FF}{00}
+
+@0133
+{FB}A  Tu es sérieuse ?{FD}Les Select Corps sont inutiles. Donc···{FC}{FB} B Voilà pourquoi tu dois t'en charger.{FC}{FB}A  Qui a envie d'entendre ça !{FD}aucune action···{FC}{FB} BBJe le savais !{FC}{FB}A FOh, c'est le Phantom Renegade.{FD}Il s'occupe de la situation.{FF}{00}
+
+@0134
+{FB} MABwa ha ha ha ha !{FF}{00}
+
+@0135
+{FB} W Je vous en prie, arrêtez mon enfant !{FD}Ce n'est pas une mauvaise fille !{FC}Elle ne ferait pas de mal !{FF}{00}
+
+@0136
+{FB} j Kahlua, arrête ça tout de suite !{FC}Tu n'as pas honte{FD}de ton allure ?{FC}Arrête et rentre à la maison !{FF}{00}
+
+@0137
+{FB} 6 Je ne rentrerai jamais.{FC}Je n'entends que "étudie, étudie".{FD}Qui a envie d'entendre ça !{FC}{FB}A  Si tu dis des choses pareilles, tu vas{FD}vraiment devenir une Rubberobo !{FC}{FB} 6BLa ferme !{FC}C'est une affaire de famille !{FD}Alors mêle-toi de tes affaires !{FF}{00}
+
+@0138
+{FB} 6CQu'est-ce que···{FD}Qu'est-ce que vous faites ?!{FC}{FB} j Inutile d'en dire plus.{FD}Viens. On rentre à la maison.{FC}{FB} 6BJ'ai dit non ! Non ! Nooon !{FF}{00}
+
+@0139
+{FB} W Kahlua !{FC}{FB} j Kahlua !{FF}{00}
+
+@0140
+{FB} 6BLâchez-moi ! Lâchez-moi !{FF}{00}
+
+@0141
+{FB} 9BTu ferais mieux de te rendre !{FC}{FB} 6BQui va se rendre !{FF}{00}
+
+@0142
+{FB} 9BHé ! Arrête !{FF}{00}
+
+@0143
+{FB} 9 On a un témoignage{FD}sur le gang Rubberobo.{FC}Personne ne peut entrer dans le parc.{FF}{00}
+
+@0144
+{FB} 9 Tu ne peux pas entrer dans le parc !{FF}{00}
+
+@0145
+{FB}A  Où allez-vous, les gars ?{FC}{FB} 9 On a un témoignage : le gang{FD}Rubberobo est sur la place{FD}devant la gare.{FC}On va les encercler !{FF}{00}
+
+@0146
+{FB}A HC'est terrible !{FC}Ils ne peuvent pas rentrer au repaire{FD}parce que le parc est bouclé.{FC}Tout le monde va se faire prendre !{FF}{00}
+
+@0147
+{FB} 6COh non ! L'entrée secrète est bloquée.{FD}On ne peut pas rentrer.{FF}{00}
+
+@0148
+{FB} 6COh non ! L'entrée secrète est bloquée.{FD}On ne peut pas rentrer.{FF}{00}
+
+@0149
+{FB} 4CComme prévu, vous avez été utiles,{FD}mais on devrait se replier.{FC}{FB} 6CMais comment on s'échappe ?{FC}{FB} 4 C'est le meilleur.{FD}Moi, je m'échappe. Pas vous.{FC}{FB} 6CQuoiii ?{FC}{FB} 4AJ'étais contre cette idée d'utiliser{FD}des enfants dès le début !{FC}Je vous ai déjà signalés{FD}aux Select Corps.{FC}Bonne arrestation, les enfants !{FC}{FB} 6DQu'est-ce que ça veut dire !?{FF}{00}
+
+@0150
+{FB} · Attention.{FC}Vous êtes complètement encerclés.{FC}Ne croyez pas qu'on sera tendres{FD}parce que vous êtes des enfants !{FC}Sortez calmement, les mains en l'air !{FF}{00}
+
+@0151
+{FB}A DLe Phantom Renegade !{FC}{FB} M Enfants, ne blâmez pas vos parents.{FC}Cherchez plutôt les réponses{FD}en vous-mêmes.{FC}Si vous ne voulez pas être pris,{FD}trouvez une issue !{FF}{00}
+
+@0152
+{FB}A DNe vous en faites pas.{FD}Je m'en charge !{FC}{FB} 6CVraiment ?{FD}On peut vraiment rentrer ?{FF}{00}
+
+@0153
+{FB} 6CJe ne supporte plus{FD}d'être un Rubberobo.{FF}{00}
+
+@0154
+{FB} . Oh ? C'est toi···{FD}Quelle coïncidence de te trouver ici.{FF}{00}
+
+@0155
+{FB} · Encore toi, hein, petit ?{FC}Tu es toujours dans les parages{FD}quand les ennuis commencent.{FC}Ou serait-ce l'inverse ?{FC}Tu es plutôt louche, gamin.{FC}Ça ne vaut pas mon temps.{FD}Que quelqu'un l'arrête tout de suite !{FF}{00}
+
+@0156
+{FB} . Quoi ? Hein ? L'arrêter ?{FD}Il n'a rien fait de mal, capitaine !{FF}{00}
+
+@0157
+{FB} 9 Ce sont les ordres du capitaine !{FD}Arrêtez-le !{FF}{00}
+
+@0158
+{FB} 9BNous avons failli à notre devoir !{FF}{00}
+
+@0159
+{FB}A  Tout le monde, suivez-moi !{FF}{00}
+
+@0160
+{FB} 6 Ok alors, on se retrouve à{FD}l'école privée Rosewood !{FF}{00}
+
+@0161
+{FB} 6 Bon travail, tout le monde.{FF}{00}
+
+@0162
+{FB} 6 À tout à l'heure !{FF}{00}
+
+@0163
+{FB}A EVoilà ce qu'on appelle de la gratitude.{FF}{00}
+
+@0164
+{FB}A  Je dois aller à l'école privée Rosewood !{FF}{00}
+
+@0165
+{FB} 6 Ils vont nous attraper !{FD}Vite, attaque-les !{FF}{00}
+
+@0166
+{FB} 6CSi on se fait prendre, on ne{FD}pourra pas rentrer.{FF}{00}
+
+@0167
+{FB} 6ATu peux battre les Select Corps{FD}facilement, non ?{FF}{00}
+
+@0168
+{FB} 9 Arrêtez-les !{FF}{00}
+
+@0169
+{FB} M Cachez-vous !{FC}{FB}A  Oui, monsieur !{FF}{00}
+
+@0170
+{FB} 6AYouhou ! On a réussi !{FD}Continuons !{FC}{FB}A HAttendez !{FF}{00}
+
+@0171
+{FB}A EAyez un peu d'égards pour{FD}celui qui s'occupe de vous.{FF}{00}
+
+@0172
+{FB} 6CDeux sont entrés dans l'école sans{FD}problème, mais le suivant{FC}s'est fait prendre.{FF}{00}
+
+@0173
+{FB}A EVous êtes complètement désemparés.{FD}Pfff···{FC}{FB} 6CMais tu nous aides quand même, hein ?{FC}{FB}A DBon, j'ai promis au Phantom{FD}de vous emmener à l'école.{FF}{00}
+
+@0174
+{FB} 6CJe veux arriver à l'école et{FD}remettre des habits normaux.{FC}Une dame ne se changerait jamais{FD}dans un endroit pareil.{FC}Si seulement on s'était changés,{FD}on ne serait pas dans ce pétrin.{FF}{00}
+
+@0175
+{FB} 6BLâchez-moi ! Lâchez-moi !{FF}{00}
+
+@0176
+{FB} 9 Tu es l'un d'eux !?{FD}Si oui, tu es en état d'arrestation !{FF}{00}
+
+@0177
+{FB} 9BJe vais appeler des renforts···{FC}{FB} I Vas-y, Sidecar !{FF}{00}
+
+@0178
+{FB} 9CQ-qu'est-ce que c'est que ça !{FC}{FB} v Robattle Robattle{FC}{FB} 9 Je n'ai pas le temps pour ça.{FF}{00}
+
+@0179
+{FB} v RoboRobo ToruToru{FD}RoboToruToru{FC}{FB} 9CN-n'approche pas !{FF}{00}
+
+@0180
+{FB} v Rrrrrrobattle !{FF}{00}
+
+@0181
+{FB} 6AOuf, on est sauvés !{FD}Merci !{FF}{00}
+
+@0182
+{FB} 6AOn va enfin pouvoir se changer !{FF}{00}
+
+@0183
+{FB} ICHé, {F9} .{FC}{FB}A HHachiro !?{FD}C'est toi qui nous as sauvés ?{FC}{FB} IFBien sûr ! On est a-amis, non ?{FC}{FB}A DMerci.{FC}{FB} IFEuh, c'est pour toi···{FF}{00}
+
+@0184
+{FB} I Je ne l'ai pas volé, si c'est{FD}ce que tu penses.{FC}Il vient de ma collection.{FC}{FB}A  Je n'en ai pas douté une seconde.{FD}Mais tu es sûr que je peux le garder ?{FC}{FB} ICPour moi, ce n'est pas grand-chose.{FC}{FB}A DMerci.{FF}{00}
+
+@0185
+{FB}A  Ouf ! On dirait qu'on y est arrivés.{FC}Qu'est devenu le Phantom ?{FC}Tant pis, j'entre dans l'école.{FF}{00}
+
+@0186
+{FB} 9 Ils sont arrivés à{FD}l'école privée Rosewood !{FC}{FB} 9 Alors c'est là qu'ils sont !{FF}{00}
+
+@0187
+{FB} MD{F8}Hhh hhh hhh···{F8}{FC}{FB}A  Phantom Renegade !{FC}{FB} M On dirait que les enfants sont{FD}bien arrivés à l'école.{FC}Merci, {F9} .{FD}J'apprécie ton aide.{FF}{00}
+
+@0188
+{FB}A  Phantom, où allez-vous ?{FC}{FB} MAJe vais berner les Select Corps.{FD}Ça ne devrait pas être bien dur.{FF}{00}
+
+@0189
+{FB} M Ceci va ici, et maintenant cela{FD}va là···et voilà !{FF}{00}
+
+@0190
+{FB}A EPhantom, les Select Corps sont là.{FC}{FB} M Ne t'en fais pas, fais-moi confiance.{FF}{00}
+
+@0191
+{FB} 9 Oh ! On s'est trompés.{FC}C'est écrit "Académie Woodrose".{FD}On a dû se tromper de chemin.{FC}{FB} 9 Je ne connaissais pas{FD}l'Académie Woodrose.{FC}{FB} 9 OK ! Formez des équipes et trouvez{FD}l'école privée Rosewood !{FC}{FB} 9 Bien reçu !{FF}{00}
+
+@0192
+{FB} MAUn succès total !{FC}{FB}A EJe n'en reviens pas.{FF}{00}
+
+@0193
+{FB}A EAcadémie Woodrose ??{FF}{00}
+
+@0194
+{FB} M Tant que je ne juge pas la voie{FD}sûre, je monte la garde ici.{FF}{00}
+
+@0195
+{FB} h Euh, merci pour ton aide.{FD}J'étais···{FC}{FB}A DJe suis {F9} .{FD}Et toi, comment tu t'appelles ?{FC}{FB} h Je suis Kahlua.{FD}Tiens, prends ça.{FF}{00}
+
+@0196
+{FB}A  C'est quoi ?{FC}{FB} h Il y avait plein de plaques d'égout{FD}en bas, dans les égouts, non ?{FC}L'une d'elles mène à une{FD}salle de réunion secrète.{FC}Je veux que tu donnes aux Rubberobos{FD}une leçon qu'ils n'oublieront jamais !{FC}{FB}A DOk, c'est comme si c'était fait.{FC}Mais ne pense plus jamais à faire{FD}partie des Rubberobos, d'accord ?{FC}J'y vais.{FF}{00}
+
+@0197
+{FB} h Hé, c'était toi ?{FC}{FB}A  Hein ?{FC}{FB} h C'est toi le héros qui bat le gang{FD}Rubberobo un peu partout{FD}en ville, non ?{FC}Je croyais que c'était Koji,{FD}mais continue comme ça !{FF}{00}
+
+@0198
+{FB}A DKoji travaille dur aussi.{FF}{00}
+
+@0199
+{FB}A  Cette clé ouvre la plaque d'égout.{FD}Encore un peu···voilà, c'est ouvert !{FF}{00}
+
+@0200
+{FB}A  Une échelle vraiment longue.{FC}Si noir que je ne vois pas le fond.{FD}Le Dr Armond a dû passer par là.{FC}{FB}A CSe pourrait-il que le Dr Armond soit{FD}vraiment le···du gang Rubberobo····{FC}{FB}A  Pas possible ! C'est faux !{FD}Le Docteur ne ferait jamais ça !{FC}{FB}A CDu moins, je l'espère···{FF}{00}
+
+@0201
+{FB} 1 Le mot de passe ?{FC}{FB}A  Elle descend de la montagne à cheval !{FC}{FB} 1 Ok, tu peux passer.{FF}{00}
+
+@0202
+{FB} 1AJe n'y avais même pas pensé.{FF}{00}
+
+@0203
+{FB} 1 Aujourd'hui, on choisit un nouveau{FD}sous-chef. J'ai hâte de voir{FC}qui sera choisi.{FF}{00}
+
+@0204
+{FB} 1 Le sous-chef reçoit une tenue neuve.{FD}Il y a une médaille implantée dedans.{FC}{FB}A  Implantée ?{FC}{FB} 1 Implantée, ça veut dire···euh···{FD}Ah oui ! Genre enfouie à l'intérieur.{FC}{FB}A HOù ça ?{FC}{FB} 1 Comme c'est une médaille, ce sera{FD}sûrement dans la tête.{FF}{00}
+
+@0205
+{FB} 1DC'est horrible ! On va mourir !{FC}Celui qui devient sous-chef{FD}va mourir, non ?{FC}Je ne veux plus être sous-chef !{FF}{00}
+
+@0206
+{FB} 1DLe prochain sous-chef va se faire{FD}implanter une médaille !{FF}{00}
+
+@0207
+{FB} 1 Zzz···Zzz···Zzz···{FC}{FB}A  Il dort profondément.{FF}{00}
+
+@0208
+{FB} 1 Zzz···Zzz···Zzz···{FD}Je ne veux pas être sous-chef.{FC}{FB}A  Il parle dans son sommeil.{FF}{00}
+
+@0209
+{FB} 1 Les chefs ne sont toujours pas là.{FD}Je m'ennuie ! Tue le temps avec moi.{FF}{00}
+
+@0210
+{FB} 1 Toujours pas là.{FD}Toi ! Va les appeler.{FF}{00}
+
+@0211
+{FB} 1 Va vite les appeler !{FF}{00}
+
+@0212
+{FB} 2BArrête de traîner !{FD}Va t'asseoir avec les autres !{FF}{00}
+
+@0213
+{FB} 2BHors de mon chemin !{FF}{00}
+
+@0214
+{FB} 2BJ'ai dit assis !{FF}{00}
+
+@0215
+{FB} 2BNotre plan d'attaquer Medaropolis{FD}avec une armée d'enfants a échoué !{FC}Quelqu'un, en plus des Select Corps,{FD}n'arrête pas de contrarier{FC}nos plans.{FC}C'est inacceptable !!{FF}{00}
+
+@0216
+{FB} 1BLà, c'est ce type,{FD}il a volé mon idée de mot de passe.{FC}{FB}A  De quoi tu parles ?{FC}{FB} 1BIl a volé mon super mot de passe.{FC}Tu sais, "Montagne. Elle descend{FD}de la montagne à cheval."{FC}{FB}A EC'est···{FC}{FB} 1BJe ne veux pas entendre tes excuses !{FD}Sale voleur !{FC}{FB} 2BOh, la FERME !{FD}Pourquoi vous vous disputez ?{FF}{00}
+
+@0217
+{FB} 1CEn fait c'est bla bla bla.{FC}{FB} 2BDe quoi tu te plains, alors ?{FD}Va régler ça par un Robattle !{FC}{FB} 1BAllons-y !{FC}{FB}A EQuoi ? Tu es sérieux ?{FF}{00}
+
+@0218
+{FB} 2BDépêche-toi de monter sur la scène !{FF}{00}
+
+@0219
+{FB} 3 Dépêche-toi !{FD}Personne n'aime les lambins.{FF}{00}
+
+@0220
+{FB} 4AHo ho ho.{FD}Ça va être amusant à regarder.{FF}{00}
+
+@0221
+{FB} 1ACelui qui gagne devient{FD}le sous-chef.{FF}{00}
+
+@0222
+{FB}A  Monter sur la scène ?{FF}B
+
+@0223
+{FB} 1 Robo Robattle !{FF}{00}
+
+@0224
+{FB} 1CRobooooooooooooo !{FF}{00}
+
+@0225
+{FB}A  Attends, je ne suis pas prêt···{FF}{00}
+
+@0226
+{FB} 2 Tu es plutôt doué.{FD}Comment tu t'appelles ?{FC}{FB}A  {F9} .{FD}Euh, RoboRobo RoboRobo ?{FC}{FB} 2 Je fais de toi un candidat sous-chef.{FD}Que les autres candidats avancent.{FF}{00}
+
+@0227
+{FB} 2 Hein ? Où est l'autre ?{FC}{FB} 1CIl a attrapé froid et il se repose.{FC}Je l'ai attrapé aussi.{FD}{F8}Kof kof kof···{F8}{FC}{FB} 2BPas de plaintes. Sur la scène !{FD}Ceci désignera le nouveau sous-chef !{FC}{FB} 1CJ'imagine que je dois me battre···{FF}{00}
+
+@0228
+{FB}A  Monter sur la scène ?{FF}B
+
+@0229
+{FB} 5 Ce doit être "Chef des enfants" !{FC}{FB} 2 C'est plutôt nul.{FC}{FB} 3AAh ha ha ha.{FD}"Chef Médaille", c'est bien mieux !{FC}{FB} 2 Puisqu'on leur implante une{FD}médaille, "Chef Médaille" n'est{FD}pas un si mauvais nom.{FC}{FB} 4 Bien, va pour "Chef Médaille".{FC}Voici le nouvel uniforme avec{FD}la médaille implantée dedans.{FC}Essaie-le. Maintenant !{FF}{00}
+
+@0230
+{FB}A FJ'ai trop honte pour···{FC}{FB} 2 Tu n'as pas de vêtements en dessous ?{FC}Comment suivre un chef{FD}sans connaître son visage ?{FC}{FB}A EMais···{FC}{FB} 2 Ou y a-t-il une autre raison{FD}pour ne pas te déshabiller ?{FF}{00}
+
+@0231
+{FB}A  Une statue d'une forme étrange.{FD}Je ne la vois pas bien d'ici, ceci dit.{FF}{00}
+
+@0232
+{FB} 1AJ'ai perdu ! Youpi !{FD}Jamais perdre ne m'a rendu si heureux.{FF}{00}
+
+@0233
+{FB} 2 C'était un beau combat.{FD}C'est décidé !{FC}Tu es le nouveau sous-chef !{FC}{FB}A EEuh····{FC}{FB} 1 Bon, je m'en vais.{FF}{00}
+
+@0234
+{FB} 1AOuf, on ne m'a pas enfoui{FD}de médaille dedans !{FF}{00}
+
+@0235
+{FB} 4 Le prochain sous-chef, {F9} ,{FD}est désigné.{FC}Mettons-nous d'accord sur un nom{FD}pour le nouveau sous-chef.{FF}{00}
+
+@0236
+{FB} 3DC-c'est toi !?{FC}{FB} 3 Qui es-tu ?{FC}{FB} 5 Je t'ai déjà vu quelque part.{FC}{FB} 4 Je connais ce visage···{FC}{FB} 2DTOI ! Comment oublier le visage{FD}de celui qui contrarie mes plans !{FC}{FB} 2AEh bien, que dirais-tu de ça.{FD}Et si tu rejoignais les Rubberobos ?{FC}Si tu me bats, tu peux{FD}quand même être sous-chef.{FC}Montre-moi ce que tu vaux !{FF}{00}
+
+@0237
+{FB} 2 Très bien. Je comprends.{FC}Même si on te le demande,{FD}tu ne nous rejoindras pas, hein ?{FC}{FB} 2BPeu importe.{FC}Tu crois que je laisserais quelqu'un{FD}de plus fort que moi être sous-chef !?{FC}Attrapez-le !{FF}{00}
+
+@0238
+{FB}A EMe voilà dans le pétrin.{FF}{00}
+
+@0239
+{FB} 1DGros problème !{FC}Les Select Corps ont trouvé{FD}notre repaire et l'envahissent !{FC}{FB} 2BParlez d'un mauvais moment !{FF}{00}
+
+@0240
+{FB} 1DQu'est-ce qu'on fait !?{FD}Qu'est-ce qu'on fait !?{FC}{FB} 2BSilence !{FF}{00}
+
+@0241
+{FB}A DOn dirait que je suis sauvé.{FC}Même les Select Corps sont utiles{FD}de temps en temps.{FC}Je n'ai qu'à attendre qu'ils arrivent.{FF}{00}
+
+@0242
+{FB}A  Je vais attendre que{FD}les Select Corps arrivent.{FF}{00}
+
+@0243
+{FB}A  C'est quoi, cette statue, au juste ?{FD}On dirait une grosse fourmi.{FC}Je suis curieux de savoir ce que c'est.{FF}{00}
+
+@0244
+{FB}A HJ'ai entendu un bruit comme···{FD}Nom d'un Medabot !{FF}{00}
+
+@0245
+{FB} {FF}{00}
+
+@0246
+{FB}A EAïe aïe aïe aïe aïe.{FF}{00}
+
+@0247
+{FB}A HÇa m'a surpris !{FC}{FB}A EMais j'adore ce style !{FD}Tout le truc du passage secret.{FC}Un peu trop prévisible pour{FD}un passage secret, ceci dit.{FC}{FB} 9 On a aussi trouvé une échelle cachée !{FC}{FB} {FF}{00}
+
+@0248
+{FB}A EQuelle galère.{FC}{FB}A  Impossible de faire demi-tour.{FC}Je ne sais même pas d'où j'ai chuté.{FD}Autant avancer.{FF}{00}
+
+@0249
+{FB} r Encore de la nourriture qui tombe.{FD}Il faut l'apporter à la Reine.{FF}{00}
+
+@0250
+{FB} r Cette nourriture est forte.{FD}Il me faut des renforts.{FF}{00}
+
+@0251
+{FB} {56} C'est une supérette.{FD}On connaît le repaire secret.{FF}{00}
+
+@0252
+{FB} {56} On sera là la prochaine fois{FD}que vous aurez besoin de nous.{FF}{00}
+
+@0253
+{FB} V Tu es nouveau ?{FC}{FB}A  Euh, c'est quoi, cet endroit ?{FC}{FB} V C'est ici qu'on jette les enfants{FD}qui essaient d'échapper au{FD}gang Rubberobo.{FC}{FB}A HC'est horrible !{FC}Je croyais avoir sauvé tous les{FD}enfants capturés par{FD}les Rubberobos !{FC}{FB} V Ce n'est pas si terrible.{FC}Les fourmis nous apportent à manger{FD}et jouent avec nous aussi.{FC}On ne s'ennuie jamais.{FF}{00}
+
+@0254
+{FB} V Là où l'on vit devient chez soi.{FF}{00}
+
+@0255
+{FB} h Je veux rentrer à la maison.{FC}Mais les fourmis ne nous laissent{FD}pas sortir de cette pièce.{FF}{00}
+
+@0256
+{FB} BB{F8}(·····){F8}{FD}Je crois···{FC}{FB}A  Hein ?{FF}{00}
+
+@0257
+{FB} BBTu en sais bien plus sur toutes{FD}ces affaires. Plus que moi, même.{FC}Pendant que je courais désespérément{FD}après un scoop, toi, tu{FD}t'amusais avec Koji.{FC}{FB}A ECe n'est pas ça du tout···{FF}{00}
+
+@0258
+{FB} BBJe trouve ça étrange.{FC}Je trouvais Hachiro louche,{FD}alors je suis allée chez lui.{FC}On aurait dit que toutes les affaires{FD}étaient déjà résolues.{FC}Tu es toujours là quand les{FD}affaires se règlent !{FC}C'est toi qui bats le gang Rubberobo{FD}un peu partout{FC}en ville, pas vrai !?{FC}{FB}A EHein ? Euh, c'est-à-dire···{FC}{FB} BBJe le savais !{FC}Tu ne nies même pas !{FC}Quelle idiote. J'étais juste à{FD}côté du vrai scoop, et je{FC}courais toujours vérifier{FD}autre chose !{FF}{00}
+
+@0259
+{FB}A EDis-moi, s'il te plaît.{FC}{FB} D Eh bien, ce qui m'inquiète ces{FD}derniers temps, c'est que le gang{FD}Rubberobo surgit n'importe où.{FC}Ils sont partout, non ?{FC}{FB}A  Ok, il doit y avoir une sorte{FD}de secret derrière ça.{FC}{FB} D Pas vrai ? Et je m'inquiète aussi de{FD}l'augmentation des disparitions.{FF}{00}
+
+@0260
+{FB}A  C'est quoi, ça ?{FC}{FB} D Des enfants sont sortis jouer{FD}et ne sont jamais rentrés.{FC}Tu en sauras plus en allant{FD}au QG des Select Corps.{FC}{FB}A  On dirait un autre scoop. Il s'en{FD}passe beaucoup, ces derniers temps.{FC}{FB} DDTu n'as rien à faire,{FD}alors va voir ça.{FC}{FB}A  Et toi, que vas-tu faire ?{FC}{FB} DDLe directeur m'a demandé{FD}de m'occuper d'Hachiro.{FC}{FB}A DJe vois.{FD}Ok, merci pour tout.{FF}{00}
+
+@0261
+{FB} DENe me remercie pas.{FD}C'est désagréable.{FF}{00}
+
+@0262
+{FB} ICSalut, {F9}  !{FD}Bienvenue !{FC}{FB}A  Bienvenue···{FC}Ce n'est pas ta maison !{FF}{00}
+
+@0263
+{FB} t Qui est-ce ?{FD}Quelqu'un a la langue bien pendue.{FF}{00}
+
+@0264
+{FB} W Tu viens voir Koji ?{FD}Il est au 2e étage.{FF}{00}
+
+@0265
+{FB} j Koji s'est soudain fait plein d'amis.{FC}{F9} , entends-toi bien{FD}avec Koji, d'accord ?{FF}{00}
+
+@0266
+{FB} j La place des amoureux est{FD}devant la gare.{FF}{00}
+
+@0267
+{FB}A  "Statue du noble chien Bonaparte".{FD}Elle ressemble un peu à Salty, en fait.{FF}{00}
+
+@0268
+{FB}A BMoi, et toi alors !{FF}{00}
+
+@0269
+{FB}A HC'est le Phantom Renegade !?{FF}{00}
+
+@0270
+{FB} 9AOn nous a signalé que le gang{FD}Rubberobo s'était enfui par ici.{FC}Mais contre toute attente, on{FD}récolte un autre succès !{FC}Maintenant tu viens avec nous{FD}au QG des Select Corps !{FC}{FB} V Ouiiin, maman !{FF}{00}
+
+@0271
+{FB}A  Cette statue a l'air{FD}plutôt louche···{FF}{00}
+
+@0272
+{FB}A  On dirait que je ne peux plus{FD}retourner sous terre.{FF}{00}
+
+@0273
+{FB}A DHé, par ici.{FC}{FB} BFPourquoi tu te caches ?{FC}{FB} B Peu importe, ceci dit.{FD}On y reviendra plus tard.{FC}{FB} BBMais plus tard, tu me raconteras{FD}toute l'histoire en détail !{FC}{FB} B Je vais interroger les gens{FD}sur cette situation.{FF}{00}
+
+@0274
+{FB} 4ARestez à l'écoute.{FD}Ho ho ho.{FF}{00}
+
+@0275
+{FB} n Limite de poids dépassée.{FC}{FB} 4BSilence !{FD}Dépêche-toi d'avancer !{FF}{00}
+
+@0276
+{FB} 6CJe ne me ferai pas avoir !{FC}Le gang Rubberobo, c'est juste{FD}une bande d'adultes menteurs !{FC}Ouiiin, je veux rentrer à la maisooon.{FF}{00}
+
+@0277
+{FB} MABwa ha ha ha !{FF}{00}
+
+@0278
+{FB} MAToh !{FF}{00}
+
+@0279
+{FB} M Si vous arrivez sains et saufs{FD}à l'école privée Rosewood, je{FD}peux m'occuper de tout le reste.{FC}Va guider les enfants.{FC}{FB} MAOn se reverra !{FD}Bwa ha ha ha !{FF}{00}
+
+@0280
+{FB}A GIl est vraiment TROP cool !{FF}{00}
+
+@0281
+{FB} 6 Attends !{FF}{00}
+
+@0282
+{FB}A FJe dois vite retrouver{FD}ces enfants Rubberobos !{FF}{00}
+
+@0283
+{FB} 6CJe n'arrive pas à croire que je{FD}porte cette tenue ridicule.{FF}{00}
+
+@0284
+{FB}A  "École privée Rosewood"{FF}{00}
+
+@0285
+{FB} 9CComment es-tu entré ici !?{FF}{00}
+
+@0286
+{FB}A  Je dois retourner sous terre trouver{FD}la plaque d'égout qui mène à la salle{FD}de réunion du gang Rubberobo !{FC}Mmm ? Il y a un bouton sous{FD}la statue. {F8}Clic{F8}{FF}{00}
+
+@0287
+{FB}A  Je veux aller sous terre, mais je{FD}ne sais pas me servir de la statue.{FF}{00}
+
+@0288
+{FB}A DJe peux retourner sous terre !{FF}{00}
+
+@0289
+{FB} 5 Awwête de faiwe l'idiot, assis !{FC}{FB}A E{F8}(·····){F8}{FF}{00}
+
+@0290
+{FB} 1 Dépêche-toi de t'asseoir !{FF}{00}
+
+@0291
+{FB} 3 Va t'asseoir.{FF}{00}
+
+@0292
+{FB} 4 Tu traînes encore ?{FC}Assieds-toi sur un siège libre !{FF}{00}
+
+@0293
+{FB}A HCe sont les voix des Select Corps !{FC}{FB}A ESi je les croise ici, ça va{FD}se compliquer, c'est sûr.{FC}{FB}A  Pas d'autre choix,{FD}alors avançons !{FF}{00}
+
+@0294
+{FB}A  Hein ? Depuis quand cette statue{FD}est-elle revenue à sa place ?{FC}Ce n'est pas le moment de penser{FD}au sous-sol !{FF}{00}

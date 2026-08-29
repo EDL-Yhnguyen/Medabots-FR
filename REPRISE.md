@@ -7,11 +7,13 @@ Dernière séance : 2026-08-29
 
 ## Où on en est
 
-**Trois chapitres sont en français : 1 555 entrées sur 5 933.** Table
+**Quatre chapitres sont en français : 1 850 entrées sur 5 933.** Table
 `0x479F0C` (237 dialogues, le vol d'Eggy et la prise d'otages de Rosewood),
-`0x47A2C4` (303, le mont Odoro, Kannie, Yanagi, le Phantom Renegade), puis
+`0x47A2C4` (303, le mont Odoro, Kannie, Yanagi, le Phantom Renegade),
 `0x47A784` (323, l'île Medabot, le tournoi du bloc B, le Dr Armond, la maison
-hantée). Chaîne au vert, patch reconstruit, vérifié par application et déployé.
+hantée), puis `0x47B110` (295, les enfants disparus, le repaire des égouts, le
+mot de passe chanté, l'Académie Woodrose, l'élection du sous-chef). Chaîne au
+vert, patch reconstruit et vérifié par application, recopié sur le site.
 
 **La ROM traduite fait 16 Mio, et c'est éprouvé.** Les 48 Kio d'espace libre
 d'origine ne suffisaient plus ; `reinserer.mjs` étend en `0x00` à chaque
@@ -44,11 +46,11 @@ jusqu'au premier menu d'équipement, `mGBA.exe -g travail/medabots-fr.gba`, puis
 `lire(0x06000000, 0x18000)` + IO + palette, comme dans `banc-16mio`). Une fois
 vu, passer le § 5 quater de `docs/format.md` en « établi ».
 
-**Puis la table suivante par ordre d'adresse : `0x47B110`, 295 entrées.**
+**Puis la table suivante par ordre d'adresse : `0x47B5B0`, 259 entrées.**
 Même méthode — lire toute la table, traduire d'un bloc, puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47B110.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47B5B0.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod
@@ -104,6 +106,13 @@ identifiants :**
   Hebdo », le passeur à 1 £ (le glyphe `£` existe, `0x4C`). Kannie dit « mon
   petit » et « Hi hi hi » ; les Rubberobos crient « Robo repli ! ». Types
   d'attaque selon la table `3B66EC` : anti-air, anti-mer, gravité.
+- **Vocabulaire du chapitre 4.** Le sous-chef, « Chef Médaille », la salle de
+  recherche du Mal, l'expérience du soda, la Medabot Corporation, la série
+  Élémentaire, la plateforme de combat, le snack, la Reine des fourmis,
+  Sidecar, la statue du noble chien Bonaparte, l'Académie Woodrose. Le gag du
+  mot de passe est adapté sur des chansons françaises : « Montagne ! / Elle
+  descend de la montagne à cheval ! » et « Rivière ! / Bateau sur l'eau, la
+  rivière au bord de l'eau », refrain « Ohé ohé ».
 - **Vocabulaire du chapitre 3.** L'île Medabot, le site Surprise, la salle du
   tournoi, l'infirmerie, la salle d'arcade, la Fédération Medabot,
   Mademoiselle Sammy, Mademoiselle Nae, le Hopmart, Rappy. Shrimplips remplace
