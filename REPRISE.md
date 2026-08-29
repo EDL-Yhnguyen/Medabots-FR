@@ -37,14 +37,20 @@ culminent à 180 et 185 px, aucune boîte n'a gagné de ligne.
 
 ## La prochaine action
 
-**Voir à l'écran un texte relogé au-delà de 8 Mio.** Le témoin le plus
-accessible : `0x47E388 @0000`, « Vous ne pouvez plus rien porter ! », le
-message d'équipement — il s'affiche dès qu'on surcharge un Medabot dans le
-menu, sans avancer dans l'histoire. Il faut une sauvegarde ou une partie menée
-jusqu'au premier menu d'équipement, `mGBA.exe -g travail/medabots-fr.gba`, puis
-`outils/ecran.mjs` sur un dump VRAM pris par le stub GDB (`outils/gdb.mjs`,
-`lire(0x06000000, 0x18000)` + IO + palette, comme dans `banc-16mio`). Une fois
-vu, passer le § 5 quater de `docs/format.md` en « établi ».
+**Voir à l'écran un texte relogé au-delà de 8 Mio — à la manette.** Deux
+témoins ne demandent aucune progression : **la scène d'ouverture**
+(`0x48698C @0000`, « BA DA DA DA BOOOM !! », juste après « nouvelle partie »)
+et **l'inventaire** (`0x483ED8 @0000`, « Plan de la ville »). Lancer
+`mGBA.exe travail/medabots-fr.gba`, Start, nouvelle partie, lire. Une fois vu,
+passer le § 5 quater de `docs/format.md` en « établi ».
+
+Ce qui a échoué le 29/08 : le pilotage automatique. Le jeu joue une démo
+(DISPCNT `0x1E60`) et n'affiche l'écran-titre (`0x1761`) qu'à ~55 s ; en
+l'attendant par GDB puis en envoyant Start par `outils/fenetre.ps1`, le script
+annonce « touches envoyees » mais la capture de fenêtre montre toujours
+« PRESS START ». Le premier dialogue n'est pointé par aucun pointeur, même non
+aligné, donc pas de témoin possible par redirection. Une manette bat une heure
+de plus là-dessus.
 
 **Puis la table suivante par ordre d'adresse : `0x47B5B0`, 259 entrées.**
 Même méthode — lire toute la table, traduire d'un bloc, puis :
