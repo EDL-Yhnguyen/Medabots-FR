@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Bouton, Carte, Etiquette, Titre } from './ui'
 import { ROM_REFERENCE, verifieRom, type Verdict } from '../lib/empreinte'
+import { NOM_FICHIER_TRADUIT, telechargeRomTraduite } from '../lib/romTraduite'
 import { litRom, oublieRom, rangeRom } from '../lib/stockage'
 
 type Etat =
@@ -10,8 +11,16 @@ type Etat =
   | { nom: 'refus'; verdict: Exclude<Verdict, { etat: 'conforme' }> }
   | { nom: 'prete'; rom: ArrayBuffer }
 
+/** Le téléchargement a ses propres états : il ne change pas celui de la ROM. */
+type Telechargement =
+  | { nom: 'repos' }
+  | { nom: 'fabrication' }
+  | { nom: 'fait'; octets: number }
+  | { nom: 'erreur'; message: string }
+
 export function DepotRom({ surRomPrete }: { surRomPrete: (rom: ArrayBuffer) => void }) {
   const [etat, setEtat] = useState<Etat>({ nom: 'chargement' })
+  const [telechargement, setTelechargement] = useState<Telechargement>({ nom: 'repos' })
   const [survol, setSurvol] = useState(false)
   const champ = useRef<HTMLInputElement>(null)
 
@@ -41,6 +50,18 @@ export function DepotRom({ surRomPrete }: { surRomPrete: (rom: ArrayBuffer) => v
     setEtat({ nom: 'prete', rom: donnees })
   }, [])
 
+  // Le fichier traduit est fabriqué ici, à partir de la copie déposée. Le site
+  // ne distribue toujours rien : sans ROM, ce bouton n'existe pas.
+  const telecharge = useCallback(async (rom: ArrayBuffer) => {
+    setTelechargement({ nom: 'fabrication' })
+    try {
+      const octets = await telechargeRomTraduite(rom)
+      setTelechargement({ nom: 'fait', octets })
+    } catch (e) {
+      setTelechargement({ nom: 'erreur', message: e instanceof Error ? e.message : String(e) })
+    }
+  }, [])
+
   if (etat.nom === 'chargement') {
     return (
       <Carte>
@@ -68,15 +89,56 @@ export function DepotRom({ surRomPrete }: { surRomPrete: (rom: ArrayBuffer) => v
             <span aria-hidden="true">▶</span> Lancer le jeu
           </Bouton>
           <Bouton
+            ton="discret"
+            onClick={() => void telecharge(etat.rom)}
+            disabled={telechargement.nom === 'fabrication'}
+          >
+            <span aria-hidden="true">⤓</span>{' '}
+            {telechargement.nom === 'fabrication' ? 'Fabrication…' : 'Télécharger la ROM traduite'}
+          </Bouton>
+          <Bouton
             ton="danger"
             onClick={async () => {
               await oublieRom()
+              setTelechargement({ nom: 'repos' })
               setEtat({ nom: 'vide' })
             }}
           >
             Oublier ma ROM
           </Bouton>
         </div>
+
+        {/* Une région vivante pour la fabrication et le succès ; une alerte pour
+            l'échec, qui doit dire ce qui cloche et laisser le jeu jouable ici. */}
+        <p role="status" className="mt-4 text-sm text-texte-doux">
+          {telechargement.nom === 'fabrication' &&
+            'Application du patch à votre copie, dans le navigateur…'}
+          {telechargement.nom === 'fait' && (
+            <>
+              Fichier prêt :{' '}
+              <span className="font-semibold text-texte" translate="no">
+                {NOM_FICHIER_TRADUIT}
+              </span>{' '}
+              ({Math.round(telechargement.octets / 1_048_576)}&nbsp;Mio). Il se joue dans
+              n’importe quel émulateur Game Boy Advance.
+            </>
+          )}
+        </p>
+        {telechargement.nom === 'erreur' && (
+          <div
+            role="alert"
+            className="mt-2 rounded-xl border-2 border-corail bg-corail-fond p-4 text-sm text-texte"
+          >
+            Le fichier traduit n’a pas pu être fabriqué ({telechargement.message}). Vous pouvez
+            quand même lancer le jeu ici.
+          </div>
+        )}
+
+        <p className="mt-5 border-t border-trait pt-5 text-sm text-texte-doux">
+          Le fichier traduit est <strong className="text-texte">fabriqué sur cet appareil</strong>,
+          à partir de votre copie et du patch — la seule chose que le site envoie. Rien ne quitte
+          votre navigateur, et le site ne propose aucun jeu à télécharger.
+        </p>
       </Carte>
     )
   }

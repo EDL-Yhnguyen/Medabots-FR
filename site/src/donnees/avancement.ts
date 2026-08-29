@@ -15,7 +15,7 @@
  * d'entrées ne ment pas.
  */
 export const ENTREES = {
-  traduites: 2109,
+  traduites: 2372,
   total: 5933,
 } as const
 
@@ -47,8 +47,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Histoire principale',
     detail:
-      'Cinq chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, puis les Ruines antiques et le royaume sous-marin de Kodine — 1 417 dialogues. Restent neuf tables, soit 2 458 entrées.',
-    part: 0.37,
+      'Six chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, puis le faux rendez-vous et la forteresse volante Fiyun — 1 680 dialogues. Restent huit tables, soit 2 195 entrées.',
+    part: 0.43,
   },
   {
     titre: 'PNJ et contenu secondaire',

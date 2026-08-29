@@ -74,7 +74,7 @@ export function Emulateur({
           {traduit ? (
             <>
               <Etiquette ton="vert">Patch français appliqué</Etiquette>
-              <Etiquette>Objets, médailles, attaques</Etiquette>
+              <Etiquette>Histoire, objets, combat</Etiquette>
             </>
           ) : (
             <Etiquette ton="jaune">Version originale</Etiquette>

@@ -5,11 +5,10 @@ import { Emulateur } from './composants/Emulateur'
 import { Compte, useSession } from './composants/Compte'
 import { OuVoirLaSerie } from './composants/OuVoirLaSerie'
 import { Synchro } from './composants/Synchro'
-import { appliquePatch } from './lib/patch'
+import { construitRomTraduite } from './lib/romTraduite'
 import { ENTREES, ETAPES, LOTS } from './donnees/avancement'
 
 const DEPOT = 'https://github.com/EDL-Yhnguyen/Medabots-FR'
-const PATCH = '/medabots-fr.bps'
 
 export default function App() {
   const [romLancee, setRomLancee] = useState<ArrayBuffer | null>(null)
@@ -26,13 +25,7 @@ export default function App() {
   const lancer = useCallback(async (rom: ArrayBuffer) => {
     setErreurPatch(null)
     try {
-      const reponse = await fetch(PATCH)
-      if (!reponse.ok) throw new Error('patch introuvable')
-      const patch = new Uint8Array(await reponse.arrayBuffer())
-      const patchee = appliquePatch(new Uint8Array(rom), patch)
-      setRomLancee(
-        patchee.buffer.slice(patchee.byteOffset, patchee.byteOffset + patchee.byteLength) as ArrayBuffer,
-      )
+      setRomLancee(await construitRomTraduite(rom))
     } catch (e) {
       // Mieux vaut jouer en anglais que ne pas jouer : on le dit, et on lance.
       setErreurPatch(e instanceof Error ? e.message : String(e))
@@ -215,7 +208,8 @@ function Entete({ total }: { total: number }) {
       <p className="mt-5 max-w-xl text-lg text-texte-doux">
         La première traduction française de{' '}
         <em translate="no">Medabots: Metabee Version</em>. Suivez l’avancement, lisez comment le
-        jeu est démonté — et jouez-y ici même, avec votre propre copie.
+        jeu est démonté — et jouez-y ici même, ou emportez le fichier traduit sur votre
+        émulateur. Toujours avec votre propre copie.
       </p>
 
       <a
