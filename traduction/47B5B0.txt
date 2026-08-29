@@ -1,0 +1,796 @@
+# Table 0x47B5B0 — dialogues du cinquième chapitre (259 entrées)
+#
+# Les Ruines antiques sous un dôme de verre, le téléporteur, le royaume
+# sous-marin de Kodine : la reine Margarita (cinq ans), le Chambellan,
+# l'Oracle Jyozo, le Chancelier Ginjyo, le Medabot Cafe Ole, le monstre Blue
+# Hawaii et ses « serviteurs », la prison, le champ de fleurs. Le Dr Armond
+# et la pierre Fiyun ; Gillgirl et ses Rubberobos.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {45} est le locuteur du Chambellan : conservé tel quel.
+#
+# Vocabulaire fixé : le Grand Héros, le Chambellan, l'Oracle, le Chancelier,
+# le royaume de Kodine, le temple de Kodine, la salle d'invocation, le champ
+# de fleurs, la pierre Fiyun, la Pierre sacrée, l'île Hawaii, les Medabots
+# Cauchemar, Magie Arc-en-ciel. Margarita parle d'elle à la troisième
+# personne, comme dans l'original. Blue Hawaii, Cafe Ole restent tels quels.
+#
+
+@0000
+{FB}A HOuaaaaaaaaah !!{FF}{00}
+
+@0001
+{FB}A  Où suis-je ?{FF}{00}
+
+@0002
+{FB}A  Cet endroit est couvert par{FD}un immense dôme de verre.{FC}{FB}A HQ-qu-quoi ?{FD}C'est une blague !{FC}Il y a un poisson qui nage dehors···{FD}Ça veut dire que je suis DANS L'OCÉAN !?{FF}{00}
+
+@0003
+{FB}A  Quelque chose brille au-dessus···{FC}Je crois pouvoir rentrer d'ici, mais{FD}je veux encore jeter un coup d'œil.{FF}{00}
+
+@0004
+{FB}A  Quelque chose brille au-dessus···{FD}Peut-être que je ne peux pas rentrer ?{FC}Au fait, je me demande ce que sont{FD}devenus ceux qui sont tombés{FC}ici avec moi.{FF}{00}
+
+@0005
+{FB}A HOuah !{FF}{00}
+
+@0006
+{FB} 1COn a de gros ennuis, cette fois.{FC}{FB} 1 C'est quoi, cet endroit ?{FC}{FB} 3ALes "Ruines antiques" du Docteur.{FD}C'est moi qui les ai découvertes.{FC}Si je lui rapporte ne serait-ce{FD}qu'un caillou, je serai récompensée.{FC}{FB} 1CMaîtresse Gillgirl,{FD}on veut des cadeaux aussiii.{FC}{FB} 3BSilence !{FF}{00}
+
+@0007
+{FB}A FOuah ! Ils viennent par ici !{FF}{00}
+
+@0008
+{FB} 3AOh, comme c'est beau !{FC}Un endroit pareil est fait pour{FD}une beauté comme moi.{FC}Plus tard, je volerai tout ! Ah ha ha ha.{FF}{00}
+
+@0009
+{FB} 3BHé ! J'ai dit de fouiller !{FC}{FB} 1COui, madame.{FF}{00}
+
+@0010
+{FB} 3AOh, quel Medabot d'un autre âge{FD}nous avons là !{FC}Il est peut-être en panne ?{FF}{00}
+
+@0011
+{FB} 1 Mais je n'en ai jamais vu{FD}un comme ça avant.{FC}Ce doit être un Medabot très rare !{FC}{FB} 3 Ça ne ferait même pas{FD}de la bonne ferraille !{FC}{FB}A FNon ! Ne touchez pas···{FF}{00}
+
+@0012
+{FB} 3DQu'est-ce que···!{FC}{FB} 1DRobo !?{FC}{FB}A HOuaah ! Je savais que{FD}quelque chose allait arriver.{FF}{00}
+
+@0013
+{FB} 7 Alors, c'est ici.{FD}Exactement comme je le pensais.{FC}Il y avait vraiment une{FD}civilisation antique !{FC}Même le téléporteur subsiste.{FC}Ces cailloux doivent faire partie{FD}de la pierre Fiyun···{FC}Alors le dôme autour des ruines{FD}est formé par la Pierre ?{FF}{00}
+
+@0014
+{FB} 7AMon garçon, grâce à ton ingérence,{FD}le gang Rubberobo s'est enfin{FD}montré utile pour la première fois !{FC}Gya ha ha ha !{FF}{00}
+
+@0015
+{FB} 7 C'est très vieux, je ne sais pas{FD}où ça enverra qui que ce soit.{FC}On va l'essayer !{FF}{00}
+
+@0016
+{FB} 7 Vous serez les premiers !{FD}Montez sur le téléporteur !{FF}{00}
+
+@0017
+{FB} 1CJe veux paaas !{FF}{00}
+
+@0018
+{FB}A  Une lumière mystérieuse brille.{FD}Du verre ? Ou du cristal ?{FF}{00}
+
+@0019
+{FB}A  Que fait un Medabot ici ?{FD}Bouge-t-il encore ?{FC}Bouger ou pas, si quelqu'un{FD}le touche, ça pourrait mal finir.{FC}Maman disait toujours : "Si ce n'est{FD}pas à toi, n'y touche pas."{FC}Les mots "Reine Margarita" sont écrits{FD}dessous, et il y a une pierre.{FC}À quoi ça sert ?{FF}{00}
+
+@0020
+{FB}A  Où mène cette porte ?{FF}{00}
+
+@0021
+{FB}A HOuah !{FF}{00}
+
+@0022
+{FB}A EOuf, ça m'a vraiment pris par surprise !{FF}{00}
+
+@0023
+{FB}A  Génial, on va encore me prendre{FD}pour un membre du gang Rubberobo.{FF}{00}
+
+@0024
+{FB}A GC'est···{FD}J'ai trop honte, laisse tomber.{FF}{00}
+
+@0025
+{FB}A GJe n'ai pas moins honte.{FF}{00}
+
+@0026
+{FB}A  C'est dangereux, je ne le ferai pas.{FF}{00}
+
+@0027
+{FB} / C'est exactement comme ça que{FD}j'imaginais le Grand Héros !{FF}{00}
+
+@0028
+{FB} - Ouah, le Grand Héros existe vraiment !{FD}C'est incroyable !{FF}{00}
+
+@0029
+{FB} / Grand Héros !{FD}Sauvez notre royaume !{FF}{00}
+
+@0030
+{FB} {45} Franchissez les frontières du Temps{FD}et de l'Espace···{FC}Héros, nous vous en supplions, venez !{FF}{00}
+
+@0031
+{FB} {45} Cette silhouette···{FD}Ce ne peut être que···{FC}Sous mes propres yeux···{FD}C'est le Grand Héros !!{FC}{FB} - Le Grand Héros !{FD}Le Grand Héros !{FC}{FB} / Il existe vraiment !{FF}{00}
+
+@0032
+{FB}A EEuh, bonjour···{FC}{FB} {45} Grand Héros,{FD}écoutez la requête de notre Reine.{FC}{FB}A EHein ?{FC}{FB} , Oh, Grand Héros !{FC}Terrassez le terrible monstre{FD}"Blue Hawaii" et rendez le bonheur{FD}au royaume de Kodine !{FF}{00}
+
+@0033
+{FB}A EQuoi !?{FC}{FB} {45} Votre éloquence nous honore !{FC}{FB} - Longue vie au Grand Héros !{FC}{FB} / Grand Héros ! Regardez-moi !{FD}Je vous aime !{FF}{00}
+
+@0034
+{FB}A EEuh, qu'est-ce qui se passe···{FD}C'est quoi, cet endroit ?{FC}{FB} {45} Je savais que ma prophétie{FD}était juste !{FC}Jusqu'au moment même{FD}où il devait venir !{FC}Je vous l'avais dit à tous :{FD}le Grand Héros viendrait !{FF}{00}
+
+@0035
+{FB} {45} Grand Héros, vous devez être{FD}fatigué de votre long voyage.{FC}Venez vous reposer dans votre chambre.{FD}Par ici, je vous prie.{FF}{00}
+
+@0036
+{FB} , Grand Héros, je sais que{FD}vous ne nous décevrez pas !{FF}{00}
+
+@0037
+{FB}A EHein ? Quoi ? Euh ?{FF}{00}
+
+@0038
+{FB} ,DGrand Héros, ne partez pas !{FF}{00}
+
+@0039
+{FB} {45} Princesse, ne soyez pas égoïste.{FC}{FB} , Promettez que vous{FD}reviendrez me voir.{FC}{FB}A DC'est promis.{FC}{FB} , Tenez, prenez ceci en souvenir de moi.{FF}{00}
+
+@0040
+{FB}A DJ'en prendrai grand soin.{FF}{00}
+
+@0041
+{FB} , Bon, Cafe Ole, on dirait qu'on doit{FD}se dire au revoir pour un moment.{FF}{00}
+
+@0042
+{FB} ,CTenez, Grand Héros,{FD}je vous prête ceci.{FF}{00}
+
+@0043
+{FB} {45} Sommes-nous prêts ?{FC}Je vais commencer le rituel.{FF}{00}
+
+@0044
+{FB}A  Attendez ! Je repars avec{FD}les autres que j'ai attrapés !{FC}{FB} {45} Comme vous voudrez, Grand Héros.{FC}Nous les enverrons ensuite.{FD}Hum !{FC}"Que les barrières du Temps et de{FD}l'Espace cèdent, et que le Grand Héros{FC}retourne dans son monde !"{FF}{00}
+
+@0045
+{FB} 7AOhhhh, cette lumière···{FD}Elle est magnifique !{FC}Grâce à ces idiots et leur panique,{FD}j'ai pu la prendre !{FC}Mon "Fiyun" sera enfin complet !{FD}Et je serai un séducteur célèbre !{FC}Les filles du monde entier{FD}accourront à mes côtés !{FC}Et enfin, je pourrai battre ce{FD}maudit Akihabara !{FC}Ce gamin, {F9} , ne m'est{FD}plus utile.{FC}Je l'achèverai au moment le plus{FD}palpitant de l'histoire !{FC}Gya ha ha ha !{FF}{00}
+
+@0046
+{FB}A  Hein ? Où suis-je ?{FC}On dirait que j'ai été renvoyé{FD}à un autre endroit.{FC}{FB} 9BGang Rubberobo !{FD}Ne bougez plus !{FC}{FB}A  Les Select Corps ?{FD}Le temps aussi est revenu en arrière ?{FC}Dès que je sors d'ici, je crois que{FD}les Select Corps vont me poursuivre.{FC}Le lieu et le moment sont si aléatoires.{FF}{00}
+
+@0047
+{FB} 1DRoboooo !?{FD}Pourquoi on a atterri ici !!{FC}{FB} 3DLes Select Corps !{FC}{FB} 9BVenez avec nous !{FC}{FB}A  Ah···{FD}Ils se sont fait prendre.{FC}Bon, tout est bien{FD}qui finit bien.{FC}Je crois que je vais rentrer aussi.{FF}{00}
+
+@0048
+{FB} / C'est la salle d'invocation{FD}du temple de Kodine.{FC}Je sers le royaume ici.{FF}{00}
+
+@0049
+{FB} / Les gens qui étaient ici sont sortis{FD}chercher la Princesse.{FC}Mais je n'ai pas vu la Princesse sortir.{FC}Je crois qu'elle est encore quelque{FD}part dans le temple.{FF}{00}
+
+@0050
+{FB} / Prenez soin de la Princesse.{FF}{00}
+
+@0051
+{FB} / Pour rejoindre votre chambre, Héros,{FD}prenez la porte du fond.{FF}{00}
+
+@0052
+{FB} / Adieu.{FF}{00}
+
+@0053
+{FB} {FF}{00}
+
+@0054
+{FB}A DOh, Chambellan, c'est vous.{FF}{00}
+
+@0055
+{FB} {45} Grand Héros, pourquoi avoir ramené{FD}ces fauteurs de troubles avec vous ?{FF}{00}
+
+@0056
+{FB} ' Cafe Ole va bien ?{FF}{00}
+
+@0057
+{FB} ' Content de l'entendre.{FF}{00}
+
+@0058
+{FB} ' Je me sens un peu seul.{FF}{00}
+
+@0059
+{FB}A HHein ?{FD}Il y a 3 Cafe Ole !?{FC}{FB} {45} Ce sont aussi les Medabots{FD}Cauchemar de la Princesse.{FC}{FB}A EOn dirait que s'il en manquait{FD}un, ça irait quand même.{FF}{00}
+
+@0060
+{FB} ,AGrand Héros !{FF}{00}
+
+@0061
+{FB} ,CJe vous prête des Medaparts{FD}pour Cafe Ole !{FC}{FB} ,CC'est d'accord, Chambellan ?{FC}Avec d'autres Medaparts, Cafe Ole{FD}ne pourra plus faire de bêtises.{FC}{FB} {45} Je vois ce que vous voulez dire.{FD}La Princesse n'a pas tort.{FF}{00}
+
+@0062
+{FB} ,CAlors, Grand Héros, je vous{FD}prête ces Medaparts !{FC}{FB} ,DComme ça, où que vous alliez,{FD}vous ne pourrez jamais m'oublier !{FC}{FB} {45} Gardons les adieux pour plus tard.{FD}Vous devez d'abord parler à l'Oracle.{FC}Je prie pour que vous rentriez{FD}sain et sauf dans votre monde.{FF}{00}
+
+@0063
+{FB}A DMargarita···{FF}{00}
+
+@0064
+{FB}A  Si je ne rentre pas,{FD}je vais avoir des ennuis.{FC}{FB} / Un Medabot normal ne fait pas le poids{FD}face au puissant Blue Hawaii.{FC}Nous avons besoin du pouvoir que vous{FD}seul maîtrisez, Grand Héros !{FC}Vous ne comptez pas nous{FD}abandonner, n'est-ce pas !?{FC}{FB}A EQu'est-ce que je fais···{FF}{00}
+
+@0065
+{FB} / La Princesse m'inquiète{FD}tout le temps.{FC}On l'appelle "Reine", mais elle{FD}n'a que 5 ans.{FF}{00}
+
+@0066
+{FB} - Blue Hawaii a bien des visages.{FC}Si vous les battez tous,{FD}vous êtes vraiment incroyable !{FC}{FB}A E{F8}(·····){F8}{FF}{00}
+
+@0067
+{FB} - Majesté, j'ai trouvé le Grand Héros.{FD}Vous aviez raison, il est incroyable !{FF}{00}
+
+@0068
+{FB} / Ouah, c'est le vrai Grand Héros !{FC}Parfois, même les prophéties{FD}de l'Oracle sont justes !{FC}{FB}A  Euh, en fait je suis···{FC}{FB} / {F8}Couic !{F8}{FD}Le Grand Héros a parlé !{FC}{FB}A E{F8}(·····){F8}{FF}{00}
+
+@0069
+{FB} / Vous savez tout, Grand Héros !{FD}Vous êtes si merveilleux♥{FF}{00}
+
+@0070
+{FB} {45} La Princesse va souvent{FD}au champ de fleurs, à l'est.{FC}Entre vous et moi, son gardien,{FD}Ginjyo, s'endort souvent{FC}pendant son service.{FF}{00}
+
+@0071
+{FB} {45} Je suis allé jusqu'au champ de fleurs{FD}pour trouver la Princesse.{FC}Un excellent exercice.{FF}{00}
+
+@0072
+{FB} {45} Ma prophétie était juste !{FC}Mais je n'aurais jamais cru que le{FD}Grand Héros serait un enfant···{FC}Euh, je veux dire, nous comptons{FD}tous sur vous, Grand Héros !{FF}{00}
+
+@0073
+{FB} {45} C'est votre tour, Grand Héros.{FC}Avancez jusqu'au{FD}centre de la salle.{FF}{00}
+
+@0074
+{FB}A  Euh···{FC}{FB} {45} Ce royaume est couvert d'une barrière{FD}créée par la pierre Fiyun.{FC}Même après avoir sombré dans l'océan,{FD}nous étions encore en sécurité.{FC}Elle existe encore à votre époque.{FC}C'est pourquoi vous, le Grand Héros,{FD}avez pu venir ici.{FC}Je vais maintenant vous renvoyer dans{FD}votre monde, au nom de l'Oracle.{FC}{FB}A  Il y a des types ici, des Rubberobos,{FD}en plus de moi···{FC}{FB} 3AAh ha ha ha ha ha ha ha !{FF}{00}
+
+@0075
+{FB} {45} Qu'est-ce que··· !?{FF}{00}
+
+@0076
+{FB}A  Cette voix !{FF}{00}
+
+@0077
+{FB} 3AAh ha ha ha ha !{FD}Si vous les aimez, obéissez-moi !{FC}{FB}A BC'est tellement bas !{FC}{FB} 3ADis ce que tu veux !{FD}J'aurai quand même ma récompense.{FC}Vous cachez la pierre Fiyun.{FD}Donnez-la-moi !{FF}{00}
+
+@0078
+{FB} ,BAttrape-les, Cafe Ole !{FC}Magie Arc-en-ciel !{FF}{00}
+
+@0079
+{FB} ' Yaaaaa !{FF}{00}
+
+@0080
+{FB} 3DQu'est-ce que···{FD}La tête me tourne···{FC}{FB} 1CRobo ? RoboRobo ?{FD}Où sommes-nous ???{FC}{FB} {45} Vils monstres !{FD}Hors de ce lieu !{FF}{00}
+
+@0081
+{FB} 1CRoboo hou- !{FF}{00}
+
+@0082
+{FB} DCÉcoutez, montrez-le-moi{FD}juste une minute, ok ?{FC}{FB} 9BEntrée interdite !{FF}{00}
+
+@0083
+{FB} 3CMon sac de marque ! Mes chaussures !{FD}Je ne peux plus les acheter !{FF}{00}
+
+@0084
+{FB} {45} On dirait que nous les avons{FD}renvoyés dans leur monde.{FF}{00}
+
+@0085
+{FB} {FF}{00}
+
+@0086
+{FB} , Grand Héros, que s'est-il passé ?{FC}{FB}A  Eh bien, tu as disparu, et ça a{FD}déclenché une belle panique ici.{FC}{FB} ,AC'est rien. C'est rien.{FC}Le Chambellan répète toujours{FD}"étudie, étudie, étudie".{FC}{FB}A EIl dit ça parce qu'il tient à toi.{FD}Tu ne devrais pas l'inquiéter, tu sais.{FF}{00}
+
+@0087
+{FB} , Vous penserez à moi aussi,{FD}Grand Héros ?{FC}Si oui, alors je serai vraiment{FD}sage à partir de maintenant.{FC}{FB}A DVoilà une gentille fille.{FC}{FB} ,AOui !{FC}{FB}A DRetournons auprès des autres.{FC}{FB} ,CJe serai sage, mais avant ça,{FD}je veux aller à l'océan !{FC}On se retrouve là-bas !{FF}{00}
+
+@0088
+{FB}A  Attends !{FD}Ce n'est pas très sage, ça !{FF}{00}
+
+@0089
+{FB} , Je serai sage à partir de demain.{FF}{00}
+
+@0090
+{FB}A EElle ne changera jamais.{FF}{00}
+
+@0091
+{FB} {45} Grand Hérooos !{FF}{00}
+
+@0092
+{FB}A  Oh, Chambellan.{FC}{FB} {45} V-vous avez trouvé la Princesse ?{FF}{00}
+
+@0093
+{FB}A DJe l'ai trouvée.{FC}{FB} {45} {F8}Hhh··· hhh···{F8}{FD}O-où est-elle maintenant !?{FC}{FB}A DNe vous en faites pas.{FD}Je la ramènerai avec moi.{FC}Allez vous reposer dans votre chambre.{FC}{FB} {45} Je vous en prie, Grand Héros.{FC}Je suis trop vieux pour ça···{FD}{F8}Hhh··· hhh···{F8}{FF}{00}
+
+@0094
+{FB} / Tout le monde !{FD}La Princesse est retrouvée !{FF}{00}
+
+@0095
+{FB} ' Bienvenue au monde enchanté !{FF}{00}
+
+@0096
+{FB} ' Revenez nous voir, d'accord ?{FF}{00}
+
+@0097
+{FB} {45} Vous êtes peut-être venu ici tout à{FD}fait par hasard, mais vous êtes{FD}devenu un véritable Héros !{FC}Comment pourrions-nous vous{FD}récompenser, Grand Héros ?{FC}{FB}A GLà, je suis tout gêné.{FF}{00}
+
+@0098
+{FB} {45} Je n'ai pas envie que vous partiez,{FD}mais nous devons vous laisser aller.{FC}Demandez à l'Oracle, il vous{FD}renverra dans votre monde.{FC}{FB}A DMerci.{FD}Vous me manquerez aussi.{FF}{00}
+
+@0099
+{FB} ,DJe ne vais pas pleurer !{FC}{FB}A D{F8}(·····){F8}{FF}{00}
+
+@0100
+{FB} ' J'apprécie vraiment, vraiment{FD}tout ce que tu as fait.{FC}Je ne t'oublierai pas, {F9} .{FC}{FB}A HComment connais-tu mon nom ?{FC}{FB} ' Je lis un peu dans les esprits.{FD}Tu as un cœur chaleureux···{FC}{FB}A DC'est plutôt incroyable.{FD}Sers-t'en pour protéger Margarita.{FC}{FB} ' Bien sûr.{FF}{00}
+
+@0101
+{FB} / Au fond se trouvent les chambres de{FD}notre Chancelier, Ginjyo, et de notre{FC}Oracle, Jyozo.{FF}{00}
+
+@0102
+{FB}A  Je veux voir Marg-{FD}Je veux dire, je viens voir la Reine.{FC}Laissez-moi passer.{FF}{00}
+
+@0103
+{FB} {45} Héros, venez par ici.{FD}J'aimerais vous parler.{FC}{FB}A  Parler ? Avec moi ?{FF}{00}
+
+@0104
+{FB} / Au fond se trouvent les chambres de{FD}notre Chancelier, Ginjyo, et de notre{FC}Oracle, Jyozo.{FF}{00}
+
+@0105
+{FB}A  Je veux voir Marg-{FD}Je veux dire, je viens voir la Reine.{FC}Laissez-moi passer.{FF}{00}
+
+@0106
+{FB} {45} Héros, venez par ici.{FD}J'aimerais vous parler.{FC}{FB}A  Parler ? Avec moi ?{FF}{00}
+
+@0107
+{FB} / Grand Héros, faites{FD}comme chez vous.{FF}{00}
+
+@0108
+{FB} {45} Grand Héros, entrez{FD}dans votre chambre.{FF}{00}
+
+@0109
+{FB} {45} Je vous ai préparé un repas.{FC}Désolé, l'endroit n'est pas idéal{FD}pour manger, mais mettez-vous à l'aise.{FF}{00}
+
+@0110
+{FB}A  Euh···{FD}Il est parti.{FF}{00}
+
+@0111
+{FB}A AOuah ! Ça a l'air délicieux !{FD}Je ne dis pas non !{FC}{F8}Miam miam{F8}{FD}{F8}Crunch crunch{F8}{FD}{F8}Glou glou{F8}{FF}{00}
+
+@0112
+{FB}A AMerci, c'était super.{FD}Vraiment délicieux !{FC}{FB}A DJe ne sais pas pourquoi, mais{FD}ils m'accueillent si bien.{FC}Je ne sais pas ce qui se passe,{FD}mais ce monde a l'air sympa.{FF}{00}
+
+@0113
+{FB} 1CMaîtresse Gillgirl, pourquoi{FD}sommes-nous dans l'océan ?{FC}On est tout mouillés.{FC}{FB} {FF}{00}
+
+@0114
+{FB} 1CAttendez-nous !{FC}{FB} {FF}{00}
+
+@0115
+{FB}A  Je ne peux plus rien avaler.{FD}Bref, je me demande ce qui s'est passé.{FC}Je veux jeter un coup d'œil autour.{FF}{00}
+
+@0116
+{FB} / Ne touchez pas la Pierre sacrée !{FC}Le grand pouvoir de la Pierre{FD}est parfois toxique.{FC}{FB}A  La Pierre sacrée ?{FC}{FB} / Une pierre au pouvoir sacré.{FF}{00}
+
+@0117
+{FB}A DLa pierre Fiyun vient de l'espace ?{FD}On se croirait dans un film !{FC}{FB}A  Mais que peut bien vouloir{FD}le Dr Armond de cette pierre ?{FF}{00}
+
+@0118
+{FB}A  Oh, Margarita.{FC}Je croyais que tu étudiais{FD}dans ta chambre.{FC}{FB} , Margarita n'aime pas étudier !{FC}Le Chambellan s'est endormi,{FD}alors je me suis échappée !{FC}Margarita préfère voir{FD}la relique sacrée.{FC}{FB}A  La relique sacrée ?{FC}{FB} ,CLa "pierre Fiyun" !{FD}Le Grand Héros veut la voir ?{FC}{FB}A HLa pierre Fiyun !?{FF}{00}
+
+@0119
+{FB}A DQuelle jolie pierre !{FD}Elle flotte dans les airs ?{FC}{FB} ,CLa "pierre Fiyun" est la source{FD}du pouvoir du royaume.{FC}Elle a été laissée ici jadis{FD}par des gens venus du ciel.{FC}Les mêmes qui ont apporté les Medabots.{FC}{FB}A HQuand tu dis "du ciel",{FD}tu ne veux pas dire l'espace !?{FF}{00}
+
+@0120
+{FB} ,CEuh, cette "pierre Fiyun" est{FD}la plus grande de son espèce.{FC}Les anciens seraient venus ici{FD}grâce au pouvoir de cette pierre.{FC}C'est pour ça qu'on ne l'utilise{FD}plus, on l'expose seulement.{FC}{FB}A DTu en sais des choses, Margarita.{FC}{FB} ,AC'est parce que j'ai étudié !{FF}{00}
+
+@0121
+{FB} {45} Princesse !{FF}{00}
+
+@0122
+{FB} , Oh ! C'est le Chambellan !{FF}{00}
+
+@0123
+{FB} {45} Une Princesse ne fuit pas{FD}ses études !{FC}{FB} ,E{F8}(Soupir){F8} D'accord.{FF}{00}
+
+@0124
+{FB}A DLa pierre Fiyun vient de l'espace ?{FD}On se croirait dans un film !{FC}{FB}A  Mais que peut bien vouloir{FD}le Dr Armond de cette pierre ?{FF}{00}
+
+@0125
+{FB}A EJe dois encore obtenir la permission{FD}de Margarita pour aller à l'océan !{FC}{FB}A  Je vais aller la voir !{FF}{00}
+
+@0126
+{FB} / C'est la chambre du Chancelier{FD}du royaume, maître Ginjyo.{FF}{00}
+
+@0127
+{FB} / C'est la chambre de{FD}l'Oracle du royaume,{FC}maître Jyozo.{FF}{00}
+
+@0128
+{FB} / Ce sont les appartements{FD}de la reine Margarita.{FF}{00}
+
+@0129
+{FB} {45} Grand Héros, auriez-vous{FD}l'obligeance de vous asseoir ?{FF}{00}
+
+@0130
+{FB} {45} Je compte sur vous.{FC}Gardez le secret{FD}vis-à-vis de la Princesse···{FF}{00}
+
+@0131
+{FB} {45} Qu'y a-t-il, Héros ?{FD}Pourquoi tant de hâte ?{FC}{FB}A FChambellan, Margarita n'est pas{FD}dans sa chambre !{FF}{00}
+
+@0132
+{FB} {45} Qu'avez-vous dit !?{FD}Quand a-t-elle···?!{FC}C'est terrible ! Terrible !{FD}Que tout le monde forme des équipes !{FF}{00}
+
+@0133
+{FB} {45} Je suis trop vieux pour la surveiller.{FD}Veillez sur la Princesse.{FF}{00}
+
+@0134
+{FB} {45} La Princesse est rentrée sans mal.{FD}Je suis soulagé.{FF}{00}
+
+@0135
+{FB}A  De quoi vouliez-vous me parler ?{FC}{FB} {45} De Blue Hawaii.{FC}{FB}A  On dirait que la Princesse{FD}sait quelque chose à ce sujet.{FC}{FB} {45} C'est exact. Elle a remarqué.{FD}Blue Hawaii était autrefois{FC}le Medabot de la Princesse.{FC}{FB}A HSérieusement ?{FC}{FB} {45} Le Medabot de Sa Majesté faisait{FD}sans cesse des bêtises et des dégâts.{FC}Je me suis dit : "Que faire ?"{FC}Puis un jour, en secret, j'ai pris{FD}le Medabot et je l'ai jeté à l'océan.{FF}{00}
+
+@0136
+{FB}A  Et il est devenu Blue Hawaii ?{FC}{FB} {45} C'est exact.{FC}{FB}A  Personne d'autre ne le sait ?{FC}{FB} {45} Pas une âme.{FC}Ils vivent simplement dans la peur{FD}du monstre maléfique Blue Hawaii.{FC}{FB}A EAlors que dois-je faire ?{FF}{00}
+
+@0137
+{FB} {45} Depuis que vous êtes arrivé dans ce{FD}monde par le téléporteur, le peuple{FC}croit que vous êtes le Héros{FD}qui peut vaincre le monstre.{FC}Je voudrais vous demander de prendre{FD}le Medabot de la Princesse.{FC}{FB}A  Vous voulez que je ramène son Medabot{FD}sans le dire à Margarita ?{FC}Pourquoi moi ?{FC}Pourquoi ai-je été choisi ?{FF}{00}
+
+@0138
+{FB} {45} Par pur hasard.{FC}Au moment de la prophétie de l'Oracle,{FD}vous nous êtes apparu.{FC}{FB}A EPar hasard, hein···{FC}Et en plus de ça, j'ai aussi{FD}amené les autres avec moi···{FC}{FB} {45} Grand Héros !{FD}Je vous en supplie humblement !{FC}Seul celui qui détient le pouvoir{FD}des Medabots de l'autre monde{FD}peut vaincre celui de la Princesse.{FC}{FB}A EEst-ce une chance···{FD}ou une malchance···{FF}{00}
+
+@0139
+{FB}A  Margarita···{FC}Elle étudie si dur.{FD}Je ne devrais pas la déranger.{FF}{00}
+
+@0140
+{FB}A DMargarita, tu étudies ?{FD}Qu'est-ce que···?{FF}{00}
+
+@0141
+{FB}A HMargarita a disparu !{FD}Je dois prévenir le Chambellan !{FF}{00}
+
+@0142
+{FB} ,CJ'ai été sage et{FD}je vous ai attendu.{FC}{FB}A DAlors cette gentille petite fille{FD}qui a attendu mérite une récompense.{FC}Va au champ de fleurs, d'accord ?{FC}{FB} ,CPourquoiii ?{FD}Il y a quelque chose là-bas ??{FC}{FB}A DHmm, qui sait ?{FD}Mais sûrement quelque chose de bien.{FC}{FB} ,CVous ne voulez pas dire···{FD}Ce ne serait pas···{FC}{FB}A DDépêche-toi !{FD}Tu vas le rater si tu traînes !{FC}{FB} ,AD'accord !{FF}{00}
+
+@0143
+{FB}A  C'est le cahier de Margarita.{FD}"L'Histoire du royaume antique".{FC}Je ne savais pas{FD}qu'elle étudiait l'histoire.{FF}{00}
+
+@0144
+{FB} ,CJe serai sage et{FD}je vous attendrai !{FF}{00}
+
+@0145
+{FB} {45} La chose derrière vous est l'un{FD}des serviteurs de Blue Hawaii !{FC}Vite, mettez-le en prison.{FF}{00}
+
+@0146
+{FB} {45} Bien joué.{FD}Nous avons 1 monstre en prison.{FF}{00}
+
+@0147
+{FB} {45} Bien joué.{FD}Nous avons 2 monstres en prison.{FF}{00}
+
+@0148
+{FB} {45} Bien joué.{FD}Nous avons 3 monstres en prison.{FF}{00}
+
+@0149
+{FB} {45} Bien joué.{FD}Nous avons 4 monstres en prison.{FF}{00}
+
+@0150
+{FB} {45} Bien joué.{FD}Nous avons 5 monstres en prison.{FF}{00}
+
+@0151
+{FB} {45} Bien joué.{FD}Nous avons 6 monstres en prison.{FF}{00}
+
+@0152
+{FB} {45} Bien joué.{FD}Nous avons 7 monstres en prison.{FF}{00}
+
+@0153
+{FB}A  Je peux enfermer ici les{FD}Rubberobos que j'ai attrapés.{FF}{00}
+
+@0154
+{FB} 1CRoboo hou.{FF}{00}
+
+@0155
+{FB}A DOk, c'est fait !{FF}{00}
+
+@0156
+{FB}A  Si j'attrape d'autres Rubberobos,{FD}je les amènerai ici.{FF}{00}
+
+@0157
+{FB}A  Je peux enfermer ici les{FD}Rubberobos que j'ai attrapés.{FF}{00}
+
+@0158
+{FB} 1CRoboo hou.{FF}{00}
+
+@0159
+{FB}A DOk, c'est fait !{FC}{FB}A  Ok, ensuite je vais···{FC}{FB}A HOh non !{FF}{00}
+
+@0160
+{FB}A EJ'ai complètement oublié de demander{FD}à Margarita la permission pour l'océan.{FC}Ok, retour au temple.{FF}{00}
+
+@0161
+{FB} {45} Vous en avez attrapé beaucoup.{FD}Nous avons 8 monstres en prison.{FF}{00}
+
+@0162
+{FB} {45} Vous en avez attrapé beaucoup.{FD}Nous avons 9 monstres en prison.{FF}{00}
+
+@0163
+{FB} {45} Félicitations !{FD}Vous avez attrapé 10 monstres !{FF}{00}
+
+@0164
+{FB} ,AMmmm, le vent est vraiment agréable,{FD}n'est-ce pas, Héros ?{FF}{00}
+
+@0165
+{FB}A  Margarita, c'est incroyable qu'une{FD}si petite fille puisse être Reine.{FC}{FB} , Papa et maman sont partis{FD}pour un trèèès long voyage.{FC}Ils visitent toutes sortes{FD}d'endroits formidables !{FC}D'où venez-vous, Héros ?{FD}C'est comment, chez vous ?{FC}{FB}A  Comment···eh bien, c'est normal.{FD}Des gens, des Medabots, tout ça.{FF}{00}
+
+@0166
+{FB} , Grand Héros, vous allez{FD}partir un jour ?{FC}{FB}A DJ'imagine qu'un jour, oui.{FC}{FB} ,DVous allez me laisser derrière{FD}et m'oublier···{FC}{FB}A E{F8}(·····){F8}{FC}{FB} ,BJ'avais raison !{FD}Non non non non non non !{FC}Ne me laissez pas toute seule !{FF}{00}
+
+@0167
+{FB}A FMargarita, calme-toi !{FC}{FB} ,BNon ! Non ! Non !{FC}Tant que le Héros ne dit pas "Je ne{FD}repartirai pas", je serai méchante !{FF}{00}
+
+@0168
+{FB}A HMargarita !{FF}{00}
+
+@0169
+{FB}A EÉcoute, Margarita···{FC}{FB} , Hé, c'est quoi, ça ?{FD}Des caisses en bois ?{FF}{00}
+
+@0170
+{FB}A  Hein ?{FC}Hmmm, on dirait que ça rejoint{FD}l'océan, là-bas.{FC}Pourquoi y a-t-il ça ici ?{FC}Je ne comprends pas bien, mais{FD}si je marche dessus, je peux{FD}atteindre cette partie de l'océan ?{FF}{00}
+
+@0171
+{FB} , Pourquoi partez-vous ?{FC}{FB}A  Je vais me battre contre{FD}un vrai monstre.{FC}{FB} ,BNooon !{FD}Cafe Ole n'est pas un monstre !{FC}{FB}A  Alors que sommes-nous censés faire ?{FD}L'ignorer ?{FC}{FB} ,BHéros, vous êtes méchant !{FD}Vous n'êtes qu'un vilain !{FC}Méchant ! Méchant ! Méchant !{FF}{00}
+
+@0172
+{FB}A HMargarita, attention !{FC}{FB}A EOuf···elle m'épuise.{FF}{00}
+
+@0173
+{FB} {FF}{00}
+
+@0174
+{FB} 1 Ouf, robo.{FC}{FB}A FQuoi !? Un Rubberobo ?{FD}De quel trou tu sors ?{FC}{FB} 1 De la caisse, bien sûr !{FC}Le monstre m'a attaqué, et puis{FD}tu m'as marché sur la tête.{FC}C'est vraiment pas mon jour.{FF}{00}
+
+@0175
+{FB}A  Pourquoi étais-tu dans la caisse ?{FD}Où sont les autres ?{FC}{FB} 1CCet endroit est notre tanière.{FC}Sans se cacher dans les caisses,{FD}on se fait attaquer, et manger.{FC}{FB}A  Tu as dit manger ?{FC}Alors c'est vous qui avez mis toutes{FD}ces caisses à flotter sur l'océan.{FC}{FB} 1 La moitié d'entre nous est camouflée.{FC}Tu ne sais pas dans lesquelles on est.{FF}{00}
+
+@0176
+{FB}A  Et le monstre ?{FD}Il est comment ?{FC}{FB} 1CC'est un monstre géant aux gros yeux.{FC}{FB}A  Ok, eh bien tu as rendez-vous avec{FD}tes amis en prison.{FC}{FB} 1CP-prison ?{FC}{FB}A DTu ne veux pas rentrer chez toi ?{FF}{00}
+
+@0177
+{FB} 1CJe veux rentrer.{FD}Je n'aime plus cet endroit.{FC}Si j'attends en prison,{FD}je pourrai rentrer chez moi ?{FC}{FB}A DBien sûr que oui !{FD}Je vous renverrai tous !{FC}{FB} 1AVraiment !{FD}Ok, je t'attendrai en prison !{FF}{00}
+
+@0178
+{FB} ,FNooon ! Ne m'approchez pas !{FF}{00}
+
+@0179
+{FB}A FC'était le cri de Margarita !{FD}Euuuh···par là !{FF}{00}
+
+@0180
+{FB}A FJe dois me dépêcher{FD}de sauver Margarita !{FF}{00}
+
+@0181
+{FB} {FF}{00}
+
+@0182
+{FB} 1 RoboRobo RoboRobo ?{FF}{00}
+
+@0183
+{FB} 1CJ'ai eu une de ces peurs quand{FD}un monstre m'a attaqué.{FC}Tant de pattes···tant de pattes···{FD}Je n'aime plus cet endroit.{FC}{FB}A  Tu devrais aller attendre en prison.{FC}Si tu le fais, je te ramènerai{FD}avec moi dans notre monde !{FC}{FB} 1AVraiment ??{FD}Si tu mens, jamais je ne pardonnerai !{FF}{00}
+
+@0184
+{FB} {FF}{00}
+
+@0185
+{FB} 1 RoboRobo ?{FF}{00}
+
+@0186
+{FB} 1CTu m'as fait peur.{FC}Il y avait un monstre plein d'yeux.{FD}Je veux juste rentrer chez moi···{FC}{FB}A  Tu devrais aller attendre en prison.{FC}Si tu le fais, je te ramènerai{FD}avec moi dans notre monde !{FC}{FB} 1AVraiment ??{FD}Si tu mens, jamais je ne pardonnerai !{FF}{00}
+
+@0187
+{FB}A ECombien de Rubberobos sont{FD}venus ici avec moi ?{FC}Je ne pensais pas en voir autant.{FD}Je n'en ai vraiment aucune idée.{FF}{00}
+
+@0188
+{FB} ,BJ'ai dit non ! Non ! Non !{FC}Je n'obéirai pas à une bande{FD}de zigotos comme vous !{FC}{FB} 1CSi tu ne nous obéis pas,{FD}on va tous se faire manger.{FC}{FB}A HC'est Margarita !{FD}Et le gang Rubberobo !{FF}{00}
+
+@0189
+{FB}A BQu'est-ce que vous faites !?{FC}{FB} 1CSi cette fille n'obéit pas et ne{FD}vient pas avec nous, on est cuits.{FC}{FB}A  Vous obéir ?{FC}{FB} 1COui. Le puissant Blue Hawaii exige{FD}qu'on lui sacrifie une jeune fille.{FC}{FB}A HUn sacrifice !?{FC}{FB}A BAlors pour sauver votre peau, vous{FD}allez sacrifier Margarita ?{FC}{FB} 1CA-attends une minute !{FD}Laisse-moi finir !{FF}{00}
+
+@0190
+{FB}A BRéfléchissez-y en prison !{FF}{00}
+
+@0191
+{FB} 1COuiiin !{FF}{00}
+
+@0192
+{FB} 1BPlus moyen de reculer maintenant !{FC}{FB} ,BLâchez-moi !{FC}{FB}A BAttendez !{FF}{00}
+
+@0193
+{FB} 1CRobo aïe aïe.{FC}{FB}A B{F8}Hhh··· hhh···{F8}{FD}Vous, là !{FC}Vous vous rendez compte{FD}de ce que vous faites !?{FC}{FB} 1COn n'a pas d'autre choix.{FC}Sinon, notre maîtresse Gillgirl{FD}sera mangée par le monstre.{FC}{FB}A  Gillgirl ? La cheffe, la femme ?{FC}{FB} 1CPour toi, ce n'est peut-être qu'une{FD}ennemie à haïr, mais pour nous,{FC}c'est quelqu'un de très{FD}important···{FC}{FB}A  {F8}(·····){F8}{FF}{00}
+
+@0194
+{FB} ,DOooh.{FD}Pauvres petits.{FC}{FB} , Héros, vous ne pouvez rien faire ?{FC}{FB} ,DSi ce···monstre est{FD}Cafe Ole···{FC}{FB}A DCafe Ole, Gillgirl.{FC}Je promets de les ramener{FD}tous les deux.{FC}{FB} ,CVraiment !?{FC}{FB} 1AVraiment !?{FC}{FB}A DAlors, vous les Rubberobos et{FD}Margarita, allez attendre en ville.{FC}{FB} ,AD'accord !{FC}{FB} 1ACompris !{FF}{00}
+
+@0195
+{FB}A  Toi, va en prison !{FC}{FB} 1CD-d'accord···{FF}{00}
+
+@0196
+{FB} ,CC'est promis !{FD}Je serai sage et j'attendrai !{FF}{00}
+
+@0197
+{FB} {FF}{00}
+
+@0198
+{FB}A  Ce ne sont que des Medaparts···{FF}{00}
+
+@0199
+{FB}A  La caisse est vide.{FF}{00}
+
+@0200
+{FB}A  La caisse est vide.{FF}{00}
+
+@0201
+{FB}A  La caisse est vide.{FF}{00}
+
+@0202
+{FB} {FF}{00}
+
+@0203
+{FB} 1 RoboRobo ?{FF}{00}
+
+@0204
+{FB} 1CÇa m'a vraiment surpris.{FC}Il y avait un monstre plein de bras.{FD}J'en ai assez. Je rentre.{FF}{00}
+
+@0205
+{FB}A  Va attendre en prison !{FF}{00}
+
+@0206
+{FB} {FF}{00}
+
+@0207
+{FB} 1 RoboRobo ?{FF}{00}
+
+@0208
+{FB} 1CJ'ai eu une de ces peurs.{FD}Il y avait un monstre genre pieuvre.{FC}J'ai eu peur ! Je veux rentrer !{FC}{FB}A DLa prison, ce ne serait pas mieux ?{FC}{FB} 1CTu as raison ! Je vais en prison !{FF}{00}
+
+@0209
+{FB} {FF}{00}
+
+@0210
+{FB} 1DM···Mon···Monstre !{FF}{00}
+
+@0211
+{FB} 1CIl y avait un énorme monstre qui{FD}n'était qu'une bouche !!{FC}Il a mangé maîtresse Gillgirl !{FD}Qu'est-ce qu'on fait !?{FC}{FB}A  Je vais trouver, alors va{FD}attendre en prison, en ville.{FC}{FB} 1CJ-je m'en fiche, maintenant !!{FF}{00}
+
+@0212
+{FB}A ELes descriptions du gang Rubberobo{FD}sont toutes différentes.{FC}Je ne sais pas quelle est{FD}la vraie forme de Blue Hawaii.{FF}{00}
+
+@0213
+{FB} n Au revoir, Cafe Ole.{FD}J'espère que tu trouveras le bonheur.{FF}{00}
+
+@0214
+{FB} n Reviens me voir !{FF}{00}
+
+@0215
+{FB} ' Adieu, mes amis···{FF}{00}
+
+@0216
+{FB} ' J'attendrai au champ de fleurs.{FD}Le Chambellan semble me détester···{FF}{00}
+
+@0217
+{FB}A DMargarita attend !{FD}Allons au sanctuaire !{FC}{FB}A  Mais avant ça, il est temps{FD}de se changer.{FF}{00}
+
+@0218
+{FB}A  C'est quoi, ces caisses en bois ?{FC}Ça m'intrigue un peu, mais je ferais{FD}mieux d'aller voir Margarita.{FF}{00}
+
+@0219
+{FB} {45} Écoutez tous !{FC}Cette personne est le Héros qui{FD}nous délivrera de Blue Hawaii !{FC}{FB} {FF}{00}
+
+@0220
+{FB}A  Quoi ?{FD}Qu'est-ce qui se passe !?{FF}{00}
+
+@0221
+{FB} / Les monstres noirs et blancs de{FD}Blue Hawaii apparaissent ici et là{FD}et sèment le trouble.{FC}Il y en a même un au champ de fleurs{FD}qui n'arrête pas de cueillir des fleurs.{FF}{00}
+
+@0222
+{FB} - Un serviteur de Blue Hawaii{FD}m'a pris mes bonbons !{FC}{FB} {45} Héros, pourriez-vous leur{FD}donner une leçon !{FC}{FB}A EMême si vous dites ça···{FC}{FB} {45} Bon, tout le monde, reculez.{FC}Le Grand Héros peut{FD}y faire quelque chose !{FF}{00}
+
+@0223
+{FB} {45} Comme vous le voyez, notre peuple{FD}a souffert aux mains de{FC}Blue Hawaii et de ses sbires.{FC}Le seul qui puisse nous délivrer{FD}de ce manteau de malheur{FC}est le Héros capable de franchir{FD}le Temps et l'Espace !{FC}Vous êtes le seul !{FF}{00}
+
+@0224
+{FB}A EJe ne comprends pas tout ce qui se{FD}passe, mais ces "serviteurs"{FC}de Blue Hawaii ressemblent beaucoup{FD}au gang Rubberobo de mon monde···{FC}Les monstres noirs et blancs···{FF}{00}
+
+@0225
+{FB}A HEn parlant des Rubberobos,{FD}où sont-ils passés !?{FF}{00}
+
+@0226
+{FB} {45} Oh, Héros.{FD}Avez-vous trouvé la Princesse ?{FC}{FB}A  Vous êtes le···l'Oracle, non ?{FC}{FB} {45} Exact !{FD}Et la Princesse···{FC}{FB}A DElle va bien.{FD}Je l'ai trouvée.{FC}{FB} {45} C'est le plus important.{FD}Eh bien···{FF}{00}
+
+@0227
+{FB}A DJe sais, vous parlez des monstres ?{FD}Je m'occupe du problème.{FC}Si je ne les attrape pas tous, je ne{FD}peux pas rentrer chez moi, si ?{FC}{FB} {45} E-eh bien, c'est-à-dire···{FD}Nous comptons sur vous.{FF}{00}
+
+@0228
+{FB}A DJe m'en doutais.{FD}Bon, je pars pour l'océan, alors.{FF}{00}
+
+@0229
+{FB}A  Excusez-moi, mais où suis-je ?{FC}{FB} / C'est le "royaume de Kodine", Héros.{FD}Medabots et humains y vivent en paix.{FF}{00}
+
+@0230
+{FB} / Héros !{FD}Un des monstres est entré chez moi !{FF}{00}
+
+@0231
+{FB} / Aaah !{FC}Il y avait un serviteur de Blue Hawaii{FD}juste derrière moi !?{FF}{00}
+
+@0232
+{FB} - Quand je serai grand, je veux être{FD}pêcheur et parcourir les mers.{FC}Il y a un monstre en mer, maintenant.{FD}J'espère que papa va bien. Il y est.{FF}{00}
+
+@0233
+{FB} - Je viens d'entendre un cri.{FD}Un monstre a surgi ?{FF}{00}
+
+@0234
+{FB} - Ce monstre !{FD}Je savais que le Héros serait génial !{FF}{00}
+
+@0235
+{FB} / Nos ancêtres sont venus ici chercher{FD}un endroit paisible et fertile{FC}où prospérer.{FC}Mais la vie ici est parfois{FD}un peu solitaire.{FF}{00}
+
+@0236
+{FB} / C'est un des sbires de Blue Hawaii !{FD}Trois hourras pour le Héros !{FF}{00}
+
+@0237
+{FB}A  Euh, comment je rentre chez moi ?{FC}{FB} {45} Ah, oui···{FC}Blue Hawaii est un énorme monstre{FD}qui vit près de l'île lointaine{FD}appelée "île Hawaii".{FC}{FB}A EEuh, ce n'est pas ce que je veux dire.{FF}{00}
+
+@0238
+{FB} {45} C'est ça, Blue Hawaii ?{FD}Oh là là···{FF}{00}
+
+@0239
+{FB} / C'est l'entrée de la{FD}prison souterraine.{FC}J'en suis le gardien.{FD}Je préférerais ne pas m'en servir.{FF}{00}
+
+@0240
+{FB} / Impossible !{FD}Les serviteurs de Blue Hawaii !?{FC}{FB}A  Non, ceux-là, ce sont des Rubberobos.{FC}Bref, y a-t-il un endroit où{FD}je peux les garder pour l'instant ?{FC}{FB} / Enfin, l'heure est venue{FD}d'utiliser la prison.{FC}Descendez, je vous prie.{FF}{00}
+
+@0241
+{FB} / Héros, merci de votre aide.{FF}{00}
+
+@0242
+{FB} / Cet endroit n'a jamais servi.{FF}{00}
+
+@0243
+{FB} / Au-delà, c'est l'océan de l'ouest.{FC}Le terrible monstre "Blue Hawaii"{FD}vit près de l'"île Hawaii", là-bas.{FC}On dit qu'il a bien des visages.{FF}{00}
+
+@0244
+{FB} / Le terrible Blue Hawaii !{FD}Héros, sauvez-nous !{FF}{00}
+
+@0245
+{FB} / Vous ne pouvez pas passer sans{FD}la permission de la Princesse.{FF}{00}
+
+@0246
+{FB}A  Mais je suis le Grand Héros.{FC}{FB} / Même le Grand Héros ne peut pas passer.{FF}{00}
+
+@0247
+{FB} & Aaaah !{FD}C'est le monstre !{FF}{00}
+
+@0248
+{FB}A HQuoi !?{FC}C'était un Rubberobo,{FD}à l'instant !?{FF}{00}
+
+@0249
+{FB}A FJe ferais mieux de m'occuper{FD}de ce Rubberobo !{FF}{00}
+
+@0250
+{FB} / Vous ne pouvez pas passer sans{FD}la permission de la Princesse.{FF}{00}
+
+@0251
+{FB}A  Mais je suis le Grand Héros.{FC}{FB} / Même le Grand Héros ne peut pas passer.{FF}{00}
+
+@0252
+{FB} / Vous avez la permission de la{FD}Princesse. Vous pouvez passer.{FC}C'est plus dangereux au-delà.{FD}Protégez la Princesse de votre vie.{FF}{00}
+
+@0253
+{FB}A  Ce n'est pas ici qu'il faut le garder.{FF}{00}
+
+@0254
+{FB} {45} Même le Grand Héros ne peut entrer{FD}dans le champ de fleurs quand{FC}la Princesse s'y trouve !{FF}{00}
+
+@0255
+{FB} {45} Zzz··· Zzz···{FC}{FB}A DIl dort bien.{FD}Je peux passer, maintenant.{FF}{00}
+
+@0256
+{FB}A  C'est exactement la même chose que{FD}ce que j'ai vu dans les ruines.{FC}Mais ici, ça brille bien plus.{FF}{00}
+
+@0257
+{FB} ' Je vois !{FD}Capturé !{FF}{00}
+
+@0258
+{FB} ' Un jeu d'enlèvement ?{FC}Youpi ! Youpi !{FF}{00}
