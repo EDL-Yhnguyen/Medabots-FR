@@ -15,7 +15,7 @@
  * d'entrées ne ment pas.
  */
 export const ENTREES = {
-  traduites: 2653,
+  traduites: 2909,
   total: 5933,
 } as const
 
@@ -47,8 +47,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Histoire principale',
     detail:
-      'Sept chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, le faux rendez-vous et la forteresse volante Fiyun, puis le retour sur l’île Medabot, le château de Milky et la cantine des Rubberobos — 1 961 dialogues. Restent sept tables, soit 1 914 entrées.',
-    part: 0.51,
+      'Huit chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, le faux rendez-vous et la forteresse volante Fiyun, le retour sur l’île Medabot et le château de Milky, puis le Rallye Partsun, Salty et le fan-club de Karin — 2 217 dialogues. Restent six tables, soit 1 658 entrées.',
+    part: 0.57,
   },
   {
     titre: 'PNJ et contenu secondaire',
