@@ -1,31 +1,34 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-08-29 · dernier commit : `440a555` Sixieme chapitre en
-francais, et la ROM traduite s'emporte depuis le site
+Dernière séance : 2026-08-29 · dernier commit : `5552df1` Chapitre 7: patch
+reconstruit, site a 2 653 entrees, narratif 1 961/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Six chapitres sont en français : 2 372 entrées sur 5 933.** Tables
+**Sept chapitres sont en français : 2 653 entrées sur 5 933.** Tables
 `0x479F0C` (237, le vol d'Eggy et Rosewood), `0x47A2C4` (303, le mont Odoro),
 `0x47A784` (323, l'île Medabot), `0x47B110` (295, les enfants disparus et les
-égouts), `0x47B5B0` (259, les Ruines antiques et le royaume de Kodine), puis
+égouts), `0x47B5B0` (259, les Ruines antiques et le royaume de Kodine),
 `0x47B9C0` (263, le faux rendez-vous et la forteresse volante Fiyun — Harvey,
-l'huile « Spéciale Dr Meta-Evil », le Limiteur). Chaîne au vert, patch
-reconstruit (198 611 octets) et vérifié par application, **déployé** : le
-patch servi en ligne a le même SHA-1 que `patch/medabots-fr.bps`.
+l'huile « Spéciale Dr Meta-Evil », le Limiteur), puis `0x47BDE0` (281, la
+lettre de Shrimplips, le retour sur l'île Medabot, le château de Milky, le
+Capitaine et le lieutenant Tokkuri, la cantine des Rubberobos, les Screws et
+les quatre mots-clés, Squidguts). Chaîne au vert, patch reconstruit (225 540
+octets) et vérifié par application, **déployé** : le patch servi en ligne a
+le même SHA-1 que `patch/medabots-fr.bps`.
 
-**Le narratif est mesuré, pas estimé : 1 680 dialogues sur 3 875, soit
-43,4 %.** Le compte se refait à tout moment : nombre de lignes `@` dans
+**Le narratif est mesuré, pas estimé : 1 961 dialogues sur 3 875, soit
+50,6 %.** Le compte se refait à tout moment : nombre de lignes `@` dans
 `travail/script/<table>.txt` contre `traduction/<table>.txt`, sur les
 quatorze tables de dialogue (`0x479F0C` à `0x47DAD0`, plus `0x4144B4`).
-C'est ce chiffre qui donne le `part` du lot « Histoire principale » (0,43),
+C'est ce chiffre qui donne le `part` du lot « Histoire principale » (0,51),
 pas une impression.
 
-**Relogement après le chapitre 6** : 1 352 entrées relogées, 100 948 octets ;
-il reste 8 335 672 octets libres sur 8 436 620.
+**Relogement après le chapitre 7** : 1 490 entrées relogées, 115 717 octets ;
+il reste 8 320 903 octets libres sur 8 436 620.
 
 **Deux sessions ont travaillé en même temps dans ce dépôt le 29/08**, sans
 aucun moyen de se voir : toutes deux ont traduit `0x47B5B0`, et leurs
@@ -61,11 +64,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47BDE0` (281 entrées), par ordre d'adresse.** Lire
-toute la table, traduire d'un bloc, puis :
+**Traduire la table `0x47C248` (256 entrées), par ordre d'adresse.** Lire
+toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
+(pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47BDE0.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47C248.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -76,8 +80,8 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Restent après elle, dans l'ordre : `0x47C248`, `0x47C64C`, `0x47CD7C`,
-`0x47D124` (293), `0x47D5C0`, `0x47DAD0`, puis `0x4144B4`.
+Restent après elle, dans l'ordre : `0x47C64C` (277), `0x47CD7C` (233),
+`0x47D124` (293), `0x47D5C0` (323), `0x47DAD0` (276), puis `0x4144B4` (256).
 
 **Compter les entrées d'une table ne dit pas combien il y a à traduire.**
 `0x3C6744` en annonce 176 et n'en a que 122 de réelles ; `0x3C4B90` en annonce
@@ -125,6 +129,16 @@ identifiants :**
   jeu, sans que le serveur envoie autre chose que le patch. Un seul module
   construit la ROM patchée, pour le lecteur comme pour le fichier :
   `site/src/lib/romTraduite.ts`.
+- **Vocabulaire du chapitre 7.** Le Capitaine (des Select Corps) et le
+  lieutenant Tokkuri, les Select 3, la Phantom Lady, les Screws — Samantha la
+  Vis cruciforme, Spyke la Vis plate, Sloan le Boulon, « la Chef » quand ils
+  parlent d'elle —, la cantine des Rubberobos, le Spice-A-Roni (Doux, Épicé,
+  Bouche en enfer), le mot-clé, la gaine d'aération, la lampe-stylo, le
+  château de Milky (« la sorcière la plus mignonne »), Monsieur Jyunmai,
+  Monsieur le chercheur. Le cri « Deux, quatre, six, huit. Qui est-ce qu'on
+  félicite ? » donne le mot-clé 2468. Les Medaparts (Periscope, SLIPPER,
+  PLATE BEAM) restent en anglais. « Grandpa » de la lettre de Shrimplips
+  devient « Papi ».
 - **Vocabulaire du chapitre 6.** La forteresse volante Fiyun, la pierre
   Fiyun, le Limiteur, le Centre de recherche, la Medabot Corporation, le
   repaire secret, la statue de Bonaparte, la place de la gare, la serre,
@@ -151,6 +165,11 @@ identifiants :**
 
 ## À ne pas refaire
 
+- **Écrire un antislash dans un heredoc bash depuis Claude Code.** `\\`
+  arrive en `\` dans le fichier, même entre `<<'EOF'` quotés : un script Node
+  qui devait écrire `Documents\Git\` a reçu une chaîne invalide, et un `sed`
+  a échoué sans un mot. Passer par l'outil d'écriture de fichiers, ou
+  construire l'antislash par `String.fromCharCode(92)`.
 - **`vite preview` n'écoute qu'en IPv6 sur ce poste** : `http://localhost:4173`
   répond `ERR_CONNECTION_REFUSED` depuis Playwright alors que le serveur
   tourne. Ouvrir `http://[::1]:4173/`.
