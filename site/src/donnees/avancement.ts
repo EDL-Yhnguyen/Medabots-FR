@@ -123,9 +123,15 @@ export const ETAPES: Etape[] = [
       'Repérés (0xF8–0xFF : saut de ligne, page suivante, fin de message) mais leurs paramètres — portrait, locuteur — restent à élucider.',
   },
   {
+    titre: 'Guillemets français',
+    etat: 'fait',
+    detail:
+      'Les seuls signes qui ont vraiment dû être dessinés. Aucune des quatre langues européennes de la cartouche n’emploie « », donc la police ne les portait pas : 68 occurrences se repliaient sur le guillemet droit ". Deux des onze emplacements de glyphe restés vides les accueillent depuis le 25 septembre 2026, dans la romaine comme dans l’italique — deux chevrons à 45°, cinq rangées, centrés sur la hauteur d’x, chasse de 6 pixels comme une lettre. Les 68 replis ont disparu et aucune ligne ne déborde : la mesure avant/après donne exactement la même liste.',
+  },
+  {
     titre: 'Accents français',
     etat: 'fait',
     detail:
-      'Ils dormaient dans la ROM. C’est une cartouche européenne : les 45 glyphes des quatre langues du continent — é è ê à â ç î ï ô û ù œ Œ et leurs capitales — étaient dessinés juste après le 79e, mais leurs largeurs valaient zéro, si bien que le jeu ne pouvait jamais les employer. Écrire ces largeurs a suffi. Rien n’a été dessiné, rien n’a été relogé, et pas un mot de la traduction n’a eu à être réécrit. Ne manquent que les guillemets « », que la police n’a réellement pas.',
+      'Ils dormaient dans la ROM. C’est une cartouche européenne : les 45 glyphes des quatre langues du continent — é è ê à â ç î ï ô û ù œ Œ et leurs capitales — étaient dessinés juste après le 79e, mais leurs largeurs valaient zéro, si bien que le jeu ne pouvait jamais les employer. Écrire ces largeurs a suffi. Rien n’a été dessiné, rien n’a été relogé, et pas un mot de la traduction n’a eu à être réécrit.',
   },
 ]

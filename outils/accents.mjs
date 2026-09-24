@@ -94,7 +94,7 @@ export function largeur(rom, police, code, base) {
 }
 
 /** Classe verticale, purement descriptive — voir la note de ouvrirAccents(). */
-function classe(rom, police, code) {
+export function classe(rom, police, code) {
   let haut = 99, bas = -1
   for (let y = 0; y < 16; y++)
     for (let x = 0; x < 8; x++)

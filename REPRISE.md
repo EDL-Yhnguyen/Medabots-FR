@@ -1,7 +1,7 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-09-24 · dernier commit : `29c5cf9` Scene d'ouverture:
-octet de parametre manquant apres {FF} (48698C @0011), patch reconstruit
+Dernière séance : 2026-09-25 · les guillemets français « » sont dessinés,
+les 68 derniers replis du projet ont disparu
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
@@ -28,6 +28,18 @@ par décision de Yann du 24/09. Dans `0x4144B4`, le débogage (« Face 00 »,
 « Item X,sorry ») et les huit pointeurs décodés en texte (@0248–@0255) sont
 recopiés à l'identique : les modifier relogerait la table de pointeurs.
 
+**Les guillemets français « » sont dessinés (25/09/2026).** C'est le seul endroit
+du projet où il a fallu dessiner : contrairement aux 45 signes européens, qui
+dormaient dans la police, « et » n'y étaient pas. `outils/guillemets.mjs` les pose
+en `0x7D` et `0x7E`, dans la romaine comme dans l'italique — deux chevrons à 45°,
+cinq rangées, centrés sur la hauteur d'x, chasse de 6 comme une lettre. **Les 68
+replis sur `"` ont disparu, et aucune ligne ne déborde** : la même mesure avec la
+chasse remise à 4 rend exactement la même liste de cinq dépassements, tous
+préexistants et sans guillemet. Vérifié sur la ROM construite, pas sur la source :
+à `0x47E388 @0001` l'anglais porte deux `0x48`, le français un `0x7D` et un `0x7E`.
+Patch : 383 460 octets, réapplication au bit près. Détail dans `docs/format.md`
+§ 4 ter. Restent neuf emplacements de glyphe vides (`0x4F`, `0x7F`–`0x86`).
+
 **Le relogement au-delà de 8 Mio n'a toujours pas été vu à l'écran.** C'est le
 seul point du § 5 quater de `docs/format.md` marqué « non établi ». Témoins :
 la scène d'ouverture (`0x48698C @0000`) et l'inventaire (`0x483ED8 @0000`).
@@ -48,12 +60,12 @@ Ce qui reste est de la vérification et du confort, pas de la traduction :
    été vus à l'écran, ni le texte relogé au-delà de 8 Mio (témoins :
    `0x48698C @0000`, `0x483ED8 @0000`). Toute coquille se corrige dans
    `traduction/<table>.txt`, puis le cycle habituel.
-2. **Les guillemets « »** : onze emplacements de glyphe vides (`0x4F`, puis
-   `0x7D`–`0x86`). Deux chevrons à dessiner, deux largeurs à écrire, et les 68
-   derniers replis disparaissent. Tout l'outillage est en place.
-3. **L'interface** reste affichée à 0,5 sur le site : ce qui manque n'est pas
+2. **L'interface** reste affichée à 0,5 sur le site : ce qui manque n'est pas
    dans les 33 tables de script (menus dessinés en tuiles, à établir avant
    d'y toucher).
+
+Les guillemets « », qui étaient le point 2 de cette liste, sont faits — voir plus
+haut. Il ne reste donc, hors relecture à la manette, que l'interface.
 
 Avant tout : `git log -1` et `git status`. Deux sessions ont déjà travaillé
 en même temps dans ce dépôt (29/08) sans se voir ; si un fichier de
@@ -80,6 +92,18 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **Les guillemets français sont dessinés plutôt que repliés** (25/09/2026).
+  L'alternative était de les laisser sur `"` : 68 occurrences, personne ne s'en
+  serait plaint. Mais la police avait onze emplacements vides et l'outillage des
+  accents était déjà écrit — le coût réel était de deux dessins de cinq pixels.
+  **L'italique n'est pas penché**, et c'est un choix : sur cinq rangées, un
+  cisaillement d'un pixel casse la continuité des arêtes et se lit comme un défaut.
+  **L'encre est `0xE`**, mesurée comme la plus fréquente de la police, pas choisie
+  à l'œil.
+- **Les deux codes entrent dans `TABLE` après la prise de `TABLE_LECTURE`.** C'est
+  ce qui évite le piège du bloc européen : le détecteur de tables de pointeurs
+  continue de lire l'anglais avec la table arrêtée à `0x4E` et reste à 33 tables,
+  5 933 entrées. Vérifié, pas supposé.
 - **Les 480 noms de Medaparts restent en anglais** (Yann, 24/09/2026), pour
   rester cohérent avec les noms de Medabots qu'ils désignent et avec les
   dialogues qui les citent tels quels. Le chantier de traduction est clos ;
@@ -110,6 +134,12 @@ identifiants :**
 - **La règle des 40 % de contexte ne s'applique pas à ce projet** (29/08).
 
 ## À ne pas refaire
+
+- **Croire un avertissement qui se taît.** « 0 repli » et « l'avertissement est
+  cassé » se ressemblent. Le contrôle qui tranche est d'injecter un signe que la
+  police n'a pas — un `æ` — dans une COPIE de `traduction/`, et de voir
+  l'avertissement reparaître à 1. Sur une copie : le dépôt ne doit pas porter la
+  trace d'un contrôle.
 
 - **Laisser un `{FF}` sans son octet de paramètre.** `48698C @0011` (29/08) se
   terminait par `{FF}` nu, espace final avalé par un éditeur : le jeu aurait lu

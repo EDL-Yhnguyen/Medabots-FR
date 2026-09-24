@@ -17,6 +17,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs'
 import { TABLE, REPLI_ACCENTS } from './table-caracteres.mjs'
 import { ciblesDeTable, placeEntree } from './entrees.mjs'
 import { ouvrirAccents, ACCENTS } from './accents.mjs'
+import { ouvrirGuillemets } from './guillemets.mjs'
 
 const [, , cheminRom, cheminPointeurs, dossierScript, dossierTraduction, cheminSortie] = process.argv
 const identiteSeule = process.argv.includes('--identite')
@@ -208,8 +209,9 @@ if (accentsReplies) {
   console.log('\n⚠️  ' + accentsReplies + ' signe(s) remplacé(s) faute de glyphe : ' +
     [...accentsVus].sort().join(' '))
   console.log('   La police ne les a PAS — contrairement aux accents, qui y dormaient et')
-  console.log('   qu’outils/accents.mjs a réveillés. Il faudrait les dessiner dans un des')
-  console.log('   onze emplacements vides (0x4F, 0x7D-0x86). La traduction les garde.')
+  console.log('   qu’outils/accents.mjs a réveillés, et aux guillemets français, que')
+  console.log('   outils/guillemets.mjs a dessinés. Il reste neuf emplacements vides')
+  console.log('   (0x4F, 0x7F-0x86). La traduction les garde.')
 }
 if (soucis.length) {
   console.log('\n❌ ' + soucis.length + ' problème(s) :')
@@ -245,6 +247,11 @@ if (!identiteSeule && cheminSortie) {
   const n = ouvrirAccents(sortie)
   console.log('\n' + n + ' glyphe(s) européen(s) ouverts dans les deux tables de chasse.')
   console.log('   ' + ACCENTS.map(([, c]) => c).join(' '))
+
+  // Les guillemets, eux, sont DESSINÉS, pas réveillés : la police ne les avait
+  // pas. Même règle que les accents — après le test d'identité, jamais avant.
+  ouvrirGuillemets(sortie)
+  console.log('2 guillemet(s) dessiné(s) dans les deux polices : « »')
 
   writeFileSync(cheminSortie, sortie)
   console.log('\nROM écrite : ' + cheminSortie)

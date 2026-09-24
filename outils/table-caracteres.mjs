@@ -76,8 +76,21 @@ export const TABLE_LECTURE = TABLE.slice()
 
 for (const [code, car] of Object.entries(EUROPEEN)) TABLE[Number(code)] = car
 
-// 0x4F, puis 0x7D à 0x86 : onze emplacements de glyphe VIDES, encore libres.
-// C'est là que se dessineraient « et » si on les voulait un jour.
+// LES GUILLEMETS FRANÇAIS, dessinés le 25/09/2026.
+//
+// Contrairement aux accents, ils n'étaient PAS dans la police : aucune des
+// quatre langues du continent ne les emploie sous cette forme. Ils sont dessinés
+// par outils/guillemets.mjs dans deux des onze emplacements vides, et c'est ce
+// qui a fait disparaître les 68 derniers replis du projet.
+//
+// Ces deux codes sont posés APRÈS la prise de TABLE_LECTURE, plus haut : le
+// détecteur de tables de pointeurs continue de lire l'anglais avec la table
+// arrêtée à 0x4E, et reste à 33 tables. Les ajouter avant l'aurait déplacé,
+// comme l'avait fait le bloc européen (docs/format.md § 4 bis).
+TABLE[0x7d] = '«'
+TABLE[0x7e] = '»'
+
+// Restent neuf emplacements de glyphe vides : 0x4F, puis 0x7F à 0x86.
 
 TABLE[0x45] = ':' // « Key: A Class », « Key: B Class », « It says: » — établi
 
@@ -150,11 +163,10 @@ export function rendOctetLecture(octet) {
  */
 export const REPLI_ACCENTS = new Map(
   Object.entries({
-    // Tout ce que la police PORTE a quitté cette table. Ne reste que ce qu'elle
-    // n'a pas : la ligature æ, les guillemets français, les tirets longs et le
-    // y tréma.
+    // Tout ce que la police PORTE a quitté cette table. Les guillemets français
+    // en sont sortis le 25/09/2026, une fois dessinés. Ne reste que ce qu'elle
+    // n'a vraiment pas : la ligature æ, les tirets longs et le y tréma.
     æ: 'ae', Æ: 'AE',
-    '«': '"', '»': '"',
     '’': "'", '‘': "'", '–': '-', '—': '-',
     ÿ: 'y', Ÿ: 'Y',
   }),

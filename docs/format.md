@@ -102,7 +102,8 @@ des octets qui ne sont pas du texte : au premier essai, le détecteur de tables
 est passé de 33 à 35 tables et de 5 933 à 6 047 entrées, deux zones de données
 ayant franchi le seuil de lisibilité par les seuls codes `0x50`–`0x7C`.
 
-`0x4F`, puis `0x7D` à `0x86` : onze emplacements de glyphe vides, encore libres.
+`0x7D` et `0x7E` portent les guillemets français « », dessinés le 25/09/2026 (§ 4 ter).
+`0x4F`, puis `0x7F` à `0x86` : neuf emplacements de glyphe vides, encore libres.
 
 ### Correction du 06/08/2026
 
@@ -256,7 +257,8 @@ les accents y étaient déjà dessinés.**
 |---|---|
 | `0x4F` | glyphe vide |
 | `0x50`–`0x7C` | 45 signes : allemand (ä ö ü ß), espagnol (á í ó ú ñ ¡ ¿), français (à â ç è é ê ë î ï ô û ù œ) et leurs capitales |
-| `0x7D`–`0x86` | dix glyphes vides |
+| `0x7D`–`0x7E` | guillemets français « », **dessinés** le 25/09/2026 — § 4 ter |
+| `0x7F`–`0x86` | huit glyphes vides |
 
 **Rien n'a eu à être dessiné ni relogé.** Le plan écrit la veille — reloger la
 police dans les 47 Kio libres, réécrire quinze mots de pool, dessiner trente
@@ -297,11 +299,57 @@ chasse font toutes un `LDRB` d'offset 0, aucune d'offset 1.** L'octet est écrit
 quand même, cohérent avec le reste de la table, pour ne pas laisser une table à
 moitié renseignée derrière soi.
 
-### Ce qui manque encore
+---
 
-Les **guillemets français « »**, que la police n'a réellement pas — 68
-occurrences, repliées sur `"`. Ils se dessineraient dans deux des onze
-emplacements vides.
+## 4 ter. Les guillemets français ✅ DESSINÉS
+
+Le 25/09/2026. **C'est le seul endroit du projet où il a fallu dessiner**, et la
+différence avec le § 4 bis est entière : les 45 signes européens dormaient dans la
+police et il a suffi de leur écrire une largeur, tandis que « et » n'y étaient
+pas — aucune des quatre langues de la cartouche ne les emploie sous cette forme.
+Ils se repliaient donc sur le guillemet droit `"`, 68 fois, les derniers replis du
+projet.
+
+Outil : [`outils/guillemets.mjs`](../outils/guillemets.mjs).
+
+| | |
+|---|---|
+| Codes | `0x7D` pour «, `0x7E` pour » — deux des onze emplacements vides ; `0x4F` reste libre au milieu du bloc européen |
+| Dessin | deux chevrons décalés de deux colonnes, cinq rangées (5 à 9), pointe au milieu |
+| Encre | `0xE`, la valeur la plus employée de la police (386 pixels sur les 125 glyphes dessinés, devant `0xD` à 378) |
+| Chasse | 6 dans les deux polices, la largeur d'une lettre |
+| Italique | même dessin décalé d'une colonne, **sans cisaillement** |
+
+**Les arêtes font exactement 45°, donc aucun lissage.** Le `/` de la police est
+lissé sur deux pixels par rangée parce que sa pente n'est pas de 45° ; un chevron
+à 45° s'écrit un pixel par rangée et se lisser le rendrait flou.
+
+**Pourquoi l'italique n'est pas penché.** Sur cinq rangées, cisailler d'un pixel
+casse la continuité des arêtes — deux pixels qui se touchent par le coin au lieu
+de se suivre. Le lecteur y verrait un défaut, pas une italique.
+
+**Pourquoi la rangée 5.** Le dessin est centré sur la hauteur d'x : « e » va de la
+rangée 5 à la 10, le trait d'union est sur 7 et 8. Un guillemet posé plus haut se
+lirait comme une apostrophe double, plus bas comme une virgule.
+
+**Les deux codes entrent dans `TABLE` après la prise de `TABLE_LECTURE`.** C'est
+ce qui évite le piège du § 4 bis : le détecteur de tables de pointeurs continue de
+lire l'anglais avec la table arrêtée à `0x4E` et reste à 33 tables, 5 933 entrées.
+Vérifié — les ajouter avant l'aurait déplacé.
+
+### Ce que le contrôle a montré
+
+- **68 replis → 0**, et l'avertissement sait encore dire non : un `æ` injecté dans
+  une copie de `traduction/` le fait reparaître à 1.
+- **Sur la ROM construite, pas sur la source** : à l'entrée `0x47E388 @0001`,
+  l'anglais porte deux `0x48` (`You get {F9}B "{F9}A".`) et le français un `0x7D`
+  et un `0x7E`. Le texte est relogé à `0x826AAE`, au-delà de 8 Mio.
+- **Aucune ligne ne déborde.** La même mesure avec la chasse remise à 4 — celle du
+  `"` qu'ils remplaçaient — rend **exactement la même liste** de cinq lignes au-delà
+  de 212 px dans les tables de dialogue, et aucune ne contient de guillemet. Ces
+  cinq-là préexistent (+2 à +12 px).
+- Le patch passe de 383 363 à 383 460 octets, et sa réapplication redonne la ROM
+  traduite au bit près.
 
 ---
 
