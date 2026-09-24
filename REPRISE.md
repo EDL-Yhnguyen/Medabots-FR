@@ -1,14 +1,22 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-09-24 · dernier commit : `2d6fe5c` Chapitre 11: patch
-reconstruit, site a 3 712 entrees, narratif 3 020/3 875
+Dernière séance : 2026-09-24 · dernier commit : `ec4f8a6` Chapitre 12: patch
+reconstruit, site a 4 035 entrees, narratif 3 343/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Onze chapitres sont en français : 3 712 entrées sur 5 933.** Le onzième
+**Douze chapitres sont en français : 4 035 entrées sur 5 933.** Le douzième
+(`0x47D5C0`, 323 entrées dont 217 textes uniques et 40 vides, traduit le
+24/09/2026) est la chute de Fiyun (l'huile du Dr Armond, Harvey, le choix
+poursuite/équilibre, la capsule de secours, tout le monde aux commandes, les
+Select 3 et le capitaine Awamori, l'atterrissage au sud de Riverview) puis
+les Antackers et leur fausse Reine, Gillgirl et sa partie de chat, les
+Ruines antiques. Narratif mesuré : **3 343 sur 3 875, soit 86,3 %**.
+Relogement : 2 287 entrées, 196 200 octets ; 8 240 420 octets libres.
+Déployé, SHA-1 identique. Le onzième
 (`0x47D124`, 293, traduit le 24/09/2026) est l'après-jeu : le Rallye Partsun
 à Rosewood (Hachiro, Koji, Karin), le "Robattle Royal", les Screws et leur
 "Royaume des Néo-Enfants", le retour à Kodine (Margarita, Mockingbird et ses
@@ -94,12 +102,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47D5C0` (323 entrées), par ordre d'adresse.** Lire
+**Traduire la table `0x47DAD0` (276 entrées), par ordre d'adresse.** Lire
 toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
 (pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47D5C0.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47DAD0.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -110,7 +118,7 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Restent après elle, dans l'ordre : `0x47DAD0` (276), puis `0x4144B4` (256). La ROM d'origine est toujours à
+Reste après elle : `0x4144B4` (256), la dernière table de dialogue. La ROM d'origine est toujours à
 `C:\Users\YHN\Documents\Git\Medabots - Metabee (Europe)_8586.gba`.
 
 **Avant d'employer un signe, vérifier qu'il a un glyphe.** Le chapitre 8 a
@@ -158,6 +166,14 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **Vocabulaire du chapitre 12 (24/09/2026).** La salle des machines, la
+  salle de contrôle, le poste de pilotage, la zone d'atterrissage, la place,
+  l'équilibre de Fiyun, le porte-bonheur, les Select 3 (Select Rouge, Bleu,
+  Jaune ; la Tulipe rouge, bleue, jaune), la Reine des fourmis, les
+  Antackers (Medabots fourmis, « nourriture »), « la fleur solitaire du
+  mal » (Gillgirl), les attaques "Fonte" et "Napalm" (3BE868.txt),
+  « Meda-boulette », « Meda-crêpe ». Les blocs répétés sont traduits à
+  l'identique ; les 40 entrées vides ({FF} seul) sont conservées.
 - **Vocabulaire du chapitre 11 (24/09/2026).** Le "Robattle Royal", la salle
   d'expérimentation, le "Royaume des Néo-Enfants", le jeu de la "Reine", le
   musée Medabot, la plaque d'égout, l'entrepôt, la petite île isolée, les
