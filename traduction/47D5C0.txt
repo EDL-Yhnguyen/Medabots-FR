@@ -1,0 +1,1005 @@
+# Table 0x47D5C0 — dialogues du douzième chapitre (323 entrées)
+#
+# Le dénouement de Fiyun et la fosse aux fourmis : le Dr Armond et son huile
+# qui desserre le Limiteur, Harvey retourné puis revenu à lui, Erika et Karin
+# détachées, la salle des machines et la pierre Fiyun volée à Kodine, Koji
+# arrivé par les "Ailes du vent", le choix (poursuivre le Docteur ou rétablir
+# l'équilibre), la capsule de secours et la zone d'atterrissage, l'huile
+# VRAIMENT spéciale, la chute de Fiyun et tout le monde aux commandes, les
+# Select 3 (Tulipes rouge, bleue et jaune) et le capitaine Awamori,
+# l'atterrissage au sud de Riverview. Puis les Antackers (Medabots fourmis)
+# et leur fausse Reine, Gillgirl et sa partie de chat dans les galeries, les
+# attaques "Fonte", "Napalm" et "ARMA-HEAD", le Dr Armond sponsor des
+# Rubberobos et les Ruines antiques.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# La table répète ses blocs : @0011–@0026 reprennent @0003–@0010 (variantes
+# Erika, Karin, les deux), et de nombreuses entrées partagent une adresse ;
+# les répétitions sont traduites à l'identique. @0217–@0256 sont vides
+# ({FF} seul) : conservées telles quelles. {FF}B (deux entrées) est une
+# question oui/non : conservé.
+#
+# Vocabulaire fixé : le Limiteur, la pierre Fiyun, le royaume antique, le
+# royaume de Kodine, les "Ailes du vent", la capsule de secours (chapitre 6),
+# la salle des machines, la salle de contrôle, le poste de pilotage, la zone
+# d'atterrissage, la place, l'équilibre de Fiyun, le porte-bonheur, les
+# Select 3 (Select Rouge, Bleu, Jaune ; la Tulipe rouge, bleue, jaune), le
+# capitaine Awamori, Riverview, Medaropolis, la Reine des fourmis, les
+# Antackers (Medabots fourmis, qui disent « nourriture »), le lieu de
+# réunion, les Ruines antiques, « la fleur solitaire du mal » (Gillgirl).
+# Les attaques suivent 3BE868.txt : "Fonte" (Melt), "Napalm". Les Medaparts
+# "SCORPION DOG", "BLASTO", "ARMA-HEAD" restent en anglais. « Holy
+# Medaroli » = « Nom d'un Medabot ! », « Meda-pancake » = « Meda-crêpe »,
+# « Meda-Meatball » = « Meda-boulette ». Le Capitaine rit « Gwa ha ha ».
+#
+
+@0000
+{FB} n Ce n'est pas si dur de piloter Fiyun.{FD}Je peux la faire voler tout seul.{FF}{00}
+
+@0001
+{FB} n Je n'ai vraiment rien à faire ici.{FF}{00}
+
+@0002
+{FB} n C'est ridiculement simple{FD}de contrôler Fiyun.{FF}{00}
+
+@0003
+{FB} 7 Alors, tu es enfin venu.{FD}Je commençais à me lasser d'attendre.{FC}{FB} BH{F9}  !{FF}{00}
+
+@0004
+{FB}A BVous êtes un adulte !{FD}Vous devriez savoir ce qui est bien !{FC}{FB} 7BTu es un enfant, et un enfant,{FD}ça se tait et ça écoute !{FC}Rien qu'un pion du Dr Aki !{FC}{FB}A BNe parlez pas du Dr Aki comme ça !{FF}{00}
+
+@0005
+{FB} 7BApprends à respecter tes aînés !{FD}Harvey, viens !{FF}{00}
+
+@0006
+{FB}A HHarvey ! Qu'est-ce qui t'arrive !{FC}{FB} 7 Ho ho ho ! Harvey, ce garçon{FD}est un de tes amis ?{FC}{FB} n {F8}Gaaaah ! Grrrrrr !{F8}{FC}{FB} 7AHarvey dit qu'il ne te connaît pas.{FC}{FB}A EHarvey !{FF}{00}
+
+@0007
+{FB}A FHarvey ! Tiens bon !{FC}{FB} n Oh ? {F9} , c'est toi ?{FC}{FB} 7 Il n'a pas encore changé.{FD}Je dois augmenter la dose d'huile.{FF}{00}
+
+@0008
+{FB}A BQu'est-ce que vous avez mis{FD}dans cette huile ?{FC}{FB} 7AJuste une petite expérience à moi.{FC}Mon huile très spéciale desserre le{FD}Limiteur qui est fixé aux médailles.{FC}Quand le signal d'alerte se déclenche,{FD}le Limiteur est cassé.{FC}{FB}A FLe Limiteur ?{FD}Qu'est-ce que c'est que ça···?{FC}{FB} 7AGya ha ha ha ha !{FD}Je ne te le dirai paaaas !{FF}{00}
+
+@0009
+{FB} 7AEn ce moment, le sol est couvert{FD}de mes mignons petits Medabots volants.{FC}Regarde cette mer de lumière !{FC}Si tu crois pouvoir les arrêter,{FD}vas-y, essaie ! Gya ha ha ha !{FF}{00}
+
+@0010
+{FB}A HLe Docteur a disparu !{FF}{00}
+
+@0011
+{FB} 7 Alors, tu es enfin venu.{FD}Je commençais à me lasser d'attendre.{FC}{FB} CH{F9}  !{FF}{00}
+
+@0012
+{FB}A BVous êtes un adulte !{FD}Vous devriez savoir ce qui est bien !{FC}{FB} 7BTu es un enfant, et un enfant,{FD}ça se tait et ça écoute !{FC}Rien qu'un pion du Dr Aki !{FC}{FB}A BNe parlez pas du Dr Aki comme ça !{FF}{00}
+
+@0013
+{FB} 7BApprends à respecter tes aînés !{FD}Harvey, viens !{FF}{00}
+
+@0014
+{FB}A HHarvey ! Qu'est-ce qui t'arrive !{FC}{FB} 7 Ho ho ho ! Harvey, ce garçon{FD}est un de tes amis ?{FC}{FB} n {F8}Gaaaah ! Grrrrrr !{F8}{FC}{FB} 7AHarvey dit qu'il ne te connaît pas.{FC}{FB}A EHarvey !{FF}{00}
+
+@0015
+{FB}A FHarvey ! Tiens bon !{FC}{FB} n Oh ? {F9} , c'est toi ?{FC}{FB} 7 Il n'a pas encore changé.{FD}Je dois augmenter la dose d'huile.{FF}{00}
+
+@0016
+{FB}A BQu'est-ce que vous avez mis{FD}dans cette huile ?{FC}{FB} 7AJuste une petite expérience à moi.{FC}Mon huile très spéciale desserre le{FD}Limiteur qui est fixé aux médailles.{FC}Quand le signal d'alerte se déclenche,{FD}le Limiteur est cassé.{FC}{FB}A FLe Limiteur ?{FD}Qu'est-ce que c'est que ça···?{FC}{FB} 7AGya ha ha ha ha !{FD}Je ne te le dirai paaaas !{FF}{00}
+
+@0017
+{FB} 7AEn ce moment, le sol est couvert{FD}de mes mignons petits Medabots volants.{FC}Regarde cette mer de lumière !{FC}Si tu crois pouvoir les arrêter,{FD}vas-y, essaie ! Gya ha ha ha !{FF}{00}
+
+@0018
+{FB}A HLe Docteur a disparu !{FF}{00}
+
+@0019
+{FB} 7 Alors, tu es enfin venu.{FD}Je commençais à me lasser d'attendre.{FC}{FB} BH{F9}  !{FC}{FB} CH{F9}  !{FF}{00}
+
+@0020
+{FB}A BVous êtes un adulte !{FD}Vous devriez savoir ce qui est bien !{FC}{FB} 7BTu es un enfant, et un enfant,{FD}ça se tait et ça écoute !{FC}Rien qu'un pion du Dr Aki !{FC}{FB}A BNe parlez pas du Dr Aki comme ça !{FF}{00}
+
+@0021
+{FB} 7BApprends à respecter tes aînés !{FD}Harvey, viens !{FF}{00}
+
+@0022
+{FB}A HHarvey ! Qu'est-ce qui t'arrive !{FC}{FB} 7 Ho ho ho ! Harvey, ce garçon{FD}est un de tes amis ?{FC}{FB} n {F8}Gaaaah ! Grrrrrr !{F8}{FC}{FB} 7AHarvey dit qu'il ne te connaît pas.{FC}{FB}A EHarvey !{FF}{00}
+
+@0023
+{FB}A FHarvey ! Tiens bon !{FC}{FB} n Oh ? {F9} , c'est toi ?{FC}{FB} 7 Il n'a pas encore changé.{FD}Je dois augmenter la dose d'huile.{FF}{00}
+
+@0024
+{FB}A BQu'est-ce que vous avez mis{FD}dans cette huile ?{FC}{FB} 7AJuste une petite expérience à moi.{FC}Mon huile très spéciale desserre le{FD}Limiteur qui est fixé aux médailles.{FC}Quand le signal d'alerte se déclenche,{FD}le Limiteur est cassé.{FC}{FB}A FLe Limiteur ?{FD}Qu'est-ce que c'est que ça···?{FC}{FB} 7AGya ha ha ha ha !{FD}Je ne te le dirai paaaas !{FF}{00}
+
+@0025
+{FB} 7AEn ce moment, le sol est couvert{FD}de mes mignons petits Medabots volants.{FC}Regarde cette mer de lumière !{FC}Si tu crois pouvoir les arrêter,{FD}vas-y, essaie ! Gya ha ha ha !{FF}{00}
+
+@0026
+{FB}A HLe Docteur a disparu !{FF}{00}
+
+@0027
+{FB} n Dépêche-toi de détacher la fille.{FF}{00}
+
+@0028
+{FB}A  C'est un trou vraiment profond.{FD}Je ne peux pas aller plus loin.{FF}{00}
+
+@0029
+{FB}A DErika, Dieu merci, tu vas bien.{FC}{FB} BFÇa va peut-être paraître impoli, mais{FD}pourquoi ça devait tomber sur moi ?{FC}{FB}A CJe suis désolé, Erika.{FD}C'est ma faute si tu···{FC}{FB} BDPeut-être, mais tu es quand même{FD}venu me chercher, {F9} .{FC}Tu es venu en volant dans le ciel,{FD}juste pour me sauver !{FC}{FB}A FBien sûr !{FD}S'il t'arrivait quelque chose···{FC}{FB} BDQu'il m'arrive quelque chose ?{FC}{FB}A EEuh··· oui, comme je disais.{FC}{FB}A FBref, je dois poursuivre{FD}le Dr Armond tout de suite !{FF}{00}
+
+@0030
+{FB} B Ne t'inquiète pas !{FC}Tu as réussi à arriver jusqu'ici,{FD}alors tu peux le faire !{FC}Après tout, tu es le grand Héros !{FF}{00}
+
+@0031
+{FB}A DBien, tu vas bien, Karin.{FC}{FB} CC{F9} , je suis si heu···{FC}{FB}A FKarin, ne pleure pas !{FC}{FB}A CJe suis désolé, Karin.{FD}Je n'en ai pas fait assez.{FC}C'est ma faute si tu···{FC}{FB} CFCe n'est pas ta faute.{FC}Je suis si heureuse que tu sois{FD}venu me chercher, {F9} .{FC}Pardon de pleurer···{FC}{FB}A  Mais Karin, s'il t'arrivait{FD}quelque chose, je···{FC}{FB} C Hmm ?{FC}{FB}A FOublie ce que j'ai dit,{FD}je dois poursuivre le Dr Armond !{FF}{00}
+
+@0032
+{FB} CDSois prudent.{FD}Je prierai pour toi.{FC}Que {F9}  s'en sorte···{FF}{00}
+
+@0033
+{FB}A DDieu merci, tu vas bien, Erika.{FC}{FB} BBPourquoi on se sert de moi comme appât{FD}pour t'attirer ici !? Un objet, moi ?{FC}Quelle insulte.{FC}{FB}A DDésolé pour ça.{FD}Mais je suis soulagé.{FC}Je suis content d'entendre{FD}tes plaintes venimeuses.{FC}{FB} BFQu'est-ce que tu veux dire par là !?{FC}{FB}A DSi tu peux encore parler comme ça,{FD}c'est que tu vas bien.{FC}Bon, je dois poursuivre le Dr Armond !{FD}Tu peux m'attendre ici avec Karin ?{FF}{00}
+
+@0034
+{FB} B Ne t'inquiète pas !{FC}Tu as réussi à arriver jusqu'ici,{FD}alors tu peux le faire !{FC}Après tout, tu es le grand Héros !{FF}{00}
+
+@0035
+{FB}A DKarin, tu vas bien !{FC}{FB} CDC'est pour toi que{FD}je m'inquiétais, {F9} .{FC}{FB}A DTu n'es pas blessée ?{FD}Ça va ?{FC}{FB} CDJe vais bien, merci de demander.{FF}{00}
+
+@0036
+{FB} BFPourquoi tu agis si différemment{FD}quand Karin est là ?{FC}{FB}A DC'est dans ta tête, non ?{FC}{FB} BFQui sait···{FF}{00}
+
+@0037
+{FB}A DKarin, je poursuis le Dr Meta-Evil.{FD}Tu veux bien attendre ici avec Erika ?{FC}{FB} CDD'accord.{FD}Mais sois prudent, s'il te plaît.{FC}{FB}A DMerci, Karin.{FF}{00}
+
+@0038
+{FB} CDSois prudent.{FD}Je prierai pour toi.{FC}Que {F9}  s'en sorte···{FF}{00}
+
+@0039
+{FB} n Le but du Dr Meta-Evil doit être{FD}d'atteindre la salle des machines.{FC}{FB}A  La salle des machines ?{FC}{FB} n Oui. C'est le cœur de Fiyun.{FC}Le passage est fermé pour l'instant,{FD}mais j'ai la clé.{FC}Je vais te l'ouvrir, {F9} .{FD}Poursuis le Docteur, s'il te plaît !{FC}{FB}A  Merci.{FC}Mais pourquoi fais-tu ça pour moi ?{FD}Tu ne trahis pas le Docteur ?{FF}{00}
+
+@0040
+{FB} n J'aime toujours beaucoup le Docteur.{FD}Il m'a sauvé la vie, après tout.{FC}Mais s'il a pris une mauvaise voie,{FD}je ne pouvais pas l'arrêter, moi.{FC}Et toi, {F9} , tu es le seul{FD}qui puisse l'arrêter maintenant !{FF}{00}
+
+@0041
+{FB}A  Je vois···{FC}{FB}A DBon ! Harvey, j'arrêterai le{FD}Docteur, quoi qu'il arrive !{FC}{FB} n Merci beaucoup !{FC}Je vais déverrouiller la porte{FD}au sud de la place.{FC}N'oublie pas de me suivre !{FF}{00}
+
+@0042
+{FB}A  Mmm ? Harvey, qu'est-ce que{FD}tu fais ici ?{FC}{FB} n J'allais te poser la question.{FC}Tu peux entrer dans la salle des{FD}machines par la porte au{FD}sud de la place.{FC}Autrement dit, pas ici !{FD}Dépêche-toi !{FC}{FB}A  J'y vais !{FF}{00}
+
+@0043
+{FB} n J'attends les autres,{FD}qui sont descendus sur Terre.{FC}Ils devraient déjà être revenus···{FF}{00}
+
+@0044
+{FB}A  Hein ? Je reconnais cet endroit.{FD}Mmmmmmm···{FC}{FB}A HÇa y est !{FC}C'est là qu'était la statue de la{FD}Reine des fourmis, celle qui menait{FD}aux ruines !{FC}Alors, ça faisait partie de Fiyun !{FF}{00}
+
+@0045
+{FB}A  Hein ? Je reconnais cet endroit.{FD}Mmmmmmm···{FC}{FB}A HÇa y est !{FC}C'est là qu'était la statue de la{FD}Reine des fourmis, celle qui menait{FD}aux ruines !{FC}Alors, ça faisait partie de Fiyun !{FF}{00}
+
+@0046
+{FB}A HNom d'un Medabot ! C'est haut !{FC}Si je tombais d'ici,{FD}je finirais en Meda-crêpe !{FF}{00}
+
+@0047
+{FB}A HNom d'un Medabot ! C'est haut !{FC}Si je tombais d'ici,{FD}je finirais en Meda-crêpe !{FF}{00}
+
+@0048
+{FB}A  Le Dr Armond doit être devant !{FD}Bon, allons-y !{FC}{FB} D Salut, {F9}  !{FF}{00}
+
+@0049
+{FB}A HKoji !?{FD}Hé, qu'est-ce que tu fais ici !?{FC}{FB} DDJ'ai emprunté les "Ailes du vent"{FD}du Dr Aki pour te suivre.{FC}Pas question que tu gères{FD}ça tout seul !{FC}{FB}A HMais···{FD}Comment tu savais où j'étais ?{FC}{FB} DDJ'ai parlé au seul Medabot volant{FD}encore sain d'esprit.{FC}Je crois qu'il s'appelait··· Harvey ?{FC}{FB}A  Harvey ?{FC}{FB} D Peu importe !{FD}Allons-y !{FC}Le Dr Meta-Evil n'est pas{FD}quelque part au fond ?{FF}{00}
+
+@0050
+{FB} D Yo, {F9} .{FD}Regarde ça.{FF}{00}
+
+@0051
+{FB}A HC'est la pierre Fiyun que j'avais{FD}vue dans le temple du{FD}royaume antique ! Mais pourquoi ici !?{FC}{FB} DDC'est quoi, une pierre Fiyun ?{FD}Ouah, elle est jolie, cette pierre.{FC}{FB} 7DUrk !{FF}{00}
+
+@0052
+{FB}A HC'était la voix du Dr Meta-Evil,{FD}à l'instant ?{FC}{FB} DHJe vais voir !{FF}{00}
+
+@0053
+{FB}A  Aucun doute, cette lumière vive,{FD}c'est la pierre Fiyun qui était{FD}dans le temple !{FF}{00}
+
+@0054
+{FB} DCLa cause de tous ces ennuis,{FD}c'est cette petite Meda-boulette ??{FC}{F9} , règle-lui son compte !{FF}{00}
+
+@0055
+{FB} 7CAïe aïe aïe aïe aïe.{FC}Plus jamais je ne fais passer{FD}le fauteuil entre la salle de contrôle{FD}et la salle des machines !{FC}{FB}A BDr Meta-Evil !{FC}Que fait ici la pierre Fiyun{FD}du royaume antique !{FC}{FB} 7AGya ha ha ha ! Je vais te le dire.{FC}{FB} 7 Je l'ai obtenue en te suivant{FD}jusqu'au royaume de Kodine.{FF}{00}
+
+@0056
+{FB}A HAlors vous l'avez volée !?{FC}{FB} 7 Cette pierre était destinée à un{FD}génie scientifique comme moi !{FC}{FB} D Donc il l'a volée, hein···{FC}{FB} 7DLa ferme !!{FC}{FB}A CDocteur, arrêtez···{FC}{FB}A  Je ne veux pas me battre{FD}contre vous comme ça !{FC}{FB} 7 Alors tu vas te rendre ?{FC}{FB} 7ASupplie-moi, et je te{FD}pardonnerai peut-être.{FF}{00}
+
+@0057
+{FB} {FF}{00}
+
+@0058
+{FB} DCArrgh, il s'est enfui !{FC}{FB}A HOn doit faire quelque chose !{FF}{00}
+
+@0059
+{FB} DCArrgh, il s'est enfui !{FC}{FB}A HOn doit faire quelque chose !{FF}{00}
+
+@0060
+{FB} n Que s'est-il passé !?{FC}{FB}A HHarvey !{FC}{FB} n Si ça continue, Fiyun va{FD}s'écraser au sol !{FC}Tous nos amis en bas, les gens,{FD}tout est en danger !{FC}Quelqu'un doit rétablir{FD}l'équilibre de Fiyun !{FC}{FB}A EJe ne peux pas laisser le Docteur{FD}s'enfuir, mais je ne peux pas non{FD}plus laisser Fiyun s'écraser.{FC}Que faire ?{FF}{00}
+
+@0061
+{FB} D Tu vas poursuivre le Docteur ?{FF}B
+
+@0062
+{FB} DCBon, alors je vais à la salle de{FD}contrôle rétablir l'équilibre de Fiyun.{FF}{00}
+
+@0063
+{FB} n Le Docteur est probablement{FD}à la zone d'atterrissage.{FC}Il va sûrement chercher la{FD}capsule de secours qui s'y trouve !{FC}J'irai là où tout le monde a atterri !{FC}Les effets de l'huile finiront{FD}par se dissiper tôt ou tard !{FF}{00}
+
+@0064
+{FB} D Bon, alors tu vas{FD}rétablir l'équilibre ?{FF}B
+
+@0065
+{FB} DCBon, alors je poursuis{FD}le Dr Meta-Evil !{FF}{00}
+
+@0066
+{FB} n J'irai là où tout le monde a atterri !{FC}Les effets de l'huile finiront{FD}par se dissiper tôt ou tard !{FF}{00}
+
+@0067
+{FB} DFIl n'y a plus de temps !{FD}Décide, ou on meurt !!{FF}{00}
+
+@0068
+{FB} DBYo, {F9}  !{FD}Ne pars pas sans avoir décidé !{FF}{00}
+
+@0069
+{FB}A FKoji va s'occuper de ça,{FD}et moi, je poursuis le Docteur !{FC}Il doit être à la zone d'atterrissage !{FF}{00}
+
+@0070
+{FB}A FKoji va s'occuper de ça,{FD}et moi, je poursuis le Docteur !{FC}Il doit être à la zone d'atterrissage !{FF}{00}
+
+@0071
+{FB}A  J'entends un moteur tourner.{FD}L'intérieur a l'air plutôt louche.{FF}{00}
+
+@0072
+{FB} {FF}{00}
+
+@0073
+{FB}A HAah ! Ça tremble si fort !{FD}Quelque chose sort !{FF}{00}
+
+@0074
+{FB}A HLe Docteur va s'enfuir avec ça !{FD}Je dois l'attraper, vite !{FF}{00}
+
+@0075
+{FB}A BVous n'irez nulle part, Dr Meta-Evil !{FF}{00}
+
+@0076
+{FB} 7BTu réalises ce que tu as fait !?{FC}Regarde ma capsule de secours !{FD}Tu as arrêté le moteur !{FC}{FB}A BVous pensiez pouvoir fuir{FD}et abandonner tout le monde !{FC}{FB} 7BSilence !! Si je mourais, le monde{FD}perdrait le plus grand génie{FD}des Medabots qu'il ait jamais eu !{FC}Pourquoi devrais-je me soucier{FD}de qui que ce soit d'autre que moi ?{FF}{00}
+
+@0077
+{FB} {FF}{00}
+
+@0078
+{FB}A HOuah !{FC}{FB} 7DAaaah ! Je ne peux pas mourir !{FD}Pas ici ! Pas maintenant !{FF}{00}
+
+@0079
+{FB}A  J'entends un moteur tourner.{FD}L'intérieur a l'air plutôt louche.{FF}{00}
+
+@0080
+{FB} {FF}{00}
+
+@0081
+{FB}A HAah ! Ça tremble si fort !{FD}Quelque chose sort !{FF}{00}
+
+@0082
+{FB}A HLe Docteur va s'enfuir avec ça !{FD}Je dois l'attraper, vite !{FF}{00}
+
+@0083
+{FB}A BVous n'irez nulle part, Dr Meta-Evil !{FF}{00}
+
+@0084
+{FB} 7BTu réalises ce que tu as fait !?{FC}Regarde ma capsule de secours !{FD}Tu as arrêté le moteur !{FC}{FB}A BVous pensiez pouvoir fuir{FD}et abandonner tout le monde !{FC}{FB} 7BSilence !! Si je mourais, le monde{FD}perdrait le plus grand génie{FD}des Medabots qu'il ait jamais eu !{FC}Pourquoi devrais-je me soucier{FD}de qui que ce soit d'autre que moi ?{FF}{00}
+
+@0085
+{FB} {FF}{00}
+
+@0086
+{FB}A HOuah !{FC}{FB} 7DAaaah ! Je ne peux pas mourir !{FD}Pas ici ! Pas maintenant !{FF}{00}
+
+@0087
+{FB} 7DGak gak gak !{FF}{00}
+
+@0088
+{FB} 7CMais···{FD}Si je sautais d'ici···{FF}{00}
+
+@0089
+{FB} 7DQu'est-ce que vous faites ici !?{FD}Vous devriez conquérir la Terre !{FC}{FB} n Conquérir la Terre ?{FD}De quoi parlez-vous ?{FC}On s'est réveillés en bas,{FD}et on est revenus tout de suite.{FC}{FB} 7DQuoi !?!?{FC}{FB} 7CMmmm. Je le savais,{FD}il n'y avait pas assez d'huile.{FC}{FB}A DÉvidemment !{FF}{00}
+
+@0090
+{FB}A DÉcoutez, j'ai entendu le Dr Armond{FD}dire qu'il laisserait quelqu'un boire{FD}l'huile VRAIMENT spéciale.{FC}Bien sûr, c'est sûrement réservé{FD}au premier qui l'attrapera !{FC}Ne le laissez pas s'enfuir !{FF}{00}
+
+@0091
+{FB} 7DQu'est-ce que vous faites ici !?{FD}Vous devriez conquérir la Terre !{FC}{FB} n Conquérir la Terre ?{FD}De quoi parlez-vous ?{FC}On s'est réveillés en bas,{FD}et on est revenus tout de suite.{FC}{FB} 7DQuoi !?!?{FC}{FB} 7CMmmm. Je le savais,{FD}il n'y avait pas assez d'huile.{FC}{FB}A DÉvidemment !{FF}{00}
+
+@0092
+{FB}A DÉcoutez, j'ai entendu le Dr Armond{FD}dire qu'il laisserait quelqu'un boire{FD}l'huile VRAIMENT spéciale.{FC}Bien sûr, c'est sûrement réservé{FD}au premier qui l'attrapera !{FC}Ne le laissez pas s'enfuir !{FF}{00}
+
+@0093
+{FB} 7DQu'est-ce que vous faites ici !?{FD}Vous devriez conquérir la Terre !{FC}{FB} n Conquérir la Terre ?{FD}De quoi parlez-vous ?{FC}On s'est réveillés en bas,{FD}et on est revenus tout de suite.{FC}{FB} 7DQuoi !?!?{FC}{FB} 7CMmmm. Je le savais,{FD}il n'y avait pas assez d'huile.{FC}{FB}A DÉvidemment !{FF}{00}
+
+@0094
+{FB}A DÉcoutez, j'ai entendu le Dr Armond{FD}dire qu'il laisserait quelqu'un boire{FD}l'huile VRAIMENT spéciale.{FC}Bien sûr, c'est sûrement réservé{FD}au premier qui l'attrapera !{FC}Ne le laissez pas s'enfuir !{FF}{00}
+
+@0095
+{FB} 7DQu'est-ce que vous faites ici !?{FD}Vous devriez conquérir la Terre !{FC}{FB} n Conquérir la Terre ?{FD}De quoi parlez-vous ?{FC}On s'est réveillés en bas,{FD}et on est revenus tout de suite.{FC}{FB} 7DQuoi !?!?{FC}{FB} 7CMmmm. Je le savais,{FD}il n'y avait pas assez d'huile.{FC}{FB}A DÉvidemment !{FF}{00}
+
+@0096
+{FB}A DÉcoutez, j'ai entendu le Dr Armond{FD}dire qu'il laisserait quelqu'un boire{FD}l'huile VRAIMENT spéciale.{FC}Bien sûr, c'est sûrement réservé{FD}au premier qui l'attrapera !{FC}Ne le laissez pas s'enfuir !{FF}{00}
+
+@0097
+{FB} n Youpiii !{FF}{00}
+
+@0098
+{FB} 7DOuah ! Éloignez-vous de moi !{FD}Gak gak gak !{FF}{00}
+
+@0099
+{FB}A AC'est une médaille !{FD}Merci beaucoup, Docteur !{FC}{FB} 7DQuoi !? Reste loi··· Gak gak gak !{FF}{00}
+
+@0100
+{FB}A  On dirait qu'on en a fini ici.{FD}Allons voir comment va Koji.{FC}Ça n'a pas l'air de{FD}s'arranger.{FF}{00}
+
+@0101
+{FB} n Docteur ! Docteur !{FD}Quel goût a l'huile spéciale ?{FF}{00}
+
+@0102
+{FB} n Docteur ! Docteur !{FD}L'huile douce aussi, c'est bon♥{FF}{00}
+
+@0103
+{FB} n Docteur ! Docteur !{FD}Même l'huile plate, c'est bon♥{FF}{00}
+
+@0104
+{FB} n Ça devient impossible pour moi{FD}de tenir les commandes tout seul !{FC}Tout le monde fait de son mieux{FD}pour rétablir l'équilibre.{FF}{00}
+
+@0105
+{FB} n Le pire est peut-être passé, mais{FD}je ne suis pas prêt à lâcher.{FC}On doit tous y mettre{FD}encore plus d'énergie !{FF}{00}
+
+@0106
+{FB} n Occupé occupé{FD}Problème problème{FF}{00}
+
+@0107
+{FB} n Soit on réussit, soit on{FD}meurt en essayant !{FF}{00}
+
+@0108
+{FB} n Ça va comme ça···{FD}Aaah ! L'équilibre !{FF}{00}
+
+@0109
+{FB} n Soit on réussit, soit on{FD}meurt en essayant !{FF}{00}
+
+@0110
+{FB} DEJe ne peux pas m'arrêter maintenant.{FD}On parlera plus tard !{FF}{00}
+
+@0111
+{FB} DDComme toujours, tu es bien plus{FD}fou que je ne le serai jamais.{FC}On fait tout ce qu'on peut ici,{FD}alors continue d'avancer !{FF}{00}
+
+@0112
+{FB} DEJe ne peux pas m'arrêter maintenant.{FD}On parlera plus tard !{FF}{00}
+
+@0113
+{FB} DDComme toujours, tu es bien plus{FD}fou que je ne le serai jamais.{FC}On fait tout ce qu'on peut ici,{FD}alors continue d'avancer !{FF}{00}
+
+@0114
+{FB} DFOn a des ennuis, {F9}  !{FC}Si ça continue comme ça,{FD}Fiyun va s'écraser{FD}sur la ville, c'est sûr !{FC}{FB}A HTu as dit s'écraser !?{FC}{FB} DETu dois nous aider !{FC}Assieds-toi et prends les commandes{FD}de vol avec nous !{FC}{FB}A FD'accord !{FF}{00}
+
+@0115
+{FB} DFAllez, les gars, vite !{FF}{00}
+
+@0116
+{FB} DDComme toujours, tu es bien plus{FD}fou que je ne le serai jamais.{FC}On fait tout ce qu'on peut ici,{FD}alors continue d'avancer !{FF}{00}
+
+@0117
+{FB} BHC'est terrible !{FC}Si ça continue comme ça,{FD}Fiyun va s'écraser sur la ville !{FC}{FB}A HQuoi !?{FC}{FB} BHJ'ai une idée !{FD}Aide-nous aussi, {F9}  !{FC}Il y a un siège libre{FD}aux commandes, non ?{FC}Assieds-toi et donne un coup de main !{FC}{FB}A FD-d'accord !{FF}{00}
+
+@0118
+{FB} BHDépêche-toi, {F9}  !{FF}{00}
+
+@0119
+{FB} BCTu crois vraiment qu'on va y arriver ?{FC}Notre groupe va être{FD}coupé en deux···{FC}{FB}A DBien sûr qu'on peut !{FD}Fais-moi confiance, Erika !{FC}Tu sais, cet air abattu{FD}ne te va pas du tout.{FC}{FB} BDTu as sans doute raison.{FD}Ça ne me ressemblait pas, hein ?{FC}Je crois en toi, {F9} .{FF}{00}
+
+@0120
+{FB} BDJe crois en toi, {F9}  !{FF}{00}
+
+@0121
+{FB} n On m'a dit qu'il y avait une urgence,{FD}alors je suis venu aider !{FF}{00}
+
+@0122
+{FB} BHOn a un gros problème !{FD}Je t'expliquerai plus tard !{FF}{00}
+
+@0123
+{FB} BHOoooh, qu'est-ce qu'on va devenir !?{FF}{00}
+
+@0124
+{FB} CFJe fais de mon mieux !{FF}{00}
+
+@0125
+{FB} CFTout va bien se passer, n'est-ce pas ?{FF}{00}
+
+@0126
+{FB} n On m'a dit qu'il y avait une urgence,{FD}alors je suis venu aider !{FF}{00}
+
+@0127
+{FB} CFNous avons de gros ennuis !{FC}Même si tout le monde fait de son{FD}mieux, ça ne suffira peut-être pas.{FC}À ce rythme, Fiyun va{FD}s'écraser au sol !{FC}{FB}A HQuoi !?{FC}{FB} CFJe sais !{FD}{F9} , aide-nous aussi, s'il te plaît !{FC}Prends un des sièges libres aux{FD}commandes et travaille avec nous !{FC}{FB}A FD-d'accord !{FF}{00}
+
+@0128
+{FB} CFDépêche-toi, {F9}  !{FF}{00}
+
+@0129
+{FB} CCJe me demande si on va y arriver.{FC}{FB}A DBien sûr qu'on peut !{FC}Ne t'inquiète pas, Karin, tout ira{FD}bien ! Fais-moi confiance !{FC}{FB} CABien sûr, je te crois.{FC}Tant que tu dis que ça ira,{FD}ça me suffit !{FF}{00}
+
+@0130
+{FB} CAJe crois en toi !{FF}{00}
+
+@0131
+{FB}A  C'est là ! C'est parti !{FF}{00}
+
+@0132
+{FB} {FF}{00}
+
+@0133
+{FB} {FF}{00}
+
+@0134
+{FB} n L'équilibre de Fiyun est presque{FD}rétabli, mais on perd de l'altitude.{FC}Il n'y a plus aucun doute.{FD}Nous allons nous écraser !{FC}{FB}A HAprès tout ce qu'on a fait !{FD}Qu'est-ce qu'on fait, maintenant···{FF}{00}
+
+@0135
+{FB}A DJ'ai une idée !{FD}Tout le monde est revenu du sol !{FC}Dis, où les Medabots ont-ils{FD}l'habitude de se rassembler ?{FC}{FB} n Ce serait··· la place ?{FD}Pourquoi tu demandes ça ?{FC}{FB}A DSi tout le monde s'y met, on peut{FD}tout juste garder Fiyun en l'air.{FC}{FB} n C'est de la folie !{FC}{FB}A DFolie ou pas, il faut essayer !{FD}Je vais à la place !{FF}{00}
+
+@0136
+{FB}A FOn laisse le Dr Meta-Evil à Koji,{FD}et moi, je vais au poste de pilotage !{FF}{00}
+
+@0137
+{FB} DDTu n'es pas fatigué ?{FD}Arrête de traîner et va te reposer.{FF}{00}
+
+@0138
+{FB} n C'est un paradis où les Medabots{FD}vivent heureux !{FC}Tout ça grâce à notre Grand Héros !{FD}Vive le Grand Héros !{FC}{FB}A GComme je l'ai dit,{FD}pas besoin de m'appeler "Grand Héros".{FF}{00}
+
+@0139
+{FB} n Merci beaucoup !{FC}Grâce à toi, tout est{FD}redevenu normal !{FF}{00}
+
+@0140
+{FB}A FComment se déplace Fiyun ?{FC}{FB} n On a des ennuis. Si ça continue,{FD}on va s'écraser sur la ville.{FC}{FB}A HQuoi !?{FC}{FB} n On n'a pas assez de puissance{FD}avec seulement les Medabots d'ici.{FC}Si on ne met pas plus de monde{FD}aux places libres des commandes···{FC}{FB}A  Bon, je vais chercher de l'aide !{FC}{FB} n Tiens, prends ce porte-bonheur.{FD}Je prierai pour ta réussite···{FF}{00}
+
+@0141
+{FB} n Si on survit tous à ça,{FD}tu pourras garder le porte-bonheur.{FF}{00}
+
+@0142
+{FB}A  D'abord, demander de l'aide à Erika !{FF}{00}
+
+@0143
+{FB}A  D'abord, demander de l'aide à Erika !{FF}{00}
+
+@0144
+{FB}A  D'abord, demander de l'aide à Erika !{FF}{00}
+
+@0145
+{FB}A  D'abord, demander de l'aide à Erika !{FF}{00}
+
+@0146
+{FB}A  D'abord, demander de l'aide à Karin !{FF}{00}
+
+@0147
+{FB}A  D'abord, demander de l'aide à Karin !{FF}{00}
+
+@0148
+{FB} BHHé, qu'est-ce qui se passe ?{FD}Il est arrivé quelque chose !?{FC}{FB}A  Attends, Erika.{FD}Je vais à la salle de contrôle, là !{FF}{00}
+
+@0149
+{FB} BHDis-moi ce qui se passe !{FD}Qu'est-ce qui est arrivé !?{FC}{FB}A  Calme-toi et écoute-moi{FD}bien, Erika.{FC}Fiyun va s'écraser sur la ville.{FC}{FB} BHP-pas possible ! Alors qu'est-ce{FD}qui va arriver à Maman ? Et Papa ?!{FC}Et l'école !?{FC}{FB}A  Erika, tu dois rester calme.{FD}J'ai besoin de ta force.{FC}On a besoin que tu prennes{FD}un des sièges aux commandes.{FF}{00}
+
+@0150
+{FB}A EJe devrais aller demander de l'aide{FD}à Koji, à la zone d'atterrissage.{FC}{FB}A  Je me demande si Koji a réussi{FD}à attraper le Dr Meta-Evil.{FF}{00}
+
+@0151
+{FB} CF{F9} .{FC}Qu'est-ce qui ne va pas ?{FD}Il est arrivé quelque chose ?{FC}{FB}A  Attends, Karin.{FD}Je vais à la salle de contrôle, là !{FF}{00}
+
+@0152
+{FB} CFDis-moi ce qui se passe !{FD}Il est arrivé quelque chose ?{FC}{FB}A  Fiyun va s'écraser{FD}sur Riverview.{FC}{FB} CHOh non ! C'est terrible !{FC}Que vont devenir tous{FD}les habitants de Riverview ?{FC}{FB}A  Karin, j'ai besoin de ton aide !{FC}Tu dois prendre une des{FD}places libres aux commandes.{FF}{00}
+
+@0153
+{FB}A EJe devrais aller demander de l'aide{FD}à Koji, à la zone d'atterrissage.{FC}{FB}A  Je me demande si Koji a réussi{FD}à attraper le Dr Meta-Evil.{FF}{00}
+
+@0154
+{FB}A  Vous deux, donnez-moi un coup de main !{FC}À la vitesse où ça va,{FD}Fiyun va s'écraser sur la ville !{FC}On a besoin de votre aide !{FC}{FB} BHPourquoi ? Qu'est-ce qui ne va pas !?{FC}{FB} CHIl est arrivé quelque chose ?{FC}{FB}A  Je vous raconterai tout plus tard.{FC}Prenez chacune un siège aux{FD}commandes et aidez-nous !{FF}{00}
+
+@0155
+{FB} CEJe n'ai jamais piloté d'avion.{FC}{FB} BHPersonne n'a de raison{FD}de savoir faire ça !{FC}{FB}A FCe n'est pas le moment de{FD}discuter ou de protester !{FC}Je vais chercher tous ceux{FD}qui pourraient nous aider !{FC}On manque de temps !{FC}{FB} BEJe ne suis pas très confiante,{FD}mais il faut le faire !{FC}{FB} CED'accord, essayons !{FF}{00}
+
+@0156
+{FB}A EJe devrais aller demander de l'aide{FD}à Koji, à la zone d'atterrissage.{FC}{FB}A  Je me demande si Koji a réussi{FD}à attraper le Dr Meta-Evil.{FF}{00}
+
+@0157
+{FB} 7BAaaaaah ! Lâchez-moiiii !{FF}{00}
+
+@0158
+{FB} DDJe l'ai eu !{FD}{F9} , comment tu t'en es sorti ?{FC}{FB}A EJe venais t'en parler, Koji.{FC}Il n'y a pas assez de monde pour{FD}réparer, alors j'ai besoin de ton aide.{FC}{FB} DEJe suis occupé à surveiller cette{FD}petite Meda-boulette.{FC}Tu devras demander à quelqu'un d'autre.{FC}{FB}A EQuelqu'un d'autre···{FF}{00}
+
+@0159
+{FB} n Hmmm ? Pourquoi vous avez tous peur ?{FC}{FB}A  Qui es-tu ?{FC}{FB} n Moi ? Je me suis réveillé{FD}sur le sol, en bas.{FC}Harvey m'a trouvé et ramené.{FF}{00}
+
+@0160
+{FB}A  Ça devrait suffire comme aide.{FC}Je dois retourner à la salle{FD}de contrôle au plus vite !{FF}{00}
+
+@0161
+{FB} DCJe m'occupe de tout ici !{FD}Vas-y ! Vite !{FF}{00}
+
+@0162
+{FB} DDJe l'ai eu !{FD}{F9} , comment tu t'en es sorti ?{FC}{FB}A EJe venais t'en parler, Koji.{FC}Il n'y a pas assez de monde pour{FD}réparer, alors j'ai besoin de ton aide.{FC}{FB} DEJe suis occupé à surveiller cette{FD}petite Meda-boulette.{FC}Tu devras demander à quelqu'un d'autre.{FC}{FB}A EQuelqu'un d'autre···{FF}{00}
+
+@0163
+{FB} n Hmmm ? Pourquoi vous avez tous peur ?{FC}{FB}A  Qui es-tu ?{FC}{FB} n Moi ? Je me suis réveillé{FD}sur le sol, en bas.{FC}Harvey m'a trouvé et ramené.{FF}{00}
+
+@0164
+{FB}A  Ça devrait suffire comme aide.{FC}Je dois retourner à la salle{FD}de contrôle au plus vite !{FF}{00}
+
+@0165
+{FB} DCJe m'occupe de tout ici !{FD}Vas-y ! Vite !{FF}{00}
+
+@0166
+{FB} DDJe l'ai eu !{FD}{F9} , comment tu t'en es sorti ?{FC}{FB}A EJe venais t'en parler, Koji.{FC}Il n'y a pas assez de monde pour{FD}réparer, alors j'ai besoin de ton aide.{FC}{FB} DEJe suis occupé à surveiller cette{FD}petite Meda-boulette.{FC}Tu devras demander à quelqu'un d'autre.{FC}{FB}A EQuelqu'un d'autre···{FF}{00}
+
+@0167
+{FB} n Hmmm ? Pourquoi vous avez tous peur ?{FC}{FB}A  Qui es-tu ?{FC}{FB} n Moi ? Je me suis réveillé{FD}sur le sol, en bas.{FC}Harvey m'a trouvé et ramené.{FF}{00}
+
+@0168
+{FB}A FJe suis sûr qu'il y avait au moins{FD}un Medabot qui n'était pas devenu fou !{FC}Je dois le trouver !{FF}{00}
+
+@0169
+{FB} DCJe m'occupe de tout ici !{FD}Vas-y ! Vite !{FF}{00}
+
+@0170
+{FB} n Hé ! Qu'est-il arrivé aux autres ?{FD}Tu les as sauvés ?{FC}{FB}A  Tout le monde va bien.{FD}Mais surtout, Fiyun est en danger !{FC}On a de gros ennuis !{FD}J'ai besoin de ton aide tout de suite !{FC}{FB} n Qu'est-ce qui ne va pas ?{FD}Hé, qu'est-ce qui se passe ?{FC}{FB}A FOn parlera plus tard !{FC}Va à la salle de contrôle{FD}et tu comprendras tout !{FC}{FB} n D-d'accord.{FF}{00}
+
+@0171
+{FB}A  Ça devrait suffire comme aide.{FC}Je dois retourner à la salle{FD}de contrôle au plus vite !{FF}{00}
+
+@0172
+{FB} n Il n'y a toujours pas assez d'aide !{FC}Peu importe qui tu ramènes,{FD}tant qu'il est sain d'esprit !{FC}Ramène-nous un Medabot de plus !{FF}{00}
+
+@0173
+{FB} n D-dépêche-toi de prendre ta place !{FD}S'il te plaît !{FF}{00}
+
+@0174
+{FB}A  C'est là ! C'est parti !{FF}{00}
+
+@0175
+{FB} {FF}{00}
+
+@0176
+{FB} {FF}{00}
+
+@0177
+{FB} n L'équilibre de Fiyun est presque{FD}rétabli, mais on perd de l'altitude.{FC}Il n'y a plus aucun doute.{FD}Nous allons nous écraser !{FC}{FB}A HAprès tout ce qu'on a fait !{FD}Qu'est-ce qu'on fait, maintenant···{FF}{00}
+
+@0178
+{FB}A DJ'ai une idée !{FD}Tout le monde est revenu du sol !{FC}Dis, où les Medabots ont-ils{FD}l'habitude de se rassembler ?{FC}{FB} n Ce serait··· la place ?{FD}Pourquoi tu demandes ça ?{FC}{FB}A DSi tout le monde s'y met, on peut{FD}tout juste garder Fiyun en l'air.{FC}{FB} n C'est de la folie !{FC}{FB}A DFolie ou pas, il faut essayer !{FD}Je vais à la place !{FF}{00}
+
+@0179
+{FB} n J'ai l'impression d'avoir fait{FD}un très mauvais cauchemar.{FF}{00}
+
+@0180
+{FB} n Pfff, j'ai un de ces maux de tête···{FD}Encore trop bu d'huile···{FF}{00}
+
+@0181
+{FB} n Je ne me souviens pas vraiment{FD}de ce qui vient de se passer.{FF}{00}
+
+@0182
+{FB} n Attention à ne pas trop boire.{FF}{00}
+
+@0183
+{FB}A DHarvey ! Tu es revenu !{FC}{FB} n Oui, {F9} .{FD}Tout le monde est rentré sain et sauf.{FC}{FB}A DContent de l'entendre.{FD}En fait, je viens demander ton aide.{FC}{FB} n Tu n'aurais pas réussi{FD}à rétablir l'équilibre ?{FC}{FB}A  Ça, c'était sans problème, mais{FD}maintenant, on dirait que Fiyun{FD}va s'écraser au sol !{FC}Je viens voir si tu peux{FD}nous aider à empêcher ça !{FF}{00}
+
+@0184
+{FB} n Bon, allons-y !{FC}{FB}A DHarvey !{FC}{FB} n Si on abandonne avant même d'avoir{FD}commencé, alors c'est déjà fini !{FC}{FB} {FF}{00}
+
+@0185
+{FB}A DJe me demande si je peux voir{FD}comment vont les autres d'ici.{FF}{00}
+
+@0186
+{FB} & Toh !{FF}{00}
+
+@0187
+{FB}A EUne seconde.{FC}J'ai déjà entendu cette voix.{FD}J'ai un mauvais pressentiment···{FF}{00}
+
+@0188
+{FB}A EJe suis vraiment curieux···{FD}Allons voir.{FF}{00}
+
+@0189
+{FB}A HLes Select 3 !?{FF}{00}
+
+@0190
+{FB} t Celui qu'on appelle la Tulipe rouge,{FD}Select Rouge !{FF}{00}
+
+@0191
+{FB} x Celui qu'on appelle la Tulipe bleue,{FD}Select Bleu !{FF}{00}
+
+@0192
+{FB} n Celui qu'on appelle la Tulipe jaune.{FD}Select Jaune !{FF}{00}
+
+@0193
+{FB} t Nous sommes les guerriers colorés !{FD}Les uniques Select 3 sont arrivés !{FC}{FB}A EJe me demandais pourquoi{FD}Select Bleu n'est pas bleu du tout.{FC}{FB} x Le 2e membre d'un trio{FD}doit toujours être bleu !{FC}Tout le monde sait ça !?{FC}{FB}A EQui a décidé ça !?{FD}Oh, laissez tomber···{FC}{FB}A  Mais si ces types sont là,{FD}ça ne peut vouloir dire que···{FF}{00}
+
+@0194
+{FB} ·AGwa ha ha ha ha ha !{FC}Vous n'êtes pas les seuls à pouvoir{FD}utiliser les "Ailes du vent" !{FC}J'ai pris soin d'amener mon propre{FD}photographe pour qu'il filme{FD}toute ma classe !{FC}Je suis de si bonne humeur que je{FD}vais même me battre contre toi, petit !{FC}Allez, Select 3 !{FC}{FB} t À vos ordres !{FF}{00}
+
+@0195
+{FB} ·CAttendez ! Ça, ce n'était pas classe !{FC}{FB}A HQu'est-ce que vous faites !?{FC}Fiyun est sur le point{FD}de s'écraser au sol !{FC}{FB} · Tu crois pouvoir me tromper avec{FD}un mensonge aussi simple···{FF}{00}
+
+@0196
+{FB} ·CQUOI !{FF}{00}
+
+@0197
+{FB} ·COn tombe, on tombe, on est tombés !!{FF}{00}
+
+@0198
+{FB} ·CJe me tire d'ici !{FC}{FB} W Oh, attendez, capitaine Awamori !{FF}{00}
+
+@0199
+{FB} {FF}{00}
+
+@0200
+{FB} {FF}{00}
+
+@0201
+{FB}A  Les tremblements ont cessé.{FF}{00}
+
+@0202
+{FB} DDSouris un peu, {F9}  !{FC}On a réussi à faire atterrir Fiyun{FD}en catastrophe au sud de Riverview !{FC}{FB}A AVraiment ? Génial !{FF}{00}
+
+@0203
+{FB} DDTout le monde t'attend{FD}dehors, devant Fiyun !{FC}Allez ! On rentre à la maison !{FF}{00}
+
+@0204
+{FB} n {F9}  !{FF}{00}
+
+@0205
+{FB}A DHarvey ! Tout le monde !{FC}Vous avez réussi !{FD}Vous êtes géniaux !{FC}{FB} n C'est grâce à toi, {F9} .{FC}Tu as cru en nous et tu nous as donné{FD}le courage de croire en nous-mêmes.{FC}Grâce à ça, nous avons pu{FD}éviter de perdre notre chère Fiyun.{FF}{00}
+
+@0206
+{FB} n Merci.{FC}{FB} {FF}{00}
+
+@0207
+{FB} n La meilleure huile, c'est celle{FD}qu'on boit après avoir tout donné.{FF}{00}
+
+@0208
+{FB} B Oui, oui.{FD}C'est l'ordre de notre grand Héros.{FC}Bon, je ferai comme tu dis.{FC}Mais tu as intérêt à arrêter{FD}le Dr Armond, sinon···!{FC}{FB}A DLaisse-moi tout gérer !{FF}{00}
+
+@0209
+{FB} n Vite, {F9}  !{FD}Vite !{FF}{00}
+
+@0210
+{FB} n C'est impossible !{FC}{FB} {FF}{00}
+
+@0211
+{FB}A  Où est Harvey ?{FC}{FB} n Il cherche les autres.{FD}Tout le monde va bientôt revenir.{FC}{FB}A  Bon, tu feras l'affaire !{FC}Pour l'instant, va à la salle de{FD}contrôle et donne un coup de main.{FC}{FB} n Quoi ? Pourquoi ?{FC}{FB}A FTu comprendras une fois là-bas !{FC}{FB} n Euh, d'accord.{FF}{00}
+
+@0212
+{FB} DCRègle-lui son compte, {F9}  !{FC}C'est ton combat.{FD}Ne le rate pas, mon vieux !{FC}{FB}A EJe n'ai pas vraiment le choix.{FC}{FB} 7DAttends ! Tu dois m'écouter !{FD}Si on se bat ici···{FF}{00}
+
+@0213
+{FB} DDJ'ai une bonne idée, {F9}  !{FC}L'un de nous poursuit le Docteur,{FD}pendant que l'autre va{FD}rétablir l'équilibre de Fiyun !{FC}{FB}A HTu as raison ! C'est une super idée !!{FC}{FB} DDHé, l'idée vient de moi,{FD}à toi de prendre la décision.{FC}Tu veux poursuivre le Docteur{FD}ou tu veux aller{FD}rétablir l'équilibre ?{FC}Dis-moi quand tu as décidé, ok ?{FD}Peu m'importe ce que je fais.{FF}{00}
+
+@0214
+{FB} BHQu'est-ce que tu racontes !?{FC}Je ne sais même pas COMMENT{FD}on se sert de ces commandes !{FC}{FB}A FS'il te plaît, Erika !{FD}Il n'y a pas de temps !{FC}Sans toi, on est tous fichus !{FC}{FB} BED-d'accord. Je vais essayer.{FD}C'est notre seule chance !{FF}{00}
+
+@0215
+{FB}A BJe vous ai trouvé, Docteur !{FF}{00}
+
+@0216
+{FB} CFMais je n'ai jamais touché à des{FD}commandes ni rien de ce genre.{FC}Tu ne veux pas de mon···{FC}{FB}A FS'il te plaît, Karin !{FD}On manque de temps.{FC}Si tu ne le fais pas,{FD}personne ne sera sauvé !{FC}{FB} CFJe comprends.{FD}Je ferai tout ce que je peux !{FF}{00}
+
+@0217
+{FF}{00}
+
+@0218
+{FF}{00}
+
+@0219
+{FF}{00}
+
+@0220
+{FF}{00}
+
+@0221
+{FF}{00}
+
+@0222
+{FF}{00}
+
+@0223
+{FF}{00}
+
+@0224
+{FF}{00}
+
+@0225
+{FF}{00}
+
+@0226
+{FF}{00}
+
+@0227
+{FF}{00}
+
+@0228
+{FF}{00}
+
+@0229
+{FF}{00}
+
+@0230
+{FF}{00}
+
+@0231
+{FF}{00}
+
+@0232
+{FF}{00}
+
+@0233
+{FF}{00}
+
+@0234
+{FF}{00}
+
+@0235
+{FF}{00}
+
+@0236
+{FF}{00}
+
+@0237
+{FF}{00}
+
+@0238
+{FF}{00}
+
+@0239
+{FF}{00}
+
+@0240
+{FF}{00}
+
+@0241
+{FF}{00}
+
+@0242
+{FF}{00}
+
+@0243
+{FF}{00}
+
+@0244
+{FF}{00}
+
+@0245
+{FF}{00}
+
+@0246
+{FF}{00}
+
+@0247
+{FF}{00}
+
+@0248
+{FF}{00}
+
+@0249
+{FF}{00}
+
+@0250
+{FF}{00}
+
+@0251
+{FF}{00}
+
+@0252
+{FF}{00}
+
+@0253
+{FF}{00}
+
+@0254
+{FF}{00}
+
+@0255
+{FF}{00}
+
+@0256
+{FF}{00}
+
+@0257
+{FB} r C'est toi, le suivant ?{FD}On Robattle !{FF}{00}
+
+@0258
+{FB} r Encore une fois.{FF}{00}
+
+@0259
+{FB} V Ouiiin ! Pardon, Maman.{FD}Je ne veux plus être un Rubberobo !{FF}{00}
+
+@0260
+{FB} r Oh non···{FD}Ne pleure pas. Ne pleure pas !{FF}{00}
+
+@0261
+{FB} V Les Medabots fourmis nous appellent{FD}"nourriture". Ils vont nous manger ?{FF}{00}
+
+@0262
+{FB} r Alors c'est ça, la nourriture forte ?{FC}On va s'en occuper à deux.{FD}Je l'apporterai moi-même à la Reine.{FF}{00}
+
+@0263
+{FB} r Mmmmm, on a des ennuis.{FD}Envoyez plus de troupes !{FF}{00}
+
+@0264
+{FB} r Capitaine ! C'est notre cible !{FC}{FB} r Nous devons la repousser à trois.{FC}Personne n'entre dans la salle{FD}de la Reine sans permission.{FF}{00}
+
+@0265
+{FB} r Cette nourriture est vraiment forte !{FD}Je dois le signaler à la Reine.{FF}{00}
+
+@0266
+{FB} r Votre Majesté, nous avons{FD}de la nouvelle nourriture.{FC}{FB} & Capturez-le et attachez-le. RoboRobo.{FC}{FB}A  J'ai bien entendu "RoboRobo" ?{FC}{FB} r À vos ordres, Votre Majesté.{FF}{00}
+
+@0267
+{FB} r Robattle ici !{FF}{00}
+
+@0268
+{FB} r J-je ne peux plus me battre.{FD}Mon stock de Medaparts est épuisé···{FF}{00}
+
+@0269
+{FB}A DEncore une fois !{FF}{00}
+
+@0270
+{FB} r Notre capitaine est battu.{FD}Qu'est-ce qu'on fait, maintenant···{FF}{00}
+
+@0271
+{FB}A  C'est la même statue que celle{FD}du lieu de réunion.{FC}Alors, la statue que les Antackers{FD}prennent pour la Reine pourrait être···{FC}{FB}A DEssayons "Fonte" pour la faire fondre.{FC}Ai-je un Medabot équipé{FD}de "SCORPION DOG" ?{FF}{00}
+
+@0272
+{FB}A DBon ! Essayons !{FD}Medabot, attaque !{FF}{00}
+
+@0273
+{FB} r Ouiiin !{FD}Qu'est-ce que vous faites à la Reine ??{FF}{00}
+
+@0274
+{FB} r Hmm ?{FC}{FB} {FF}{00}
+
+@0275
+{FB}A  La Reine était fausse.{FC}Les Medabots fourmis la prenaient pour{FD}la vraie Reine et la protégeaient.{FC}{FB} r Qu'avons-nous fait ?{FC}Le gang Rubberobo{FD}nous a manipulés ?{FC}{FB} {FF}{00}
+
+@0276
+{FB} V Hé, vous pouvez venir chez nous.{FC}{FB} r C'est vrai ?{FC}{FB} h Vous vouliez jouer avec nous, non ?{FC}{FB} r On voulait juste travailler.{FD}Peu importe à quoi···{FC}{FB} V Mes parents tiennent une boutique.{FD}Vous pourriez toujours les aider.{FC}{FB} r Vraiment ?{FC}{FB} V Vraiment !{FC}{FB} h Mais on ne peut pas sortir, si ?{FC}{FB} r Laissez-nous faire !{FD}On va vous faire sortir !{FC}{FB} h Vraiment ? Youpi !{FF}{00}
+
+@0277
+{FB} r On y va ensemble ?{FC}Si tu veux, on peut te{FD}ramener maintenant.{FC}{FB}A  Je···{FC}{FB}A DMerci, mais non merci.{FC}J'ai encore quelque chose{FD}à vérifier tout seul.{FC}{FB} r Prends soin de toi.{FF}{00}
+
+@0278
+{FB}A  Qu'y a-t-il là-bas ?{FC}Je me demande à quoi on a manipulé{FD}tous ces Medabots fourmis···{FF}{00}
+
+@0279
+{FB}A  La boîte est vide.{FF}{00}
+
+@0280
+{FB}A  C'est quoi, cet endroit ?···{FD}Hein ?{FF}{00}
+
+@0281
+{FB}A  C'est verrouillé.{FF}{00}
+
+@0282
+{FB}A  On dirait que je peux mettre{FD}quelque chose au centre.{FC}{FB} 7 Qui est là ?{FF}{00}
+
+@0283
+{FB}A HAh, c'est le Dr Armond !{FC}{FB} 7 Hmm ? Oh, c'est toi, petit.{FD}Je vois que tu es arrivé jusqu'ici.{FC}{FB}A  Euh, c'est QUOI, cet endroit ??{FD}Je n'y comprends rien du tout.{FC}{FB} 7 Tu veux dire que tu n'as pas{FD}encore trouvé les ruines ?{FC}{FB}A  Les ruines ? Quelles ruines ?{FC}{FB} 7 Les Ruines antiques où dort{FD}la légendaire pierre Fiyun !{FC}Quoi qu'il m'en coûte,{FD}je DOIS avoir cette pierre.{FF}{00}
+
+@0284
+{FB} 3AAh ha ha ha ha !{FD}Je t'ai trouvé !{FF}{00}
+
+@0285
+{FB} 1 RoboRobo RoboRobo{FC}{FB} 3ALa fleur solitaire du mal,{FD}Gillgirl des Rubberobos, est arrivée !{FC}Considère cette raclée{FD}comme un honneur qu'on te fait.{FC}{FB}A  Vous n'abandonnez vraiment jamais !{FC}{FB} 7AMwa ha ha !{FD}Allez, trouvez les Ruines antiques !{FC}Qui tire beaucoup finit{FD}par toucher la cible !{FF}{00}
+
+@0286
+{FB} 3AAh ha ha ha ha ha !{FC}Le Docteur nous a donné l'ordre et{FD}la course a commencé ! On joue à chat !{FC}Dépêche-toi de fuir !{FD}Je te poursuis !{FF}{00}
+
+@0287
+{FB} 1AVite ! Vite ! Cours ! Cours !{FD}Si tu te fais attraper, c'est fini !{FF}{00}
+
+@0288
+{FB} 1CSans vouloir insister, j'ai{FD}un très mauvais pressentiment.{FF}{00}
+
+@0289
+{FB} 3AAh ha ha ha ! Dépêche-toi de fuir !{FD}Sans fuite, pas de poursuite !{FF}{00}
+
+@0290
+{FB} 7 Quoi qu'il arrive, je dois{FD}trouver les Ruines antiques !{FF}{00}
+
+@0291
+{FB}A  Il est écrit "Gare aux éboulements{FD}et aux chutes de pierres ! Silence{FD}à partir d'ici. - Tous les Antackers"{FF}{00}
+
+@0292
+{FB}A EJ'ai un mauvais pressentiment, ici.{FD}Je retourne en arrière pour l'instant.{FF}{00}
+
+@0293
+{FB}A  Cette roche a l'air très dure.{FC}Je n'en ai pas trop envie, mais{FD}essayons un Napalm avec "BLASTO".{FC}Ai-je un Medabot équipé{FD}de "BLASTO" ?{FF}{00}
+
+@0294
+{FB}A  Allons-y !{FF}{00}
+
+@0295
+{FB}A DBien !{FF}{00}
+
+@0296
+{FB} {FF}{00}
+
+@0297
+{FB} 3ALes murs, le sol et le plafond, ici,{FD}ont l'air très fragiles et friables.{FC}{FB}A HÇa veut dire que si on{FD}Robattle ici···!{FC}{FB} 3 Je me demande ce qui arriverait.{FC}Je suis un peu curieuse, moi aussi.{FD}On essaie ?{FC}{FB}A FVous êtes folle ?!{FD}On va être enterrés vivants !{FC}{FB} 3AAlors, fuis maintenant !{FC}La partie de chat la plus palpitante{FD}de ta vie va commencer !{FF}{00}
+
+@0298
+{FB}A  Je dois équiper "BLASTO"{FD}sur mon Medabot !{FF}{00}
+
+@0299
+{FB}A  Fiyun···? Qu'est-ce que c'est ?{FC}{FB} 7 Tu n'as pas encore compris ?{FD}Pourquoi je t'ai amené ici, tu crois ?{FC}Je ne me tenais pas devant la statue{FD}juste pour draguer des filles.{FC}{FB}A HHein !? Vous vouliez aussi{FD}draguer des garçons !?{FF}{00}
+
+@0300
+{FB}A ELa roche semble prête à tomber.{FC}Et si cette roche tombait{FD}et que le plafond s'effondrait···!{FC}{FB}A  Je devrais utiliser "ARMA-HEAD" pour{FD}dégager les débris des éboulis{FD}et pouvoir passer par ici.{FC}Ai-je un Medabot équipé{FD}d'"ARMA-HEAD" ?{FF}{00}
+
+@0301
+{FB}A  Cette statue a une drôle de forme !{FF}{00}
+
+@0302
+{FB}A EHmm··· c'était moins une,{FD}à l'instant.{FF}{00}
+
+@0303
+{FB} {FF}{00}
+
+@0304
+{FB}A  Ça s'est arrêté···{FF}{00}
+
+@0305
+{FB}A  Je dois équiper "ARMA-HEAD"{FD}sur mon Medabot.{FF}{00}
+
+@0306
+{FB} 1ARoboRobo RoboRobo{FF}{00}
+
+@0307
+{FB} 1AQu'est-ce qu'il y a ?{FD}On ne fait pas de Robattle ?{FC}{FB}A FVous plaisantez !{FF}{00}
+
+@0308
+{FB}A  Le sol est étrangement mou, ici.{FC}{FB} 3AAh ha ha ha ha !{FD}On t'a enfin attrapé.{FF}{00}
+
+@0309
+{FB} 3APrépare-toi.{FD}Impossible de gagner à 3 contre 1.{FC}{FB}A FCe n'est pas la question !{FD}Si on Robattle ici···{FC}{FB} 3AMême si tu te mets à supplier{FD}maintenant, je ne te pardonnerai pas.{FC}Tout ce bavardage n'est qu'une perte{FD}de mots et de temps !{FF}{00}
+
+@0310
+{FB} 1 RoboRobo RoboRobo{FF}{00}
+
+@0311
+{FB} 1CJe suis battu. Robo ouiiin.{FF}{00}
+
+@0312
+{FB} {FF}{00}
+
+@0313
+{FB}A  Ouf, on dirait que ça s'est arrêté.{FC}{FB} 3 Le combat ne fait que commencer !{FD}En avant, je vous dis !{FF}{00}
+
+@0314
+{FB} 1CRobo noooon.{FD}J'ai un mauvais pressentiment.{FC}{FB} 3BQuel genre de lâche es-tu !{FC}Bon, si tu es trop mauviette{FD}pour te battre, je le ferai !{FC}{FB}A FJ'ai dit d'arrêter !{FF}{00}
+
+@0315
+{FB} {FF}{00}
+
+@0316
+{FB} T Tu es prêt ? On va commencer.{FF}{00}
+
+@0317
+{FB}A  Je n'ai aucun Medabot équipé{FD}de "SCORPION DOG".{FC}Je ferais mieux de vite l'équiper !{FF}{00}
+
+@0318
+{FB} 7BPff ! C'est complètement faux !{FC}Il n'y avait qu'une raison{FD}pour que je veille sur toi.{FC}Je pensais que tu serais plus utile{FD}que ces Rubberobos, et j'avais raison !{FC}{FB}A  Docteur, quel est votre lien{FD}avec le gang Rubberobo ?{FF}{00}
+
+@0319
+{FB} 7 Tu peux me voir comme leur sponsor.{FC}C'est moi qui ai fait construire leur{FD}base souterraine à Medaropolis.{FC}C'est moi qui ai utilisé les Antackers{FD}pour creuser sous la terre !{FC}Tout ça pour la pierre Fiyun !{FC}{FB}A  Qu'est-ce qu'il prépare···?{FF}{00}
+
+@0320
+{FB} 7 {F9} .{FC}Le moment est venu de me rembourser{FD}tout ce que j'ai fait pour toi.{FC}Je veux que tu cherches{FD}les Ruines antiques !{FC}{FB}A  D'accord, mais si c'est pour le mal,{FD}je ne vous aiderai pas.{FC}{FB} 7 Quelle impudence !{FC}Mais es-tu sûr de ce que{FD}tu viens de dire ?{FC}Les Ruines antiques cachent{FD}les secrets des Medabots.{FC}Tu veux savoir, toi aussi, non ?{FC}{FB}A EJe, c'est-à-dire, euh···{FF}{00}
+
+@0321
+{FB} 9 Entrée interdite pendant{FD}les réunions importantes !{FF}{00}
+
+@0322
+{FB} h Hé, grand frère, et si tu faisais{FD}un Robattle avec cette fourmi ?{FC}Leur façon d'attaquer est intéressante.{FF}{00}
