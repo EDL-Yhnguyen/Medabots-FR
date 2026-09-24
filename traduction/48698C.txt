@@ -45,4 +45,4 @@ Puis-je···rester à tes côtés pour toujours ?{FC}Koji m'a demandé de veill
 On en a vraiment vu de toutes les couleurs.{FC}Ça n'a pas toujours été facile···{FC}Mais je n'y serais jamais arrivé seul.{FC}Vous êtes des amis si précieux !{FC}J'aurai toujours mes amis et mes{FD}Medabots avec moi ! Pour toujours !{FF}{00}
 
 @0011
-Gya ha ha ha ha ha ha ha ha ha ha !{FC}Écoutez tous !{FC}Cette ville est désormais sous mon contrôle !{FD}Vous vous inclinerez tous devant moi !{FC}Cette voix ! C'est le Dr Armond !{FD}Mais qu'est-ce qui se passe ?!{FC}Tu m'écoutes, {F9} ??{FC}Quoi ? Moi ?!{FC}Je t'ai pris ta précieuse petite amie !{FC}Si tu veux la récupérer···{FC}Viens la chercher !{FD}Gya ha ha ha ha ha !{FF}
+Gya ha ha ha ha ha ha ha ha ha ha !{FC}Écoutez tous !{FC}Cette ville est désormais sous mon contrôle !{FD}Vous vous inclinerez tous devant moi !{FC}Cette voix ! C'est le Dr Armond !{FD}Mais qu'est-ce qui se passe ?!{FC}Tu m'écoutes, {F9} ??{FC}Quoi ? Moi ?!{FC}Je t'ai pris ta précieuse petite amie !{FC}Si tu veux la récupérer···{FC}Viens la chercher !{FD}Gya ha ha ha ha ha !{FF}{00}

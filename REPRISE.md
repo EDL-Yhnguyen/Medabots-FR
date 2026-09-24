@@ -111,6 +111,13 @@ identifiants :**
 
 ## À ne pas refaire
 
+- **Laisser un `{FF}` sans son octet de paramètre.** `48698C @0011` (29/08) se
+  terminait par `{FF}` nu, espace final avalé par un éditeur : le jeu aurait lu
+  l'octet suivant comme paramètre. Trouvé le 24/09 par un contrôle qui compare
+  la suite des codes `{FB}xxx`, `{F9}x`, `{FF}x` de chaque entrée traduite à
+  l'original (à refaire après toute retouche : les 4 031 autres entrées
+  passent, seules des pages `{FC}` diffèrent, ce qui est un choix de mise en
+  page).
 - **Écrire un antislash dans un heredoc bash depuis Claude Code.** `\\`
   arrive en `\` dans le fichier, même entre `<<'EOF'` quotés. Passer par
   l'outil d'écriture de fichiers, ou `String.fromCharCode(92)`.
