@@ -15,7 +15,7 @@
  * d'entrées ne ment pas.
  */
 export const ENTREES = {
-  traduites: 4035,
+  traduites: 4311,
   total: 5933,
 } as const
 
@@ -47,8 +47,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Histoire principale',
     detail:
-      'Douze chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, le faux rendez-vous et la forteresse volante Fiyun, le retour sur l’île Medabot et le château de Milky, le Rallye Partsun, Salty et le fan-club de Karin, la seconde moitié du tournoi et le château de la Sorcière, puis le final dans le château du Dr Meta-Evil, le Mega-Emperor, le Limiteur et l’épilogue, puis l’après-jeu du Rallye Partsun, le retour à Kodine, le parc Ninja et le restaurant avec Karin, puis la chute de Fiyun, les Select 3 et les Antackers — 3 343 dialogues. Restent deux tables, soit 532 entrées.',
-    part: 0.86,
+      'Treize chapitres traduits : le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, le faux rendez-vous et la forteresse volante Fiyun, le retour sur l’île Medabot et le château de Milky, le Rallye Partsun, Salty et le fan-club de Karin, la seconde moitié du tournoi et le château de la Sorcière, puis le final dans le château du Dr Meta-Evil, le Mega-Emperor, le Limiteur et l’épilogue, puis l’après-jeu du Rallye Partsun, le retour à Kodine, le parc Ninja et le restaurant avec Karin, puis la chute de Fiyun, les Select 3 et les Antackers, puis les répliques éparses de toute l’aventure (PNJ, conseils de jeu, Kodine, Henry et Kirara) — 3 619 dialogues. Reste une table, soit 256 entrées.',
+    part: 0.93,
   },
   {
     titre: 'PNJ et contenu secondaire',
