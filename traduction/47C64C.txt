@@ -1,0 +1,864 @@
+# Table 0x47C64C — dialogues du neuvième chapitre (277 entrées)
+#
+# La suite de l'île Medabot : la maison hantée avec Karin, la salle d'arcade
+# et le jeu "Protège le QG des Select Corps !", la seconde moitié du tournoi
+# (le prince Kir, Shandy l'Italienne, Spumoni le Russe, Joe Swihan, Tequonic,
+# Ryo, puis la finale contre Koji), le Dr Armond, les montagnes russes
+# "Spirit" avec Erika, les photos vendues par les Rubberobos, la visite du
+# château de la Sorcière (Milky, Rappy, le Maître des Ténèbres, l'Armée
+# Rubberobo, la peluche Rappy), les enfants enfermés, Shrimplips, le retour
+# en ferry sur le "Shark", Papa et Maman.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {50} est la mère du joueur, {4F} son père, {51} un enfant (Rappy, le gamin
+# de la course), {45} le deux-points du jeu. {FF}B (dix entrées) est une
+# question oui/non : conservé tel quel. @0079 enchaîne {FD}{FB} deux fois
+# comme l'original.
+#
+# Vocabulaire fixé : le château de la Sorcière (l'attraction ; Milky en est
+# la sorcière), Milky Land (de jour, de nuit), la Forêt perdue, le Maître des
+# Ténèbres, l'Armée Rubberobo (les figurants), le Héros (Milky le vouvoie,
+# comme au chapitre 3), la peluche Rappy ("Peluche Rappy" dans l'inventaire),
+# le "Spirit" (les montagnes russes), le "Shark" (le ferry), la salle
+# d'arcade, l'infirmerie, le jeu "Protège le QG des Select Corps !", le
+# Royaume des Îles du Sud et le prince Kir, les manches (1re à 4e) puis les
+# demi-finales et la finale, les blocs A et B. Les boissons viennent de
+# 483ED8.txt : jus d'orange, pack de citrons, huile de luxe. Shandy parle
+# avec un accent italien, Tequonic un français cassé (« Le français, c'est
+# vraiment dur »), Kir en « Da·····yo » ; Shrimplips garde ses « w ».
+# « Big guy » et « big brother » des enfants deviennent « grand frère ».
+# La livre £ est conservée : 1,50 £ et 3 £.
+#
+
+@0000
+{FB}A DKarin, la sortie est par là···{FF}{00}
+
+@0001
+{FB} {FF}{00}
+
+@0002
+{FB}A HOuah !{FC}{FB} CHAaah !{FC}{FB} & Iiiih !{FC}{FB}A FKarin, tu me serres trop fort !{FD}Je n'arrive plus à respirer···{FF}{00}
+
+@0003
+{FB} C {F9}  !{FF}{00}
+
+@0004
+{FB}A HKarin !?{FC}{FB}A EHein ?{FD}Alors celui qui m'a attrapé, c'était···{FF}{00}
+
+@0005
+{FB} p Ne me regaaarde pas !{FC}{FB}A BToi, alors !!!{FF}{00}
+
+@0006
+{FB} p Hi hi hi hi.{FF}{00}
+
+@0007
+{FB}A EJe commence à fatiguer···{FC}{FB} CCJ'ai eu peur.{FC}{FB}A EMoi aussi··· ouf{FF}{00}
+
+@0008
+{FB}A EIl fait e-encore noir···{FF}{00}
+
+@0009
+{FB}A  Karin a encore disparu.{FC}Elle est passée devant moi ?{FF}{00}
+
+@0010
+{FB} p Bouuuuuh !{FC}{FB} CHAaaah !{FC}{FB}A  C'est la voix de Karin !{FF}{00}
+
+@0011
+{FB} p Hi hi hi hi.{FF}{00}
+
+@0012
+{FB}A  Karin ! Ça va ?{FF}{00}
+
+@0013
+{FB} CHAaah !{FC}{FB} p Hi hi hi hi.{FF}{00}
+
+@0014
+{FB} CHNon !{FF}{00}
+
+@0015
+{FB}A  Karin !?{FF}{00}
+
+@0016
+{FB} p Ah ha ha ha ! Regarde-toi un peu !{FF}{00}
+
+@0017
+{FB}A  Quoi !?{FF}{00}
+
+@0018
+{FB}A  Je suis devenu un Medabot !{FC}Depuis quand !?{FC}C'est forcément une blague !{FF}{00}
+
+@0019
+{FB}A HOuah !{FF}{00}
+
+@0020
+{FB} p Bienvenue.{FC}{FB}A BJ'en ai assez de toi !{FF}{00}
+
+@0021
+{FB} p J'aime les gens forts♥{FF}{00}
+
+@0022
+{FB} p Alors, ce rendez-vous ?{FD}Notre Robattle était super, non ?{FC}Ta copine t'attend dehors.{FD}Reviens quand tu veux !{FF}{00}
+
+@0023
+{FB} p Ce Robattle t'a plu ?{FD}Moi, je me suis bien amusé.{FC}Tu étais très bien{FD}dans ce costume.{FF}{00}
+
+@0024
+{FB}A E{F8}(·····){F8}{FF}{00}
+
+@0025
+{FB} p C'était sympa. À la prochaine.{FF}{00}
+
+@0026
+{FB} CD{F9} .{FC}{FB}A DT-tu t'es amusée ?{FC}{FB} CAOui, beaucoup !{FF}{00}
+
+@0027
+{FB} k Le tournoi est terminé.{FC}Revenez la prochaine fois.{FF}{00}
+
+@0028
+{FB}A  Mais ça m'ennuie qu'elle doive{FD}rester ici toute seule.{FC}{FB}A HAh oui !{FC}Je dois aller m'excuser auprès{FD}d'Erika pour la parade !{FC}{FB}A  Erika a dit qu'elle allait{FD}à la salle d'arcade.{FF}{00}
+
+@0029
+{FB}A  Le punching-ball est{FD}complètement cassé !{FF}{00}
+
+@0030
+{FB} V Je veux aller à une autre attraction !{FF}{00}
+
+@0031
+{FB} V La fille à côté de moi est dingue.{FD}Elle m'a mis une raclée.{FF}{00}
+
+@0032
+{FB} V J'y suis allé mollo, c'est une fille,{FD}et elle m'a aplati, façon Meda-crêpe.{FF}{00}
+
+@0033
+{FB} {51} Oooh ! Je n'y arrive pas !{FF}{00}
+
+@0034
+{FB} V Cette fille est incroyable !{FD}Une vraie joueuse !{FF}{00}
+
+@0035
+{FB}A DJe···{FC}{FB} CDHmm ?{FC}{FB}A DJe suis vraiment content d'être{FD}venu sur l'île Medabot.{FC}J'ai appris à mieux te connaître aussi.{FC}{FB} CG{F8}(·····){F8}{FF}{00}
+
+@0036
+{FB}A EEuh, Erika···{FD}À propos de la parade···{FC}{FB} BBJe sais. Koji me l'a dit.{FC}{FB}A  Hein ? Alors···{FC}{FB} BBJe te pardonne pour cette fois.{FD}Mais tu dois quand même te rattraper !{FC}{FB}A DD'accord, je suis vraiment désolé.{FF}{00}
+
+@0037
+{FB}A  Euh, Erika ?{FC}{FB} BBTais-toi ! Ne me déconcentre pas !{FC}{FB}A EMais··· je···{FC}{FB} BBRegarde ce que tu as fait !{FD}J'ai perdu à cause de toi !{FC}J'avais déjà battu 14 gars d'affilée{FD}et tu as tout gâché !{FF}{00}
+
+@0038
+{FB}A EEuh, Erika···{FC}{FB} BBQuoi !{FD}Les filles n'ont pas le droit de jouer ?{FC}Alors que je suis meilleure{FD}que toi à ce jeu !{FC}{FB}A ECe n'est pas ce que je veux dire,{FD}mais la parade···{FC}{FB} BBJe ne veux pas de tes excuses minables,{FD}mais je t'écouterai si tu finis le jeu{FD}"Protège le QG des Select Corps !".{FF}{00}
+
+@0039
+{FB} BBQu'est-ce qu'il y a ?{FD}Tu n'as toujours pas fini le jeu.{FF}{00}
+
+@0040
+{FB} B Pas mal, hein.{FC}{FB}A  Bon, comme tu l'as promis.{FD}Tu vas m'écouter ?{FC}{FB} BDHi hi.{FC}{FB}A  Pourquoi tu ris ?{FC}{FB} BDBah, désolée, mais Koji m'avait{FD}déjà tout raconté.{FC}Je me demandais juste ce que{FD}tu allais dire···{FC}{FB}A EAh, tu savais déjà !{FC}{FB} BDDésolée. On est quittes.{FD}Mais tu dois quand même te rattraper.{FC}{FB} BGTope là♥{FC}{FB}A GD'accord.{FC}{FB} V {F8}Clap clap clap{F8}{FF}{00}
+
+@0041
+{FB} W Le représentant du{FC}Royaume des Îles du Sud{FD}est notre prince Kir !{FC}{FB}A  Quel royaume ?{FC}Jamais entendu parler.{FF}{00}
+
+@0042
+{FB} B Tu es en retard, {F9} .{FC}Je vais prendre plein de photos{FD}de ton Robattle.{FC}Ne perds pas !{FF}{00}
+
+@0043
+{FB} % Mesdames et messieurs !{FD}Merci de votre patience !{FC}La seconde moitié va commencer !{FC}{FB} {FF}{00}
+
+@0044
+{FB} % Merci pour vos applaudissements !{FC}Nous avons invité des Medafighters{FD}du monde entier !{FC}Pour la 1re manche, voici le{FD}jeune prince du Royaume du Sud.{FC}Je vous présente Kir !{FC}Il affrontera notre espoir,{FD}{F9}  !{FC}Alors, quel Robattle{FD}vont-ils nous offrir ?{FC}C'est parti !{FD}Medafighters ! Robattle !{FC}{FB} ? Da·····yo !?!?!{FC}{FB}A  Je ne comprends rien à ce qu'il dit.{FF}{00}
+
+@0045
+{FB} % Le vainqueur de la 1re manche,{FD}{F9}  !{FC}{FB} ? !?!?!?!?!!!{FC}{FB}A  Bon, au moins je comprends{FD}qu'il est fâché.{FF}{00}
+
+@0046
+{FB} % En 2e manche, notre {F9} {FD}affrontera notre concurrente{FD}italienne, Shandy.{FC}Shandy porte bien sûr{FD}ses fameuses lunettes de soleil.{FC}Sans plus attendre,{FD}que le match commence.{FC}Medafighters ! Robattle !{FC}{FB} ! Les Medabotsa sonto très{FD}popularo ina Italia !{FF}{00}
+
+@0047
+{FB} % Le vainqueur de la 2e manche !{FD}{F9}  !{FC}{FB} ! C'esta grrrandioso !{FF}{00}
+
+@0048
+{FB} % 3e manche !{FC}Le représentant russe, Spumoni,{FD}fait son entrée !{FC}Il a entraîné ses Medabots au fond{FD}des étendues glacées de Sibérie.{FC}Sa technique affûtée sert à{FD}rendre fous ses adversaires !{FC}Que va faire {F9}  pour{FD}lui tenir tête !?{FC}Que le 3e combat commence !{FC}Medafighters ! Robattle !{FC}{FB} ( Je ne supporte pas cette chaleur.{FD}Finissons vite, que je rentre.{FF}{00}
+
+@0049
+{FB} % Le vainqueur de la 3e manche !{FD}{F9}  !{FC}{FB} ( Je dois réentraîner mon Medabot !{FF}{00}
+
+@0050
+{FB} % La 4e manche nous amène un chic{FD}Amérindien. Joe Swihan !{FC}Joe travaille avec son père,{FD}le Dr Ja Swihan, sur les Medabots.{FC}Ensemble, ils font progresser{FD}la recherche sur les Medabots.{FC}Et son adversaire est l'encyclopédie{FD}vivante des Medabots, {F9}  !{FC}Que va donner ce choc entre eux !?{FF}{00}
+
+@0051
+{FB} % Le vainqueur de la 4e manche !{FD}{F9}  !{FC}{FB} " Cette expérience sera très utile{FD}à mes recherches sur les Medabots.{FC}{FB}A AC'était un honneur !{FF}{00}
+
+@0052
+{FB} % Nous voici en demi-finale.{FC}Le garçon passionné qui apporte{FD}avec lui le feu latin !{FC}Tequonic !{FC}{FB} ) Moi pas pouvoir être battu de toi !{FC}Autrement dit, tu ne{FD}peux pas me battre !{FC}{FB}A  Ouais ouais, si tu veux.{FC}{FB} % Medafighters ! Robattle !{FF}{00}
+
+@0053
+{FB} % Le vainqueur de la demi-finale !{FD}{F9}  !{FC}{FB} ) Je suis le vainqueur de la défaite !{FD}Le français, c'est vraiment dur···{FC}{FB}A EJe te l'ai dit, tu n'es pas{FD}obligé de parler.{FF}{00}
+
+@0054
+{FB} % Nous voici en demi-finale.{FC}Le mystérieux Medafighter{FD}errant, Ryo !{FC}{FB} ♥ Je vais t'enterrer au nom{FD}de la justice !{FC}Mais avant de mourir, dis-moi ton nom.{FD}Pas de tombe sans nom.{FC}{FB}A EPourquoi j'aurais besoin d'une tombe ?{FC}{FB} % Medafighters ! Robattle !{FF}{00}
+
+@0055
+{FB} % Le vainqueur de la demi-finale !{FD}{F9}  !{FC}{FB} ♥ Achève-moi, qu'on en finisse.{FC}{FB}A  Pourquoi je devrais te tuer !?{FF}{00}
+
+@0056
+{FB} % Et voici la finale !{FC}Le vainqueur du{FD}tournoi du bloc A, Koji,{FC}contre notre Medafighter enflammé,{FD}vainqueur du tournoi du bloc B,{FC}{F9}  !{FF}{00}
+
+@0057
+{FB} % Euh, où est Koji ?{FF}{00}
+
+@0058
+{FB} DD{F8}Hhh··· hhh···{F8} Me voilà !{FD}Je me suis laissé entraîner dans{FC}des Robattles dehors et je n'ai{FD}pas vu le temps passer !{FC}Désolé pour l'attente, {F9} .{FC}{FB} W Vas-y ! Fonce !{FD}Écrase-le !{FF}{00}
+
+@0059
+{FB} BA{F9}  !!{FD}Si tu perds, je te punis !!{FC}{FB}A  Quelle honte···{FC}{FB} DDHa ha. T'inquiète,{FD}je ne vais pas perdre !{FC}{FB} % Medafighters, en place.{FD}Que la finale commence !!{FC}{FB} DCC'est parti !!{FF}{00}
+
+@0060
+{FB} % Le champion du tournoi !{FD}{F9}  !{FF}{00}
+
+@0061
+{FB} BAOuais !{FC}{FB} DDJusqu'ici, je ne pensais{FD}qu'à gagner.{FC}Mais faire un Robattle avec toi,{FD}ça m'enflamme vraiment.{FF}{00}
+
+@0062
+{FB} % Quel outsider nous avons eu{FD}dans le Robattle d'aujourd'hui !{FC}Qui aurait prévu un tel retournement !{FD}Quelle démonstration de Medafighting !{FC}{F9} , comment te sens-tu ?{FC}{FB}A  Euh, je me sens···{FC}{FB} % Prenons tous exemple sur{FD}notre vainqueur, {F9} .{FC}Mais ne crois pas avoir déjà{FD}battu le monde entier !{FC}Plein d'adversaires attendent{FD}encore de te défier !{FC}Et maintenant, voici ton prix !{FF}{00}
+
+@0063
+{FB} % Applaudissons-les bien fort !{FC}{FB} {FF}{00}
+
+@0064
+{FB} 7 Attends une minute !{FF}{00}
+
+@0065
+{FB} 7 Ouah, tu es plus fort{FD}que tu en as l'air.{FC}{FB}A  Ah ! Vous êtes le Dr··· Armond···{FD}je crois···{FC}{FB} 7 Exact ! Le Dr Armond, c'est moi !{FC}{FB}A DVous êtes docteur, alors vous devez{FD}vous y connaître en Medabots, non ?{FC}{FB} 7 Mais bien sûr !{FC}Toi aussi, tu as l'air d'aimer{FD}les Medabots. Je me trompe ?{FC}{FB}A ATout à fait !{FC}{FB} 7 Alors, tu veux bien faire un{FD}Robattle avec moi, ici ?{FF}{00}
+
+@0066
+{FB} 7 Très admirable !{FD}Alors, tu veux devenir mon assistant ?{FF}B
+
+@0067
+{FB} 7AC'était une blague. Gya ha ha !{FF}{00}
+
+@0068
+{FB} 7ADommage. Gya ha ha !{FF}{00}
+
+@0069
+{FB} 7AGya ha ha ! Tu as perdu !{FC}{FB} 7 Tu es loin d'être parfait.{FD}Tu veux essayer ces Medaparts ?{FF}{00}
+
+@0070
+{FB} 7 Je suis très occupé, je m'en vais.{FD}Sans mon savoir, cette époque{FC}serait complètement perdue !{FC}{FB} 7AGya ha ha !{FF}{00}
+
+@0071
+{FB}A  Il est un peu excentrique.{FC}Il a beau être docteur,{FD}ce n'est pas le Dr Aki.{FC}Ils sont complètement différents.{FC}{FB}A DQuelqu'un qui aime les Medabots{FD}ne peut pas être méchant !{FF}{00}
+
+@0072
+{FB} B Félicitations, {F9} .{FD}Tu es très doué.{FC}{FB}A GMoi ? P-pas tant que ça.{FC}{FB} B Ah oui !{FC}Tu te souviens de ta promesse ?{FD}Tu devais te rattraper pour la parade.{FC}{FB}A DBien sûr que oui.{FC}{FB} BE{F8}Regard insistant{F8}{FC}{FB}A ETu ne me fais pas confiance ?{FC}{FB} B Bref, allons quelque part !{FC}{FB}A  Où ça ?{FC}{FB} BAQuelque part où on s'amuse !{FF}{00}
+
+@0073
+{FB} p Venez ici pour votre rendez-vous !{FC}{FB} BELa maison hantée ?{FD}Désolée, ce n'est pas mon truc.{FF}{00}
+
+@0074
+{FB} B Hé, ce sont les montagnes russes, non ?{FF}{00}
+
+@0075
+{FB} BAAllons-y !{FF}{00}
+
+@0076
+{FB} BAOn va vraiment les faire, hein ?{FF}{00}
+
+@0077
+{FB} BAC'était chouette, hein, {F9}  ?{FC}{FB}A EO-oui···{FC}{FB} B Hmm ? Un problème ?{FC}{FB}A ER-rien···{FC}{FB} BAÇa faisait peur, pas vrai !{FF}{00}
+
+@0078
+{FB} V Un Rubberobo vient de passer par ici.{FD}Je crois qu'il est parti à gauche.{FF}{00}
+
+@0079
+{FB}A  Qu'est-ce que tu regardes ?{FC}{FB} V C'est la photo d'une jolie fille.{FD}Je viens de l'acheter à l'instant···{FC}{FB}A  Une photo ?{FD}{FB}A HOh ! C'est Karin !!{FD}{FB} B Tu as raison, c'est une photo de{FD}Karin et Koji sur les montagnes russes.{FC}{FB}A  En plus, il y a un cercle{FD}par ici.{FC}D'autres filles ont aussi{FD}un cercle autour d'elles.{FC}{FB}A HHé !{FD}Tu l'as achetée à qui ?{FC}{FB} V À un gars du gang Rubberobo.{FD}Il se cache dans le buisson, là-bas.{FC}{FB} B C'est plutôt louche.{FF}{00}
+
+@0080
+{FB} V Cette fille est vraiment mignonne.{FF}{00}
+
+@0081
+{FB} BHLe gang Rubberobo !{FC}{FB} 1 Qu'est-ce que vous voulez ?{FD}Une photo, c'est ça ?{FC}{FB}A  Qu'est-ce que tu fabriques ici ?{FC}{FB} 1 Moi ? Je vends des photos de filles.{FD}Ça part comme des petits pains !{FC}On n'est pas vraiment censés{FD}en vendre, mais qui le saura ?{FC}Si c'est une jolie fille, on lui{FD}met un cercle autour.{FC}{FB}A HAlors le flash dont parlait Erika,{FD}c'était vous ?{FC}{FB} BFHééé ! Pourquoi je n'ai pas{FD}de cercle, moi !?{FC}{FB} 1DElle fait peur, cette fille.{FF}{00}
+
+@0082
+{FB} BBPff !{FC}{FB}A  Ces cercles doivent avoir{FD}un autre sens.{FC}S'ils vendaient juste des photos{FD}de jolies filles, pourquoi{FD}des cercles ?{FC}{FB} BBEt alors ! Je m'en fiche !{FC}{FB}A ECalme-toi, Erika.{FD}Réfléchissons ensemble.{FC}{FB} BBCe n'est pas si important,{FD}si !? On s'en fiche !{FC}Allez, {F9} , on y va !{FF}{00}
+
+@0083
+{FB} W Bon, tout le monde en rang.{FF}{00}
+
+@0084
+{FB} BAHé, regarde ça ! Ça a l'air marrant !{FD}Pas la parade, mais alors c'est quoi ?{FC}{FB}A  La fille avec ce garçon,{FD}ce n'est pas Karin ?{FC}{FB} B Si, tu as raison.{FC}{FB} LAAllez, tout le monde !{FD}On entre dans le château !{FC}{FB}A HHé, Karin !{FF}{00}
+
+@0085
+{FB}A  Elle est partie.{FC}{FB} B Je sais ! C'est la visite{FD}du château de la Sorcière !{FC}Karin a dû partir avec la visite !{FD}C'est bien.{FC}{FB}A  Peut-être. Mais où est Koji ?{FC}{FB} BAKarin n'est pas obligée d'être{FD}toujours avec Koji, si ?{FF}{00}
+
+@0086
+{FB} BFOooh !{FC}Des gens nous sont passés devant{FD}parce que tu restais assis là !{FF}{00}
+
+@0087
+{FB} B Tu n'as pas soif ?{FC}J'attends ici, va acheter{FD}quelque chose à boire, d'accord ?{FC}{FB}A EOk.{FC}{FB} BDJe t'offre, alors prends{FD}ce que tu veux pour toi aussi.{FC}{FB} BAMerci♥{FF}{00}
+
+@0088
+{FB} B J'ai soif.{FF}{00}
+
+@0089
+{FB} k Bienvenue.{FD}Que désirez-vous ?{FC}{FB}A  Hmm, le menu dit{45}{FD}Jus d'orange{FC}Pack de citrons{FD}Huile de luxe{FC}Je prends un jus d'orange ?{FF}B
+
+@0090
+{FB} k Ça fera 1,50 £.{FC}{FB}A  Deux, s'il vous plaît.{FC}{FB} k D'accord, ça fera 3 £.{FF}{00}
+
+@0091
+{FB}A  Je prends un pack de citrons ?{FF}B
+
+@0092
+{FB} h Les filles sont très sensibles{FD}aux contes de fées, tu sais.{FC}Toi, par contre, tu as l'air{FD}sensible aux filles. Hi hi.{FF}{00}
+
+@0093
+{FB}A  Je prends une huile de luxe ?{FF}B
+
+@0094
+{FB} {FF}{00}
+
+@0095
+{FB} BDMerci, c'était délicieux♥{FC}{FB}A D{F8}Glou glou{F8}{FD}Merci beaucoup, Erika.{FF}{00}
+
+@0096
+{FB} B C'est quoi, ça ? Ce n'est pas du jus.{FC}De la crème solaire ?{FD}Tu n'as qu'à t'en mettre toi-même !{FF}{00}
+
+@0097
+{FB} BEHé, je ne suis pas un Medabot !{FC}Je ne peux pas boire de l'huile !{FD}Je n'en veux paaaas !{FF}{00}
+
+@0098
+{FB} BDOn dirait que c'est notre tour !{FC}{FB} BGAu fait, il paraît que celui qui{FD}devient le "Héros" et bat{FC}tous les monstres reçoit{FD}une peluche de Rappy.{FC}Je la veux vraiment.{FC}{FB}A  Laisse-moi deviner,{FD}le Héros, c'est moi ?{FC}{FB} BATout juste !{FC}{FB}A DAllons-y.{FF}{00}
+
+@0099
+{FB} LASalut tout le monde !{FD}Hmm ? Personne ne me répond ?{FC}Bienvenue au château de la Sorcière !{FD}Le cruel Maître des Ténèbres vit ici.{FC}Alors, prêts pour l'aventure ?{FD}C'est parti !{FF}{00}
+
+@0100
+{FB} LANous allons au 3e étage !{FF}{00}
+
+@0101
+{FB} LAAprès la Forêt perdue,{FD}il y a un endroit sans école et{FD}sans devoirs !{FC}Le monde de rêve de Milky Land !{FC}{FB} LCAllez, faites un tour{FD}de Milky Land, d'accord ?{FF}{00}
+
+@0102
+{FB} LCQue pensez-vous de mon château ?{FF}{00}
+
+@0103
+{FB}A EC'était quoi, ce bruit ?{FF}{00}
+
+@0104
+{FB} LDNon non non ! Pas encore par là !{FD}Il faut d'abord faire un tour !{FF}{00}
+
+@0105
+{FB} X J'ai besoin d'une pause.{FF}{00}
+
+@0106
+{FB} {51} Ici, c'est Milky Land de jour.{FC}Et moi, je suis Rappy, la mascotte{FD}Medabot trop mignonne !{FF}{00}
+
+@0107
+{FB} {51} Tu veux mon autographe aussi ?{FF}{00}
+
+@0108
+{FB} V Je n'ai pas fermé les yeux du tout{FD}sur les montagnes russes !{FF}{00}
+
+@0109
+{FB} h J'adore les manèges à sensations !{FF}{00}
+
+@0110
+{FB} {51} Hé, on fait la course{FD}jusque là-bas ?{FF}B
+
+@0111
+{FB} {51} C'était chouette !{FF}{00}
+
+@0112
+{FB} {51} Mmmm, pas confiance en toi, hein ?{FF}{00}
+
+@0113
+{FB} {51} C'était chouette !{FF}{00}
+
+@0114
+{FB}A  C'est solidement verrouillé.{FC}Je ne peux qu'avancer, pour l'instant.{FD}Pfff···{FF}{00}
+
+@0115
+{FB}A FJ-je n'ai pas···{FC}{FB} BAC'est bon, pas la peine de le cacher !{FD}Je ne le dirai à personne. Hé hé.{FC}{FB}A E{F8}(·····){F8}{FC}{FB} B Au fait, tu as remarqué le flash{FD}d'appareil photo pendant qu'on était{FD}sur les montagnes russes ?{FF}{00}
+
+@0116
+{FB} " C'était un honneur d'affronter un{FD}Medafighter prometteur comme toi.{FC}{FB}A DTu étais très bon aussi.{FC}{FB} " C'est grâce à tout l'entraînement{FD}de ma jeunesse.{FC}{FB} % Et maintenant, la 4e manche !{FD}Medafighters, Robattle !{FF}{00}
+
+@0117
+{FB}A HErika a disparu !?{FF}{00}
+
+@0118
+{FB} {51} Ici, c'est Milky Land de nuit.{FC}Et moi, je suis Rappy, la mascotte{FD}Medabot trop mignonne !{FF}{00}
+
+@0119
+{FB} h Ce serait bien de vivre dans un{FD}château de conte de fées comme{FD}celui-ci, tu ne trouves pas ?{FF}B
+
+@0120
+{FB} h Oui, je trouve aussi.{FF}{00}
+
+@0121
+{FB} h Je pensais que les garçons ne{FD}s'intéressaient qu'au Robattle.{FF}{00}
+
+@0122
+{FB} h Comme tu veux.{FF}{00}
+
+@0123
+{FB} h J'aimerais vivre comme ça.{FD}Comme une princesse···{FF}{00}
+
+@0124
+{FB} V Parfois, les contes de fées, c'est cool.{FF}{00}
+
+@0125
+{FB} LCVous êtes satisfaits ?{FD}Alors, direction le 2e étage !{FF}{00}
+
+@0126
+{FB} LEAaah ! Quoi !?{FC}{FB} & Mwa ha ha.{FD}Ce royaume est à moi, maintenant !{FC}{FB} LECette voix !{FC}C'est le Maître des Ténèbres !{FD}Où êtes-vous !?{FC}{FB} & Je suis partout.{FC}Mais crois-tu pouvoir trouver{FD}et vaincre le vrai moi ?{FC}Essaie, si tu l'oses.{FC}{FB} L Vous allez voir, Maître des Ténèbres !{FD}On verra bien qui bat qui !{FF}{00}
+
+@0127
+{FB} L Ensuite, nous devrons affronter{FD}la terrible Armée Rubberobo !{FC}Que tout le monde fasse attention !{FF}{00}
+
+@0128
+{FB} L Au-delà se trouvent les sbires{FD}du Maître des Ténèbres !{FC}Alors, qui combattra pour nous{FD}en tant que Héros ?{FF}{00}
+
+@0129
+{FB}A  Hein ? Moi ?{FC}{FB} B Fais de ton mieux, {F9}  !{FC}{FB} LAOK, vous ! Ma magie va faire{FD}de vous un grand Héros !{FC}Bibbidi bobbidi milky bou !{FF}{00}
+
+@0130
+{FB}A EEuh···{FC}{FB} BDÇa te va très bien. {F8}Hi hi{F8}{FC}{FB}A E{F8}(·····){F8}{FC}{FB} LAOooh. J'ai ratééé.{FC}OK, encore une fois !{FD}Bibbidi bobbidi milky bou !{FF}{00}
+
+@0131
+{FB} LABonne chance, Héros !{FD}On vous suivra quand ce sera sûr !{FC}{FB}A EOh non···{FC}{FB} B Je serai juste à côté de toi.{FD}Enfin, je te suivrai, c'est tout.{FF}{00}
+
+@0132
+{FB} LDPas de raccourci !{FF}{00}
+
+@0133
+{FB} LDPas de raccourci !{FF}{00}
+
+@0134
+{FB} LCHéros, vous êtes très élégant♥{FF}{00}
+
+@0135
+{FB} 1AJe suis le 1er membre de la méchaaante{FD}Armée Rubberobo ! Battons-nous !{FF}{00}
+
+@0136
+{FB} 1CJe suis vaincu !{FF}{00}
+
+@0137
+{FB} 1AJe suis le 2e membre de la méchaaante{FD}Armée Rubberobo ! Battons-nous !{FF}{00}
+
+@0138
+{FB} BHAaah !{FC}{FB}A HErika !{FF}{00}
+
+@0139
+{FB} 1A{F8}Hhh hhh hhh{F8}{FD}Je suis un peu essoufflé.{FC}Je suis··· hhh··· le 3e membre{FD}de l'Armée Rubberobo !!{FF}{00}
+
+@0140
+{FB} BADépêche-toi, {F9}  ! Vite !{FC}{FB}A FNe t'excite pas comme ça,{FD}c'est dangereux, Erika.{FF}{00}
+
+@0141
+{FB} LCDigne de notre Héros !{FD}Bon, je prends les devants.{FF}{00}
+
+@0142
+{FB}A EOuf···{FF}{00}
+
+@0143
+{FB} L N'abandonnez pas, Héros !{FD}Notre sort est entre vos mains !{FF}{00}
+
+@0144
+{FB} X Ouf, une petite pause.{FF}{00}
+
+@0145
+{FB} V Bonne chance, grand frère !{FF}{00}
+
+@0146
+{FB} h Bats l'Armée Rubberobo !{FC}Ce n'est pas très important, mais{FD}ils ressemblent vraiment{FD}au gang Rubberobo !{FF}{00}
+
+@0147
+{FB} 1AJe suis le 4e membre de la méchaaante{FD}Armée Rubberobo !{FC}Tu ne passeras pas !!{FF}{00}
+
+@0148
+{FB} BAC'est merveilleux !{FC}{FB}A FE-Erika ! Attends !{FF}{00}
+
+@0149
+{FB} 1AHé hé hé.{FC}Je suis le 5e membre de{FD}l'Armée Rubberobo !{FC}Si tu cherches la bagarre,{FD}tu vas la trouver.{FF}{00}
+
+@0150
+{FB} 1CJe ne veux plus faire ça !{FF}{00}
+
+@0151
+{FB} 1AJe suis ton prochain adversaire.{FC}Le 6e membre de{FD}l'Armée Rubberobo !{FF}{00}
+
+@0152
+{FB} 1 Je peux encore me battre !{FF}{00}
+
+@0153
+{FB} LCContinuons !{FF}{00}
+
+@0154
+{FB}A EJe crois que j'ai des ennuis.{FF}{00}
+
+@0155
+{FB} 1 Bon, tu m'as trouvé.{FC}Je suis le 7e membre de{FD}l'Armée Rubberobo !{FF}{00}
+
+@0156
+{FB} 1CJe devrais continuer à faire{FD}semblant d'être une peluche.{FF}{00}
+
+@0157
+{FB} B Cette peluche Rappy est mignonne♥{FF}{00}
+
+@0158
+{FB} L Il reste encore plein d'ennemis !{FC}Héros, vous devez vous battre{FD}pour nous !{FF}{00}
+
+@0159
+{FB} X Tu es si jeune, et pourtant{FD}tu fais du très bon travail.{FF}{00}
+
+@0160
+{FB} V C'est dur d'être un Héros, hein.{FF}{00}
+
+@0161
+{FB} h Bon courage !{FF}{00}
+
+@0162
+{FB} 1AHé hé hé. Je suis le 8e membre de{FD}l'Armée Rubberobo !{FC}Tu ne passeras pas !!{FF}{00}
+
+@0163
+{FB} k Bienvenue sur le "Spirit" !{FD}Vos billets, s'il vous plaît.{FC}Merci, rendez-vous sur{FD}le quai d'embarquement.{FF}{00}
+
+@0164
+{FB} 1AJe suis le 9e membre de{FD}l'Armée Rubberobo !{FC}Cette fois, c'est du sérieux !{FF}{00}
+
+@0165
+{FB} 1CJ'en ai marre de ce petit boulot !!{FF}{00}
+
+@0166
+{FB}A  Un petit boulot !? Ça voudrait dire···{FC}Que je me suis battu contre de{FD}vrais Rubberobos tout ce temps !?{FC}{FB}A APas possible !{FF}{00}
+
+@0167
+{FB} LANous avons vaincu les sbires{FD}du Maître des Ténèbres !{FC}{FB} LCEnfin, nous allons au repaire{FD}du Maître des Ténèbres !{FF}{00}
+
+@0168
+{FB} LANous allons au 1er étage !{FF}{00}
+
+@0169
+{FB} LCCet endroit a l'air sûr.{FD}Dépêchons-nous d'avancer.{FC}Allez, Héros, nous comptons{FD}tous sur vous !{FF}{00}
+
+@0170
+{FB} {51} Tu ne peux pas encore venir ici.{FD}Bats d'abord le Maître des Ténèbres !{FF}{00}
+
+@0171
+{FB} W J'ai facilement le mal des transports.{FD}Aah, je suis nerveux.{FF}{00}
+
+@0172
+{FB}A  Non, laisse tomber.{FF}{00}
+
+@0173
+{FB}A  Je n'ai rien d'autre à faire,{FD}je vais retourner voir Erika.{FF}{00}
+
+@0174
+{FB} 1 Bon, tu m'as trouvé.{FC}Je suis le 10e membre de{FD}l'Armée Rubberobo !{FF}{00}
+
+@0175
+{FB} 1CJe devrais continuer à faire{FD}semblant d'être une peluche.{FF}{00}
+
+@0176
+{FB} k Bienvenue sur le "Spirit" !{FD}Les montagnes russes les plus rapides !{FF}{00}
+
+@0177
+{FB} LBMaître des Ténèbres, espèce de lâche !{FD}Rendez-nous les enfants !{FF}{00}
+
+@0178
+{FB} h Aaah ! À l'aide !{FD}C'est comme ça qu'il faut faire ?{FC}{FB} £ Mwa ha ha ha !{FF}{00}
+
+@0179
+{FB} £ Je suis impressionné que vous{FD}soyez arrivés jusqu'ici.{FC}Mais comment comptez-vous{FD}me vaincre, maintenant ?{FC}{FB} L Nous avons un Héros avec nous !{FC}{FB} £ Mwa ha ha ha ! Pauvres fous !{FF}{00}
+
+@0180
+{FB} L Héros ! Montrez-lui votre puissance !{FD}Vous devez sauver les enfants !{FF}{00}
+
+@0181
+{FB} £ Ta mort sera vaine, humain !{FF}{00}
+
+@0182
+{FB} £ Impossible !{FD}Vaincu par un humain···!{FF}{00}
+
+@0183
+{FB} LAEnfin ! Le Maître des Ténèbres{FD}est vaincu !{FF}{00}
+
+@0184
+{FB} {51} Tu as été super. Tu t'es amusé ?{FF}{00}
+
+@0185
+{FB} LCBravo ! Bravo !{FD}Héros, venez par ici !{FF}{00}
+
+@0186
+{FB} LACette fois, notre Héros était···{FD}Euh, quel est votre nom ?{FC}{FB}A G{F9} .{FC}{FB} LAApplaudissons bien fort{FD}{F9}  ! Hourra !{FC}{FB} {FF}{00}
+
+@0187
+{FB} LAMerci de votre aide, {F9} .{FC}Je vous offre cette peluche{FD}Rappy pour votre participation !{FC}{FB} B Génial !{FC}{FB} {FF}{00}
+
+@0188
+{FB} LABonne journée à tous !{FC}Sortez par la porte{FD}en bas, s'il vous plaît !{FF}{00}
+
+@0189
+{FB} {51} Il paraît que Milky est{FD}une vraie sorcière !{FF}{00}
+
+@0190
+{FB} {51} Elle est partie visiter le château{FD}de la Sorcière et n'est pas revenue.{FF}{00}
+
+@0191
+{FB} BDCette peluche est trop chou.{FC}{FB}A DTu la veux ?{FC}{FB} BDOui♥{FC}{FB}A DDonner la "Peluche Rappy"{FD}à Erika ?{FF}B
+
+@0192
+{FB} BAMerci beaucoup♥{FD}J'en prendrai soin !{FF}{00}
+
+@0193
+{FB} BFDe toute façon, ce n'était pas{FD}si important.{FF}{00}
+
+@0194
+{FB} BGHé, {F9} . Il est beau,{FD}le château de la Sorcière, non ?{FC}J'aimerais devenir{FD}la princesse de ce château♥{FC}{FB}A  Aucune chance···{FC}{FB} BFTu veux dire quelque chose ?{FC}{FB}A FNon.{FC}{FB} BDHé, on y retourne ?{FC}{FB}A EFaire encore la queue ?{FC}{FB} BALà, tu vas avoir des ennuis.{FC}{FB} BDJe me sens un peu coupable de toujours{FD}te traîner avec moi. J'y vais seule.{FF}{00}
+
+@0195
+{FB} j Excusez-moi···{FC}{FB}A  Oui ? Vous avez besoin de moi ?{FC}{FB} j Tu n'aurais pas vu une fille{FD}de ton âge, par hasard ?{FC}{FB}A  Il y a un problème ?{FC}{FB} j Elle est partie visiter le château{FD}de la Sorcière et n'est pas revenue.{FC}J'ai demandé au responsable,{FD}mais il a dit qu'il ne savait pas···{FC}Je ne sais plus quoi faire.{FF}{00}
+
+@0196
+{FB}A EDes enfants disparaissent dans{FD}le château de la Sorcière !?{FC}{FB}A  Maintenant que j'y pense,{FD}Karin faisait cette visite.{FC}Que lui est-il arrivé ?{FD}Demandons d'abord au responsable.{FF}{00}
+
+@0197
+{FB} W Bon, en rang, tout le monde.{FC}{FB}A  Euh, excusez-moi.{FC}{FB} W Hm ? Qu'est-ce que tu veux ?{FC}{FB}A  On m'a dit qu'une fille a disparu{FD}quelque part dans le château.{FC}{FB} W C'est impossible.{FC}D'abord, on ne peut pas{FD}se perdre dans le château.{FC}{FB}A EC'est vrai···{FC}{FB} W Arrête de dire des bêtises.{FD}En rang ! En rang, tout le monde !{FF}{00}
+
+@0198
+{FB} BDOh, {F9} .{FD}Tu es revenu pour moi ?{FC}{FB}A  Je dis oui, ou je dis non···{FC}{FB} B Qu'est-ce que tu marmonnes ?{FD}Je faisais la queue pour toi.{FC}Tu devrais m'en être reconnaissant{FD}et faire la queue aussi.{FC}{FB}A  Hein ? Pour moi ?{FC}{FB} B Allez, on y va !{FF}{00}
+
+@0199
+{FB} BAJe suis un peu excitée.{FF}{00}
+
+@0200
+{FB}A  Je devrais me séparer des autres{FD}et aller voir le 1er étage.{FF}{00}
+
+@0201
+{FB}A  Allons voir le 1er étage.{FF}{00}
+
+@0202
+{FB}A  À quoi servent ces escaliers ?{FC}{FB} LADésolée, petit Héros.{FC}Seul le personnel est autorisé{FD}au-delà de ce point♥{FF}{00}
+
+@0203
+{FB} LBTu l'auras voulu !{FD}Tu seras le joyau de ma collection.{FF}{00}
+
+@0204
+{FB}A HOuah !!{FF}{00}
+
+@0205
+{FB}A FOuah ! Aïe !{FF}{00}
+
+@0206
+{FB}A  Qu'est-ce que c'est ?{FC}{FB} h Grand frère, ça va ?{FF}{00}
+
+@0207
+{FB}A  Mais elle n'est pas là.{FD}J'espère que Karin va bien.{FF}{00}
+
+@0208
+{FB}A  On ne peut pas monter plus haut.{FD}Les escaliers sont bloqués.{FF}{00}
+
+@0209
+{FB} h Qu'est-ce qui va nous arriver ?{FF}{00}
+
+@0210
+{FB} V Je ne veux pas porter{FD}une tenue aussi ringarde.{FF}{00}
+
+@0211
+{FB} V Cette sorcière, Milky.{FC}Son passe-temps, c'est collectionner{FD}les enfants mignons, alors elle et{FD}le gang Rubberobo en rassemblent.{FF}{00}
+
+@0212
+{FB} p Maintenant, du calme et pas un bruit !{FD}Vos amis vous rejoindront bientôt.{FF}{00}
+
+@0213
+{FB} h Je veux ma maman !{FC}{FB}A HTu n'es pas une des filles{FD}qui étaient avec nous à la visite !?{FC}{FB}A  D'ailleurs, tu avais disparu à la fin.{FC}{FB} h Oh, tu es le Héros !{FD}On est sauvés ! On est sauvés !{FC}Hé, tout le monde ! Demandons-lui{FD}de battre le Medabot qui nous garde !{FC}{FB} V Youpiii ! On va pouvoir rentrer !{FD}Enfin !{FF}{00}
+
+@0214
+{FB} h Grand frère, il a la clé des escaliers !{FC}{FB}A  Mais il est derrière les barreaux.{FC}{FB} V Laisse-nous faire, grand frère.{FF}{00}
+
+@0215
+{FB} h Na na na nanère ! Mauviette !{FC}{FB} V Sale Medabot de Rubberobo !!{FC}{FB} p Hé ! Je ne me laisserai pas insulter !{FF}{00}
+
+@0216
+{FB} h Hé, grand frère !{FC}{FB} V Bonne chance, frérot !{FC}{FB}A  Hé ! J'ai dit de ne pas pousser !{FF}{00}
+
+@0217
+{FB} p C'est toi qui disais{FD}des méchancetés, hein !{FC}{FB}A ECe n'était pas moi !{FF}{00}
+
+@0218
+{FB} p Ouiiiiin. Shrimpliiiips···{FF}{00}
+
+@0219
+{FB} V Ouais ! On a réussi !{FF}{00}
+
+@0220
+{FB} h On peut rentrer à la maison.{FF}{00}
+
+@0221
+{FB} & Attends !{FF}{00}
+
+@0222
+{FB}A  C'est toi qui étais avec Karin, non ?{FC}{FB} V Qui ? Je la connais pas.{FC}{FB}A  La fille qui te tenait la main{FD}et te promenait, tout à l'heure.{FC}Je veux que tu me dises où elle est.{FC}{FB} V Je sais pas.{FC}{FB}A  Dis-le-moi !{FC}{FB} V Tu veux vwaiment le savoir ?{FD}Alors t'as intérêt à gagner.{FF}{00}
+
+@0223
+{FB}A HC'est toi.{FC}{FB} 5ALe chef de la division Pwimaiwe{FD}des Wubbewobos !{FC}Shwimpwips !{FF}{00}
+
+@0224
+{FB} h Rappy est trooop mignon !{FD}Je peux avoir un autographe ?{FF}{00}
+
+@0225
+{FB} 1CRobo ouiiin ! Ouiiin{FF}{00}
+
+@0226
+{FB} 5CJe savais qu'on ne peut pas{FD}compter suw les gwands.{FC}{FB}A HPourquoi tu fais ça !{FC}{FB} 5AOn leuw lave le cewveau et on{FD}en fait des Wubbewobos.{FC}Il y a déjà twop d'adultes{FD}idiots dans le gang.{FC}Mais si on les fowme quand ils{FD}sont jeunes, ils deviendwont{FD}de gwands Wubbewobos.{FC}{FB}A EIdiots dans tous les cas, quoi···{FC}{FB} 5AJe sewai ton advewsaiwe !{FF}{00}
+
+@0227
+{FB} 5BJe vais le diwe à mon Papi !{FF}{00}
+
+@0228
+{FB}A DBon, tout le monde ! Cette fois,{FD}on rentre pour de vrai !{FC}{FB} V Youpiiiii !{FC}{FB} h Papa ! Maman !{FF}{00}
+
+@0229
+{FB}A  Je me demande ce que font{FD}Papa et Maman···{FC}Ce n'est pas le moment de penser à ça !{FD}Je dois retrouver Karin !{FF}{00}
+
+@0230
+{FB}A  Je ne peux pas sortir d'ici.{FF}{00}
+
+@0231
+{FB}A  Je ne peux pas rentrer sans{FD}avoir retrouvé Karin.{FF}{00}
+
+@0232
+{FB}A HKarin !{FC}{FB} CDBonjour, {F9} .{FC}{FB}A ATu es saine et sauve !{FD}Pourquoi es-tu toute seule ?{FC}{FB} CDJe··· me suis encore perdue, et un{FD}petit garçon m'a emmenée au château.{FC}Mais j'ai encore été séparée{FD}des autres dans le château···{FF}{00}
+
+@0233
+{FB}A DMerci, je le garde.{FF}{00}
+
+@0234
+{FB}A  Merci, mais non merci.{FC}{FB} C D'accord, je demanderai à Koji.{FF}{00}
+
+@0235
+{FB}A DC'est l'heure de rentrer !{FF}{00}
+
+@0236
+{FB} W Karin !{FF}{00}
+
+@0237
+{FB} C Oh ! Père !{FF}{00}
+
+@0238
+{FB}A  Son père fait vraiment peur.{FD}Je comprends un peu qu'elle s'enfuie.{FF}{00}
+
+@0239
+{FB} BB{F9} , où étais-tu !?{FC}{FB}A  Erika··· et les Select Corps ?{FD}Qu'est-ce que vous faites ici ?{FC}{FB} BBComment ça, pourquoi !{FC}Je t'ai attendu ici, mais tu ne{FD}sortais pas, alors je suis{FD}allée voir les Select Corps.{FC}{FB} 9 Content de vous voir sains et saufs !{FF}{00}
+
+@0240
+{FB} 9BAvancez !{FC}{FB} 1COn a des ennuis, maintenant.{FF}{00}
+
+@0241
+{FB} 9 Nous avons appréhendé tous les{FD}membres du gang Rubberobo{FD}qui se cachaient dans le château !{FC}Je retourne à mon poste !{FF}{00}
+
+@0242
+{FB} BBC'est l'heure de rentrer !{FC}On doit se dépêcher d'aller au quai{FD}pour prendre le ferry !{FF}{00}
+
+@0243
+{FB}A  Je me demande ce qu'est devenu{FD}ce gamin, Shrimplips.{FC}Et puis, l'île Medabot me fait{FD}toujours un drôle d'effet.{FC}{FB}A DBon, ce n'est pas le moment{FD}de penser à tout ça.{FC}Papa et Maman m'attendent !{FF}{00}
+
+@0244
+{FB} f T'es le dernier passager, toi.{FD}Prêt à monter sur le "Shark" ?{FF}B
+
+@0245
+{FB} f Arr, dépêchez-vous, moussaillons.{FF}{00}
+
+@0246
+{FB}A  L'île Medabot est teintée de rouge{FD}par le soleil couchant.{FF}{00}
+
+@0247
+{FB} B {F9} .{FF}{00}
+
+@0248
+{FB} BDAlors, qu'en as-tu pensé ?{FD}C'était comment, l'île Medabot ?{FC}{FB}A DErika, je suis content d'être venu.{FD}Merci de m'avoir emmené.{FC}{FB} BDAh oui, c'est vrai !{FC}{FB}A DJ'ai hâte de revoir Papa et Maman.{FD}J'ai tant de choses à leur raconter.{FC}Je veux aussi savoir comment{FD}était leur enfance.{FC}Rien ne vaut vraiment la maison.{FC}{FB} BD{F9} .{FC}{FB}A  Hmm ?{FC}{FB} BAMoi aussi, j'étais contente de venir !{FF}{00}
+
+@0249
+{FB} CDOh, {F9} .{FF}{00}
+
+@0250
+{FB} CDJe te cherchais.{FD}Je me doutais que tu étais à bord.{FC}{FB}A DTu me cherchais ?{FC}{FB} CDJe voulais juste te remercier.{FC}Je ne me suis jamais autant{FD}amusée de toute ma vie.{FC}Vraiment···{FD}Merci beaucoup.{FC}{FB}A DTu n'as pas à me remercier.{FD}Surtout, est-ce que tu te sens bien ?{FC}{FB} CDJe vais bien, merci.{FD}Désolée de t'avoir inquiété.{FF}{00}
+
+@0251
+{FB} C Quelle jolie peluche.{FC}{FB}A DÇa ? Je l'ai eue en jouant le rôle{FD}du Héros au château de la Sorcière.{FC}{FB} CDTu as été un merveilleux Héros, {F9} .{FF}{00}
+
+@0252
+{FB}A  Donner la "Peluche Rappy"{FD}à Karin ?{FF}B
+
+@0253
+{FB}A DJe te la donne, Karin.{FC}{FB} CDTu es sûr ? Après tout ça···{FC}{FB}A DOui, je veux te la donner.{FF}{00}
+
+@0254
+{FB} CDMerci beaucoup, {F9} .{FC}{FB} CCJe suis si heureuse···{FC}{FB}A EOh là ! Karin, ne pleure pas !{FD}Oh non···{FF}{00}
+
+@0255
+{FB}A DTu devrais rentrer te reposer.{FC}Quand tu te sentiras mieux,{FD}on ressortira ensemble !{FC}{FB} CAD'accord !{FF}{00}
+
+@0256
+{FB} D Te voilà, {F9} .{FF}{00}
+
+@0257
+{FB}A  Où sont les autres ?{FC}{FB} D Ils dorment sûrement.{FD}La journée a été longue.{FC}{FB}A DJe vois.{FC}{FB} D Je me demandais.{FC}Avec qui es-tu venu{FD}sur l'île Medabot, au juste ?{FF}{00}
+
+@0258
+{FB} B À plus tard, {F9}  !{FF}{00}
+
+@0259
+{FB} j J'ai déjà dit à tes parents{FD}que je t'avais emmené avec nous.{FC}Mais ils doivent s'inquiéter pour toi,{FD}alors va vite les voir, d'accord ?{FF}{00}
+
+@0260
+{FB} {50} Bon retour, {F9} .{FC}{FB}A DJe suis rentré !{FC}{FB} {50} J'ai eu un appel de la famille Amazake.{FC}Elle m'a dit qu'ils t'avaient{FD}emmené sur l'île Medabot.{FC}Je suis désolée qu'on n'ait pas pu{FD}t'y emmener, {F9} .{FC}{FB} {4F} Désolé, {F9} .{FD}La prochaine fois, c'est promis···{FC}{FB}A DCe n'est pas grave.{FC}Je sais que vous avez beaucoup{FD}de choses importantes à faire.{FC}{FB} {50} {F9} ···{FF}{00}
+
+@0261
+{FB}A AJ'ai tellement de choses{FD}à vous raconter···{FC}D'abord, je···{FF}{00}
+
+@0262
+{FB}A DHier, j'ai tellement parlé{FD}qu'après, je me suis écroulé···{FC}{FB}A  Quoi de prévu aujourd'hui ? Ah oui !{FC}Je me demande si le Dr Aki a fini{FD}de réparer mes Medaparts.{FF}{00}
+
+@0263
+{FB}A ETrop fatigué···{FF}{00}
+
+@0264
+{FB} j Jamais assez rapide pour moi !{FF}{00}
+
+@0265
+{FB}A  Impossible d'entrer par ici.{FF}{00}
+
+@0266
+{FB}A  Je ne t'ai pas déjà vue quelque part ?{FC}{FB} h On nous a enfermés.{FD}C'est ici qu'ils enferment les enfants.{FC}{FB}A HÇa me revient !{FC}Tu es la fille entourée d'un cercle{FD}sur la photo des montagnes russes !{FC}Alors les autres sont aussi···?{FD}Pourquoi es-tu ici !?{FC}{FB} h Des gens habillés vraiment{FD}bizarrement ont dit qu'on allait{FD}devoir rejoindre le gang Rubberobo.{FC}{FB}A HQuoi !?{FD}Alors Karin est···{FF}{00}
+
+@0267
+{FB}A  Tu te sens bien ?{FC}{FB} CGJ'ai la tête qui tourne si facilement{FD}que mon père me dit toujours{FD}de me ménager et de me reposer.{FC}Mais je m'enfuis parce que{FD}je veux sortir jouer.{FC}{FB}A  Ouah, Karin, parfois{FD}tu es vraiment audacieuse.{FC}{FB}A DAu moins tu vas bien, non ?{FD}Rentrons.{FC}{FB} CDEn me perdant dans le château,{FD}j'ai trouvé ceci.{FF}{00}
+
+@0268
+{FB}A  Un Tinpet mâle ?{FC}{FB} CDJe ne collectionne que les{FD}Tinpets femelles.{FC}Tu le veux ?{FF}B
+
+@0269
+{FB} C Père···{FC}{FB} W Je croyais t'avoir dit de te{FD}reposer à l'infirmerie !{FC}{FB} CCJe suis désolée.{FC}{FB} W Allez, viens.{FF}{00}
+
+@0270
+{FB} p Tu ne peux pas partir maintenant !{FF}{00}
+
+@0271
+{FB}A  "Frissons garantis ! Vitesse folle !{FD}Montez sur le Spirit !"{FC}{FB} BAÇa a l'air intéressant.{FD}On y va ?{FF}B
+
+@0272
+{FB}A  Cette porte a l'air très solide.{FF}{00}
+
+@0273
+{FB}A  "Protège le QG des Select Corps !" ?{FC}{FB} BBEn ce moment, un gamin joue{FD}à ce jeu, là-bas.{FC}C'est quel genre de jeu ?{FC}Eh bien, tu dois juste protéger{FD}le QG des Select Corps !{FC}Essaie donc toi-même !{FC}{FB}A  Ok, j'ai compris.{FF}{00}
+
+@0274
+{FB}A DLà, je n'ai qu'une envie,{FD}rentrer en courant tout raconter{FD}à Papa et Maman.{FD}Je me demande ce qu'ils vont dire.{FC}{FB} CD{F9} .{FC}Tu as vraiment{FD}de bons parents, hein.{FC}{FB}A AMes parents sont les meilleurs !{FF}{00}
+
+@0275
+{FB}A DMême si je suis venu ici sans{FD}le dire à mes parents, je suis{FD}vraiment content d'être venu.{FC}Maintenant, j'ai hâte de rentrer{FD}leur raconter toute ma journée.{FC}Je me demande ce qu'ils diront{FD}en entendant mes histoires.{FC}{FB} DDTu es plutôt cool.{FC}Moi aussi, j'aimerais vivre ça.{FF}{00}
+
+@0276
+{FB} V Pfff, le gang Rubberobo se croit{FD}vraiment tout permis !!{FF}{00}
