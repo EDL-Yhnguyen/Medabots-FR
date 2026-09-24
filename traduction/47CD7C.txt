@@ -1,0 +1,729 @@
+# Table 0x47CD7C — dialogues du dixième chapitre (233 entrées)
+#
+# Le final dans le château du Dr Meta-Evil : Seaslug et le lac d'acide qui
+# n'est que de l'eau gazeuse, Shrimplips et la porte à verrou, les médailles
+# d'Erika et de Karin, le tapis roulant, le chercheur espion et son "bébé"
+# Babbyblu, la Phantom Lady (Kirara) et le Phantom Renegade (Henry), le
+# Mega-Emperor et le Limiteur, l'autodestruction qui n'est qu'un pétard, le
+# Dr Aki et Mademoiselle Nae, la mutinerie du lieutenant Tokkuri contre le
+# Capitaine, le retour à Riverview sur le "Jaws", puis l'épilogue : Erika
+# embauche Koji, l'"endroit spécial" de Karin à Fiyun, les Screws, Salty.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {50} est la mère du joueur, {52} le Mega-Emperor, {5B} Babbyblu. Aucune
+# question oui/non dans cette table.
+#
+# Vocabulaire fixé : le Limiteur, le Mega-Emperor et le Robo-Emperor (écrits
+# comme l'original, avec ou sans trait d'union selon l'entrée), le
+# Dr Meta-Evil, la Medabot Corporation, la "Mini grande roue" et le
+# "Periscope" (noms d'objets de 483ED8.txt), les Medaparts "Aim Shot" (nom de
+# compétence, en anglais), le tapis roulant, l'autodestruction, le Capitaine
+# et le lieutenant Tokkuri, les Select Corps, Riverview, le "Jaws", Babbyblu,
+# l'"endroit spécial", Fiyun, la "journaliste du futur", le "héros de la
+# justice". « Robo retreat » suit le chapitre 2 : « Robo repli ». « Holy
+# Medaroli » suit les chapitres précédents : « Nom d'un Medabot ! ». La
+# Phantom Lady reprend sa formule : « Comme la fleur de la justice fane la
+# mauvaise herbe du mal ! ». Shrimplips garde ses « w ». Le Dr Armond et le
+# Dr Aki se tutoient (rivaux de toujours) ; Henry vouvoie le Dr Armond.
+#
+
+@0000
+{FB}A  Ici aussi. Bon !{FD}C'est le moment d'un "Aim Shot" !{FF}{00}
+
+@0001
+{FB}A  Ici aussi. Bon !{FD}C'est le moment d'un "Aim Shot" !{FF}{00}
+
+@0002
+{FB}A  Bon, vous deux, attendez ici !{FC}Je ramènerai Karin et{FD}la Medawatch, c'est promis !{FC}{FB} B Reviens vite, d'accord ?{FD}Je ne veux pas attendre ici des heures.{FC}{FB} DEJe viens avec toi···{FC}{FB}A  Désolé, Koji, pas cette fois.{FD}Tu ne peux pas rester sans Medabots.{FC}{FB} DEBon, comme tu veux ! Ça craint !{FD}Je compte sur toi, {F9} .{FC}{FB}A DLaisse-moi faire !{FF}{00}
+
+@0003
+{FB}A  Je n'ai aucun Medabot avec{FD}des Medaparts "Aim Shot" !{FC}Je dois me préparer !{FF}{00}
+
+@0004
+{FB} D {F9}  !{FF}{00}
+
+@0005
+{FB} 2BJe t'attendais.{FC}Tu vas payer pour toutes les fois{FD}où tu m'as ridiculisé···{FC}{FB}A BSeaslug !{FD}Rends-la-nous !{FC}{FB} 2 Quelle impatience.{FD}Regarde par là !{FF}{00}
+
+@0006
+{FB} 1 RoboRobo !{FF}{00}
+
+@0007
+{FB} 1CRobo ouiiin !{FF}{00}
+
+@0008
+{FB} DD{F9}  !{FD}J'ai récupéré la Medawatch !{FC}{FB}A DGénial !{FF}{00}
+
+@0009
+{FB}A BAh ! Attends ! Ne t'enfuis pas !{FF}{00}
+
+@0010
+{FB} 2 Hé, tu es vraiment venu.{FC}{FB}A BTu n'es qu'un LÂCHE, Seaslug !{FD}Cette fois, tu ne m'échapperas pas !{FC}{FB} 2 Ah vraiment ?{FF}{00}
+
+@0011
+{FB} 2DOh, attends !{FC}{FB}A HHein ? Quoi !?{FF}{00}
+
+@0012
+{FB}A  Je dois continuer !{FF}{00}
+
+@0013
+{FB}A EEuh···{FC}{FB} D Qu'est-ce qu'il y a, {F9}  ?{FC}{FB}A ELa porte est fermée.{FD}Qu'est-ce que je vais faire ?{FC}{FB} DDJe m'en occupe.{FD}Laisse-moi te renvoyer l'ascenseur.{FC}Écarte-toi.{FC}{FB}A  Hein ?{FF}{00}
+
+@0014
+{FB}A BAttends !{FF}{00}
+
+@0015
+{FB}A BC'est bas, même pour toi, Seaslug !{FC}Frapper un gars dans le dos{FD}pendant qu'il regarde ailleurs.{FC}C'est la goutte de trop !{FC}{FB} 2 Tu veux te battre, petit ?{FD}Mais la violence ne résout rien, non ?{FC}{FB}A HQuoi !?{FF}{00}
+
+@0016
+{FB} DCVas-y !!{FF}{00}
+
+@0017
+{FB} £ Zzz Zzz{FC}{FB}A EPfff···{FC}Pas le choix. Je vais devoir sortir{FD}chercher de l'aide, en attendant.{FF}{00}
+
+@0018
+{FB}A BHé, toi !{FC}Ce que tu dis et ce que tu fais,{FD}c'est complètement différent !!{FC}{FB} 2ATu es si naïf.{FD}Ha ha ha ha ha !{FC}{FB}A BGrrrrr !{FF}{00}
+
+@0019
+{FB}A EQuel mauvais goût.{FC}{FB} 2BSilence ! Je vais t'apprendre{FD}à critiquer mes goûts !{FF}{00}
+
+@0020
+{FB}A  La boîte est vide.{FF}{00}
+
+@0021
+{FB} MEAttends !{FF}{00}
+
+@0022
+{FB}A  Q-qu'est-ce que c'est !{FC}{FB} 2 Mmm ?{FF}{00}
+
+@0023
+{FB} DCToh !{FF}{00}
+
+@0024
+{FB} 2DOh là !{FF}{00}
+
+@0025
+{FB}A HOuah !{FF}{00}
+
+@0026
+{FB} DCToi, poursuis Seaslug !{FC}Moi, je vais rendre cette Medawatch{FD}à celle qui l'attend !{FC}{FB}A  D'accord !{FF}{00}
+
+@0027
+{FB} 5ATu ne peux plus t'échapper.{FF}{00}
+
+@0028
+{FB}A BTu es le chef de la division{FD}Primaire, Shrimplips.{FC}{FB} 5ALa powte se vewwouille toute seule.{FD}Plus de sowtie, maintenant.{FF}{00}
+
+@0029
+{FB} 5 Ton advewsaiwe est là.{FF}{00}
+
+@0030
+{FB} 5 C'est pawti !{FF}{00}
+
+@0031
+{FB} 5 Tu es plutôt fowt.{FD}Mais on commence seulement à s'amuser.{FF}{00}
+
+@0032
+{FB} 5 Ils awwivent sans awwêt.{FD}Combien de temps tu vas wésister ?{FF}{00}
+
+@0033
+{FB}A EÇa n'en finit pas ! On fait quoi !{FF}{00}
+
+@0034
+{FB}A DKoji !!{FC}{FB} DDPas question que tu sois le seul héros.{FC}Ça m'a énervé d'être enfermé,{FD}mais c'est l'heure de la revanche !{FC}{FB} 5 Encowe des intwus.{FD}Ça ne change wien pour moi.{FC}Les Medabots awwivewont encowe{FD}et encowe de la salle d'à côté.{FC}{FB} D Aaah, la salle d'à côté.{FD}{F9} , occupe-toi de ça !{FF}{00}
+
+@0035
+{FB} 1DRobo !?{FD}Roboooo !{FF}{00}
+
+@0036
+{FB} BHOh, c'est ma médaille !{FD}Elle n'était pas tombée dans le lac ?{FF}{00}
+
+@0037
+{FB}A DLaisse-moi faire, Erika.{FD}Je vais aller la chercher pour toi.{FF}{00}
+
+@0038
+{FB} 5AC'est pas encowe fini !{FF}{00}
+
+@0039
+{FB} CEOh, au fait,{FD}qu'est devenue ma médaille···?{FF}{00}
+
+@0040
+{FB}A DLa médaille est tombée dans le lac,{FD}là où Seaslug est tombé tout à l'heure.{FC}Laisse-moi tout gérer.{FD}Je vais aller la chercher pour toi.{FC}{FB} CDMerci.{FF}{00}
+
+@0041
+{FB} 5CC'est bizawwe.{FC}{FB}A DKoji l'a eu !{FC}{FB} 5 Pas le choix.{FD}Je vais me battwe moi-même.{FF}{00}
+
+@0042
+{FB} DDJ'ai fini ici, {F9}  !{FC}{FB}A  Tu m'as vraiment sauvé la mise.{FC}{FB} 5 Je cwois que j'entends ma maman{FD}qui m'appelle. Je file !{FC}{FB} DCAh ! Attends ! Tu ne t'échapperas pas !{FF}{00}
+
+@0043
+{FB}A  On dirait que je ne peux pas{FD}passer de l'autre côté d'ici.{FF}{00}
+
+@0044
+{FB}A  Le tapis roulant ne bouge plus.{FF}{00}
+
+@0045
+{FB}A  Un tapis roulant.{FD}Il ne bouge pas pour l'instant.{FC}Il y a un trou pour un interrupteur.{FF}{00}
+
+@0046
+{FB} BHHé, arrête !{FD}Rends-moi ma médaille !{FC}{FB} 2AMmm, j'adore le son des cris.{FD}Je ne peux pas m'en empêcher !{FC}{FB}A HC'est la voix d'Erika !{FD}Ça vient de là-bas !{FF}{00}
+
+@0047
+{FB}A HQu'est-ce que tu lui fais !?{FC}{FB} BA{F9}  !{FF}{00}
+
+@0048
+{FB} 2 Pff, tu as gâché mon plaisir, petit.{FC}Pour te punir, je vais jeter{FD}sa médaille dans l'étang.{FC}{FB}A BArrête de l'embêter !{FD}Rends-la !{FC}{FB} 2AApproche encore et je lâche{FD}cette médaille dans l'acide.{FC}{FB}A HTu as dit de l'acide ?{FC}{FB} 2AOui ! C'est un lac d'acide.{FD}Si une médaille touche l'acide···{FF}{00}
+
+@0049
+{FB} M Je t'ai enfin trouvé !{FD}Seaslug, chef du gang Rubberobo !{FF}{00}
+
+@0050
+{FB}A DLe Phantom Renegade !{FC}{FB} MDJe suis essoufflé, à force{FD}de courir partout.{FC}{FB} M Peu importe, prépare-toi, Seaslug !{FC}{FB}A HA-attends, Phantom !{FF}{00}
+
+@0051
+{FB} QDOoooooh !{FD}Je ne vous pardonnerai pas !{FF}{00}
+
+@0052
+{FB}A HOuah !{FC}{FB} BHAaah !{FF}{00}
+
+@0053
+{FB}A  Hein ? Rien n'est arrivé à Seaslug.{FD}Il avait dit de l'acide···{FC}{FB} 2 J'ai dit de l'acide, sans préciser{FD}carbonique ! De l'eau gazeuse !{FC}J'adore me baigner dans l'eau gazeuse{FD}plus que tout au monde.{FF}{00}
+
+@0054
+{FB} 2BMoi··· battu par un gamin···{FD}Je refuse de l'accepter !{FF}{00}
+
+@0055
+{FB} CHArrêtez, je vous en prie !{FD}Rendez-moi ma médaille !{FC}{FB} 2AMmm, j'adore le son des cris.{FD}Je ne peux pas m'en empêcher !{FC}{FB}A HC'est la voix de Karin !{FD}Ça vient de là-bas !{FF}{00}
+
+@0056
+{FB}A HQu'est-ce que tu lui fais !{FC}{FB} CA{F9}  !{FF}{00}
+
+@0057
+{FB} 2 Pff, tu as gâché mon plaisir, petit.{FC}Pour te punir, je vais jeter{FD}sa médaille dans l'étang.{FC}{FB}A BArrête de l'embêter !{FD}Rends-la !{FC}{FB} 2AApproche encore et je lâche{FD}cette médaille dans l'acide.{FC}{FB}A HTu as dit de l'acide ?{FC}{FB} 2AOui ! C'est un lac d'acide.{FD}Si une médaille touche l'acide···{FF}{00}
+
+@0058
+{FB} M Je t'ai enfin trouvé !{FD}Seaslug, chef du gang Rubberobo !{FF}{00}
+
+@0059
+{FB} MEQu'est-ce que···!?{FF}{00}
+
+@0060
+{FB} 7 On dirait que mes petits enfants{FD}affamés font encore des bêtises.{FF}{00}
+
+@0061
+{FB}A HOuah !{FC}{FB} CHAaah !{FF}{00}
+
+@0062
+{FB}A  Hein ? Rien n'est arrivé à Seaslug.{FD}Il avait dit de l'acide···{FC}{FB} 2 J'ai dit de l'acide, sans préciser{FD}carbonique ! De l'eau gazeuse !{FC}J'adore me baigner dans l'eau gazeuse{FD}plus que tout au monde.{FC}{FB}A EQuel mauvais goût.{FC}{FB} 2BSilence ! Je vais t'apprendre{FD}à critiquer mes goûts !{FF}{00}
+
+@0063
+{FB}A  C'est le mur que le Mega-Emperor{FD}a détruit.{FF}{00}
+
+@0064
+{FB} BEEuh, {F9} ···{FC}{FB}A DC'est bon, ne t'inquiète pas.{FD}Je retrouverai ta médaille.{FC}{FB} BDD'accord, mais il y a déjà{FD}tellement de choses dans l'étang.{FC}Ne te fais pas tuer, d'accord ?{FF}{00}
+
+@0065
+{FB}A DVoilà ta médaille, Erika.{FF}{00}
+
+@0066
+{FB} B Merci, {F9} .{FC}{FB}A DBon, Erika.{FD}Je vais y aller···{FC}{FB} B Je suppose que je te gêne, hein ?{FD}J'attendrai avec les autres.{FC}{FB}A DD'accord.{FF}{00}
+
+@0067
+{FB} CE{F9} ···{FC}{FB}A DC'est bon, ne t'inquiète pas.{FD}Je retrouverai ta médaille.{FC}{FB} CDMerci, {F9} .{FC}Mais on dirait que beaucoup de choses{FD}sont tombées dans l'étang.{FC}Ne te fais pas mal.{FF}{00}
+
+@0068
+{FB}A DVoilà ta médaille.{FF}{00}
+
+@0069
+{FB} CDMerci beaucoup,{FD}{F9} .{FC}{FB}A DBon, Karin, je dois y aller···{FC}{FB} CDJe t'ai retardé, je crois.{FC}Alors, j'attendrai avec les autres{FD}que tu reviennes.{FC}{FB}A DD'accord.{FF}{00}
+
+@0070
+{FB}A  Allumons le tapis roulant.{FF}{00}
+
+@0071
+{FB}A DIl bouge !{FD}En montant dessus, je peux passer.{FF}{00}
+
+@0072
+{FB} a Mm ? Comment es-tu entré ici ?{FD}J'ai compris !{FC}Tu dois être un espion venu{FD}voler nos recherches !{FF}{00}
+
+@0073
+{FB} a Ici, la recherche est excentrique !{FD}Merveilleux ! Fantastique !{FC}Es-tu venu voir{FD}nos merveilleuses œuvres d'art ?{FC}{FB} aAHé hé··· hé hé hé···{FF}{00}
+
+@0074
+{FB}A  Robo··· Emperor ?{FF}{00}
+
+@0075
+{FB} a Hé, {F9}  !{FD}Je me doutais que tu viendrais ici.{FC}{FB}A  Euh, vous êtes qui, déjà ?{FD}Tous les chercheurs se ressemblent.{FC}{FB} a C'est moi.{FC}Le chercheur qui t'a donné la{FD}"Mini grande roue" et le "Periscope".{FC}{FB}A HQu'est-ce que vous faites ici !?{FC}{FB} a Je peux mieux faire mes recherches ici{FD}qu'à la Medabot Corporation.{FF}{00}
+
+@0076
+{FB}A  Merci. Je le prends.{FC}Mais je ne pense toujours pas{FD}que ce que vous avez fait est bien.{FF}{00}
+
+@0077
+{FB} QAHa ha ha ha ha !{FF}{00}
+
+@0078
+{FB} QBComme la fleur de la justice{FD}fane la mauvaise herbe du mal !{FC}Phantom Lady est arrivée !{FC}{FB} Q Je t'ai trouvé, espion !{FD}Rends-toi !{FC}{FB}A HPhantom··· Lady !?{FC}{FB} Q Méprisable traître !{FD}C'était toi, n'est-ce pas ?{FC}C'est toi qui as envoyé les données{FD}top secrètes au Dr Armond !{FC}Tu ne vois pas que tout est ta faute ?{FF}{00}
+
+@0079
+{FB}A  Euh, Phantom Lady.{FC}Ce n'est pas le moment{FD}de dire ce genre de choses.{FC}{FB} a Exactement !{FC}Pendant que vous discutez ici,{FD}le Docteur, lui, avance déjà.{FC}Hé hé.{FC}{FB} Q Ça veut dire quoi, ce "hé hé" ?{FC}{FB} a Je vous laisse y aller.{FD}Je donne la clé de la porte à Lady.{FF}{00}
+
+@0080
+{FB} a Je vous laisse continuer.{FD}Offrez-moi un beau combat.{FF}{00}
+
+@0081
+{FB} a J'ai hâte de voir le dernier combat···{FC}Je l'ai truqué pour qu'il soit{FD}très intéressant. Hé hé hé.{FC}{FB}A  Hmm ?{FC}{FB} aAOh, rien. Ne fais pas attention.{FD}Allez, vas-y.{FF}{00}
+
+@0082
+{FB} Q Où est le Dr Armond !?{FC}{FB} M {F9} , tu vas bien ?{FF}{00}
+
+@0083
+{FB}A DPhantom !{FD}Tu es venu !{FC}{FB} Q Tu es un peu en retard, Renegade.{FC}{FB} MEOh ! Lady !{FD}Pourquoi es-tu ici !?{FC}{FB} Q Quelle question idiote.{FD}Tu n'y arriveras pas tout seul.{FC}{FB} MCKi··· Phantom Lady !{FD}Ça suffit, toi !{FC}{FB} Q Tu crois ?{FF}{00}
+
+@0084
+{FB}A FOh là, le Phantom Renegade et la{FD}Phantom Lady se disputent.{FC}{FB} 7 De simples pions du Dr Aki.{FF}{00}
+
+@0085
+{FB} Q Vous voilà enfin sorti !{FC}{FB} M Je ne vous laisserai pas dire{FD}du mal du Dr Aki !{FC}{FB}A  Docteur ! Pourquoi avoir manipulé{FD}le gang Rubberobo pour faire le mal ?{FC}Pourquoi ne pas avoir pensé à faire{FD}du bien aux autres, comme le Dr Aki ?{FC}{FB} 7 Vous n'en voyez pas la beauté.{FC}Un scientifique doit se consacrer{FD}tout entier à la quête de l'inconnu !{FC}{FB} M Inutile d'essayer de lui parler !{FD}Je m'en charge !{FF}{00}
+
+@0086
+{FB} 7 Pas si facilement.{FF}{00}
+
+@0087
+{FB} QEAaah !{FF}{00}
+
+@0088
+{FB} M Attendez ! Dr Meta-Evil !{FF}{00}
+
+@0089
+{FB}A FLe bruit ne venait pas d'ici !{FF}{00}
+
+@0090
+{FB} 7 Le Robo-Emperor était le chef-d'œuvre{FD}du gang Rubberobo.{FC}Mais il y a sept ans, un garçon,{FD}tout seul, a réussi à le vaincre.{FC}{FB}A  Il y a sept ans ?{FF}{00}
+
+@0091
+{FB}A BVous !!!{FF}{00}
+
+@0092
+{FB}A  On dirait que le bateau pour{FD}l'île Medabot ne fonctionne pas.{FF}{00}
+
+@0093
+{FB} 7 Alors, tu sais qui c'était ?{FF}{00}
+
+@0094
+{FB} MB{F9} .{FC}Recule et regarde{FD}un maître Medafighter à l'œuvre !{FC}{FB}A  Oui, chef, Monsieur Phantom.{FF}{00}
+
+@0095
+{FB} M Vas-y, Metabee !{FF}{00}
+
+@0096
+{FB} P L'heure de dire adieu à ton robot !{FF}{00}
+
+@0097
+{FB} M Vas-y, Rokusho !{FF}{00}
+
+@0098
+{FB} O En avant !{FF}{00}
+
+@0099
+{FB} {52} Grooooooah !{FC}{FB} MBTu as réussi !!{FC}{FB}A DN-nom d'un Medabot···{FF}{00}
+
+@0100
+{FB} 7 Bel effort,{FD}mais ce n'est pas encore fini.{FC}{FB} {52} Grrrah !!{FC}{FB} MEC'est impossible.{FD}Ils ne devaient plus pouvoir bouger···{FF}{00}
+
+@0101
+{FB} MEOuaaaah !!{FF}{00}
+
+@0102
+{FB} QEHenry !!{FC}{FB}A HHein ? Tu as dit Henry !?{FF}{00}
+
+@0103
+{FB} NBJe suis désolé, Kirara.{FC}{FB} QDNe dis rien.{FC}{FB}A HK-Kirara ?{FF}{00}
+
+@0104
+{FB} Q Docteur, qu'avez-vous fait ?{FC}Les Medabots ne sont pas censés{FD}attaquer les humains volontairement !{FC}{FB} NBLe Limiteur···{FC}{FB} QDOooooh !{FD}Mais c'est QUOI, ça !?{FC}{FB} NBLe Dr Aki m'en a parlé.{FC}Quand on retire le Limiteur du système{FD}de contrôle d'un Medabot···{FC}La médaille, le Medabot···{FC}Il perd tout contrôle et cesse{FD}d'obéir aux humains.{FC}C'est pourquoi on ne doit jamais{FD}retirer le Limiteur. Jamais !{FF}{00}
+
+@0105
+{FB} {52} Groaaaaar !!{FF}{00}
+
+@0106
+{FB} 7DGwaaa !!{FC}{FB}A HDocteur !!{FF}{00}
+
+@0107
+{FB}A HIl a même attaqué le Docteur !{FC}Mais c'est vous qui l'avez créé, non ?{FD}Vous ne pouvez rien faire ?{FC}{FB} 7CJe ne peux plus rien faire.{FD}Rien ne peut l'arrêter.{FC}{FB}A COh non···{FC}{FB} N Votre vanité est la cause de tout ça.{FC}Cette technologie de médaille{FD}n'est pas encore pour les humains.{FF}{00}
+
+@0108
+{FB} QE{F9} , sauve-toi !{FD}C'est mon tour !{FC}{FB} N Attends, Kirara···{FD}Je crois aux capacités de {F9} .{FC}Un garçon comme lui aidera un jour{FD}à construire l'avenir des Medabots{FC}et des humains, ensemble.{FD}Comme l'a dit le Dr Aki.{FC}Et nous devons l'aider{FD}à aller vers ce destin.{FC}{FB}A  Je ne m'enfuirai pas.{FD}Ceux qui croient en moi m'attendent !{FF}{00}
+
+@0109
+{FB} 7DÇa ne devait pas se passer comme ça !{FC}Tout ce que j'ai fait···{FD}Tout va être anéanti···{FC}{FB}A EDocteur···{FC}{FB} 7CC'est fini !{FD}Mes recherches, mes ambitions···{FC}Vous serez anéantis avec elles !{FD}Il ne restera rien !{FF}{00}
+
+@0110
+{FB}A HDocteur !!{FF}{00}
+
+@0111
+{FB}A FRien à faire···{FD}Cette porte a l'air indestructible.{FF}{00}
+
+@0112
+{FB} a Hi hi. Merci pour le spectacle.{FD}C'était un combat superbe, {F9} .{FC}Tu as ravagé le Mega-Emperor···{FC}{FB}A FSi on ne se dépêche pas, cet endroit{FD}va voler en éclats !{FC}{FB} a Tu exagères un peu,{FD}là, {F9} .{FC}{FB}A FC'est vrai.{FD}Allez, sortons d'ici !{FC}{FB} a C'est bon. Pas besoin de me pousser.{FD}Va plutôt prévenir les autres, non ?{FC}{FB}A FT-tu as raison.{FD}Bon, à plus tard.{FF}{00}
+
+@0113
+{FB} 2AHé hé hé hé···{FF}{00}
+
+@0114
+{FB} 2ATu crois qu'un maître du mal{FD}vindicatif comme moi partirait{FD}sans se venger de ce que tu m'as fait !{FC}{FB}A FIl suffit d'appuyer sur l'interrupteur.{FC}Si tu ne sors pas vite,{FD}tu vas sauter avec tout le reste !{FC}{FB} 2 C'est le plus vieux truc du monde···{FC}{FB}A FJe te dis la vérité !{FD}Le Docteur a lancé l'autodestruction !{FC}{FB} 2 Quoi !? Alors···?{FC}La bombe que mes hommes ont déplacée{FD}pour le Docteur était en fait···{FF}{00}
+
+@0115
+{FB} 1AMonsieur Seaslug, chef.{FC}Nous avons préparé le dispositif{FD}d'autodestruction comme ordonné.{FC}Il suffit d'appuyer sur l'interrupteur.{FF}{00}
+
+@0116
+{FB} 2BQuoi !?{FD}Vous savez ce que vous avez fait !?{FC}{FB} 1AC'est impossible pour nous.{FD}RoboRobo RoboRobo{FC}{FB} 2BMaudit Docteur !{FD}Il s'est juste servi de nous.{FC}Jetés comme un mouchoir usagé !{FD}Grrrrrrrrr !!{FF}{00}
+
+@0117
+{FB} 2BCe n'est pas une blague !{FD}Rubberobos, Robo-repli !{FF}{00}
+
+@0118
+{FB}A  J'aimerais que le gang Rubberobo{FD}retienne la leçon et abandonne{FD}peut-être ses mauvaises manières.{FC}{FB}A FEnfin, peu importe ! Je dois bouger !{FD}Je dois m'échapper avec les autres !{FF}{00}
+
+@0119
+{FB}A FLes Screws doivent être par ici.{FD}Je dois au moins leur dire de fuir !{FF}{00}
+
+@0120
+{FB} FCOh, {F9} .{FC}Tu es revenu nous voir, alors{FD}tu as battu le chef, c'est ça ?{FC}{FB}A FPeu importe, maintenant !{FD}Fichons le camp d'ici !{FC}{FB} F Pourquoi si soudainement ?{FC}{FB}A FTout cet endroit va exploser !{FD}On doit sortir d'ici !{FC}{FB} GAQu'est-ce que tu racontes !{FC}Tu es fou ?{FD}Ça n'arrive que dans les RPG···{FC}{FB} F Allons-y, c'est tout.{FC}Rien de bon ne sortira{FD}de rester plantés ici.{FF}{00}
+
+@0121
+{FB} H Et j'ai une tonne de lessive à faire.{FF}{00}
+
+@0122
+{FB} GDHé, les gars !{FD}Attendez-moi !{FF}{00}
+
+@0123
+{FB} ·AGwa ha ha ha ha !{FD}Je n'arrive pas à m'arrêter de rire !{FC}Je n'ai qu'à attendre et{FD}la souris se prendra toute seule !{FF}{00}
+
+@0124
+{FB} ·AGwa ha ha ha ha !{FD}J'en ai attrapé un autre !{FC}{FB} 1CRobo ouiiin{FF}{00}
+
+@0125
+{FB}A FAh, attendez ! Tant pis···{FF}{00}
+
+@0126
+{FB} B {F9}  !{FC}{FB} CA{F9}  !{FF}{00}
+
+@0127
+{FB} 7DAïe aïe aïe aïe aïe !{FF}{00}
+
+@0128
+{FB} 7DQu'est-ce que c'est que ça !?{FC}C'était censé être une bombe,{FD}pas un pétard !{FF}{00}
+
+@0129
+{FB} 7DAïe aïe aïe aïe aïe !{FF}{00}
+
+@0130
+{FB} B Voilà pour l'explosion.{FC}{FB}A  Hmm···{FC}{FB} CETant qu'il n'arrive plus rien{FD}de mal. C'est tout ce qui compte.{FF}{00}
+
+@0131
+{FB}A HDr Armond !?{FC}{FB}A APuisque vous êtes là, c'est que{FD}l'autodestruction a échoué !{FC}Ahahaha !{FC}{FB} 7BSILENCE !!!!{FF}{00}
+
+@0132
+{FB} S Armond !{FF}{00}
+
+@0133
+{FB}A DDr Aki et Mademoiselle Nae !{FC}{FB} TBBonjour, {F9} .{FD}Grand-père tenait à venir ici.{FC}J'avais peur qu'il vienne{FD}tout seul, alors je l'ai accompagné.{FF}{00}
+
+@0134
+{FB} 7DDr Aki ! Qu'est-ce que tu fais ici ?{FC}{FB} SCTu ne changeras jamais, Docteur.{FC}Toujours à ne penser qu'à toi,{FD}sans considérer tous les ennuis{FD}que tu causes aux autres.{FC}{FB} 7BComme si tu valais mieux.{FD}Là, tu m'as mis en colère !{FC}Je l'ai déjà dit et je le redis,{FD}JE N'ABANDONNE JAMAIS !{FC}Je dominerai le monde, et alors{FD}toutes les filles seront à moi !{FC}Gya ha ha ha ha !{FC}{FB} 9BAvancez !{FF}{00}
+
+@0135
+{FB} SCIl ne retient jamais la leçon.{FF}{00}
+
+@0136
+{FB} BAOn devrait rentrer aussi, {F9} .{FC}{FB} CAOn y va, {F9}  ?{FC}{FB}A DAllons-y !{FF}{00}
+
+@0137
+{FB} QB{F9}  !{FF}{00}
+
+@0138
+{FB}A DC'est Kirara !{FC}{FB} QBAppelle-moi Phantom Lady quand{FD}je suis habillée comme ça.{FC}{FB}A DOh, pardon, Phantom Lady.{FC}{FB}A  Où est passé ce chercheur ?{FC}{FB} a Pfff, je me suis fait prendre.{FD}Espion, c'est un métier dangereux.{FC}{FB} QBIl n'y a plus d'espions{FD}à la Medabot Corporation !{FC}{FB}A  Alors, et Henry···{FD}enfin, et le Phantom ?{FC}{FB} QBNe t'inquiète pas pour lui.{FD}Ce n'est qu'une égratignure.{FC}Pense à toi, maintenant.{FD}Rentre prendre un repos bien mérité !{FF}{00}
+
+@0139
+{FB} P Toujours vivant, Henry ?{FF}{00}
+
+@0140
+{FB} O Tu vas bien, Henry ?{FF}{00}
+
+@0141
+{FB} NBJe ne voulais pas montrer ma faiblesse{FD}devant Kirara, mais ça fait mal !{FF}{00}
+
+@0142
+{FB}A DTout le monde !{FF}{00}
+
+@0143
+{FB} · C'est ça, les enfants.{FC}Tout va bien, maintenant que{FD}je suis là pour vous sauver.{FC}Même si vous êtes allés là où{FD}vous n'auriez pas dû,{FD}je passe l'éponge pour cette fois.{FC}Maintenant, tout le monde rentre !{FD}Il n'y a rien à voir ici !{FC}{FB} DBComme d'habitude, ce type n'a rien fait{FD}et compte s'attribuer le mérite !{FF}{00}
+
+@0144
+{FB} BBVous êtes vraiment NUL !{FC}{FB} CBVous n'avez pas un peu honte !?{FC}{FB} BBDis quelque chose, {F9}  !{FC}{FB}A  Hein ? Oui, ce qu'elle a dit.{FC}{FB} BBOooh, tu es bien trop{FD}gentil avec les gens !{FC}{FB} · Pff, de quoi vous plaignez-vous ?{FD}On n'a plus rien à faire ici.{FC}Les hommes, on rentre !{FF}{00}
+
+@0145
+{FB} · Tokkuri, qu'est-ce que tu fais là ?{FD}Pousse-toi et rentre !{FC}{FB} . Capitaine, nous ne jugeons plus bon{FD}de vous appeler notre capitaine.{FC}{FB} ·CQu'est-ce que tu dis ? Une mutinerie !?{FC}{FB} . Vous vous attribuez toujours le mérite{FD}du travail que font les enfants.{FC}Un vrai homme ne fait pas ça.{FC}{FB} ·CQuoiii ! Tu sais ce que tu dis ?{FC}Tokkuri, ta carrière est finie !{FD}Maintenant, dégage d'ici !{FF}{00}
+
+@0146
+{FB} ·CQ-qu'est-ce que vous faites !?{FC}{FB} .BNon, Monsieur. C'est votre{FD}carrière à vous qui est finie !{FC}{FB} ·CArgh···{FF}{00}
+
+@0147
+{FB} ·CUrgh !{FD}Vous !! Je n'oublierai pas ça !{FF}{00}
+
+@0148
+{FB}A ATokkuri, c'était génial !{FC}{FB} . C'est {F9} , c'est ça ?{FD}Nous t'avons fait un grand tort.{FC}J'aurais juste aimé tenir tête{FD}au Capitaine un peu plus tôt.{FC}Mais j'ai fait de mon mieux, et{FD}heureusement, le reste des{FD}Select Corps m'a soutenu.{FC}{FB} .APar-dessus tout, la photo que tu m'as{FD}donnée m'a servi d'inspiration.{FF}{00}
+
+@0149
+{FB}A EÇa doit être ça.{FC}Le gang Rubberobo adore{FD}ce genre de blagues.{FC}{FB} GBLaisse-moi essayer de l'entrer···{FD}C'est le bon.{FF}{00}
+
+@0150
+{FB} G C'est ouvert.{FD}Passons.{FF}{00}
+
+@0151
+{FB}A  Ça veut dire···{FC}{FB} a Plus communément appelé un espion.{FC}{FB}A HUn espion !? Alors pourquoi{FD}m'avoir aidé ?{FC}{FB} a Vas-tu gagner ? Ou est-ce{FD}le Docteur qui va gagner ?{FC}Ce match m'intéresse beaucoup.{FD}Bonne chance pour le combat final.{FF}{00}
+
+@0152
+{FB} a Un traître ? C'est un peu dur.{FC}Je travaille tout aussi dur{FD}pour la Medabot Corporation.{FC}{FB} QEComment oses-tu dire{FD}des choses aussi éhontées···{FF}{00}
+
+@0153
+{FB} 7 On dirait que la curiosité a encore{FD}tué le chat.{FC}Ou bien un des chercheurs{FD}m'a-t-il saboté ?{FC}Quoi qu'il en soit, il est trop tard.{FD}Personne ne peut plus l'arrêter.{FC}Tout ça parce que j'ai modifié{FD}le Limiteur.{FC}{FB}A HC'est tellement irresponsable !{FD}Il doit y avoir un moyen !{FC}{FB} 7 Il n'y a aucun moyen d'arrêter un{FD}Medabot une fois son Limiteur retiré.{FC}{FB}A EC'est impossible.{FF}{00}
+
+@0154
+{FB} a Mmmm, l'autodestruction.{FD}Le Docteur en a toujours été fan.{FC}"Le capitaine sombre avec son navire"{FD}et toutes ces sottises sentimentales.{FF}{00}
+
+@0155
+{FB}A HOh ! Je sais !{FD}Je me souviens de la dernière fois !{FF}{00}
+
+@0156
+{FB} 7 Personne ne connaissait le Limiteur{FD}quand le Robo-Emperor{FC}est devenu incontrôlable.{FC}Mais moi, le brillant scientifique,{FD}le Dr Meta-Evil !{FC}Moi seul ai découvert comment{FD}manipuler le Limiteur.{FC}Le Mega-Emperor amélioré dépasse{FD}toutes les puissances connues.{FC}Encore plus que le Robo-Emperor.{FC}Cette fois, je contrôle tout !{FD}Différent d'il y a 7 ans, non ?{FC}Tes Medabots minables peuvent gagner ?{FC}{FB} M Silence !{FC}{FB} 7 Détruis-les, Mega-Emperor !{FD}Gya ha ha ha ha !{FF}{00}
+
+@0157
+{FB} QCJ'ai un trèèès mauvais pressentiment···{FF}{00}
+
+@0158
+{FB}A BDr Meta-Evil ! C'était vous !!{FF}{00}
+
+@0159
+{FB} 7DA-attends ! Tu te trompes !{FD}Je suis encore···{FC}{FB} {52} Limiteur désactivé.{FC}{FB}A HJ'ai entendu une voix dans ma tête !?{FC}{FB} 7DC'est impossible !{FC}J'avais le contrôle parfait !{FD}Robo Emperor ! Obéis-moi !{FF}{00}
+
+@0160
+{FB}A BPar ici, Mega-Emperor !{FD}Viens te battre contre moi !!{FF}{00}
+
+@0161
+{FB} {52} {F8}Groooooaaah !!{F8}{FD}V·e·r·m·i·n·e h·u·m·a·i·n·e !{FF}{00}
+
+@0162
+{FB} QE{F9}  !{FD}Sors d'ici !{FC}Le Docteur a bel et bien{FD}déclenché l'autodestruction !{FC}{FB}A CMais···{FC}{FB} Q Je t'ai dit de ne pas{FD}t'inquiéter pour nous !{FC}Des gens t'attendent,{FD}n'est-ce pas ?{FC}Maintenant, file !{FC}{FB}A CD'accord.{FC}{FB}A  Mais on se reverra plus tard, hein ?{FD}Promets-le-moi !{FC}{FB} QBBien sûr !{FF}{00}
+
+@0163
+{FB} QBOn sera juste derrière toi.{FD}Ne t'inquiète pas pour nous !{FF}{00}
+
+@0164
+{FB}A  Quelle machine incroyable.{FC}C'est ici que dormait{FD}le Mega-Emperor.{FF}{00}
+
+@0165
+{FB} a Attends, {F9} .{FD}Tu ne peux pas toucher à ça !{FF}{00}
+
+@0166
+{FB}A  Toucher à quoi ?{FF}{00}
+
+@0167
+{FB} {FF}{00}
+
+@0168
+{FB}A HAaaaah !{FF}{00}
+
+@0169
+{FB} {5B} {F8}Ga··· gou···{F8}{FC}{FB}A HQu'est-ce que···!?{FC}{FB} aALà, tu as fait fort.{FD}Tu as réveillé mon pauvre petit bébé.{FF}{00}
+
+@0170
+{FB}A FVotre quoi ?!{FD}Mais c'est QUOI, ce truc !{FC}{FB} aAC'est un bébé Medabot{FD}encore en développement.{FC}Il s'appelle Babbyblu.{FD}Il est mignon, non ?{FF}{00}
+
+@0171
+{FB} {5B} {F8}Gou gou ga···{F8}{FC}{FB} aALà, là.{FD}Je t'ai réveillé, hein.{FC}{FB} a C'est ta faute, alors{FD}tu vas faire le baby-sitter.{FC}{FB}A FHein ? Baby-sitter ?{FD}Je ne suis pas doué avec les enfants···{FC}Euh, je veux dire, ce n'est{FD}pas le moment de···{FC}{FB} a Bon, tu as battu le Robo Emperor{FD}et tout ça···{FC}Mais tu n'es peut-être pas de taille{FD}face à un enfant qui pleure.{FC}{FB} aABon, bonne chance !{FD}À la prochaine !{FC}{FB}A FHé, attendez !{FC}{FB} {5B} {F8}Gou···{F8}{FF}{00}
+
+@0172
+{FB} {5B} {F8}Ga··· gou···{F8}{FF}{00}
+
+@0173
+{FB} a Aaah, mon pauvre bébé !{FD}{F8}Snif snif{F8}{FC}{FB}A BQuoi ! C'est vous qui avez commencé !{FC}{FB}A  Mais surtout,{FD}l'autodestruction···!{FC}{FB} a Ça ne me concerne plus, maintenant.{FC}Aaah, mon pauvre petit{FD}bébé adoré···{FC}{FB}A EJe n'y arriverai pas.{FC}{FB}A  Je vous aurai prévenu !{FF}{00}
+
+@0174
+{FB} a Oh ! Mon bébé !{FC}{FB}A ELaissons ce type tranquille{FD}avec son "bébé"···{FF}{00}
+
+@0175
+{FB}A  Le Robo Emperor et le Babbyblu{FD}dormaient ici.{FC}{FB}A ECes choses dangereuses{FD}ont disparu, maintenant, non ?{FF}{00}
+
+@0176
+{FB}A HQu'est-ce que vous faites !?{FC}{FB} ·AAlors, c'est encore toi !{FD}Gwa ha ha !{FC}C'est toi qui as pourchassé{FD}les souris tout ce temps ?{FC}Mais c'est dommage pour toi,{FD}parce que le mérite ne revient pas{FD}au chasseur, mais à celui qui attrape !{FF}{00}
+
+@0177
+{FB}A HRien de tout ça n'a d'importance !{FC}Si on traîne, le château{FD}va exploser !{FC}{FB} · Non mais, qu'est-ce que tu racontes !{FC}C'est impossible.{FD}Arrêtez ce garçon.{FC}{FB} 9 Affirmatif !{FF}{00}
+
+@0178
+{FB}A  Ah !{FF}{00}
+
+@0179
+{FB}A EAttendez !{FD}Il reste quelqu'un à l'intérieur···{FC}{FB} £ Je ne bouge pas !{FC}Je vais faire une sieste{FD}ICI MÊME !{FC}{FB}A FAttends, pousse-toi de là !{FF}{00}
+
+@0180
+{FB}A DErika ! Karin !{FD}Où est Koji ?{FC}{FB} C Il poursuivait les chefs Rubberobos{FD}avec les Select Corps.{FC}{FB}A  Où sont les Screws ?{FC}{FB} B On dirait qu'ils sont partis.{FC}{FB}A DJe vois.{FC}{FB}A  Et Henry et Kirara ?{FD}Je m'inquiète un peu pour eux.{FF}{00}
+
+@0181
+{FB}A ESi seulement ça n'explosait pas.{FC}{FB} BHExploser !?{FC}{FB} CHTu ne parles pas de ce château !?{FF}{00}
+
+@0182
+{FB} S Tu as bien travaillé, {F9} .{FD}Je t'ai causé bien des ennuis.{FC}Tout ce gâchis vient sans doute{FD}de la rancune absurde qu'il me voue.{FC}{FB}A  Une rancune absurde ?{FC}{FB} SBIl a toujours rivalisé avec moi.{FC}Mais il a eu beau essayer,{FD}il ne m'a jamais battu une seule fois !{FC}{FB}A EC'est donc pour ça que le Dr Armond{FD}voulait dominer le monde···{FC}{FB} TBTu es fatigué, non ?{FC}C'est le moment idéal pour{FD}te reposer tranquillement à la maison.{FC}Mais reviens nous voir{FD}quand tu en auras envie♥{FF}{00}
+
+@0183
+{FB}A AJe retourne là où{FD}sont les autres !{FF}{00}
+
+@0184
+{FB}A AHa ha ha ha !{FC}{FB} .AOn va s'entraîner pour ne plus{FD}perdre contre toi la prochaine fois.{FC}{FB}A AOui !{FD}J'ai hâte de voir ça !{FC}{FB} . Le bateau est prêt.{FC}C'était le "Jaws" des Rubberobos,{FD}mais c'est de l'histoire ancienne···{FC}Je vous ramène tous à Riverview.{FD}Allez, tous à bord !{FF}{00}
+
+@0185
+{FB} DDOn a fait un sacré chemin,{FD}pas vrai, {F9}  ?{FC}Il est temps de se reposer pour de bon.{FC}{FB} BDIl nous est arrivé plein de bonnes{FD}et de mauvaises choses, mais au{FD}final, on s'est bien amusés !{FC}Allons-y !{FC}{FB} CAAllons-y !{FC}{FB}A DD'accord !{FF}{00}
+
+@0186
+{FB} B On en a fait des choses ensemble,{FD}pas vrai.{FC}Mais je t'ai menti.{FC}{FB}A FComment ça !{FC}{FB}A EEnfin, oui, sans doute.{FC}{FB} BAAh ha ha ha !{FC}{FB} B Hé···{FC}{FB}A  Quoi ?{FC}{FB} BGÇa te va si je reste à{FD}tes côtés, à partir de maintenant···?{FC}{FB}A  Hmm ?{FF}{00}
+
+@0187
+{FB} H Ouaah !{FC}{FB} FBJ'ai dit de ne pas me pousser !{FC}{FB} GEAïe aïe aïe aïe !{FF}{00}
+
+@0188
+{FB}A BQu'est-ce que vous faites, vous !?{FC}{FB} GAVous n'étiez pas en plein{FD}bisou bisou, vous deux ?{FC}{FB}A BQui allait embrasser qui ?!{FD}Pas vrai, Erika ?{FF}{00}
+
+@0189
+{FB} BG{F8}(·····){F8}{FC}{FB} GAErika n'a pas l'air d'accord.{FC}{FB} FAQuelle poule mouillée, {F9}  !{FF}{00}
+
+@0190
+{FB}A B{F8}Hhh hhh hhh{F8}{FD}Pourquoi il a fallu qu'ils viennent···{FF}{00}
+
+@0191
+{FB} FAAh ha ha ha !{FC}C'est marrant de te taquiner, {F9}  !{FD}Tu t'es énervé et···{FF}{00}
+
+@0192
+{FB} GEAh ! Chef, regardez là-bas !{FC}{FB} F Hein ? Quoi ?{FF}{00}
+
+@0193
+{FB}A HTu··· viens de···{FF}{00}
+
+@0194
+{FB} BHH-hé, {F9}  !{FC}Qu'est-ce qui t'arrive ?{FD}Ça va !? ···Hé !{FC}{FB} BBOooh !{FD}Et tu te dis un homme !?{FC}{FB} BDComment je vais pouvoir t'appeler{FD}"héros de la justice", hein ? Hi hi.{FF}{00}
+
+@0195
+{FB}A AJe suis rentré.{FC}{FB} {50} Bon retour, {F9} .{FD}Salty s'est ennuyé de toi.{FC}Tu devrais passer plus{FD}de temps avec ton chien.{FC}{FB}A DEuh, oui, Maman.{FF}{00}
+
+@0196
+{FB} GDAttendez ! Cheeef !{FF}{00}
+
+@0197
+{FB} HDN-ne m'oubliez pas···{FF}{00}
+
+@0198
+{FB} BAUne fois rentrée, je vais{FD}chercher encore plus de scoops !{FC}Le monde attend sa{FD}"journaliste du futur" !{FF}{00}
+
+@0199
+{FB} CD{F9} .{FD}J'ai une faveur à te demander.{FC}{FB}A DQu'y a-t-il, Karin ?{FC}{FB} CGÇa te va si je t'attends{FD}à notre "endroit spécial" ?{FC}{FB}A  Hein···?{FC}{FB} CFOh, laisse tomber.{FD}Oublie ça !{FF}{00}
+
+@0200
+{FB}A HHein ? Karin !?{FC}{FB}A  C'était quoi, ça ?{FD}Quelqu'un peut m'expliquer !{FF}{00}
+
+@0201
+{FB} D {F9}  !{FF}{00}
+
+@0202
+{FB}A  Qu'est-ce que tu veux, Koji ?{FD}Karin vient de partir sans toi !{FC}{FB} D {F8}(·····){F8}{FC}{FB}A  Qu'est-ce qu'il y a ?{FC}{FB} DEC'est dur à dire pour moi.{FC}J'ai toujours été celui{FD}qui protégeait Karin.{FC}Mais maintenant···{FC}{FB}A  Maintenant ?{FC}{FB} D Je pense que tu peux t'en charger.{FD}Désormais, tu···{FF}{00}
+
+@0203
+{FB} B Te voilà, Koji !{FF}{00}
+
+@0204
+{FB}A  Erika.{FC}{FB} D Quoi ?{FC}{FB} B Koji vient avec moi.{FC}On va trouver un super scoop{FD}ensemble !{FC}{FB} DEHein ? Pourquoi je ferais ça ?{FC}{FB} B Tu es le rival de {F9} , non ?{FD}Alors tu es de mon côté.{FC}Je suis sûre que tu gagneras beaucoup{FD}à traîner avec moi.{FF}{00}
+
+@0205
+{FB}A HHein ? De quoi tu parles, Erika ?{FC}{FB} B Je veux dire, c'est grâce à toi{FD}que je suis si motivée, {F9}  !{FC}Tu m'as toujours caché tes actions{FD}et tes secrets.{FC}Alors je m'en suis servie comme{FD}carburant pour mon feu journalistique.{FC}La prochaine fois, j'aurai le scoop{FD}avant toi et je serai l'héroïne !{FC}C'est décidé, allons-y, Koji !{FF}{00}
+
+@0206
+{FB} DEHé ! Ne décide pas toute seule !{FC}{FB} B Pas de discussion.{FD}C'est la meilleure solution.{FF}{00}
+
+@0207
+{FB} DEJe n'ai absolument aucune idée{FD}de ce qui se passe.{FF}{00}
+
+@0208
+{FB} DCEn tout cas, {F9} ,{FD}prends bien soin de Karin !{FC}{FB} DDSérieusement, veille sur elle.{FF}{00}
+
+@0209
+{FB} B Dépêche-toi, Koji !{FD}On va rater notre scoop !{FF}{00}
+
+@0210
+{FB} DBHé ! Qui t'a nommée chef !{FF}{00}
+
+@0211
+{FB}A DSi je fais pleurer Karin, je crois{FD}que Koji va me tabasser sévèrement.{FC}{FB}A  Où peut bien être{FD}l'"endroit spécial" de Karin ?{FC}{FB}A E{F8}(·····){F8}{FC}Mmm, si je ne trouve pas,{FD}je peux toujours aller chez Karin.{FC}{FB}A DJe ne dois pas la faire attendre !{FF}{00}
+
+@0212
+{FB} W {F9} .{FD}Prends soin de Karin.{FF}{00}
+
+@0213
+{FB} W Oh, {F9} . Bonjour.{FC}Karin est rentrée saine et sauve !{FD}C'est grâce à toi !{FC}{FB}A DD-de rien.{FC}{FB}A  Euh, où est Karin ?{FC}{FB} W Elle répétait qu'elle allait{FD}dans un endroit appelé Fiyun.{FC}Je me demande si c'est une sorte{FD}d'"endroit spécial" pour elle.{FC}{FB}A  Fiyun, hein ?{FC}{FB}A DBon ! Désolé de vous avoir dérangé.{FD}Au revoir !{FF}{00}
+
+@0214
+{FB}A DKarin, tu es là !{FC}{FB} CA{F9}  ! Tu es venu !{FD}Je suis si contente !{FC}{FB}A DMais pourquoi es-tu ici ?{FC}{FB} CDFiyun est mon endroit spécial.{FD}J'y ai tellement de souvenirs.{FC}Quand j'étais toute seule et effrayée,{FD}tu es venu me sauver.{FC}{FB} CG{F9} ···{FF}{00}
+
+@0215
+{FB}A  Toutes les chaînes parlent de{FD}l'évasion des Rubberobos.{FC}{FB}A EQuel genre de prison les enfermait,{FD}pour qu'ils s'évadent si facilement ?{FC}Pfff···{FF}{00}
+
+@0216
+{FB} C Tu veux dire que Koji···?{FC}{FB}A DPas parce que Koji me l'a demandé.{FD}Parce que je veux être près de toi.{FC}{FB} CG{F9} ···{FF}{00}
+
+@0217
+{FB} E Ouaf ouaf !{FC}{FB}A ASalty, tu es venu !{FD}Aha ha ha ha !{FF}{00}
+
+@0218
+{FB} G Tu as oublié, {F9}  ?{FD}Je n'ai pas encore perdu contre toi !{FC}{FB}A DTu ne retiens jamais la leçon, hein.{FD}Je t'attends !{FF}{00}
+
+@0219
+{FB} GBGrrrrr !{FD}Tu es vraiment trop sûr de toi !{FC}{FB} GCTu ne pourras plus me parler{FD}comme ça la prochaine fois !{FF}{00}
+
+@0220
+{FB} F Tu ne peux pas fuir éternellement.{FC}Je jouerai avec toi la prochaine fois{FD}qu'on se verra à l'école.{FC}Souviens-t'en !{FC}{FB}A DJ'ai hâte.{FC}{FB} FCBleeeeh.{FF}{00}
+
+@0221
+{FB} HCJe veux rentrer prendre un bain{FD}avec mon Medabot.{FC}{FB}A  Tu es sûr de vouloir faire ça ?{FD}Ton Medabot va rouiller.{FC}{FB} HDC'est si triste que mon Medabot{FD}ne puisse pas prendre de bain.{FF}{00}
+
+@0222
+{FB}A DCes types ne changeront jamais.{FC}Mais ils ont été utiles{FD}de temps en temps.{FF}{00}
+
+@0223
+{FB} BDJe vais pouvoir écrire un super{FD}article grâce à nos aventures !{FC}Je n'oublierai rien de ce qu'on a fait.{FC}Quand mon article sera fini,{FD}je repars chercher un nouveau scoop !{FF}{00}
+
+@0224
+{FB} BA{F9} .{FC}On en a vécu, des choses ensemble,{FD}mais je me suis bien amusée !{FC}Tu as été vraiment cool !{FC}{FB}A GVraiment ? Tu trouves ?{FD}Oui, tu dois avoir raison.{FC}{FB} BBNe le prends pas si au sérieux !{FC}{FB} BAVivement la prochaine fois !{FC}{FB}A AOuais !{FF}{00}
+
+@0225
+{FB} DCOn a encore un compte à régler.{FC}Quand on sera rentrés,{FD}on fera un Robattle, {F9}  !{FC}{FB} DGEt pas seulement···{FD}Reviens me voir aussi.{FC}{FB}A ABien sûr !{FF}{00}
+
+@0226
+{FB} CDJe suis si heureuse de t'avoir{FD}rencontré, {F9}  !{FC}Quand je suis près de toi,{FD}je sens comme des papillons{FD}dans le ventre !{FC}Tu seras toujours mon ami ?{FC}{FB}A ABien sûr !{FF}{00}
+
+@0227
+{FB} DDViens, Karin, ton père{FD}va s'inquiéter.{FC}{FB} CAEh bien, {F9} .{FD}Revoyons-nous bientôt !{FF}{00}
+
+@0228
+{FB}A  Hmm ?{FF}{00}
+
+@0229
+{FB} E Ouaf ouaf !{FF}{00}
+
+@0230
+{FB}A DTu as raison, Salty.{FD}On devrait rentrer aussi !{FF}{00}
+
+@0231
+{FB}A EMmm, c'est-à-dire···{FC}{FB} S Va à la Medabot Corporation.{FC}Tu y trouveras sûrement{FD}quelque chose qui t'aidera.{FC}{FB}A  D'accord.{FD}J'y vais tout de suite, Docteur.{FC}{FB} S Prends soin de toi.{FF}{00}
+
+@0232
+{FB} · Tu étais là quand le Dr Meta-Evil{FD}et le gang Rubberobo se sont évadés.{FC}Puis tu étais là quand l'île Medabot{FD}a soudain été bouclée.{FC}Tu es toujours là où sont les ennuis !{FC}{FB} ·AMon flair ne me trompe jamais !{FC}Partout où tu es, il y a toujours{FD}quelque chose dont je peux profiter{FD}sans avoir à me fatiguer !{FF}{00}
