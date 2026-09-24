@@ -1,14 +1,23 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-08-29 · dernier commit : `1a25e49` Chapitre 8: patch
-reconstruit, site a 2 909 entrees, narratif 2 217/3 875
+Dernière séance : 2026-09-24 · dernier commit : `497b9f1` Chapitre 9: patch
+reconstruit, site a 3 186 entrees, narratif 2 494/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Huit chapitres sont en français : 2 909 entrées sur 5 933.** Tables
+**Neuf chapitres sont en français : 3 186 entrées sur 5 933.** Le neuvième
+(`0x47C64C`, 277, traduit le 24/09/2026) est la suite de l'île Medabot : la
+maison hantée avec Karin, la salle d'arcade, la seconde moitié du tournoi
+(Kir, Shandy, Spumoni, Joe Swihan, Tequonic, Ryo, la finale contre Koji), le
+Dr Armond, les montagnes russes "Spirit" avec Erika, les photos des
+Rubberobos, la visite du château de la Sorcière (Milky, Rappy, le Maître des
+Ténèbres, l'Armée Rubberobo), les enfants enfermés, Shrimplips, le retour en
+ferry, Papa et Maman. Narratif mesuré : **2 494 dialogues sur 3 875, soit
+64,4 %**. Relogement : 1 781 entrées, 144 856 octets ; 8 291 764 octets libres.
+Déployé, SHA-1 du patch en ligne identique au local. Les huit précédents : tables
 `0x479F0C` (237, le vol d'Eggy et Rosewood), `0x47A2C4` (303, le mont Odoro),
 `0x47A784` (323, l'île Medabot), `0x47B110` (295, les enfants disparus et les
 égouts), `0x47B5B0` (259, les Ruines antiques et le royaume de Kodine),
@@ -67,12 +76,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47C64C` (277 entrées), par ordre d'adresse.** Lire
+**Traduire la table `0x47CD7C` (233 entrées), par ordre d'adresse.** Lire
 toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
 (pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47C64C.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47CD7C.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -83,8 +92,9 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Restent après elle, dans l'ordre : `0x47CD7C` (233), `0x47D124` (293),
-`0x47D5C0` (323), `0x47DAD0` (276), puis `0x4144B4` (256).
+Restent après elle, dans l'ordre : `0x47D124` (293), `0x47D5C0` (323),
+`0x47DAD0` (276), puis `0x4144B4` (256). La ROM d'origine est toujours à
+`C:\Users\YHN\Documents\Git\Medabots - Metabee (Europe)_8586.gba`.
 
 **Avant d'employer un signe, vérifier qu'il a un glyphe.** Le chapitre 8 a
 failli partir avec des `°` (« n° 128 ») : jamais employé, absent de
@@ -131,6 +141,17 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **Vocabulaire du chapitre 9 (24/09/2026).** Le château de la Sorcière
+  (l'attraction ; Milky en est la sorcière, et « le château de Milky » du
+  chapitre 7 reste), Milky Land de jour et de nuit, la Forêt perdue, le
+  Maître des Ténèbres, l'Armée Rubberobo (les figurants), le Héros que Milky
+  vouvoie, la peluche Rappy, le "Spirit" (montagnes russes), le "Shark"
+  (ferry), le Royaume des Îles du Sud et le prince Kir, les manches 1re à 4e
+  puis demi-finales et finale. Shandy parle italien, Tequonic un français
+  cassé (« Le français, c'est vraiment dur ») ; Shrimplips garde ses « w »
+  (« Shwimpwips ! »). « Big guy » et « big brother » deviennent « grand
+  frère ». Boissons de `483ED8.txt` : jus d'orange, pack de citrons, huile
+  de luxe ; 1,50 £ et 3 £.
 - **La ROM traduite se télécharge fabriquée sur l'appareil, jamais servie.**
   Yann a demandé « mets la ROM disponible en téléchargement » ; héberger le
   fichier est une redistribution d'œuvre sous droits, et c'est la règle
