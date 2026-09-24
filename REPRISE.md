@@ -1,14 +1,23 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-09-24 · dernier commit : `497b9f1` Chapitre 9: patch
-reconstruit, site a 3 186 entrees, narratif 2 494/3 875
+Dernière séance : 2026-09-24 · dernier commit : `e3abd17` Chapitre 10: patch
+reconstruit, site a 3 419 entrees, narratif 2 727/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Neuf chapitres sont en français : 3 186 entrées sur 5 933.** Le neuvième
+**Dix chapitres sont en français : 3 419 entrées sur 5 933.** Le dixième
+(`0x47CD7C`, 233, traduit le 24/09/2026) est le final : le château du
+Dr Meta-Evil, Seaslug et le lac d'eau gazeuse, Shrimplips, le chercheur
+espion et Babbyblu, la Phantom Lady (Kirara) et le Phantom Renegade (Henry),
+le Mega-Emperor et le Limiteur, l'autodestruction qui n'est qu'un pétard, le
+Dr Aki et Nae, la mutinerie de Tokkuri, le retour sur le "Jaws", puis
+l'épilogue (Erika embauche Koji, l'endroit spécial de Karin à Fiyun).
+Narratif mesuré : **2 727 sur 3 875, soit 70,4 %**. Relogement : 1 931
+entrées, 161 700 octets ; 8 274 920 octets libres. Déployé, SHA-1 identique.
+Le neuvième
 (`0x47C64C`, 277, traduit le 24/09/2026) est la suite de l'île Medabot : la
 maison hantée avec Karin, la salle d'arcade, la seconde moitié du tournoi
 (Kir, Shandy, Spumoni, Joe Swihan, Tequonic, Ryo, la finale contre Koji), le
@@ -76,12 +85,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47CD7C` (233 entrées), par ordre d'adresse.** Lire
+**Traduire la table `0x47D124` (293 entrées), par ordre d'adresse.** Lire
 toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
 (pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47CD7C.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47D124.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -92,8 +101,8 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Restent après elle, dans l'ordre : `0x47D124` (293), `0x47D5C0` (323),
-`0x47DAD0` (276), puis `0x4144B4` (256). La ROM d'origine est toujours à
+Restent après elle, dans l'ordre : `0x47D5C0` (323), `0x47DAD0` (276),
+puis `0x4144B4` (256). La ROM d'origine est toujours à
 `C:\Users\YHN\Documents\Git\Medabots - Metabee (Europe)_8586.gba`.
 
 **Avant d'employer un signe, vérifier qu'il a un glyphe.** Le chapitre 8 a
@@ -141,6 +150,15 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **Vocabulaire du chapitre 10 (24/09/2026).** Le Limiteur, le Mega-Emperor
+  et le Robo-Emperor (graphie de l'original, entrée par entrée), le
+  Dr Meta-Evil, la Medabot Corporation, la "Mini grande roue" et le
+  "Periscope" (objets), les Medaparts "Aim Shot" (en anglais), le tapis
+  roulant, l'autodestruction, Riverview, le "Jaws", Babbyblu, l'"endroit
+  spécial", la "journaliste du futur". « Robo retreat » = « Robo repli »,
+  « Holy Medaroli » = « Nom d'un Medabot ! », la Phantom Lady reprend « la
+  fleur de la justice » et « la mauvaise herbe du mal ». Armond et Aki se
+  tutoient ; Henry vouvoie Armond.
 - **Vocabulaire du chapitre 9 (24/09/2026).** Le château de la Sorcière
   (l'attraction ; Milky en est la sorcière, et « le château de Milky » du
   chapitre 7 reste), Milky Land de jour et de nuit, la Forêt perdue, le
