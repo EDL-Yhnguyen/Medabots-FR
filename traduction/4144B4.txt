@@ -1,0 +1,792 @@
+# Table 0x4144B4 — messages système et débogage (256 entrées)
+#
+# La dernière table de dialogue n'en est pas vraiment une : elle mêle des
+# messages système réels et beaucoup de débogage. Seuls les messages réels
+# sont traduits ; tout le reste est recopié à l'identique, octet pour octet.
+#
+# Traduits : @0031–@0129 (« Impossible d'utiliser ça maintenant ! » ×98 et
+# « … ici ! », affichés quand on emploie un objet au mauvais moment) et
+# @0130–@0135 (l'assemblage d'un Medabot : « n'est pas encore assemblé »,
+# « La Medapart de tête / de bras droit / de bras gauche / de jambes »,
+# « est terminé »). {F9}A à {F9}D sont des insertions de variables (noms de
+# pièces), conservées à leur place. {FF}B est une question oui/non : conservé.
+#
+# Laissés tels quels, et pour cause :
+# - @0000–@0030, « Item X,sorry », « Parts X of head,Y get!! », « Face 00 »
+#   (@0136–@0240), « Ichimaie », « Open enb », « Yes or No? » (@0241–@0247) :
+#   des emplacements de débogage en anglais cassé, jamais affichés — les vrais
+#   messages d'objet et d'équipement sont dans 47E388.txt ;
+# - @0248–@0255 : huit pointeurs qui visent la table de pointeurs elle-même
+#   (0x4144B4) et la décodent comme du texte. Les modifier relogerait ce
+#   « texte » et réécrirait les pointeurs : à ne jamais toucher.
+#
+# Espace final écrit {00}, comme dans les autres tables.
+#
+
+@0000
+{FB}A AHow are you?{FC}{FF}{00}
+
+@0001
+{FB}A AItem {F9}A,sorry.{FF}{00}
+
+@0002
+{FB}A AItem {F9}A,{F9}B get!!{FF}{00}
+
+@0003
+{FB}A AI have not Item {F9}A.{FF}{00}
+
+@0004
+{FB}A AItem {F9}A,{F9}B lost!!{FF}{00}
+
+@0005
+{FB}A AItem {F9}A,all lost!!{FF}{00}
+
+@0006
+{FB}A AParts {F9}A,sorry.{FF}{00}
+
+@0007
+{FB}A AParts {F9}A of head,{F9}B get!!{FF}{00}
+
+@0008
+{FB}A AParts {F9}A of right,{F9}B get!!{FF}{00}
+
+@0009
+{FB}A AParts {F9}A of left,{F9}B get!!{FF}{00}
+
+@0010
+{FB}A AParts {F9}A of leg,{F9}B get!!{FF}{00}
+
+@0011
+{FB}A AI have not parts {F9}A of head.{FF}{00}
+
+@0012
+{FB}A AI have not parts {F9}A of right.{FF}{00}
+
+@0013
+{FB}A AI have not parts {F9}A of left.{FF}{00}
+
+@0014
+{FB}A AI have not parts {F9}A of leg.{FF}{00}
+
+@0015
+{FB}A AParts {F9}A of head,{F9}B lost!!{FF}{00}
+
+@0016
+{FB}A AParts {F9}A of right,{F9}B lost!!{FF}{00}
+
+@0017
+{FB}A AParts {F9}A of left,{F9}B lost!!{FF}{00}
+
+@0018
+{FB}A AParts {F9}A of leg,{F9}B lost!!{FF}{00}
+
+@0019
+{FB}A AParts {F9}A of head,all lost!!{FF}{00}
+
+@0020
+{FB}A AParts {F9}A of right,all lost!!{FF}{00}
+
+@0021
+{FB}A AParts {F9}A of left,all lost!!{FF}{00}
+
+@0022
+{FB}A AParts {F9}A of leg,all lost!!{FF}{00}
+
+@0023
+{FB}A A{F9}A get!!{FF}{00}
+
+@0024
+{FB}A A{F9}A lost{FF}{00}
+
+@0025
+{FB}A AThis medal sorry.{FF}{00}
+
+@0026
+{FB}A A{F9}A Medal get!!{FF}{00}
+
+@0027
+{FB}A ATinpet sorry.{FF}{00}
+
+@0028
+{FB}A ATinpet sorry.{FF}{00}
+
+@0029
+{FB}A AMale tinpet get!!{FF}{00}
+
+@0030
+{FB}A AFemale tinpet get!!{FF}{00}
+
+@0031
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0032
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0033
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0034
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0035
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0036
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0037
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0038
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0039
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0040
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0041
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0042
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0043
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0044
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0045
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0046
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0047
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0048
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0049
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0050
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0051
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0052
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0053
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0054
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0055
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0056
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0057
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0058
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0059
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0060
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0061
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0062
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0063
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0064
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0065
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0066
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0067
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0068
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0069
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0070
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0071
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0072
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0073
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0074
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0075
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0076
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0077
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0078
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0079
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0080
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0081
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0082
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0083
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0084
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0085
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0086
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0087
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0088
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0089
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0090
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0091
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0092
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0093
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0094
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0095
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0096
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0097
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0098
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0099
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0100
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0101
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0102
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0103
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0104
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0105
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0106
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0107
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0108
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0109
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0110
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0111
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0112
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0113
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0114
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0115
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0116
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0117
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0118
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0119
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0120
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0121
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0122
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0123
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0124
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0125
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0126
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0127
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0128
+Impossible d'utiliser ça maintenant !{FF}{00}
+
+@0129
+Impossible d'utiliser ça ici !{FF}{00}
+
+@0130
+Le Medabot "{F9}A"{FD}n'est pas encore assemblé !{FF}B
+
+@0131
+La Medapart de tête{FD}"{F9}A"{FF}B
+
+@0132
+La Medapart de bras droit{FD}"{F9}B"{FF}B
+
+@0133
+La Medapart de bras gauche{FD}"{F9}C"{FF}B
+
+@0134
+La Medapart de jambes{FD}"{F9}D"{FF}B
+
+@0135
+Le Medabot "{F9}A" est terminé !{FF}{00}
+
+@0136
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0137
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0138
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0139
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0140
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0141
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0142
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0143
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0144
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0145
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0146
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0147
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0148
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0149
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0150
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0151
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0152
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0153
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0154
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0155
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0156
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0157
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0158
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0159
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0160
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0161
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0162
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0163
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0164
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0165
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0166
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0167
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0168
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0169
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0170
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0171
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0172
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0173
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0174
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0175
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0176
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0177
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0178
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0179
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0180
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0181
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0182
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0183
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0184
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0185
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0186
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0187
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0188
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0189
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0190
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0191
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0192
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0193
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0194
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0195
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0196
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0197
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0198
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0199
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0200
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0201
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0202
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0203
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0204
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0205
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0206
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0207
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0208
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0209
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0210
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0211
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0212
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0213
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0214
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0215
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0216
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0217
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0218
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0219
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0220
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0221
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0222
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0223
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0224
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0225
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0226
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0227
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0228
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0229
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0230
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0231
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0232
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0233
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0234
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0235
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0236
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0237
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0238
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0239
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0240
+{FB}A  Face 00{FC}{FB}A AFace 01{FC}{FB}A BFace 02{FC}{FB}A CFace 03{FC}{FB}A DFace 04{FC}{FB}A EFace 05{FC}{FB}A FFace 06{FC}{FB}A GFace 07{FC}{FB}A HFace 08{FC}{FF}{00}
+
+@0241
+Ichimaie{FC}{FF}{00}
+
+@0242
+{FB} B Open enb{FB} {FF}{00}
+
+@0243
+{FB} BAOk{FF}{00}
+
+@0244
+{FB} BAYes or No?{FF}D
+
+@0245
+{FB} BAYes{FF}{00}
+
+@0246
+{FB} BANo{FF}{00}
+
+@0247
+{FB} {FF}{00}
+
+@0248
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0249
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0250
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0251
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0252
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0253
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0254
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
+
+@0255
+{F0}·,HC.,HW.,Hs.,H?.,H{5D}.,H{75}.,H{8A}.,H{A9}.,H{C9}.,H{E8}.,HF,,Hn,,H♥,,H{6D},,H{8E},,H{AE},,H{CF},,H{EF},,HN',Hu',H{51}',H{72}',H{92}',H{A0}',H{AD}',H{C4}',H{D8}',H{D8}',H{EB}',HB-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Ha-,Hz-,H%-,H{75}-,H{8D}-,H{AA}-,H{C6}-,H{DD}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{FA}-,H{68}/,H{73}/,H{85}/,H{8D}/,H{9D}/,H{A6}/,H{AE}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{B4}/,H{FB} {FF}{00}
