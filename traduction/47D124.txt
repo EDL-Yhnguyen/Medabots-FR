@@ -806,7 +806,7 @@ La pièce historique "Ciel bleu"{FF}{00}
 {FB} {58} Quoi qu'il arrive,{FD}je continuerai à cuisiner !{FF}{00}
 
 @0257
-{FB} {58} Ici, la cuisine est la meilleure qui soit !{FD}Il n'y a pas que les Rubberobos qui en veulent !{FF}{00}
+{FB} {58} Ici, la cuisine est la meilleure qui soit !{FD}Même les Rubberobos veulent y manger !{FF}{00}
 
 @0258
 {FB} D Alors, la médaille était là ?{FC}{FB}A DOui, elle y était.{FF}{00}
