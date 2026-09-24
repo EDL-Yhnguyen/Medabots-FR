@@ -23,8 +23,8 @@ contrôlée par le SHA-1 du patch en ligne. Relogement final : 2 556 entrées,
 **Ce qui n'est pas traduit, et pourquoi.** Quatre tables sur 33 :
 `0x3BA658` (120 noms de Medabots) et `0x3C40B8` (97 noms de personnages), par
 décision du 06/08 ; `0x3BCFEC` (480 codes de pièces `BAT-11`) qui sont des
-identifiants ; et `0x3BBB4C`, les **480 noms de Medaparts**, dont la décision
-appartient à Yann (voir ci-dessous). Dans `0x4144B4`, le débogage (« Face 00 »,
+identifiants ; et `0x3BBB4C`, les **480 noms de Medaparts**, gardés en anglais
+par décision de Yann du 24/09. Dans `0x4144B4`, le débogage (« Face 00 »,
 « Item X,sorry ») et les huit pointeurs décodés en texte (@0248–@0255) sont
 recopiés à l'identique : les modifier relogerait la table de pointeurs.
 
@@ -36,20 +36,24 @@ manette** : lancer `mGBA.exe travail/medabots-fr.gba`, nouvelle partie, lire.
 
 ## La prochaine action
 
-**Trancher les 480 Medaparts (`0x3BBB4C`).** Recommandation : les laisser en
-anglais, comme les noms de Medabots — « CHERUB BODY » traduit pendant que le
-Medabot s'appelle « CHERUB » serait incohérent à l'écran, et les dialogues les
-citent tels quels (COCKPIT, WING, JET ENGINE, STONECLUSTER, SCORPION DOG,
-BLASTO, ARMA-HEAD, les douze du Rallye Partsun). Si Yann confirme, le lot
-« Objets, pièces et médailles » du site passe à 1 et le chantier de
-traduction est clos ; sinon, 480 décisions individuelles (347 mots finaux
-distincts, aucune régularité) et une relecture de tous les dialogues qui les
-citent.
+**Le chantier de traduction est clos.** Yann a tranché le 24/09/2026 : les
+480 noms de Medaparts (`0x3BBB4C`) restent en anglais, comme les noms de
+Medabots et de personnages. Le site le dit (étiquette « Terminée », lots
+« Objets » et « PNJ » à 1, `ENTREES.gardees` = 1 366 entrées gardées en
+anglais par choix ou jamais affichées).
 
-Ensuite, si l'envie prend : **les guillemets « »** (onze emplacements de
-glyphe vides, `0x4F` puis `0x7D`–`0x86` ; deux chevrons à dessiner, deux
-largeurs à écrire, et les 68 derniers replis disparaissent) et **la relecture
-en jeu** des chapitres 9 à 13, jamais vus à l'écran.
+Ce qui reste est de la vérification et du confort, pas de la traduction :
+
+1. **La relecture en jeu**, à la manette : les chapitres 9 à 13 n'ont jamais
+   été vus à l'écran, ni le texte relogé au-delà de 8 Mio (témoins :
+   `0x48698C @0000`, `0x483ED8 @0000`). Toute coquille se corrige dans
+   `traduction/<table>.txt`, puis le cycle habituel.
+2. **Les guillemets « »** : onze emplacements de glyphe vides (`0x4F`, puis
+   `0x7D`–`0x86`). Deux chevrons à dessiner, deux largeurs à écrire, et les 68
+   derniers replis disparaissent. Tout l'outillage est en place.
+3. **L'interface** reste affichée à 0,5 sur le site : ce qui manque n'est pas
+   dans les 33 tables de script (menus dessinés en tuiles, à établir avant
+   d'y toucher).
 
 Avant tout : `git log -1` et `git status`. Deux sessions ont déjà travaillé
 en même temps dans ce dépôt (29/08) sans se voir ; si un fichier de
@@ -70,11 +74,16 @@ identifiants :**
 | `0x3C6744` | @0122–@0175 | `Mess-0-122`…, jamais affichés |
 | `0x4144B4` | @0000–@0030, @0136–@0255 | débogage et pointeurs décodés en texte |
 | `0x3BCFEC` | les 480 | codes de pièces `BAT-11`, `ANG-11` |
+| `0x3BBB4C` | les 480 | noms de Medaparts, décision de Yann du 24/09 : anglais |
 | `0x3C40B8` | les 97 | noms de personnages, décision du 06/08 |
 | `0x3BA658` | les 120 | noms de Medabots, décision du 06/08 |
 
 ## Décidé cette séance
 
+- **Les 480 noms de Medaparts restent en anglais** (Yann, 24/09/2026), pour
+  rester cohérent avec les noms de Medabots qu'ils désignent et avec les
+  dialogues qui les citent tels quels. Le chantier de traduction est clos ;
+  le site affiche « Terminée » et compte 1 366 entrées gardées par choix.
 - **Le vocabulaire de chaque chapitre est fixé dans l'en-tête de son fichier**
   `traduction/<table>.txt`, au moment où il est traduit. C'est là qu'on le
   cherche, pas ici. Points transverses du 24/09 : les compétences suivent

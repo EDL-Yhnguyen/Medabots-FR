@@ -42,6 +42,14 @@ laisse rien. Donc on livre par lots, chacun étant un patch utilisable :
 4. Histoire principale
 5. PNJ et secondaire
 
+**Ce qui ne se traduit pas, par décision.** Les 120 noms de Medabots et les
+97 noms de personnages (06/08/2026), puis les 480 noms de Medaparts
+(24/09/2026) restent en anglais : les Medaparts portent le nom du Medabot
+qu'elles composent (« CHERUB BODY » pour « CHERUB »), et les dialogues les
+citent tels quels. Les 480 codes de pièces (`BAT-11`) sont des identifiants.
+**La traduction du script est terminée le 24/09/2026** : 4 567 entrées sur
+5 933, les 1 366 autres gardées par choix ou jamais affichées.
+
 Les autres axes (graphismes, audio, confort de jeu) viennent **après** la
 traduction : ils touchent les mêmes zones et les faire d'abord créerait du travail
 à refaire.

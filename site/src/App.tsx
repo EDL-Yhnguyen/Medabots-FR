@@ -19,6 +19,9 @@ export default function App() {
   const { session, pret: comptePret } = useSession()
   // Le compte d'entrées, pas la moyenne des lots : voir ENTREES.
   const total = ENTREES.traduites / ENTREES.total
+  // Terminé quand tout ce qui n'est pas traduit l'est par choix (noms gardés
+  // en anglais) ou n'est jamais affiché — voir le commentaire de ENTREES.
+  const termine = ENTREES.traduites + ENTREES.gardees >= ENTREES.total
 
   // Le patch est appliqué ici, dans le navigateur, juste avant de lancer le jeu.
   // La ROM patchée n'existe qu'en mémoire : rien n'est écrit, rien n'est envoyé.
@@ -35,7 +38,7 @@ export default function App() {
 
   return (
     <div className="zone-sure mx-auto max-w-3xl pt-10 sm:pt-16">
-      <Entete total={total} />
+      <Entete total={total} termine={termine} />
 
       <main className="mt-12 space-y-8">
         <section id="lecteur" aria-labelledby="titre-lecteur" className="scroll-mt-8">
@@ -189,7 +192,7 @@ export default function App() {
   )
 }
 
-function Entete({ total }: { total: number }) {
+function Entete({ total, termine }: { total: number; termine: boolean }) {
   return (
     <header className="monte">
       <div className="mb-5 flex flex-wrap gap-2">
@@ -198,6 +201,9 @@ function Entete({ total }: { total: number }) {
         <Etiquette ton={total > 0 ? 'vert' : 'corail'}>
           {total > 0 ? `${Math.round(total * 100)} % traduit` : 'Chantier ouvert'}
         </Etiquette>
+        {termine && (
+          <Etiquette ton="vert">Terminée · le reste est gardé en anglais par choix</Etiquette>
+        )}
       </div>
 
       <h1 className="text-[2.75rem] font-black leading-[1.02] tracking-tight sm:text-6xl">

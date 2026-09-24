@@ -16,6 +16,14 @@
  */
 export const ENTREES = {
   traduites: 4567,
+  /**
+   * Entrées volontairement gardées en anglais, ou jamais affichées : les
+   * 120 noms de Medabots et les 97 noms de personnages (décision du 06/08/2026),
+   * les 480 noms de Medaparts (décision du 24/09/2026, pour rester cohérent
+   * avec les noms de Medabots), les 480 codes de pièces, et les emplacements
+   * de débogage. Quand traduites + gardees == total, le chantier est clos.
+   */
+  gardees: 1366,
   total: 5933,
 } as const
 
@@ -35,8 +43,8 @@ export const LOTS: Lot[] = [
   {
     titre: 'Objets, pièces et médailles',
     detail:
-      '64 objets et 34 médailles traduits. Restent les 480 Medaparts. Les noms de Medabots ne se traduisent pas.',
-    part: 0.3,
+      'Terminé : 64 objets et 34 médailles traduits. Les 480 noms de Medaparts restent en anglais, par décision du 24/09/2026, comme les noms de Medabots qu’ils désignent — les dialogues les citent tels quels.',
+    part: 1,
   },
   {
     titre: 'Textes de combat',
@@ -47,14 +55,14 @@ export const LOTS: Lot[] = [
   {
     titre: 'Histoire principale',
     detail:
-      'Terminé : les quatorze tables de dialogue sont en français, soit 3 875 dialogues — le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, le faux rendez-vous et la forteresse volante Fiyun, le retour sur l’île Medabot et le château de Milky, le Rallye Partsun, Salty et le fan-club de Karin, la seconde moitié du tournoi et le château de la Sorcière, le final dans le château du Dr Meta-Evil, l’après-jeu, la chute de Fiyun et les Antackers, les répliques éparses de toute l’aventure, et les messages système. Restent, hors dialogues, les décisions réservées : les 480 Medaparts et les noms de Medabots et de personnages.',
+      'Terminé : les quatorze tables de dialogue sont en français, soit 3 875 dialogues — le vol d’Eggy et la prise d’otages de Rosewood, le fantôme du mont Odoro, l’île Medabot et son tournoi, les enfants disparus et le repaire des égouts, les Ruines antiques et le royaume sous-marin de Kodine, le faux rendez-vous et la forteresse volante Fiyun, le retour sur l’île Medabot et le château de Milky, le Rallye Partsun, Salty et le fan-club de Karin, la seconde moitié du tournoi et le château de la Sorcière, le final dans le château du Dr Meta-Evil, l’après-jeu, la chute de Fiyun et les Antackers, les répliques éparses de toute l’aventure, et les messages système. Les noms de Medabots, de personnages et de Medaparts restent en anglais, par décision.',
     part: 1,
   },
   {
     titre: 'PNJ et contenu secondaire',
     detail:
-      'La Medaroad Race et les 192 répliques d’avant et d’après combat sont traduites. Restent les dialogues de ville et les quêtes annexes.',
-    part: 0.2,
+      'Terminé : la Medaroad Race, les 192 répliques d’avant et d’après combat, les dialogues de ville et les quêtes annexes (Rallye Partsun, Kodine, parc Ninja, restaurant), et les répliques éparses de toute l’aventure.',
+    part: 1,
   },
 ]
 
