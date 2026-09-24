@@ -1,14 +1,23 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-09-24 · dernier commit : `e3abd17` Chapitre 10: patch
-reconstruit, site a 3 419 entrees, narratif 2 727/3 875
+Dernière séance : 2026-09-24 · dernier commit : `2d6fe5c` Chapitre 11: patch
+reconstruit, site a 3 712 entrees, narratif 3 020/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Dix chapitres sont en français : 3 419 entrées sur 5 933.** Le dixième
+**Onze chapitres sont en français : 3 712 entrées sur 5 933.** Le onzième
+(`0x47D124`, 293, traduit le 24/09/2026) est l'après-jeu : le Rallye Partsun
+à Rosewood (Hachiro, Koji, Karin), le "Robattle Royal", les Screws et leur
+"Royaume des Néo-Enfants", le retour à Kodine (Margarita, Mockingbird et ses
+cousins, Hachiro en vacances), Harvey à Fiyun et la "STONECLUSTER", le parc
+Ninja (les 3 frères ninjas, l'entrepôt aux souris, le vieil homme qui écorche
+« Robattle »), le Baron, le restaurant avec Karin et son père, "Medabots
+Hebdo", l'endroit spécial d'Erika. Narratif mesuré : **3 020 sur 3 875,
+soit 77,9 %**. Relogement : 2 124 entrées, 179 326 octets ; 8 257 294 octets
+libres. Déployé, SHA-1 identique. Le dixième
 (`0x47CD7C`, 233, traduit le 24/09/2026) est le final : le château du
 Dr Meta-Evil, Seaslug et le lac d'eau gazeuse, Shrimplips, le chercheur
 espion et Babbyblu, la Phantom Lady (Kirara) et le Phantom Renegade (Henry),
@@ -85,12 +94,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47D124` (293 entrées), par ordre d'adresse.** Lire
+**Traduire la table `0x47D5C0` (323 entrées), par ordre d'adresse.** Lire
 toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
 (pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47D124.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/47D5C0.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -101,8 +110,7 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Restent après elle, dans l'ordre : `0x47D5C0` (323), `0x47DAD0` (276),
-puis `0x4144B4` (256). La ROM d'origine est toujours à
+Restent après elle, dans l'ordre : `0x47DAD0` (276), puis `0x4144B4` (256). La ROM d'origine est toujours à
 `C:\Users\YHN\Documents\Git\Medabots - Metabee (Europe)_8586.gba`.
 
 **Avant d'employer un signe, vérifier qu'il a un glyphe.** Le chapitre 8 a
@@ -150,6 +158,13 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **Vocabulaire du chapitre 11 (24/09/2026).** Le "Robattle Royal", la salle
+  d'expérimentation, le "Royaume des Néo-Enfants", le jeu de la "Reine", le
+  musée Medabot, la plaque d'égout, l'entrepôt, la petite île isolée, les
+  3 frères ninjas (Goemon, Hanzo) et le parler ninja du chapitre 4, le Baron,
+  Madame Karakuchi, Monsieur Jyunmai, "Medabots Hebdo", le Médaillon d'argent
+  devenu fusée. Le vieil homme écorche « Robattle » (Bobattle, Rabottle,
+  Tobrattle). Les Medabots de Kodine et la "STONECLUSTER" restent en anglais.
 - **Vocabulaire du chapitre 10 (24/09/2026).** Le Limiteur, le Mega-Emperor
   et le Robo-Emperor (graphie de l'original, entrée par entrée), le
   Dr Meta-Evil, la Medabot Corporation, la "Mini grande roue" et le
