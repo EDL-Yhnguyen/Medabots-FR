@@ -1,14 +1,22 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-09-24 · dernier commit : `ec4f8a6` Chapitre 12: patch
-reconstruit, site a 4 035 entrees, narratif 3 343/3 875
+Dernière séance : 2026-09-24 · dernier commit : `698c100` Chapitre 13: patch
+reconstruit, site a 4 311 entrees, narratif 3 619/3 875
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
 
 ## Où on en est
 
-**Douze chapitres sont en français : 4 035 entrées sur 5 933.** Le douzième
+**Treize chapitres sont en français : 4 311 entrées sur 5 933.** Le treizième
+(`0x47DAD0`, 276, traduit le 24/09/2026) rassemble les répliques éparses de
+toute l'aventure : PNJ de Riverview, conseils de jeu (Renverse, Repérage,
+Camouflage), l'étang d'Odoro, les échanges de Medaparts, la boutique du
+chercheur, Kodine et la Pierre sacrée, les majordomes, les médailles
+ultra-rares, le parc Ninja, le Baron, Nae et le Dr Aki, Kirara et Henry, les
+douze Medaparts du Rallye Partsun. Narratif mesuré : **3 619 sur 3 875,
+soit 93,4 %**. Relogement : 2 451 entrées, 210 712 octets ; 8 225 908
+octets libres. Déployé, SHA-1 identique. Le douzième
 (`0x47D5C0`, 323 entrées dont 217 textes uniques et 40 vides, traduit le
 24/09/2026) est la chute de Fiyun (l'huile du Dr Armond, Harvey, le choix
 poursuite/équilibre, la capsule de secours, tout le monde aux commandes, les
@@ -102,12 +110,12 @@ dans l'historique. Un dépôt qui bouge sous les pieds ne se devine pas — il
 se regarde. Si `traduction/<table>.txt` existe déjà, non suivi ou commité,
 **cette table est prise** : passer à la suivante.
 
-**Traduire la table `0x47DAD0` (276 entrées), par ordre d'adresse.** Lire
+**Traduire la table `0x4144B4` (256 entrées), la dernière table de dialogue.** Lire
 toute la table, traduire d'un bloc, **commiter le fichier aussitôt écrit**
 (pour qu'une autre session le voie), puis :
 
 ```
-node outils/largeur.mjs <rom> traduction/47DAD0.txt 212 --contre travail/script
+node outils/largeur.mjs <rom> traduction/4144B4.txt 212 --contre travail/script
 MEDABOTS_ROM=<rom> npm run verifier
 node outils/patch.mjs <rom> travail/medabots-fr.gba patch/medabots-fr.bps
 cp patch/medabots-fr.bps site/public/  &&  cd site && npm run verifier && vercel deploy --prod --yes
@@ -118,7 +126,9 @@ Puis `site/src/donnees/avancement.ts` (`ENTREES.traduites`, le lot
 dialogues traduits / total des dialogues). Vérifier le déploiement par le
 SHA-1 du patch en ligne, pas en supposant.
 
-Reste après elle : `0x4144B4` (256), la dernière table de dialogue. La ROM d'origine est toujours à
+Après elle, les quatorze tables de dialogue sont traduites ; restent les
+décisions réservées à Yann (480 Medaparts, noms de Medabots et de
+personnages) et les guillemets « ». La ROM d'origine est toujours à
 `C:\Users\YHN\Documents\Git\Medabots - Metabee (Europe)_8586.gba`.
 
 **Avant d'employer un signe, vérifier qu'il a un glyphe.** Le chapitre 8 a
@@ -166,6 +176,13 @@ identifiants :**
 
 ## Décidé cette séance
 
+- **Vocabulaire du chapitre 13 (24/09/2026).** Les compétences suivent
+  3BE868.txt et 3B74B8.txt (Renverse, Repérage, Camouflage, esquive ;
+  Berserk et Medaforce inchangés), les médailles 3B6590.txt ("CHAT", "?"),
+  les objets 483ED8.txt ("Costume de chien", "Pile au citron"). Les
+  Medabots rares (Sailormate, Brass, Moon Dragon, Natural Color, Betty
+  Bear) et les douze Medaparts du Rallye restent en anglais ; "Medabot de
+  type Ange/Crevette/Démon". Medabots AX cité tel quel.
 - **Vocabulaire du chapitre 12 (24/09/2026).** La salle des machines, la
   salle de contrôle, le poste de pilotage, la zone d'atterrissage, la place,
   l'équilibre de Fiyun, le porte-bonheur, les Select 3 (Select Rouge, Bleu,
