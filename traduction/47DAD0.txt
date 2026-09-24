@@ -1,0 +1,862 @@
+# Table 0x47DAD0 — dialogues du treizième chapitre (276 entrées)
+#
+# Les répliques éparses de toute l'aventure : PNJ de Riverview après chaque
+# affaire (le faux principal, Kahlua, la parade, les journaux), conseils de
+# jeu (Renverse, Repérage, Camouflage, esquive, Medaforce, START pour
+# changer les Medaparts), Erika et l'étang d'Odoro, le tournoi de l'île
+# Medabot et les échanges de Medaparts, la boutique de Medaparts du chercheur,
+# le Capitaine et Tokkuri, Kodine (la Pierre sacrée, le Chambellan, Blue
+# Hawaii, le retour du Héros), les majordomes de Koji et de Karin, les
+# médailles ultra-rares, Milky et le château, le parc Ninja et sa glace, le
+# Baron et son jus de tomate, Fiyun vue d'en bas, Nae et le Dr Aki, Kirara et
+# Henry après la bataille, les douze Medaparts du Rallye Partsun, Babbyblu.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {45} en tête d'entrée est le Chambellan, {4F} le père du joueur, {50} sa
+# mère, {51} un enfant, {52} le Mega-Emperor, {5B} Babbyblu. {FF}B (quinze
+# entrées) est une question oui/non : conservé.
+#
+# Vocabulaire fixé : l'étang d'Odoro et le marais d'Odoro (chapitre 2), la
+# Pierre sacrée, le royaume de Kodine, le Grand Héros, la statue de
+# Bonaparte, la place de la gare, le journal de l'école, la salle du tournoi,
+# le "Spirit", la salle d'arcade. Les compétences suivent 3BE868.txt et
+# 3B74B8.txt : Renverse (Pushover), Repérage (Scout), Camouflage (Conceal),
+# esquive ; Berserk et Medaforce restent tels quels. Les médailles suivent
+# 3B6590.txt : "CHAT", "?", la médaille Rubberobo. Les objets suivent
+# 483ED8.txt : "Peluche Rappy", "Pack de citrons", "Huile de luxe", "Pile au
+# citron", "Costume de chien", "Périscope" reste "Periscope". Les Medaparts
+# (WING, JET ENGINE, SCOPE HEAD, CHERUB BODY, DEATH BREAK, HELMET…) et les
+# Medabots (Wonder Angel, Mega-Emperor, Belzelga, Sailormate, Brass, Moon
+# Dragon, Natural Color, Betty Bear) restent en anglais. Medabots AX est le
+# jeu précédent. "Rencontres du 4e type" pour le film.
+#
+
+@0000
+{FB} NABon, j'ai choisi ce garçon !{FD}Ça vous va, Professeur ?{FF}{00}
+
+@0001
+{FB} NABon, j'ai choisi ce garçon !{FD}Ça vous va, Professeur ?{FF}{00}
+
+@0002
+{FB}A  Bonjour !{FD}C'est {F9} .{FC}{FB} X Je vous en prie. Entrez.{FF}{00}
+
+@0003
+{FB} J Bienvenue, {F9} .{FC}Le jeune maître est parti chez{FD}monsieur Koji pour le moment.{FF}{00}
+
+@0004
+{FB} TCOh, pardon !{FD}Ce Medabot n'est pas encore terminé !{FC}Pourrais-tu choisir{FD}un autre Medabot ?{FC}{FB}A  Oh, d'accord.{FD}Je comprends.{FF}{00}
+
+@0005
+{FB} V Le principal a dit qu'on pouvait{FD}amener des Medabots à l'école !{FF}{00}
+
+@0006
+{FB} h Notre héros de la justice, c'est Koji♥{FF}{00}
+
+@0007
+{FB} V Tu dois prendre soin de tes{FD}Medabots et de tes amis···{FF}{00}
+
+@0008
+{FB} h Les Medabots ne doivent pas{FD}servir le mal.{FF}{00}
+
+@0009
+{FB} W Tout est bien qui finit bien !{FF}{00}
+
+@0010
+{FB} j Je trouvais ça un peu bizarre,{FD}mais je n'aurais jamais cru que{FD}le principal était un imposteur !{FF}{00}
+
+@0011
+{FB} X La vie a bien des facettes···{FF}{00}
+
+@0012
+{FB} V Tu te moques de moi, hein ?{FD}Le principal était un imposteur !?{FF}{00}
+
+@0013
+{FB}A DAh !{FD}Tu es Kahlua ?{FC}{FB} h Oh, {F9} .{FC}Je··· enfin···{FD}Merci♥{FC}{FB}A DDe rien !{FF}{00}
+
+@0014
+{FB} W Un garçon est venu le rendre.{FD}Il avait l'air vraiment désolé.{FC}Alors je lui ai tout pardonné,{FD}parce que lui aussi aime les Medabots !{FF}{00}
+
+@0015
+{FB} k Bienvenue !{FF}{00}
+
+@0016
+{FB} W On t'a déjà défié en Robattle{FD}d'un coup, alors que tu marchais{FD}tranquillement dans la rue, non ?{FC}Si tu veux éviter un Robattle,{FD}utilise la médaille Rubberobo.{FC}Et si tu entres dans les maisons,{FD}les Medafighters ne viendront pas.{FF}{00}
+
+@0017
+{FB} j Je me demande à quoi ressemblerait{FD}le monde sans les Medabots.{FC}C'est presque impossible à imaginer !{FF}{00}
+
+@0018
+{FB} u Seuls les Medabots de type fille{FD}peuvent utiliser les Medaparts Renverse.{FF}{00}
+
+@0019
+{FB} j Mes Medabots attaquent tous{FD}les mêmes Medaparts.{FC}Pourquoi···?{FF}{00}
+
+@0020
+{FB} W Tu as une petite amie ?{FC}Si tu n'es pas doux et gentil avec{FD}la fille que tu aimes, elle te quittera.{FF}{00}
+
+@0021
+{FB} V Sur l'écran de sélection du Medabot,{FD}appuie sur START pour changer{FD}toutes les Medaparts d'un coup.{FC}C'est plutôt pratique.{FF}{00}
+
+@0022
+{FB} i Si les Medaparts que tu vises sont{FD}déjà cassées, tu finiras par{FD}ne rien faire du tout.{FC}C'est typique d'un Medabot♥{FF}{00}
+
+@0023
+{FB} X Hé, toi !{FD}Utilise la Medapart de jambes à roues.{FC}Change toujours de Medaparts.{FD}Tu finiras par décrocher le gros lot.{FF}{00}
+
+@0024
+{FB} n Changer la Medapart de jambes est{FC}important pour que ton Medabot{FD}Robattle mieux selon le terrain, mais{FD}attention aux forces et faiblesses{FD}de chaque Medapart. Moi, par exemple,{FD}je tire bien, mais je lutte mal.{FF}{00}
+
+@0025
+{FB} t Selon qu'on est à l'intérieur ou{FD}à l'extérieur, le terrain change.{FC}La vitesse est plus affectée{FD}à l'intérieur qu'à l'extérieur.{FF}{00}
+
+@0026
+{FB} x Si tu utilises des Medaparts très{FD}puissantes, ta vitesse baissera.{FC}À l'inverse, des Medaparts rapides{FD}feront baisser ta puissance.{FC}Hmmmm···{FF}{00}
+
+@0027
+{FB} h Je finis mes devoirs pour rentrer{FD}regarder Medabots à la télé !{FF}{00}
+
+@0028
+{FB} u Pendant que j'essaie de charger{FD}ma Medaforce, on m'attaque toujours.{FC}Je veux des Medaparts qui chargent plus vite !{FF}{00}
+
+@0029
+{FB} W Il y a des Medabots dont je me{FD}demande s'ils sont motivés.{FF}{00}
+
+@0030
+{FB} t Aaargh !{FC}D'où est-ce que tu sors, toi ?{FD}Tu es vraiment à côté de la plaque.{FF}{00}
+
+@0031
+{FB} t Hé ! Hé ! Pas par cette sortie.{FD}Repars par où tu es entré.{FF}{00}
+
+@0032
+{FB} t Au fait, ne rate surtout pas{FD}l'émission Medabots à la télé !{FF}{00}
+
+@0033
+{FB} Y Moi, je préfère les humoristes{FD}aux BD de robots.{FF}{00}
+
+@0034
+{FB} k Félicitations !{FD}Tu es classé numéro 1 de tous.{FC}Alors, monsieur {F9} , nous te{FD}remettons ce cadeau extrêmement rare !{FF}{00}
+
+@0035
+{FB} k Beau travail !{FF}{00}
+
+@0036
+{FB} QATu es plutôt doué.{FC}Mais je ne te donnerai{FD}aucune de mes Medaparts.{FC}Désolée···♥{FF}{00}
+
+@0037
+{FB} MABwa ha ha ha ha !{FD}Bien joué, petit.{FC}Mais tu n'auras aucune{FD}de MES Medaparts.{FC}Pardonne-moi !{FF}{00}
+
+@0038
+{FB} B Hé, {F9} .{FD}Allons voir l'étang d'Odoro !{FC}{FB}A  Pourquoi l'étang d'Odoro ?{FC}{FB} B La rumeur dit que l'esprit{FD}apparaît à l'étang d'Odoro !{FC}Allons d'abord voir l'étang d'Odoro{FD}et ce qu'on peut y découvrir !{FC}{FB}A DL'étang d'Odoro est à droite.{FD}Bon, allons-y.{FC}{FB} B Ouais !{FF}{00}
+
+@0039
+{FB} BEHé, {F9} .{FD}Allons au marais d'Odoro ensuite !{FC}{FB}A  On a fini ici ?{FC}{FB} BFRien ne se montre ici,{FD}alors allons-y !{FC}{FB}A DOuah, Erika, tu es vraiment{FD}à fond là-dessus···{FC}{FB} B Qu'est-ce que tu as dit ?{FC}{FB}A DRien.{FD}Allons-y.{FF}{00}
+
+@0040
+{FB} V Regarder un Robattle d'ici,{FD}c'est vraiment excitant !{FF}{00}
+
+@0041
+{FB} V Je pourrais être un Héros aussi, si{FD}j'étais un Medafighter fort ! Je veux être fort !{FF}{00}
+
+@0042
+{FB} W Ouah, le Robattle du bloc B{FD}est plutôt excitant.{FC}Fais toujours de ton mieux !{FF}{00}
+
+@0043
+{FB} V On dit que si tu offres la{FD}"Peluche Rappy" à une fille{FD}que tu aimes, elle sera à toi.{FC}Si tu en as une, essaie !{FF}{00}
+
+@0044
+{FB} X Tu t'es très bien débrouillé.{FD}Un beau jeune homme, vraiment.{FF}{00}
+
+@0045
+{FB} V C'est toi le vainqueur ? Sérieux !?{FD}B-bon··· et si on échangeait ?{FC}Je veux la "SUN-BEAM".{FC}Tu peux l'échanger contre la{FD}"STONECLUSTER" ?{FF}B
+
+@0046
+{FB} V Ça aurait porté chance d'échanger{FD}avec le vainqueur.{FF}{00}
+
+@0047
+{FB} V Hé, attends une minute !{FD}Tu n'as même pas ces Medaparts !{FF}{00}
+
+@0048
+{FB} V Les Medaparts que tu as échangées{FD}avec moi marchent bien ?{FF}{00}
+
+@0049
+{FB} B Hé, tu es qualifié pour la seconde{FD}moitié du tournoi de Robattle, non ?{FC}Ne traîne pas partout,{FD}ou ça commencera sans toi.{FC}Faisons la course jusqu'à{FD}la salle du tournoi !{FF}{00}
+
+@0050
+{FB} V Je ne vais pas perdre contre une fille !{FD}Moi aussi, je vise le classement !{FF}{00}
+
+@0051
+{FB}A  Pas assez d'argent.{FF}{00}
+
+@0052
+{FB} LCOn continue.{FD}Montez dans l'ascenseur !{FF}{00}
+
+@0053
+{FB} {51} On continue.{FD}Montez dans l'ascenseur !{FF}{00}
+
+@0054
+{FB} k Nous attendons{FD}votre prochaine visite.{FF}{00}
+
+@0055
+{FB} {4F} Hmm, une bande de Rubberobos s'est{FD}fait prendre sur l'île Medabot, hein ?{FF}{00}
+
+@0056
+{FB} {50} Ton père passe son temps{FD}à traîner à la maison.{FF}{00}
+
+@0057
+{FB}A  Le gros titre du journal dit{45}{FC}"Tout le gang Rubberobo arrêté{FD}sur l'île Medabot !"{FF}{00}
+
+@0058
+{FB} F Ne crois pas gagner la prochaine fois.{FF}{00}
+
+@0059
+{FB} G Je m'en souviendrai !{FD}La prochaine fois, c'est toi qui perds !{FF}{00}
+
+@0060
+{FB} HCEnfin, j'ai fini toute ma lessive.{FF}{00}
+
+@0061
+{FB} B Un scoop ! Un scoop !{FF}{00}
+
+@0062
+{FB} j Erika ne se repose jamais.{FF}{00}
+
+@0063
+{FB} k L'intelligence n'allait vraiment{FD}pas au gang Rubberobo !{FF}{00}
+
+@0064
+{FB} W Ces temps-ci, plus de nouvelles de{FD}ce Rubberobo malin. Il a été pris ?{FF}{00}
+
+@0065
+{FB} i Ce n'est qu'une rumeur, mais il{FD}paraît que ce Rubberobo si malin{FD}était un élève de primaire.{FF}{00}
+
+@0066
+{FB}A  Un mignon petit hamster.{FD}Mais je ne peux plus rien porter.{FF}{00}
+
+@0067
+{FB}A  Un téléobjectif.{FD}Mais je ne peux plus rien porter.{FF}{00}
+
+@0068
+{FB} a Tu veux acheter la Medapart{FD}de bras gauche "WING" ?{FF}B
+
+@0069
+{FB} a Tu veux acheter la Medapart{FD}de jambes "JET ENGINE" ?{FF}B
+
+@0070
+{FB} a On a des Medaparts pour{FD}"Periscope". S'il t'en faut une,{FD}je les vends 100 £ pièce.{FC}Tu veux acheter la Medapart{FD}de tête "SCOPE HEAD" ?{FF}B
+
+@0071
+{FB} a Tu veux acheter la Medapart{FD}de bras droit "SCOPE HAND" ?{FF}B
+
+@0072
+{FB} a Tu veux acheter la Medapart{FD}de bras gauche "SCOPE ARM" ?{FF}B
+
+@0073
+{FB} a Tu veux acheter la Medapart{FD}de jambes "SCOPE LEG" ?{FF}B
+
+@0074
+{FB}A  Je ne rentre pas, Select Corps !{FF}{00}
+
+@0075
+{FB} . Mais Capitaine !{FC}Les enfants doivent nous{FD}attendre avec angoisse.{FF}{00}
+
+@0076
+{FB} ·CSilence ! Vous obéirez à votre chef{FD}sans discuter !{FC}{FB} ·AEt la victoire nous tombera{FD}toute seule dans les mains ! Gwa ha ha ha !{FF}{00}
+
+@0077
+{FB} . M-mais Capitaine !{FF}{00}
+
+@0078
+{FB} . Le Capitaine m'a dit de monter la garde ici.{FD}Les ordres sont les ordres, tu sais···{FF}{00}
+
+@0079
+{FB} h Je m'en doutais.{FD}Les Select Corps n'ont rien fait !{FF}{00}
+
+@0080
+{FB} DCOuvrez !{FF}{00}
+
+@0081
+{FB}A  Évidemment, c'est la porte des toilettes.{FF}{00}
+
+@0082
+{FB} 1BC'est toi qui l'as pris, hein !{FD}J'ai tout vu ! Rends-le maintenant !{FF}{00}
+
+@0083
+{FB} {50} Ton père est déjà parti travailler.{FD}Je vais enfin pouvoir faire le ménage.{FF}{00}
+
+@0084
+{FB}A  C'est "Eggy".{FD}Un Medabot vraiment rare.{FF}{00}
+
+@0085
+{FB} 4ABien joué, petit.{FD}Ho ho ho.{FF}{00}
+
+@0086
+{FB} 3APas mal, mais pas encore mon niveau.{FF}{00}
+
+@0087
+{FB} ,EBlue Hawaii n'est pas si bizarre !{FF}{00}
+
+@0088
+{FB}A  Pourquoi tu dis ça ?{FC}Tu ne me caches rien,{FD}n'est-ce pas, Margarita ?{FC}{FB} ,DJ-je ne cache r-rien !{FD}Rien du tout !{FC}{FB}A  Ah, vraiment···{FF}{00}
+
+@0089
+{FB}A  C'est une statue de la Reine des fourmis.{FD}Mieux vaut ne pas y toucher.{FC}Si tu n'y touches pas, tu ne{FD}peux pas avoir d'ennuis !{FF}{00}
+
+@0090
+{FB} 9 Cette zone est interdite d'accès !{FF}{00}
+
+@0091
+{FB}A  D'abord, je dois enfiler mes{FD}vêtements à moitié secs, et puis···{FF}{00}
+
+@0092
+{FB} {45} Oh là là, oh là là···{FD}Que faire.{FF}{00}
+
+@0093
+{FB}A DC'est bon. Pas de raison de s'inquiéter.{FD}Je l'ai ramenée avec moi, alors···{FC}{FB} / Quoi !?{FC}{FB}A DLe monstre ne sortira plus{FD}jamais de l'océan !{FF}{00}
+
+@0094
+{FB} / Grand Héros, comment vous{FD}témoigner notre gratitude···{FF}{00}
+
+@0095
+{FB} - Grand Héros ! Vous avez vaincu les monstres ?{FD}Vous êtes vraiment incroyable !{FF}{00}
+
+@0096
+{FB} {45} Ho ho !{FD}Blue Hawaii a disparu dans l'océan ?{FF}{00}
+
+@0097
+{FB} X Oui, résidence Jyunmai.{FC}{FB}A  Excusez-moi, c'est {F9} .{FD}Karin est là ?{FC}{FB} X La jeune maîtresse est partie sur{FD}l'île Medabot avec monsieur Koji.{FC}{FB}A FQuoi ! Enfin, je vois.{FD}M-merci.{FF}{00}
+
+@0098
+{FB}A  On dirait que Koji n'est même pas là.{FF}{00}
+
+@0099
+{FB} J Le jeune maître est parti{FD}sur l'île Medabot.{FC}{FB}A FQuoi !?{FD}Il y est allé tout seul ?{FC}{FB} J Les invitations disaient que seuls{FD}les enfants pouvaient venir, alors···{FC}{FB}A  Même Hachiro a été invité···{FC}{FB} J Y a-t-il un problème ?{FC}{FB}A FNon, rien !{FC}{FB} J Monsieur {F9}  ?{FF}{00}
+
+@0100
+{FB} J Revenez quand vous voulez.{FF}{00}
+
+@0101
+{FB}A FMême Koji et Karin sont{FD}mêlés à cette histoire.{FF}{00}
+
+@0102
+{FB} {4F} On a eu beaucoup d'ennuis{FD}ces derniers temps···{FF}{00}
+
+@0103
+{FB} {4F} Hmmm, on dirait que l'île Medabot{FD}a eu de gros problèmes.{FF}{00}
+
+@0104
+{FB}A HHein ? Une photo !?{FD}Quand est-ce qu'ils ont···{FC}{FB}A FC-comment c'est possible ?{FD}Ce n'est pas moi···, Papa···{FC}{FB} {4F}ATu as sans doute raison. Mon fils{FD}ne ferait jamais des choses aussi géniales !{FF}{00}
+
+@0105
+{FB} {50}ANe sois pas fier de choses{FD}pareilles, chéri !{FF}{00}
+
+@0106
+{FB}A DHé, ce journal parle de ce qu'on a fait !{FD}Nos noms n'y sont pas, mais quand même···{FF}{00}
+
+@0107
+{FB}A FJe ne peux pas laisser Henry et Kirara ici !{FF}{00}
+
+@0108
+{FB} {4F} Hé, regarde ça.{FC}"Grâce à l'aide de quelques garçons,{FD}les plans des malfaiteurs ont échoué."{FC}Cette photo ne te ressemble{FD}pas beaucoup, fiston ?{FF}{00}
+
+@0109
+{FB} DDPrends soin de Karin.{FF}{00}
+
+@0110
+{FB} X La jeune maîtresse est sortie pour le moment.{FF}{00}
+
+@0111
+{FB} 9 Attendez avec impatience{FD}nos prochains exploits.{FF}{00}
+
+@0112
+{FB} 9 Tant qu'il y aura des ennuis, il y aura{FD}toujours les Select Corps !{FF}{00}
+
+@0113
+{FB} V Aah, c'est parti.{FC}{FB} W Pas le choix, je devrais rentrer···{FF}{00}
+
+@0114
+{FB} j Ce chercheur était un espion !?{FC}C'est bien pour ça que je dis qu'on ne{FD}peut jamais faire confiance à un chercheur !{FF}{00}
+
+@0115
+{FB} W Il y a longtemps, je jouais tout{FD}le temps aux combats d'épée.{FF}{00}
+
+@0116
+{FB} Y C'est bien d'être si énergique.{FF}{00}
+
+@0117
+{FB} V Le combat à l'épée, c'est trop cool, non ?{FD}J'ai équipé une épée sur mes Medabots aussi !{FF}{00}
+
+@0118
+{FB} t J-j'ai perdu !{FF}{00}
+
+@0119
+{FB} m Montre-moi comment tu bats Ninja !{FF}{00}
+
+@0120
+{FB} m C'est la sortie !{FF}{00}
+
+@0121
+{FB} Y Le Rallye ne nous concerne pas.{FD}Prenons ça tranquillement !{FF}{00}
+
+@0122
+{FB} t Je peux encore être utile aux autres.{FF}{00}
+
+@0123
+{FB} i La glace d'ici est la meilleure♥{FF}{00}
+
+@0124
+{FB} i C'est un chouette petit coin{FD}à l'écart.{FF}{00}
+
+@0125
+{FB} X Notre spécialité, la "Glace Ninja",{FD}a un tel succès auprès des filles !{FF}{00}
+
+@0126
+{FB} W Cet endroit est si apaisant.{FF}{00}
+
+@0127
+{FB} i Ça fait vraiment du bien de se{FD}promener dans un endroit pareil.{FF}{00}
+
+@0128
+{FB} V Quand je serai grand, je veux être Ninja !{FF}{00}
+
+@0129
+{FB}A BVous seriez un Rubberobo !?{FC}{FB} W Qui, moi !? Je suis professeur !{FD}Bon. Je, euh, dois y aller.{FC}RoboRobo···{FF}{00}
+
+@0130
+{FB}A  C'est vraiment louche !{FF}{00}
+
+@0131
+{FB}A  On dirait que le passage a disparu.{FD}Je ne pourrai plus retourner à ces ruines.{FF}{00}
+
+@0132
+{FB}A HAh !{FD}Ces Medaparts viennent du Rallye Partsun !{FC}{FB} n Jamaaais entendu parler.{FC}{FB}A  Ça ne te dérangerait pas de me{FD}donner ces Medaparts, hein ?{FC}{FB} n Pas de violence !{FF}{00}
+
+@0133
+{FB} DDHmph···{FC}{FB}A  Quoi, Koji ?{FD}Tu me fais peur.{FC}{FB} DDKarin veut te voir.{FD}Tu ferais mieux d'aller chez elle.{FC}J'ai fait mon devoir.{FD}Salut !{FF}{00}
+
+@0134
+{FB}A  Qu'est-ce que ça peut bien être ?{FF}{00}
+
+@0135
+{FB} {45} Veuillez vous placer au centre de la salle.{FF}{00}
+
+@0136
+{FB} {45} Si vous voulez rentrer chez vous,{FD}venez me le dire.{FF}{00}
+
+@0137
+{FB} {45} Franchissez les frontières du temps{FD}et de l'espace, et renvoyez le Héros{FD}dans son monde !{FF}{00}
+
+@0138
+{FB} CDBonjour, {F9} .{FD}Tu es venu jouer avec moi ?{FF}B
+
+@0139
+{FB} DDQu'est-ce que tu veux, {F9}  ?{FD}Tu es venu jouer ?{FF}B
+
+@0140
+{FB} DDSi tu décides de revenir,{FD}je t'affronte quand tu veux !{FF}{00}
+
+@0141
+{FB} GBQu'est-ce que tu veux !?{FD}Je règle des données, là !{FC}Ne me dérange pas !{FF}{00}
+
+@0142
+{FB} GBC'est ta faute ! Tu as gâché mes données !{FF}{00}
+
+@0143
+{FB} FCQuoi ? Tu veux que je joue{FD}encore avec toi ?{FF}{00}
+
+@0144
+{FB} FCBon, je peux toujours rejouer avec toi.{FF}{00}
+
+@0145
+{FB} HCJe suis l'homme aux 1000 visages !{FF}{00}
+
+@0146
+{FB} H {F8}(·····){F8}{FC}{FB} HA!{FC}{FB} HC?{FC}{FB} HD{F8}(·····){F8}{FC}{FB} HB!!!!!!{FC}{FB} HE!?!!!!!?{FC}{FB} HCAlors, c'était comment ?{FC}{FB}A EEh bien···{FF}{00}
+
+@0147
+{FB}A CZut, j'ai perdu···{FC}{FB} ♥ Reviens quand tu voudras{FD}me défier à nouveau !{FF}{00}
+
+@0148
+{FB}A CZut, j'ai perdu···{FC}{FB} ) Si toi croire pouvoir gagner encore,{FD}reviens te battre avec moi !{FF}{00}
+
+@0149
+{FB} D Tu appelles ça un Robattle !{FC}Reviens quand tu voudras{FD}te battre pour de vrai !{FF}{00}
+
+@0150
+{FB} CDBon, rejouons un de ces jours !{FF}{00}
+
+@0151
+{FB} 9 C'est une vieille échelle branlante.{FD}C'est dangereux.{FF}{00}
+
+@0152
+{FB} X Il ne boit que du jus de tomate,{FD}alors il n'est pas franchement en forme.{FF}{00}
+
+@0153
+{FB} K Mamaaan, donne-moi du jus de tomate.{FC}{FB} X Mais tu le vomis dès que{FD}tu le bois, de toute façon !!{FF}{00}
+
+@0154
+{FB} V Si l'esquive de la Medapart de jambes{FD}est élevée, on évite facilement une attaque.{FC}C'est la base du Medabot, mon vieux !{FF}{00}
+
+@0155
+{FB} V Si le Camouflage de la Medapart de{FD}jambes est élevé, on pose facilement un piège.{FC}C'est la base du Medabot, mon vieux !{FF}{00}
+
+@0156
+{FB}A HSerait-ce···{FD}L'ultra-rare médaille "?" !?{FF}{00}
+
+@0157
+{FB}A HSerait-ce···{FD}L'ultra-rare médaille "CHAT" !?{FF}{00}
+
+@0158
+{FB}A DC'est "Sailormate"···{FC}Celui d'Erika est "Brass",{FD}la version améliorée{FD}de ce Medabot.{FC}Ils ne le vendent même plus.{FF}{00}
+
+@0159
+{FB}A HSerait-ce···{FC}L'ultra-rare "Moon Dragon" !?{FD}Ils ne le vendent même plus.{FF}{00}
+
+@0160
+{FB}A HSerait-ce···{FC}L'ultra-rare "Natural Color" !?{FD}Ils ne le vendent même plus.{FF}{00}
+
+@0161
+{FB}A HSerait-ce···{FD}L'ultra-rare "Betty Bear" !?{FC}C'est l'ancien modèle de Medabot ours.{FD}Il est petit, comme une peluche.{FF}{00}
+
+@0162
+{FB} V Ça reste entre toi et moi, d'accord···{FC}Si tu augmentes ton Repérage,{FD}tes dégâts augmentent aussi.{FC}···Je ne savais pas !{FF}{00}
+
+@0163
+{FB} Y Je me demande depuis combien de temps{FD}ce professeur est à côté de moi.{FF}{00}
+
+@0164
+{FB} h Erika m'a tout raconté.{FD}Les Select Corps ont sauvé la situation !{FF}{00}
+
+@0165
+{FB} h Dis à Erika de vite publier{FD}le prochain numéro du journal de l'école.{FF}{00}
+
+@0166
+{FB} k L'île Medabot est de nouveau{FD}ouverte au public.{FC}Bien sûr, l'entrée est gratuite pour{FD}les enfants, alors revenez vous amuser.{FF}{00}
+
+@0167
+{FB} V Je ne serai pas tendre, même avec une fille.{FF}{00}
+
+@0168
+{FB} 9 Même si nous avons capturé tous les{FD}chefs, nous n'avons pas attrapé tous{FD}les autres Rubberobos en liberté.{FF}{00}
+
+@0169
+{FB} i La compétition est finie···{FD}Je me sens un peu seule {F8}(Soupir){F8}.{FF}{00}
+
+@0170
+{FB} {51} Avec la bonne Medapart de tête,{FD}on court plus vite.{FC}C'est la base du Medabot.{FF}{00}
+
+@0171
+{FB} V Milky la Sorcière, je me demande{FD}où elle est partie.{FF}{00}
+
+@0172
+{FB} h Milky a dû retourner{FD}au pays des Sorcières.{FF}{00}
+
+@0173
+{FB} h Il paraît qu'on gardait des enfants{FD}dans un cachot de ce château.{FC}Pas possible !?{FF}{00}
+
+@0174
+{FB} V La terrible Armée Rubberobo, c'était{FD}en fait le gang Rubberobo.{FF}{00}
+
+@0175
+{FB} V Je veux vraiment un Medabot ancien.{FD}Comment je pourrais en avoir un ?{FF}{00}
+
+@0176
+{FB} u Notre travail, c'est de soigner{FD}les blessés.{FF}{00}
+
+@0177
+{FB} W Je n'arrive vraiment pas à battre{FD}les élèves en Robattle !{FF}{00}
+
+@0178
+{FB} W Les Medabots, c'est profond, hein ?{FF}{00}
+
+@0179
+{FB} {52} {F8}Grrrrrrrroaaaaaah !{F8}{FD}MAINTENANT, MEURS !!{FF}{00}
+
+@0180
+{FB} CAC'était très amusant !{FC}{FB} CDMerci pour ce Robattle.{FD}J'ai trouvé ceci en me promenant.{FC}Accepte-le en gage{FD}de ma reconnaissance.{FF}{00}
+
+@0181
+{FB} CCVraiment···.{FD}C'est dommage.{FF}{00}
+
+@0182
+{FB} IEHmph.{FD}{F9} .{FC}Tu veux que je joue avec toi ?{FF}B
+
+@0183
+{FB} IEHmph.{FD}Tu devrais être plus honnête.{FF}{00}
+
+@0184
+{FB} IESi tu souhaites rejouer,{FD}je t'accorderai cet honneur.{FF}{00}
+
+@0185
+{FB} j Sois gentil avec Erika, d'accord ?{FF}{00}
+
+@0186
+{FB} B Si je te bats, je deviendrai célèbre···{FC}Je ferai moi-même la une{FD}du journal de l'école !{FF}{00}
+
+@0187
+{FB} B Je plaisante ! Hi hi♥{FF}{00}
+
+@0188
+{FB} K Ne me regarde pas comme ça···{FF}{00}
+
+@0189
+{FB} K J'ai dit non··· sinon···{FC}{FB} KABleuuurp♥♥{FF}{00}
+
+@0190
+{FB} V Il n'y a pas de Medaparts qui permettent{FD}de viser les ennemis en Berserk ?{FF}{00}
+
+@0191
+{FB} t Salut, {F9} .{FD}Comment ça va ?{FF}{00}
+
+@0192
+{FB} W Reste bon ami avec Koji{FD}à l'avenir, s'il te plaît.{FF}{00}
+
+@0193
+{FB} j Prends soin de Koji, d'accord ?{FF}{00}
+
+@0194
+{FB}A  "Huile de luxe" est écrit sur le bidon.{FF}{00}
+
+@0195
+{FB} a Ta vie ne vaudra plus rien{FD}si tu deviens espion.{FF}{00}
+
+@0196
+{FB} t Tu as tout terminé dans{FD}Medabots AX ?{FF}B
+
+@0197
+{FB} t Tu es plutôt incroyable, petit···{FD}Tiens, prends ça.{FF}{00}
+
+@0198
+{FB} t Évidemment, hein !?{FF}{00}
+
+@0199
+{FB}A EJe ne veux pas qu'on me voie comme ça.{FD}Je mourrais si quelqu'un me voyait···{FF}{00}
+
+@0200
+{FB} {4F}ABon retour, {F9} .{FD}Le pique-nique était bien ?{FF}{00}
+
+@0201
+{FB} LCBonjouuur ! Je suis la fille préférée{FD}de tous, celle du Réseau des Medafighters !{FF}{00}
+
+@0202
+{FB}A  C'est le trou où Hachiro est tombé.{FF}{00}
+
+@0203
+{FB} D Au fait, je sais que tu{FD}t'inquiètes pour Erika, mais{FD}tu peux d'abord passer chez Karin ?{FC}{FB}A  Pourquoi là-bas ?{FC}{FB} D Le père de Karin a dit qu'il avait{FD}quelque chose à nous dire.{FC}Il avait l'air vraiment sérieux{FD}en disant ça.{FC}{FB}A  D'accord, bien sûr.{FC}{FB} DDJe compte sur toi !{FF}{00}
+
+@0204
+{FB}A  Qu'est-ce que··· c'est ?{FF}{00}
+
+@0205
+{FB}A  Erika n'est pas là. Je vais voir{FD}si elle est à la statue de Bonaparte.{FC}{FB}A EErika···{FD}Où es-tu encore partie ?{FF}{00}
+
+@0206
+{FB}A EEuh··· je cherchais juste Erika,{FD}mais on dirait que je me suis{FD}encore fait embarquer dans une histoire.{FC}{FB}A  Je vais aller jusqu'au bout !{FD}Mais le problème, c'est···{FC}{FB}A EJe dois aller dans les égouts··· beurk.{FF}{00}
+
+@0207
+{FB} 9 Ces derniers temps, beaucoup d'enfants{FD}ont disparu sans laisser de trace.{FC}Mais on a un tuyau : ils disparaissent{FD}devant la gare{FD}du quartier.{FC}{FB}A HDes enfants disparaissent !?{FC}{FB}A  Euh, une fille n'est pas venue{FD}vous demander ça, par hasard ?{FC}{FB} 9 Si, justement !{FC}Cette fille est partie{FD}devant la gare !{FC}{FB}A  Je savais que c'était Erika !{FF}{00}
+
+@0208
+{FB} 1 Où vas-tu ?{FF}{00}
+
+@0209
+{FB} 3CPas mon sac Poach et mes chaussures··· mmm{FC}{FB} 1CPardonnez-moi ! Robo ouiiin.{FC}{FB}A  Il est encore coincé dans un cauchemar.{FC}Laissons-le. Il se réveillera{FD}tout seul, tôt ou tard.{FF}{00}
+
+@0210
+{FB} i Hé, tu savais ?{FC}Si tu augmentes ton Repérage,{FD}tes dégâts augmentent aussi.{FF}{00}
+
+@0211
+{FB} n Cette "Huile de luxe" est bien meilleure{FD}que cette "Spéciale Dr Meta-Evil" infâme !{FF}{00}
+
+@0212
+{FB} n Merci.{FC}{FB} {FF}{00}
+
+@0213
+{FB} W On dirait{FD}"Rencontres du 4e type" !{FF}{00}
+
+@0214
+{FB} j Si un truc pareil reste au-dessus de{FD}nos têtes, le soleil ne passera plus.{FC}Comment je vais sécher ma lessive !?{FF}{00}
+
+@0215
+{FB} W C'était quoi, ce disque étrange ?{FF}{00}
+
+@0216
+{FB} j Quelque chose au-dessus de ma tête{FD}a disparu, puis a illuminé le ciel !{FF}{00}
+
+@0217
+{FB} W Oh ! Pourquoi a-t-il fallu qu'il s'écrase !{FF}{00}
+
+@0218
+{FB}A  Plein de choses sont éparpillées.{FD}Du fil de plomb, du papier alu···{FF}{00}
+
+@0219
+{FB}A DAha ! Avec ça, je peux fabriquer{FD}des Piles au citron !···{FC}Cool ! Je les ai faites !{FF}{00}
+
+@0220
+{FB} MCJe sens que quelque chose commence.{FF}{00}
+
+@0221
+{FB} GBTu as raison.{FD}Bref, reviens ici, d'accord ?{FF}{00}
+
+@0222
+{FB}A AMerci beaucoup, Mademoiselle Nae !{FC}{FB} TADe rien !{FC}{FB} TBAvant que j'oublie···{FD}Si ça te fait plaisir, {F9} ,{FC}veux-tu aller dans la pièce d'à côté{FD}choisir une des médailles ?{FC}{FB}A HVous êtes sûre que c'est bon ?{FC}{FB}A  Mais je···{FC}{FB} TBÇa ne me dérange pas du tout.{FC}C'est le moins que je puisse{FD}faire pour t'aider.{FC}Bonne chance, {F9} .{FC}{FB}A DMerci !{FF}{00}
+
+@0223
+{FB} {51} Ouaah ! Qu'est-ce que tu fais là !{FD}Ce n'est pas grave.{FF}{00}
+
+@0224
+{FB} 9 Tous les Rubberobos{FD}se sont évadés de prison.{FC}Alors, nous allons les{FD}recapturer au plus vite !{FF}{00}
+
+@0225
+{FB} 2BVous n'avez pas fini d'entendre parler de nous !!{FF}{00}
+
+@0226
+{FB} j Si tu cherches Erika,{FC}elle a reçu une invitation pour{FD}l'île Medabot et l'a acceptée avec joie.{FC}{FB}A  Oh non !{FD}Je savais qu'Erika était invitée aussi !{FC}{FB} j Mais c'est un peu bizarre, tu sais ?{FC}J'avais entendu dire que l'île{FD}Medabot était fermée aujourd'hui.{FC}{FB}A FNe vous inquiétez pas !{FD}Je ramènerai Erika.{FC}{FB} j D'accord, prends bien soin d'elle.{FF}{00}
+
+@0227
+{FB} W En triant notre stock, on a{FD}trouvé des Rubberobos.{FC}Si tu vas les déloger, je te{FD}donnerai ces Medaparts que j'ai trouvées.{FF}{00}
+
+@0228
+{FB} TBJe prierai pour ta victoire.{FC}Et va aussi dans la pièce d'à côté{FD}prendre une médaille comme{FD}porte-bonheur.{FC}{FB}A AVraiment !{FD}Merci beaucoup !{FF}{00}
+
+@0229
+{FB} S Hmm ?{FD}Tu as quelque chose, là ?{FC}{FB}A  Ça ? J'ai ramassé des{FD}Medaparts rouillées, avant.{FC}Vous pensez qu'on peut les réparer ?{FC}{FB} SBDu gâteau !{FC}Il me suffit d'un coup de{FD}mon spray spécial et···{FC}{FB} SBEt voilà, c'est fait !{FC}{FB}A AYoupi !{FD}Merci beaucoup !{FF}{00}
+
+@0230
+{FB} / Quelqu'un a volé la Pierre sacrée.{FD}J'espère qu'il n'arrivera rien de mal···{FF}{00}
+
+@0231
+{FB} / C'est la Pierre sacrée !{FC}Dieu merci, elle est intacte !{FD}Remettez-la à sa place, je vous prie !{FF}{00}
+
+@0232
+{FB} / Je ne sais comment vous remercier.{FC}Il était interdit d'user du pouvoir{FD}de la Pierre sacrée jusqu'ici.{FC}Mais nous pouvons faire une exception,{FD}pour cette fois···{FC}Grand Héros, me prêteriez-vous{FD}une de vos médailles ?{FC}{FB}A  Hein ? Oh, d'accord.{FF}{00}
+
+@0233
+{FB} / Voici votre médaille.{FC}{FB}A HNom d'un Medabot ! Elles se sont multipliées !?{FF}{00}
+
+@0234
+{FB} / La Pierre sacrée a été scellée{FD}à cause de son pouvoir incroyable.{FF}{00}
+
+@0235
+{FB} FCOh, salut, {F9} .{FC}On dirait que tu as quelque{FD}chose de plutôt bien, là !{FC}{FB}A  Hein ? Tu veux dire ça ?{FC}{FB} FAOui, c'est ça !{FD}Ce "Pack de citrons" !{FC}C'est excellent pour la peau, tu sais.{FC}{FB}A EEuh··· ok.{FC}Bon, si tu le veux, je peux{FD}toujours te le donner.{FC}{FB} FCSi je prends ce Pack de citrons pour rien,{FD}j'aurais l'impression de t'avoir forcé.{FC}Je l'échange contre certaines de mes Medaparts.{FF}{00}
+
+@0236
+{FB}A  Aller au 1er étage ?{FF}B
+
+@0237
+{FB}A  Aller au 2e étage ?{FF}B
+
+@0238
+{FB}A  Aller au 3e étage ?{FF}B
+
+@0239
+{FB}A  Laisse tomber.{FF}{00}
+
+@0240
+{FB} W Tu n'as pas du tout l'autographe{FD}de Kawamura, hein !{FC}Dommage, si tu l'avais, je t'en{FD}aurais donné au moins 50 £.{FF}{00}
+
+@0241
+{FB} k Bienvenue aux montagnes russes "Spirit" !{FD}Rendez-vous sur le quai d'embarquement.{FF}{00}
+
+@0242
+{FB} k Bienvenue sur l'île Medabot !{FC}En ce moment, tous les élèves{FD}entrent gratuitement aux attractions !{FC}La seule exception est la salle d'arcade.{FD}Alors, entrez et amusez-vous bien !{FF}{00}
+
+@0243
+{FB} k Voulez-vous entendre parler des{FD}Medaparts du Rallye Partsun ?{FF}B
+
+@0244
+{FB} k Le Medabot de type Ange "Wonder Angel"{45}{FC}Medapart de tête "CHERUB BODY"{FD}Medapart de bras droit "CHERUB HAND"{FD}Medapart de bras gauche "CHERUB ARM"{FD}Medapart de jambes "CHERUB LEG"{FF}{00}
+
+@0245
+{FB} k Le Medabot de type Crevette "Mega-Emperor"{45}{FC}Medapart de tête "DEATH BREAK"{FD}Medapart de bras droit "DEATH MISSILE"{FD}Medapart de bras gauche "DEATH LASER"{FD}Medapart de jambes "DEATH CRAWLER"{FF}{00}
+
+@0246
+{FB} k Le Medabot de type Démon "Belzelga"{45}{FC}Medapart de tête "HELMET"{FD}Medapart de bras droit "HELMIGHT"{FD}Medapart de bras gauche "HELMING"{FD}Medapart de jambes "HELCAOS"{FC}Vous devez réunir ces 12 Medaparts.{FF}{00}
+
+@0247
+{FB} RAOh, {F9} .{FD}Bienvenue.{FC}Félicitations d'avoir battu ces Medabots !{FC}Voici un cadeau en reconnaissance{FD}de ton exploit !{FF}{00}
+
+@0248
+{FB}A  Euh, je me demandais quel genre de{FD}relation vous avez avec Henry···{FC}{FB} RAHenry et moi sommes amis{FD}depuis l'enfance.{FC}On a tous les deux rencontré le Dr Aki{FD}quand on était en primaire, tu sais.{FC}{FB}A DVraiment ? Je ne savais pas.{FC}{FB} RATu sais, te regarder me rappelle{FD}beaucoup Henry à ton âge.{FC}Tu as intérêt à ne pas perdre contre lui !{FC}{FB}A AD'accord !{FF}{00}
+
+@0249
+{FB} NASalut, {F9} .{FD}Bienvenue.{FC}{FB}A DBonjour, Henry.{FC}La blessure que t'a faite le Mega-Emperor{FD}va mieux aujourd'hui ?{FC}{FB} NANe t'inquiète pas pour moi !{FD}Je ne suis pas si facile à tuer.{FC}{FB}A AContent de l'entendre !{FF}{00}
+
+@0250
+{FB}A FEuh, on m'a dit que c'est toi qui{FD}avais mis fin aux incidents{FD}d'il y a 7 ans, Henry···{FC}{FB} NAJ'avais oublié ça.{FD}C'était il y a si longtemps.{FC}Je peux te dire une chose.{FC}J'avais à peu près ton âge{FD}quand tout ça est arrivé.{FC}Et j'adorais les Medabots, comme toi.{FC}{FB}A DHenry···{FF}{00}
+
+@0251
+{FB}A DTu ne seras plus jamais{FD}le Phantom Renegade ?{FC}{FB} NAHmm··· ha ha ha.{FD}Qui sait···?{FF}{00}
+
+@0252
+{FB} i Il paraît que ce Medabot{FD}vaudra une fortune un jour !{FF}{00}
+
+@0253
+{FB} i Oh, c'est celui-là !{FD}Dis, tu me le vendrais ?{FF}B
+
+@0254
+{FB} i Attends une seconde !{FD}Il n'est pas mignon du tout !{FF}{00}
+
+@0255
+{FB} i D'accord.{FF}{00}
+
+@0256
+{FB} z Tu n'as pas assez d'argent ?{FD}Bon, ce n'est pas grave, j'imagine.{FC}Je peux t'y emmener gratuitement,{FD}si tu veux.{FF}{00}
+
+@0257
+{FB} f T'es le dernier passager, toi.{FD}Dépêche-toi, s'il te plaît.{FF}{00}
+
+@0258
+{FB} {4F}AJ'ai entendu que tu étais le champion{FD}du Rallye Partsun.{FC}C'est mon fils !{FF}{00}
+
+@0259
+{FB}A  Bonjour.{FD}Je suis {F9} .{FC}{FB} X Pour le moment, Jeeves et{FD}le jeune maître sont sortis.{FC}Revenez plus tard.{FC}{FB}A  D'accord.{FF}{00}
+
+@0260
+{FB} a Je ne peux plus regarder Mademoiselle Nae{FD}après qu'elle m'a vu dans un tel moment.{FC}{F8}Snif··· snif···{F8}{FC}{FB}A EHmm···{FF}{00}
+
+@0261
+{FB} X Bienvenue, monsieur {F9} .{FF}{00}
+
+@0262
+{FB} W Hein ? Qui es-tu···?{FF}{00}
+
+@0263
+{FB}A HPardon !{FF}{00}
+
+@0264
+{FB} z Tant que je suis ici, je peux me baigner tous les jours !{FC}Aaah ! Je n'arrive pas à croire que j'ai dit ça{FD}à un inconnu !{FF}{00}
+
+@0265
+{FB}A DOuah, c'était très amusant !{FC}{FB}A  Pfff, je suis complètement vidé.{FD}Je devrais piquer un bon somme.{FF}{00}
+
+@0266
+{FB} / Annul. camouflage, c'est bien la technique{FD}qui ramène le Camouflage de tout le monde{FD}au niveau du début du Robattle ?{FC}Je ne savais pas.{FF}{00}
+
+@0267
+{FB} - Quand les Medabots courent pendant un{FD}Robattle, je cours avec eux !{FC}Vous courez aussi, Grand Héros ?{FF}{00}
+
+@0268
+{FB}A DLes Medabots ont été apportés ici{FD}par des extraterrestres, non ?{FC}{FB} / Si les gens trouvaient le moyen de voler,{FD}ils feraient sûrement des Robattles en l'air !{FC}{FB}A DL'espace···{FD}c'est encore loin dans le futur.{FF}{00}
+
+@0269
+{FB} {45} Grand Héros, veuillez prendre{FD}soin de notre princesse.{FF}{00}
+
+@0270
+{FB} / L'océan du royaume de Kodine{FD}est en paix.{FF}{00}
+
+@0271
+{FB}A  Hmm ? Il y a un bout de papier dedans.{FC}Il dit "Si vous avez perdu des Medaparts{FD}pour Periscope, prenez-en une ici."{FC}Ouah, quelle générosité !{FF}{00}
+
+@0272
+{FB} {51} Je voulais avoir ma peluche,{FD}mais j'ai eu ce "Costume de chien" !{FC}Je n'en veux pas, alors tu peux le prendre.{FF}{00}
+
+@0273
+{FB}A  On dirait qu'ils ont des Medaparts pour{FD}"Periscope". J'en ai déjà une,{FD}je n'en ai pas besoin.{FF}{00}
+
+@0274
+{FB} {5B} {F8}Gou gui gou{F8}{FC}{FB}A HC'est quoi, ce truc !?{FD}Un bébé Medabot !?{FC}{FB} {5B} Gui hi hi goub !{FF}{00}
+
+@0275
+{FB}A EIls fabriquaient de telles choses{FD}en plus du Mega-Emperor···{FC}Gui hi hi goub !{FD}Oups, ça déteint sur moi.{FF}{00}
