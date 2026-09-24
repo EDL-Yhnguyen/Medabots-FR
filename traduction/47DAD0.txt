@@ -445,7 +445,7 @@
 {FB} {45} Si vous voulez rentrer chez vous,{FD}venez me le dire.{FF}{00}
 
 @0137
-{FB} {45} Franchissez les frontières du temps{FD}et de l'espace, et renvoyez le Héros{FD}dans son monde !{FF}{00}
+{FB} {45} Franchissez le temps et l'espace,{FD}et renvoyez le Héros dans son monde !{FF}{00}
 
 @0138
 {FB} CDBonjour, {F9} .{FD}Tu es venu jouer avec moi ?{FF}B
@@ -709,7 +709,7 @@
 {FB} 9 Tous les Rubberobos{FD}se sont évadés de prison.{FC}Alors, nous allons les{FD}recapturer au plus vite !{FF}{00}
 
 @0225
-{FB} 2BVous n'avez pas fini d'entendre parler de nous !!{FF}{00}
+{FB} 2BVous n'êtes pas débarrassés de nous !!{FF}{00}
 
 @0226
 {FB} j Si tu cherches Erika,{FC}elle a reçu une invitation pour{FD}l'île Medabot et l'a acceptée avec joie.{FC}{FB}A  Oh non !{FD}Je savais qu'Erika était invitée aussi !{FC}{FB} j Mais c'est un peu bizarre, tu sais ?{FC}J'avais entendu dire que l'île{FD}Medabot était fermée aujourd'hui.{FC}{FB}A FNe vous inquiétez pas !{FD}Je ramènerai Erika.{FC}{FB} j D'accord, prends bien soin d'elle.{FF}{00}
@@ -739,7 +739,7 @@
 {FB} / La Pierre sacrée a été scellée{FD}à cause de son pouvoir incroyable.{FF}{00}
 
 @0235
-{FB} FCOh, salut, {F9} .{FC}On dirait que tu as quelque{FD}chose de plutôt bien, là !{FC}{FB}A  Hein ? Tu veux dire ça ?{FC}{FB} FAOui, c'est ça !{FD}Ce "Pack de citrons" !{FC}C'est excellent pour la peau, tu sais.{FC}{FB}A EEuh··· ok.{FC}Bon, si tu le veux, je peux{FD}toujours te le donner.{FC}{FB} FCSi je prends ce Pack de citrons pour rien,{FD}j'aurais l'impression de t'avoir forcé.{FC}Je l'échange contre certaines de mes Medaparts.{FF}{00}
+{FB} FCOh, salut, {F9} .{FC}On dirait que tu as quelque{FD}chose de plutôt bien, là !{FC}{FB}A  Hein ? Tu veux dire ça ?{FC}{FB} FAOui, c'est ça !{FD}Ce "Pack de citrons" !{FC}C'est excellent pour la peau, tu sais.{FC}{FB}A EEuh··· ok.{FC}Bon, si tu le veux, je peux{FD}toujours te le donner.{FC}{FB} FCSi je prends ce Pack de citrons pour rien,{FD}j'aurais l'impression de t'avoir forcé.{FC}Je l'échange contre des Medaparts à moi.{FF}{00}
 
 @0236
 {FB}A  Aller au 1er étage ?{FF}B
@@ -766,13 +766,13 @@
 {FB} k Voulez-vous entendre parler des{FD}Medaparts du Rallye Partsun ?{FF}B
 
 @0244
-{FB} k Le Medabot de type Ange "Wonder Angel"{45}{FC}Medapart de tête "CHERUB BODY"{FD}Medapart de bras droit "CHERUB HAND"{FD}Medapart de bras gauche "CHERUB ARM"{FD}Medapart de jambes "CHERUB LEG"{FF}{00}
+{FB} k Medabot de type Ange "Wonder Angel"{45}{FC}Medapart de tête "CHERUB BODY"{FD}Medapart de bras droit "CHERUB HAND"{FD}Medapart de bras gauche "CHERUB ARM"{FD}Medapart de jambes "CHERUB LEG"{FF}{00}
 
 @0245
-{FB} k Le Medabot de type Crevette "Mega-Emperor"{45}{FC}Medapart de tête "DEATH BREAK"{FD}Medapart de bras droit "DEATH MISSILE"{FD}Medapart de bras gauche "DEATH LASER"{FD}Medapart de jambes "DEATH CRAWLER"{FF}{00}
+{FB} k Medabot de type Crevette "Mega-Emperor"{45}{FC}Medapart de tête "DEATH BREAK"{FD}Medapart de bras droit "DEATH MISSILE"{FD}Medapart de bras gauche "DEATH LASER"{FD}Medapart de jambes "DEATH CRAWLER"{FF}{00}
 
 @0246
-{FB} k Le Medabot de type Démon "Belzelga"{45}{FC}Medapart de tête "HELMET"{FD}Medapart de bras droit "HELMIGHT"{FD}Medapart de bras gauche "HELMING"{FD}Medapart de jambes "HELCAOS"{FC}Vous devez réunir ces 12 Medaparts.{FF}{00}
+{FB} k Medabot de type Démon "Belzelga"{45}{FC}Medapart de tête "HELMET"{FD}Medapart de bras droit "HELMIGHT"{FD}Medapart de bras gauche "HELMING"{FD}Medapart de jambes "HELCAOS"{FC}Vous devez réunir ces 12 Medaparts.{FF}{00}
 
 @0247
 {FB} RAOh, {F9} .{FD}Bienvenue.{FC}Félicitations d'avoir battu ces Medabots !{FC}Voici un cadeau en reconnaissance{FD}de ton exploit !{FF}{00}
@@ -826,7 +826,7 @@
 {FB}A HPardon !{FF}{00}
 
 @0264
-{FB} z Tant que je suis ici, je peux me baigner tous les jours !{FC}Aaah ! Je n'arrive pas à croire que j'ai dit ça{FD}à un inconnu !{FF}{00}
+{FB} z Ici, je peux me baigner tous les jours !{FC}Aaah ! Dire ça à un inconnu,{FD}je n'y crois pas !{FF}{00}
 
 @0265
 {FB}A DOuah, c'était très amusant !{FC}{FB}A  Pfff, je suis complètement vidé.{FD}Je devrais piquer un bon somme.{FF}{00}
