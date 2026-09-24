@@ -1,0 +1,914 @@
+# Table 0x47D124 — dialogues du onzième chapitre (293 entrées)
+#
+# L'après-jeu : le Rallye Partsun à l'école privée Rosewood (Hachiro, Koji,
+# Karin et les Medaparts), le "Robattle Royal" des Select Corps, les Screws
+# et leur "Royaume des Néo-Enfants", le retour à Kodine (le Chambellan, la
+# reine Margarita, Mockingbird et ses cousins, la petite île isolée, Hachiro
+# en vacances), Harvey à Fiyun et l'échange contre la "STONECLUSTER", le parc
+# Ninja (la maison Ninja, les 3 frères ninjas Goemon et Hanzo, les Rubberobos
+# cachés, le marchand et son entrepôt, le vieil homme qui écorche
+# « Robattle »), le Baron malade, le restaurant avec Karin et son père, la
+# médaille volée puis offerte, "Medabots Hebdo" chez le joueur, et l'endroit
+# spécial d'Erika.
+#
+# Mêmes règles que 479F0C.txt : {FB} + trois octets, {F9} + un octet, {FF} + un
+# octet recopiés à l'identique, espace final écrit {00}. 212 px par ligne au
+# plus, deux lignes par boîte sauf là où l'original en avait davantage.
+# {45} en tête d'entrée est le locuteur du Chambellan (comme au chapitre 5),
+# et {45} dans le texte le deux-points du jeu. {50} est la mère du joueur,
+# {58} le cuisinier. {FF}B (huit entrées) est une question oui/non : conservé.
+# @0109, @0112, @0134 et @0239 n'ont pas de {FB} : conservés ainsi.
+#
+# Vocabulaire fixé : le Rallye Partsun, le "Robattle Royal", la salle
+# d'expérimentation, le lieu de réunion, le "Royaume des Néo-Enfants", le
+# jeu de la "Reine", le musée Medabot, la plaque d'égout, l'entrepôt, la
+# lampe-stylo, la salle de musique, "Medabots Hebdo", Madame Karakuchi,
+# Monsieur Jyunmai, le Médaillon d'argent (devenu fusée), la petite île
+# isolée, le parc Ninja et la maison Ninja, les 3 frères ninjas (Goemon,
+# Hanzo), le Baron. Les ninjas parlent comme au chapitre 4 (« Ninja
+# s'évapore ! », phrases télégraphiques, à la troisième personne). Le
+# Chambellan vouvoie le Grand Héros ; Margarita parle d'elle à la troisième
+# personne. Le vieil homme écorche « Robattle » (Bobattle, Rabottle,
+# Tobrattle). Les Medabots de Kodine (Mockingbird, Negroni, Gibson,
+# Balalaika, Nicorascia, Babonera, Cafe Ole) et la Medapart "STONECLUSTER"
+# restent en anglais.
+#
+
+@0000
+{FB} V Si je bats mes autres rivaux,{FD}je pourrai trouver Karin !{FF}{00}
+
+@0001
+{FB} h Tous les jours après l'école, c'est{FD}RÉVISER RÉVISER RÉVISER !!{FC}Ooh, je déteste ça !{FF}{00}
+
+@0002
+{FB} h Karin ?{FC}Je l'ai vue entrer dans la salle{FD}de musique, au 1er étage.{FF}{00}
+
+@0003
+{FB} h Les garçons ne pensent{FD}qu'aux Medabots !{FF}{00}
+
+@0004
+{FB} h Si tu aimes tant les Medabots,{FD}tu n'as qu'à Robattle jusqu'à la mort !{FF}{00}
+
+@0005
+{FB} h Moi aussi, je les aime autant♥{FF}{00}
+
+@0006
+{FB} h Hein ? Karin ?{FD}Je l'ai vue dans la classe du 2e étage.{FF}{00}
+
+@0007
+{FB} V Mon Medabot coûte une somme{FD}indécente···{FC}Même s'il est faible···{FF}{00}
+
+@0008
+{FB} V Tu cherches quelqu'un ?{FC}Le Robattle, c'est plus important{FD}que ça !{FF}{00}
+
+@0009
+{FB} V Je savais que j'allais perdre.{FF}{00}
+
+@0010
+{FB} V Karin ? Je l'ai vue dans{FD}le couloir d'en bas.{FF}{00}
+
+@0011
+{FB}A  Oh, Hachiro.{FD}Tu as vu Karin ?{FC}{FB} IESi tu me bats en Robattle,{FD}je te le dirai.{FF}{00}
+
+@0012
+{FB} IARien qu'en te regardant,{FD}je savais que tu étais fort···{FC}{FB}A  Peu importe, où est Karin ?{FC}{FB} IEKarin ?{FD}Hm, je ne sais pas.{FC}{FB}A ENon mais !!!!!{FC}{FB} IDMais maintenant que j'y pense,{FD}je l'ai vue au 2e étage.{FC}{FB}A EOk, j'ai compris.{FD}{F8}Soupir···{F8}{FC}{FB} IEBien, si tu veux bien m'excuser.{FF}{00}
+
+@0013
+{FB}A EEncore le 2e étage.{FF}{00}
+
+@0014
+{FB} h Je révise pour un contrôle !{FC}Ne me dérange pas !{FD}{F8}Marmonne··· marmonne···{F8}{FF}{00}
+
+@0015
+{FB} h Oooh ! Arrête de me parler !{FD}J'ai un contrôle à réviser !{FF}{00}
+
+@0016
+{FB} h Karin ? Je sais où elle est.{FD}Je peux le dire, hein ?{FC}Si tu la cherches,{FD}elle est dans la classe d'à côté !{FF}{00}
+
+@0017
+{FB} D Tu ne sais pas où est Karin ?{FD}Il paraît qu'elle était là à l'instant.{FF}{00}
+
+@0018
+{FB}A DOh, c'est Karin !{FF}{00}
+
+@0019
+{FB} CD{F9} .{FF}{00}
+
+@0020
+{FB} DCAttends !!{FD}Elle ne te les donnera pas !{FF}{00}
+
+@0021
+{FB} DCJe n'ai pas encore commencé à me battre !{FC}{FB} CEKoji.{FC}{FB} D Bon, bon.{FD}J'accepte ma défaite.{FF}{00}
+
+@0022
+{FB} CDTiens, {F9} .{FD}Prends-en bien soin.{FF}{00}
+
+@0023
+{FB} DCJe gagnerai à la fin !{FF}{00}
+
+@0024
+{FB} CAHi hi.{FD}Koji ne changera jamais.{FC}{FB}A  Karin, pourquoi as-tu des{FD}Medaparts du Rallye Partsun ?{FC}{FB} CDQuelqu'un m'a demandé de les garder.{FC}C'est plus amusant que{FD}de participer vraiment.{FC}{FB} CEEn parlant d'amusement,{FD}je viens de voir Salty.{FC}Il avait l'air très seul, tu devrais{FD}passer plus de temps avec lui.{FC}{FB}A DTu as raison, je le ferai.{FF}{00}
+
+@0025
+{FB} CD{F9} .{FC}Quand le rallye sera fini,{FD}on pourrait···{FC}{FB}A  Hmm ?{FC}{FB} CGOublie ce que j'ai dit.{FF}{00}
+
+@0026
+{FB} CDBonne chance, {F9} .{FF}{00}
+
+@0027
+{FB} 9 Au-delà, c'est le "Robattle Royal".{FD}Impossible de passer sans gagner !{FF}{00}
+
+@0028
+{FB} 9 Le Rallye Partsun est{FD}en cours !{FC}Dis le mot de passe !{FC}{FB}A EHein ? Le mot de passe···{FF}{00}
+
+@0029
+{FB} 9 C'était une blague !{FD}Entre donc !{FF}{00}
+
+@0030
+{FB}A GElle va faire le tour ?{FC}{FB} 9CÇa ne marchera pas !{FD}On n'est pas le gang Rubberobo, tu sais.{FC}{FB} 9 En fait, il n'y a pas de mot de passe,{FD}mais il faut un badge !{FF}{00}
+
+@0031
+{FB}A  On dirait que c'est verrouillé{FD}de l'intérieur.{FC}Et il n'y a pas de clé{FD}pour la plaque d'égout non plus···{FF}{00}
+
+@0032
+{FB} 9 Faisons un Robattle !{FF}{00}
+
+@0033
+{FB} 9 Passons au Robattle suivant.{FF}{00}
+
+@0034
+{FB} 9 Puisque {F9}  est de l'autre côté,{FD}c'est qu'il est arrivé avant moi !{FC}Zut alors !{FF}{00}
+
+@0035
+{FB} % Hum, si nous pouvons continuer.{FD}Medafighters, Robattle !{FF}{00}
+
+@0036
+{FB}A  Je ferais mieux de vérifier mon{FD}Medabot avant le prochain Robattle !{FF}{00}
+
+@0037
+{FB} 9 Je ne connaissais pas cette méthode !{FD}J'ai perdu !{FF}{00}
+
+@0038
+{FB} 9 Tu ne peux pas utiliser la même{FD}stratégie encore et encore !{FF}{00}
+
+@0039
+{FB} 9 Passe au dernier obstacle !{FF}{00}
+
+@0040
+{FB} 9 C'est le moment !{FF}{00}
+
+@0041
+{FB} 9 Si tu atteins la salle d'expérimentation,{FD}tu auras les Medaparts.{FF}{00}
+
+@0042
+{FB} 9 Reviens tenter ta chance un jour !{FF}{00}
+
+@0043
+{FB} k Félicitations, {F9} .{FC}Veuillez vous rendre à la remise{FD}des prix, au 3e étage.{FF}{00}
+
+@0044
+{FB} j Oh, je suis désolée.{FD}Quelqu'un d'autre a pris les Medaparts.{FC}{FB}A HQuoi ? Qui !?{FC}{FB} j Qui ?{FD}Un groupe de trois enfants.{FC}{FB}A  Encore eux.{FC}{FB} j On dirait qu'ils sont partis{FD}au lieu de réunion.{FC}{FB}A  Je vais aller voir !{FF}{00}
+
+@0045
+{FB} j Les enfants sont sacrément forts, tu sais.{FF}{00}
+
+@0046
+{FB}A  Oh, la plaque d'égout n'est pas verrouillée !{FD}Je pourrais l'ouvrir, si je voulais.{FF}{00}
+
+@0047
+{FB}A DBon ! Allons-y !{FF}{00}
+
+@0048
+{FB} ' Quelqu'un a fait tomber quelque{FD}chose d'intéressant···?{FF}{00}
+
+@0049
+{FB} ' Je suis Negroni.{FD}La boîte qui flotte m'intrigue.{FF}{00}
+
+@0050
+{FB}A  Qu'est-ce qu'il y a, Erika ?{FC}{FB} BGHé, {F9} .{FD}Euh··· je te dirai plus tard.{FC}{FB}A  Quoi ?{FC}{FB} BGRien.{FD}À plus tard, d'accord ?!{FF}{00}
+
+@0051
+{FB} GCDonc, comme je disais.{FC}On a pris la place{FD}du gang Rubberobo{FC}et on crée notre "Royaume des Néo-Enfants" !{FC}{FB} FCC'est pour ça que je t'ai dit de m'écouter.{FC}{FB}A BQu'est-ce que vous croyez{FD}faire, au juste !?{FC}{FB} FBCe qu'on croit···{FD}Tu ne fais que te mêler de nos affaires.{FC}Tu as quelque chose contre{FD}moi et ma bande ?{FC}{FB}A BC'est ma réplique, ça !{FC}Mise tes Medaparts du Rallye Partsun{FD}et fais un Robattle avec moi !{FC}{FB} FBJe vais t'apprendre à faire le malin !{FF}{00}
+
+@0052
+{FB} V Ouiiin ! J'ai perdu.{FD}Mamaaan !{FF}{00}
+
+@0053
+{FB} F Au suivant, go !{FF}{00}
+
+@0054
+{FB} V J'y vais pas !{FD}Je ne veux plus jouer à ça !{FF}{00}
+
+@0055
+{FB}A BNe te sers pas des gens comme ça !{FC}{FB} F Bon, comme tu voudras.{FD}Goûte-moi ça !{FC}{FB} HBJe vais t'étendre comme du linge !{FF}{00}
+
+@0056
+{FB} HDTous les jours, la lessive···{FC}{FB} F Continuez, les garçons !{FF}{00}
+
+@0057
+{FB} G C'est parti !{FF}{00}
+
+@0058
+{FB}A EComme je l'ai déjà dit···{FC}{FB} FDBon, bon.{FC}Je sais que tu meurs d'envie{FD}de jouer avec moi, hein ?{FF}{00}
+
+@0059
+{FB}A  Bon, maintenant, donne les Medaparts···{FC}{FB} FCOh, désolée, mais elles ne sont pas là.{FC}{FB}A HPourquoi !?{FC}{FB} FAOn vient de se battre contre Koji{FD}et on les a perduuues.{FC}{FB}A BFallait le dire tout de suite !{FC}{FB} F J'en ai assez de ce jeu{FD}de la "Reine".{FC}Je veux sortir d'ici.{FF}{00}
+
+@0060
+{FB} GDC-Chef !{FC}C'est vous qui avez parlé la première{FD}du truc du royaume !{FF}{00}
+
+@0061
+{FB}A  Toujours aussi désorganisés.{FD}Allons voir Koji pour ces Medaparts !{FF}{00}
+
+@0062
+{FB}A BJe t'ai trouvé, Koji !{FC}Mise les Medaparts que tu as prises{FD}aux Screws et fais un Robattle !!{FC}{FB} DCAMÈNE-TOI !!{FD}C'est tout ce que j'espérais !!{FF}{00}
+
+@0063
+{FB} DDHmm···{FC}Je n'attendais pas moins de toi, {F9} .{FD}Mais la prochaine fois, je ne perdrai pas !{FC}Ah oui, au fait, j'avais quelque chose{FD}à te demander !{FC}Ton chien, c'est Salty, non ?{FD}Tu le sors en promenade ?{FC}Tu dois t'occuper de ton chien{FD}autant que de ton Medabot.{FF}{00}
+
+@0064
+{FB} {45} Ohh !{FD}Tiens, tiens, mais c'est notre Héros.{FC}Ces fauteurs de troubles sont partis{FD}et notre pays est en paix.{FC}Même notre Princesse est devenue{FD}un peu plus distinguée.{FC}Ha ha ha ha ha····{FF}{00}
+
+@0065
+{FB} ,AAttends, Mockingbird !{FD}J'ai dit attends !{FF}{00}
+
+@0066
+{FB} ,BJ'AI DIT ATTENDS !{FF}{00}
+
+@0067
+{FB}A AOui, un parfait exemple{FD}de grâce···{FF}{00}
+
+@0068
+{FB} {45} Bon, il lui reste du travail.{FF}{00}
+
+@0069
+{FB} {45} Oh, c'est le Grand Héros !{FD}Bienvenue, bienvenue !{FC}{FB}A  Euh, que dois-je faire{FD}quand je veux rentrer chez moi ?{FC}{FB} {45} Ha ha ha ! C'est vrai !{FD}Votre fusée ne va que dans un sens.{FC}Une fois le médaillon devenu fusée,{FD}plus moyen de le remettre en poche♥{FC}Mais n'ayez crainte !{FC}Le grand Oracle vous renverra{FD}dans votre monde !{FF}{00}
+
+@0070
+{FB}A DSalut, Margarita.{FC}{FB} ,AOh ! Grand Héros !{FD}Tu es venu !{FF}{00}
+
+@0071
+{FB} ,ATu sais, j'ai quelque chose{FD}à te donner, Héros !{FC}{FB}A DQu'est-ce que c'est ?{FC}{FB} ,DDes Medaparts, mais···{FC}{FB}A  Qu'est-ce qu'il y a ?{FC}{FB} ,DMockingbird s'est enfuie{FD}avec les Medaparts.{FC}{FB}A  Mockingbird ?{FC}{FB} ,CEuh, en fait, c'est le grand{FD}frère de Cafe Ole··· euh···{FC}{FB}A  Le grand frère···{FC}{FB} ,CDe l'enfant··· du jumeau··· de la{FD}cousine de sa femme··· je crois ?{FC}{FB}A  Tu te moques de moi, là.{FF}{00}
+
+@0072
+{FB}A  Dis, Margarita.{FC}Combien d'autres Medabots sont{FD}comme Cafe Ole ?{FC}{FB} ,A1, 2, 3···{FD}40···{FC}Je ne sais vraiment pas.{FC}{FB}A HT-tant que ça !?{FC}{FB}A  Peu importe,{FD}où est Mockingbird ?{FC}{FB} , Elle va toujours par-ci,{FD}par-là···{FC}J'ai entendu dire qu'elle était{FD}sur la petite île isolée···{FC}{FB}A EUne petite île isolée···{FD}Je vais y jeter un œil ?{FF}{00}
+
+@0073
+{FB} ,DElle s'est peut-être enfuie parce{FD}que je ne jouais pas assez avec elle···{FC}Il faut aussi penser à jouer{FD}avec ses amis, Héros.{FC}{FB}A EÇa fait longtemps que je n'ai{FD}pas sorti Salty en promenade.{FF}{00}
+
+@0074
+{FB} ,AHéros, viens jouer avec Margarita !{FF}B
+
+@0075
+{FB} ,AOn rejouera.{FC}{FB}A DBien sûr.{FF}{00}
+
+@0076
+{FB} ' Mon nom, c'est Balalaika ?{FD}Tu aimes mon nom ?{FC}Ah ha ha ha ha.{FC}{FB}A  {F8}(·····){F8}{FF}{00}
+
+@0077
+{FB} - Oh, Héros.{FD}Faisons un combat commémoratif !{FF}{00}
+
+@0078
+{FB} - Il y a des Medaparts légendaires{FD}sur l'île déserte !{FC}Je les veux !{FF}{00}
+
+@0079
+{FB} ' Hé hé.{FD}Il y a une boîte qui flotte, là-bas.{FC}{FB}A  Tu ne serais pas Mockingbird,{FD}par hasard ?{FC}{FB} ' Je suis son amie, Negroni.{FD}Il y a une boîte qui flotte.{FF}{00}
+
+@0080
+{FB} ' C'est une impasse.{FD}Gibson a des ennuis, maintenant.{FC}{FB}A  Euh···{FC}{FB} ' Hé, comment ça va ?{FC}Je suis Gibson. Fêtons{FD}notre première rencontre !{FC}Tiens, prends ça !{FF}{00}
+
+@0081
+{FB} J Tiens, tiens, monsieur {F9} .{FD}C'est un endroit très agréable, non ?{FF}{00}
+
+@0082
+{FB} ICHé, c'est bien {F9}  !{FC}{FB}A HHein !? Hachiro ?{FD}C-c-comment es-tu arrivé ici ?{FC}{FB} IEEn vacances, bien sûr !{FD}Et j'ai trouvé ces très bonnes Medaparts.{FC}{FB}A HOh ! Mais c'est···!{FC}{FB} IEOh, tu les veux ?{FC}Je veux bien, mais seulement{FD}si tu me bats en Robattle !{FF}{00}
+
+@0083
+{FB} IETu es plutôt fort, dis donc.{FC}{FB}A  Bon, bon, maintenant donne les Medaparts.{FF}{00}
+
+@0084
+{FB} I J'adore être en vacances.{FC}{FB}A  Comment tu es venu ici !?{FC}{FB} IEQuand on a de l'argent,{FD}on peut tout faire.{FC}{FB}A EPas possible···{FF}{00}
+
+@0085
+{FB} ' C'est la mer ! C'est la mer !{FC}{FB}A  Tu ne serais pas Mockingbird,{FD}par hasard ?{FC}{FB} ' C'est moi.{FD}Tu aimes la mer ?{FF}B
+
+@0086
+{FB} ' Alors faisons un Robattle.{FF}{00}
+
+@0087
+{FB}A  Margarita s'inquiète beaucoup{FD}pour toi, alors rentre.{FC}{FB} ' Ah bon !{FD}On dirait que je n'ai pas le choix.{FC}Il fait beau, après tout.{FD}Autant y aller.{FC}À plus tard.{FF}{00}
+
+@0088
+{FB}A EParler comme ça, c'est{FD}vraiment épuisant···{FF}{00}
+
+@0089
+{FB} ' Je me demande si je peux{FD}manger ce fruit.{FC}{FB}A  Tu ne serais pas Mockingbird,{FD}par hasard ?{FC}{FB} ' Pas moi.{FD}Je suis la cousine, Nicorascia.{FF}{00}
+
+@0090
+{FB} ' Tu connais Mockingbird ?{FC}{FB}A EQui est Mockingbird ?{FC}{FB} ' Non non.{FD}Je suis Babonera, pas Mockingbird.{FC}{FB}A EOh, ce n'est pas toi···{FC}{FB} ' Je vois.{FD}Ahahahahahhaha. Quelle bêtise.{FF}{00}
+
+@0091
+{FB} a N'y touche pas !{FC}Je vais étudier cet équipement.{FD}Il sera sûrement utile à la science.{FF}{00}
+
+@0092
+{FB} n Salut, {F9} .{FC}Je n'ai pas besoin d'être aux{FD}commandes, mais je reste là au cas où.{FF}{00}
+
+@0093
+{FB} n J'ai trouvé de très bonnes Medaparts,{FD}alors je pensais en changer un peu.{FF}{00}
+
+@0094
+{FB}A  Pfff···{FD}Pourquoi tu te mets à Robattle d'un coup ?{FC}{FB} n Et si on faisait plutôt ça ?{FC}Tu m'apportes la Medapart de tête{FD}"STONECLUSTER"{FC}et je te donne celles-ci à la place.{FC}{FB}A  Un échange ?{FD}Ça me va !{FF}{00}
+
+@0095
+{FB} n Tu as apporté la Medapart de tête{FD}"STONECLUSTER" ?{FF}{00}
+
+@0096
+{FB} n Oh ! Tu as ces Medaparts !{FD}Hé, hé, on échange !{FF}B
+
+@0097
+{FB} n C'est décidé !{FF}{00}
+
+@0098
+{FB} n Oooh, c'est dommage.{FD}Si tu changes d'avis, échange avec moi !{FF}{00}
+
+@0099
+{FB} n La "STONECLUSTER" est la plus cool{FD}des Medaparts de tête !{FC}Dépêche-toi de l'apporter, d'accord♥{FF}{00}
+
+@0100
+{FB} n C'est amusant de changer, parfois.{FF}{00}
+
+@0101
+{FB} n Bonjour, {F9} .{FC}{FB}A DBonjour, Harvey.{FD}Comment te sens-tu ?{FC}{FB} n En pleine forme.{FD}C'est grâce à toi, {F9} .{FF}{00}
+
+@0102
+{FB} n Fiyun va devenir un{FD}paradis pour les Medabots.{FF}{00}
+
+@0103
+{FB} e Toh !{FF}{00}
+
+@0104
+{FB}A HAttends !{FC}{FB}A E{F8}(·····){F8}{FF}{00}
+
+@0105
+{FB} {FF}{00}
+
+@0106
+{FB} e Ici, foyer traditionnel des Ninjas.{FC}Maintenant, parc d'attractions, mais{FD}esprit Ninja ne meurt jamais !{FC}{F8}Pouf !{F8}{FF}{00}
+
+@0107
+{FB}A HIl a disparu !?{FF}{00}
+
+@0108
+{FB} e Ninja se cache dans l'ombre.{FD}Mais maintenant, Ninja a un problème.{FC}Choses qui disent RoboRobo se cachent !{FD}Elles se cachent dans l'ombre aussi !{FF}{00}
+
+@0109
+Étoile de Ninja est dangereuse !{FD}Reste hors de son chemin !{FF}{00}
+
+@0110
+{FB}A HOuah !!{FF}{00}
+
+@0111
+{FB} e Ouf···{FD}C'était moins une !{FC}{FB}A BIl y a une étoile plantée dans toi !{FC}{FB} e Ha ha ha.{FD}Ninja ne sent pas la douleur ! Adieu !{FF}{00}
+
+@0112
+La pièce historique "Ciel bleu"{FF}{00}
+
+@0113
+{FB} t Admire l'art du sabre du Medabot Ninja !{FF}{00}
+
+@0114
+{FB} t C'est dangereux.{FD}Évite le sabre du Medabot Ninja.{FF}{00}
+
+@0115
+{FB}A HLe gang Rubberobo !{FF}{00}
+
+@0116
+{FB} W Bon, je ferais mieux de tout fermer.{FF}{00}
+
+@0117
+{FB}A HC'est terrible !{FD}Ils sont entrés dans l'entrepôt !{FC}Je dois les attraper avant{FD}qu'ils fassent des bêtises !{FF}{00}
+
+@0118
+{FB} Y Je peux encore continuer !{FD}Aïe aïe aïe···{FF}{00}
+
+@0119
+{FB} t Toh !{FF}{00}
+
+@0120
+{FB} t Dah !{FF}{00}
+
+@0121
+{FB} t Pas de souci. C'est le dos du sabre !{FC}{FB} {FF}{00}
+
+@0122
+{FB} 1 RoboRobo{FC}{FB}A  RoboRobo ?{FF}{00}
+
+@0123
+{FB}A HAh !{FC}{FB} 1 RoboRobo RoboRobo{FC}{FB} t Toh !{FF}{00}
+
+@0124
+{FB} 1CRobo ouiiin !!{FF}{00}
+
+@0125
+{FB} t Pas de souci. C'est le dos du sabre !{FC}{FB} {FF}{00}
+
+@0126
+{FB} m Ici, maison Ninja.{FC}Si tu trouves Ninja caché ici,{FD}nous donnons bonnes Medaparts.{FC}Nous appelons ça{45}{FD}"Visite cache-cache de la maison Ninja".{FF}{00}
+
+@0127
+{FB} m Ce badge montre que tu as gagné !{FD}Tu peux passer.{FF}{00}
+
+@0128
+{FB} m Tu dois passer par{FD}porte de gauche.{FF}{00}
+
+@0129
+{FB} m Maintenant tu sais combien{FD}Ninja est merveilleux !!{FF}{00}
+
+@0130
+{FB} e Bien, tu as trouvé Ninja.{FD}Mais peux-tu vaincre Ninja ?{FF}{00}
+
+@0131
+{FB} m Ici, maison Ninja, nous avons concours.{FC}Une fois concours commencé, tu ne{FD}quittes plus maison Ninja.{FC}Tu joues au concours aussi ?{FF}B
+
+@0132
+{FB} e Quoi !{FD}Tu as trouvé Ninja !?{FF}{00}
+
+@0133
+{FB} e Pas assez d'entraînement !{FF}{00}
+
+@0134
+{F8}Frr··· frr···{F8}{FC}{FB}A HLe gang Rubberobo !{FD}Qu'est-ce que vous faites !?{FF}{00}
+
+@0135
+{FB} 1 Robo ?{FF}{00}
+
+@0136
+{FB} 1CRobo ouiiin !!{FF}{00}
+
+@0137
+{FB}A HArgh ! Ils se sont enfuis !{FF}{00}
+
+@0138
+{FB} 1 Roborobo···{FD}Trop de poudre à canon···{FC}{FB}A  Le gang Rubberobo !{FF}{00}
+
+@0139
+{FB} m Tu dois te préparer{FD}et revenir ensuite.{FF}{00}
+
+@0140
+{FB} m D'abord tu viens ici, ensuite{FD}tu entres dans visite !{FF}{00}
+
+@0141
+{FB}A  Je ne peux pas sortir maintenant.{FF}{00}
+
+@0142
+{FB} 1 Rubberobo ?{FC}{FB}A  C'est les Rubberobos !{FF}{00}
+
+@0143
+{FB} b Mmmp !{FD}Ninja sent pouvoir maléfique dans salle.{FC}Tant que pas parti, personne passe ici.{FD}C'est règle Ninja !{FF}{00}
+
+@0144
+{FB}A  Oh, il y a de l'argent dedans.{FF}{00}
+
+@0145
+{FB}A  Il n'y a rien d'autre là-dedans.{FF}{00}
+
+@0146
+{FB} c Goemon, des 3 frères ninjas, est là !{FF}{00}
+
+@0147
+{FB} m N'oublie pas entraînement.{FD}Ninja fort s'entraîne toujours !{FF}{00}
+
+@0148
+{FB} m Maître a mal au dos.{FD}Maître doit se reposer···{FF}{00}
+
+@0149
+{FB}A  Euh, vous connaissez{FD}le gang Rubberobo ?{FF}{00}
+
+@0150
+{FB} b Mmmp !{FC}Ninja ne sent plus pouvoir{FD}maléfique dans salle.{FC}Tu dois être fort comme Ninja !{FD}Si tu es fort, tu Robattle avec Ninja !!{FF}{00}
+
+@0151
+{FB} b Toi, bon.{FD}Viens par ici.{FC}{FB}A  Mais, et les Rubberobos ?{FC}{FB} b Adieu ! Toh !{FF}{00}
+
+@0152
+{FB}A HAh !{FC}{FB}A  Ce n'était pas si important···{FF}{00}
+
+@0153
+{FB}A  Ouah, pas mal.{FD}Il y a un étang dans la maison.{FC}J'ai l'impression que quelqu'un est là···{FF}{00}
+
+@0154
+{FB} c Quelqu'un est là !{FF}{00}
+
+@0155
+{FB}A HOuah ! Tu m'as fait peur !{FF}{00}
+
+@0156
+{FB} c Goemon, des 3 frères ninjas, est là !{FF}{00}
+
+@0157
+{FB} c Tu as trouvé Ninja.{FF}{00}
+
+@0158
+{FB} b Hmmmm···{FF}{00}
+
+@0159
+{FB} c Tu es fort.{FD}Tu veux devenir Ninja ?{FF}{00}
+
+@0160
+{FB} d Ga ha ha ! Ninja t'accueille.{FD}Tu es arrivé jusqu'ici.{FC}Hanzo, des 3 frères ninjas, est là !{FD}C'est moi qui te combats.{FF}{00}
+
+@0161
+{FB} d Excellent !{FC}Ninja a été battu.{FD}Tu veux dire quelque chose ?{FC}{FB}A  On dirait que le gang Rubberobo{FD}s'est infiltré ici et prépare un coup.{FC}{FB} d Ninja a un problème···{FC}Ninja avait Medaparts pour toi,{FD}mais choses "RoboRobo" les ont{FD}volées à Ninja.{FF}{00}
+
+@0162
+{FB}A HVraiment ?{FD}C'est vrai ?{FC}{FB} d Quelque part dans parc Ninja{FD}est celui qui a volé Medaparts.{FC}Nous n'avons pas donné Medaparts{FD}à garçon venu avant, non plus.{FC}{FB}A  Quel garçon ?{FD}Bon, je vais le chercher.{FF}{00}
+
+@0163
+{FB} d Entraînement jamais facile···{FF}{00}
+
+@0164
+{FB} DDSalut, {F9} .{FD}Je savais que tu viendrais.{FC}{FB}A  Koji, qu'est-ce que le gang{FD}Rubberobo fait ici···{FC}{FB} DAJe n'aurais pas pu mieux prévoir !{FC}On les attrape, on les punit, et{FD}on prend leurs Medaparts !{FC}D'après les règles du Rallye,{FD}ce sera un combat loyal.{FC}Faisons un Robattle !{FF}{00}
+
+@0165
+{FB} D Tu gagnes, cette fois.{FD}On n'y peut rien.{FF}{00}
+
+@0166
+{FB} D Je prends les devants.{FD}La prochaine fois, tu es à moi !{FF}{00}
+
+@0167
+{FB} 1 Robo ?{FF}{00}
+
+@0168
+{FB}A  Ah···{FF}{00}
+
+@0169
+{FB} 1 RoboRobo RoboRobo{FF}{00}
+
+@0170
+{FB} 1BRoboRobo RoboRobo{FF}{00}
+
+@0171
+{FB} 1CRoboRobo RoboRobo{FF}{00}
+
+@0172
+{FB} 1ARoboRobo RoboRobo{FF}{00}
+
+@0173
+{FB}A EIl fait noir comme dans un four.{FD}Impossible même de Robattle !{FC}Même avec ma lampe-stylo, rien à faire···{FC}{FB}A  Je dois aller prévenir le{FD}propriétaire de cet entrepôt !{FF}{00}
+
+@0174
+{FB} W Ces derniers temps, j'ai des souris{FD}dans mon entrepôt···{FC}À cause d'elles, je n'ai plus{FD}de Medaparts à vendre.{FF}{00}
+
+@0175
+{FB} W J'ai de drôles de souris dans{FD}mon entrepôt, ces derniers temps.{FC}Elles n'arrêtent pas de voler ma marchandise.{FC}{FB}A HVous voulez dire les Rubberobos !?{FC}{FB} W Tu connais l'identité des souris !?{FC}Dans ce cas, pourrais-tu aller{FD}chasser les souris pendant{FD}que j'attends dehors ?{FF}B
+
+@0176
+{FB} W Je vais allumer la lumière{FD}dans l'entrepôt.{FC}Sors de la boutique,{FD}puis monte et prends à gauche.{FF}{00}
+
+@0177
+{FB} W Hmmmm, c'est un problème.{FF}{00}
+
+@0178
+{FB} W Je peux ouvrir ma boutique, maintenant.{FF}{00}
+
+@0179
+{FB} W Je compte sur toi.{FF}{00}
+
+@0180
+{FB} V Un Medabot Ninja !{FD}C'est trop génial !{FF}{00}
+
+@0181
+{FB} 1C{F8}Keuf keuf{F8} Bobattle !{FF}{00}
+
+@0182
+{FB} 1CAïe aïe aïe···{FC}{FB}A  Le gang Rubberobo !{FC}{FB} 1CRobattle rrrobo···{FF}{00}
+
+@0183
+{FB} Y Mon petit-fils ne s'intéresse pas{FD}aux Medabots, alors je m'en sers.{FC}Il est peut-être démodé, mais il{FD}sait encore faire quelques coups !{FF}{00}
+
+@0184
+{FB} 1COn a été repérés !?{FC}{FB}A  Je vous ai trouvés, les Rubberobos !{FF}{00}
+
+@0185
+{FB} W Beau travail.{FD}Je vais te payer pour ta peine.{FF}{00}
+
+@0186
+{FB} W On dirait que tu les as tous eus.{FD}Ça mérite une prime spéciale.{FF}{00}
+
+@0187
+{FB} W Je retourne à ma boutique.{FD}Pas le temps de faire une pause.{FF}{00}
+
+@0188
+{FB} Y Qu'est-ce que tu veux !?{FD}Toi aussi ?{FC}Tu veux me Rabottle, toi aussi ?{FD}Tu viens prendre mes Medaparts ?{FF}{00}
+
+@0189
+{FB} Y Rends-moi mes Medaparts !!{FF}{00}
+
+@0190
+{FB} Y Faisons un Bobattle !{FD}Je ne perdrai pas avant d'avoir gagné !{FF}{00}
+
+@0191
+{FB} Y Je me souviens, il y a 6 ans···{FC}J'avais perdu mes Medaparts contre{FD}un garçon comme toi···{FF}{00}
+
+@0192
+{FB} Y Mais··· j'aime toujours{FD}le Tobrattle···♥{FF}{00}
+
+@0193
+{FB} a Si je cache ça sous l'arbre,{FD}je vais me couvrir de boue···{FF}{00}
+
+@0194
+{FB}A  Qu'est-ce que···?{FF}{00}
+
+@0195
+{FB} a Il y a trop de monde ici···{FD}Ah oui ! Je vais aller sous terre.{FF}{00}
+
+@0196
+{FB} ,EOn s'ennuuuie !{FF}{00}
+
+@0197
+{FB} a Oups ! Pas ici !{FD}J'ai failli me perdre une seconde···{FF}{00}
+
+@0198
+{FB} ,AHéros ! Mockingbird est revenue !{FC}Merci♥{FD}Laisse-moi te donner ça !{FF}{00}
+
+@0199
+{FB} a Pas bon.{FC}Quelqu'un le trouverait facilement.{FD}Je vais l'apporter au niveau le plus bas.{FF}{00}
+
+@0200
+{FB} ' Je suis Mockingbird !{FD}La mer, c'était vraiment génial !{FF}{00}
+
+@0201
+{FB} a C'est parti !{FC}{FB} {FF}{00}
+
+@0202
+{FB} aABon, personne ne trouvera jamais···{FC}{FB}A  Hé, monsieur, vous faites quoi ?{FC}{FB} a Urk !{FF}{00}
+
+@0203
+{FB} a R-rien du tout.{FD}Je fais tout un tas de rien !{FC}{FB}A  Trèèès louche.{FF}{00}
+
+@0204
+{FB} aAHé, tant pis, c'est trop tard.{FC}Pas de témoin possible, alors{FD}je vais régler ça ici même !{FF}{00}
+
+@0205
+{FB} a Ouiiin !{FD}Pourquoi tu m'as battu si fort ?{FC}Je faisais juste mon petit boulot{FD}et··· et···{FF}{00}
+
+@0206
+{FB}A  C'était quoi, ça ?{FF}{00}
+
+@0207
+{FB}A  C'est là que Seaslug s'est{FD}noyé, tout à l'heure.{FC}Oh, il y a quelque chose.{FF}{00}
+
+@0208
+{FB}A  Ces Medaparts seraient-elles{FD}pour le Rallye Partsun ?{FC}Elles sont cachées un peu partout.{FF}{00}
+
+@0209
+{FB} FCPas mal, {F9} .{FF}{00}
+
+@0210
+{FB}A  Encore toi !{FC}{FB} F Si tu donnes tes Medaparts{FD}gentiment, je ne te ferai pas de mal.{FC}{FB}A  C'est toujours toi qui finis{FD}par avoir mal !{FF}{00}
+
+@0211
+{FB} FATu veux ces Medaparts ?{FC}{FB}A HAh, ces Medaparts···{FC}J'ai eu beau les chercher,{FD}je ne les trouvais pas !{FC}{FB} FAJusqu'ici, je les cachais{FD}au musée Medabot.{FC}Si tu mises toutes tes Medaparts,{FD}je te les joue en Robattle.{FC}Qu'en dis-tu ?{FC}{FB}A BC'est bas de cacher des Medaparts !{FD}Tu vas l'avoir, ton Robattle !{FC}{FB} FAPlus moyen de reculer.{FC}{FB} HBC'est pour ma lessive !{FF}{00}
+
+@0212
+{FB} GBCette fois, je te bats !{FF}{00}
+
+@0213
+{FB} FBÇa suffit !{FF}{00}
+
+@0214
+{FB} GDJe savais qu'on ne gagnerait jamais.{FF}{00}
+
+@0215
+{FB} GCC'est parti !{FD}C'est au tour du Baron !{FF}{00}
+
+@0216
+{FB} K Keuf··· keuf···{FC}{FB}A  Ouais ouais, si tu veux.{FC}{FB} GEComment oses-tu !{FD}Te moquer encore du Baron !{FC}{FB}A  Ouais ouais···{FF}{00}
+
+@0217
+{FB} KAJe···{FD}Beuaaargh !!!{FC}{FB} FDBaron !{FD}Tiens bon !{FC}{FB} K Ne t'inquiète pas.{FD}C'est juste de la tomaaa··· beurk{FC}{FB} GEBarrrrron !{FF}{00}
+
+@0218
+{FB} KABleuuurp !!{FF}{00}
+
+@0219
+{FB} GEBaron···{FF}{00}
+
+@0220
+{FB} K Je··· je vais bien···{FF}{00}
+
+@0221
+{FB}A  Autant y aller.{FF}{00}
+
+@0222
+{FB} W Karin, arrête de regarder partout.{FD}Ce n'est pas poli.{FC}Dépêche-toi de finir ton assiette.{FC}{FB} CDOui, Père.{FF}{00}
+
+@0223
+{FB} FCCe n'est pas juste !{FC}Comment tu peux ramasser des{FD}Medaparts partout comme ça ?{FC}Je te croyais au-dessus de ça.{FC}{FB} F Tout ce qui t'intéresse, c'est le prix.{FD}J'attendais mieux de toi.{FF}{00}
+
+@0224
+{FB}A  Koji···{FC}{FB} D {F9} .{FC}Me ferais-tu l'honneur{FD}d'un dernier combat ?{FC}Peu importe qui gagne ou qui perd,{FD}j'en tirerai sûrement quelque chose.{FC}Tu es prêt ?{FC}{FB}A DJ'espérais que tu dirais ça !{FF}{00}
+
+@0225
+{FB} DDMerci, c'était très amusant.{FC}{FB}A DTu es encore trop poli !{FC}{FB} DAHé hé.{FD}Allons au lieu de réunion !{FF}{00}
+
+@0226
+{FB} CDTu veux bien venir avec moi{FD}au restaurant ?{FF}B
+
+@0227
+{FB} CDBonjour, {F9} .{FC}{FB}A DComment te sens-tu aujourd'hui, Karin ?{FC}{FB} CDJe vais bien, merci de demander.{FD}J'attendais que tu viennes.{FC}{FB}A  Tu m'attendais ?{FC}{FB} CDJe me disais que ce serait bien{FD}que tu viennes dîner au restaurant{FD}avec mon père et moi.{FC}{FB}A HAu restaurant··· tu veux dire{FD}le meilleur de la ville !?{FC}{FB} CDAlors, tu viens avec moi ?{FF}B
+
+@0228
+{FB} CAVraiment ? Je suis contente.{FD}Mon père a presque fini son travail.{FC}Je vais l'appeler pour qu'on{FD}se retrouve au restaurant.{FF}{00}
+
+@0229
+{FB} CAAlors, on y va♥{FF}{00}
+
+@0230
+{FB} CDTu veux te joindre à nous ?{FD}Seulement si tu en as envie, bien sûr.{FF}{00}
+
+@0231
+{FB} W Quelqu'un ici n'a aucune manière.{FF}{00}
+
+@0232
+{FB} W C'est presque criminel de laisser{FD}entrer le gang Rubberobo ici !{FF}{00}
+
+@0233
+{FB} j Bonjour, {F9} .{FC}{FB}A DBonjour, Madame Karakuchi !{FC}{FB} j Koji ne se calme jamais !{FF}{00}
+
+@0234
+{FB}A  Euh, excusez-moi···{FC}{FB} j Vous êtes avec Monsieur Jyunmai ?{FC}Il vous attend.{FD}Je vous conduis à votre table.{FF}{00}
+
+@0235
+{FB} u Veuillez me suivre.{FF}{00}
+
+@0236
+{FB} u Voici votre table.{FF}{00}
+
+@0237
+{FB}A DBonjour, euh···{FD}Merci de m'avoir invité.{FC}{FB} W Salut, {F9} .{FD}Ne te retiens pas !{FF}{00}
+
+@0238
+{FB}A AÇa a l'air TROP bon.{FD}À table !{FC}{F8}Miam miam{F8}{FD}{F8}Crounch crounch{F8}{FD}{F8}Scrontch scrontch{F8}{FD}{F8}Mâche mâche{F8}{FD}Aaaah, c'était délicieux !{FC}{FB} CAHi hi.{FF}{00}
+
+@0239
+{F8}Crash !{F8}{FD}Aaaaah !{FC}{FB}A HQu'est-ce que···!?{FF}{00}
+
+@0240
+{FB} 1DRrrobo !{FF}{00}
+
+@0241
+{FB} DCArrêtez !{FF}{00}
+
+@0242
+{FB}A  Koji··· et le gang Rubberobo !?{FC}{FB} DBJe ne vais pas vous laisser{FD}manger gratis !{FC}{FB} 1CJe n'ai pas encore mangé !{FF}{00}
+
+@0243
+{FB} {FF}{00}
+
+@0244
+{FB} 1AAha ! Une médaille !{FD}Elle est à moi !{FF}{00}
+
+@0245
+{FB} W Je paierai par carte.{FC}{FB} j Merci beaucoup, monsieur.{FF}{00}
+
+@0246
+{FB}A HOn a un problème !{FF}{00}
+
+@0247
+{FB}A HHein ?{FD}Le gang Rubberobo s'est multiplié !?{FC}{FB} 1ALequel de nous a la médaille,{FD}à ton avis ? Hi hi hi.{FC}{FB}A  Koji ?{FF}{00}
+
+@0248
+{FB} DEMmmmmmh.{FD}Je ne sais pas !{FF}{00}
+
+@0249
+{FB} D Salut, {F9} .{FD}Lequel, à ton avis ?{FC}{FB}A  Je pense···{FF}{00}
+
+@0250
+{FB} 1 C'est parti !{FF}{00}
+
+@0251
+{FB} 1CJe suis battu.{FD}Pardonne-moi et je te donne ça.{FF}{00}
+
+@0252
+{FB} D La médaille était là ?{FC}{FB}A  Non.{FF}{00}
+
+@0253
+{FB} W Comme l'a dit Karin, passe{FD}à la maison plus tard.{FC}{FB}A  B-bien sûr.{FD}Si vous voulez bien m'excuser···{FF}{00}
+
+@0254
+{FB} CD{F9} .{FC}{FB}A  Salut, Karin.{FC}{FB} CAKoji ne change jamais, hein.{FC}{FB}A EDésolé, quelqu'un a pris ta médaille.{FC}{FB} CECe n'est rien, c'était···{FC}{FB}A  Hein ?{FC}{FB} CDOn en reparlera chez moi.{FC}{FB}A  Euh ? Oui, d'accord.{FD}Mais, et la médaille···{FC}{FB} CDOn en parlera plus tard.{FF}{00}
+
+@0255
+{FB}A  C'est une médaille.{FC}Aucun doute, c'est celle de Karin.{FD}Je dois aller la lui rapporter !{FF}{00}
+
+@0256
+{FB} {58} Quoi qu'il arrive,{FD}je continuerai à cuisiner !{FF}{00}
+
+@0257
+{FB} {58} Ici, la cuisine est la meilleure qui soit !{FD}Il n'y a pas que les Rubberobos qui en veulent !{FF}{00}
+
+@0258
+{FB} D Alors, la médaille était là ?{FC}{FB}A DOui, elle y était.{FF}{00}
+
+@0259
+{FB} u Ce restaurant est sur la liste{FD}des endroits à embêter des Rubberobos.{FF}{00}
+
+@0260
+{FB} CD{F9} .{FC}{FB}A  Salut, Karin.{FC}{FB} CAHi hi.{FD}Koji ne change jamais, hein.{FC}{FB}A DVoilà ta médaille, Karin.{FC}{FB} CDMerci infiniment.{FD}Mais je préférerais que tu la gardes.{FF}{00}
+
+@0261
+{FB}A  Hein ? Pourquoi ?{FC}{FB} CDSi ça ne te dérange pas, {F9} ,{FD}reviens à la maison, d'accord ?{FC}{FB}A DBien sûr, je viendrai.{FC}{FB} CDÀ plus tard.{FF}{00}
+
+@0262
+{FB}A DMerci de m'avoir reçu !{FC}{FB} W Reviens quand tu veux.{FF}{00}
+
+@0263
+{FB} CDMerci d'avoir passé du temps{FD}avec moi aujourd'hui.{FC}{FB}A DTout le plaisir était pour moi !{FD}Oh, et voilà ta médaille.{FC}{FB} CDJe suis contente que tu aies{FD}pu la récupérer.{FC}Ça va te paraître étrange, après{FD}que tu l'as récupérée pour moi,{FD}mais accepterais-tu de la garder ?{FC}{FB}A  Vraiment ? Tu es sûre ?{FC}{FB} CDEn fait, je voulais te la donner{FD}depuis le tout début.{FC}{FB}A DMerci.{FF}{00}
+
+@0264
+{FB}A DJe dois te donner quelque chose en retour.{FC}{FB} CDNe te donne pas cette peine.{FD}Grâce à elle, on peut se reparler.{FC}{FB}A GJ-j'imagine que tu as raison ?{FC}{FB} CABien sûr que oui.{FF}{00}
+
+@0265
+{FB} CDReviens me voir, d'accord ?{FC}{FB}A AEt toi, viens me voir un de{FD}ces jours, quand tu pourras.{FC}{FB} CDOui, avec plaisir.{FF}{00}
+
+@0266
+{FB}A  Je regarde une vidéo de{FD}"Medabots Hebdo" ?{FF}{00}
+
+@0267
+{FB} {50} {F9}  !{FC}Karin est venue te voir !{FD}Elle est si mignonne♥{FC}Une fille comme ça, c'est du gâchis{FD}pour un garçon comme toi !{FF}{00}
+
+@0268
+{FB}A HQuoi !?{FD}Karin ? ICI !?{FC}{FB}A FQ-q-q-qu'est-ce que je fais !{FD}Je dois ranger ma chambre{FF}{00}
+
+@0269
+{FB} CDBonjour, {F9} .{FC}Je me suis dit que j'allais{FD}accepter ton invitation.{FF}{00}
+
+@0270
+{FB}A FB-b-bonjour, K-K-Karin.{FC}J'allais justement regarder{FD}"Medabots Hebdo", et si{FD}on le regardait ensemble ?{FC}{FB} CDAvec grand plaisir.{FF}{00}
+
+@0271
+{FB}A AC'était plutôt intéressant.{FD}Le nouveau type de Medabot···{FC}{FB} CDTu aimes vraiment les Medabots,{FD}hein, {F9} .{FC}Je pense que la médaille que je t'ai{FD}donnée grandira heureuse.{FC}Prends-en soin,{FD}comme si c'était moi.{FC}{FB}A HKarin···{FC}{FB} CFPardon.{FD}Oublie ce que je viens de dire···{FC}{FB} CGBien, si tu veux bien m'excuser.{FF}{00}
+
+@0272
+{FB}A EVoyons voir···{FF}{00}
+
+@0273
+{FB}A FNon ! Non ! Non !{FD}Pourquoi j'allume l'ordinateur !?{FF}{00}
+
+@0274
+{FB}A FKarin, tu vas bien !{FC}{FB} CCOui, je vais bien, mais···{FC}{FB}A DNe t'inquiète pas.{FD}Je te la récupérerai.{FC}{FB} CCCe n'est pas ça··· je veux dire···{FC}{FB}A  Oui ?{FC}{FB} CDEuh, laisse tomber.{FD}Prends-en bien soin.{FF}{00}
+
+@0275
+{FB} DEJe n'arrive pas à choisir.{FD}Décide, toi !{FF}{00}
+
+@0276
+{FB} BDJe dérange ?{FC}{FB}A DQuoi ?{FD}Tu n'étais pas partie chercher ton scoop ?{FC}{FB} BFTu es méchant !{FC}J'ai fait tout ce chemin{FD}juste pour te voir !{FC}{FB}A AHa ha ha.{FD}Pardon, je suis content. Non, vraiment !{FC}{FB} BAHé ! Allons quelque part.{FC}{FB}A DOù ça ?{FC}{FB} BANotre endroit spécial !{FC}{FB}A  Hein ?{FC}{FB} BDJe t'attendrai à notre endroit{FD}spécial, alors viens me trouver !{FC}{FB}A  Attends ! Erika !{FF}{00}
+
+@0277
+{FB}A  Et voilà, elle est partie···{FC}Mais c'est où, l'endroit{FD}spécial dont elle parlait ?{FC}Je ferais mieux d'aller le chercher···{FF}{00}
+
+@0278
+{FB}A DElle voulait peut-être dire ici···{FC}C'est ici que···{FD}Erika··· m'a embrassé···{FF}{00}
+
+@0279
+{FB} BBQu'est-ce que tu marmonnes !?{FD}Arriver ici en même temps !{FF}{00}
+
+@0280
+{FB} BGJe suis un peu gênée···{FD}J'espérais que tu viendrais.{FC}Merci de t'être souvenu{FD}de l'endroit spécial où{FD}je··· tu sais···{FC}t'ai embrassé, {F9} ♥{FC}{FB}A FJe crois que tu as été plus gênée{FD}que moi tout ce temps !!{FC}{FB} BFNyaaah.{FD}Les jolies filles ont le droit !{FF}{00}
+
+@0281
+{FB}A AAh oui, d'un coup tu es une jolie fille !{FF}{00}
+
+@0282
+{FB} BAHi hi hi hi.{FC}{FB}A AHa ha ha ha.{FF}{00}
+
+@0283
+{FB} BAHi hi hi hi hi.{FC}{FB}A AHa ha ha ha ha.{FF}{00}
+
+@0284
+{FB} BAHi hi hi hi hi hi hi.{FC}{FB}A AHa ha ha ha ha ha ha ha.{FF}{00}
+
+@0285
+{FB} BAHi hi hi hi hi hi hi hi !{FC}{FB}A AHa ha ha ha ha ha ha ha ha ha ha !{FF}{00}
+
+@0286
+{FB} BAHi hi hi hi hi hi hi hi !{FC}{FB}A AHa ha ha ha ha ha ha ha ha ha ha ha ha !{FF}{00}
+
+@0287
+{FB} BAHi hi hi hi hi hi hi hi hi !{FC}{FB}A AHa ha ha ha ha ha ha ha ha ha ha ha ha !{FF}{00}
+
+@0288
+{FB} BHOuille !{FF}{00}
+
+@0289
+{FB}A HErika ! Ça va ?{FC}{FB} B Oui, ça va.{FC}{FB}A  Qu'est-ce qu'il y a ?{FC}{FB} B Hé, regarde ça.{FF}{00}
+
+@0290
+{FB}A  Quoi ?{FC}{FB} B C'est une médaille !{FD}Qu'est-ce qu'elle fait···{FC}{FB} BDTu ne trouves pas ça romantique,{FD}{F9}  ?{FC}Prends-la en souvenir de ce jour.{FC}{FB}A  Je peux vraiment····{FC}C'est celle qui a roulé{FD}hors de l'entrepôt···?{FC}{FB} BAC'est forcément un cadeau du ciel !{FF}{00}
+
+@0291
+{FB} BAHi hi hi.{FD}Alors, on rentre ?{FC}{FB}A  Quoi ? Déjà ?{FC}{FB} BAPendant que je suis là avec toi,{FD}un scoop m'attend encore !{FF}{00}
+
+@0292
+{FB}A DTu ne changeras vraiment{FD}jamais, hein, Erika ?{FF}{00}
