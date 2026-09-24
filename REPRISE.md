@@ -1,7 +1,7 @@
 # Reprise — Medabots FR
 
-Dernière séance : 2026-09-24 · dernier commit : `8c3cf61` Histoire principale
-terminee: patch reconstruit, site a 4 567 entrees, narratif 3 875/3 875
+Dernière séance : 2026-09-24 · dernier commit : `29c5cf9` Scene d'ouverture:
+octet de parametre manquant apres {FF} (48698C @0011), patch reconstruit
 
 - Dépôt : https://github.com/EDL-Yhnguyen/Medabots-FR (public)
 - Site : https://medabots-fr.vercel.app
@@ -117,7 +117,10 @@ identifiants :**
   la suite des codes `{FB}xxx`, `{F9}x`, `{FF}x` de chaque entrée traduite à
   l'original (à refaire après toute retouche : les 4 031 autres entrées
   passent, seules des pages `{FC}` diffèrent, ce qui est un choix de mise en
-  page).
+  page). Le patch n'a pas changé d'un octet : l'entrée est la dernière
+  relogée et la zone étendue est déjà à zéro, donc l'octet manquant valait 0
+  par chance. L'encodeur est littéral (`{FF}` nu = un seul octet) : ne pas
+  compter sur cette chance ailleurs.
 - **Écrire un antislash dans un heredoc bash depuis Claude Code.** `\\`
   arrive en `\` dans le fichier, même entre `<<'EOF'` quotés. Passer par
   l'outil d'écriture de fichiers, ou `String.fromCharCode(92)`.
